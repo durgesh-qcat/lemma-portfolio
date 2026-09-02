@@ -1,0 +1,24 @@
+{
+  "baseline_systems": [],
+  "benchmark_id": "lemma-portfolio.mathlib-compression-calibration-30.v4",
+  "frozen_utc": "2026-09-01T09:43:10.963903Z",
+  "label_commitment_kind": "public_development_calibration_labels",
+  "labels_opened": false,
+  "labels_sha256_commitment": "9fec3602da660e4a293c7a5a8c9f74e7f4eddafab87d3bf84f4cea84a899d9f5",
+  "primary_systems": [
+    "codex_gpt56_sol_max_calibration_direct"
+  ],
+  "prompts_manifest_sha256": "58a31aa21f8cd1d5f34fc3e3f6aa367f4f02ea909be695db0531b8cc534b2284",
+  "protocol_sha256": "7b5a05678166e2595f465ccfd562afbda281b9523b29bd1cddb86e1d02241c1c",
+  "run_manifest_closure_sha256": "d73592ef011d118344c1daebdac7848d5208ab4dc75af72e742d3d7ad7091c9e",
+  "runs": [
+    {
+      "run_manifest_bytes": 12990,
+      "run_manifest_path": "codex_gpt56_sol_max_calibration_direct/RUN_FROZEN.json",
+      "run_manifest_sha256": "1298df0885ff96179e86885e2ceaadabf0bc43998567dcfed29574954ec7c018",
+      "system_id": "codex_gpt56_sol_max_calibration_direct"
+    }
+  ],
+  "schema_version": "lemma-portfolio.output-panel-freeze.v4",
+  "status": "FROZEN_BEFORE_LABEL_UNSEAL"
+}

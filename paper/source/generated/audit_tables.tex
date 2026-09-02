@@ -1,0 +1,25 @@
+\begin{table}[ht]
+\centering
+\caption{Aggregate pinned-Lean audit of final bytes.}
+\small
+\begin{tabular}{lrr}
+\toprule
+Check & Development & Blind \\
+\midrule
+Episodes & 30/30 & 60/60 \\
+Targets re-extracted exactly & 240/240 & 480/480 \\
+Stored / re-extracted displayed edges & 386/386 & 814/814 \\
+Changed targets & 0 & 0 \\
+Added / removed edges & 0/0 & 0/0 \\
+Empty target incidence & 0 & 0 \\
+Expression-equivalent statement collisions & 0 & 0 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The audit verified clean Mathlib commit
+\code{db584cd6d46c92f209a44c0f1c829460d327499d}, Lean 4.33.0 compiler commit
+\code{d8b18978322de05a8f3dba51ef03cf5461676c17}, all expected declaration
+kinds, and exact public/private commitments. A separate static audit re-hashed
+all 256 Parquet shards and reproduced every final development and blind output
+byte-for-byte.

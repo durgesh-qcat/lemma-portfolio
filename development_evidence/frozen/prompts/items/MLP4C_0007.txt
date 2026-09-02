@@ -1,0 +1,122 @@
+You are solving one unreleased LemmaPortfolio benchmark episode.
+
+Each target t has a hidden set D(t): the candidate declarations used as direct theorem dependencies in that target's historical elaborated source. For a portfolio S, define F(S) as the number of targets t for which D(t) intersects S. The benchmark objective is to form a portfolio of exactly 3 distinct candidate IDs maximizing F(S). This is a static dependency-portfolio compression task; it is not a claim about which lemmas would causally help a new proof.
+
+Use only the supplied episode text. Do not use tools, web search, a repository, a theorem prover, compiler feedback, prior answers, or follow-up messages. Analyze mathematical and formal dependency structure rather than word overlap.
+
+
+Return one JSON object and no prose. It must have exactly these keys: "episode_id" and "selected". The episode_id must be copied exactly. The selected value must be an array containing exactly 3 distinct IDs copied from this episode's candidates. Candidate order does not matter.
+
+Required episode_id: MLP4C_0007
+
+Episode JSON follows.
+<episode>
+{
+  "benchmark_id": "lemma-portfolio.mathlib-compression-calibration-30.v4",
+  "candidates": [
+    {
+      "id": "C01",
+      "statement": "∀ {α : Type u} (s₁ s₂ : Stream' α), s₁ ⋈ s₂ = Stream'.cons s₁.head (Stream'.cons s₂.head (s₁.tail ⋈ s₂.tail))"
+    },
+    {
+      "id": "C02",
+      "statement": "∀ {α : Type u} (n : ℕ) (s : Stream' α), (Stream'.take n s).length = n"
+    },
+    {
+      "id": "C03",
+      "statement": "∀ {α : Type u} (l : List α) (s : Stream' α), Stream'.initsCore l s = Stream'.cons l (Stream'.initsCore (l ++ [s.head]) s.tail)"
+    },
+    {
+      "id": "C04",
+      "statement": "∀ {α : Type u} (n : ℕ) (s : Stream' α), Stream'.drop n.succ s = Stream'.drop n s.tail"
+    },
+    {
+      "id": "C05",
+      "statement": "∀ {α : Type u} {s : Stream' α} (n : ℕ), Stream'.take (n + 1) s = Stream'.take n s ++ [s.get n]"
+    },
+    {
+      "id": "C06",
+      "statement": "∀ {α : Type u} (n : ℕ) (s : Stream' α), s.even.get n = s.get (2 * n)"
+    },
+    {
+      "id": "C07",
+      "statement": "∀ {α : Type u} (n : ℕ) (s : Stream' α), s.get n.succ = s.tail.get n"
+    },
+    {
+      "id": "C08",
+      "statement": "∀ {α : Type u} (n : ℕ) (x : List α) (a : Stream' α), (x ++ₛ a).get (x.length + n) = a.get n"
+    },
+    {
+      "id": "C09",
+      "statement": "∀ {α : Type u} (a : α) (s : Stream' α), (Stream'.cons a s).tail = s"
+    },
+    {
+      "id": "C10",
+      "statement": "∀ {α : Type u} (m n : ℕ) (a : Stream' α) (h : m < (Stream'.take n a).length), (Stream'.take n a)[m] = a.get m"
+    },
+    {
+      "id": "C11",
+      "statement": "∀ {α : Type u} {β : Type v} (f : α → β) (n : ℕ) (s : Stream' α), (Stream'.map f s).get n = f (s.get n)"
+    },
+    {
+      "id": "C12",
+      "statement": "∀ {α : Type u} (n : ℕ) (s : Stream' α), s.inits.get n = Stream'.take n.succ s"
+    },
+    {
+      "id": "C13",
+      "statement": "∀ {α : Type u} (R : Stream' α → Stream' α → Prop), Stream'.IsBisimulation R → ∀ {s₁ s₂ : Stream' α}, R s₁ s₂ → s₁ = s₂"
+    },
+    {
+      "id": "C14",
+      "statement": "∀ {α : Type u} (f : α → α) (a : α), (Stream'.iterate f a).tail = Stream'.iterate f (f a)"
+    },
+    {
+      "id": "C15",
+      "statement": "∀ {α : Type u} (n m : ℕ) (s : Stream' α), (Stream'.drop m s).get n = s.get (m + n)"
+    },
+    {
+      "id": "C16",
+      "statement": "∀ {α : Type u} {β : Type v} (f : α → β) (g : α → α) (a : α), Stream'.corec f g a = Stream'.cons (f a) (Stream'.corec f g (g a))"
+    }
+  ],
+  "episode_id": "MLP4C_0007",
+  "schema_version": "lemma-portfolio.dependency-compression.v4",
+  "selection_budget": 3,
+  "source_project": "mathlib",
+  "targets": [
+    {
+      "id": "T01",
+      "statement": "∀ {α : Type u} (n : ℕ) (f : α → α) (a : α), (Stream'.iterate f a).get n.succ = (Stream'.iterate f (f a)).get n"
+    },
+    {
+      "id": "T02",
+      "statement": "∀ {α : Type u} {s₁ s₂ : Stream' α}, s₁.head = s₂.head → (∀ (β : Type u) (fr : Stream' α → β), fr s₁ = fr s₂ → fr s₁.tail = fr s₂.tail) → s₁ = s₂"
+    },
+    {
+      "id": "T03",
+      "statement": "∀ {α : Type u} (s₁ s₂ : Stream' α), (s₁ ⋈ s₂).even = s₁"
+    },
+    {
+      "id": "T04",
+      "statement": "∀ {α : Type u} {β : Type v} (n : ℕ) (a : Stream' α) (f : α → β), List.map f (Stream'.take n a) = Stream'.take n (Stream'.map f a)"
+    },
+    {
+      "id": "T05",
+      "statement": "∀ {α : Type u} (f : α → α) (a : α), Stream'.iterate f a = Stream'.cons a (Stream'.iterate f (f a))"
+    },
+    {
+      "id": "T06",
+      "statement": "∀ {α : Type u} (s : Stream' α), s.tails = Stream'.cons s.tail s.tail.tails"
+    },
+    {
+      "id": "T07",
+      "statement": "∀ {α : Type u} (s : Stream' α), s.inits = Stream'.cons [s.head] (Stream'.map (List.cons s.head) s.tail.inits)"
+    },
+    {
+      "id": "T08",
+      "statement": "∀ {α : Type u} {β : Type v} (f : α → β) {a : α} {s : Stream' α}, a ∈ s → f a ∈ Stream'.map f s"
+    }
+  ],
+  "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+}
+</episode>

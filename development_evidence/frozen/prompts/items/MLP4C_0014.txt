@@ -1,0 +1,122 @@
+You are solving one unreleased LemmaPortfolio benchmark episode.
+
+Each target t has a hidden set D(t): the candidate declarations used as direct theorem dependencies in that target's historical elaborated source. For a portfolio S, define F(S) as the number of targets t for which D(t) intersects S. The benchmark objective is to form a portfolio of exactly 3 distinct candidate IDs maximizing F(S). This is a static dependency-portfolio compression task; it is not a claim about which lemmas would causally help a new proof.
+
+Use only the supplied episode text. Do not use tools, web search, a repository, a theorem prover, compiler feedback, prior answers, or follow-up messages. Analyze mathematical and formal dependency structure rather than word overlap.
+
+
+Return one JSON object and no prose. It must have exactly these keys: "episode_id" and "selected". The episode_id must be copied exactly. The selected value must be an array containing exactly 3 distinct IDs copied from this episode's candidates. Candidate order does not matter.
+
+Required episode_id: MLP4C_0014
+
+Episode JSON follows.
+<episode>
+{
+  "benchmark_id": "lemma-portfolio.mathlib-compression-calibration-30.v4",
+  "candidates": [
+    {
+      "id": "C01",
+      "statement": "∀ {x y z : ℝ}, 0 < y → Real.log x < z * Real.log y → x < y ^ z"
+    },
+    {
+      "id": "C02",
+      "statement": "∀ {x y z : ℝ}, 0 < x → x ^ z ≤ y → z * Real.log x ≤ Real.log y"
+    },
+    {
+      "id": "C03",
+      "statement": "∀ (x : ℂ) (y : ℝ), (x ^ ↑y).im = ‖x‖ ^ y * Real.sin (x.arg * y)"
+    },
+    {
+      "id": "C04",
+      "statement": "∀ {x y z : ℝ}, 1 < x → (x ^ y ≤ x ^ z ↔ y ≤ z)"
+    },
+    {
+      "id": "C05",
+      "statement": "∀ (x y : ℝ), |x ^ y| ≤ |x| ^ y"
+    },
+    {
+      "id": "C06",
+      "statement": "∀ (x : ℝ) (n : ℕ), x ^ ↑n = x ^ n"
+    },
+    {
+      "id": "C07",
+      "statement": "∀ {x : ℝ}, 0 ≤ x → ∀ (y : ℝ), 0 ≤ x ^ y"
+    },
+    {
+      "id": "C08",
+      "statement": "∀ {x y z : ℝ}, 0 < x → x ≤ 1 → z ≤ y → x ^ y ≤ x ^ z"
+    },
+    {
+      "id": "C09",
+      "statement": "∀ {z : ℂ}, z ≠ 0 → ∀ (w : ℂ), ‖z ^ w‖ = ‖z‖ ^ w.re / Real.exp (z.arg * w.im)"
+    },
+    {
+      "id": "C10",
+      "statement": "∀ {x y z : ℝ}, 0 < x → x < 1 → z < y → x ^ y < x ^ z"
+    },
+    {
+      "id": "C11",
+      "statement": "∀ {x y z : ℝ}, 0 ≤ x → x < y → 0 < z → x ^ z < y ^ z"
+    },
+    {
+      "id": "C12",
+      "statement": "∀ {x y z : ℝ}, 0 < x → x ≤ y → z ≤ 0 → y ^ z ≤ x ^ z"
+    },
+    {
+      "id": "C13",
+      "statement": "∀ {x : ℝ}, x < 0 → ∀ (y : ℝ), x ^ y = Real.exp (Real.log x * y) * Real.cos (y * Real.pi)"
+    },
+    {
+      "id": "C14",
+      "statement": "∀ (x : ℝ) (n : ℤ), x ^ ↑n = x ^ n"
+    },
+    {
+      "id": "C15",
+      "statement": "∀ {x y z : ℝ}, 0 ≤ x → 0 ≤ y → z ≠ 0 → (x ^ z = y ^ z ↔ x = y)"
+    },
+    {
+      "id": "C16",
+      "statement": "∀ {x y z : ℝ}, 0 ≤ x → y + z ≠ 0 → x ^ (y + z) = x ^ y * x ^ z"
+    }
+  ],
+  "episode_id": "MLP4C_0014",
+  "schema_version": "lemma-portfolio.dependency-compression.v4",
+  "selection_budget": 3,
+  "source_project": "mathlib",
+  "targets": [
+    {
+      "id": "T01",
+      "statement": "∀ {x y : ℝ} {n : ℕ}, 0 < x → 0 < y → (x ^ n < y ↔ ↑n * Real.log x < Real.log y)"
+    },
+    {
+      "id": "T02",
+      "statement": "∀ {x y z : ℝ}, 0 ≤ x → 0 ≤ y → z ≠ 0 → (x ^ z⁻¹ = y ↔ x = y ^ z)"
+    },
+    {
+      "id": "T03",
+      "statement": "∀ {x y : ℝ} {n : ℕ}, 0 < y → Real.log x < ↑n * Real.log y → x < y ^ n"
+    },
+    {
+      "id": "T04",
+      "statement": "∀ (x : ℂ), |(x ^ 2⁻¹).im| = √((‖x‖ - x.re) / 2)"
+    },
+    {
+      "id": "T05",
+      "statement": "∀ {x y z : ℝ}, 1 ≤ x ∧ y ≤ z ∨ 0 < x ∧ x ≤ 1 ∧ z ≤ y → x ^ y ≤ x ^ z"
+    },
+    {
+      "id": "T06",
+      "statement": "∀ {x y z : ℝ}, 0 ≤ x → 0 ≤ y → 0 < z → (x ≤ y ^ z⁻¹ ↔ x ^ z ≤ y)"
+    },
+    {
+      "id": "T07",
+      "statement": "∀ {x y : ℝ} {n : ℤ}, 0 < x → 0 < y → (x ^ n < y ↔ ↑n * Real.log x < Real.log y)"
+    },
+    {
+      "id": "T08",
+      "statement": "∀ {x y : ℝ} {n : ℤ}, 0 < y → Real.log x < ↑n * Real.log y → x < y ^ n"
+    }
+  ],
+  "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+}
+</episode>

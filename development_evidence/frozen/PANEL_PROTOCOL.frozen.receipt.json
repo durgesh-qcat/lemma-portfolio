@@ -1,0 +1,31 @@
+{
+  "calibration_labels_parsed": false,
+  "calibration_labels_sha256_commitment": "9fec3602da660e4a293c7a5a8c9f74e7f4eddafab87d3bf84f4cea84a899d9f5",
+  "codex_cli_binary_sha256": "166e0593c333c1c6412cc9cea72b6e1dfc4fc79b4813da02c511a3339c9b9593",
+  "codex_cli_version": "codex-cli 0.152.0",
+  "created_utc": "2026-09-01T08:47:06.786166Z",
+  "episode_count": 15,
+  "protocol_sha256": "7b5a05678166e2595f465ccfd562afbda281b9523b29bd1cddb86e1d02241c1c",
+  "public_sha256": "28f2ce4563d4db0eb08b981d8b4ec2cf689f4cf0dc06b69af2c6433dbfdba4ab",
+  "schema_version": "lemma-portfolio.calibration-protocol-freeze.v4",
+  "selection_budget": 3,
+  "software_commitments": {
+    "codex_auditor_py_sha256": "aa7db06d1dc57fd30ef594cd9eb7970b829b12f22bc409032d7537e2278337da",
+    "codex_control_py_sha256": "4050c27ba0fb5ab76e9a3d2cc611280d66260c8aec0b5e9288bca1530696ae3b",
+    "codex_runner_py_sha256": "537f6485145a1b7cdd6cc0d63e89e88e33150b08e67ed216f368fd015d12fdf6",
+    "common_py_sha256": "642e9244fed4267503a81a0b1b60007969d343edf12425d89bc6e08cacfade16",
+    "compare_intervention_py_sha256": "1d7ac00c697306e22de0a5606eabb7a61cf59fa829d8adec576b80bca397a8e3",
+    "freeze_all_outputs_py_sha256": "bc76280c6a733983f6453c985aef89480f82dc26394f3cddafce4837c9900fd0",
+    "freeze_calibration_protocol_py_sha256": "0b8bde41758fb338e46cd1a2dd36d3ee4048a08a5db3ee3b58f5cdc0c5b47a28",
+    "freeze_chat_run_py_sha256": "69ce762efc06e47dc464c9b8da7ffc48c997fe56a17efde2bedad9ca85581852",
+    "freeze_panel_py_sha256": "1dfee4d590e1892c65b3ac499721775f82390d4043470a4ed0e2460a1e87f09d",
+    "freeze_protocols_py_sha256": "99cc215f4499cd288e1ccd7867d42f45a2d7a59bcd76ed37dd8a218aab3b661e",
+    "generate_char_tfidf_baseline_py_sha256": "93df802d15953f1338c1103bcd9bc4b1f3f4e954af133f1d9843fea9cedc2459",
+    "generate_hash_baseline_py_sha256": "110237934bf181b6754e36370c4ee642db17ceff160ab1fc780ce6e14df34708",
+    "prepare_chat_prompts_py_sha256": "4fed5878f721cb23db17dd07cffd0104bbb281e641316b9746f271bfdcf1b555",
+    "score_frozen_panel_py_sha256": "3fdf62e4c3b6d0abedc432c8876a5c3910a3bf3733598079c8c7a58a9b93e2f0",
+    "select_support_prefix_py_sha256": "c99765b528f355a76e428997677b7c39e873ee8e21c1c50a0a26e91d2b26b4b9",
+    "support_to_portfolio_py_sha256": "db20f6dddb208306a9b4c134dd5b1d2a4810ed88092bc655fdac4842de32bfb9"
+  },
+  "status": "FROZEN_BEFORE_CALIBRATION_INFERENCE"
+}

@@ -1,0 +1,122 @@
+You are solving one unreleased LemmaPortfolio benchmark episode.
+
+Each target t has a hidden set D(t): the candidate declarations used as direct theorem dependencies in that target's historical elaborated source. For a portfolio S, define F(S) as the number of targets t for which D(t) intersects S. The benchmark objective is to form a portfolio of exactly 3 distinct candidate IDs maximizing F(S). This is a static dependency-portfolio compression task; it is not a claim about which lemmas would causally help a new proof.
+
+Use only the supplied episode text. Do not use tools, web search, a repository, a theorem prover, compiler feedback, prior answers, or follow-up messages. Analyze mathematical and formal dependency structure rather than word overlap.
+
+
+Return one JSON object and no prose. It must have exactly these keys: "episode_id" and "selected". The episode_id must be copied exactly. The selected value must be an array containing exactly 3 distinct IDs copied from this episode's candidates. Candidate order does not matter.
+
+Required episode_id: MLP4C_0008
+
+Episode JSON follows.
+<episode>
+{
+  "benchmark_id": "lemma-portfolio.mathlib-compression-calibration-30.v4",
+  "candidates": [
+    {
+      "id": "C01",
+      "statement": "∀ {E : ℕ → Type u_1} {x y : (n : ℕ) → E n} {n : ℕ}, n < PiNat.firstDiff x y → x n = y n"
+    },
+    {
+      "id": "C02",
+      "statement": "∀ {E : ℕ → Type u_1} (x y : (n : ℕ) → E n), PiNat.firstDiff x y = PiNat.firstDiff y x"
+    },
+    {
+      "id": "C03",
+      "statement": "∀ {X : Type u_3} [inst : MetricSpace X] [inst_1 : TopologicalSpace.SeparableSpace X] {x : X} {C : Set X}, C ∈ nhds x → ∃ n, C ∈ Filter.comap (Metric.PiNatEmbed.distDenseSeq X n) (nhds (Metric.PiNatEmbed.distDenseSeq X n x))"
+    },
+    {
+      "id": "C04",
+      "statement": "∀ {E : ℕ → Type u_1} (x : (n : ℕ) → E n) (n : ℕ), PiNat.cylinder x n = (↑(Finset.range n)).pi fun i => {x i}"
+    },
+    {
+      "id": "C05",
+      "statement": "∀ {E : ℕ → Type u_1} (x : (n : ℕ) → E n) {m n : ℕ}, m ≤ n → PiNat.cylinder x n ⊆ PiNat.cylinder x m"
+    },
+    {
+      "id": "C06",
+      "statement": "∀ {E : ℕ → Type u_1} {x y : (n : ℕ) → E n} {n : ℕ}, y ∈ PiNat.cylinder x n ↔ PiNat.cylinder y n = PiNat.cylinder x n"
+    },
+    {
+      "id": "C07",
+      "statement": "∀ {E : ℕ → Type u_1} (x : (n : ℕ) → E n) (n : ℕ), x ∈ PiNat.cylinder x n"
+    },
+    {
+      "id": "C08",
+      "statement": "∀ {E : ℕ → Type u_1} (x y : (n : ℕ) → E n), dist x y = dist y x"
+    },
+    {
+      "id": "C09",
+      "statement": "∀ {E : ℕ → Type u_1} (x y : (n : ℕ) → E n) (n : ℕ), y ∈ PiNat.cylinder x n ↔ x ∈ PiNat.cylinder y n"
+    },
+    {
+      "id": "C10",
+      "statement": "∀ {E : ℕ → Type u_1} {x y : (n : ℕ) → E n}, x ≠ y → x (PiNat.firstDiff x y) ≠ y (PiNat.firstDiff x y)"
+    },
+    {
+      "id": "C11",
+      "statement": "∀ {E : ℕ → Type u_1} [inst : (n : ℕ) → TopologicalSpace (E n)] [∀ (n : ℕ), DiscreteTopology (E n)] {s : Set ((n : ℕ) → E n)}, IsClosed s → ∀ {x y : (n : ℕ) → E n}, x ∉ s → y ∈ s → PiNat.firstDiff x y ≤ PiNat.longestPrefix x s"
+    },
+    {
+      "id": "C12",
+      "statement": "∀ {E : ℕ → Type u_1} {x y : (n : ℕ) → E n} {n : ℕ}, y ∈ PiNat.cylinder x n ↔ ∀ i < n, y i = x i"
+    },
+    {
+      "id": "C13",
+      "statement": "∀ {E : ℕ → Type u_1} {x y : (n : ℕ) → E n} {n : ℕ}, y ∈ PiNat.cylinder x n ↔ dist y x ≤ (1 / 2) ^ n"
+    },
+    {
+      "id": "C14",
+      "statement": "∀ {E : ℕ → Type u_1} (x : (n : ℕ) → E n), dist x x = 0"
+    },
+    {
+      "id": "C15",
+      "statement": "∀ {E : ℕ → Type u_1} (x y : (n : ℕ) → E n), x ∈ PiNat.cylinder y (PiNat.firstDiff x y)"
+    },
+    {
+      "id": "C16",
+      "statement": "∀ {X : Type u_3} [inst : MetricSpace X] [inst_1 : TopologicalSpace.SeparableSpace X] (x y : X), x ≠ y → ∃ n, Metric.PiNatEmbed.distDenseSeq X n x ≠ Metric.PiNatEmbed.distDenseSeq X n y"
+    }
+  ],
+  "episode_id": "MLP4C_0008",
+  "schema_version": "lemma-portfolio.dependency-compression.v4",
+  "selection_budget": 3,
+  "source_project": "mathlib",
+  "targets": [
+    {
+      "id": "T01",
+      "statement": "∀ {E : ℕ → Type u_1} [inst : (n : ℕ) → TopologicalSpace (E n)] [∀ (n : ℕ), DiscreteTopology (E n)] (s : Set ((n : ℕ) → E n)), IsOpen s ↔ ∀ x ∈ s, ∃ ε > 0, ∀ (y : (n : ℕ) → E n), dist x y < ε → y ∈ s"
+    },
+    {
+      "id": "T02",
+      "statement": "∀ {E : ℕ → Type u_1} [inst : (n : ℕ) → TopologicalSpace (E n)] [inst_1 : ∀ (n : ℕ), DiscreteTopology (E n)] {s : Set ((n : ℕ) → E n)}, IsClosed s → s.Nonempty → ∃ f, (∀ x ∈ s, f x = x) ∧ Set.range f = s ∧ LipschitzWith 1 f"
+    },
+    {
+      "id": "T03",
+      "statement": "∀ {E : ℕ → Type u_1} [inst : (n : ℕ) → TopologicalSpace (E n)] [∀ (n : ℕ), DiscreteTopology (E n)] {s : Set ((n : ℕ) → E n)}, IsClosed s → ∀ {x : (n : ℕ) → E n}, x ∉ s → ∀ {n : ℕ}, PiNat.longestPrefix x s < n → Disjoint s (PiNat.cylinder x n)"
+    },
+    {
+      "id": "T04",
+      "statement": "∀ {X : Type u_3} [inst : MetricSpace X] [TopologicalSpace.SeparableSpace X], ∃ F, Topology.IsEmbedding F"
+    },
+    {
+      "id": "T05",
+      "statement": "∀ (E : ℕ → Type u_1) [inst : (n : ℕ) → TopologicalSpace (E n)] [∀ (n : ℕ), DiscreteTopology (E n)] (x : (n : ℕ) → E n) (n : ℕ), IsOpen (PiNat.cylinder x n)"
+    },
+    {
+      "id": "T06",
+      "statement": "∀ {E : ℕ → Type u_1} (x : (n : ℕ) → E n), PiNat.cylinder x 0 = Set.univ"
+    },
+    {
+      "id": "T07",
+      "statement": "∀ {E : ℕ → Type u_1} [inst : (n : ℕ) → TopologicalSpace (E n)] [∀ (n : ℕ), DiscreteTopology (E n)] {s : Set ((n : ℕ) → E n)}, IsClosed s → ∀ {x y : (n : ℕ) → E n}, x ∉ s → y ∈ s → PiNat.firstDiff x y < PiNat.shortestPrefixDiff x s"
+    },
+    {
+      "id": "T08",
+      "statement": "∀ {E : ℕ → Type u_1} (x y z : (n : ℕ) → E n), dist x z ≤ max (dist x y) (dist y z)"
+    }
+  ],
+  "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+}
+</episode>

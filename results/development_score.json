@@ -1,0 +1,39 @@
+{
+  "batch": "first 15 released development episodes",
+  "row": {
+    "achieved_target_coverage": 80,
+    "block_bootstrap_95_interval_fraction": [
+      0.2,
+      0.6
+    ],
+    "display_label": "Controlled Codex CLI Sol development check",
+    "exact_by_block": {
+      "D01": 2,
+      "D02": 1,
+      "D03": 3
+    },
+    "exact_optimal": 6,
+    "exact_optimal_percentage": 40.0,
+    "mean_oracle_normalized_coverage_percentage": 87.93650793650794,
+    "selected_edge_recall_percentage": 42.56410256410256,
+    "system_id": "codex_gpt56_sol_max_calibration_direct",
+    "target_count": 120,
+    "target_coverage_percentage": 66.66666666666667,
+    "total": 15,
+    "valid": 15,
+    "valid_percentage": 100.0,
+    "wilson_95_interval_fraction": [
+      0.1982449614134158,
+      0.6425316987937539
+    ]
+  },
+  "schema_version": "lemma-portfolio.development-score.v4.replay-v1",
+  "source_hashes": {
+    "development_labels_sha256": "bee487259392de4d36b2140a715c7b4196ce7cc2027c3b13c90e1874a19149d0",
+    "development_public_sha256": "404452daa5017793d9f7b10f4d92716d2bb267dca034094b0f41f8c8d9219ffc",
+    "panel_freeze_sha256": "bc598103d7cd0ec4caa5f930032fc44f1531bb5154bb2c6e0409348331e39f39",
+    "prompts_manifest_sha256": "58a31aa21f8cd1d5f34fc3e3f6aa367f4f02ea909be695db0531b8cc534b2284",
+    "protocol_sha256": "7b5a05678166e2595f465ccfd562afbda281b9523b29bd1cddb86e1d02241c1c",
+    "run_manifest_sha256": "1298df0885ff96179e86885e2ceaadabf0bc43998567dcfed29574954ec7c018"
+  }
+}

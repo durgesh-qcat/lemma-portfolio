@@ -1,0 +1,8 @@
+{
+  "episode_id": "MLP4C_0010",
+  "selected": [
+    "C04",
+    "C06",
+    "C08"
+  ]
+}

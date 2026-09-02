@@ -1,0 +1,122 @@
+You are solving one unreleased LemmaPortfolio benchmark episode.
+
+Each target t has a hidden set D(t): the candidate declarations used as direct theorem dependencies in that target's historical elaborated source. For a portfolio S, define F(S) as the number of targets t for which D(t) intersects S. The benchmark objective is to form a portfolio of exactly 3 distinct candidate IDs maximizing F(S). This is a static dependency-portfolio compression task; it is not a claim about which lemmas would causally help a new proof.
+
+Use only the supplied episode text. Do not use tools, web search, a repository, a theorem prover, compiler feedback, prior answers, or follow-up messages. Analyze mathematical and formal dependency structure rather than word overlap.
+
+
+Return one JSON object and no prose. It must have exactly these keys: "episode_id" and "selected". The episode_id must be copied exactly. The selected value must be an array containing exactly 3 distinct IDs copied from this episode's candidates. Candidate order does not matter.
+
+Required episode_id: MLP4C_0000
+
+Episode JSON follows.
+<episode>
+{
+  "benchmark_id": "lemma-portfolio.mathlib-compression-calibration-30.v4",
+  "candidates": [
+    {
+      "id": "C01",
+      "statement": "∀ {α : Type u_1} {β : Type u_2} {H₁ H₂ : Graph α β}, H₁.Compatible H₂ → (H₁ ≤ H₂ ↔ H₁.vertexSet ⊆ H₂.vertexSet ∧ H₁.edgeSet ⊆ H₂.edgeSet)"
+    },
+    {
+      "id": "C02",
+      "statement": "∀ {α : Type u_1} {β : Type u_2} {H G : Graph α β}, H.IsClosedSubgraph G → ∀ ⦃e : β⦄ ⦃x : α⦄, G.Inc e x → x ∈ H.vertexSet → e ∈ H.edgeSet"
+    },
+    {
+      "id": "C03",
+      "statement": "∀ {α : Type u_1} {β : Type u_2} {H G : Graph α β}, H.IsInducedSubgraph G → ∀ ⦃e : β⦄ ⦃x y : α⦄, G.IsLink e x y → x ∈ H.vertexSet → y ∈ H.vertexSet → H.IsLink e x y"
+    },
+    {
+      "id": "C04",
+      "statement": "∀ {α : Type u_1} {β : Type u_2} {H G : Graph α β}, H.IsSubgraph G → (∀ ⦃e : β⦄ ⦃x y : α⦄, G.IsLink e x y → x ∈ H.vertexSet → y ∈ H.vertexSet → H.IsLink e x y) → H.IsInducedSubgraph G"
+    },
+    {
+      "id": "C05",
+      "statement": "∀ {α : Type u_1} {β : Type u_2} {H G : Graph α β}, H ≤s G → H.IsSubgraph G"
+    },
+    {
+      "id": "C06",
+      "statement": "∀ {α : Type u_1} {β : Type u_2} {x y : α} {e : β} {G H : Graph α β}, H ≤ G → H.IsLink e x y → G.IsLink e x y"
+    },
+    {
+      "id": "C07",
+      "statement": "∀ {α : Type u_1} {β : Type u_2} {G H : Graph α β}, H ≤ G → (∀ ⦃e : β⦄ ⦃x : α⦄, G.Inc e x → x ∈ H.vertexSet → e ∈ H.edgeSet) → H.IsClosedSubgraph G"
+    },
+    {
+      "id": "C08",
+      "statement": "∀ {α : Type u_1} {β : Type u_2} {H G : Graph α β}, H.IsClosedSubgraph G → H.IsInducedSubgraph G"
+    },
+    {
+      "id": "C09",
+      "statement": "∀ {α : Type u_1} {β : Type u_2} {G H : Graph α β}, H ≤ G → H.edgeSet ⊆ G.edgeSet"
+    },
+    {
+      "id": "C10",
+      "statement": "∀ {α : Type u_1} {β : Type u_2} {x y : α} {e : β} {G H : Graph α β}, x ∈ H.vertexSet → H.IsClosedSubgraph G → (H.IsLink e x y ↔ G.IsLink e x y)"
+    },
+    {
+      "id": "C11",
+      "statement": "∀ {α : Type u_1} {β : Type u_2} {x y : α} {e : β} {G H : Graph α β}, G.IsLink e x y → H.IsClosedSubgraph G → (x ∈ H.vertexSet ↔ y ∈ H.vertexSet)"
+    },
+    {
+      "id": "C12",
+      "statement": "∀ {α : Type u_1} {β : Type u_2} {H G : Graph α β}, H.IsInducedSubgraph G → (∀ ⦃e : β⦄ ⦃x : α⦄, G.Inc e x → x ∈ H.vertexSet → e ∈ H.edgeSet) → H.IsClosedSubgraph G"
+    },
+    {
+      "id": "C13",
+      "statement": "∀ {α : Type u_1} {β : Type u_2} {H G : Graph α β}, H.IsSubgraph G → H.vertexSet ⊆ G.vertexSet"
+    },
+    {
+      "id": "C14",
+      "statement": "∀ {α : Type u_1} {β : Type u_2} {H G : Graph α β}, autoParam (H.vertexSet ⊆ G.vertexSet) Graph.IsSubgraph.vertexSet_mono._autoParam → autoParam (∀ ⦃e : β⦄ ⦃x y : α⦄, H.IsLink e x y → G.IsLink e x y) Graph.IsSubgraph.isLink_mono._autoParam → H.IsSubgraph G"
+    },
+    {
+      "id": "C15",
+      "statement": "∀ {α : Type u_1} {β : Type u_2} {H₁ H₂ : Graph α β}, H₁.vertexSet = H₂.vertexSet → H₁.edgeSet = H₂.edgeSet → H₁.Compatible H₂ → H₁ = H₂"
+    },
+    {
+      "id": "C16",
+      "statement": "∀ {α : Type u_1} {β : Type u_2} {x y : α} {e : β} {G H : Graph α β}, H ≤ G → e ∈ H.edgeSet → (H.IsLink e x y ↔ G.IsLink e x y)"
+    }
+  ],
+  "episode_id": "MLP4C_0000",
+  "schema_version": "lemma-portfolio.dependency-compression.v4",
+  "selection_budget": 3,
+  "source_project": "mathlib",
+  "targets": [
+    {
+      "id": "T01",
+      "statement": "∀ {α : Type u_1} {β : Type u_2} {G H K : Graph α β}, K ≤ G → K.vertexSet ⊆ H.vertexSet → H.IsInducedSubgraph G → K ≤ H"
+    },
+    {
+      "id": "T02",
+      "statement": "∀ {α : Type u_1} {β : Type u_2} {G G₁ G₂ : Graph α β}, G.IsInducedSubgraph G₁ → G₁.IsInducedSubgraph G₂ → G.IsInducedSubgraph G₂"
+    },
+    {
+      "id": "T03",
+      "statement": "∀ {α : Type u_1} {β : Type u_2} {G H : Graph α β}, H ≤ G → (¬H.IsInducedSubgraph G ↔ ∃ e x y, G.IsLink e x y ∧ x ∈ H.vertexSet ∧ y ∈ H.vertexSet ∧ e ∉ H.edgeSet)"
+    },
+    {
+      "id": "T04",
+      "statement": "∀ {α : Type u_1} {β : Type u_2} {x : α} {e : β} {G H : Graph α β}, H ≤ G → e ∈ H.edgeSet → (H.IsLoopAt e x ↔ G.IsLoopAt e x)"
+    },
+    {
+      "id": "T05",
+      "statement": "∀ {α : Type u_1} {β : Type u_2} {G H : Graph α β}, G ≤ H ↔ G.Compatible H ∧ G.vertexSet ⊆ H.vertexSet ∧ G.edgeSet ⊆ H.edgeSet"
+    },
+    {
+      "id": "T06",
+      "statement": "∀ {α : Type u_1} {β : Type u_2} (H G : Graph α β), H.IsInducedSubgraph G ↔ H.IsSubgraph G ∧ ∀ ⦃e : β⦄ ⦃x y : α⦄, G.IsLink e x y → x ∈ H.vertexSet → y ∈ H.vertexSet → H.IsLink e x y"
+    },
+    {
+      "id": "T07",
+      "statement": "∀ {α : Type u_1} {β : Type u_2} {G H : Graph α β}, H ≤ G → Set.EqOn H.IsLink G.IsLink H.edgeSet"
+    },
+    {
+      "id": "T08",
+      "statement": "∀ {α : Type u_1} {β : Type u_2} {x : α} {e : β} {G H : Graph α β}, H ≤ G → H.IsNonloopAt e x → G.IsNonloopAt e x"
+    }
+  ],
+  "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+}
+</episode>

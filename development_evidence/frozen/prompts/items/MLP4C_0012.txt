@@ -1,0 +1,122 @@
+You are solving one unreleased LemmaPortfolio benchmark episode.
+
+Each target t has a hidden set D(t): the candidate declarations used as direct theorem dependencies in that target's historical elaborated source. For a portfolio S, define F(S) as the number of targets t for which D(t) intersects S. The benchmark objective is to form a portfolio of exactly 3 distinct candidate IDs maximizing F(S). This is a static dependency-portfolio compression task; it is not a claim about which lemmas would causally help a new proof.
+
+Use only the supplied episode text. Do not use tools, web search, a repository, a theorem prover, compiler feedback, prior answers, or follow-up messages. Analyze mathematical and formal dependency structure rather than word overlap.
+
+
+Return one JSON object and no prose. It must have exactly these keys: "episode_id" and "selected". The episode_id must be copied exactly. The selected value must be an array containing exactly 3 distinct IDs copied from this episode's candidates. Candidate order does not matter.
+
+Required episode_id: MLP4C_0012
+
+Episode JSON follows.
+<episode>
+{
+  "benchmark_id": "lemma-portfolio.mathlib-compression-calibration-30.v4",
+  "candidates": [
+    {
+      "id": "C01",
+      "statement": "∀ {Ω : Type u_1} {a b : ℝ} {f : ℕ → Ω → ℝ} {N n : ℕ} {ω : Ω}, a < b → MeasureTheory.upperCrossingTime a b f N (n + 1) ω ≠ N → MeasureTheory.upperCrossingTime a b f N n ω < MeasureTheory.upperCrossingTime a b f N (n + 1) ω"
+    },
+    {
+      "id": "C02",
+      "statement": "∀ {Ω : Type u_1} {m0 : MeasurableSpace Ω} {μ : MeasureTheory.Measure Ω} {f : ℕ → Ω → ℝ} {ℱ : MeasureTheory.Filtration ℕ m0} [MeasureTheory.IsFiniteMeasure μ], MeasureTheory.Submartingale f ℱ μ → ∀ (a b : ℝ) (N : ℕ), MeasureTheory.Submartingale (fun n => ∑ k ∈ Finset.range n, MeasureTheory.upcrossingStrat a b f N k * (f (k + 1) - f k)) ℱ μ"
+    },
+    {
+      "id": "C03",
+      "statement": "∀ {Ω : Type u_1} {ι : Type u_2} [inst : Preorder ι] [inst_1 : OrderBot ι] [inst_2 : InfSet ι] {a b : ℝ} {f : ι → Ω → ℝ} {N : ι} {n : ℕ} {ω : Ω}, MeasureTheory.upperCrossingTime a b f N (n + 1) ω = MeasureTheory.hittingBtwn f (Set.Ici b) (MeasureTheory.lowerCrossingTimeAux a f (MeasureTheory.upperCrossingTime a b f N n ω) N ω) N ω"
+    },
+    {
+      "id": "C04",
+      "statement": "∀ {Ω : Type u_1} {ι : Type u_2} [inst : ConditionallyCompleteLinearOrderBot ι] {a b : ℝ} {f : ι → Ω → ℝ} {N : ι} {n : ℕ} {ω : Ω}, MeasureTheory.lowerCrossingTime a b f N n ω ≤ MeasureTheory.upperCrossingTime a b f N (n + 1) ω"
+    },
+    {
+      "id": "C05",
+      "statement": "∀ {Ω : Type u_1} {a b : ℝ} {f : ℕ → Ω → ℝ} {N n : ℕ} {ω : Ω}, 0 < N → a < b → n ≤ MeasureTheory.upcrossingsBefore a b f N ω → MeasureTheory.upperCrossingTime a b f N n ω < N"
+    },
+    {
+      "id": "C06",
+      "statement": "∀ {Ω : Type u_1} {a b : ℝ} {f : ℕ → Ω → ℝ} {N n : ℕ} {ω : Ω} {M : ℕ}, N ≤ M → MeasureTheory.upperCrossingTime a b f N n ω < N → MeasureTheory.upperCrossingTime a b f M n ω = MeasureTheory.upperCrossingTime a b f N n ω"
+    },
+    {
+      "id": "C07",
+      "statement": "∀ {Ω : Type u_1} {a b : ℝ} {f : ℕ → Ω → ℝ} {N n : ℕ} {ω : Ω}, 0 ≤ MeasureTheory.upcrossingStrat a b f N n ω"
+    },
+    {
+      "id": "C08",
+      "statement": "∀ {Ω : Type u_1} {m0 : MeasurableSpace Ω} {a b : ℝ} {f : ℕ → Ω → ℝ} {N n : ℕ} {ℱ : MeasureTheory.Filtration ℕ m0}, MeasureTheory.StronglyAdapted ℱ f → (MeasureTheory.IsStoppingTime ℱ fun ω => ↑(MeasureTheory.upperCrossingTime a b f N n ω)) ∧ MeasureTheory.IsStoppingTime ℱ fun ω => ↑(MeasureTheory.lowerCrossingTime a b f N n ω)"
+    },
+    {
+      "id": "C09",
+      "statement": "∀ {Ω : Type u_1} {ι : Type u_2} [inst : ConditionallyCompleteLinearOrderBot ι] {a b : ℝ} {f : ι → Ω → ℝ} {N : ι} {n : ℕ} {ω : Ω}, MeasureTheory.upperCrossingTime a b f N n ω ≤ MeasureTheory.lowerCrossingTime a b f N n ω"
+    },
+    {
+      "id": "C10",
+      "statement": "∀ {Ω : Type u_1} {a b : ℝ} {f : ℕ → Ω → ℝ} {N n : ℕ} {ω : Ω}, MeasureTheory.lowerCrossingTime a b f N n ω ≠ N → MeasureTheory.stoppedValue f (fun ω => ↑(MeasureTheory.lowerCrossingTime a b f N n ω)) ω ≤ a"
+    },
+    {
+      "id": "C11",
+      "statement": "∀ {Ω : Type u_1} {ι : Type u_2} [inst : ConditionallyCompleteLinearOrderBot ι] {a b : ℝ} {f : ι → Ω → ℝ} {N : ι} {n m : ℕ} {ω : Ω}, n ≤ m → MeasureTheory.upperCrossingTime a b f N n ω ≤ MeasureTheory.upperCrossingTime a b f N m ω"
+    },
+    {
+      "id": "C12",
+      "statement": "∀ {Ω : Type u_1} {a b : ℝ} {f : ℕ → Ω → ℝ} {N n : ℕ} {ω : Ω}, a < b → MeasureTheory.upcrossingsBefore a b f N ω < n → MeasureTheory.upperCrossingTime a b f N n ω = N"
+    },
+    {
+      "id": "C13",
+      "statement": "∀ {Ω : Type u_1} {a b : ℝ} {f : ℕ → Ω → ℝ} {ω : Ω}, MeasureTheory.upcrossingsBefore a b f 0 ω = 0"
+    },
+    {
+      "id": "C14",
+      "statement": "∀ {Ω : Type u_1} {a b : ℝ} {f : ℕ → Ω → ℝ}, MeasureTheory.upcrossingsBefore a b f 0 = 0"
+    },
+    {
+      "id": "C15",
+      "statement": "∀ {Ω : Type u_1} {a b : ℝ} {f : ℕ → Ω → ℝ} {N n m : ℕ} {ω : Ω}, n ≤ m → MeasureTheory.upperCrossingTime a b f N n ω = N → MeasureTheory.upperCrossingTime a b f N m ω = N"
+    },
+    {
+      "id": "C16",
+      "statement": "∀ {Ω : Type u_1} {a b : ℝ} {N : ℕ} (f : ℕ → Ω → ℝ) (ω : Ω), a < b → MeasureTheory.upcrossingsBefore a b f N ω ≤ N"
+    }
+  ],
+  "episode_id": "MLP4C_0012",
+  "schema_version": "lemma-portfolio.dependency-compression.v4",
+  "selection_budget": 3,
+  "source_project": "mathlib",
+  "targets": [
+    {
+      "id": "T01",
+      "statement": "∀ {Ω : Type u_1} {a b : ℝ} {f : ℕ → Ω → ℝ} {N : ℕ} {ω : Ω}, a < b → ∀ {N₁ N₂ : ℕ}, N ≤ N₁ → f N₁ ω < a → N₁ ≤ N₂ → b < f N₂ ω → MeasureTheory.upcrossingsBefore a b f N ω < MeasureTheory.upcrossingsBefore a b f (N₂ + 1) ω"
+    },
+    {
+      "id": "T02",
+      "statement": "∀ {Ω : Type u_1} {a b : ℝ} {f : ℕ → Ω → ℝ}, a < b → Monotone fun N ω => MeasureTheory.upcrossingsBefore a b f N ω"
+    },
+    {
+      "id": "T03",
+      "statement": "∀ {Ω : Type u_1} {m0 : MeasurableSpace Ω} {μ : MeasureTheory.Measure Ω} {a b : ℝ} {f : ℕ → Ω → ℝ} {N n : ℕ} {ℱ : MeasureTheory.Filtration ℕ m0} [MeasureTheory.IsFiniteMeasure μ], MeasureTheory.Submartingale f ℱ μ → ∫ (x : Ω), (∑ k ∈ Finset.range n, MeasureTheory.upcrossingStrat a b f N k * (f (k + 1) - f k)) x ∂μ ≤ ∫ (x : Ω), f n x ∂μ - ∫ (x : Ω), f 0 x ∂μ"
+    },
+    {
+      "id": "T04",
+      "statement": "∀ {Ω : Type u_1} {a b : ℝ} {f : ℕ → Ω → ℝ} {N n : ℕ} {ω : Ω}, a < b → MeasureTheory.lowerCrossingTime a b f N (n + 1) ω ≠ N → MeasureTheory.upperCrossingTime a b f N (n + 1) ω < MeasureTheory.lowerCrossingTime a b f N (n + 1) ω"
+    },
+    {
+      "id": "T05",
+      "statement": "∀ {Ω : Type u_1} {a b : ℝ} {f : ℕ → Ω → ℝ} {N n : ℕ} {ω : Ω}, a < b → N ≤ n → MeasureTheory.upperCrossingTime a b f N n ω = N"
+    },
+    {
+      "id": "T06",
+      "statement": "∀ {Ω : Type u_1} {a b : ℝ} {f : ℕ → Ω → ℝ} {N n : ℕ} {ω : Ω} {M : ℕ}, N ≤ M → MeasureTheory.lowerCrossingTime a b f N n ω < N → MeasureTheory.upperCrossingTime a b f M n ω = MeasureTheory.upperCrossingTime a b f N n ω ∧ MeasureTheory.lowerCrossingTime a b f M n ω = MeasureTheory.lowerCrossingTime a b f N n ω"
+    },
+    {
+      "id": "T07",
+      "statement": "∀ {Ω : Type u_1} {a b : ℝ} {f : ℕ → Ω → ℝ} {N n : ℕ} {ω : Ω}, 0 < N → a < b → n < MeasureTheory.upcrossingsBefore a b f N ω → b - a ≤ MeasureTheory.stoppedValue f (fun ω => ↑(MeasureTheory.upperCrossingTime a b f N (n + 1) ω)) ω - MeasureTheory.stoppedValue f (fun ω => ↑(MeasureTheory.lowerCrossingTime a b f N n ω)) ω"
+    },
+    {
+      "id": "T08",
+      "statement": "∀ {Ω : Type u_1} {m0 : MeasurableSpace Ω} {a b : ℝ} {f : ℕ → Ω → ℝ} {N n : ℕ} {ℱ : MeasureTheory.Filtration ℕ m0}, MeasureTheory.StronglyAdapted ℱ f → MeasureTheory.IsStoppingTime ℱ fun ω => ↑(MeasureTheory.upperCrossingTime a b f N n ω)"
+    }
+  ],
+  "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+}
+</episode>

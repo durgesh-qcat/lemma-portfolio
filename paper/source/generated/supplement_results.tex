@@ -1,0 +1,91 @@
+% Generated from the author-supplied response document and V4 labels.
+\subsection{Complete score table}
+
+\begin{table}[ht]
+\centering\scriptsize
+\setlength{\tabcolsep}{3.2pt}
+\begin{tabular}{@{}p{0.31\linewidth}rrrrr@{}}
+\toprule
+Row & Exact & Valid & Mean $F/8$ & Mean $F/F^*$ & Edge recall \\
+\midrule
+SHA--256 deterministic draw & 0/60 & 60/60 & 2.30/8 & 37.1\% & 18.9\% \\
+Character TF--IDF & 0/60 & 60/60 & 3.77/8 & 60.4\% & 29.5\% \\
+GPT SOL 5.6 Pro & 25/60 & 55/60 & 4.98/8 & 79.6\% & 38.9\% \\
+DeepSeek Instant + DeepThink & 1/60 & 60/60 & 4.20/8 & 67.1\% & 34.9\% \\
+DeepSeek Expert + DeepThink & 7/60 & 60/60 & 4.60/8 & 73.4\% & 36.9\% \\
+Qwen 3.8 Max--Thinking & 12/60 & 55/60 & 4.32/8 & 68.9\% & 34.0\% \\
+Qwen 3.7 Plus--Thinking & 6/60 & 60/60 & 4.05/8 & 64.6\% & 31.8\% \\
+GPT SOL support $q=2$ & 1/20 & 20/20 & 4.60/8 & 74.8\% & 34.5\% \\
+\bottomrule
+\end{tabular}
+\caption{Complete fixed-denominator scores.  Invalid responses contribute zero
+to every metric.  The analytic uniform-random expectation is 0.14 exact
+episodes, 2.35/8 mean coverage, 37.6\% mean $F/F^*$, and 18.75\% edge recall.}
+\label{tab:supp-complete-results}
+\end{table}
+
+For the five consumer rows, item-wise Wilson 95\% intervals for exact accuracy
+are, in table order, 30.1--54.3\%, 0.3--8.9\%, 5.8--22.2\%, 11.8--31.8\%, and
+4.7--20.1\%.  Resampling the twelve five-item response blocks gives descriptive
+95\% percentile intervals of 30.0--53.3\%, 0.0--5.0\%, 5.0--18.3\%,
+8.3--33.3\%, and 1.7--20.0\%.  These intervals summarize sensitivity within
+this fixed challenge set; they are not estimates for model families.
+
+\subsection{Block-level exact scores and response alignment}
+
+\begin{table}[ht]
+\centering\scriptsize
+\setlength{\tabcolsep}{2.5pt}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{@{}lrrrrrrrrrrrr@{}}
+\toprule
+Row & D01&D02&D03&D04&D05&D06&D07&D08&D09&D10&D11&D12\\
+\midrule
+GPT SOL &2&2&2&2&1&1&4&2&3&3&3&0\\
+DeepSeek Instant &0&0&0&0&0&0&0&0&1&0&0&0\\
+DeepSeek Expert &1&0&0&0&1&0&1&1&0&1&2&0\\
+Qwen 3.8 Max &1&1&1&0&0&0&1&3&3&0&2&0\\
+Qwen 3.7 Plus &0&0&0&0&0&0&1&2&1&0&0&2\\
+\bottomrule
+\end{tabular}}
+\caption{Exact optima per five-episode direct block.  Each row sums to the
+main-table numerator.}
+\label{tab:block-scores}
+\end{table}
+
+The source document does not always present blocks in numerical order.  The
+alignment is recovered from the explicit episode keys.  GPT supplies D01--D11,
+then a second D11 variant, and no D12.  Both D11 variants score 3/5 and have the
+same secondary metrics; the first is retained as the canonical transcription.
+DeepSeek Instant and Expert supply D01--D12.  Qwen 3.8 supplies
+D01,D03,D02,D04,D06,D05,D08,D07,D09,D10,D12,D11; its D12 text is malformed
+because the outer opening brace is absent.  Qwen 3.7 supplies
+D02,D01,D03,D04,D08,D07,D10,D09,D05,D06,D12,D11.  No positional guess is used.
+
+\subsection{Structured-support diagnostic}
+
+The four support blocks cover D04, D05, D06, and D12.  The fixed $q=2$
+postprocessor produces block exact counts $1,0,0,0$, compared with direct
+counts $2,1,1,0$ on the same IDs.  The corresponding exact-accuracy changes
+are $-20,-20,-20,0$ percentage points.  Full ranked support has micro
+precision/recall/F1 of 72.5/75.6/74.0\%; after retaining two candidates per
+target the figures are 76.8/68.7/72.6\%.  Because the direct D12 response is
+missing, its secondary-score contrast is dominated by the strict zero and
+should not be read as a clean prompt ablation.
+
+\subsection{Provenance boundary}
+
+The public test file and label digest were recorded on 1 September 2026.  The
+score source is the single author-supplied PDF received on 2 September 2026.
+Their SHA--256 digests, in that order, are:
+\begin{center}
+\footnotesize
+\url{b54293b08bc7ddbb7110a50908049922f7cfd86f14cb49a4de4e28353aecc6d8}\\[-2pt]
+\url{d17c1fd5c6d87635daf8035fe4a0918d1eaa29708eae37cb797cae08c19ef887}\\[-2pt]
+\url{2f20fbc4b3eb3b87c4b693058fc5744a947de04e19a2eca70f0ea5c0d54dde3f}
+\end{center}
+The archive preserves this PDF, the episode-key transcription, and the scoring
+outputs.  It does not contain provider-side request logs, per-chat timestamps,
+or independently verified deployment screenshots.  We therefore describe the
+rows as externally captured consumer responses with a pre-existing dataset
+commitment, not as checkpoint-reproducible or cryptographically escrowed runs.

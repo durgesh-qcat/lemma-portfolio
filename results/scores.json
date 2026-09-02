@@ -1,0 +1,302 @@
+{
+  "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+  "episode_count": 60,
+  "rows": [
+    {
+      "achieved_target_coverage": 138,
+      "block_bootstrap_95_interval_fraction": [
+        0.0,
+        0.0
+      ],
+      "display_label": "SHA-256 deterministic draw",
+      "exact_by_block": {
+        "D01": 0,
+        "D02": 0,
+        "D03": 0,
+        "D04": 0,
+        "D05": 0,
+        "D06": 0,
+        "D07": 0,
+        "D08": 0,
+        "D09": 0,
+        "D10": 0,
+        "D11": 0,
+        "D12": 0
+      },
+      "exact_optimal": 0,
+      "exact_optimal_percentage": 0.0,
+      "mean_oracle_normalized_coverage_percentage": 37.1031746031746,
+      "selected_edge_recall_percentage": 18.91891891891892,
+      "system_id": "sha256_random_portfolio",
+      "target_count": 480,
+      "target_coverage_percentage": 28.75,
+      "total": 60,
+      "valid": 60,
+      "valid_percentage": 100.0,
+      "wilson_95_interval_fraction": [
+        0.0,
+        0.06017185214208986
+      ]
+    },
+    {
+      "achieved_target_coverage": 226,
+      "block_bootstrap_95_interval_fraction": [
+        0.0,
+        0.0
+      ],
+      "display_label": "Character TF-IDF",
+      "exact_by_block": {
+        "D01": 0,
+        "D02": 0,
+        "D03": 0,
+        "D04": 0,
+        "D05": 0,
+        "D06": 0,
+        "D07": 0,
+        "D08": 0,
+        "D09": 0,
+        "D10": 0,
+        "D11": 0,
+        "D12": 0
+      },
+      "exact_optimal": 0,
+      "exact_optimal_percentage": 0.0,
+      "mean_oracle_normalized_coverage_percentage": 60.3968253968254,
+      "selected_edge_recall_percentage": 29.484029484029485,
+      "system_id": "public_text_char_tfidf_facility",
+      "target_count": 480,
+      "target_coverage_percentage": 47.083333333333336,
+      "total": 60,
+      "valid": 60,
+      "valid_percentage": 100.0,
+      "wilson_95_interval_fraction": [
+        0.0,
+        0.06017185214208986
+      ]
+    },
+    {
+      "achieved_target_coverage": 299,
+      "block_bootstrap_95_interval_fraction": [
+        0.3,
+        0.5333333333333333
+      ],
+      "display_label": "GPT SOL 5.6 Pro",
+      "exact_by_block": {
+        "D01": 2,
+        "D02": 2,
+        "D03": 2,
+        "D04": 2,
+        "D05": 1,
+        "D06": 1,
+        "D07": 4,
+        "D08": 2,
+        "D09": 3,
+        "D10": 3,
+        "D11": 3,
+        "D12": 0
+      },
+      "exact_optimal": 25,
+      "exact_optimal_percentage": 41.666666666666664,
+      "mean_oracle_normalized_coverage_percentage": 79.64285714285714,
+      "selected_edge_recall_percentage": 38.943488943488944,
+      "system_id": "gpt_sol_5_6_pro",
+      "target_count": 480,
+      "target_coverage_percentage": 62.291666666666664,
+      "total": 60,
+      "valid": 55,
+      "valid_percentage": 91.66666666666667,
+      "wilson_95_interval_fraction": [
+        0.30064278558341617,
+        0.5427191897735989
+      ]
+    },
+    {
+      "achieved_target_coverage": 252,
+      "block_bootstrap_95_interval_fraction": [
+        0.0,
+        0.05
+      ],
+      "display_label": "DeepSeek Instant + DeepThink",
+      "exact_by_block": {
+        "D01": 0,
+        "D02": 0,
+        "D03": 0,
+        "D04": 0,
+        "D05": 0,
+        "D06": 0,
+        "D07": 0,
+        "D08": 0,
+        "D09": 1,
+        "D10": 0,
+        "D11": 0,
+        "D12": 0
+      },
+      "exact_optimal": 1,
+      "exact_optimal_percentage": 1.6666666666666667,
+      "mean_oracle_normalized_coverage_percentage": 67.06349206349206,
+      "selected_edge_recall_percentage": 34.88943488943489,
+      "system_id": "deepseek_instant_deepthink",
+      "target_count": 480,
+      "target_coverage_percentage": 52.5,
+      "total": 60,
+      "valid": 60,
+      "valid_percentage": 100.0,
+      "wilson_95_interval_fraction": [
+        0.0029481597947862495,
+        0.08855129727590061
+      ]
+    },
+    {
+      "achieved_target_coverage": 276,
+      "block_bootstrap_95_interval_fraction": [
+        0.05,
+        0.18333333333333332
+      ],
+      "display_label": "DeepSeek Expert + DeepThink",
+      "exact_by_block": {
+        "D01": 1,
+        "D02": 0,
+        "D03": 0,
+        "D04": 0,
+        "D05": 1,
+        "D06": 0,
+        "D07": 1,
+        "D08": 1,
+        "D09": 0,
+        "D10": 1,
+        "D11": 2,
+        "D12": 0
+      },
+      "exact_optimal": 7,
+      "exact_optimal_percentage": 11.666666666666666,
+      "mean_oracle_normalized_coverage_percentage": 73.41269841269842,
+      "selected_edge_recall_percentage": 36.85503685503686,
+      "system_id": "deepseek_expert_deepthink",
+      "target_count": 480,
+      "target_coverage_percentage": 57.5,
+      "total": 60,
+      "valid": 60,
+      "valid_percentage": 100.0,
+      "wilson_95_interval_fraction": [
+        0.0576772064005603,
+        0.2217878802417086
+      ]
+    },
+    {
+      "achieved_target_coverage": 259,
+      "block_bootstrap_95_interval_fraction": [
+        0.08333333333333333,
+        0.3333333333333333
+      ],
+      "display_label": "Qwen 3.8 Max - Thinking",
+      "exact_by_block": {
+        "D01": 1,
+        "D02": 1,
+        "D03": 1,
+        "D04": 0,
+        "D05": 0,
+        "D06": 0,
+        "D07": 1,
+        "D08": 3,
+        "D09": 3,
+        "D10": 0,
+        "D11": 2,
+        "D12": 0
+      },
+      "exact_optimal": 12,
+      "exact_optimal_percentage": 20.0,
+      "mean_oracle_normalized_coverage_percentage": 68.92857142857142,
+      "selected_edge_recall_percentage": 34.02948402948403,
+      "system_id": "qwen_3_8_max_thinking",
+      "target_count": 480,
+      "target_coverage_percentage": 53.958333333333336,
+      "total": 60,
+      "valid": 55,
+      "valid_percentage": 91.66666666666667,
+      "wilson_95_interval_fraction": [
+        0.11828505322897494,
+        0.317818058056279
+      ]
+    },
+    {
+      "achieved_target_coverage": 243,
+      "block_bootstrap_95_interval_fraction": [
+        0.016666666666666666,
+        0.2
+      ],
+      "display_label": "Qwen 3.7 Plus - Thinking",
+      "exact_by_block": {
+        "D01": 0,
+        "D02": 0,
+        "D03": 0,
+        "D04": 0,
+        "D05": 0,
+        "D06": 0,
+        "D07": 1,
+        "D08": 2,
+        "D09": 1,
+        "D10": 0,
+        "D11": 0,
+        "D12": 2
+      },
+      "exact_optimal": 6,
+      "exact_optimal_percentage": 10.0,
+      "mean_oracle_normalized_coverage_percentage": 64.64285714285714,
+      "selected_edge_recall_percentage": 31.818181818181817,
+      "system_id": "qwen_3_7_plus_thinking",
+      "target_count": 480,
+      "target_coverage_percentage": 50.625,
+      "total": 60,
+      "valid": 60,
+      "valid_percentage": 100.0,
+      "wilson_95_interval_fraction": [
+        0.04664283447388416,
+        0.20149464723978772
+      ]
+    }
+  ],
+  "schema_version": "lemma-portfolio.score-report.v4.pdf-capture-v1",
+  "selection_budget": 3,
+  "source_hashes": {
+    "labels_sha256": "d17c1fd5c6d87635daf8035fe4a0918d1eaa29708eae37cb797cae08c19ef887",
+    "public_sha256": "b54293b08bc7ddbb7110a50908049922f7cfd86f14cb49a4de4e28353aecc6d8",
+    "response_pdf_sha256": "2f20fbc4b3eb3b87c4b693058fc5744a947de04e19a2eca70f0ea5c0d54dde3f",
+    "response_text_sha256": "3cd354ccb7f8533e3709a11a785748c7d09735b41f6f97930a4247d17a8f3c40"
+  },
+  "structured_row": {
+    "achieved_target_coverage": 92,
+    "block_bootstrap_95_interval_fraction": [
+      0.0,
+      0.15
+    ],
+    "display_label": "GPT SOL support q=2",
+    "exact_by_block": {
+      "D04": 1,
+      "D05": 0,
+      "D06": 0,
+      "D12": 0
+    },
+    "exact_optimal": 1,
+    "exact_optimal_percentage": 5.0,
+    "mean_oracle_normalized_coverage_percentage": 74.76190476190476,
+    "selected_edge_recall_percentage": 34.54545454545455,
+    "system_id": "gpt_sol_support_q2",
+    "target_count": 160,
+    "target_coverage_percentage": 57.5,
+    "total": 20,
+    "valid": 20,
+    "valid_percentage": 100.0,
+    "wilson_95_interval_fraction": [
+      0.008881448800795402,
+      0.23613119344674205
+    ]
+  },
+  "uniform_random_analytic": {
+    "expected_edge_recall_percentage": 18.75,
+    "expected_exact_episodes": 0.1392857142857141,
+    "expected_exact_percentage": 0.23214285714285682,
+    "mean_expected_coverage_out_of_8": 2.346964285714286,
+    "mean_oracle_normalized_coverage_percentage": 37.62032312925171,
+    "mean_target_coverage_percentage": 29.337053571428573
+  }
+}

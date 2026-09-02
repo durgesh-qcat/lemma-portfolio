@@ -1,0 +1,4 @@
+* text eol=lf
+responses/source_extracted.txt -text
+*.pdf binary
+*.zip binary

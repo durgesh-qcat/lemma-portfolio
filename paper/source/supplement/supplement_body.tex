@@ -1,0 +1,363 @@
+\ifdefined\StandaloneTechnicalSupplement\else
+\section*{Technical supplement}
+\fi
+
+This supplement specifies the benchmark, construction, response transcription,
+and artifact trail behind the four-page paper.  It is self-contained for score
+reproduction: every score-bearing claim can be traced from the supplied response
+PDF and episode-key transcription to a public episode, a committed label row,
+and deterministic scoring code.  The accompanying anonymous archive contains
+those files and the verification commands.  It also records what the evidence
+does \emph{not} establish.
+
+\section{Task definition}
+
+For each episode, let $C$ be the displayed candidate set, $T$ the displayed
+target set, and $B$ the selection budget.  The released benchmark fixes
+$|C|=16$, $|T|=8$, and $B=3$.  Candidate and target identifiers are local to an
+episode; a name such as \code{C04} has no meaning in another episode.  Candidate
+and target declaration names are replaced by these identifiers, but the
+canonical candidate types and target statements remain visible.
+
+For each target $t$, the label records
+\[
+ D(t)= C\cap \operatorname{Consts}(\operatorname{value}(t)),
+\]
+where \code{value} is the elaborated Lean declaration value (including opaque
+theorem values in the audit) and \code{Consts} returns the constants occurring
+directly in its expression tree.  The intersection is important: a target may
+use other declarations that are not among the 16 displayed candidates.  No
+transitive closure is taken.
+
+For an exact-budget portfolio $S\subseteq C$, define
+\[
+ F(S)=\sum_{t\in T}\mathbf{1}[D(t)\cap S\ne\varnothing].
+\]
+The scorer enumerates every $S\subseteq C$ with $|S|=B$ in lexicographic order,
+computes $F^*=\max_S F(S)$, and reconstructs the complete set
+$\mathcal{A}=\{S:F(S)=F^*\}$.  A response is correct precisely when it is a
+valid size-$B$ subset in $\mathcal{A}$.  The stored optimum and stored argmax
+list are treated as assertions to audit, not as authority: scoring stops if
+either differs from the fresh enumeration.
+
+The three secondary item scores are raw target coverage $F(S)$ (reported in
+aggregate also as $F(S)/|T|$),
+\[
+ \text{normalized coverage}=F(S)/F^*,\qquad
+ \text{edge recall}=\frac{\sum_t |D(t)\cap S|}{\sum_t |D(t)|}.
+\]
+A missing, malformed, wrong-budget, duplicate-ID, or out-of-pool response gets
+zero on the primary exact-optimum score and all three secondary scores.
+Validity and operational status are reported separately.
+
+\subsection{Exact uniform-random reference}
+
+There are $\binom{K}{B}$ equally likely portfolios for $K=|C|$.  Hence, for
+one episode,
+\[
+  \Pr(S\text{ is optimal})=\frac{|\mathcal A|}{\binom{K}{B}}.
+\]
+For a target with $d_t=|D(t)|$, a random portfolio misses all its displayed
+dependencies with probability $\binom{K-d_t}{B}/\binom{K}{B}$ (taken as zero
+when $K-d_t<B$).  Linearity of expectation therefore gives
+\[
+ \mathbb E[F(S)]=\sum_{t\in T}
+ \left(1-\frac{\binom{K-d_t}{B}}{\binom{K}{B}}\right).
+\]
+We average the item-level optimal probabilities and
+$\mathbb E[F(S)]/F^*$.  Since each displayed edge is incident to one candidate,
+its selection probability and the expected edge recall are both $B/K=3/16$.
+No Monte Carlo estimate is needed.  A single seeded SHA-256 draw is retained
+only as a parser and provenance check.
+
+\section{Source snapshot and episode construction}
+
+\subsection{Pinned source}
+
+The construction begins from \mathlib{} v4.33.0
+\citep{mathlib433commit}.  Its pinned Git commit is
+\begin{center}
+\small\url{db584cd6d46c92f209a44c0f1c829460d327499d}.
+\end{center}
+\noindent The extraction consists of 256 Parquet shards from the Mathlib
+Initiative dependency and type datasets
+\citep{mathlibdeps2026,mathlibtypes2026}.  Before mining, the
+builder recomputes the name, byte size,
+and SHA-256 digest of every shard and compares the complete inventory with the
+earlier source receipt.  It refuses a missing, extra, reordered, resized, or
+changed shard.  The generation receipt records the complete inventory rather
+than relying on a directory-level label.
+
+Score reproduction uses the released episode and label JSONL files and does
+not require these Parquet shards.  The pinned-Lean audit can recompute every
+displayed edge from the named \mathlib{} commit.  Repeating the original mining
+search, however, additionally requires the separately archived 256-shard
+snapshot; its per-file inventory detects alteration but cannot recover missing
+bytes.
+
+Eligible declarations have a nonempty, parseable public type, a source module,
+and a proof-body dependency record.  We remove source modules used by any
+earlier LemmaPortfolio prototype and reject any statement whose whitespace-
+normalized or leading-binder-$\alpha$-normalized signature appeared in those
+prototypes.  The same two signatures are used to forbid duplicates within and
+between the new development and blind splits.
+
+\subsection{Cohorts, targets, and masks}
+
+Each episode is centered on one source module.  Candidate cohorts are drawn
+from declarations that recur as dependencies elsewhere in the corpus.  Targets
+come from the same module and have at least one edge to the cohort.  Stable
+SHA-256 ranks, fixed in the builder, determine cohort trials, target trials,
+candidate display order, target display order, and final split order.  Human or
+model responses are not inputs to any of these ranks.
+
+The public row contains only the benchmark ID, local candidate and target IDs,
+canonical statement strings, budget, task text, and source-project label.  The
+released label row maps local IDs back to source declarations and
+records every $D(t)$, candidate use counts, $F^*$, and every optimal portfolio.
+Before accepting a row, the builder rejects any source theorem name visible in
+any displayed statement.  It also rejects exact or $\alpha$-equivalent
+candidate--candidate, candidate--target, and target--target collisions.
+
+\subsection{Structural stress filters}
+
+Table~\ref{tab:filters} lists the fixed filters applied before final split
+selection.  They were chosen on development experience and then applied
+identically to development and blind candidates.  A candidate is active if it
+belongs to at least one $D(t)$; ``near-optimal'' means coverage $F^*-1$.
+
+\begin{table}[ht]
+\centering
+\caption{Episode-level construction requirements.}
+\label{tab:filters}
+\small
+\begin{tabular}{p{0.57\linewidth}r}
+\toprule
+Requirement & Threshold \\
+\midrule
+Displayed candidates / targets / budget & $16/8/3$ \\
+Active candidates & at least 7 \\
+Active candidates outside the union of all optima & at least 4 \\
+Targets with two or more displayed direct dependencies & at least 2 \\
+Coverage of any singleton candidate & at most 4 of 8 \\
+Use count of every member of an optimal portfolio & at least 2 \\
+Loss after removing any member of an optimal portfolio & at least 1 target \\
+Distinct portfolios at coverage $F^*-1$ & at least 2 \\
+Optimal coverage & at least 6 of 8 \\
+Number of accepted optimal portfolios & at most 32 \\
+Mean pairwise target token-Jaccard similarity & at most 0.6 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The miner further requires 20 fixed methods to miss the optimum.  Eighteen use
+only public strings: candidate position or length ranks, token-count and
+connective ranks, aggregate candidate--target text similarity, and three
+token-Jaccard inferred-incidence widths.  Two use the true incidence graph:
+frequency rank and greedy maximum coverage.  This conditioning is disclosed in
+the public generation receipt.  These methods describe how the challenge set
+was selected and must not be presented as held-out baselines.
+
+The post-freeze character TF--IDF baseline is different in both timing and
+implementation.  It is specified before the final commitment but generated
+afterward, reads public statements only, and never enters item admission.  It
+uses character $n$-grams for $n\in\{3,4,5\}$, sublinear term frequency
+$1+\ln c$, smoothed inverse document frequency
+$\ln((1+N)/(1+\mathrm{df}))+1$, fitted within each episode over its 24
+candidate and target statements, L2 normalization, and cosine similarity.  It
+enumerates all size-three portfolios to maximize
+$\sum_t\max_{c\in S}\operatorname{sim}(t,c)$, breaking ties
+lexicographically.  Because both methods use surface text, we still describe
+it as related to the lexical diagnostic family.
+
+\input{generated/construction_tables}
+
+\section{Development policy and dataset commitment}
+
+Thirty development episodes are partitioned in manifest order into two
+predeclared, nonoverlapping batches of 15.  Batch A supplies the sole
+model-facing difficulty check: a controlled Codex CLI Sol capture obtained 6/15
+exact optima (40\%).  This single check suggested that the revised format was
+nontrivial.  It is development evidence only, not a consumer-chat test result,
+an upper bound, or a guarantee that blind Sol performance will be below 60\%.
+Batch B is not used for additional model calibration, and neither batch is used
+to choose the ordered-support width.  No development item is substituted for a
+blind item.  All development labels are public and excluded from blind prompt
+directories.
+
+The 60 test episodes are selected by the same structural rules from disjoint
+modules, with a fixed top-level-domain cap.  The source theorems remain public;
+``hidden'' refers to the newly composed episode and its incidence row.  On 1
+September 2026, before the response document was supplied to the evaluator, the
+project recorded the public test SHA--256 and label-file commitment shown below.
+\begin{center}
+\footnotesize
+\url{b54293b08bc7ddbb7110a50908049922f7cfd86f14cb49a4de4e28353aecc6d8}\\[-2pt]
+\url{d17c1fd5c6d87635daf8035fe4a0918d1eaa29708eae37cb797cae08c19ef887}
+\end{center}
+The same receipt binds aggregate results from the pinned-Lean edge audit.  The
+model-facing prompts contain the public rows, never the incidence labels.
+
+An earlier protocol anticipated a fully frozen manual panel with per-call
+timestamps, attestations, and closure receipts.  The material actually supplied
+for this study is one PDF of visible responses, not those richer capture forms.
+We do not manufacture the missing evidence or inherit claims from the unused
+protocol.  The evaluation therefore supports deterministic score reproduction
+and a prior dataset commitment, but not independent verification of fresh-chat
+use, interface settings, call chronology, or the exact serving checkpoints.
+
+\section{Pinned-Lean replay audit}
+
+The source Parquet graph is convenient for mining but is not accepted as its
+own verification.  A second program builds one Lean input stream in a clean
+\mathlib{} checkout and imports \code{Mathlib}.  For every displayed source
+declaration it checks that the constant exists and has the expected declaration
+kind.  For every target it reads \code{ConstantInfo.value?} with opaque values
+enabled, obtains \code{Expr.getUsedConstantsAsSet}, intersects that set with the
+16 displayed candidate names, and compares the result exactly with the stored
+row.  It also repeats the cross-statement \code{Expr.eqv} checks.
+
+The Python wrapper binds the public and label commitments, checks the clean
+\mathlib{} commit, verifies Lean 4.33.0 and its compiler commit, and emits only
+aggregate counts.  This keeps private declaration names out of a public audit
+log.  Negative tests mutate a label edge, each commitment, the source
+inventory, and the environment; every mutation must fail closed.
+
+\input{generated/audit_tables}
+
+\section{Response intake and scoring protocol}
+
+\subsection{Direct rows}
+
+The score source is a 15-page PDF entitled \emph{Models and their responses}.
+Its section headings supply the five visible consumer labels used in the paper.
+The document contains twelve intended five-episode direct responses per row,
+except for the two anomalies described below.  It contains no account-tier,
+system-prompt, token-usage, latency, screenshot, or provider-log evidence.
+Accordingly, we make no claim about an underlying API checkpoint and do not
+infer operational facts that are absent from the document.
+
+Transcription removes layout whitespace that the PDF extractor inserts inside
+identifiers, decodes complete JSON envelopes, and indexes selections by explicit
+\code{MLP4B\_xxxx} keys.  The expected key ranges are D01=0000--0004 through
+D12=0055--0059.  Visual order is irrelevant.  Every selection must contain
+three distinct in-pool IDs.  A missing or malformed whole response block gives
+all five episodes zero while retaining them in the denominator.  This strict
+rule avoids silently improving an output by editorial repair.  The canonical
+machine-readable transcription and source-document hash are released beside
+the scorer.
+
+GPT contains D01--D11, a second D11 response, and no D12.  We retain the first
+D11 occurrence; the only changed item in the second version has identical exact
+and secondary scores, so this convention does not affect any reported number.
+Qwen 3.8 contains the D12 keys but omits the envelope's outer opening brace.
+We count that entire block invalid; adding the brace would increase its exact
+score from 12/60 to 15/60, but that repaired value is not reported.  All other
+blocks decode and align uniquely by episode key.
+
+\subsection{Ordered-support diagnostic}
+
+Four additional GPT SOL blocks provide a ranked candidate-support list for
+every target in D04, D05, D06, and D12.  The analysis truncates each list to its
+first $q=2$ entries and enumerates all 560 portfolios against the predicted
+incidence, selecting the lexicographically first maximizer.  This postprocessor
+uses no gold label.  After label release, full and truncated support maps are
+compared with the direct-incidence graph using micro precision, recall, and F1.
+The same 20 episode IDs permit a descriptive comparison with direct prompting.
+Because the PDF does not establish fresh-chat use, counterbalanced chronology,
+or an absence of intervening feedback, we do not call the difference a causal
+prompting effect and report no significance test.
+
+\section{Complete results}
+
+\input{generated/supplement_results}
+
+\section{Design history: excluded earlier captures}
+
+Earlier LemmaPortfolio prototypes are not pooled with this benchmark.  They
+used smaller candidate pools, a two-item budget, one privileged exact pair,
+and post-release inspection.  Their web-interface captures and local
+quantized-model captures differ in routing, prompting, context allocation,
+runtime, and item set.  In particular, the preserved evidence for an earlier
+21/30 development capture does not establish the GPT-4 identity originally
+associated with it.  We retain the number only as design history and make no
+GPT-4 result claim.
+
+Likewise, an old local row labelled ``DeepSeek'' sent 15 episodes through one
+shared reasoning budget and repeatedly fell back after parser failures.  It is
+not comparable to a fresh consumer-web deployment and is not evidence that the
+DeepSeek family scores two points.  We also explored fresh-item local Q4
+captures while redesigning the protocol, but they use a different inference
+surface and do not enter the final panel.  No earlier score or response is
+reused.
+
+\section{Interpretation and limitations}
+
+The benchmark has four main boundaries.
+
+First, $D(t)$ is historical.  A declaration can be logically useful without
+appearing in the stored proof, and a stored dependency can be replaceable.
+The task therefore measures dependency compression, not causal utility.
+UseFor, for example, studies reusability and contribution to proof likelihood
+in a self-play setting \citep{kasriel2025usefor}; that is a complementary and
+stronger utility question.
+
+Second, this is a closed pool with uniform costs.  Real systems search much
+larger libraries and may assign different context or retrieval costs to
+declarations.  The coverage objective is monotone submodular, connecting the
+task to classical maximum-coverage optimization
+\citep{nemhauser1978submodular}, but $K=16$ and $B=3$ let us enumerate exactly
+rather than rely on approximation guarantees.
+
+Third, the stress split is conditioned to defeat fixed diagnostics.  Its score
+is useful for comparing declared methods on this challenge distribution, not
+for estimating the frequency of hard modules in all of \mathlib{}.  Raw counts
+are primary.  Item-wise Wilson intervals show binomial-scale variation under an
+exchangeable-item working model, while whole-block bootstrap intervals show
+sensitivity to resampling the fixed prompt groups.  Neither estimates population
+performance or model-generation variance.  The 20-item intervention has only
+four supplied five-item blocks and supports no significance claim.
+
+Fourth, consumer-chat deployments hide routing, system prompts, and decoding,
+and the supplied PDF contains no per-call metadata.  The rows should not be
+read as a provider or architecture ranking.  There is no human-expert baseline,
+and one response per item is not an estimate of generation variance.  Codex
+agents assisted benchmark design, evaluation code, response transcription, and
+manuscript development; the authors checked the scores and remain responsible
+for every claim.
+
+\section{Artifact map and reproduction}
+
+The anonymous archive is organized so that score reproduction is distinct from
+the more expensive reconstruction of the benchmark:
+
+\begin{description}
+  \item[\code{data/}] development and test public rows and released labels;
+  \item[\code{responses/}] the source PDF, canonical direct and support
+        transcriptions, and the alignment/anomaly ledger;
+  \item[\code{results/}] fixed baseline selections and machine-readable
+        aggregate, item, and block scores;
+  \item[\code{provenance/}] the dataset commitment and aggregate construction
+        and pinned-Lean receipts;
+  \item[\code{development\_evidence/}] the 15-item difficulty capture and its
+        decision receipt;
+  \item[\code{construction/}] the benchmark builder, tests, and pinned-Lean
+        audit wrapper;
+  \item[\code{tools/}] a standard-library scorer and manifest builder;
+  \item[\code{verify\_release.py}] the one-command release verifier; and
+  \item[\code{paper/}] anonymous sources and the checked anonymous PDFs.
+\end{description}
+
+The one-command verifier uses only the Python standard library.  It checks the
+published hashes, reconstructs all optima from the released incidence rows, and
+recomputes every model, baseline, and development-check score without calling a
+model, Lean, or a paid service.  The archive also supplies the pinned-Lean audit
+wrapper and tests.  Repeating that extraction additionally requires Lean 4.33.0
+and the named \mathlib{} snapshot; the original mining search requires the
+separately obtainable 256 Parquet shards.  Exact commands and a short path for
+a nontechnical collaborator are in the archive README.
+
+\ifdefined\StandaloneTechnicalSupplement
+  \bibliography{references}
+  \bibliographystyle{plainnat}
+\fi

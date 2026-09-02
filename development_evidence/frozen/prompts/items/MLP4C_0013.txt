@@ -1,0 +1,122 @@
+You are solving one unreleased LemmaPortfolio benchmark episode.
+
+Each target t has a hidden set D(t): the candidate declarations used as direct theorem dependencies in that target's historical elaborated source. For a portfolio S, define F(S) as the number of targets t for which D(t) intersects S. The benchmark objective is to form a portfolio of exactly 3 distinct candidate IDs maximizing F(S). This is a static dependency-portfolio compression task; it is not a claim about which lemmas would causally help a new proof.
+
+Use only the supplied episode text. Do not use tools, web search, a repository, a theorem prover, compiler feedback, prior answers, or follow-up messages. Analyze mathematical and formal dependency structure rather than word overlap.
+
+
+Return one JSON object and no prose. It must have exactly these keys: "episode_id" and "selected". The episode_id must be copied exactly. The selected value must be an array containing exactly 3 distinct IDs copied from this episode's candidates. Candidate order does not matter.
+
+Required episode_id: MLP4C_0013
+
+Episode JSON follows.
+<episode>
+{
+  "benchmark_id": "lemma-portfolio.mathlib-compression-calibration-30.v4",
+  "candidates": [
+    {
+      "id": "C01",
+      "statement": "∀ {α : Type u_1} (M : Matroid α) (X : Set α), autoParam (X ⊆ M.E) Matroid.exists_isBasis._auto_1 → ∃ I, M.IsBasis I X"
+    },
+    {
+      "id": "C02",
+      "statement": "∀ {α : Type u_1} {M : Matroid α} {I : Set α}, M.Indep I → ∃ B, M.IsBase B ∧ I ⊆ B"
+    },
+    {
+      "id": "C03",
+      "statement": "∀ {α : Type u_1} {M : Matroid α} {I : Set α}, M.Indep I → M.IsBasis I I"
+    },
+    {
+      "id": "C04",
+      "statement": "∀ {α : Type u_1} {M : Matroid α} {B₁ B₂ : Set α}, M.IsBase B₁ → M.IsBase B₂ → (B₁ \\ B₂).encard = (B₂ \\ B₁).encard"
+    },
+    {
+      "id": "C05",
+      "statement": "∀ {α : Type u_1} {M₁ M₂ : Matroid α}, M₁.E = M₂.E → (∀ ⦃B : Set α⦄, B ⊆ M₁.E → (M₁.IsBase B ↔ M₂.IsBase B)) → M₁ = M₂"
+    },
+    {
+      "id": "C06",
+      "statement": "∀ {α : Type u_1} {M : Matroid α} {B : Set α}, M.IsBase B ↔ Maximal M.Indep B"
+    },
+    {
+      "id": "C07",
+      "statement": "∀ {α : Type u_1} {M : Matroid α} {I X : Set α}, M.Indep I → I ⊆ X → (M.IsBasis I X ↔ ∀ e ∈ X \\ I, M.Dep (insert e I))"
+    },
+    {
+      "id": "C08",
+      "statement": "∀ {α : Type u_1} {M₁ M₂ : Matroid α}, M₁.E = M₂.E → (∀ ⦃I : Set α⦄, I ⊆ M₁.E → (M₁.Indep I ↔ M₂.Indep I)) → M₁ = M₂"
+    },
+    {
+      "id": "C09",
+      "statement": "∀ {α : Type u_1} {M : Matroid α} {I J X Y : Set α}, M.IsBasis I X → M.IsBasis J Y → M.Indep (I ∪ J) → M.IsBasis (I ∪ J) (X ∪ Y)"
+    },
+    {
+      "id": "C10",
+      "statement": "∀ {α : Type u_1} {M : Matroid α} {I X : Set α}, M.Indep I → I ⊆ X → (∀ e ∈ X \\ I, M.Dep (insert e I)) → M.IsBasis I X"
+    },
+    {
+      "id": "C11",
+      "statement": "∀ {α : Type u_1} {M : Matroid α} {I X : Set α}, M.IsBasis I X ↔ (M.Indep I ∧ I ⊆ X ∧ ∀ ⦃J : Set α⦄, M.Indep J → I ⊆ J → J ⊆ X → I = J) ∧ X ⊆ M.E"
+    },
+    {
+      "id": "C12",
+      "statement": "∀ {α : Type u_1} {M : Matroid α} {I X : Set α}, M.IsBasis I X → I ⊆ X"
+    },
+    {
+      "id": "C13",
+      "statement": "∀ {α : Type u_1} {M : Matroid α} {ι : Type u_2} (X I : ι → Set α), (∀ (i : ι), M.IsBasis (I i) (X i)) → M.Indep (⋃ i, I i) → M.IsBasis (⋃ i, I i) (⋃ i, X i)"
+    },
+    {
+      "id": "C14",
+      "statement": "∀ {α : Type u_1} {M : Matroid α} {I X : Set α}, autoParam (X ⊆ M.E) Matroid.isBasis_iff._auto_1 → (M.IsBasis I X ↔ M.Indep I ∧ I ⊆ X ∧ ∀ (J : Set α), M.Indep J → I ⊆ J → J ⊆ X → I = J)"
+    },
+    {
+      "id": "C15",
+      "statement": "∀ {α : Type u_1} (self : Matroid α) ⦃I : Set α⦄, self.Indep I ↔ ∃ B, self.IsBase B ∧ I ⊆ B"
+    },
+    {
+      "id": "C16",
+      "statement": "∀ {α : Type u_1} {M : Matroid α} {B I : Set α}, M.IsBase B → M.Indep I → B ⊆ I → B = I"
+    }
+  ],
+  "episode_id": "MLP4C_0013",
+  "schema_version": "lemma-portfolio.dependency-compression.v4",
+  "selection_budget": 3,
+  "source_project": "mathlib",
+  "targets": [
+    {
+      "id": "T01",
+      "statement": "∀ {α : Type u_1} {M : Matroid α} {I X Y : Set α}, M.IsBasis I X → I ⊆ Y → Y ⊆ X → M.IsBasis I Y"
+    },
+    {
+      "id": "T02",
+      "statement": "∀ {α : Type u_1} {M : Matroid α} {I J X : Set α}, M.IsBasis I X → M.Indep J → I ⊆ J → M.IsBasis J (J ∪ X)"
+    },
+    {
+      "id": "T03",
+      "statement": "∀ {α : Type u_1} {M₁ M₂ : Matroid α}, M₁ = M₂ ↔ M₁.E = M₂.E ∧ ∀ ⦃I : Set α⦄, I ⊆ M₁.E → (M₁.Indep I ↔ M₂.Indep I)"
+    },
+    {
+      "id": "T04",
+      "statement": "∀ {α : Type u_1} {M : Matroid α} {I X : Set α}, M.Indep I → I ⊆ X → (∀ ⦃J : Set α⦄, M.Indep J → I ⊆ J → J ⊆ X → J ⊆ I) → autoParam (X ⊆ M.E) Matroid.Indep.isBasis_of_maximal_subset._auto_1 → M.IsBasis I X"
+    },
+    {
+      "id": "T05",
+      "statement": "∀ {α : Type u_1} {M : Matroid α} {B : Set α} {e f : α}, M.IsBase B → f ∉ B → M.Indep (insert f (B \\ {e})) → M.IsBase (insert f (B \\ {e}))"
+    },
+    {
+      "id": "T06",
+      "statement": "∀ {α : Type u_1} {M : Matroid α} {I X : Set α}, M.IsBasis I X → ∃ B, M.IsBase B ∧ I = B ∩ X"
+    },
+    {
+      "id": "T07",
+      "statement": "∀ {α : Type u_1} {M : Matroid α} {I X Y : Set α}, M.IsBasis I X → X ⊆ Y → autoParam (Y ⊆ M.E) Matroid.IsBasis.exists_isBasis_inter_eq_of_superset._auto_1 → ∃ J, M.IsBasis J Y ∧ J ∩ X = I"
+    },
+    {
+      "id": "T08",
+      "statement": "∀ {α : Type u_1} {M : Matroid α} {B₁ B₂ : Set α}, M.IsBase B₁ → M.IsBase B₂ → (B₁ \\ B₂).ncard = (B₂ \\ B₁).ncard"
+    }
+  ],
+  "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+}
+</episode>

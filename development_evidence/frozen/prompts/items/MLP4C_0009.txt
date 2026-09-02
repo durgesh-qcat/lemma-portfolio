@@ -1,0 +1,122 @@
+You are solving one unreleased LemmaPortfolio benchmark episode.
+
+Each target t has a hidden set D(t): the candidate declarations used as direct theorem dependencies in that target's historical elaborated source. For a portfolio S, define F(S) as the number of targets t for which D(t) intersects S. The benchmark objective is to form a portfolio of exactly 3 distinct candidate IDs maximizing F(S). This is a static dependency-portfolio compression task; it is not a claim about which lemmas would causally help a new proof.
+
+Use only the supplied episode text. Do not use tools, web search, a repository, a theorem prover, compiler feedback, prior answers, or follow-up messages. Analyze mathematical and formal dependency structure rather than word overlap.
+
+
+Return one JSON object and no prose. It must have exactly these keys: "episode_id" and "selected". The episode_id must be copied exactly. The selected value must be an array containing exactly 3 distinct IDs copied from this episode's candidates. Candidate order does not matter.
+
+Required episode_id: MLP4C_0009
+
+Episode JSON follows.
+<episode>
+{
+  "benchmark_id": "lemma-portfolio.mathlib-compression-calibration-30.v4",
+  "candidates": [
+    {
+      "id": "C01",
+      "statement": "∀ {R : Type u} [inst : CommSemiring R] {I J P : Ideal R}, P.IsPrime → (I * J ≤ P ↔ I ≤ P ∨ J ≤ P)"
+    },
+    {
+      "id": "C02",
+      "statement": "∀ {R : Type u} [inst : CommSemiring R] {I J : Ideal R}, I ⊔ J = ⊤ → I * J = I ⊓ J"
+    },
+    {
+      "id": "C03",
+      "statement": "∀ {R : Type u} [inst : Semiring R] (I : Ideal R), ⊤ * I = I"
+    },
+    {
+      "id": "C04",
+      "statement": "∀ {R : Type u} [inst : Semiring R] {I : Ideal R} {x : R}, x ∈ I → ∀ (n : ℕ), x ^ n ∈ I ^ n"
+    },
+    {
+      "id": "C05",
+      "statement": "∀ {R : Type u} [inst : Semiring R] {I J : Ideal R}, I + J = I ⊔ J"
+    },
+    {
+      "id": "C06",
+      "statement": "∀ {R : Type u} {M : Type v} [inst : Semiring R] [inst_1 : AddCommMonoid M] [inst_2 : Module R M] (I : Ideal R) [I.IsTwoSided] {ι : Type u_4} (f : ι → M) (x : M), x ∈ I • Submodule.span R (Set.range f) ↔ ∃ a, ∃ (_ : ∀ (i : ι), a i ∈ I), (a.sum fun i c => c • f i) = x"
+    },
+    {
+      "id": "C07",
+      "statement": "∀ {R : Type u} [inst : Semiring R] {I : Ideal R} {m n : ℕ}, m ≤ n → I ^ n ≤ I ^ m"
+    },
+    {
+      "id": "C08",
+      "statement": "∀ {R : Type u} [inst : CommSemiring R] {I J : Ideal R}, I ≤ J → I.radical ≤ J.radical"
+    },
+    {
+      "id": "C09",
+      "statement": "∀ {R : Type u} {M : Type v} [inst : Semiring R] [inst_1 : AddCommMonoid M] [inst_2 : Module R M] (I : Ideal R) (N : Submodule R M) {M' : Type w} [inst_3 : AddCommMonoid M'] [inst_4 : Module R M'] (f : M →ₗ[R] M'), Submodule.map f (I • N) = I • Submodule.map f N"
+    },
+    {
+      "id": "C10",
+      "statement": "∀ {R : Type u} [inst : Semiring R] {I J : Ideal R}, I * J ≤ J"
+    },
+    {
+      "id": "C11",
+      "statement": "∀ {ι : Type u_1} {M : Type u_2} [inst : AddCommGroup M] {R : Type u_3} [inst_1 : CommRing R] [inst_2 : Module R M] (I : Ideal R) {v : ι → M} (f : ι →₀ ↥I), (Ideal.finsuppTotal ι M I v) f = f.sum fun i x => ↑x • v i"
+    },
+    {
+      "id": "C12",
+      "statement": "∀ {R : Type u} [inst : CommSemiring R] [IsReduced R], ⊥.IsRadical"
+    },
+    {
+      "id": "C13",
+      "statement": "∀ {R : Type u} [inst : Semiring R], 1 = ⊤"
+    },
+    {
+      "id": "C14",
+      "statement": "∀ {R : Type u} [inst : Semiring R] {I J : Ideal R} [I.IsTwoSided], I * J ≤ I ⊓ J"
+    },
+    {
+      "id": "C15",
+      "statement": "∀ {R : Type u} [inst : CommSemiring R] {I J : Ideal R}, IsCoprime I J ↔ Codisjoint I J"
+    },
+    {
+      "id": "C16",
+      "statement": "∀ {R : Type u} {M : Type v} [inst : Semiring R] [inst_1 : AddCommMonoid M] [inst_2 : Module R M] (S : Set R) (T : Set M) [(Ideal.span S).IsTwoSided], Ideal.span S • Submodule.span R T = Submodule.span R (S • T)"
+    }
+  ],
+  "episode_id": "MLP4C_0009",
+  "schema_version": "lemma-portfolio.dependency-compression.v4",
+  "selection_budget": 3,
+  "source_project": "mathlib",
+  "targets": [
+    {
+      "id": "T01",
+      "statement": "∀ {R : Type u} [inst : Semiring R] {I J K : Ideal R} [I.IsTwoSided], I ⊔ J = ⊤ → I ⊔ J * K = I ⊔ K"
+    },
+    {
+      "id": "T02",
+      "statement": "∀ {R : Type u} [inst : CommSemiring R] {I J : Ideal R} {n m : ℕ}, (I ⊔ J) ^ (n + m) ≤ I ^ n ⊔ J ^ m"
+    },
+    {
+      "id": "T03",
+      "statement": "∀ {R : Type u} [inst : CommSemiring R] {I J : Ideal R}, IsCoprime I J ↔ I + J = 1"
+    },
+    {
+      "id": "T04",
+      "statement": "∀ {R : Type u} [inst : Semiring R] {I : Ideal R} {ι : Type u_1} {s : Finset ι} {J : ι → Ideal R} [∀ (i : ι), (J i).IsTwoSided], (∀ i ∈ s, I ⊔ J i = ⊤) → I ⊔ ⨅ i ∈ s, J i = ⊤"
+    },
+    {
+      "id": "T05",
+      "statement": "∀ {R : Type u} [inst : CommSemiring R] [IsReduced R], ⊥.radical = ⊥"
+    },
+    {
+      "id": "T06",
+      "statement": "∀ {R : Type u} {M : Type v} {M' : Type u_1} [inst : CommSemiring R] [inst_1 : AddCommMonoid M] [inst_2 : Module R M] [inst_3 : AddCommMonoid M'] [inst_4 : Module R M'] (r : R) (N : Submodule R M) (f : M →ₗ[R] M'), Submodule.map f (r • N) = r • Submodule.map f N"
+    },
+    {
+      "id": "T07",
+      "statement": "∀ {R : Type u} [inst : CommSemiring R] (m : Multiset R), (Multiset.map (fun x => Ideal.span {x}) m).prod = Ideal.span {m.prod}"
+    },
+    {
+      "id": "T08",
+      "statement": "∀ {R : Type u_2} [inst : CommSemiring R] [NoZeroDivisors R], ⊥.IsRadical"
+    }
+  ],
+  "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+}
+</episode>

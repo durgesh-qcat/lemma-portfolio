@@ -1,0 +1,122 @@
+You are solving one unreleased LemmaPortfolio benchmark episode.
+
+Each target t has a hidden set D(t): the candidate declarations used as direct theorem dependencies in that target's historical elaborated source. For a portfolio S, define F(S) as the number of targets t for which D(t) intersects S. The benchmark objective is to form a portfolio of exactly 3 distinct candidate IDs maximizing F(S). This is a static dependency-portfolio compression task; it is not a claim about which lemmas would causally help a new proof.
+
+Use only the supplied episode text. Do not use tools, web search, a repository, a theorem prover, compiler feedback, prior answers, or follow-up messages. Analyze mathematical and formal dependency structure rather than word overlap.
+
+
+Return one JSON object and no prose. It must have exactly these keys: "episode_id" and "selected". The episode_id must be copied exactly. The selected value must be an array containing exactly 3 distinct IDs copied from this episode's candidates. Candidate order does not matter.
+
+Required episode_id: MLP4C_0010
+
+Episode JSON follows.
+<episode>
+{
+  "benchmark_id": "lemma-portfolio.mathlib-compression-calibration-30.v4",
+  "candidates": [
+    {
+      "id": "C01",
+      "statement": "∀ {x : ℂ}, x.im < 0 → (-x).arg = x.arg + Real.pi"
+    },
+    {
+      "id": "C02",
+      "statement": "∀ {x : ℂ}, x.re < 0 → 0 ≤ x.im → x.arg = Real.arcsin ((-x).im / ‖x‖) + Real.pi"
+    },
+    {
+      "id": "C03",
+      "statement": "∀ (x : ℂ), ↑‖x‖ * (Complex.cos ↑x.arg + Complex.sin ↑x.arg * Complex.I) = x"
+    },
+    {
+      "id": "C04",
+      "statement": "∀ {x : ℝ}, 0 ≤ x → (↑x).arg = 0"
+    },
+    {
+      "id": "C05",
+      "statement": "∀ {x : ℂ}, x ≠ 0 → Real.cos x.arg = x.re / ‖x‖"
+    },
+    {
+      "id": "C06",
+      "statement": "∀ {z : ℂ}, z.arg ≤ Real.pi / 2 ↔ 0 ≤ z.re ∨ z.im < 0"
+    },
+    {
+      "id": "C07",
+      "statement": "∀ {r : ℝ}, 0 < r → ∀ {θ : ℝ}, θ ∈ Set.Ioc (-Real.pi) Real.pi → (↑r * (Complex.cos ↑θ + Complex.sin ↑θ * Complex.I)).arg = θ"
+    },
+    {
+      "id": "C08",
+      "statement": "∀ (x : ℂ) {r : ℝ}, 0 < r → (↑r * x).arg = x.arg"
+    },
+    {
+      "id": "C09",
+      "statement": "∀ {r : ℝ}, 0 < r → ∀ (θ : ℝ), (↑r * (Complex.cos ↑θ + Complex.sin ↑θ * Complex.I)).arg = toIocMod Real.two_pi_pos (-Real.pi) θ"
+    },
+    {
+      "id": "C10",
+      "statement": "∀ (x : ℂ), ↑‖x‖ * Complex.exp (↑x.arg * Complex.I) = x"
+    },
+    {
+      "id": "C11",
+      "statement": "∀ {r : ℝ}, 0 < r → ∀ (θ : Real.Angle), ↑(↑r * (↑θ.cos + ↑θ.sin * Complex.I)).arg = θ"
+    },
+    {
+      "id": "C12",
+      "statement": "∀ {x : ℂ}, 0 < x.im → (-x).arg = x.arg - Real.pi"
+    },
+    {
+      "id": "C13",
+      "statement": "∀ {z : ℂ}, z.arg = Real.pi ↔ z.re < 0 ∧ z.im = 0"
+    },
+    {
+      "id": "C14",
+      "statement": "∀ {x y : ℂ}, x ≠ 0 → y ≠ 0 → ↑(x * y).arg = ↑x.arg + ↑y.arg"
+    },
+    {
+      "id": "C15",
+      "statement": "∀ {x : ℂ}, x.re < 0 → x.im < 0 → x.arg = Real.arcsin ((-x).im / ‖x‖) - Real.pi"
+    },
+    {
+      "id": "C16",
+      "statement": "∀ {x : ℝ}, x < 0 → (↑x).arg = Real.pi"
+    }
+  ],
+  "episode_id": "MLP4C_0010",
+  "schema_version": "lemma-portfolio.dependency-compression.v4",
+  "selection_budget": 3,
+  "source_project": "mathlib",
+  "targets": [
+    {
+      "id": "T01",
+      "statement": "∀ {z : ℂ}, |z.arg| ≤ Real.pi / 2 ↔ 0 ≤ z.re"
+    },
+    {
+      "id": "T02",
+      "statement": "∀ {x : ℂ}, (-x).arg = x.arg + Real.pi ↔ x.im < 0 ∨ x.im = 0 ∧ 0 < x.re"
+    },
+    {
+      "id": "T03",
+      "statement": "∀ {x y : ℂ}, x ≠ 0 → y ≠ 0 → ↑(x / y).arg = ↑x.arg - ↑y.arg"
+    },
+    {
+      "id": "T04",
+      "statement": "∀ {x y : ℂ}, x ≠ 0 → y ≠ 0 → (x.arg = y.arg ↔ ↑‖y‖ / ↑‖x‖ * x = y)"
+    },
+    {
+      "id": "T05",
+      "statement": "∀ (θ : ℝ), (Complex.cos ↑θ + Complex.sin ↑θ * Complex.I).arg = toIocMod Real.two_pi_pos (-Real.pi) θ"
+    },
+    {
+      "id": "T06",
+      "statement": "∀ {z : ℂ}, z.arg = -(Real.pi / 2) ↔ z.re = 0 ∧ z.im < 0"
+    },
+    {
+      "id": "T07",
+      "statement": "∀ {z : ℂ}, z.arg = 0 ↔ 0 ≤ z.re ∧ z.im = 0"
+    },
+    {
+      "id": "T08",
+      "statement": "∀ {z : ℂ}, z.arg < Real.pi / 2 ↔ 0 < z.re ∨ z.im < 0 ∨ z = 0"
+    }
+  ],
+  "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+}
+</episode>

@@ -1,0 +1,122 @@
+You are solving one unreleased LemmaPortfolio benchmark episode.
+
+Each target t has a hidden set D(t): the candidate declarations used as direct theorem dependencies in that target's historical elaborated source. For a portfolio S, define F(S) as the number of targets t for which D(t) intersects S. The benchmark objective is to form a portfolio of exactly 3 distinct candidate IDs maximizing F(S). This is a static dependency-portfolio compression task; it is not a claim about which lemmas would causally help a new proof.
+
+Use only the supplied episode text. Do not use tools, web search, a repository, a theorem prover, compiler feedback, prior answers, or follow-up messages. Analyze mathematical and formal dependency structure rather than word overlap.
+
+
+Return one JSON object and no prose. It must have exactly these keys: "episode_id" and "selected". The episode_id must be copied exactly. The selected value must be an array containing exactly 3 distinct IDs copied from this episode's candidates. Candidate order does not matter.
+
+Required episode_id: MLP4C_0011
+
+Episode JSON follows.
+<episode>
+{
+  "benchmark_id": "lemma-portfolio.mathlib-compression-calibration-30.v4",
+  "candidates": [
+    {
+      "id": "C01",
+      "statement": "∀ {K : Type u_1} [inst : Field K] [inst_1 : Height.AdmissibleAbsValues K] {ι : Type u_2} [Finite ι] (x : ι → K) (n : ℕ), Height.mulHeight (x ^ n) = Height.mulHeight x ^ n"
+    },
+    {
+      "id": "C02",
+      "statement": "∀ {K : Type u_1} [inst : Field K] [inst_1 : Height.AdmissibleAbsValues K], Height.mulHeight₁ 0 = 1"
+    },
+    {
+      "id": "C03",
+      "statement": "∀ {K : Type u_1} [inst : Field K] [inst_1 : Height.AdmissibleAbsValues K] {ι : Type u_2} {ι' : Type u_3} [Finite ι] [Finite ι'] (x : ι → K), Height.mulHeight (Sum.elim x 0) = Height.mulHeight x"
+    },
+    {
+      "id": "C04",
+      "statement": "∀ {K : Type u_1} [inst : Field K] [inst_1 : Height.AdmissibleAbsValues K] {ι : Type u_2} [Finite ι] (x : ι → K) {c : K}, c ≠ 0 → Height.mulHeight (c • x) = Height.mulHeight x"
+    },
+    {
+      "id": "C05",
+      "statement": "∀ {K : Type u_1} [inst : Field K] [inst_1 : Height.AdmissibleAbsValues K] {ι : Type u_2} [Finite ι] (x : ι → K), 1 ≤ Height.mulHeight x"
+    },
+    {
+      "id": "C06",
+      "statement": "∀ {K : Type u_1} [inst : Field K] [inst_1 : Height.AdmissibleAbsValues K] {ι : Type u_2} [Finite ι] (x : ι → K), 0 < Height.mulHeight x"
+    },
+    {
+      "id": "C07",
+      "statement": "∀ {K : Type u_1} [inst : Field K] [inst_1 : Height.AdmissibleAbsValues K], Height.mulHeight₁ 1 = 1"
+    },
+    {
+      "id": "C08",
+      "statement": "∀ {K : Type u_1} [inst : Field K] [inst_1 : Height.AdmissibleAbsValues K] {n : ℕ} (a : K) (x : Fin n → K), Height.mulHeight (Matrix.vecCons a (Matrix.vecCons 0 x)) = Height.mulHeight (Matrix.vecCons a x)"
+    },
+    {
+      "id": "C09",
+      "statement": "∀ {K : Type u_1} [inst : Field K] [inst_1 : Height.AdmissibleAbsValues K] {ι : Type u_5} [Subsingleton ι] (x : ι → K), Height.mulHeight x = 1"
+    },
+    {
+      "id": "C10",
+      "statement": "∀ {K : Type u_1} [inst : Field K] [inst_1 : Height.AdmissibleAbsValues K] {ι : Type u_2} {ι' : Type u_3} (e : ι ≃ ι') (x : ι' → K), Height.mulHeight (x ∘ ⇑e) = Height.mulHeight x"
+    },
+    {
+      "id": "C11",
+      "statement": "∀ {K : Type u_1} [inst : Field K] [inst_1 : Height.AdmissibleAbsValues K] (x y : K), Height.mulHeight₁ (x * y) ≤ Height.mulHeight₁ x * Height.mulHeight₁ y"
+    },
+    {
+      "id": "C12",
+      "statement": "∀ {K : Type u_1} [inst : Field K] [inst_1 : Height.AdmissibleAbsValues K] {ι : Type u_2} {ι' : Type u_3} [Finite ι] [Finite ι'] (f : ι → ι') (x : ι' → K), Height.mulHeight (x ∘ f) ≤ Height.mulHeight x"
+    },
+    {
+      "id": "C13",
+      "statement": "∀ {K : Type u_1} [inst : Field K] [inst_1 : Height.AdmissibleAbsValues K] (x : K), 0 < Height.mulHeight₁ x"
+    },
+    {
+      "id": "C14",
+      "statement": "∀ {K : Type u_1} [inst : Field K] [inst_1 : Height.AdmissibleAbsValues K] {ι : Type u_2} {ι' : Type u_3} [Finite ι] [Finite ι'] {x : ι → K}, x ≠ 0 → ∀ {y : ι' → K}, y ≠ 0 → (Height.mulHeight fun a => x a.1 * y a.2) = Height.mulHeight x * Height.mulHeight y"
+    },
+    {
+      "id": "C15",
+      "statement": "∀ {K : Type u_1} [inst : Field K] [inst_1 : Height.AdmissibleAbsValues K] (x : K), Height.mulHeight₁ x = Height.mulHeight ![x, 1]"
+    },
+    {
+      "id": "C16",
+      "statement": "∀ {K : Type u_1} [inst : Field K] [inst_1 : Height.AdmissibleAbsValues K] (x : K), Height.mulHeight₁ x⁻¹ = Height.mulHeight₁ x"
+    }
+  ],
+  "episode_id": "MLP4C_0011",
+  "schema_version": "lemma-portfolio.dependency-compression.v4",
+  "selection_budget": 3,
+  "source_project": "mathlib",
+  "targets": [
+    {
+      "id": "T01",
+      "statement": "∀ {K : Type u_1} [inst : Field K] [inst_1 : Height.AdmissibleAbsValues K] {ι : Type u_2} (s : Finset ι) (x : ι → K), Height.logHeight₁ (∏ i ∈ s, x i) ≤ ∑ i ∈ s, Height.logHeight₁ (x i)"
+    },
+    {
+      "id": "T02",
+      "statement": "∀ {K : Type u_1} [inst : Field K] [inst_1 : Height.AdmissibleAbsValues K], Height.logHeight₁ 1 = 0"
+    },
+    {
+      "id": "T03",
+      "statement": "∀ {K : Type u_1} [inst : Field K] [inst_1 : Height.AdmissibleAbsValues K] (x : K), Height.logHeight₁ x⁻¹ = Height.logHeight₁ x"
+    },
+    {
+      "id": "T04",
+      "statement": "∀ {K : Type u_1} [inst : Field K] [inst_1 : Height.AdmissibleAbsValues K] {n : ℕ} (a b : K) (x : Fin n → K), Height.mulHeight (Matrix.vecCons a (Matrix.vecCons b (Matrix.vecCons 0 x))) = Height.mulHeight (Matrix.vecCons a (Matrix.vecCons b x))"
+    },
+    {
+      "id": "T05",
+      "statement": "∀ {K : Type u_1} [inst : Field K] [inst_1 : Height.AdmissibleAbsValues K] (x y : K), Height.logHeight₁ (x + y) ≤ ↑(Height.totalWeight K) * Real.log 2 + Height.logHeight₁ x + Height.logHeight₁ y"
+    },
+    {
+      "id": "T06",
+      "statement": "∀ {K : Type u_1} [inst : Field K] [inst_1 : Height.AdmissibleAbsValues K] {ι : Type u_2} {ι' : Type u_3} (e : ι ≃ ι') (x : ι' → K), Height.logHeight (x ∘ ⇑e) = Height.logHeight x"
+    },
+    {
+      "id": "T07",
+      "statement": "∀ {K : Type u_1} [inst : Field K] [inst_1 : Height.AdmissibleAbsValues K] (x : K), Height.logHeight₁ x = Height.logHeight ![x, 1]"
+    },
+    {
+      "id": "T08",
+      "statement": "∀ {K : Type u_1} [inst : Field K] [inst_1 : Height.AdmissibleAbsValues K] (x y : K), Height.mulHeight₁ (x / y) = Height.mulHeight ![x, y]"
+    }
+  ],
+  "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+}
+</episode>

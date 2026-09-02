@@ -1,0 +1,35 @@
+\begin{table}[ht]
+\centering
+\caption{Final split summary after the pinned-Lean replacement.}
+\small
+\begin{tabular}{lrr}
+\toprule
+ & Development & Blind \\
+\midrule
+Episodes / distinct modules & 30 / 30 & 60 / 60 \\
+Top-level domains & 13 & 15 \\
+Displayed targets & 240 & 480 \\
+Displayed direct edges & 386 & 814 \\
+Multi-edge targets & 99 & 226 \\
+Mean active candidates & 8.37 & 8.60 \\
+$F^*=6$ / $F^*=7$ & 25 / 5 & 45 / 15 \\
+Accepted optimal portfolios & 30 & 78 \\
+Construction-diagnostic hits & 0 & 0 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The miner began with 350,599 declarations. After eligibility and prior-split
+exclusions, 186,680 declarations remained across 7,089 module centers. Stable
+cohort and target trials produced 71,091 structurally complete incidence
+drafts. Of these, 165 made all 20 construction diagnostics miss, 121 also
+passed name masking, and 103 also passed within-episode statement
+identifiability. One initially selected blind module failed the independent
+Lean edge audit and was excluded by its module hash; the final row was chosen
+deterministically from the already ranked admissible superset.
+
+The final blind domain counts are: Algebra 10, Data 7, Ring Theory 7, Analysis
+5, Topology 5, Algebraic Geometry 4, Category Theory 4, Combinatorics 3,
+Number Theory 3, Order 3, Dynamics 2, Geometry 2, Group Theory 2, Linear
+Algebra 2, and Measure Theory 1. The largest domain therefore contributes
+10/60 episodes.

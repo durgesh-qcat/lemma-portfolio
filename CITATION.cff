@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use LemmaPortfolio, please cite the paper and this artifact."
+title: "LemmaPortfolio: Choosing One Small Lemma Set for Many Lean Goals"
+type: software
+version: 4.0.0
+date-released: 2026-09-02
+authors:
+  - family-names: Das
+    given-names: Aishwarya Praveen
+    affiliation: "Dirac Labs, Madison, USA"
+  - family-names: Kumar
+    given-names: Durgesh
+    affiliation: "Dirac Labs, Madison, USA"
+license: Apache-2.0
+keywords:
+  - formal mathematics
+  - Lean
+  - premise selection
+  - maximum coverage
+  - benchmark
+abstract: >-
+  LemmaPortfolio evaluates selection of one budgeted declaration set for
+  several Lean targets under historical direct-dependency coverage.

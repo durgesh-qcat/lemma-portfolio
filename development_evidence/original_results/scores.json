@@ -1,0 +1,79 @@
+{
+  "all_outputs_freeze_sha256": null,
+  "all_outputs_panel_closure_sha256": null,
+  "analytic_uniform_random_reference": {
+    "episode_count": 15,
+    "expected_optimal_episodes": 0.026785714285714284,
+    "expected_raw_target_coverage_fraction": 0.2817559523809524,
+    "expected_target_coverage": 33.81071428571429,
+    "formula": {
+      "expected_coverage": "sum_t [1 - binomial(K-|D(t)|,B)/binomial(K,B)]",
+      "optimal_probability": "|argmax F| / binomial(K,B)"
+    },
+    "mean_expected_oracle_normalized_coverage": 0.3715986394557823,
+    "mean_expected_target_coverage": 2.2540476190476193,
+    "mean_optimal_portfolio_probability": 0.0017857142857142857,
+    "row_role": "analytic_reference_not_sampled_run",
+    "system_id": "analytic_uniform_random",
+    "target_count": 120
+  },
+  "benchmark_id": "lemma-portfolio.mathlib-compression-calibration-30.v4",
+  "development_calibration": true,
+  "episode_count": 15,
+  "evaluation_split_role": "public_development_calibration_only",
+  "labels_sha256": "9fec3602da660e4a293c7a5a8c9f74e7f4eddafab87d3bf84f4cea84a899d9f5",
+  "metric": "optimal_dependency_coverage_portfolio_accuracy_fixed_denominator",
+  "panel_freeze_sha256": "bc598103d7cd0ec4caa5f930032fc44f1531bb5154bb2c6e0409348331e39f39",
+  "prompts_manifest_sha256": "58a31aa21f8cd1d5f34fc3e3f6aa367f4f02ea909be695db0531b8cc534b2284",
+  "protocol_sha256": "7b5a05678166e2595f465ccfd562afbda281b9523b29bd1cddb86e1d02241c1c",
+  "rows": [
+    {
+      "achieved_target_coverage": 80,
+      "call_cluster_bootstrap_95_interval_fraction": [
+        0.2,
+        0.6
+      ],
+      "call_count": 3,
+      "conditional_optimal_correct": 6,
+      "conditional_optimal_percentage": 40.0,
+      "conditional_optimal_total": 15,
+      "correct": 6,
+      "hidden_dependency_edges": 195,
+      "mean_oracle_normalized_coverage": 0.8793650793650793,
+      "mean_oracle_normalized_coverage_percentage": 87.93650793650794,
+      "median_completed_latency_seconds": 964.6399767499825,
+      "optimal_portfolio_correct": 6,
+      "optimal_target_coverage": 91,
+      "p90_completed_latency_seconds": 1247.0969484827888,
+      "percentage": 40.0,
+      "predicted_support_diagnostic": null,
+      "reported_call_usage": {
+        "cached_input_tokens": 18176,
+        "call_count": 3,
+        "input_tokens": 56804,
+        "output_tokens": 106058,
+        "reasoning_tokens": 105740,
+        "reported_cost": "not_exposed",
+        "total_wall_seconds": 3119.963986415969
+      },
+      "selected_dependency_edges": 83,
+      "selected_edge_recall_percentage": 42.56410256410256,
+      "system_id": "codex_gpt56_sol_max_calibration_direct",
+      "target_count": 120,
+      "target_coverage_percentage": 66.66666666666667,
+      "terminal_status_counts": {
+        "completed": 15
+      },
+      "total": 15,
+      "valid_prediction_percentage": 100.0,
+      "valid_predictions": 15,
+      "wilson_95_interval_fraction": [
+        0.1982449614134158,
+        0.6425316987937539
+      ]
+    }
+  ],
+  "schema_version": "lemma-portfolio.score-report.v4",
+  "scored_utc": "2026-09-01T09:43:15.580409Z",
+  "selection_budget": 3
+}
