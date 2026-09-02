@@ -20,12 +20,14 @@ GENERATED = (
     "results/baseline_predictions.json",
     "results/scores.json",
     "results/structured_comparison.json",
+    "results/xhigh_structured_comparison.json",
     "results/per_item.jsonl",
     "results/development_score.json",
     "results/development_per_item.jsonl",
 )
 EXPECTED_EXACT = {
     "gpt_sol_5_6_pro": (25, 60, 55),
+    "gpt_sol_5_6_xhigh": (18, 60, 60),
     "deepseek_instant_deepthink": (1, 60, 60),
     "deepseek_expert_deepthink": (7, 60, 60),
     "qwen_3_8_max_thinking": (12, 60, 55),
@@ -134,9 +136,15 @@ def check_headlines() -> None:
         observed = (row["exact_optimal"], row["total"], row["valid"])
         if observed != expected:
             raise RuntimeError(f"headline differs for {system_id}: {observed}")
-    structured = report["structured_row"]
-    if (structured["exact_optimal"], structured["total"]) != (1, 20):
-        raise RuntimeError("structured diagnostic headline differs")
+    structured = {row["system_id"]: row for row in report["structured_rows"]}
+    expected_structured = {
+        "gpt_sol_5_6_pro_support_q2": (1, 20),
+        "gpt_sol_5_6_xhigh_support_q2": (0, 20),
+    }
+    for system_id, expected in expected_structured.items():
+        observed = (structured[system_id]["exact_optimal"], structured[system_id]["total"])
+        if observed != expected:
+            raise RuntimeError(f"structured diagnostic headline differs: {system_id}")
     development = json.loads(
         (ROOT / "results/development_score.json").read_text(encoding="utf-8")
     )["row"]
@@ -154,11 +162,13 @@ def check_headlines() -> None:
     )
     for expected in (
         "25/60 (41.7)",
+        "18/60 (30.0)",
         "1/60 (1.7)",
         "7/60 (11.7)",
         "12/60 (20.0)",
         "6/60 (10.0)",
         "299 of the 480",
+        "305 of 480",
     ):
         if expected not in results_tex:
             raise RuntimeError(f"paper result is absent or stale: {expected}")
@@ -183,7 +193,8 @@ def main() -> int:
                 f"  {row['display_label']}: {row['exact_optimal']}/{row['total']} "
                 f"(valid {row['valid']}/{row['total']})"
             )
-    print("  GPT SOL support q=2: 1/20")
+    print("  GPT SOL 5.6 Pro support q=2: 1/20")
+    print("  GPT SOL 5.6 (xhigh) support q=2: 0/20")
     print("ALL CHECKS PASSED")
     return 0
 

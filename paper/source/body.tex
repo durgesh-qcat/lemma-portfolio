@@ -7,10 +7,10 @@ target is covered when at least one chosen candidate occurs directly in its
 historical elaborated value.  We construct 30 development and 60 test episodes
 from \mathlib{} v4.33.0, enumerate all 560 portfolios, retain every maximizer,
 and independently replay the dependency labels in pinned Lean.  The public test
-set and label digest were committed before the response document was supplied.
-\ResultAbstractSentence On 20 matched items, a support-prediction decomposition
-attained 1/20 exact optima, compared with 4/20 under direct prompting, locating
-a concrete failure mode rather than an improvement.  The task measures compression of historical dependencies,
+set and label digest were committed before the response captures were supplied.
+\ResultAbstractSentence On common 20-episode ID sets, structured versus direct
+scores were 1/20 versus 4/20 (Pro) and 0/20 versus 1/20 (xhigh); this $q=2$
+pipeline did not improve exact accuracy.  The task measures compression of historical dependencies,
 not proof success under added premises.
 \end{abstract}
 
@@ -115,10 +115,10 @@ The underlying theorem statements are public and may occur in model training,
 so we do not claim contamination-free evaluation.  What is new is their
 composition into name-masked episodes and the hidden incidence rows.  On 1
 September 2026 we recorded the public-file hash and a digest of the label file;
-the response PDF used below was supplied on 2 September.  The prompts do not
+the response captures used below were supplied afterward.  The prompts do not
 contain the labels.  A separate pinned-Lean 4.33.0 replay reconstructed every
 displayed edge, and scoring freshly reconstructs every optimum.  The response
-PDF lacks provider logs and per-chat timestamps, so the deployment rows are
+PDFs lack provider logs and per-chat timestamps, so the deployment rows are
 external captures with a prior dataset commitment, not a cryptographic blind
 evaluation.  The supplement states this evidence boundary precisely.
 
@@ -127,13 +127,13 @@ evaluation.  The supplement states this evidence boundary precisely.
 We ask three questions.  How often does a displayed deployment select an exact
 optimum?  How much of the target set does it cover when it misses?  Finally,
 does making the hidden target--candidate relation explicit improve the joint
-decision?  The author-supplied document reports five visible consumer labels:
-GPT SOL 5.6 Pro, two DeepSeek DeepThink modes, and Qwen 3.8 Max and 3.7 Plus in
-Thinking mode.  Each direct row is intended to cover all 60 episodes in twelve
-five-item prompts.  We align responses by their explicit episode IDs, not by
-page position, preserve malformed or missing blocks as zeroes, and make no
-repair.  The analysis retains at most one supplied capture per intended block; anomalies
-remain zero-scored, and no repeated sampling is available.
+decision?  The two author-supplied PDFs report six visible consumer labels:
+GPT SOL 5.6 Pro and xhigh, two DeepSeek DeepThink modes, and Qwen 3.8 Max and
+3.7 Plus in Thinking mode.  Each direct row is intended to cover all 60
+episodes in twelve five-item response blocks.  We align responses by explicit episode
+IDs, preserve malformed or missing blocks as zeroes, and make no repair.  The
+analysis retains at most one supplied capture per intended block; anomalies
+remain zero-scored, and no controlled repeated sampling is available.
 
 The sole model-facing development check used the first 15 development episodes:
 a controlled Codex CLI Sol capture obtained 6/15 exact optima.  It motivated no
@@ -141,7 +141,7 @@ change to the committed test set and is not pooled with the consumer rows.
 
 Consumer interfaces do not expose the serving checkpoint, system prompt,
 decoding policy, or routing decisions.  We therefore report the visible labels
-verbatim.  The convenience sample is neither representative nor a ranking of
+with capitalization and punctuation normalized.  The convenience sample is neither representative nor a ranking of
 providers or model families.
 
 Two non-model references were fixed in advance.  Under uniform selection,
@@ -162,18 +162,18 @@ supplement gives the full calculations.
 \section{Diagnosing errors with structured support prediction}
 
 A direct portfolio does not show whether Sol inferred the target--candidate
-relations incorrectly or combined plausible relations poorly.  On 20 test
-episodes, four additional responses return up to four candidate IDs for each
-target, ordered by plausibility.  A deterministic program keeps the first two
-per target ($q=2$), then exactly solves the induced size-three coverage problem;
-ranks three and four are used only to diagnose the inferred incidence graph.
+relations incorrectly or combined plausible relations poorly.  For each GPT
+row, four additional responses cover the same 20 test episodes and return up
+to four candidate IDs per target, ordered by plausibility.  A deterministic
+program keeps the first two per target ($q=2$), then exactly solves the induced
+size-three coverage problem; later ranks diagnose the inferred incidence graph.
 
 \InterventionResultParagraph
 
-This is an error-localization diagnostic, not a second model.  It compares
-direct prompting with the complete structured-prompt-plus-solver pipeline.  We
-report item and whole-block differences without a significance test.  Since the
-source document does not certify paired-call chronology, the contrast is
+These are error-localization diagnostics, not additional model rows.  They
+compare direct prompting with the complete structured-prompt-plus-solver
+pipeline.  We report item and whole-block differences without a significance
+test.  Since the PDFs do not certify paired-call chronology, the contrasts are
 descriptive rather than causal.
 
 \section{Limitations and ways forward}
@@ -183,14 +183,14 @@ is reproducible, but it is neither logical necessity nor evidence that supplying
 a lemma will cause a new proof to succeed.  The pool is closed, all costs are
 uniform, and the 60 modules form a deliberately conditioned stress set.  Public
 statements may have appeared in training.  Consumer routing is opaque, the
-response document supplies no per-call operational evidence, and we have one
-pass and no human-expert baseline.  Intervals therefore describe this fixed set;
+response PDFs supply no per-call operational evidence or controlled repetitions,
+and we have no human-expert baseline.  Intervals therefore describe this fixed set;
 they do not estimate performance over \mathlib{} or generation variance.
 
 The natural next step is to train and evaluate set-level retrievers rather than
 assemble per-goal rankings after the fact.  Predicted incidence can still be
-useful, but the $q=2$ result shows that calibration, truncation, and tie-breaking
-must be studied jointly.  Larger candidate pools, nonuniform context costs,
+useful, but this $q=2$ result leaves the respective contributions of calibration,
+truncation, and tie-breaking unresolved.  Larger candidate pools, nonuniform context costs,
 causal proof-success labels, repeated runs, and a mathematician baseline would
 move the benchmark closer to prover practice.
 

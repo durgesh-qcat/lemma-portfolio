@@ -57,6 +57,30 @@
       "D12"
     ]
   },
+  "gpt_sol_5_6_xhigh": {
+    "decoded_block_order": [
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12"
+    ],
+    "duplicate_blocks": [],
+    "missing_blocks": [],
+    "support_block_order": [
+      "D04",
+      "D05",
+      "D06",
+      "D12"
+    ]
+  },
   "policy": {
     "alignment_key": "explicit episode_id",
     "gpt_duplicate_rule": "retain first D11 occurrence; both variants score identically",
@@ -68,7 +92,11 @@
         "D12: outer opening brace absent"
       ]
     },
-    "repairs_applied": false
+    "repairs_applied": false,
+    "source_files": {
+      "combined_five_rows": "responses/source_responses.pdf",
+      "gpt_sol_5_6_xhigh": "responses/sol_xhigh_source_responses.pdf"
+    }
   },
   "qwen_3_7_plus_thinking": {
     "decoded_block_order": [

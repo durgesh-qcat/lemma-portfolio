@@ -8,7 +8,7 @@ three-candidate portfolios and accepts every maximizer.
 
 This repository accompanies *LemmaPortfolio: Choosing One Small Lemma Set for
 Many Lean Goals*.  It contains the 30 development and 60 test episodes, released
-labels, the supplied response PDF and its audited transcription, deterministic
+labels, the supplied response PDFs and their audited transcriptions, deterministic
 baselines, scores, construction/audit receipts, and the complete paper source.
 
 ## Reported V4 scores
@@ -19,6 +19,7 @@ of 30 and not target-level partial credit.
 | Visible consumer label | Exact optimum | Target coverage | Valid |
 |---|---:|---:|---:|
 | GPT SOL 5.6 Pro | 25/60 (41.7%) | 299/480 (62.3%) | 55/60 |
+| GPT SOL 5.6 (xhigh) | 18/60 (30.0%) | 305/480 (63.5%) | 60/60 |
 | DeepSeek Instant + DeepThink | 1/60 (1.7%) | 252/480 (52.5%) | 60/60 |
 | DeepSeek Expert + DeepThink | 7/60 (11.7%) | 276/480 (57.5%) | 60/60 |
 | Qwen 3.8 Max - Thinking | 12/60 (20.0%) | 259/480 (54.0%) | 55/60 |
@@ -26,9 +27,8 @@ of 30 and not target-level partial credit.
 
 “Target coverage” is partial credit: it counts how many of the eight targets a
 selected triple touches.  “Exact optimum” asks whether no other triple covers
-more targets.  GPT SOL therefore covered 62.3% of all targets while selecting a
-maximizing triple on 41.7% of episodes.  The two columns are intentionally not
-interchangeable.
+more targets.  The Pro row had the highest exact score, whereas xhigh had the
+highest target coverage.  The two columns are intentionally not interchangeable.
 
 ## One-command verification
 
@@ -58,10 +58,10 @@ corresponding `responses/*.json` and `results/*` files in this repository.
 ## Repository map
 
 - `data/`: public development/test episodes and released labels;
-- `responses/`: original response PDF, extracted text, canonical transcription,
+- `responses/`: both original response PDFs, extracted text, canonical transcriptions,
   and response-order audit;
 - `results/`: baseline predictions, aggregate scores, item scores, and the
-  structured-support comparison;
+  structured-support comparisons;
 - `provenance/`: dataset commitment, generation receipt, and Lean/static audit
   receipts;
 - `development_evidence/`: the frozen 15-item development check reported as
@@ -74,9 +74,9 @@ corresponding `responses/*.json` and `results/*` files in this repository.
 ## Evidence boundary
 
 The public test-file hash and the label-file digest were recorded on 1 September
-2026.  The evaluator received the response PDF on 2 September 2026.  The PDF
-contains visible response text but not provider-side logs, per-chat timestamps,
-account-tier evidence, or screenshots.  Consequently, this release makes the
+2026 before the captured responses.  The two PDFs contain visible response text
+but not provider-side logs, per-chat timestamps, account-tier evidence, or
+screenshots.  Consequently, this release makes the
 scores and response alignment independently checkable, but it does not claim
 that the serving checkpoint or fresh-chat procedure can be independently
 verified.  See `docs/PROVENANCE.md` for the exact anomalies and policy.

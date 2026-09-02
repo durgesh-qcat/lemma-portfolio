@@ -1,4 +1,4 @@
-% Generated from the author-supplied response document and V4 labels.
+% Generated from the author-supplied response documents and V4 labels.
 \section{Results}
 
 \begin{table}[t]
@@ -17,7 +17,8 @@ System or deployment label & \shortstack{Exact optimum\\$n/60$ (\%)} &
 Uniform random (analytic expectation) & 0.14/60 (0.2) & 2.35/8 (29.3) & -- \\
 Character TF--IDF & 0/60 (0.0) & 3.77/8 (47.1) & 60/60 \\
 \addlinespace
-GPT SOL 5.6 Pro & \textbf{25/60 (41.7)} & \textbf{4.98/8 (62.3)} & 55/60 \\
+GPT SOL 5.6 Pro & \textbf{25/60 (41.7)} & 4.98/8 (62.3) & 55/60 \\
+GPT SOL 5.6 (xhigh) & 18/60 (30.0) & \textbf{5.08/8 (63.5)} & 60/60 \\
 DeepSeek Instant + DeepThink & 1/60 (1.7) & 4.20/8 (52.5) & 60/60 \\
 DeepSeek Expert + DeepThink & 7/60 (11.7) & 4.60/8 (57.5) & 60/60 \\
 Qwen 3.8 Max--Thinking & 12/60 (20.0) & 4.32/8 (54.0) & 55/60 \\
@@ -27,21 +28,19 @@ Qwen 3.7 Plus--Thinking & 6/60 (10.0) & 4.05/8 (50.6) & 60/60 \\
 \end{table}
 
 The exact and partial-credit columns tell different parts of the story.  GPT
-SOL had the largest exact score, 25/60, and covered 299 of the 480 displayed
-targets; its mean oracle-normalized coverage was 79.6\%.  Qwen 3.8 Max had the
-next largest exact score, 12/60.  The remaining exact scores were 7/60 for
-DeepSeek Expert, 6/60 for Qwen 3.7 Plus, and 1/60 for DeepSeek Instant.  Thus a
-system could often identify useful candidates without assembling a maximizing
-three-candidate portfolio.  Character TF--IDF likewise covered 47.1\% of
-targets but found no exact optimum, which indicates that the task is not solved
-by this surface-similarity rule.
+SOL Pro had the largest exact score, 25/60, and covered 299 of the 480 displayed
+targets.  The xhigh row covered the most targets, 305 of 480, but attained only
+18/60 exact optima.  Qwen 3.8 Max followed at 12/60; the remaining exact scores
+were 7/60, 6/60, and 1/60.  Thus partial target coverage did not guarantee a
+maximizing shared portfolio.  Character TF--IDF likewise covered 47.1\% of
+targets but found no exact optimum, so this character TF--IDF baseline did not
+solve the task.
 
-Two five-item response blocks were invalid under strict whole-block parsing:
-the GPT document repeats the block for episodes 0050--0054 and supplies no
+Two intended five-item response blocks in the combined response PDF received
+zero scores under strict whole-block parsing: the Pro section repeats episodes 0050--0054 and supplies no
 direct block for 0055--0059, while the Qwen 3.8 block for 0055--0059 lacks its
-opening outer brace.  We neither repair nor remove these outcomes.  Episode
-keys, rather than the visual block order, align every other response to its
-prompt.  Wilson and whole-block bootstrap intervals, per-block counts, and the
-full transcription audit appear in the supplement.  These convenience-sample
-rows identify dated consumer labels, not reproducible checkpoints or model
-families.
+opening outer brace.  The separate xhigh PDF contains all twelve direct blocks.
+We neither repair nor remove malformed outcomes.  Episode keys, rather than
+visual position, align every response.  Intervals, block counts, and the full
+audit appear in the supplement.  These convenience-sample rows identify visible
+consumer labels, not reproducible checkpoints or model families.

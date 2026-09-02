@@ -5,7 +5,7 @@
 This supplement specifies the benchmark, construction, response transcription,
 and artifact trail behind the four-page paper.  It is self-contained for score
 reproduction: every score-bearing claim can be traced from the supplied response
-PDF and episode-key transcription to a public episode, a committed label row,
+PDFs and episode-key transcriptions to a public episode, a committed label row,
 and deterministic scoring code.  The accompanying anonymous archive contains
 those files and the verification commands.  It also records what the evidence
 does \emph{not} establish.
@@ -188,8 +188,8 @@ directories.
 The 60 test episodes are selected by the same structural rules from disjoint
 modules, with a fixed top-level-domain cap.  The source theorems remain public;
 ``hidden'' refers to the newly composed episode and its incidence row.  On 1
-September 2026, before the response document was supplied to the evaluator, the
-project recorded the public test SHA--256 and label-file commitment shown below.
+September 2026, before the response captures, the project recorded the public
+test SHA--256 and label-file commitment shown below.
 \begin{center}
 \footnotesize
 \url{b54293b08bc7ddbb7110a50908049922f7cfd86f14cb49a4de4e28353aecc6d8}\\[-2pt]
@@ -200,7 +200,7 @@ model-facing prompts contain the public rows, never the incidence labels.
 
 An earlier protocol anticipated a fully frozen manual panel with per-call
 timestamps, attestations, and closure receipts.  The material actually supplied
-for this study is one PDF of visible responses, not those richer capture forms.
+for this study is two PDFs of visible responses, not those richer capture forms.
 We do not manufacture the missing evidence or inherit claims from the unused
 protocol.  The evaluation therefore supports deterministic score reproduction
 and a prior dataset commitment, but not independent verification of fresh-chat
@@ -229,11 +229,13 @@ inventory, and the environment; every mutation must fail closed.
 
 \subsection{Direct rows}
 
-The score source is a 15-page PDF entitled \emph{Models and their responses}.
-Its section headings supply the five visible consumer labels used in the paper.
-The document contains twelve intended five-episode direct responses per row,
-except for the two anomalies described below.  It contains no account-tier,
-system-prompt, token-usage, latency, screenshot, or provider-log evidence.
+The score sources are a 15-page PDF entitled \emph{Models and their responses}
+and a separate four-page PDF headed \emph{Gpt sol 5.6 xhigh}.  Together their
+section headings supply the six visible consumer labels used in the paper.  The
+combined document contains twelve intended five-episode direct responses per
+row, except for the two anomalies described below; the xhigh PDF contains all
+twelve.  Neither contains account-tier, system-prompt, token-usage, latency,
+screenshot, or provider-log evidence.
 Accordingly, we make no claim about an underlying API checkpoint and do not
 infer operational facts that are absent from the document.
 
@@ -244,27 +246,30 @@ D12=0055--0059.  Visual order is irrelevant.  Every selection must contain
 three distinct in-pool IDs.  A missing or malformed whole response block gives
 all five episodes zero while retaining them in the denominator.  This strict
 rule avoids silently improving an output by editorial repair.  The canonical
-machine-readable transcription and source-document hash are released beside
+machine-readable transcriptions and both source-document hashes are released beside
 the scorer.
 
-GPT contains D01--D11, a second D11 response, and no D12.  We retain the first
+The Pro section of the combined PDF contains D01--D11, a second D11 response,
+and no D12.  We retain the first
 D11 occurrence; the only changed item in the second version has identical exact
 and secondary scores, so this convention does not affect any reported number.
 Qwen 3.8 contains the D12 keys but omits the envelope's outer opening brace.
 We count that entire block invalid; adding the brace would increase its exact
 score from 12/60 to 15/60, but that repaired value is not reported.  All other
-blocks decode and align uniquely by episode key.
+combined-PDF blocks decode and align uniquely by episode key.  The separate
+xhigh direct blocks decode once each in D01--D12 order and all 60 selections
+are valid.
 
 \subsection{Ordered-support diagnostic}
 
-Four additional GPT SOL blocks provide a ranked candidate-support list for
-every target in D04, D05, D06, and D12.  The analysis truncates each list to its
+Each GPT SOL response section provides four additional ranked-support blocks, covering every
+target in D04, D05, D06, and D12.  The analysis truncates each list to its
 first $q=2$ entries and enumerates all 560 portfolios against the predicted
 incidence, selecting the lexicographically first maximizer.  This postprocessor
 uses no gold label.  After label release, full and truncated support maps are
 compared with the direct-incidence graph using micro precision, recall, and F1.
 The same 20 episode IDs permit a descriptive comparison with direct prompting.
-Because the PDF does not establish fresh-chat use, counterbalanced chronology,
+Because the PDFs do not establish fresh-chat use, counterbalanced chronology,
 or an absence of intervening feedback, we do not call the difference a causal
 prompting effect and report no significance test.
 
@@ -319,9 +324,9 @@ performance or model-generation variance.  The 20-item intervention has only
 four supplied five-item blocks and supports no significance claim.
 
 Fourth, consumer-chat deployments hide routing, system prompts, and decoding,
-and the supplied PDF contains no per-call metadata.  The rows should not be
+and the supplied PDFs contain no per-call metadata.  The rows should not be
 read as a provider or architecture ranking.  There is no human-expert baseline,
-and one response per item is not an estimate of generation variance.  Codex
+and no controlled repeated sampling is available for estimating generation variance.  Codex
 agents assisted benchmark design, evaluation code, response transcription, and
 manuscript development; the authors checked the scores and remain responsible
 for every claim.
@@ -333,7 +338,7 @@ the more expensive reconstruction of the benchmark:
 
 \begin{description}
   \item[\code{data/}] development and test public rows and released labels;
-  \item[\code{responses/}] the source PDF, canonical direct and support
+  \item[\code{responses/}] both source PDFs, canonical direct and support
         transcriptions, and the alignment/anomaly ledger;
   \item[\code{results/}] fixed baseline selections and machine-readable
         aggregate, item, and block scores;
@@ -350,7 +355,7 @@ the more expensive reconstruction of the benchmark:
 
 The one-command verifier uses only the Python standard library.  It checks the
 published hashes, reconstructs all optima from the released incidence rows, and
-recomputes every model, baseline, and development-check score without calling a
+recomputes every response-row, baseline, and development-check score without calling a
 model, Lean, or a paid service.  The archive also supplies the pinned-Lean audit
 wrapper and tests.  Repeating that extraction additionally requires Lean 4.33.0
 and the named \mathlib{} snapshot; the original mining search requires the

@@ -9,6 +9,6 @@ Overleaf.
 4. In **Menu**, set `review.tex` as the main document and use pdfLaTeX.
 5. Click **Recompile**.
 
-The ZIP is anonymous: it excludes the named preprint, response PDF, Git history,
+The ZIP is anonymous: it excludes the named preprint, response PDFs, Git history,
 and auxiliary build files.  Overleaf creates the shareable project link after
 you upload it; no one should ask for or receive your Overleaf password.

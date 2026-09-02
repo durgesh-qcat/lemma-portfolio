@@ -5,7 +5,7 @@
       0.05,
       0.35
     ],
-    "display_label": "GPT SOL matched direct",
+    "display_label": "GPT SOL 5.6 Pro matched direct",
     "exact_by_block": {
       "D04": 2,
       "D05": 1,
@@ -16,7 +16,7 @@
     "exact_optimal_percentage": 20.0,
     "mean_oracle_normalized_coverage_percentage": 61.30952380952382,
     "selected_edge_recall_percentage": 28.0,
-    "system_id": "gpt_sol_matched_direct",
+    "system_id": "gpt_sol_5_6_pro_matched_direct",
     "target_count": 160,
     "target_coverage_percentage": 46.875,
     "total": 20,
@@ -76,13 +76,15 @@
       "structured_exact": 0
     }
   ],
+  "source_display_label": "GPT SOL 5.6 Pro",
+  "source_system_id": "gpt_sol_5_6_pro",
   "structured_summary": {
     "achieved_target_coverage": 92,
     "block_bootstrap_95_interval_fraction": [
       0.0,
       0.15
     ],
-    "display_label": "GPT SOL support q=2",
+    "display_label": "GPT SOL 5.6 Pro support q=2",
     "exact_by_block": {
       "D04": 1,
       "D05": 0,
@@ -93,7 +95,7 @@
     "exact_optimal_percentage": 5.0,
     "mean_oracle_normalized_coverage_percentage": 74.76190476190476,
     "selected_edge_recall_percentage": 34.54545454545455,
-    "system_id": "gpt_sol_support_q2",
+    "system_id": "gpt_sol_5_6_pro_support_q2",
     "target_count": 160,
     "target_coverage_percentage": 57.5,
     "total": 20,

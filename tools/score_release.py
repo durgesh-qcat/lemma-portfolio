@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Reconstruct LemmaPortfolio V4 optima and score the released responses.
 
-The script uses only the Python standard library.  It parses the text extracted
-from the supplied response PDF, aligns blocks by episode ID, regenerates both
+The script uses only the Python standard library.  It parses text extracted
+from the two supplied response PDFs, aligns blocks by episode ID, regenerates both
 deterministic baselines, and writes canonical machine-readable results.
 """
 
@@ -24,6 +24,8 @@ PUBLIC_SHA256 = "b54293b08bc7ddbb7110a50908049922f7cfd86f14cb49a4de4e28353aecc6d
 LABELS_SHA256 = "d17c1fd5c6d87635daf8035fe4a0918d1eaa29708eae37cb797cae08c19ef887"
 SOURCE_PDF_SHA256 = "2f20fbc4b3eb3b87c4b693058fc5744a947de04e19a2eca70f0ea5c0d54dde3f"
 SOURCE_TEXT_SHA256 = "3cd354ccb7f8533e3709a11a785748c7d09735b41f6f97930a4247d17a8f3c40"
+XHIGH_SOURCE_PDF_SHA256 = "02abb92d1e3fd6d59dca5faa191a7fec214dffae7c4f023ce5cbb5d02b517afa"
+XHIGH_SOURCE_TEXT_SHA256 = "ac3bfc8cac5db47000f5d42b29fb798fcbb4dd8184a4f6bf2b3e6190f7555ca3"
 DEVELOPMENT_PUBLIC_SHA256 = "404452daa5017793d9f7b10f4d92716d2bb267dca034094b0f41f8c8d9219ffc"
 DEVELOPMENT_LABELS_SHA256 = "bee487259392de4d36b2140a715c7b4196ce7cc2027c3b13c90e1874a19149d0"
 DEVELOPMENT_PROTOCOL_SHA256 = "7b5a05678166e2595f465ccfd562afbda281b9523b29bd1cddb86e1d02241c1c"
@@ -49,6 +51,7 @@ MODELS = [
     ("qwen_3_8_max_thinking", "Qwen 3.8 Max - Thinking", "Qwen 3.8 Max- Thinking"),
     ("qwen_3_7_plus_thinking", "Qwen 3.7 Plus - Thinking", "QWEN 3.7 PLUS- THINKING"),
 ]
+XHIGH_MODEL = ("gpt_sol_5_6_xhigh", "GPT SOL 5.6 (xhigh)", "Gpt sol 5.6 xhigh")
 
 
 class ReleaseError(RuntimeError):
@@ -342,6 +345,68 @@ def block_id(episode_ids: list[str]) -> str:
     return f"D{numbers[0] // 5 + 1:02d}"
 
 
+def parse_xhigh_responses(root: Path) -> tuple[dict[str, Any], dict[str, Any], dict[str, Any]]:
+    """Parse the separately supplied four-page GPT SOL xhigh capture."""
+
+    pdf_path = root / "responses/sol_xhigh_source_responses.pdf"
+    text_path = root / "responses/sol_xhigh_source_extracted.txt"
+    if (
+        sha256(pdf_path) != XHIGH_SOURCE_PDF_SHA256
+        or sha256(text_path) != XHIGH_SOURCE_TEXT_SHA256
+    ):
+        raise ReleaseError("xhigh response source PDF or extracted text hash differs")
+    raw = text_path.read_text(encoding="utf-8")
+    predictions: dict[str, list[str]] = {}
+    support: dict[str, Any] = {}
+    order: list[str] = []
+    support_order: list[str] = []
+    for envelope in decoded_envelopes(raw):
+        if "predictions" in envelope:
+            values = envelope["predictions"]
+            if not isinstance(values, dict):
+                raise ReleaseError("xhigh: predictions is not an object")
+            current = block_id(list(values))
+            order.append(current)
+            for episode_id, selected in values.items():
+                if episode_id in predictions:
+                    raise ReleaseError(f"xhigh: duplicate prediction {episode_id}")
+                predictions[episode_id] = selected
+        elif "predicted_support" in envelope:
+            values = envelope["predicted_support"]
+            if not isinstance(values, dict):
+                raise ReleaseError("xhigh: predicted_support is not an object")
+            support_order.append(block_id(list(values)))
+            for episode_id, value in values.items():
+                if episode_id in support:
+                    raise ReleaseError(f"xhigh: duplicate support row {episode_id}")
+                support[episode_id] = value
+    expected_direct = [f"D{number:02d}" for number in range(1, 13)]
+    expected_support = ["D04", "D05", "D06", "D12"]
+    if (
+        sorted(order) != expected_direct
+        or len(order) != len(expected_direct)
+        or len(predictions) != 60
+    ):
+        raise ReleaseError("xhigh: direct block set is incomplete or duplicated")
+    if (
+        sorted(support_order) != expected_support
+        or len(support_order) != len(expected_support)
+        or len(support) != 20
+    ):
+        raise ReleaseError("xhigh: support block set is incomplete or duplicated")
+    direct = {
+        "display_label": XHIGH_MODEL[1],
+        "predictions": dict(sorted(predictions.items())),
+    }
+    alignment = {
+        "decoded_block_order": order,
+        "duplicate_blocks": [],
+        "missing_blocks": [],
+        "support_block_order": support_order,
+    }
+    return direct, dict(sorted(support.items())), alignment
+
+
 def parse_responses(root: Path) -> tuple[dict[str, Any], dict[str, Any], dict[str, Any]]:
     pdf_path = root / "responses/source_responses.pdf"
     text_path = root / "responses/source_extracted.txt"
@@ -384,8 +449,12 @@ def parse_responses(root: Path) -> tuple[dict[str, Any], dict[str, Any], dict[st
             "duplicate_blocks": duplicate_blocks,
             "missing_blocks": [f"D{number:02d}" for number in range(1, 13) if f"D{number:02d}" not in order],
         }
+    xhigh_direct, xhigh_support, xhigh_alignment = parse_xhigh_responses(root)
+    direct[XHIGH_MODEL[0]] = xhigh_direct
+    alignment[XHIGH_MODEL[0]] = xhigh_alignment
     expected_counts = {
         "gpt_sol_5_6_pro": 55,
+        "gpt_sol_5_6_xhigh": 60,
         "deepseek_instant_deepthink": 60,
         "deepseek_expert_deepthink": 60,
         "qwen_3_8_max_thinking": 55,
@@ -393,8 +462,8 @@ def parse_responses(root: Path) -> tuple[dict[str, Any], dict[str, Any], dict[st
     }
     if {key: len(value["predictions"]) for key, value in direct.items()} != expected_counts:
         raise ReleaseError("decoded response counts differ from the audited alignment")
-    if len(support) != 20:
-        raise ReleaseError("structured support must contain 20 episodes")
+    if len(support) != 20 or len(xhigh_support) != 20:
+        raise ReleaseError("each GPT structured-support capture must contain 20 episodes")
     alignment["policy"] = {
         "alignment_key": "explicit episode_id",
         "gpt_duplicate_rule": "retain first D11 occurrence; both variants score identically",
@@ -402,9 +471,16 @@ def parse_responses(root: Path) -> tuple[dict[str, Any], dict[str, Any], dict[st
             "gpt_sol_5_6_pro": ["D12: absent direct-response envelope"],
             "qwen_3_8_max_thinking": ["D12: outer opening brace absent"],
         },
+        "source_files": {
+            "combined_five_rows": "responses/source_responses.pdf",
+            "gpt_sol_5_6_xhigh": "responses/sol_xhigh_source_responses.pdf",
+        },
         "repairs_applied": False,
     }
-    return direct, {"gpt_sol_5_6_pro": dict(sorted(support.items()))}, alignment
+    return direct, {
+        "gpt_sol_5_6_pro": dict(sorted(support.items())),
+        "gpt_sol_5_6_xhigh": xhigh_support,
+    }, alignment
 
 
 def valid_prediction(value: Any, allowed: set[str]) -> tuple[str, ...] | None:
@@ -647,12 +723,14 @@ def incidence_counts(
 
 
 def structured_diagnostic(
+    system_id: str,
+    display_label: str,
     support_bundle: dict[str, Any],
     direct: dict[str, Any],
     public: dict[str, dict[str, Any]],
     labels: dict[str, dict[str, Any]],
 ) -> tuple[dict[str, Any], list[dict[str, Any]], dict[str, Any], list[dict[str, Any]]]:
-    support = support_bundle["gpt_sol_5_6_pro"]
+    support = support_bundle[system_id]
     predictions: dict[str, list[str]] = {}
     full_counts = [0, 0, 0]
     q2_counts = [0, 0, 0]
@@ -677,12 +755,17 @@ def structured_diagnostic(
             q2_counts[index] += count
     ids = sorted(support)
     structured_summary, details = score_predictions(
-        "gpt_sol_support_q2", "GPT SOL support q=2", predictions, public, labels, ids
+        f"{system_id}_support_q2",
+        f"{display_label} support q=2",
+        predictions,
+        public,
+        labels,
+        ids,
     )
     direct_summary, direct_details = score_predictions(
-        "gpt_sol_matched_direct",
-        "GPT SOL matched direct",
-        direct["gpt_sol_5_6_pro"]["predictions"],
+        f"{system_id}_matched_direct",
+        f"{display_label} matched direct",
+        direct[system_id]["predictions"],
         public,
         labels,
         ids,
@@ -702,6 +785,8 @@ def structured_diagnostic(
         }
 
     comparison = {
+        "source_system_id": system_id,
+        "source_display_label": display_label,
         "episode_ids": ids,
         "direct_summary": direct_summary,
         "structured_summary": structured_summary,
@@ -739,20 +824,25 @@ def run(root: Path, output_root: Path) -> None:
         summary, details = score_predictions(system_id, display, predictions, public, labels)
         summaries.append(summary)
         per_item.extend(details)
-    for system_id, display, _ in MODELS:
+    for system_id, display, _ in [MODELS[0], XHIGH_MODEL, *MODELS[1:]]:
         summary, details = score_predictions(
             system_id, display, direct[system_id]["predictions"], public, labels
         )
         summaries.append(summary)
         per_item.extend(details)
     structured_summary, structured_details, comparison, matched_direct_details = structured_diagnostic(
-        support, direct, public, labels
+        "gpt_sol_5_6_pro", "GPT SOL 5.6 Pro", support, direct, public, labels
     )
     per_item.extend(matched_direct_details)
     per_item.extend(structured_details)
+    xhigh_structured, xhigh_structured_details, xhigh_comparison, xhigh_matched_details = structured_diagnostic(
+        "gpt_sol_5_6_xhigh", "GPT SOL 5.6 (xhigh)", support, direct, public, labels
+    )
+    per_item.extend(xhigh_matched_details)
+    per_item.extend(xhigh_structured_details)
     development_report, development_details = development_evidence(root)
     report = {
-        "schema_version": "lemma-portfolio.score-report.v4.pdf-capture-v1",
+        "schema_version": "lemma-portfolio.score-report.v4.two-pdf-capture-v2",
         "benchmark_id": BENCHMARK_ID,
         "episode_count": len(public),
         "selection_budget": SELECTION_BUDGET,
@@ -761,10 +851,13 @@ def run(root: Path, output_root: Path) -> None:
             "labels_sha256": LABELS_SHA256,
             "response_pdf_sha256": SOURCE_PDF_SHA256,
             "response_text_sha256": SOURCE_TEXT_SHA256,
+            "xhigh_response_pdf_sha256": XHIGH_SOURCE_PDF_SHA256,
+            "xhigh_response_text_sha256": XHIGH_SOURCE_TEXT_SHA256,
         },
         "uniform_random_analytic": random_expectation(labels),
         "rows": summaries,
         "structured_row": structured_summary,
+        "structured_rows": [structured_summary, xhigh_structured],
     }
     dump_json(output_root / "responses/direct_transcription.json", direct)
     dump_json(output_root / "responses/support_transcription.json", support)
@@ -772,6 +865,7 @@ def run(root: Path, output_root: Path) -> None:
     dump_json(output_root / "results/baseline_predictions.json", baselines)
     dump_json(output_root / "results/scores.json", report)
     dump_json(output_root / "results/structured_comparison.json", comparison)
+    dump_json(output_root / "results/xhigh_structured_comparison.json", xhigh_comparison)
     dump_jsonl(output_root / "results/per_item.jsonl", per_item)
     dump_json(output_root / "results/development_score.json", development_report)
     dump_jsonl(output_root / "results/development_per_item.jsonl", development_details)

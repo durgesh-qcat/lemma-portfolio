@@ -111,6 +111,42 @@
       ]
     },
     {
+      "achieved_target_coverage": 305,
+      "block_bootstrap_95_interval_fraction": [
+        0.15,
+        0.45
+      ],
+      "display_label": "GPT SOL 5.6 (xhigh)",
+      "exact_by_block": {
+        "D01": 0,
+        "D02": 1,
+        "D03": 3,
+        "D04": 1,
+        "D05": 0,
+        "D06": 0,
+        "D07": 4,
+        "D08": 3,
+        "D09": 2,
+        "D10": 2,
+        "D11": 2,
+        "D12": 0
+      },
+      "exact_optimal": 18,
+      "exact_optimal_percentage": 30.0,
+      "mean_oracle_normalized_coverage_percentage": 81.3888888888889,
+      "selected_edge_recall_percentage": 39.8034398034398,
+      "system_id": "gpt_sol_5_6_xhigh",
+      "target_count": 480,
+      "target_coverage_percentage": 63.541666666666664,
+      "total": 60,
+      "valid": 60,
+      "valid_percentage": 100.0,
+      "wilson_95_interval_fraction": [
+        0.19898166138769108,
+        0.42508707946914487
+      ]
+    },
+    {
       "achieved_target_coverage": 252,
       "block_bootstrap_95_interval_fraction": [
         0.0,
@@ -255,13 +291,15 @@
       ]
     }
   ],
-  "schema_version": "lemma-portfolio.score-report.v4.pdf-capture-v1",
+  "schema_version": "lemma-portfolio.score-report.v4.two-pdf-capture-v2",
   "selection_budget": 3,
   "source_hashes": {
     "labels_sha256": "d17c1fd5c6d87635daf8035fe4a0918d1eaa29708eae37cb797cae08c19ef887",
     "public_sha256": "b54293b08bc7ddbb7110a50908049922f7cfd86f14cb49a4de4e28353aecc6d8",
     "response_pdf_sha256": "2f20fbc4b3eb3b87c4b693058fc5744a947de04e19a2eca70f0ea5c0d54dde3f",
-    "response_text_sha256": "3cd354ccb7f8533e3709a11a785748c7d09735b41f6f97930a4247d17a8f3c40"
+    "response_text_sha256": "3cd354ccb7f8533e3709a11a785748c7d09735b41f6f97930a4247d17a8f3c40",
+    "xhigh_response_pdf_sha256": "02abb92d1e3fd6d59dca5faa191a7fec214dffae7c4f023ce5cbb5d02b517afa",
+    "xhigh_response_text_sha256": "ac3bfc8cac5db47000f5d42b29fb798fcbb4dd8184a4f6bf2b3e6190f7555ca3"
   },
   "structured_row": {
     "achieved_target_coverage": 92,
@@ -269,7 +307,7 @@
       0.0,
       0.15
     ],
-    "display_label": "GPT SOL support q=2",
+    "display_label": "GPT SOL 5.6 Pro support q=2",
     "exact_by_block": {
       "D04": 1,
       "D05": 0,
@@ -280,7 +318,7 @@
     "exact_optimal_percentage": 5.0,
     "mean_oracle_normalized_coverage_percentage": 74.76190476190476,
     "selected_edge_recall_percentage": 34.54545454545455,
-    "system_id": "gpt_sol_support_q2",
+    "system_id": "gpt_sol_5_6_pro_support_q2",
     "target_count": 160,
     "target_coverage_percentage": 57.5,
     "total": 20,
@@ -291,6 +329,64 @@
       0.23613119344674205
     ]
   },
+  "structured_rows": [
+    {
+      "achieved_target_coverage": 92,
+      "block_bootstrap_95_interval_fraction": [
+        0.0,
+        0.15
+      ],
+      "display_label": "GPT SOL 5.6 Pro support q=2",
+      "exact_by_block": {
+        "D04": 1,
+        "D05": 0,
+        "D06": 0,
+        "D12": 0
+      },
+      "exact_optimal": 1,
+      "exact_optimal_percentage": 5.0,
+      "mean_oracle_normalized_coverage_percentage": 74.76190476190476,
+      "selected_edge_recall_percentage": 34.54545454545455,
+      "system_id": "gpt_sol_5_6_pro_support_q2",
+      "target_count": 160,
+      "target_coverage_percentage": 57.5,
+      "total": 20,
+      "valid": 20,
+      "valid_percentage": 100.0,
+      "wilson_95_interval_fraction": [
+        0.008881448800795402,
+        0.23613119344674205
+      ]
+    },
+    {
+      "achieved_target_coverage": 78,
+      "block_bootstrap_95_interval_fraction": [
+        0.0,
+        0.0
+      ],
+      "display_label": "GPT SOL 5.6 (xhigh) support q=2",
+      "exact_by_block": {
+        "D04": 0,
+        "D05": 0,
+        "D06": 0,
+        "D12": 0
+      },
+      "exact_optimal": 0,
+      "exact_optimal_percentage": 0.0,
+      "mean_oracle_normalized_coverage_percentage": 63.80952380952382,
+      "selected_edge_recall_percentage": 31.272727272727273,
+      "system_id": "gpt_sol_5_6_xhigh_support_q2",
+      "target_count": 160,
+      "target_coverage_percentage": 48.75,
+      "total": 20,
+      "valid": 20,
+      "valid_percentage": 100.0,
+      "wilson_95_interval_fraction": [
+        0.0,
+        0.16112515805281938
+      ]
+    }
+  ],
   "uniform_random_analytic": {
     "expected_edge_recall_percentage": 18.75,
     "expected_exact_episodes": 0.1392857142857141,
