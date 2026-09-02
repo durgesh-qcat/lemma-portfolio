@@ -7,7 +7,8 @@ This guide separates two activities:
 - **fresh inference**: present the released prompts to another model and score
   its new answers.
 
-The first is exactly reproducible.  The second is not expected to recreate an
+The first is deterministically reproducible (with a tiny tolerance only for
+last-bit floating-point differences across Python/libm versions).  The second is not expected to recreate an
 old consumer-chat output byte-for-byte because providers may change routing,
 checkpoints, system prompts, and decoding without exposing those changes.
 

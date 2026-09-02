@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import math
 from pathlib import Path
 import re
 import subprocess
@@ -161,6 +162,35 @@ def check_prompt_packet() -> None:
             )
 
 
+def equivalent_generated(left: object, right: object) -> bool:
+    """Compare generated JSON exactly except for harmless last-bit floats."""
+
+    if isinstance(left, bool) or isinstance(right, bool):
+        return type(left) is type(right) and left == right
+    if isinstance(left, int) or isinstance(right, int):
+        return type(left) is type(right) and left == right
+    if isinstance(left, float) and isinstance(right, float):
+        return math.isfinite(left) and math.isfinite(right) and math.isclose(
+            left, right, rel_tol=1e-12, abs_tol=1e-12
+        )
+    if isinstance(left, dict) and isinstance(right, dict):
+        return set(left) == set(right) and all(
+            equivalent_generated(left[key], right[key]) for key in left
+        )
+    if isinstance(left, list) and isinstance(right, list):
+        return len(left) == len(right) and all(
+            equivalent_generated(left_item, right_item)
+            for left_item, right_item in zip(left, right)
+        )
+    return type(left) is type(right) and left == right
+
+
+def load_generated(path: Path) -> object:
+    if path.suffix == ".jsonl":
+        return [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines()]
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
 def regenerate_and_compare() -> None:
     with tempfile.TemporaryDirectory(prefix="lemma_portfolio_verify_") as temporary:
         output = Path(temporary)
@@ -177,7 +207,13 @@ def regenerate_and_compare() -> None:
             stdout=subprocess.DEVNULL,
         )
         for relative in GENERATED:
-            if (output / relative).read_bytes() != (ROOT / relative).read_bytes():
+            regenerated = output / relative
+            released = ROOT / relative
+            if regenerated.read_bytes() == released.read_bytes():
+                continue
+            if not equivalent_generated(
+                load_generated(regenerated), load_generated(released)
+            ):
                 raise RuntimeError(f"regenerated result differs: {relative}")
 
 
@@ -200,7 +236,7 @@ def check_construction_tests() -> None:
 
 def check_external_scorer_tests() -> None:
     completed = subprocess.run(
-        [sys.executable, "-m", "unittest", "tests.test_score_predictions"],
+        [sys.executable, "-m", "unittest", "discover", "-s", "tests"],
         cwd=ROOT,
         text=True,
         capture_output=True,

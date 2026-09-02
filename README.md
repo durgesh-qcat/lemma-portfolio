@@ -64,8 +64,10 @@ For a clean independent rerun of the scoring stage:
 python3 tools/score_release.py --release-root . --output-root /tmp/lp-results
 ```
 
-The generated files in `/tmp/lp-results` should be byte-identical to the
-corresponding `responses/*.json` and `results/*` files in this repository.
+The generated files in `/tmp/lp-results` are byte-identical on the reference
+environment.  `verify_release.py` also accepts harmless last-bit floating-point
+differences across supported Python/libm versions while requiring every ID,
+selection, count, and discrete result to match exactly.
 
 ## Evaluate another model
 
