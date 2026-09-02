@@ -112,6 +112,84 @@ class ExternalPredictionScorerTests(unittest.TestCase):
         with self.assertRaisesRegex(PredictionInputError, "duplicate JSON key"):
             merge_prediction_shards([path], set(self.episode_ids))
 
+    def test_invalid_source_files_are_strict_by_default(self) -> None:
+        path = self.temp / "prose.txt"
+        path.write_text("The model selected C01, C02, and C03.", encoding="utf-8")
+
+        with self.assertRaisesRegex(PredictionInputError, "cannot read"):
+            score_external_predictions([path], ROOT)
+
+    def test_invalid_as_missing_records_and_skips_unusable_sources(self) -> None:
+        episode_id = self.episode_ids[0]
+        valid = self.write_json("valid.json", {episode_id: self.optimum(episode_id)})
+        prose = self.temp / "prose.txt"
+        prose.write_text(
+            '```json\n{"predictions": {"MLP4B_0001": ["C01", "C02", "C03"]}}\n```',
+            encoding="utf-8",
+        )
+        non_object = self.write_json("array.json", ["C01", "C02", "C03"])
+        unreadable = self.temp / "does-not-exist.json"
+
+        report = score_external_predictions(
+            [valid, prose, non_object, unreadable],
+            ROOT,
+            invalid_as_missing=True,
+        )
+
+        self.assertEqual(report["summary"]["exact_optimal"], 1)
+        self.assertEqual(report["summary"]["valid"], 1)
+        self.assertEqual(report["summary"]["total"], 60)
+        self.assertEqual(report["missing_episode_count"], 59)
+        self.assertEqual(report["invalid_source_file_count"], 3)
+        self.assertEqual(
+            [row["path"] for row in report["invalid_source_files"]],
+            ["prose.txt", "array.json", "does-not-exist.json"],
+        )
+        self.assertNotIn(str(self.temp), json.dumps(report))
+
+    def test_invalid_as_missing_keeps_unknown_and_duplicate_ids_hard(self) -> None:
+        episode_id = self.episode_ids[0]
+        unknown = self.write_json(
+            "unknown-tolerant.json", {"MLP4B_9999": ["C01", "C02", "C03"]}
+        )
+        with self.assertRaisesRegex(PredictionInputError, "unknown episode ID"):
+            score_external_predictions([unknown], ROOT, invalid_as_missing=True)
+
+        first = self.write_json(
+            "duplicate-first.json", {episode_id: ["C01", "C02", "C03"]}
+        )
+        second = self.write_json(
+            "duplicate-second.json", {episode_id: ["C04", "C05", "C06"]}
+        )
+        with self.assertRaisesRegex(PredictionInputError, "duplicate episode ID"):
+            score_external_predictions([first, second], ROOT, invalid_as_missing=True)
+
+    def test_cli_invalid_as_missing_writes_audited_zero_score(self) -> None:
+        source = self.temp / "raw-response.txt"
+        source.write_text("I choose C01, C02, C03.", encoding="utf-8")
+        output = self.temp / "invalid-score.json"
+        stdout = io.StringIO()
+
+        with redirect_stdout(stdout):
+            status = main(
+                [
+                    "--predictions",
+                    str(source),
+                    "--release-root",
+                    str(ROOT),
+                    "--invalid-as-missing",
+                    "--output",
+                    str(output),
+                ]
+            )
+
+        self.assertEqual(status, 0)
+        self.assertIn("Invalid source files skipped: 1", stdout.getvalue())
+        report = json.loads(output.read_text(encoding="utf-8"))
+        self.assertEqual(report["invalid_source_file_count"], 1)
+        self.assertEqual(report["missing_episode_count"], 60)
+        self.assertEqual(report["summary"]["exact_optimal"], 0)
+
     def test_cli_writes_full_json_report(self) -> None:
         episode_id = self.episode_ids[0]
         predictions = self.write_json(

@@ -38,7 +38,7 @@ installation, or paid service.
    - local date/time and timezone; and
    - whether memory, browsing, search, tools, connectors, and file uploads are
      disabled.
-3. Read `../prompts/START_HERE.txt` completely.
+3. Read [`prompts/START_HERE.txt`](../prompts/START_HERE.txt) completely.
 4. Verify the prompt bytes:
 
    ```sh
@@ -62,8 +62,10 @@ For every model:
 2. Ensure browsing, tools, uploaded files, connectors, memory, and previous-chat
    context are unavailable.
 3. Paste all of `prompts/DIRECT_PROMPTS/01.txt` as the only user message.
-4. Save the complete raw response unchanged as `01.json`.  Preserve malformed
-   responses, refusals, wrappers, and errors; never repair them silently.
+4. Save the complete raw response unchanged under
+   `scratch_runs/my_model/responses/`. Use `01.json` only when the entire
+   response is a valid JSON object; otherwise use `01.txt`. Preserve malformed
+   responses, refusals, code fences, wrappers, and errors; never repair them.
 5. Repeat in fresh chats for `02.txt` through `12.txt`, in numerical order.
 6. Do not regenerate or retry because an answer appears mathematically wrong.
    If a provider error occurs before any substantive output, preserve it and
@@ -97,23 +99,50 @@ pre-inference intended core protocol.  The final supplied consumer-response PDFs
 do not contain provider logs, timestamps, screenshots, or complete closure
 evidence.  Therefore, neither that protocol nor this repository proves that all
 six reported convenience captures followed every intended operational control.
+The protocol's earlier optional arm named a different hash-selected 20-item
+subset; the supplied D04/D05/D06/D12 support blocks are reported only as a
+descriptive diagnostic. See `provenance/manual_chat/README.md`.
+
+Save these four raw outputs unchanged under
+`scratch_runs/my_model/support_responses/`, again using `.json` only when the
+entire response is valid JSON. Score the fixed 20-episode `q=2` pipeline with:
+
+```sh
+python3 tools/score_support_predictions.py \
+  --supports scratch_runs/my_model/support_responses/* \
+  --invalid-as-missing \
+  --display-label "Exact visible model and mode" \
+  --system-id my_model_2026_09 \
+  --output scratch_runs/my_model/support_score.json
+```
+
+This reproduces the prompt-defined support subset, truncation to two candidates
+per target, lexicographically tie-broken exhaustive optimizer, 20-item exact
+and coverage scores, and full/truncated support-edge metrics. The same strict
+alignment and explicit invalid-file rules as the direct scorer apply. Smoke-test
+it with `examples/support.example.json` if desired.
 
 ## E. Score the saved direct answers
 
-Put the twelve JSON responses in one directory, then run:
+Put only response files in the dedicated `responses/` directory; keep metadata
+and score reports one level above it. Then run:
 
 ```sh
 python3 tools/score_predictions.py \
-  --predictions scratch_runs/my_model/*.json \
+  --predictions scratch_runs/my_model/responses/* \
+  --invalid-as-missing \
   --display-label "Exact visible model and mode" \
   --system-id my_model_2026_09 \
   --output scratch_runs/my_model/score.json
 ```
 
-The scorer merges the files by explicit episode ID.  It rejects unknown or
-duplicated episode keys.  Missing, malformed, duplicate-candidate, wrong-budget,
-or out-of-pool selections remain in the 60-item denominator and receive zero on
-every metric, matching the paper's rule.
+The scorer merges valid JSON files by explicit episode ID. The opt-in
+`--invalid-as-missing` mode records and skips whole files that are unreadable,
+prose, code-fenced, or otherwise not parseable JSON; it does not alter them.
+Their absent episodes remain zero in the 60-item denominator. Missing or
+malformed selections, duplicate-candidate selections, wrong-budget selections,
+and out-of-pool selections also receive zero. Unknown or duplicated episode IDs
+remain hard errors because accepting them would make the alignment ambiguous.
 
 The output reports:
 

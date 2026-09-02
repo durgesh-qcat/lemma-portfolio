@@ -1,0 +1,19 @@
+{
+  "schema_version": "lemma-portfolio.predicted-support.v1",
+  "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+  "system_id": "replace_with_your_model_id",
+  "display_label": "Replace with your model name",
+  "notes": "Illustrative one-episode support shard. Replace every list and supply all four five-episode support blocks for a complete 20-episode diagnostic.",
+  "predicted_support": {
+    "MLP4B_0015": {
+      "T01": [],
+      "T02": [],
+      "T03": [],
+      "T04": [],
+      "T05": [],
+      "T06": [],
+      "T07": [],
+      "T08": []
+    }
+  }
+}

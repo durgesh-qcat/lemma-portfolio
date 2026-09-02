@@ -14,8 +14,8 @@ baselines, scores, construction/audit receipts, and the complete paper source.
 It supports three distinct reproducibility tasks:
 
 1. **Validate the reported results** offline with one command.
-2. **Evaluate another model** with the exact released prompts and the generic
-   prediction scorer.
+2. **Evaluate another model** with the preserved released prompt packet and
+   generic scorers.
 3. **Reconstruct the benchmark** from the pinned Mathlib source snapshot and
    rerun the Lean audit.
 
@@ -71,24 +71,46 @@ selection, count, and discrete result to match exactly.
 
 ## Evaluate another model
 
-The exact twelve direct prompt files used for the 60 test episodes and the four
-structured-support prompts are in `prompts/`.  Start with
+The preserved packet of twelve direct prompts and four structured-support
+prompts corresponding to the supplied captures is in `prompts/`.  Start with
 [`prompts/START_HERE.txt`](prompts/START_HERE.txt), which specifies fresh-chat
 boundaries, order, disabled tools, retry policy, and what evidence to retain.
+The files close exactly over the released public episodes.  The supplied PDFs
+do not, however, contain provider logs that independently authenticate the
+historical prompt bytes or operational settings.
 
-Save each model's JSON-only response as a separate file and score all shards at
-once.  For example:
+Save each model response unchanged under a dedicated `responses/` directory.
+Use a `.json` extension when the entire response is valid JSON and `.txt` for
+prose, code fences, refusals, or errors. Then score all files at once:
 
 ```sh
 python3 tools/score_predictions.py \
-  --predictions scratch_runs/my_model/*.json \
+  --predictions scratch_runs/my_model/responses/* \
+  --invalid-as-missing \
   --display-label "Exact model and mode shown by the provider" \
   --output scratch_runs/my_model/score.json
 ```
 
 Missing, malformed, duplicate-ID, wrong-budget, or out-of-pool selections score
 zero, exactly as in the paper.  The denominator remains 60.  The command calls
-no model and uses no package outside the Python standard library.
+no model and uses no package outside the Python standard library. The opt-in
+flag records and skips whole files that are not parseable JSON; it never repairs
+them. Unknown or duplicated episode IDs remain hard errors.
+
+If the optional four structured-support prompts were also run, score their
+fixed 20-episode, `q=2` pipeline separately:
+
+```sh
+python3 tools/score_support_predictions.py \
+  --supports scratch_runs/my_model/support_responses/* \
+  --invalid-as-missing \
+  --display-label "Exact model and mode shown by the provider" \
+  --output scratch_runs/my_model/support_score.json
+```
+
+This second scorer reproduces the deterministic exhaustive optimizer and both
+published GPT structured rows. It reports exact accuracy, target coverage, and
+full and truncated support-edge metrics.
 
 For a scientifically useful new row, record the exact visible product/model/mode,
 date, chat boundaries, tool settings, raw responses, and every retry or error
@@ -120,11 +142,11 @@ in [`docs/COLLABORATING.md`](docs/COLLABORATING.md).
   receipts;
 - `development_evidence/`: the frozen 15-item development check reported as
   6/15 in the paper;
-- `prompts/`: the exact 12 direct and four structured-support prompt files,
+- `prompts/`: the preserved 12 direct and four structured-support prompt files,
   checksum manifest, and capture instructions;
 - `construction/`: the V4 builder, audit wrapper, tests, and reproduction notes;
-- `examples/`: example input for scoring a new model;
-- `tools/`: deterministic scorer and hash-manifest builder;
+- `examples/`: direct and structured-support scorer examples;
+- `tools/`: published-result, new-model, structured-support, and manifest tools;
 - `paper/`: MATH-AI 2026 source, official style file, and checked PDFs; and
 - `docs/`: plain-language GitHub, Overleaf, evidence, and reproduction notes.
 

@@ -4,7 +4,10 @@
 The input may be one or more JSON shards.  Each shard is either a raw mapping
 from episode IDs to three selected candidate IDs, or an object containing that
 mapping under ``predictions``.  Missing and malformed predictions receive zero;
-the denominator is always the complete 60-episode released test set.
+the denominator is always the complete 60-episode released test set.  Strict
+JSON parsing is the default.  ``--invalid-as-missing`` may be used for preserved
+raw model outputs that are unreadable, non-JSON, code-fenced, or non-object; the
+report records and skips those files, leaving their absent episodes at zero.
 
 This command intentionally uses only the Python standard library.
 """
@@ -40,6 +43,20 @@ class PredictionInputError(ValueError):
     """Raised when prediction files cannot be merged unambiguously."""
 
 
+class InvalidPredictionFileError(PredictionInputError):
+    """Raised for a source file that cannot supply an episode mapping."""
+
+
+def _report_path(path: Path) -> str:
+    """Use a portable filename in reports instead of leaking a local path."""
+
+    return path.name
+
+
+def _report_error(path: Path, error: Exception) -> str:
+    return str(error).replace(str(path), _report_path(path))
+
+
 def _object_without_duplicate_keys(pairs: list[tuple[str, Any]]) -> dict[str, Any]:
     value: dict[str, Any] = {}
     for key, item in pairs:
@@ -56,9 +73,11 @@ def _read_json(path: Path) -> dict[str, Any]:
     except PredictionInputError as error:
         raise PredictionInputError(f"{path}: {error}") from error
     except (OSError, UnicodeError, json.JSONDecodeError) as error:
-        raise PredictionInputError(f"cannot read {path}: {error}") from error
+        raise InvalidPredictionFileError(f"cannot read {path}: {error}") from error
     if not isinstance(value, dict):
-        raise PredictionInputError(f"{path}: top-level JSON value must be an object")
+        raise InvalidPredictionFileError(
+            f"{path}: top-level JSON value must be an object"
+        )
     return value
 
 
@@ -82,7 +101,9 @@ def read_prediction_shard(
 
     predictions = value["predictions"]
     if not isinstance(predictions, dict):
-        raise PredictionInputError(f"{path}: predictions must be a JSON object")
+        raise InvalidPredictionFileError(
+            f"{path}: predictions must be a JSON object"
+        )
     metadata: dict[str, str] = {}
     for key in ("benchmark_id", "system_id", "display_label"):
         item = _optional_text(value, key, path)
@@ -107,8 +128,11 @@ def _consistent_metadata(
 
 
 def merge_prediction_shards(
-    paths: Sequence[Path], known_episode_ids: set[str]
-) -> tuple[dict[str, Any], dict[str, str]]:
+    paths: Sequence[Path],
+    known_episode_ids: set[str],
+    *,
+    invalid_as_missing: bool = False,
+) -> tuple[dict[str, Any], dict[str, str], list[dict[str, str]]]:
     """Merge shards, rejecting duplicate or non-benchmark episode IDs."""
 
     if not paths:
@@ -116,8 +140,17 @@ def merge_prediction_shards(
     merged: dict[str, Any] = {}
     source_for_episode: dict[str, Path] = {}
     metadata_rows: list[tuple[Path, dict[str, str]]] = []
+    invalid_source_files: list[dict[str, str]] = []
     for path in paths:
-        predictions, metadata = read_prediction_shard(path)
+        try:
+            predictions, metadata = read_prediction_shard(path)
+        except InvalidPredictionFileError as error:
+            if not invalid_as_missing:
+                raise
+            invalid_source_files.append(
+                {"path": _report_path(path), "error": _report_error(path, error)}
+            )
+            continue
         metadata_rows.append((path, metadata))
         for episode_id, prediction in predictions.items():
             if episode_id not in known_episode_ids:
@@ -142,7 +175,7 @@ def merge_prediction_shards(
         raise PredictionInputError(
             f"prediction benchmark_id is {benchmark_id!r}; expected {BENCHMARK_ID!r}"
         )
-    return merged, metadata
+    return merged, metadata, invalid_source_files
 
 
 def _valid_external_prediction(value: Any, allowed: set[str]) -> bool:
@@ -163,11 +196,16 @@ def score_external_predictions(
     *,
     system_id: str | None = None,
     display_label: str | None = None,
+    invalid_as_missing: bool = False,
 ) -> dict[str, Any]:
     """Load, merge, and score files against all 60 released test episodes."""
 
     public, labels = load_benchmark(release_root)
-    merged, metadata = merge_prediction_shards(paths, set(public))
+    merged, metadata, invalid_source_files = merge_prediction_shards(
+        paths,
+        set(public),
+        invalid_as_missing=invalid_as_missing,
+    )
     resolved_system_id = system_id or metadata.get("system_id") or "external_predictions"
     resolved_display_label = (
         display_label
@@ -211,7 +249,9 @@ def score_external_predictions(
     return {
         "schema_version": SCHEMA_VERSION,
         "benchmark_id": BENCHMARK_ID,
-        "prediction_files": [str(path) for path in paths],
+        "prediction_files": [_report_path(path) for path in paths],
+        "invalid_source_file_count": len(invalid_source_files),
+        "invalid_source_files": invalid_source_files,
         "submitted_episode_count": len(merged),
         "missing_episode_count": len(missing_ids),
         "missing_episode_ids": missing_ids,
@@ -248,6 +288,7 @@ def readable_summary(report: dict[str, Any]) -> str:
             ),
             f"Missing predictions (scored zero): {report['missing_episode_count']}",
             f"Malformed predictions (scored zero): {report['malformed_episode_count']}",
+            f"Invalid source files skipped: {report['invalid_source_file_count']}",
         ]
     )
 
@@ -291,6 +332,14 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--system-id", help="machine-readable model/run identifier")
     parser.add_argument("--display-label", help="human-readable model/run label")
     parser.add_argument(
+        "--invalid-as-missing",
+        action="store_true",
+        help=(
+            "record and skip unreadable, unparseable, or non-object source files; "
+            "episodes absent from the remaining shards score zero"
+        ),
+    )
+    parser.add_argument(
         "--json-output",
         "--output-json",
         "--json",
@@ -317,6 +366,7 @@ def main(argv: Sequence[str] | None = None) -> int:
             args.release_root.resolve(),
             system_id=args.system_id,
             display_label=args.display_label,
+            invalid_as_missing=args.invalid_as_missing,
         )
     except PredictionInputError as error:
         parser.error(str(error))

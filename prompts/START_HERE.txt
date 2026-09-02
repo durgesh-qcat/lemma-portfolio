@@ -1,9 +1,13 @@
 LEMMA PORTFOLIO V4 - OFFLINE CHAT TEST PACKET
 
-The actual prompts are in DIRECT_PROMPTS/01.txt through 12.txt.
+The preserved released prompts are in DIRECT_PROMPTS/01.txt through 12.txt.
 Use the same 12 files for every model. Each file must be pasted once into a
 completely fresh chat. Do not combine files into one chat and do not ask a
 follow-up question.
+
+These files close exactly over the released public episodes and correspond to
+the supplied response captures. The captures do not include provider logs that
+independently authenticate the historical prompt bytes or operational settings.
 
 Before the first test, record every model you intend to test in one document:
 

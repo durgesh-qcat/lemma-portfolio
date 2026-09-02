@@ -48,3 +48,9 @@ logs, per-call timestamps, account-tier evidence, deployment screenshots, or a
 complete frozen-panel closure.  We therefore report externally captured visible
 consumer labels, not reproducible checkpoints or a cryptographically escrowed
 evaluation.
+
+The intended V3 protocol and its scope note are retained under
+`provenance/manual_chat/`.  In particular, the supplied structured-support
+blocks D04, D05, D06, and D12 differ from the protocol's earlier optional-arm
+subset.  They are therefore treated only as a descriptive diagnostic, never as
+completion of that precommitted optional arm.
