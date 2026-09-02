@@ -1,0 +1,553 @@
+You are solving five unreleased LemmaPortfolio benchmark episodes independently.
+
+For each episode, each target t has a hidden set D(t): the displayed candidate declarations used as direct theorem dependencies in that target's historical elaborated source. For a portfolio S, F(S) is the number of targets t for which D(t) intersects S. Select exactly 3 distinct candidate IDs per episode to maximize F(S). This is static dependency-portfolio compression, not a claim about causal usefulness in a new proof.
+
+Use only the supplied text. Do not use web search, tools, files, a repository, theorem proving, compiler feedback, memory, prior chats, follow-up messages, or answers from another episode. Treat every episode independently.
+
+Return one JSON object and no prose. It must have exactly one key, "predictions". Its value must be an object with exactly these episode keys: MLP4B_0015, MLP4B_0016, MLP4B_0017, MLP4B_0018, MLP4B_0019. Each value must be an array of exactly 3 distinct candidate IDs copied from that episode. Candidate order does not matter.
+
+Episode JSON array follows.
+<episodes>
+[
+  {
+    "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+    "candidates": [
+      {
+        "id": "C01",
+        "statement": "∀ {ι : Type u_1} {I : BoxIntegral.Box ι} {π : BoxIntegral.Prepartition I}, π.IsPartition → ∀ (π₁ : BoxIntegral.Prepartition I), π₁.iUnion ⊆ π.iUnion"
+      },
+      {
+        "id": "C02",
+        "statement": "∀ {ι : Type u_1} {I : BoxIntegral.Box ι}, Function.Injective BoxIntegral.Prepartition.boxes"
+      },
+      {
+        "id": "C03",
+        "statement": "∀ {ι : Type u_1} {I J : BoxIntegral.Box ι} {boxes : Finset (WithBot (BoxIntegral.Box ι))} {h₁ : ∀ J ∈ boxes, J ≤ ↑I} {h₂ : (↑boxes).Pairwise Disjoint}, J ∈ BoxIntegral.Prepartition.ofWithBot boxes h₁ h₂ ↔ ↑J ∈ boxes"
+      },
+      {
+        "id": "C04",
+        "statement": "∀ {ι : Type u_1} {I : BoxIntegral.Box ι} {π : BoxIntegral.Prepartition I}, π.IsPartition → π.iUnion = ↑I"
+      },
+      {
+        "id": "C05",
+        "statement": "∀ {ι : Type u_1} {I : BoxIntegral.Box ι} {π₁ π₂ : BoxIntegral.Prepartition I}, (∀ (J : BoxIntegral.Box ι), J ∈ π₁ ↔ J ∈ π₂) → π₁ = π₂"
+      },
+      {
+        "id": "C06",
+        "statement": "∀ {ι : Type u_1} {I J : BoxIntegral.Box ι} (π : BoxIntegral.Prepartition I) {πi : (J : BoxIntegral.Box ι) → BoxIntegral.Prepartition J}, J ∈ π.biUnion πi → π.biUnionIndex πi J ∈ π"
+      },
+      {
+        "id": "C07",
+        "statement": "∀ {ι : Type u_1} {I : BoxIntegral.Box ι} (self : BoxIntegral.Prepartition I), ∀ J ∈ self.boxes, J ≤ I"
+      },
+      {
+        "id": "C08",
+        "statement": "∀ {ι : Type u_1} {I J : BoxIntegral.Box ι} (π : BoxIntegral.Prepartition I) {πi : (J : BoxIntegral.Box ι) → BoxIntegral.Prepartition J}, J ∈ π.biUnion πi ↔ ∃ J' ∈ π, J ∈ πi J'"
+      },
+      {
+        "id": "C09",
+        "statement": "∀ {ι : Type u_1} {I : BoxIntegral.Box ι} (π : BoxIntegral.Prepartition I), π.iUnion ⊆ ↑I"
+      },
+      {
+        "id": "C10",
+        "statement": "∀ {ι : Type u_1} {I J J₁ J₂ : BoxIntegral.Box ι} (π : BoxIntegral.Prepartition I), J₁ ∈ π → J₂ ∈ π → J ≤ J₁ → J ≤ J₂ → J₁ = J₂"
+      },
+      {
+        "id": "C11",
+        "statement": "∀ {ι : Type u_1} {I : BoxIntegral.Box ι} {π : BoxIntegral.Prepartition I}, π.IsPartition ↔ π.iUnion = ↑I"
+      },
+      {
+        "id": "C12",
+        "statement": "∀ {ι : Type u_1} {I J : BoxIntegral.Box ι} (π : BoxIntegral.Prepartition I), J ∈ π → J ≤ I"
+      },
+      {
+        "id": "C13",
+        "statement": "∀ {ι : Type u_1} {I J J₁ : BoxIntegral.Box ι} (π : BoxIntegral.Prepartition I), J₁ ∈ π.restrict J ↔ ∃ J' ∈ π, ↑J₁ = ↑J ⊓ ↑J'"
+      },
+      {
+        "id": "C14",
+        "statement": "∀ {ι : Type u_1} {I : BoxIntegral.Box ι} (π : BoxIntegral.Prepartition I) (πi : (J : BoxIntegral.Box ι) → BoxIntegral.Prepartition J), (π.biUnion πi).iUnion = ⋃ J ∈ π, (πi J).iUnion"
+      },
+      {
+        "id": "C15",
+        "statement": "∀ {ι : Type u_1} {I J : BoxIntegral.Box ι} {π₁ π₂ : BoxIntegral.Prepartition I}, π₁ ≤ π₂ → π₁.restrict J ≤ π₂.restrict J"
+      },
+      {
+        "id": "C16",
+        "statement": "∀ {ι : Type u_1} {I J : BoxIntegral.Box ι} (π : BoxIntegral.Prepartition I), (π.restrict J).iUnion = ↑J ∩ π.iUnion"
+      }
+    ],
+    "episode_id": "MLP4B_0015",
+    "schema_version": "lemma-portfolio.dependency-compression.v4",
+    "selection_budget": 3,
+    "source_project": "mathlib",
+    "targets": [
+      {
+        "id": "T01",
+        "statement": "∀ {ι : Type u_1} {I : BoxIntegral.Box ι} (π : BoxIntegral.Prepartition I) {πi : (J : BoxIntegral.Box ι) → BoxIntegral.Prepartition J} {π' : BoxIntegral.Prepartition I}, π' ≤ π.biUnion πi ↔ π' ≤ π ∧ ∀ J ∈ π, π'.restrict J ≤ πi J"
+      },
+      {
+        "id": "T02",
+        "statement": "∀ {ι : Type u_1} {I : BoxIntegral.Box ι} {π₁ π₂ : BoxIntegral.Prepartition I} {πi₁ πi₂ : (J : BoxIntegral.Box ι) → BoxIntegral.Prepartition J}, π₁ = π₂ → (∀ J ∈ π₁, πi₁ J = πi₂ J) → π₁.biUnion πi₁ = π₂.biUnion πi₂"
+      },
+      {
+        "id": "T03",
+        "statement": "∀ {ι : Type u_1} {I J : BoxIntegral.Box ι}, Monotone fun π => π.restrict J"
+      },
+      {
+        "id": "T04",
+        "statement": "∀ {ι : Type u_1} {I : BoxIntegral.Box ι} (π : BoxIntegral.Prepartition I) {πi : (J : BoxIntegral.Box ι) → BoxIntegral.Prepartition J}, (∀ J ∈ π, (πi J).IsPartition) → (π.biUnion πi).iUnion = π.iUnion"
+      },
+      {
+        "id": "T05",
+        "statement": "∀ {ι : Type u_1} {I : BoxIntegral.Box ι} {boxes₁ : Finset (WithBot (BoxIntegral.Box ι))} {le_of_mem₁ : ∀ J ∈ boxes₁, J ≤ ↑I} {pairwise_disjoint₁ : (↑boxes₁).Pairwise Disjoint} {boxes₂ : Finset (WithBot (BoxIntegral.Box ι))} {le_of_mem₂ : ∀ J ∈ boxes₂, J ≤ ↑I} {pairwise_disjoint₂ : (↑boxes₂).Pairwise Disjoint}, (∀ J ∈ boxes₁, J ≠ ⊥ → ∃ J' ∈ boxes₂, J ≤ J') → BoxIntegral.Prepartition.ofWithBot boxes₁ le_of_mem₁ pairwise_disjoint₁ ≤ BoxIntegral.Prepartition.ofWithBot boxes₂ le_of_mem₂ pairwise_disjoint₂"
+      },
+      {
+        "id": "T06",
+        "statement": "∀ {ι : Type u_1} {I : BoxIntegral.Box ι} (π₁ π₂ : BoxIntegral.Prepartition I), (π₁ ⊓ π₂).iUnion = π₁.iUnion ∩ π₂.iUnion"
+      },
+      {
+        "id": "T07",
+        "statement": "∀ {ι : Type u_1} {I J : BoxIntegral.Box ι} (π : BoxIntegral.Prepartition I) {πi : (J : BoxIntegral.Box ι) → BoxIntegral.Prepartition J}, J ∈ π → ∀ {J' : BoxIntegral.Box ι}, J' ∈ πi J → π.biUnionIndex πi J' = J"
+      },
+      {
+        "id": "T08",
+        "statement": "∀ {ι : Type u_1} {I J : BoxIntegral.Box ι} (π : BoxIntegral.Prepartition I), J ∈ π → I.lower ≤ J.lower"
+      }
+    ],
+    "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+  },
+  {
+    "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+    "candidates": [
+      {
+        "id": "C01",
+        "statement": "∀ {N i : ℕ}, i ≤ N → (Polynomial.revAt N) i = N - i"
+      },
+      {
+        "id": "C02",
+        "statement": "∀ {R : Type u_1} [inst : Semiring R] {S : Type u_2} [inst_1 : CommSemiring S] (i : R →+* S) (x : S) [inst_2 : Invertible x] (N : ℕ) (f : Polynomial R), f.natDegree ≤ N → Polynomial.eval₂ i (⅟x) (Polynomial.reflect N f) * x ^ N = Polynomial.eval₂ i x f"
+      },
+      {
+        "id": "C03",
+        "statement": "∀ {R : Type u_1} [inst : Semiring R] (r : R) (N : ℕ), Polynomial.reflect N (Polynomial.C r) = Polynomial.C r * Polynomial.X ^ N"
+      },
+      {
+        "id": "C04",
+        "statement": "∀ {R : Type u_1} [inst : Semiring R] (f g : Polynomial R) (N : ℕ), Polynomial.reflect N (f + g) = Polynomial.reflect N f + Polynomial.reflect N g"
+      },
+      {
+        "id": "C05",
+        "statement": "∀ {N i : ℕ}, (Polynomial.revAt N) ((Polynomial.revAt N) i) = i"
+      },
+      {
+        "id": "C06",
+        "statement": "∀ {R : Type u_1} [inst : Semiring R] (N n : ℕ) {c : R}, Polynomial.reflect N (Polynomial.C c * Polynomial.X ^ n) = Polynomial.C c * Polynomial.X ^ (Polynomial.revAt N) n"
+      },
+      {
+        "id": "C07",
+        "statement": "∀ {R : Type u_1} [inst : Semiring R] (f : Polynomial R) (n : ℕ), f.reverse.coeff n = f.coeff ((Polynomial.revAt f.natDegree) n)"
+      },
+      {
+        "id": "C08",
+        "statement": "∀ {R : Type u_2} [inst : Semiring R] [NoZeroDivisors R] (f g : Polynomial R), (f * g).reverse = f.reverse * g.reverse"
+      },
+      {
+        "id": "C09",
+        "statement": "∀ {R : Type u_1} [inst : Semiring R] (p : Polynomial R), (p * Polynomial.X).reverse = p.reverse"
+      },
+      {
+        "id": "C10",
+        "statement": "∀ {R : Type u_1} [inst : Semiring R] (N : ℕ) (f : Polynomial R) (i : ℕ), (Polynomial.reflect N f).coeff i = f.coeff ((Polynomial.revAt N) i)"
+      },
+      {
+        "id": "C11",
+        "statement": "∀ {R : Type u_1} [inst : Semiring R] {f : Polynomial R}, f.reverse = 0 ↔ f = 0"
+      },
+      {
+        "id": "C12",
+        "statement": "∀ {R : Type u_1} [inst : Semiring R] (N n : ℕ), Polynomial.reflect N (Polynomial.X ^ n) = Polynomial.X ^ (Polynomial.revAt N) n"
+      },
+      {
+        "id": "C13",
+        "statement": "∀ {R : Type u_1} [inst : Semiring R] (f : Polynomial R) (r : R) (N : ℕ), Polynomial.reflect N (Polynomial.C r * f) = Polynomial.C r * Polynomial.reflect N f"
+      },
+      {
+        "id": "C14",
+        "statement": "∀ {R : Type u_1} [inst : Semiring R] (f g : Polynomial R) {F G : ℕ}, f.natDegree ≤ F → g.natDegree ≤ G → Polynomial.reflect (F + G) (f * g) = Polynomial.reflect F f * Polynomial.reflect G g"
+      },
+      {
+        "id": "C15",
+        "statement": "∀ {R : Type u_1} [inst : Ring R] (f : Polynomial R) (N : ℕ), Polynomial.reflect N (-f) = -Polynomial.reflect N f"
+      },
+      {
+        "id": "C16",
+        "statement": "∀ {R : Type u_1} [inst : Semiring R], Polynomial.reverse 0 = 0"
+      }
+    ],
+    "episode_id": "MLP4B_0016",
+    "schema_version": "lemma-portfolio.dependency-compression.v4",
+    "selection_budget": 3,
+    "source_project": "mathlib",
+    "targets": [
+      {
+        "id": "T01",
+        "statement": "∀ {R : Type u_1} [inst : Semiring R] {S : Type u_2} [inst_1 : CommSemiring S] (i : R →+* S) (x : S) [inst_2 : Invertible x] (N : ℕ) (f : Polynomial R), f.natDegree ≤ N → (Polynomial.eval₂ i (⅟x) (Polynomial.reflect N f) = 0 ↔ Polynomial.eval₂ i x f = 0)"
+      },
+      {
+        "id": "T02",
+        "statement": "∀ {R : Type u_1} [inst : Semiring R] (f : Polynomial R), f.reverse.coeff 1 = f.nextCoeff"
+      },
+      {
+        "id": "T03",
+        "statement": "∀ {R : Type u_1} [inst : Semiring R], Polynomial.reflect 1 Polynomial.X = 1"
+      },
+      {
+        "id": "T04",
+        "statement": "∀ {R : Type u_1} [inst : Semiring R] (f : Polynomial R), f.reverse.natDegree ≤ f.natDegree"
+      },
+      {
+        "id": "T05",
+        "statement": "∀ {R : Type u_1} [inst : Semiring R] {N : ℕ} {p : Polynomial R}, (Polynomial.reflect N p).natDegree ≤ max N p.natDegree"
+      },
+      {
+        "id": "T06",
+        "statement": "∀ {R : Type u_2} [inst : Semiring R] [NoZeroDivisors R] (p q : Polynomial R), (p * q).trailingCoeff = p.trailingCoeff * q.trailingCoeff"
+      },
+      {
+        "id": "T07",
+        "statement": "∀ {R : Type u_1} [inst : Semiring R] (cf cg N O : ℕ) (f g : Polynomial R), f.support.card ≤ cf.succ → g.support.card ≤ cg.succ → f.natDegree ≤ N → g.natDegree ≤ O → Polynomial.reflect (N + O) (f * g) = Polynomial.reflect N f * Polynomial.reflect O g"
+      },
+      {
+        "id": "T08",
+        "statement": "∀ {R : Type u_1} [inst : Semiring R] {N : ℕ} {p : Polynomial R}, Polynomial.reflect N (Polynomial.reflect N p) = p"
+      }
+    ],
+    "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+  },
+  {
+    "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+    "candidates": [
+      {
+        "id": "C01",
+        "statement": "∀ {𝕜 : Type u_1} [inst : NontriviallyNormedField 𝕜] {E : Type u_2} [inst_1 : NormedAddCommGroup E] [inst_2 : NormedSpace 𝕜 E] {f₁ f₂ : 𝕜 → E} {x : 𝕜}, MeromorphicAt f₂ x → meromorphicOrderAt f₁ x < meromorphicOrderAt f₂ x → meromorphicOrderAt (f₁ + f₂) x = meromorphicOrderAt f₁ x"
+      },
+      {
+        "id": "C02",
+        "statement": "∀ {𝕜 : Type u_1} [inst : NontriviallyNormedField 𝕜] {E : Type u_2} [inst_1 : NormedAddCommGroup E] [inst_2 : NormedSpace 𝕜 E] (z₀ : 𝕜) (e : E) [inst_3 : Decidable (e = 0)], meromorphicOrderAt (fun x => e) z₀ = if e = 0 then ⊤ else 0"
+      },
+      {
+        "id": "C03",
+        "statement": "∀ {𝕜 : Type u_1} [inst : NontriviallyNormedField 𝕜] {𝕜' : Type u_4} [inst_1 : NontriviallyNormedField 𝕜'] [inst_2 : NormedAlgebra 𝕜 𝕜'] {x : 𝕜} {ι : Type u_5} {s : Finset ι} {f : ι → 𝕜 → 𝕜'}, (∀ i ∈ s, MeromorphicAt (f i) x) → meromorphicOrderAt (∏ i ∈ s, f i) x = ∑ i ∈ s, meromorphicOrderAt (f i) x"
+      },
+      {
+        "id": "C04",
+        "statement": "∀ {𝕜 : Type u_1} [inst : NontriviallyNormedField 𝕜] {E : Type u_2} [inst_1 : NormedAddCommGroup E] [inst_2 : NormedSpace 𝕜 E] {f : 𝕜 → E} {x : 𝕜}, AnalyticAt 𝕜 f x → meromorphicOrderAt f x = ENat.map Nat.cast (analyticOrderAt f x)"
+      },
+      {
+        "id": "C05",
+        "statement": "∀ {𝕜 : Type u_1} [inst : NontriviallyNormedField 𝕜] {E : Type u_2} [inst_1 : NormedAddCommGroup E] [inst_2 : NormedSpace 𝕜 E] {R : Type u_3} [inst_3 : NormedRing R] [NoZeroDivisors R] [inst_5 : Module R E] [IsBoundedSMul R E] [Module.IsTorsionFree R E] {x : 𝕜} [inst_8 : NormedAlgebra 𝕜 R] [IsScalarTower 𝕜 R E] {f : 𝕜 → R} {g : 𝕜 → E}, MeromorphicAt f x → MeromorphicAt g x → meromorphicOrderAt (f • g) x = meromorphicOrderAt f x + meromorphicOrderAt g x"
+      },
+      {
+        "id": "C06",
+        "statement": "∀ {𝕜 : Type u_1} [inst : NontriviallyNormedField 𝕜] {E : Type u_2} [inst_1 : NormedAddCommGroup E] [inst_2 : NormedSpace 𝕜 E] {f : 𝕜 → E} {x : 𝕜} {U : Set 𝕜}, MeromorphicOn f U → x ∈ U → ∀ᶠ (y : 𝕜) in nhdsWithin x {x}ᶜ, AnalyticAt 𝕜 f y ∨ y ∈ Uᶜ"
+      },
+      {
+        "id": "C07",
+        "statement": "∀ {𝕜 : Type u_1} [inst : NontriviallyNormedField 𝕜] {E : Type u_2} [inst_1 : NormedAddCommGroup E] [inst_2 : NormedSpace 𝕜 E] {x : 𝕜} {f : 𝕜 → E} {g : 𝕜 → 𝕜}, MeromorphicAt f (g x) → AnalyticAt 𝕜 g x → ¬Filter.EventuallyConst g (nhds x) → meromorphicOrderAt (f ∘ g) x = meromorphicOrderAt f (g x) * ENat.map Nat.cast (analyticOrderAt (fun x_1 => g x_1 - g x) x)"
+      },
+      {
+        "id": "C08",
+        "statement": "∀ {𝕜 : Type u_1} [inst : NontriviallyNormedField 𝕜] {E : Type u_2} [inst_1 : NormedAddCommGroup E] [inst_2 : NormedSpace 𝕜 E] {f : 𝕜 → E} {U : Set 𝕜}, MeromorphicOn f U → {u | meromorphicOrderAt f ↑u = 0 ∨ meromorphicOrderAt f ↑u = ⊤} ∈ Filter.codiscrete ↑U"
+      },
+      {
+        "id": "C09",
+        "statement": "∀ {𝕜 : Type u_1} [inst : NontriviallyNormedField 𝕜] {E : Type u_2} [inst_1 : NormedAddCommGroup E] [inst_2 : NormedSpace 𝕜 E] {f : 𝕜 → E} {x : 𝕜} {n : ℤ}, MeromorphicAt f x → (meromorphicOrderAt f x = ↑n ↔ ∃ g, AnalyticAt 𝕜 g x ∧ g x ≠ 0 ∧ ∀ᶠ (z : 𝕜) in nhdsWithin x {x}ᶜ, f z = (z - x) ^ n • g z)"
+      },
+      {
+        "id": "C10",
+        "statement": "∀ {𝕜 : Type u_1} [inst : NontriviallyNormedField 𝕜] {E : Type u_2} [inst_1 : NormedAddCommGroup E] [inst_2 : NormedSpace 𝕜 E] {f : 𝕜 → E} {x : 𝕜}, AnalyticAt 𝕜 f x → 0 ≤ meromorphicOrderAt f x"
+      },
+      {
+        "id": "C11",
+        "statement": "∀ {𝕜 : Type u_1} [inst : NontriviallyNormedField 𝕜] {E : Type u_2} [inst_1 : NormedAddCommGroup E] [inst_2 : NormedSpace 𝕜 E] {f : 𝕜 → E} {x : 𝕜}, meromorphicOrderAt f x = ⊤ ↔ ∀ᶠ (z : 𝕜) in nhdsWithin x {x}ᶜ, f z = 0"
+      },
+      {
+        "id": "C12",
+        "statement": "∀ {𝕜 : Type u_1} [inst : NontriviallyNormedField 𝕜] {E : Type u_2} [inst_1 : NormedAddCommGroup E] [inst_2 : NormedSpace 𝕜 E] {f : 𝕜 → E} {z₀ : 𝕜}, MeromorphicAt f z₀ → (meromorphicOrderAt f z₀ ≠ ⊤ ↔ ∃ g, AnalyticAt 𝕜 g z₀ ∧ g z₀ ≠ 0 ∧ f =ᶠ[nhdsWithin z₀ {z₀}ᶜ] fun z => (z - z₀) ^ (meromorphicOrderAt f z₀).untop₀ • g z)"
+      },
+      {
+        "id": "C13",
+        "statement": "∀ {𝕜 : Type u_1} [inst : NontriviallyNormedField 𝕜] {E : Type u_2} [inst_1 : NormedAddCommGroup E] [inst_2 : NormedSpace 𝕜 E] [CompleteSpace E] {f : 𝕜 → E} {x : 𝕜} {n : ℤ}, ↑n ≠ 0 → meromorphicOrderAt f x = ↑n → meromorphicOrderAt (deriv f) x = ↑(n - 1)"
+      },
+      {
+        "id": "C14",
+        "statement": "∀ {𝕜 : Type u_1} [inst : NontriviallyNormedField 𝕜] {𝕜' : Type u_4} [inst_1 : NontriviallyNormedField 𝕜'] [inst_2 : NormedAlgebra 𝕜 𝕜'] {x : 𝕜} {f g : 𝕜 → 𝕜'}, MeromorphicAt f x → MeromorphicAt g x → meromorphicOrderAt (f * g) x = meromorphicOrderAt f x + meromorphicOrderAt g x"
+      },
+      {
+        "id": "C15",
+        "statement": "∀ {𝕜 : Type u_1} [inst : NontriviallyNormedField 𝕜] {E : Type u_2} [inst_1 : NormedAddCommGroup E] [inst_2 : NormedSpace 𝕜 E] {f₁ f₂ : 𝕜 → E} {x : 𝕜}, f₁ =ᶠ[nhdsWithin x {x}ᶜ] f₂ → meromorphicOrderAt f₁ x = meromorphicOrderAt f₂ x"
+      },
+      {
+        "id": "C16",
+        "statement": "∀ {𝕜 : Type u_1} [inst : NontriviallyNormedField 𝕜] {E : Type u_2} [inst_1 : NormedAddCommGroup E] [inst_2 : NormedSpace 𝕜 E] {f : 𝕜 → E} {x : 𝕜}, ¬MeromorphicAt f x → meromorphicOrderAt f x = 0"
+      }
+    ],
+    "episode_id": "MLP4B_0017",
+    "schema_version": "lemma-portfolio.dependency-compression.v4",
+    "selection_budget": 3,
+    "source_project": "mathlib",
+    "targets": [
+      {
+        "id": "T01",
+        "statement": "∀ {𝕜 : Type u_1} [inst : NontriviallyNormedField 𝕜] {E : Type u_2} [inst_1 : NormedAddCommGroup E] [inst_2 : NormedSpace 𝕜 E] {x : 𝕜} {f : 𝕜 → E} {g : 𝕜 → 𝕜}, AnalyticAt 𝕜 g x → deriv g x ≠ 0 → ∀ [CompleteSpace 𝕜] [CharZero 𝕜], meromorphicOrderAt (f ∘ g) x = meromorphicOrderAt f (g x)"
+      },
+      {
+        "id": "T02",
+        "statement": "∀ {𝕜 : Type u_1} [inst : NontriviallyNormedField 𝕜] {𝕜' : Type u_4} [inst_1 : NontriviallyNormedField 𝕜'] [inst_2 : NormedAlgebra 𝕜 𝕜'] {x : 𝕜} {ι : Type u_5} {s : Finset ι} {f : ι → 𝕜 → 𝕜'}, (∀ i ∈ s, MeromorphicAt (f i) x) → meromorphicOrderAt (fun a => ∏ i ∈ s, f i a) x = ∑ i ∈ s, meromorphicOrderAt (f i) x"
+      },
+      {
+        "id": "T03",
+        "statement": "∀ {𝕜 : Type u_1} [inst : NontriviallyNormedField 𝕜] {E : Type u_2} [inst_1 : NormedAddCommGroup E] [inst_2 : NormedSpace 𝕜 E] {f₁ f₂ : 𝕜 → E} {x : 𝕜}, meromorphicOrderAt f₁ x = ⊤ → meromorphicOrderAt (f₁ + f₂) x = meromorphicOrderAt f₂ x"
+      },
+      {
+        "id": "T04",
+        "statement": "∀ {𝕜 : Type u_1} [inst : NontriviallyNormedField 𝕜] {𝕜' : Type u_4} [inst_1 : NontriviallyNormedField 𝕜'] [inst_2 : NormedAlgebra 𝕜 𝕜'] {x : 𝕜} {f : 𝕜 → 𝕜'}, meromorphicOrderAt f⁻¹ x = -meromorphicOrderAt f x"
+      },
+      {
+        "id": "T05",
+        "statement": "∀ {𝕜 : Type u_1} [inst : NontriviallyNormedField 𝕜] {x : 𝕜} [CompleteSpace 𝕜] {f : 𝕜 → 𝕜}, MeromorphicAt f x → meromorphicOrderAt f x = 0 → 0 ≤ meromorphicOrderAt (logDeriv f) x"
+      },
+      {
+        "id": "T06",
+        "statement": "∀ {𝕜 : Type u_1} [inst : NontriviallyNormedField 𝕜] {x : 𝕜} {ι : Type u_5} {F : ι → 𝕜 → 𝕜}, (∀ (c : ι), MeromorphicAt (F c) x) → (∀ (c : ι), meromorphicOrderAt (F c) x ≠ ⊤) → meromorphicOrderAt (∏ᶠ (c : ι), F c) x ≠ ⊤"
+      },
+      {
+        "id": "T07",
+        "statement": "∀ {𝕜 : Type u_1} [inst : NontriviallyNormedField 𝕜] {𝕜' : Type u_4} [inst_1 : NontriviallyNormedField 𝕜'] [inst_2 : NormedAlgebra 𝕜 𝕜'] {x : 𝕜} {f g : 𝕜 → 𝕜'}, MeromorphicAt f x → MeromorphicAt g x → meromorphicOrderAt (fun i => f i * g i) x = meromorphicOrderAt f x + meromorphicOrderAt g x"
+      },
+      {
+        "id": "T08",
+        "statement": "∀ {𝕜 : Type u_1} [inst : NontriviallyNormedField 𝕜] {𝕜' : Type u_4} [inst_1 : NontriviallyNormedField 𝕜'] [inst_2 : NormedAlgebra 𝕜 𝕜'] (z₀ : 𝕜) (n : ℤ) [inst_3 : Decidable (↑n = 0)], meromorphicOrderAt (↑n) z₀ = if ↑n = 0 then ⊤ else 0"
+      }
+    ],
+    "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+  },
+  {
+    "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+    "candidates": [
+      {
+        "id": "C01",
+        "statement": "∀ {α : Type u_1} {u : Set α} {P : Partition u} {f : α → α}, (∀ ⦃a : α⦄, a ∉ u → f a = a) → (∀ ⦃a : α⦄, a ∈ u → P.Rel a (f a)) → (∀ ⦃a b : α⦄, P.Rel a b → f a = f b) → P.IsRepFun f"
+      },
+      {
+        "id": "C02",
+        "statement": "∀ {α : Type u_1} {u : Set α} {P : Partition u} {f : α → α}, P.IsRepFun f → ∀ ⦃a b : α⦄, P.Rel a b → f a = f b"
+      },
+      {
+        "id": "C03",
+        "statement": "∀ {α : Type u_1} {x : α} {u t : Set α} {P : Partition u}, t ∈ P → x ∈ t → t = P.partOf x"
+      },
+      {
+        "id": "C04",
+        "statement": "∀ {α : Type u_1} {u t : Set α} {P : Partition u} (ht : t ∈ P), P.rep ht ∈ t"
+      },
+      {
+        "id": "C05",
+        "statement": "∀ {α : Type u_1} {x : α} {u : Set α} {P : Partition u}, x ∈ u → x ∈ P.partOf x"
+      },
+      {
+        "id": "C06",
+        "statement": "∀ {α : Type u_1} {s : α} [inst : CompleteLattice α] (P : Partition s), ⊥ ∉ P"
+      },
+      {
+        "id": "C07",
+        "statement": "∀ {α : Type u_1} {u : Set α} {P : Partition u} {f : α → α}, P.IsRepFun f → ∀ ⦃a : α⦄, a ∉ u → f a = a"
+      },
+      {
+        "id": "C08",
+        "statement": "∀ {α : Type u_1} {u t : Set α} {P : Partition u}, t ∈ P → t ⊆ u"
+      },
+      {
+        "id": "C09",
+        "statement": "∀ {α : Type u_1} {x y : α} {u : Set α} {P : Partition u}, P.Rel x y → x ∈ u"
+      },
+      {
+        "id": "C10",
+        "statement": "∀ {α : Type u_1} {x : α} {u : Set α} {P : Partition u}, x ∈ u ↔ x ∈ P.partOf x ∧ P.partOf x ∈ P"
+      },
+      {
+        "id": "C11",
+        "statement": "∀ {α : Type u_1} {x y : α} {u : Set α} {P : Partition u}, P.Rel x y → y ∈ u"
+      },
+      {
+        "id": "C12",
+        "statement": "∀ {α : Type u_1} {s x : α} [inst : CompleteLattice α] (P : Partition s), x ∈ P → x ≤ s"
+      },
+      {
+        "id": "C13",
+        "statement": "∀ {α : Type u_1} {s : Set α} (P : Partition s), ⋃₀ ↑P = s"
+      },
+      {
+        "id": "C14",
+        "statement": "∀ {α : Type u_1} {u : Set α} {P : Partition u} {f : α → α} {a b : α}, P.IsRepFun f → a ∈ u → (f a = f b ↔ P.Rel a b)"
+      },
+      {
+        "id": "C15",
+        "statement": "∀ {α : Type u_1} {s x : α} [inst : CompleteLattice α] {P : Partition s}, x ∈ P → x ≠ ⊥"
+      },
+      {
+        "id": "C16",
+        "statement": "∀ {α : Type u_1} {x : α} {u s t : Set α} {P : Partition u}, t ∈ P → s ∈ P → x ∈ t → x ∈ s → t = s"
+      }
+    ],
+    "episode_id": "MLP4B_0018",
+    "schema_version": "lemma-portfolio.dependency-compression.v4",
+    "selection_budget": 3,
+    "source_project": "mathlib",
+    "targets": [
+      {
+        "id": "T01",
+        "statement": "∀ {α : Type u_1} {S : Set (Set α)} {u t : Set α} {P : Partition u}, S ⊆ ↑P → (t ⊆ ⋃₀ S ∧ t ∈ P ↔ t ∈ S)"
+      },
+      {
+        "id": "T02",
+        "statement": "∀ {α : Type u_1} {u : Set α} {P : Partition u} {f : α → α} {a : α}, P.IsRepFun f → a ∈ u → f a ∈ u"
+      },
+      {
+        "id": "T03",
+        "statement": "∀ {α : Type u_1} {s x : α} [inst : CompleteLattice α] {P Q : Partition s}, P ≤ Q → x ∈ P → ∃! y, y ∈ Q ∧ x ≤ y"
+      },
+      {
+        "id": "T04",
+        "statement": "∀ {α : Type u_1} {x y : α} {u t : Set α} {P : Partition u}, P.Rel x y → t ∈ P → (x ∈ t ↔ y ∈ t)"
+      },
+      {
+        "id": "T05",
+        "statement": "∀ {α : Type u_1} {t u : Set α} (P : Partition u) (f₀ : ↑t → α), (∀ (x : ↑t), ↑x ∉ u → f₀ x = ↑x) → (∀ (x : ↑t), ↑x ∈ u → P.Rel (↑x) (f₀ x)) → (∀ (x y : ↑t), P.Rel ↑x ↑y → f₀ x = f₀ y) → ∃ f, P.IsRepFun f ∧ ∀ (x : ↑t), f ↑x = f₀ x"
+      },
+      {
+        "id": "T06",
+        "statement": "∀ {α : Type u_1} {u : Set α} {P : Partition u} {f g : α → α}, P.IsRepFun f → P.IsRepFun g → ∀ (x : α), f (g x) = f x"
+      },
+      {
+        "id": "T07",
+        "statement": "∀ {α : Type u_1} [inst : CompleteLattice α] (P : Partition ⊥) (x : α), x ∉ P"
+      },
+      {
+        "id": "T08",
+        "statement": "∀ {α : Type u_1} {x : α} {u : Set α} {P : Partition u}, (P.partOf x).Nonempty ↔ x ∈ u"
+      }
+    ],
+    "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+  },
+  {
+    "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+    "candidates": [
+      {
+        "id": "C01",
+        "statement": "∀ {R : Type r} [inst : CommRing R] (W : WeierstrassCurve R), W.preΨ' 4 = W.preΨ₄"
+      },
+      {
+        "id": "C02",
+        "statement": "∀ {R : Type r} [inst : CommRing R] (W : WeierstrassCurve R) (n : ℕ), W.preΨ ↑n = W.preΨ' n"
+      },
+      {
+        "id": "C03",
+        "statement": "∀ {R : Type r} [inst : CommRing R] (W : WeierstrassCurve R) (m : ℤ), W.preΨ (2 * m) = W.preΨ (m - 1) ^ 2 * W.preΨ m * W.preΨ (m + 2) - W.preΨ (m - 2) * W.preΨ m * W.preΨ (m + 1) ^ 2"
+      },
+      {
+        "id": "C04",
+        "statement": "∀ {R : Type r} [inst : CommRing R] (W : WeierstrassCurve R) (n : ℕ), W.Φ (↑n + 1) = (Polynomial.X * W.preΨ' (n + 1) ^ 2 * if Even n then 1 else W.Ψ₂Sq) - W.preΨ' (n + 2) * W.preΨ' n * if Even n then W.Ψ₂Sq else 1"
+      },
+      {
+        "id": "C05",
+        "statement": "∀ {R : Type r} [inst : CommRing R] (W : WeierstrassCurve R) (n : ℤ), W.preΨ (-n) = -W.preΨ n"
+      },
+      {
+        "id": "C06",
+        "statement": "∀ {R : Type r} [inst : CommRing R] (W : WeierstrassCurve R), W.preΨ' 2 = 1"
+      },
+      {
+        "id": "C07",
+        "statement": "∀ {R : Type r} [inst : CommRing R] (W : WeierstrassCurve R), W.ψ 1 = 1"
+      },
+      {
+        "id": "C08",
+        "statement": "∀ {R : Type r} [inst : CommRing R] (W : WeierstrassCurve R), (WeierstrassCurve.Affine.CoordinateRing.mk W) W.ψ₂ ^ 2 = (WeierstrassCurve.Affine.CoordinateRing.mk W) (Polynomial.C W.Ψ₂Sq)"
+      },
+      {
+        "id": "C09",
+        "statement": "∀ {R : Type r} [inst : CommRing R] (W : WeierstrassCurve R), W.preΨ' 1 = 1"
+      },
+      {
+        "id": "C10",
+        "statement": "∀ {R : Type r} [inst : CommRing R] (W : WeierstrassCurve R) (m : ℤ), W.preΨ (2 * m + 1) = (W.preΨ (m + 2) * W.preΨ m ^ 3 * if Even m then W.Ψ₂Sq ^ 2 else 1) - W.preΨ (m - 1) * W.preΨ (m + 1) ^ 3 * if Even m then 1 else W.Ψ₂Sq ^ 2"
+      },
+      {
+        "id": "C11",
+        "statement": "∀ {R : Type r} {S : Type s} [inst : CommRing R] [inst_1 : CommRing S] (W : WeierstrassCurve R) (f : R →+* S), (W.map f).Ψ₂Sq = Polynomial.map f W.Ψ₂Sq"
+      },
+      {
+        "id": "C12",
+        "statement": "∀ {R : Type r} [inst : CommRing R] (W : WeierstrassCurve R), W.preΨ' 3 = W.Ψ₃"
+      },
+      {
+        "id": "C13",
+        "statement": "∀ {R : Type r} [inst : CommRing R] (W : WeierstrassCurve R) (n : ℤ), W.ψ (-n) = -W.ψ n"
+      },
+      {
+        "id": "C14",
+        "statement": "∀ {R : Type r} [inst : CommRing R] (W : WeierstrassCurve R), W.ψ 0 = 0"
+      },
+      {
+        "id": "C15",
+        "statement": "∀ {R : Type r} [inst : CommRing R] (W : WeierstrassCurve R), W.preΨ 3 = W.Ψ₃"
+      },
+      {
+        "id": "C16",
+        "statement": "∀ {R : Type r} [inst : CommRing R] (W : WeierstrassCurve R), W.ψ 3 = Polynomial.C W.Ψ₃"
+      }
+    ],
+    "episode_id": "MLP4B_0019",
+    "schema_version": "lemma-portfolio.dependency-compression.v4",
+    "selection_budget": 3,
+    "source_project": "mathlib",
+    "targets": [
+      {
+        "id": "T01",
+        "statement": "∀ {R : Type r} [inst : CommRing R] (W : WeierstrassCurve R), W.φ 0 = 1"
+      },
+      {
+        "id": "T02",
+        "statement": "∀ {R : Type r} [inst : CommRing R] (W : WeierstrassCurve R), W.φ 2 = Polynomial.C Polynomial.X * W.ψ₂ ^ 2 - Polynomial.C W.Ψ₃"
+      },
+      {
+        "id": "T03",
+        "statement": "∀ {R : Type r} [inst : CommRing R] (W : WeierstrassCurve R), W.Φ 4 = Polynomial.X * W.preΨ₄ ^ 2 * W.Ψ₂Sq - W.Ψ₃ * (W.preΨ₄ * W.Ψ₂Sq ^ 2 - W.Ψ₃ ^ 3)"
+      },
+      {
+        "id": "T04",
+        "statement": "∀ {R : Type r} [inst : CommRing R] (W : WeierstrassCurve R), W.Φ 3 = Polynomial.X * W.Ψ₃ ^ 2 - W.preΨ₄ * W.Ψ₂Sq"
+      },
+      {
+        "id": "T05",
+        "statement": "∀ {R : Type r} [inst : CommRing R] (W : WeierstrassCurve R) (n : ℤ), W.Ψ (-n) = -W.Ψ n"
+      },
+      {
+        "id": "T06",
+        "statement": "∀ {R : Type r} {S : Type s} [inst : CommRing R] [inst_1 : CommRing S] (W : WeierstrassCurve R) (f : R →+* S) (n : ℤ), (W.map f).ΨSq n = Polynomial.map f (W.ΨSq n)"
+      },
+      {
+        "id": "T07",
+        "statement": "∀ {R : Type r} [inst : CommRing R] (W : WeierstrassCurve R) (n : ℤ), W.φ (-n) = W.φ n"
+      },
+      {
+        "id": "T08",
+        "statement": "∀ {R : Type r} [inst : CommRing R] (W : WeierstrassCurve R), W.φ 3 = Polynomial.C Polynomial.X * Polynomial.C W.Ψ₃ ^ 2 - Polynomial.C W.preΨ₄ * W.ψ₂ ^ 2"
+      }
+    ],
+    "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+  }
+]
+</episodes>

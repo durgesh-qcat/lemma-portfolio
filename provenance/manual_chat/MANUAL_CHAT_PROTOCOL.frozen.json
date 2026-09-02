@@ -1,0 +1,221 @@
+{
+  "schema_version": "lemma-portfolio.panel-protocol.v4",
+  "status": "FROZEN",
+  "protocol_id": "lemma-portfolio-v4-manual-consumer-core-v3",
+  "supersedes": {
+    "protocol_id": "lemma-portfolio-v4-manual-consumer-core-v2",
+    "protocol_sha256": "2e194574baf7292d0b7ddee17f79c941430bdc58ce30ec3934c126d63df0b732",
+    "packet_manifest_sha256": "560cd938c02bdfc5573428e2f61d3b301be32efe1565dde11abdd51794ec8850",
+    "reason": "Pre-inference baseline hardening: repair the SHA baseline generator's missing hash-helper import and remove every private-label argument or file access from the public-text TF-IDF generator. Public episodes, prompts, shard boundaries, systems, and scoring are unchanged."
+  },
+  "benchmark": {
+    "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+    "split_role": "blind_held_out",
+    "public_jsonl_sha256": "b54293b08bc7ddbb7110a50908049922f7cfd86f14cb49a4de4e28353aecc6d8",
+    "private_labels_sha256_commitment": "d17c1fd5c6d87635daf8035fe4a0918d1eaa29708eae37cb797cae08c19ef887",
+    "episode_count": 60,
+    "candidate_count_per_episode": 16,
+    "target_count_per_episode": 8,
+    "selection_budget": 3,
+    "task": "static historical direct-dependency portfolio compression"
+  },
+  "evaluation_unit": {
+    "wall_timeout_seconds": 1800,
+    "headline_sample": "one predeclared pass@1 response per episode",
+    "fresh_chat_boundary": "one new consumer chat for each fixed five-episode shard",
+    "shared_context_disclosure": "Five episodes share one fresh-chat context and reasoning allowance; results estimate this exact deployment protocol, not one-item model ability.",
+    "itemwise_scoring": "A complete five-key response envelope preserves every budget-valid item independently. A wrong-size, duplicate, or out-of-pool selection zeros only that item.",
+    "whole_call_invalidity": "No complete five-key envelope, a tool/search action, a timeout, or a terminal transport failure zeros every episode in that call.",
+    "retry_policy": "At most one retry in a new fresh chat only for an explicit provider/platform error before any substantive output; preserve both attempts. No retry for timeout, refusal, partial output, malformed output, or apparent mathematical error.",
+    "fixed_denominator": true
+  },
+  "manual_chat": {
+    "episodes_per_fresh_chat": 5,
+    "shards_per_core_system": 12,
+    "core_system_count": 2,
+    "core_chat_count": 24,
+    "manifest_order_and_shard_boundaries": "fixed contiguous public order",
+    "one_user_message_per_chat": true,
+    "prompt_transport": "verbatim paste",
+    "memory": "off",
+    "search": "off",
+    "tools_and_connectors": "off",
+    "file_uploads": false,
+    "prior_project_or_chat_context": "none",
+    "follow_up_or_regenerate": false,
+    "required_per_call_evidence": [
+      "verbatim raw response bytes, including an empty file when no response was produced",
+      "UTC and local start/end timestamps",
+      "fresh-chat ordinal and fixed call ID",
+      "displayed model and reasoning-mode labels recorded verbatim"
+    ],
+    "required_per_row_screenshots": [
+      "visible displayed deployment and mode before the first chat",
+      "visible displayed deployment and mode after the final chat"
+    ],
+    "per_call_screenshot": "optional corroboration; not required for validity",
+    "consumer_unknowns": [
+      "checkpoint or router",
+      "system prompt",
+      "sampling temperature and seed",
+      "provider-side caching",
+      "silent routing changes not exposed in the UI"
+    ]
+  },
+  "systems": [
+    {
+      "system_id": "consumer_chatgpt_gpt56_sol_highest_reasoning",
+      "displayed_model_label": "GPT-5.6 Sol",
+      "surface": "ChatGPT consumer web interface",
+      "surface_url": "captured_verbatim_per_run",
+      "reasoning_setting": "highest user-selectable reasoning mode; exact UI label recorded verbatim",
+      "required_mode_keywords_any": [],
+      "episodes_per_call": 5,
+      "prompt_condition": "direct_portfolio_selection",
+      "deployment_role": "mandatory_core"
+    },
+    {
+      "system_id": "consumer_deepseek_expert_deepthink",
+      "displayed_model_label": "Expert",
+      "surface": "DeepSeek consumer web interface",
+      "surface_url": "captured_verbatim_per_run",
+      "reasoning_setting": "Thinking/DeepThink enabled; exact UI label recorded verbatim",
+      "required_mode_keywords_any": [
+        "thinking",
+        "deepthink"
+      ],
+      "episodes_per_call": 5,
+      "prompt_condition": "direct_portfolio_selection",
+      "deployment_role": "mandatory_core"
+    },
+    {
+      "system_id": "sha256_random_portfolio",
+      "displayed_model_label": "Seeded SHA-256 portfolio draw",
+      "surface": "deterministic label-blind script",
+      "account_tier": "not_applicable",
+      "reasoning_setting": "none",
+      "episodes_per_call": 1,
+      "prompt_condition": "direct_portfolio_selection",
+      "deployment_role": "deterministic_reference"
+    },
+    {
+      "system_id": "public_text_char_tfidf_facility",
+      "displayed_model_label": "Character TF-IDF facility location",
+      "surface": "deterministic public-text-only script",
+      "account_tier": "not_applicable",
+      "reasoning_setting": "none",
+      "episodes_per_call": 1,
+      "prompt_condition": "direct_portfolio_selection",
+      "deployment_role": "deterministic_reference"
+    }
+  ],
+  "primary_systems": [
+    "consumer_chatgpt_gpt56_sol_highest_reasoning",
+    "consumer_deepseek_expert_deepthink"
+  ],
+  "baseline_systems": [
+    "sha256_random_portfolio",
+    "public_text_char_tfidf_facility"
+  ],
+  "baselines": {
+    "analytic_uniform_random": {
+      "role": "exact analytic reference, not a sampled run",
+      "optimal_probability": "number_of_optimal_portfolios / binomial(16,3)",
+      "expected_coverage": "sum_t [1 - binomial(16-|D(t)|,3)/binomial(16,3)]"
+    },
+    "sha256_random_portfolio": {
+      "seed": "lemma-portfolio-v4-manual-core-sha256-random-v1",
+      "method": "rank each in-pool candidate by SHA256(seed NUL episode_id NUL candidate_id), take the first three",
+      "labels_read": false
+    },
+    "public_text_char_tfidf_facility": {
+      "method": "character_3_to_5gram_tfidf_facility_location",
+      "parameters": {
+        "character_ngram_lengths": [3, 4, 5],
+        "term_frequency": "1 + natural_log(raw_count)",
+        "inverse_document_frequency": "natural_log((1 + document_count) / (1 + document_frequency)) + 1",
+        "normalization": "L2",
+        "similarity": "cosine",
+        "portfolio_objective": "sum over targets of maximum selected-candidate similarity"
+      },
+      "tie_break": "lexicographically smallest sorted maximizing portfolio",
+      "not_used_by_construction_or_admission": true,
+      "must_run_only_after_public_and_label_commitment_freeze": true,
+      "generator_sha256": "e9c7f7f40e878f77adca6623b886715abceb95dbe4e0cbe19b780cbb9f2e3dc1"
+    }
+  },
+  "optional_arms": {
+    "consumer_chatgpt_gpt56_sol_decomposition_n20": {
+      "system_id": "consumer_chatgpt_gpt56_sol_decomposition_n20",
+      "displayed_model_label": "GPT-5.6 Sol",
+      "surface": "ChatGPT consumer web interface",
+      "surface_url": "captured_verbatim_per_run",
+      "reasoning_setting": "same highest user-selectable reasoning mode as the core ChatGPT row",
+      "condition": "ordered predicted support then deterministic exhaustive optimizer",
+      "episode_count": 20,
+      "episodes_per_call": 5,
+      "fresh_chat_count": 4,
+      "selection_budget": 3,
+      "support_cap": 4,
+      "support_prefix_width": 2,
+      "optimizer": "exhaustively maximize predicted target coverage over all 560 triples; lexicographically smallest sorted maximizing triple",
+      "subset_seed": "lemma-portfolio.manual-sol-decomposition-subset.v1",
+      "subset_rule": "take the 20 episode IDs with smallest SHA256(seed NUL episode_id), then restore original public order",
+      "episode_ids": [
+        "MLP4B_0003",
+        "MLP4B_0004",
+        "MLP4B_0006",
+        "MLP4B_0010",
+        "MLP4B_0014",
+        "MLP4B_0016",
+        "MLP4B_0018",
+        "MLP4B_0021",
+        "MLP4B_0027",
+        "MLP4B_0032",
+        "MLP4B_0034",
+        "MLP4B_0035",
+        "MLP4B_0038",
+        "MLP4B_0044",
+        "MLP4B_0047",
+        "MLP4B_0050",
+        "MLP4B_0052",
+        "MLP4B_0054",
+        "MLP4B_0055",
+        "MLP4B_0059"
+      ],
+      "mandatory_for_core_closure": false,
+      "pre_unseal_disposition_required": true,
+      "if_started": "complete and freeze all four chats, or explicitly abandon/exclude before label unseal while preserving every partial artifact"
+    }
+  },
+  "deployment_substitution_policy": {
+    "before_first_chat": "A visibly unavailable or renamed deployment/mode may be replaced only through a timestamped superseding protocol and substitution receipt frozen before that row's first blind chat.",
+    "after_first_chat": "Stop the row; never splice labels or modes. A replacement uses a new system ID and restarts all twelve chats while labels remain sealed.",
+    "silent_or_undocumented_substitution": "prohibited"
+  },
+  "closure_policy": {
+    "mandatory_core": "Both complete N=60 consumer rows and both deterministic captures must be frozen before label unseal.",
+    "optional_arm": "Absence cannot invalidate the core. Before unseal its disposition must be COMPLETED_FROZEN, NOT_STARTED_EXCLUDED, or ABANDONED_EXCLUDED_WITH_PARTIAL_EVIDENCE.",
+    "intermediate_blind_scoring": "prohibited",
+    "hidden_row_dropping": "prohibited"
+  },
+  "development_exclusions": {
+    "all_codex_cli_rows": "development-only and excluded from the blind main table",
+    "all_local_open_weight_rows": "development-only and excluded from the blind main table",
+    "manual_panel_override_commitment_sha256": "f8a138cd23229e6e9db3f8cdb974426e790073f8d8a685bfc7726c9ff3e06f83"
+  },
+  "software_commitments": {
+    "prepare_chat_prompts_py_sha256": "54191000caeb8b5e773a5b712ec462a44418709e2630d4085d72dbfaf9ddce24",
+    "project_manual_chat_capture_py_sha256": "86c1ff6585eb0e8d2bd5e16b871c1634458a811c7b31cafbb13ab61e36b58b34",
+    "freeze_chat_run_py_sha256": "69ce762efc06e47dc464c9b8da7ffc48c997fe56a17efde2bedad9ca85581852",
+    "freeze_panel_py_sha256": "1dfee4d590e1892c65b3ac499721775f82390d4043470a4ed0e2460a1e87f09d",
+    "score_frozen_panel_py_sha256": "3fdf62e4c3b6d0abedc432c8876a5c3910a3bf3733598079c8c7a58a9b93e2f0",
+    "generate_hash_baseline_py_sha256": "edf240c28e3f154cdacbf916c874aca2e3ac064b1a52f0999320028274a8200d",
+    "generate_char_tfidf_baseline_py_sha256": "e9c7f7f40e878f77adca6623b886715abceb95dbe4e0cbe19b780cbb9f2e3dc1"
+  },
+  "disclosures": {
+    "assistant_involvement": "Codex agents assisted benchmark design, code, and manuscript development; GPT-5.6 Sol is also evaluated.",
+    "defensible_independence_claim": "The deterministic builder reads no blind predictions or labels, and frozen public bytes precede manual blind capture. No claim is made that model output did not influence project development.",
+    "self_evaluation_limitation": "Provider-family overlap and model-assisted benchmark development are limitations."
+  }
+}

@@ -1,0 +1,553 @@
+You are solving five unreleased LemmaPortfolio benchmark episodes independently.
+
+For each episode, each target t has a hidden set D(t): the displayed candidate declarations used as direct theorem dependencies in that target's historical elaborated source. For a portfolio S, F(S) is the number of targets t for which D(t) intersects S. Select exactly 3 distinct candidate IDs per episode to maximize F(S). This is static dependency-portfolio compression, not a claim about causal usefulness in a new proof.
+
+Use only the supplied text. Do not use web search, tools, files, a repository, theorem proving, compiler feedback, memory, prior chats, follow-up messages, or answers from another episode. Treat every episode independently.
+
+Return one JSON object and no prose. It must have exactly one key, "predictions". Its value must be an object with exactly these episode keys: MLP4B_0025, MLP4B_0026, MLP4B_0027, MLP4B_0028, MLP4B_0029. Each value must be an array of exactly 3 distinct candidate IDs copied from that episode. Candidate order does not matter.
+
+Episode JSON array follows.
+<episodes>
+[
+  {
+    "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+    "candidates": [
+      {
+        "id": "C01",
+        "statement": "∀ {α : Type u_1} [inst : CommMonoidWithZero α] [inst_1 : NormalizedGCDMonoid α] (a b : α), gcd a b = gcd b a"
+      },
+      {
+        "id": "C02",
+        "statement": "∀ {α : Type u_1} [inst : CommMonoidWithZero α] [inst_1 : NormalizedGCDMonoid α] (a b : α), lcm a b = lcm b a"
+      },
+      {
+        "id": "C03",
+        "statement": "∀ {α : Type u_1} [inst : MonoidWithZero α] [inst_1 : NormalizationMonoid α] {a b : α}, normalize a = normalize b ↔ Associated a b"
+      },
+      {
+        "id": "C04",
+        "statement": "∀ {α : Type u_2} {inst : CommMonoidWithZero α} [self : GCDMonoid α] (a : α), lcm a 0 = 0"
+      },
+      {
+        "id": "C05",
+        "statement": "∀ {α : Type u_2} {inst : CommMonoidWithZero α} [self : GCDMonoid α] (a : α), lcm 0 a = 0"
+      },
+      {
+        "id": "C06",
+        "statement": "∀ {α : Type u_1} [inst : MonoidWithZero α] [inst_1 : NormalizationMonoid α] (u : αˣ), normalize ↑u = 1"
+      },
+      {
+        "id": "C07",
+        "statement": "∀ {α : Type u_1} [inst : CommMonoidWithZero α] [inst_1 : NormalizedGCDMonoid α] {a b c : α}, lcm a b ∣ c → c ∣ lcm a b → lcm a b = normalize c"
+      },
+      {
+        "id": "C08",
+        "statement": "∀ {α : Type u_2} {inst : MonoidWithZero α} [self : NormalizationMonoid α] {a : α} (u : αˣ), a ≠ 0 → normUnit (a * ↑u) = u⁻¹ * normUnit a"
+      },
+      {
+        "id": "C09",
+        "statement": "∀ {α : Type u_1} [inst : CommMonoidWithZero α] [inst_1 : GCDMonoid α] (a b : α), gcd a b = 0 ↔ a = 0 ∧ b = 0"
+      },
+      {
+        "id": "C10",
+        "statement": "∀ {α : Type u_1} [inst : MonoidWithZero α] [inst_1 : NormalizationMonoid α] [IsLeftCancelMulZero α] {a b : α}, normalize a = a → normalize b = b → a ∣ b → b ∣ a → a = b"
+      },
+      {
+        "id": "C11",
+        "statement": "∀ {α : Type u_1} [inst : MonoidWithZero α] [inst_1 : NormalizationMonoid α] {a b : α}, Associated a b → normalize a = a → normalize b = b → a = b"
+      },
+      {
+        "id": "C12",
+        "statement": "∀ {α : Type u_1} [inst : MonoidWithZero α] [inst_1 : NormalizationMonoid α] [IsLeftCancelMulZero α] {a b : α}, a ∣ b → b ∣ a → normalize a = normalize b"
+      },
+      {
+        "id": "C13",
+        "statement": "∀ {α : Type u_2} {inst : MonoidWithZero α} [self : NormalizationMonoid α], normUnit 0 = 1"
+      },
+      {
+        "id": "C14",
+        "statement": "∀ {α : Type u_1} [inst : CommMonoidWithZero α] [inst_1 : NormalizedGCDMonoid α] (a b : α), normalize (gcd a b) = gcd a b"
+      },
+      {
+        "id": "C15",
+        "statement": "∀ {α : Type u_1} [inst : CommMonoidWithZero α] [inst_1 : NormalizedGCDMonoid α] (a b : α), normalize (lcm a b) = lcm a b"
+      },
+      {
+        "id": "C16",
+        "statement": "∀ {α : Type u_1} [inst : MonoidWithZero α] [inst_1 : NormalizationMonoid α], normalize 1 = 1"
+      }
+    ],
+    "episode_id": "MLP4B_0025",
+    "schema_version": "lemma-portfolio.dependency-compression.v4",
+    "selection_budget": 3,
+    "source_project": "mathlib",
+    "targets": [
+      {
+        "id": "T01",
+        "statement": "∀ {α : Type u_1} [inst : CommMonoidWithZero α] [inst_1 : NormalizedGCDMonoid α] (m n k : α), lcm (lcm m n) k = lcm m (lcm n k)"
+      },
+      {
+        "id": "T02",
+        "statement": "∀ {α : Type u_1} [inst : CommMonoidWithZero α] [inst_1 : NormalizedGCDMonoid α] {a b c : α}, gcd a b ∣ c → c ∣ gcd a b → gcd a b = normalize c"
+      },
+      {
+        "id": "T03",
+        "statement": "∀ {α : Type u_1} [inst : CommMonoidWithZero α] [inst_1 : GCDMonoid α] {a b c : α}, lcm a b ∣ c ↔ a ∣ c ∧ b ∣ c"
+      },
+      {
+        "id": "T04",
+        "statement": "∀ {α : Type u_2} [inst : CommMonoidWithZero α] [inst_1 : GCDMonoid α] (x y : α), ∃ x' y', x = gcd x y * x' ∧ y = gcd x y * y' ∧ IsUnit (gcd x' y')"
+      },
+      {
+        "id": "T05",
+        "statement": "∀ {α : Type u_1} [inst : CommRing α] [inst_1 : NormalizedGCDMonoid α] {a b c : α}, a ∣ b - c → gcd a b = gcd a c"
+      },
+      {
+        "id": "T06",
+        "statement": "∀ {α : Type u_1} [inst : MonoidWithZero α] [inst_1 : NormalizationMonoid α] (a : α), normUnit (a * ↑(normUnit a)) = 1"
+      },
+      {
+        "id": "T07",
+        "statement": "∀ {α : Type u_1} [inst : CommMonoidWithZero α] [inst_1 : StrongNormalizedGCDMonoid α] (a b c : α), lcm (a * b) (a * c) = normalize a * lcm b c"
+      },
+      {
+        "id": "T08",
+        "statement": "∀ {α : Type u_1} [inst : MonoidWithZero α] [inst_1 : NormalizationMonoid α] {x : α}, normalize x = 1 ↔ IsUnit x"
+      }
+    ],
+    "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+  },
+  {
+    "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+    "candidates": [
+      {
+        "id": "C01",
+        "statement": "∀ {R : Type u_1} {V : Type u_2} {P : Type u_4} [inst : Field R] [inst_1 : LinearOrder R] [IsStrictOrderedRing R] [inst_3 : AddCommGroup V] [inst_4 : Module R V] [inst_5 : AddTorsor V P] {x y z : P}, Wbtw R x y z ↔ x = y ∨ z ∈ ⇑(AffineMap.lineMap x y) '' Set.Ici 1"
+      },
+      {
+        "id": "C02",
+        "statement": "∀ {R : Type u_1} {V : Type u_2} {P : Type u_4} [inst : Ring R] [inst_1 : PartialOrder R] [inst_2 : AddCommGroup V] [inst_3 : Module R V] [inst_4 : AddTorsor V P] {x y z : P} (p : P), Wbtw R (x -ᵥ p) (y -ᵥ p) (z -ᵥ p) ↔ Wbtw R x y z"
+      },
+      {
+        "id": "C03",
+        "statement": "∀ (R : Type u_1) {V : Type u_2} {P : Type u_4} [inst : Ring R] [inst_1 : PartialOrder R] [inst_2 : AddCommGroup V] [inst_3 : Module R V] [inst_4 : AddTorsor V P] [IsOrderedRing R] [IsDomain R] [Module.IsTorsionFree R V] {x y : P} (z : P), Wbtw R x y z ∧ Wbtw R y x z ↔ x = y"
+      },
+      {
+        "id": "C04",
+        "statement": "∀ {R : Type u_1} {V : Type u_2} {P : Type u_4} [inst : Ring R] [inst_1 : PartialOrder R] [inst_2 : AddCommGroup V] [inst_3 : Module R V] [inst_4 : AddTorsor V P] [IsOrderedRing R] {x y z : P}, Wbtw R x y z ↔ Wbtw R z y x"
+      },
+      {
+        "id": "C05",
+        "statement": "∀ {R : Type u_1} {V : Type u_2} {V' : Type u_3} {P : Type u_4} {P' : Type u_5} [inst : Ring R] [inst_1 : PartialOrder R] [inst_2 : AddCommGroup V] [inst_3 : Module R V] [inst_4 : AddTorsor V P] [inst_5 : AddCommGroup V'] [inst_6 : Module R V'] [inst_7 : AddTorsor V' P'] {x y z : P} {f : P →ᵃ[R] P'}, Function.Injective ⇑f → (Wbtw R (f x) (f y) (f z) ↔ Wbtw R x y z)"
+      },
+      {
+        "id": "C06",
+        "statement": "∀ {R : Type u_1} {V : Type u_2} {P : Type u_4} [inst : Ring R] [inst_1 : PartialOrder R] [inst_2 : AddCommGroup V] [inst_3 : Module R V] [inst_4 : AddTorsor V P] {x y z : V} (p : P), Wbtw R (x +ᵥ p) (y +ᵥ p) (z +ᵥ p) ↔ Wbtw R x y z"
+      },
+      {
+        "id": "C07",
+        "statement": "∀ {R : Type u_1} [inst : Ring R] [inst_1 : PartialOrder R] {x : R}, Wbtw R 0 x 1 ↔ x ∈ Set.Icc 0 1"
+      },
+      {
+        "id": "C08",
+        "statement": "∀ {R : Type u_1} {V : Type u_2} {P : Type u_4} [inst : Ring R] [inst_1 : PartialOrder R] [inst_2 : AddCommGroup V] [inst_3 : Module R V] [inst_4 : AddTorsor V P] {x y z : P} (v : V), Wbtw R (v +ᵥ x) (v +ᵥ y) (v +ᵥ z) ↔ Wbtw R x y z"
+      },
+      {
+        "id": "C09",
+        "statement": "∀ {R : Type u_1} {V : Type u_2} {P : Type u_4} [inst : Ring R] [inst_1 : PartialOrder R] [inst_2 : AddCommGroup V] [inst_3 : Module R V] [inst_4 : AddTorsor V P] {x y z : P}, Sbtw R x y z → x ≠ y"
+      },
+      {
+        "id": "C10",
+        "statement": "∀ (R : Type u_1) {V : Type u_2} {P : Type u_4} [inst : Ring R] [inst_1 : PartialOrder R] [inst_2 : AddCommGroup V] [inst_3 : Module R V] [inst_4 : AddTorsor V P] [IsOrderedRing R] {x y : P}, Wbtw R x y x ↔ y = x"
+      },
+      {
+        "id": "C11",
+        "statement": "∀ {R : Type u_1} {V : Type u_2} {P : Type u_4} [inst : Ring R] [inst_1 : PartialOrder R] [inst_2 : AddCommGroup V] [inst_3 : Module R V] [inst_4 : AddTorsor V P] [IsOrderedRing R] {x y z : P}, Sbtw R x y z ↔ Sbtw R z y x"
+      },
+      {
+        "id": "C12",
+        "statement": "∀ {R : Type u_1} {V : Type u_2} {P : Type u_4} [inst : Ring R] [inst_1 : PartialOrder R] [inst_2 : AddCommGroup V] [inst_3 : Module R V] [inst_4 : AddTorsor V P] [IsOrderedRing R] [IsDomain R] [Module.IsTorsionFree R V] {x y z : P}, Sbtw R x y z ↔ y ∈ ⇑(AffineMap.lineMap x z) '' Set.Ioo 0 1 ∧ x ≠ z"
+      },
+      {
+        "id": "C13",
+        "statement": "∀ {R : Type u_1} {V : Type u_2} {P : Type u_4} [inst : Field R] [inst_1 : LinearOrder R] [IsStrictOrderedRing R] [inst_3 : AddCommGroup V] [inst_4 : Module R V] [inst_5 : AddTorsor V P] {x y z : P}, Wbtw R x y z → x ≠ y → z ∈ ⇑(AffineMap.lineMap x y) '' Set.Ici 1"
+      },
+      {
+        "id": "C14",
+        "statement": "∀ {R : Type u_1} {V : Type u_2} {P : Type u_4} [inst : Ring R] [inst_1 : PartialOrder R] [inst_2 : AddCommGroup V] [inst_3 : Module R V] [inst_4 : AddTorsor V P] {x y z : P} (p : P), Wbtw R (p -ᵥ x) (p -ᵥ y) (p -ᵥ z) ↔ Wbtw R x y z"
+      },
+      {
+        "id": "C15",
+        "statement": "∀ {R : Type u_1} {V : Type u_2} {V' : Type u_3} {P : Type u_4} {P' : Type u_5} [inst : Ring R] [inst_1 : PartialOrder R] [inst_2 : AddCommGroup V] [inst_3 : Module R V] [inst_4 : AddTorsor V P] [inst_5 : AddCommGroup V'] [inst_6 : Module R V'] [inst_7 : AddTorsor V' P'] (f : P →ᵃ[R] P') (x y : P), ⇑f '' affineSegment R x y = affineSegment R (f x) (f y)"
+      },
+      {
+        "id": "C16",
+        "statement": "∀ (R : Type u_1) {V : Type u_2} {P : Type u_4} [inst : Ring R] [inst_1 : PartialOrder R] [inst_2 : AddCommGroup V] [inst_3 : Module R V] [inst_4 : AddTorsor V P] [IsOrderedRing R] [IsDomain R] [Module.IsTorsionFree R V] (x : P) {y z : P}, Wbtw R x y z ∧ Wbtw R x z y ↔ y = z"
+      }
+    ],
+    "episode_id": "MLP4B_0026",
+    "schema_version": "lemma-portfolio.dependency-compression.v4",
+    "selection_budget": 3,
+    "source_project": "mathlib",
+    "targets": [
+      {
+        "id": "T01",
+        "statement": "∀ {R : Type u_1} [inst : Ring R] [inst_1 : PartialOrder R] [IsOrderedRing R] {x : R}, Wbtw R 1 x 0 ↔ x ∈ Set.Icc 0 1"
+      },
+      {
+        "id": "T02",
+        "statement": "∀ {R : Type u_1} {V : Type u_2} {P : Type u_4} [inst : Field R] [inst_1 : LinearOrder R] [IsStrictOrderedRing R] [inst_3 : AddCommGroup V] [inst_4 : Module R V] [inst_5 : AddTorsor V P] {x y z : P}, Sbtw R x y z ↔ x ≠ y ∧ z ∈ ⇑(AffineMap.lineMap x y) '' Set.Ioi 1"
+      },
+      {
+        "id": "T03",
+        "statement": "∀ {R : Type u_1} [inst : Ring R] [inst_1 : PartialOrder R] [IsOrderedRing R] {x : R}, Sbtw R 1 x 0 ↔ x ∈ Set.Ioo 0 1"
+      },
+      {
+        "id": "T04",
+        "statement": "∀ {R : Type u_1} {V : Type u_2} [inst : Ring R] [inst_1 : PartialOrder R] [inst_2 : AddCommGroup V] [inst_3 : Module R V] {x y z : V} (v : V), Wbtw R (v + x) (v + y) (v + z) ↔ Wbtw R x y z"
+      },
+      {
+        "id": "T05",
+        "statement": "∀ (R : Type u_1) {V : Type u_2} {P : Type u_4} [inst : Ring R] [inst_1 : PartialOrder R] [inst_2 : AddCommGroup V] [inst_3 : Module R V] [inst_4 : AddTorsor V P] (x y p : P), (fun x => p -ᵥ x) '' affineSegment R x y = affineSegment R (p -ᵥ x) (p -ᵥ y)"
+      },
+      {
+        "id": "T06",
+        "statement": "∀ {R : Type u_1} {V : Type u_2} {P : Type u_4} [inst : Field R] [inst_1 : LinearOrder R] [IsStrictOrderedRing R] [inst_3 : AddCommGroup V] [inst_4 : Module R V] [inst_5 : AddTorsor V P] {x y z : P}, Wbtw R x y z ↔ z = y ∨ x ∈ ⇑(AffineMap.lineMap z y) '' Set.Ici 1"
+      },
+      {
+        "id": "T07",
+        "statement": "∀ {R : Type u_1} {V : Type u_2} {V' : Type u_3} {P : Type u_4} {P' : Type u_5} [inst : Ring R] [inst_1 : PartialOrder R] [inst_2 : AddCommGroup V] [inst_3 : Module R V] [inst_4 : AddTorsor V P] [inst_5 : AddCommGroup V'] [inst_6 : Module R V'] [inst_7 : AddTorsor V' P'] {x y z : P} {f : P →ᵃ[R] P'} {s : AffineSubspace R P}, Set.InjOn ⇑f ↑s → x ∈ s → y ∈ s → z ∈ s → (Wbtw R (f x) (f y) (f z) ↔ Wbtw R x y z)"
+      },
+      {
+        "id": "T08",
+        "statement": "∀ {R : Type u_1} {V : Type u_2} {P : Type u_4} [inst : Field R] [inst_1 : LinearOrder R] [IsStrictOrderedRing R] [inst_3 : AddCommGroup V] [inst_4 : Module R V] [inst_5 : AddTorsor V P] {x y z : P}, Wbtw R x y z → x ≠ y → z ∈ line[R, x, y]"
+      }
+    ],
+    "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+  },
+  {
+    "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+    "candidates": [
+      {
+        "id": "C01",
+        "statement": "∀ {R : Type u} [inst : Semiring R] {a : R}, Polynomial.derivative (Polynomial.C a) = 0"
+      },
+      {
+        "id": "C02",
+        "statement": "∀ {R : Type u} [inst : Ring R] {f g : Polynomial R}, Polynomial.derivative (f - g) = Polynomial.derivative f - Polynomial.derivative g"
+      },
+      {
+        "id": "C03",
+        "statement": "∀ {R : Type u} {ι : Type y} [inst : Semiring R] {s : Finset ι} {f : ι → Polynomial R}, Polynomial.derivative (∑ b ∈ s, f b) = ∑ b ∈ s, Polynomial.derivative (f b)"
+      },
+      {
+        "id": "C04",
+        "statement": "∀ {R : Type u} [inst : Semiring R] {p : Polynomial R}, p.natDegree ≠ 0 → (Polynomial.derivative p).natDegree < p.natDegree"
+      },
+      {
+        "id": "C05",
+        "statement": "∀ {R : Type u} [inst : CommSemiring R] (p : Polynomial R) (n : ℕ), Polynomial.derivative (p ^ (n + 1)) = Polynomial.C (↑n + 1) * p ^ n * Polynomial.derivative p"
+      },
+      {
+        "id": "C06",
+        "statement": "∀ {R : Type u} [inst : Semiring R] {f g : Polynomial R}, Polynomial.derivative (f * g) = Polynomial.derivative f * g + f * Polynomial.derivative g"
+      },
+      {
+        "id": "C07",
+        "statement": "∀ {R : Type u} [inst : Semiring R] (c : R), Polynomial.derivative (Polynomial.X + Polynomial.C c) = 1"
+      },
+      {
+        "id": "C08",
+        "statement": "∀ {R : Type u} [inst : Semiring R], Polynomial.derivative 1 = 0"
+      },
+      {
+        "id": "C09",
+        "statement": "∀ {R : Type u} [inst : CommSemiring R] (p : Polynomial R) (n : ℕ), Polynomial.derivative (p ^ n) = Polynomial.C ↑n * p ^ (n - 1) * Polynomial.derivative p"
+      },
+      {
+        "id": "C10",
+        "statement": "∀ {R : Type u} [inst : Semiring R] {p : Polynomial R} [IsAddTorsionFree R], Polynomial.derivative p = 0 ↔ p.natDegree = 0"
+      },
+      {
+        "id": "C11",
+        "statement": "∀ {R : Type u} [inst : Semiring R], Polynomial.derivative 0 = 0"
+      },
+      {
+        "id": "C12",
+        "statement": "∀ {R : Type u} [inst : Semiring R] {f g : Polynomial R}, Polynomial.derivative (f + g) = Polynomial.derivative f + Polynomial.derivative g"
+      },
+      {
+        "id": "C13",
+        "statement": "∀ {R : Type u} [inst : Semiring R] {n : ℕ}, Polynomial.derivative ↑n = 0"
+      },
+      {
+        "id": "C14",
+        "statement": "∀ {R : Type u} [inst : Ring R] {n : ℤ}, Polynomial.derivative ↑n = 0"
+      },
+      {
+        "id": "C15",
+        "statement": "∀ {R : Type u} [inst : Semiring R] (a : R) (n : ℕ), Polynomial.derivative (Polynomial.C a * Polynomial.X ^ n) = Polynomial.C (a * ↑n) * Polynomial.X ^ (n - 1)"
+      },
+      {
+        "id": "C16",
+        "statement": "∀ {R : Type u} [inst : Semiring R] (n : ℕ), Polynomial.derivative (Polynomial.X ^ n) = Polynomial.C ↑n * Polynomial.X ^ (n - 1)"
+      }
+    ],
+    "episode_id": "MLP4B_0027",
+    "schema_version": "lemma-portfolio.dependency-compression.v4",
+    "selection_budget": 3,
+    "source_project": "mathlib",
+    "targets": [
+      {
+        "id": "T01",
+        "statement": "∀ {R : Type u} [inst : Semiring R] {p : Polynomial R}, (Polynomial.derivative p).degree ≤ p.degree"
+      },
+      {
+        "id": "T02",
+        "statement": "∀ {R : Type u} [inst : Ring R] (c : R), Polynomial.derivative (Polynomial.X - Polynomial.C c) = 1"
+      },
+      {
+        "id": "T03",
+        "statement": "∀ {R : Type u} [inst : Semiring R] [NoZeroDivisors R] {P : Polynomial R}, P ∣ Polynomial.derivative P ↔ Polynomial.derivative P = 0"
+      },
+      {
+        "id": "T04",
+        "statement": "∀ {R : Type u} [inst : Ring R] {n : ℤ} {f : Polynomial R}, Polynomial.derivative (↑n * f) = ↑n * Polynomial.derivative f"
+      },
+      {
+        "id": "T05",
+        "statement": "∀ {R : Type u} [inst : CommRing R] [inst_1 : DecidableEq R] {S : Multiset R} {r : R}, r ∈ S → Polynomial.eval r (Polynomial.derivative (Multiset.map (fun a => Polynomial.X - Polynomial.C a) S).prod) = (Multiset.map (fun a => r - a) (S.erase r)).prod"
+      },
+      {
+        "id": "T06",
+        "statement": "∀ {R : Type u} [inst : CommRing R] (p : Polynomial R), Polynomial.derivative (p.comp (1 - Polynomial.X)) = -(Polynomial.derivative p).comp (1 - Polynomial.X)"
+      },
+      {
+        "id": "T07",
+        "statement": "∀ {R : Type u} [inst : CommSemiring R] (p q : Polynomial R), Polynomial.derivative (Polynomial.eval₂ Polynomial.C q p) = Polynomial.eval₂ Polynomial.C q (Polynomial.derivative p) * Polynomial.derivative q"
+      },
+      {
+        "id": "T08",
+        "statement": "∀ {R : Type u} [inst : Semiring R] {p : Polynomial R} {x : ℕ}, p.natDegree < x → (⇑Polynomial.derivative)^[x] p = 0"
+      }
+    ],
+    "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+  },
+  {
+    "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+    "candidates": [
+      {
+        "id": "C01",
+        "statement": "∀ {C : Type u} {inst : CategoryTheory.Category.{v, u} C} {X Y : C} {f : X ⟶ Y} [self : CategoryTheory.IsIso f], ∃ inv, CategoryTheory.CategoryStruct.comp f inv = CategoryTheory.CategoryStruct.id X ∧ CategoryTheory.CategoryStruct.comp inv f = CategoryTheory.CategoryStruct.id Y"
+      },
+      {
+        "id": "C02",
+        "statement": "∀ {C : Type u} [inst : CategoryTheory.Category.{v, u} C] {X Y : C} (e : X ≅ Y), CategoryTheory.IsIso e.hom"
+      },
+      {
+        "id": "C03",
+        "statement": "∀ {C : Type u} [inst : CategoryTheory.Category.{v, u} C] {D : Type u_1} [inst_1 : CategoryTheory.Category.{v_1, u_1} D] {X Y : C} (e : X ≅ Y) (F : CategoryTheory.Functor C D), CategoryTheory.CategoryStruct.comp (F.map e.hom) (F.map e.inv) = CategoryTheory.CategoryStruct.id (F.obj X)"
+      },
+      {
+        "id": "C04",
+        "statement": "∀ {C : Type u} [inst : CategoryTheory.Category.{v, u} C] {X Y Z : C} {f : X ⟶ Y} {h : Y ⟶ Z} [CategoryTheory.IsIso f] [CategoryTheory.IsIso h], CategoryTheory.IsIso (CategoryTheory.CategoryStruct.comp f h)"
+      },
+      {
+        "id": "C05",
+        "statement": "∀ {C : Type u} [inst : CategoryTheory.Category.{v, u} C] {X Y : C} (α : X ≅ Y), CategoryTheory.Iso.refl X ≪≫ α = α"
+      },
+      {
+        "id": "C06",
+        "statement": "∀ {C : Type u} [inst : CategoryTheory.Category.{v, u} C] {X Y : C} {D : Type u₂} [inst_1 : CategoryTheory.Category.{v₂, u₂} D] (F : CategoryTheory.Functor C D) (f : X ⟶ Y) [CategoryTheory.IsIso f], CategoryTheory.IsIso (F.map f)"
+      },
+      {
+        "id": "C07",
+        "statement": "∀ {C : Type u} [inst : CategoryTheory.Category.{v, u} C] {X Y : C} {f : X ⟶ Y} [inst_1 : CategoryTheory.IsIso f] {g : Y ⟶ X}, CategoryTheory.CategoryStruct.comp f g = CategoryTheory.CategoryStruct.id X → CategoryTheory.inv f = g"
+      },
+      {
+        "id": "C08",
+        "statement": "∀ {C : Type u} [inst : CategoryTheory.Category.{v, u} C] {X Y Z : C} (α : X ≅ Y) {f : X ⟶ Z} {g : Y ⟶ Z}, g = CategoryTheory.CategoryStruct.comp α.inv f ↔ CategoryTheory.CategoryStruct.comp α.hom g = f"
+      },
+      {
+        "id": "C09",
+        "statement": "∀ {C : Type u} [inst : CategoryTheory.Category.{v, u} C] {X Y : C} (f : X ⟶ Y) [I : CategoryTheory.IsIso f], CategoryTheory.CategoryStruct.comp (CategoryTheory.inv f) f = CategoryTheory.CategoryStruct.id Y"
+      },
+      {
+        "id": "C10",
+        "statement": "∀ {C : Type u} [inst : CategoryTheory.Category.{v, u} C] {X Y : C} (self : X ≅ Y), CategoryTheory.CategoryStruct.comp self.hom self.inv = CategoryTheory.CategoryStruct.id X"
+      },
+      {
+        "id": "C11",
+        "statement": "∀ {C : Type u} [inst : CategoryTheory.Category.{v, u} C] {X Y Z : C} (f : X ⟶ Y) (g : Y ⟶ Z) [CategoryTheory.IsIso f] [CategoryTheory.IsIso (CategoryTheory.CategoryStruct.comp f g)], CategoryTheory.IsIso g"
+      },
+      {
+        "id": "C12",
+        "statement": "∀ {C : Type u} [inst : CategoryTheory.Category.{v, u} C] {X Y : C} (e : X ≅ Y), CategoryTheory.IsIso e.inv"
+      },
+      {
+        "id": "C13",
+        "statement": "∀ {C : Type u} [inst : CategoryTheory.Category.{v, u} C] {X Y : C} (self : X ≅ Y), CategoryTheory.CategoryStruct.comp self.inv self.hom = CategoryTheory.CategoryStruct.id Y"
+      },
+      {
+        "id": "C14",
+        "statement": "∀ {C : Type u} [inst : CategoryTheory.Category.{v, u} C] {X Y : C} ⦃α β : X ≅ Y⦄, α.hom = β.hom → α = β"
+      },
+      {
+        "id": "C15",
+        "statement": "∀ {C : Type u} [inst : CategoryTheory.Category.{v, u} C] {X Y Z : C} (α : X ≅ Y) {f : X ⟶ Z} {g : Y ⟶ Z}, CategoryTheory.CategoryStruct.comp α.inv f = g ↔ f = CategoryTheory.CategoryStruct.comp α.hom g"
+      },
+      {
+        "id": "C16",
+        "statement": "∀ {C : Type u} [inst : CategoryTheory.Category.{v, u} C] {D : Type u₂} [inst_1 : CategoryTheory.Category.{v₂, u₂} D] (F : CategoryTheory.Functor C D) {X Y : C} (f : X ⟶ Y) [inst_2 : CategoryTheory.IsIso f], F.map (CategoryTheory.inv f) = CategoryTheory.inv (F.map f)"
+      }
+    ],
+    "episode_id": "MLP4B_0028",
+    "schema_version": "lemma-portfolio.dependency-compression.v4",
+    "selection_budget": 3,
+    "source_project": "mathlib",
+    "targets": [
+      {
+        "id": "T01",
+        "statement": "∀ {C : Type u} [inst : CategoryTheory.Category.{v, u} C] {X Y : C} (α : X ≅ Y), α ≪≫ CategoryTheory.Iso.refl Y = α"
+      },
+      {
+        "id": "T02",
+        "statement": "∀ {C : Type u} [inst : CategoryTheory.Category.{v, u} C] {X Y : C} (f : X ≅ Y), CategoryTheory.inv f.inv = f.hom"
+      },
+      {
+        "id": "T03",
+        "statement": "∀ {C : Type u} [inst : CategoryTheory.Category.{v, u} C] {X Y : C} {f : X ⟶ Y} [inst_1 : CategoryTheory.IsIso f], CategoryTheory.inv (CategoryTheory.inv f) = f"
+      },
+      {
+        "id": "T04",
+        "statement": "∀ {C : Type u} [inst : CategoryTheory.Category.{v, u} C] {D : Type u₂} [inst_1 : CategoryTheory.Category.{v₂, u₂} D] (F : CategoryTheory.Functor C D) {X Y : C} (f : X ⟶ Y) [inst_2 : CategoryTheory.IsIso f], CategoryTheory.CategoryStruct.comp (F.map f) (F.map (CategoryTheory.inv f)) = CategoryTheory.CategoryStruct.id (F.obj X)"
+      },
+      {
+        "id": "T05",
+        "statement": "∀ {C : Type u} [inst : CategoryTheory.Category.{v, u} C] {D : Type u₂} [inst_1 : CategoryTheory.Category.{v₂, u₂} D] (F : CategoryTheory.Functor C D) (X : C), F.mapIso (CategoryTheory.Iso.refl X) = CategoryTheory.Iso.refl (F.obj X)"
+      },
+      {
+        "id": "T06",
+        "statement": "∀ {C : Type u} [inst : CategoryTheory.Category.{v, u} C] {X Y : C} (self : X ≅ Y) {Z : C} (h : X ⟶ Z), CategoryTheory.CategoryStruct.comp self.hom (CategoryTheory.CategoryStruct.comp self.inv h) = h"
+      },
+      {
+        "id": "T07",
+        "statement": "∀ {C : Type u} [inst : CategoryTheory.Category.{v, u} C] {X Y : C} (f : X ≅ Y), CategoryTheory.inv f.hom = f.inv"
+      },
+      {
+        "id": "T08",
+        "statement": "∀ {C : Type u} [inst : CategoryTheory.Category.{v, u} C] {X Y : C} (f : X ⟶ Y) [I : CategoryTheory.IsIso f] {Z : C} (h : Y ⟶ Z), CategoryTheory.CategoryStruct.comp (CategoryTheory.inv f) (CategoryTheory.CategoryStruct.comp f h) = h"
+      }
+    ],
+    "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+  },
+  {
+    "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+    "candidates": [
+      {
+        "id": "C01",
+        "statement": "∀ {α : Type u_1} [inst : LT α] {x y : WithTop α}, x < y ↔ (y = ⊤ ∧ ∃ a, x = ↑a) ∨ ∃ b, ∃ a < b, y = ↑b ∧ x = ↑a"
+      },
+      {
+        "id": "C02",
+        "statement": "∀ {α : Type u_1} {a : α}, ↑a ≠ ⊥"
+      },
+      {
+        "id": "C03",
+        "statement": "∀ {α : Type u_1} {a b : α} [inst : LT α], ↑a < ↑b ↔ a < b"
+      },
+      {
+        "id": "C04",
+        "statement": "∀ {α : Type u_1} {a b : α} [inst : LE α] {x : WithTop α}, x ≠ ⊤ → (WithTop.untopD a x ≤ b ↔ x ≤ ↑b)"
+      },
+      {
+        "id": "C05",
+        "statement": "∀ {α : Type u_1} {β : Type u_2} {γ : Type u_3} (h : β → γ) (g : α → β) (a : WithBot α), WithBot.map h (WithBot.map g a) = WithBot.map (h ∘ g) a"
+      },
+      {
+        "id": "C06",
+        "statement": "∀ {α : Type u_1}, CanLift (WithTop α) α WithTop.some fun r => r ≠ ⊤"
+      },
+      {
+        "id": "C07",
+        "statement": "∀ {α : Type u_1} {β : Type u_2} {γ : Type u_3} (h : β → γ) (g : α → β) (a : WithTop α), WithTop.map h (WithTop.map g a) = WithTop.map (h ∘ g) a"
+      },
+      {
+        "id": "C08",
+        "statement": "∀ {α : Type u_1} [inst : LT α] (a : α), ↑a < ⊤"
+      },
+      {
+        "id": "C09",
+        "statement": "∀ {α : Type u_1} (x : WithTop α) (hx : x ≠ ⊤), ↑(x.untop hx) = x"
+      },
+      {
+        "id": "C10",
+        "statement": "∀ {α : Type u_1} {a b : α} [inst : LT α], ↑b < ↑a ↔ b < a"
+      },
+      {
+        "id": "C11",
+        "statement": "∀ {α : Type u_1} {a b : α}, ↑a = ↑b ↔ a = b"
+      },
+      {
+        "id": "C12",
+        "statement": "∀ {α : Type u_1} [inst : LT α] (a : WithTop α), ¬⊤ < a"
+      },
+      {
+        "id": "C13",
+        "statement": "∀ {α : Type u_1} {d y : α} {x : WithTop α}, WithTop.untopD d x = y ↔ x = ↑y ∨ x = ⊤ ∧ y = d"
+      },
+      {
+        "id": "C14",
+        "statement": "∀ {α : Type u_1} {p : WithTop α → Prop}, (∀ (x : WithTop α), p x) ↔ p ⊤ ∧ ∀ (x : α), p ↑x"
+      },
+      {
+        "id": "C15",
+        "statement": "∀ {α : Type u_1}, CanLift (WithBot α) α WithBot.some fun r => r ≠ ⊥"
+      },
+      {
+        "id": "C16",
+        "statement": "∀ {α : Type u_1} {a b : α} [inst : LE α], ↑b ≤ ↑a ↔ b ≤ a"
+      }
+    ],
+    "episode_id": "MLP4B_0029",
+    "schema_version": "lemma-portfolio.dependency-compression.v4",
+    "selection_budget": 3,
+    "source_project": "mathlib",
+    "targets": [
+      {
+        "id": "T01",
+        "statement": "∀ {α : Type u_1} {b : α} [inst : LE α] {x : WithTop α}, ↑b ≤ x ↔ ∀ (a : α), x = ↑a → b ≤ a"
+      },
+      {
+        "id": "T02",
+        "statement": "∀ {α : Type u_1} {a : α} [inst : LE α] {x : WithTop α}, x ≤ ↑a ↔ ∃ b, x = ↑b ∧ b ≤ a"
+      },
+      {
+        "id": "T03",
+        "statement": "∀ {α : Type u_1} {a : α} [inst : LE α] {x : WithTop α} [inst_1 : Nonempty α], x ≠ ⊤ → (x.untopA ≤ a ↔ x ≤ ↑a)"
+      },
+      {
+        "id": "T04",
+        "statement": "∀ {α : Type u_1} {a : α} [inst : LE α] {x y : WithTop α}, x ≠ ⊤ → y ≤ x → WithTop.untopD a y ≤ WithTop.untopD a x"
+      },
+      {
+        "id": "T05",
+        "statement": "∀ {α : Type u_1} {a b : α} [inst : LT α] {x : WithTop α}, x ≠ ⊤ → (WithTop.untopD a x < b ↔ x < ↑b)"
+      },
+      {
+        "id": "T06",
+        "statement": "∀ {α : Type u_1} [inst : Preorder α] {x : WithTop α}, x = ⊤ ↔ ∀ (b : α), ↑b < x"
+      },
+      {
+        "id": "T07",
+        "statement": "∀ {α : Type u_1} {β : Type u_2} [inst : Preorder α] [inst_1 : Preorder β] {f : WithTop α → β}, Monotone f ↔ (Monotone fun a => f ↑a) ∧ ∀ (x : α), f ↑x ≤ f ⊤"
+      },
+      {
+        "id": "T08",
+        "statement": "∀ {α : Type u_1} {a : α} [inst : LE α] {x : WithBot α} (hx : x ≠ ⊥), a ≤ x.unbot hx ↔ ↑a ≤ x"
+      }
+    ],
+    "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+  }
+]
+</episodes>

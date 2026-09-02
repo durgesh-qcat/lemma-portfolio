@@ -39,11 +39,15 @@ Repeating the original mining search additionally requires DuckDB and the exact
 them in one directory:
 
 ```sh
-python3 -m pip install duckdb
+python3 -m pip install -r requirements-construction.txt
 python3 -m apibench.hard_blind_v4.build_hard_blind_v4 \
   --parquet-dir /absolute/path/to/parquet-shards \
   --dry-run
 ```
+
+The requirements file pins `duckdb==1.5.5`, matching the released construction
+receipt.  This full mining pass is substantially slower than score verification
+and is not required to validate the reported model scores.
 
 The receipt's per-file hashes, rather than a mutable hosting branch, are the
 authoritative source identity.

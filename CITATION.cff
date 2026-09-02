@@ -4,6 +4,7 @@ title: "LemmaPortfolio: Choosing One Small Lemma Set for Many Lean Goals"
 type: software
 version: 4.0.0
 date-released: 2026-09-02
+repository-code: "https://github.com/durgesh-qcat/lemma-portfolio"
 authors:
   - family-names: Das
     given-names: Aishwarya Praveen

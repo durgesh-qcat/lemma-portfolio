@@ -1,0 +1,553 @@
+You are solving five unreleased LemmaPortfolio benchmark episodes independently.
+
+For each episode, each target t has a hidden set D(t): the displayed candidate declarations used as direct theorem dependencies in that target's historical elaborated source. For a portfolio S, F(S) is the number of targets t for which D(t) intersects S. Select exactly 3 distinct candidate IDs per episode to maximize F(S). This is static dependency-portfolio compression, not a claim about causal usefulness in a new proof.
+
+Use only the supplied text. Do not use web search, tools, files, a repository, theorem proving, compiler feedback, memory, prior chats, follow-up messages, or answers from another episode. Treat every episode independently.
+
+Return one JSON object and no prose. It must have exactly one key, "predictions". Its value must be an object with exactly these episode keys: MLP4B_0005, MLP4B_0006, MLP4B_0007, MLP4B_0008, MLP4B_0009. Each value must be an array of exactly 3 distinct candidate IDs copied from that episode. Candidate order does not matter.
+
+Episode JSON array follows.
+<episodes>
+[
+  {
+    "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+    "candidates": [
+      {
+        "id": "C01",
+        "statement": "∀ {α : Type v} {M : Type u} [inst : AddMonoid M] [inst_1 : AddAction M α] {n : ℕ} {m : M} {a : α}, n • m +ᵥ a = a ↔ AddAction.period m a ∣ n"
+      },
+      {
+        "id": "C02",
+        "statement": "∀ {α : Type u_1} {f : α → α} {x : α}, x ∈ Function.periodicPts f → 0 < Function.minimalPeriod f x"
+      },
+      {
+        "id": "C03",
+        "statement": "∀ {α : Type u_1} {f : α → α} {x : α} {n : ℕ}, 0 < n → Function.IsPeriodicPt f n x → Function.minimalPeriod f x ≤ n"
+      },
+      {
+        "id": "C04",
+        "statement": "∀ {α : Type v} {M : Type u} [inst : Monoid M] [inst_1 : MulAction M α] {n : ℕ} {m : M} {a : α}, m ^ n • a = a ↔ MulAction.period m a ∣ n"
+      },
+      {
+        "id": "C05",
+        "statement": "∀ {α : Type u_1} {f : α → α} {x : α} {m : ℕ}, Function.IsPeriodicPt f m x → ∀ (n : ℕ), Function.IsPeriodicPt f (m * n) x"
+      },
+      {
+        "id": "C06",
+        "statement": "∀ {α : Type u_1} {f : α → α} {x : α} {m n : ℕ}, Function.IsPeriodicPt f (n + m) x → Function.IsPeriodicPt f m x → Function.IsPeriodicPt f n x"
+      },
+      {
+        "id": "C07",
+        "statement": "∀ {α : Type v} {M : Type u} [inst : AddMonoid M] [inst_1 : AddAction M α] (n : ℕ) {m : M} {a : α}, (n % AddAction.period m a) • m +ᵥ a = n • m +ᵥ a"
+      },
+      {
+        "id": "C08",
+        "statement": "∀ {α : Type v} {M : Type u} [inst : AddMonoid M] [inst_1 : AddAction M α] {m : M} {a : α}, AddAction.period m a = Function.minimalPeriod (fun x => m +ᵥ x) a"
+      },
+      {
+        "id": "C09",
+        "statement": "∀ {α : Type u_1} {f : α → α} {x : α} {n : ℕ}, Function.IsPeriodicPt f n x → Function.IsFixedPt f^[n] x"
+      },
+      {
+        "id": "C10",
+        "statement": "∀ {α : Type u_1} {f : α → α} {x : α} {n : ℕ}, Function.IsPeriodicPt f n x → ∀ (m : ℕ), f^[m % n] x = f^[m] x"
+      },
+      {
+        "id": "C11",
+        "statement": "∀ {α : Type u_1} {f : α → α} {x : α}, Function.IsFixedPt f x → ∀ (n : ℕ), Function.IsPeriodicPt f n x"
+      },
+      {
+        "id": "C12",
+        "statement": "∀ {α : Type u_1} (f : α → α) (x : α), Function.IsPeriodicPt f (Function.minimalPeriod f x) x"
+      },
+      {
+        "id": "C13",
+        "statement": "∀ {α : Type u_1} {f : α → α} {x : α}, f^[Function.minimalPeriod f x] x = x"
+      },
+      {
+        "id": "C14",
+        "statement": "∀ {α : Type v} {G : Type u} [inst : AddGroup G] [inst_1 : AddAction G α] {j : ℤ} {g : G} {a : α}, j • g +ᵥ a = a ↔ ↑(AddAction.period g a) ∣ j"
+      },
+      {
+        "id": "C15",
+        "statement": "∀ {α : Type u_1} {f : α → α} {x : α} {m n : ℕ}, x ∈ Function.periodicPts f → Function.IsPeriodicPt f m (f^[n] x) → Function.IsPeriodicPt f m x"
+      },
+      {
+        "id": "C16",
+        "statement": "∀ {α : Type u_1} {f : α → α} {x : α} {m : ℕ}, Function.IsPeriodicPt f m x → ∀ {n : ℕ}, m ∣ n → Function.IsPeriodicPt f n x"
+      }
+    ],
+    "episode_id": "MLP4B_0005",
+    "schema_version": "lemma-portfolio.dependency-compression.v4",
+    "selection_budget": 3,
+    "source_project": "mathlib",
+    "targets": [
+      {
+        "id": "T01",
+        "statement": "∀ {α : Type u_1} {f : α → α} {x : α}, Function.minimalPeriod f x = 1 ↔ Function.IsFixedPt f x"
+      },
+      {
+        "id": "T02",
+        "statement": "∀ {α : Type u_1} {f : α → α} {x : α} {n : ℕ}, f^[n % Function.minimalPeriod f x] x = f^[n] x"
+      },
+      {
+        "id": "T03",
+        "statement": "∀ {α : Type u_1} {f : α → α} {x y : α} {m n : ℕ}, Function.IsPeriodicPt f m x → Function.IsPeriodicPt f n y → 0 < m → 0 < n → f x = f y → x = y"
+      },
+      {
+        "id": "T04",
+        "statement": "∀ {α : Type u_1} {f : α → α} {x : α}, 0 < Function.minimalPeriod f x ↔ x ∈ Function.periodicPts f"
+      },
+      {
+        "id": "T05",
+        "statement": "∀ {α : Type v} {G : Type u} [inst : AddGroup G] [inst_1 : AddAction G α] (j : ℤ) {g : G} {a : α}, (j % ↑(AddAction.period g a)) • g +ᵥ a = j • g +ᵥ a"
+      },
+      {
+        "id": "T06",
+        "statement": "∀ {α : Type u_1} {f : α → α} {x : α} {n : ℕ}, Function.IsPeriodicPt f n x → ∀ (m : ℕ), Function.IsPeriodicPt f^[m] n x"
+      },
+      {
+        "id": "T07",
+        "statement": "∀ {α : Type u_1} {f : α → α} {x : α} {m n : ℕ}, Function.IsPeriodicPt f m x → Function.IsPeriodicPt f n x → Function.IsPeriodicPt f (m % n) x"
+      },
+      {
+        "id": "T08",
+        "statement": "∀ {α : Type u_1} {f : α → α} {x : α}, x ∈ Function.periodicPts f → ∀ (n : ℕ), Function.minimalPeriod f (f^[n] x) = Function.minimalPeriod f x"
+      }
+    ],
+    "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+  },
+  {
+    "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+    "candidates": [
+      {
+        "id": "C01",
+        "statement": "∀ {σ : Type u_1} {R : Type u_2} [inst : Semiring R] (w : σ → ℕ) {f : MvPowerSeries σ R} {d : σ →₀ ℕ}, ↑((Finsupp.weight w) d) < MvPowerSeries.weightedOrder w f → (MvPowerSeries.coeff d) f = 0"
+      },
+      {
+        "id": "C02",
+        "statement": "∀ {σ : Type u_1} {R : Type u_2} [inst : Semiring R] {f : MvPowerSeries σ R} {d : σ →₀ ℕ}, ↑(Finsupp.degree d) < f.order → (MvPowerSeries.coeff d) f = 0"
+      },
+      {
+        "id": "C03",
+        "statement": "∀ {σ : Type u_1} {R : Type u_2} [inst : Semiring R] (w : σ → ℕ) (f : MvPowerSeries σ R) (p : ℕ), MvPowerSeries.IsWeightedHomogeneous w ((MvPowerSeries.weightedHomogeneousComponent w p) f) p"
+      },
+      {
+        "id": "C04",
+        "statement": "∀ {σ : Type u_1} {R : Type u_2} [inst : Semiring R] (w : σ → ℕ) {f : MvPowerSeries σ R} {d : σ →₀ ℕ}, (MvPowerSeries.coeff d) f ≠ 0 → MvPowerSeries.weightedOrder w f ≤ ↑((Finsupp.weight w) d)"
+      },
+      {
+        "id": "C05",
+        "statement": "∀ {σ : Type u_1} {R : Type u_2} [inst : Semiring R] (w : σ → ℕ) {f : MvPowerSeries σ R} {n : ℕ}, MvPowerSeries.weightedOrder w f = ↑n ↔ (∃ d, (MvPowerSeries.coeff d) f ≠ 0 ∧ (Finsupp.weight w) d = n) ∧ ∀ (d : σ →₀ ℕ), (Finsupp.weight w) d < n → (MvPowerSeries.coeff d) f = 0"
+      },
+      {
+        "id": "C06",
+        "statement": "∀ {σ : Type u_1} {R : Type u_2} [inst : Semiring R] (w : σ → ℕ) {f g : MvPowerSeries σ R}, MvPowerSeries.weightedOrder w f + MvPowerSeries.weightedOrder w g ≤ MvPowerSeries.weightedOrder w (f * g)"
+      },
+      {
+        "id": "C07",
+        "statement": "∀ {σ : Type u_1} {R : Type u_2} [inst : Semiring R] (w : σ → ℕ) (p : ℕ) (d : σ →₀ ℕ) (f : MvPowerSeries σ R), (MvPowerSeries.coeff d) ((MvPowerSeries.weightedHomogeneousComponent w p) f) = if (Finsupp.weight w) d = p then (MvPowerSeries.coeff d) f else 0"
+      },
+      {
+        "id": "C08",
+        "statement": "∀ {σ : Type u_1} {R : Type u_2} [inst : Semiring R] (w : σ → ℕ) {d : σ →₀ ℕ} {a : R} [inst_1 : Decidable (a = 0)], MvPowerSeries.weightedOrder w ((MvPowerSeries.monomial d) a) = if a = 0 then ⊤ else ↑((Finsupp.weight w) d)"
+      },
+      {
+        "id": "C09",
+        "statement": "∀ {σ : Type u_1} {R : Type u_2} [inst : Semiring R] (w : σ → ℕ), MvPowerSeries.weightedOrder w 0 = ⊤"
+      },
+      {
+        "id": "C10",
+        "statement": "∀ {σ : Type u_1} {R : Type u_2} [inst : Semiring R] {f : MvPowerSeries σ R}, 1 ≤ f.order ↔ MvPowerSeries.constantCoeff f = 0"
+      },
+      {
+        "id": "C11",
+        "statement": "∀ {σ : Type u_1} {R : Type u_2} [inst : Semiring R] {f : MvPowerSeries σ R} {n : ℕ∞}, (∀ (d : σ →₀ ℕ), ↑(Finsupp.degree d) < n → (MvPowerSeries.coeff d) f = 0) → n ≤ f.order"
+      },
+      {
+        "id": "C12",
+        "statement": "∀ {σ : Type u_1} {R : Type u_2} [inst : Semiring R] (w : σ → ℕ) {d : σ →₀ ℕ} {a : R}, a ≠ 0 → MvPowerSeries.weightedOrder w ((MvPowerSeries.monomial d) a) = ↑((Finsupp.weight w) d)"
+      },
+      {
+        "id": "C13",
+        "statement": "∀ {σ : Type u_1} {R : Type u_2} [inst : Semiring R] (w : σ → ℕ) {f : MvPowerSeries σ R}, ↑(MvPowerSeries.weightedOrder w f).toNat = MvPowerSeries.weightedOrder w f → ∃ d, (MvPowerSeries.coeff d) f ≠ 0 ∧ ↑((Finsupp.weight w) d) = MvPowerSeries.weightedOrder w f"
+      },
+      {
+        "id": "C14",
+        "statement": "∀ {σ : Type u_1} {R : Type u_2} [inst : Semiring R] (w : σ → ℕ) {f : MvPowerSeries σ R}, f ≠ 0 ↔ ↑(MvPowerSeries.weightedOrder w f).toNat = MvPowerSeries.weightedOrder w f"
+      },
+      {
+        "id": "C15",
+        "statement": "∀ {σ : Type u_1} {R : Type u_2} [inst : Semiring R] (w : σ → ℕ) {f g : MvPowerSeries σ R}, min (MvPowerSeries.weightedOrder w f) (MvPowerSeries.weightedOrder w g) ≤ MvPowerSeries.weightedOrder w (f + g)"
+      },
+      {
+        "id": "C16",
+        "statement": "∀ {σ : Type u_1} {R : Type u_2} [inst : Semiring R] (w : σ → ℕ) {f : MvPowerSeries σ R}, MvPowerSeries.weightedOrder w f = ⊤ ↔ f = 0"
+      }
+    ],
+    "episode_id": "MLP4B_0006",
+    "schema_version": "lemma-portfolio.dependency-compression.v4",
+    "selection_budget": 3,
+    "source_project": "mathlib",
+    "targets": [
+      {
+        "id": "T01",
+        "statement": "∀ {σ : Type u_1} {R : Type u_2} [inst : Semiring R] {f : MvPowerSeries σ R}, ↑f.order.toNat = f.order → ∃ d, (MvPowerSeries.coeff d) f ≠ 0 ∧ ↑(Finsupp.degree d) = f.order"
+      },
+      {
+        "id": "T02",
+        "statement": "∀ {σ : Type u_1} {R : Type u_2} [inst : Semiring R] (p : ℕ) (d : σ →₀ ℕ) (f : MvPowerSeries σ R), (MvPowerSeries.coeff d) ((MvPowerSeries.homogeneousComponent p) f) = if Finsupp.degree d = p then (MvPowerSeries.coeff d) f else 0"
+      },
+      {
+        "id": "T03",
+        "statement": "∀ {σ : Type u_1} {R : Type u_2} [inst : Semiring R] {w : σ → ℕ} {f : MvPowerSeries σ R} {p : ℕ}, ↑p < MvPowerSeries.weightedOrder w f → (MvPowerSeries.weightedHomogeneousComponent w p) f = 0"
+      },
+      {
+        "id": "T04",
+        "statement": "∀ {σ : Type u_1} {R : Type u_3} [inst : Ring R] (p : MvPowerSeries σ R) (T : Subring R) (hp : ∀ (n : σ →₀ ℕ), (MvPowerSeries.coeff n) p ∈ T), (p.toSubring T hp).order = p.order"
+      },
+      {
+        "id": "T05",
+        "statement": "∀ {σ : Type u_1} {R : Type u_2} [inst : Semiring R] {f g : MvPowerSeries σ R}, f.order + g.order ≤ (f * g).order"
+      },
+      {
+        "id": "T06",
+        "statement": "∀ {σ : Type u_1} {R : Type u_2} [inst : Semiring R] (w : σ → ℕ) [Nontrivial R], MvPowerSeries.weightedOrder w 1 = 0"
+      },
+      {
+        "id": "T07",
+        "statement": "∀ {σ : Type u_1} (w : σ → ℕ) {R : Type u_3} [inst : Ring R] {f g : MvPowerSeries σ R} {d : σ →₀ ℕ}, ↑((Finsupp.weight w) d) < MvPowerSeries.weightedOrder w g → (MvPowerSeries.coeff d) (f * (1 - g)) = (MvPowerSeries.coeff d) f"
+      },
+      {
+        "id": "T08",
+        "statement": "∀ {σ : Type u_1} {R : Type u_2} [inst : Semiring R] {w : σ → ℕ} {f : MvPowerSeries σ R} {p : ℕ}, ↑p = MvPowerSeries.weightedOrder w f → (MvPowerSeries.weightedHomogeneousComponent w p) f ≠ 0"
+      }
+    ],
+    "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+  },
+  {
+    "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+    "candidates": [
+      {
+        "id": "C01",
+        "statement": "∀ {α : Type u_1} {G : Type u_5} [inst : NormedAddCommGroup G] [inst_1 : NormedSpace ℝ G] {m : MeasurableSpace α} {μ : MeasureTheory.Measure α} {f : α → G}, ¬MeasureTheory.AEStronglyMeasurable f μ → ∫ (a : α), f a ∂μ = 0"
+      },
+      {
+        "id": "C02",
+        "statement": "∀ {α : Type u_1} {E : Type u_2} [inst : NormedAddCommGroup E] [inst_1 : NormedSpace ℝ E] [hE : CompleteSpace E] [inst_2 : MeasurableSpace α] (f : α → E) (a : α), MeasureTheory.StronglyMeasurable f → ∫ (x : α), f x ∂MeasureTheory.Measure.dirac a = f a"
+      },
+      {
+        "id": "C03",
+        "statement": "∀ {α : Type u_1} {E : Type u_2} [inst : NormedAddCommGroup E] [inst_1 : NormedSpace ℝ E] {m : MeasurableSpace α} {μ : MeasureTheory.Measure α} [inst_2 : PartialOrder E] [IsOrderedAddMonoid E] [IsOrderedModule ℝ E] [ClosedIciTopology E] {f g : α → E}, MeasureTheory.Integrable f μ → MeasureTheory.Integrable g μ → f ≤ᵐ[μ] g → ∫ (x : α), f x ∂μ ≤ ∫ (x : α), g x ∂μ"
+      },
+      {
+        "id": "C04",
+        "statement": "∀ {α : Type u_1} {G : Type u_5} [inst : NormedAddCommGroup G] [inst_1 : NormedSpace ℝ G] {m : MeasurableSpace α} {μ : MeasureTheory.Measure α} (f : α → G), ‖∫ (a : α), f a ∂μ‖ ≤ (∫⁻ (a : α), ENNReal.ofReal ‖f a‖ ∂μ).toReal"
+      },
+      {
+        "id": "C05",
+        "statement": "∀ {α : Type u_1} {E : Type u_2} [inst : NormedAddCommGroup E] [inst_1 : NormedSpace ℝ E] {m : MeasurableSpace α} {μ : MeasureTheory.Measure α} [inst_2 : PartialOrder E] [IsOrderedAddMonoid E] [IsOrderedModule ℝ E] [ClosedIciTopology E] {f : α → E}, 0 ≤ᵐ[μ] f → 0 ≤ ∫ (x : α), f x ∂μ"
+      },
+      {
+        "id": "C06",
+        "statement": "∀ {α : Type u_1} {m : MeasurableSpace α} {μ : MeasureTheory.Measure α} {f : α → ℝ}, 0 ≤ᵐ[μ] f → MeasureTheory.AEStronglyMeasurable f μ → ∫ (a : α), f a ∂μ = (∫⁻ (a : α), ENNReal.ofReal (f a) ∂μ).toReal"
+      },
+      {
+        "id": "C07",
+        "statement": "∀ {α : Type u_1} {m : MeasurableSpace α} {μ : MeasureTheory.Measure α} {f : α → ℝ}, 0 ≤ f → MeasureTheory.Integrable f μ → (0 < ∫ (x : α), f x ∂μ ↔ 0 < μ (Function.support f))"
+      },
+      {
+        "id": "C08",
+        "statement": "∀ {α : Type u_6} {G : Type u_7} [inst : NormedAddCommGroup G] [inst_1 : NormedSpace ℝ G] {x : MeasurableSpace α} (μ : MeasureTheory.Measure α) (f : α → G), MeasureTheory.integral μ f = if x_1 : CompleteSpace G then if hf : MeasureTheory.Integrable f μ then MeasureTheory.L1.integral (MeasureTheory.Integrable.toL1 f hf) else 0 else 0"
+      },
+      {
+        "id": "C09",
+        "statement": "∀ {α : Type u_1} {G : Type u_5} [inst : NormedAddCommGroup G] [inst_1 : NormedSpace ℝ G] {m : MeasurableSpace α} {μ : MeasureTheory.Measure α} {f g : α → G}, MeasureTheory.Integrable f μ → MeasureTheory.Integrable g μ → ∫ (a : α), f a + g a ∂μ = ∫ (a : α), f a ∂μ + ∫ (a : α), g a ∂μ"
+      },
+      {
+        "id": "C10",
+        "statement": "∀ {α : Type u_1} {G : Type u_5} [inst : NormedAddCommGroup G] [inst_1 : NormedSpace ℝ G] {m : MeasurableSpace α} {μ : MeasureTheory.Measure α} {f g : α → G}, f =ᵐ[μ] g → ∫ (a : α), f a ∂μ = ∫ (a : α), g a ∂μ"
+      },
+      {
+        "id": "C11",
+        "statement": "∀ {α : Type u_1} {E : Type u_2} [inst : NormedAddCommGroup E] [inst_1 : NormedSpace ℝ E] {m : MeasurableSpace α} {μ : MeasureTheory.Measure α} [inst_2 : PartialOrder E] [IsOrderedAddMonoid E] [IsOrderedModule ℝ E] [ClosedIciTopology E] {f : α → E}, f ≤ᵐ[μ] 0 → ∫ (x : α), f x ∂μ ≤ 0"
+      },
+      {
+        "id": "C12",
+        "statement": "∀ {α : Type u_1} {m : MeasurableSpace α} {μ : MeasureTheory.Measure α} {f : α → ℝ}, 0 ≤ᵐ[μ] f → MeasureTheory.Integrable f μ → (∫ (x : α), f x ∂μ = 0 ↔ f =ᵐ[μ] 0)"
+      },
+      {
+        "id": "C13",
+        "statement": "∀ {α : Type u_1} {G : Type u_5} [inst : NormedAddCommGroup G] [inst_1 : NormedSpace ℝ G] {m : MeasurableSpace α} {μ : MeasureTheory.Measure α} (f : α → G), ∫ (a : α), -f a ∂μ = -∫ (a : α), f a ∂μ"
+      },
+      {
+        "id": "C14",
+        "statement": "∀ {α : Type u_1} {m : MeasurableSpace α} {μ : MeasureTheory.Measure α} {H : Type u_6} [inst : NormedAddCommGroup H] (f : ↥(MeasureTheory.Lp H 1 μ)), ‖f‖ = ∫ (a : α), ‖↑↑f a‖ ∂μ"
+      },
+      {
+        "id": "C15",
+        "statement": "∀ {α : Type u_1} {E : Type u_2} [inst : NormedAddCommGroup E] [inst_1 : NormedSpace ℝ E] [hE : CompleteSpace E] [inst_2 : MeasurableSpace α] [MeasurableSingletonClass α] (f : α → E) (a : α), ∫ (x : α), f x ∂MeasureTheory.Measure.dirac a = f a"
+      },
+      {
+        "id": "C16",
+        "statement": "∀ {α : Type u_1} {G : Type u_5} [inst : NormedAddCommGroup G] [inst_1 : NormedSpace ℝ G] {m : MeasurableSpace α} {μ ν : MeasureTheory.Measure α} {f : α → G}, MeasureTheory.Integrable f μ → MeasureTheory.Integrable f ν → ∫ (x : α), f x ∂(μ + ν) = ∫ (x : α), f x ∂μ + ∫ (x : α), f x ∂ν"
+      }
+    ],
+    "episode_id": "MLP4B_0007",
+    "schema_version": "lemma-portfolio.dependency-compression.v4",
+    "selection_budget": 3,
+    "source_project": "mathlib",
+    "targets": [
+      {
+        "id": "T01",
+        "statement": "∀ {α : Type u_1} {E : Type u_2} [inst : NormedAddCommGroup E] [inst_1 : NormedSpace ℝ E] {m : MeasurableSpace α} {μ : MeasureTheory.Measure α} [inst_2 : PartialOrder E] [IsOrderedAddMonoid E] [IsOrderedModule ℝ E] [ClosedIciTopology E] {f : α → E}, f ≤ 0 → ∫ (x : α), f x ∂μ ≤ 0"
+      },
+      {
+        "id": "T02",
+        "statement": "∀ {α : Type u_1} {G : Type u_5} [inst : NormedAddCommGroup G] [inst_1 : NormedSpace ℝ G] {m : MeasurableSpace α} {μ : MeasureTheory.Measure α} {f : α → G}, f =ᵐ[μ] 0 → ∫ (a : α), f a ∂μ = 0"
+      },
+      {
+        "id": "T03",
+        "statement": "∀ {α : Type u_1} {E : Type u_2} [inst : NormedAddCommGroup E] [inst_1 : NormedSpace ℝ E] {m : MeasurableSpace α} {μ : MeasureTheory.Measure α} [inst_2 : PartialOrder E] [IsOrderedAddMonoid E] [IsOrderedModule ℝ E] [ClosedIciTopology E] {f g : α → E}, 0 ≤ᵐ[μ] f → MeasureTheory.Integrable g μ → f ≤ᵐ[μ] g → ∫ (a : α), f a ∂μ ≤ ∫ (a : α), g a ∂μ"
+      },
+      {
+        "id": "T04",
+        "statement": "∀ {α : Type u_1} {G : Type u_5} [inst : NormedAddCommGroup G] [inst_1 : NormedSpace ℝ G] {m : MeasurableSpace α} {μ : MeasureTheory.Measure α} {f g : α → G}, MeasureTheory.Integrable f μ → MeasureTheory.Integrable g μ → ∫ (a : α), (f + g) a ∂μ = ∫ (a : α), f a ∂μ + ∫ (a : α), g a ∂μ"
+      },
+      {
+        "id": "T05",
+        "statement": "∀ {α : Type u_1} {G : Type u_5} [inst : NormedAddCommGroup G] [inst_1 : NormedSpace ℝ G] {m : MeasurableSpace α} {μ : MeasureTheory.Measure α} (f : α → G), ‖∫ (a : α), f a ∂μ‖ ≤ ∫ (a : α), ‖f a‖ ∂μ"
+      },
+      {
+        "id": "T06",
+        "statement": "∀ {α : Type u_1} {m0 : MeasurableSpace α} {μ : MeasureTheory.Measure α} {f : α → ℝ} {r : NNReal}, MeasureTheory.Integrable f μ → 0 ≤ ∫ (x : α), f x ∂μ → (∀ᵐ (ω : α) ∂μ, f ω ≤ ↑r) → MeasureTheory.eLpNorm f 1 μ ≤ 2 * μ Set.univ * ↑r"
+      },
+      {
+        "id": "T07",
+        "statement": "∀ {α : Type u_1} {E : Type u_2} [inst : NormedAddCommGroup E] [inst_1 : NormedSpace ℝ E] {m : MeasurableSpace α} {μ : MeasureTheory.Measure α} [hE : CompleteSpace E] [MeasureTheory.IsProbabilityMeasure μ] {f : α → E} {c : E}, (∀ᵐ (x : α) ∂μ, f x = c) → ∫ (x : α), f x ∂μ = c"
+      },
+      {
+        "id": "T08",
+        "statement": "∀ {α : Type u_1} {E : Type u_2} [inst : NormedAddCommGroup E] [inst_1 : NormedSpace ℝ E] [hE : CompleteSpace E] {mα : MeasurableSpace α} {f : α → E}, MeasureTheory.StronglyMeasurable f → ∀ (a : α) {s : Set α}, MeasurableSet s → ∀ [inst_2 : Decidable (a ∈ s)], ∫ (x : α) in s, f x ∂MeasureTheory.Measure.dirac a = if a ∈ s then f a else 0"
+      }
+    ],
+    "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+  },
+  {
+    "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+    "candidates": [
+      {
+        "id": "C01",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] {W : ℤ → R}, Function.Odd W → ∀ (a b : ℤ), -IsEllipticNet.atom W a b = IsEllipticNet.atom W b a"
+      },
+      {
+        "id": "C02",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (b c d : R) (k n : ℤ), complEDS b c d k (-n) = -complEDS b c d k n"
+      },
+      {
+        "id": "C03",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (b c d : R), preNormEDS b c d 2 = 1"
+      },
+      {
+        "id": "C04",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (b c d : R) (k : ℤ) (m : ℕ), complEDS' b c d k (2 * (m + 1)) = complEDS' b c d k (m + 1) * complEDS₂ b c d ((↑m + 1) * k)"
+      },
+      {
+        "id": "C05",
+        "statement": "∀ {R : Type u_1} {S : Type u_2} [inst : CommRing R] [inst_1 : CommRing S] {F : Type u_3} [inst_2 : FunLike F R S] [RingHomClass F R S] (f : F) (b c d : R) (n : ℤ), f (preNormEDS b c d n) = preNormEDS (f b) (f c) (f d) n"
+      },
+      {
+        "id": "C06",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (b c d : R), preNormEDS b c d 1 = 1"
+      },
+      {
+        "id": "C07",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (b c d : R) (m : ℕ), preNormEDS' b c d (2 * (m + 2) + 1) = (preNormEDS' b c d (m + 4) * preNormEDS' b c d (m + 2) ^ 3 * if Even m then b else 1) - preNormEDS' b c d (m + 1) * preNormEDS' b c d (m + 3) ^ 3 * if Even m then 1 else b"
+      },
+      {
+        "id": "C08",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (b c d : R), preNormEDS b c d 0 = 0"
+      },
+      {
+        "id": "C09",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (b c d : R), preNormEDS' b c d 4 = d"
+      },
+      {
+        "id": "C10",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (b c d : R), preNormEDS' b c d 1 = 1"
+      },
+      {
+        "id": "C11",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (b c d : R) (k : ℤ) (n : ℕ), complEDS b c d k ↑n = complEDS' b c d k n"
+      },
+      {
+        "id": "C12",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (W : ℤ → R) (a b : ℤ), IsEllipticNet.atom W a (-b) = IsEllipticNet.atom W a b"
+      },
+      {
+        "id": "C13",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (b c d : R), preNormEDS b c d 3 = c"
+      },
+      {
+        "id": "C14",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (W : ℤ → R) (p q r s : ℤ), IsEllipticNet.rel W p q r s = IsEllipticNet.atomRel W (2 * p + s) (2 * q + s) (2 * r + s) s"
+      },
+      {
+        "id": "C15",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (b c d : R), preNormEDS b c d 4 = d"
+      },
+      {
+        "id": "C16",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (b c d : R) (n : ℤ), preNormEDS b c d (-n) = -preNormEDS b c d n"
+      }
+    ],
+    "episode_id": "MLP4B_0008",
+    "schema_version": "lemma-portfolio.dependency-compression.v4",
+    "selection_budget": 3,
+    "source_project": "mathlib",
+    "targets": [
+      {
+        "id": "T01",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (b c d : R), complEDS₂ b c d 4 = c ^ 2 * preNormEDS (b ^ 4) c d 6 - preNormEDS (b ^ 4) c d 5 ^ 2"
+      },
+      {
+        "id": "T02",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] {W : ℤ → R}, Function.Odd W → ∀ (a b c : ℤ), IsEllipticNet.atomRel W a b a c = W a * W 0 * IsEllipticNet.atom W c b"
+      },
+      {
+        "id": "T03",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (b c d : R) (n : ℤ), normEDS b c d (-n) = -normEDS b c d n"
+      },
+      {
+        "id": "T04",
+        "statement": "∀ {R : Type u_1} {S : Type u_2} [inst : CommRing R] [inst_1 : CommRing S] {F : Type u_3} [inst_2 : FunLike F R S] [RingHomClass F R S] (f : F) (b c d : R) (n : ℤ), f (complEDS₂ b c d n) = complEDS₂ (f b) (f c) (f d) n"
+      },
+      {
+        "id": "T05",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (W : ℤ → R) (a b c d : ℤ), IsEllipticNet.atomRel W (2 * a) (2 * b) (2 * c) (2 * d) = IsEllipticNet.rel W (a - d) (b - d) (c - d) (2 * d)"
+      },
+      {
+        "id": "T06",
+        "statement": "∀ {R : Type u_1} {S : Type u_2} [inst : CommRing R] [inst_1 : CommRing S] {F : Type u_3} [inst_2 : FunLike F R S] [RingHomClass F R S] (f : F) (b c d : R) (n : ℤ), f (normEDS b c d n) = normEDS (f b) (f c) (f d) n"
+      },
+      {
+        "id": "T07",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (b c d : R), complEDS₂ b c d 0 = 2"
+      },
+      {
+        "id": "T08",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (b c d : R), normEDS b c d 3 = c"
+      }
+    ],
+    "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+  },
+  {
+    "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+    "candidates": [
+      {
+        "id": "C01",
+        "statement": "∀ {α : Type u} {β : Type u_1} [t : TopologicalSpace α] [inst : TopologicalSpace β] {f : α → β} {T : Set (Set β)}, Topology.IsInducing f → TopologicalSpace.IsTopologicalBasis T → TopologicalSpace.IsTopologicalBasis (Set.preimage f '' T)"
+      },
+      {
+        "id": "C02",
+        "statement": "∀ {α : Type u} [t : TopologicalSpace α] {b : Set (Set α)}, TopologicalSpace.IsTopologicalBasis b → ∀ {a : α} {u : Set α}, a ∈ u → IsOpen u → ∃ v ∈ b, a ∈ v ∧ v ⊆ u"
+      },
+      {
+        "id": "C03",
+        "statement": "∀ {α : Type u} [t : TopologicalSpace α] [SecondCountableTopology α] {ι : Type u_1} (s : ι → Set α), (∀ (i : ι), IsOpen (s i)) → ∃ T, T.Countable ∧ ⋃ i ∈ T, s i = ⋃ i, s i"
+      },
+      {
+        "id": "C04",
+        "statement": "∀ {α : Type u} [t : TopologicalSpace α] {b : Set (Set α)}, TopologicalSpace.IsTopologicalBasis b → ∀ {a : α}, (nhds a).HasBasis (fun t => t ∈ b ∧ a ∈ t) fun t => t"
+      },
+      {
+        "id": "C05",
+        "statement": "∀ {α : Type u} [t : TopologicalSpace α] {a : α} {s : Set α} {b : Set (Set α)}, TopologicalSpace.IsTopologicalBasis b → (s ∈ nhds a ↔ ∃ t ∈ b, a ∈ t ∧ t ⊆ s)"
+      },
+      {
+        "id": "C06",
+        "statement": "∀ {α : Type u} [t : TopologicalSpace α] {s : Set α}, s.Countable → TopologicalSpace.IsSeparable s"
+      },
+      {
+        "id": "C07",
+        "statement": "∀ {α : Type u} [t : TopologicalSpace α] {s : Set (Set α)}, TopologicalSpace.IsTopologicalBasis s → TopologicalSpace.IsTopologicalBasis (s \\ {∅})"
+      },
+      {
+        "id": "C08",
+        "statement": "∀ {α : Type u} [t : TopologicalSpace α] {s : Set (Set α)}, TopologicalSpace.IsTopologicalBasis s → t = TopologicalSpace.generateFrom s"
+      },
+      {
+        "id": "C09",
+        "statement": "∀ {α : Type u} [t : TopologicalSpace α] {s : Set (Set α)}, (∀ (a : α), (nhds a).HasBasis (fun t => t ∈ s ∧ a ∈ t) id) → TopologicalSpace.IsTopologicalBasis s"
+      },
+      {
+        "id": "C10",
+        "statement": "∀ {α : Type u} [t : TopologicalSpace α] {B : Set (Set α)}, TopologicalSpace.IsTopologicalBasis B → ∀ {u : Set α}, IsOpen u → u = ⋃₀ {s | s ∈ B ∧ s ⊆ u}"
+      },
+      {
+        "id": "C11",
+        "statement": "∀ (α : Type u) [t : TopologicalSpace α] [SecondCountableTopology α], ∃ b, b.Countable ∧ ∅ ∉ b ∧ TopologicalSpace.IsTopologicalBasis b"
+      },
+      {
+        "id": "C12",
+        "statement": "∀ (α : Type u) [t : TopologicalSpace α] [inst : SecondCountableTopology α], TopologicalSpace.IsTopologicalBasis (TopologicalSpace.countableBasis α)"
+      },
+      {
+        "id": "C13",
+        "statement": "∀ {α : Type u} [t : TopologicalSpace α] {s : Set (Set α)}, (∀ t₁ ∈ s, ∀ t₂ ∈ s, ∀ x ∈ t₁ ∩ t₂, ∃ t₃ ∈ s, x ∈ t₃ ∧ t₃ ⊆ t₁ ∩ t₂) → ⋃₀ s = Set.univ → t = TopologicalSpace.generateFrom s → TopologicalSpace.IsTopologicalBasis s"
+      },
+      {
+        "id": "C14",
+        "statement": "∀ {α : Type u} [t : TopologicalSpace α] {s : Set α} {b : Set (Set α)}, TopologicalSpace.IsTopologicalBasis b → (IsOpen s ↔ ∀ a ∈ s, ∃ t ∈ b, a ∈ t ∧ t ⊆ s)"
+      },
+      {
+        "id": "C15",
+        "statement": "∀ {α : Type u} [t : TopologicalSpace α] {s : Set (Set α)}, t = TopologicalSpace.generateFrom s → TopologicalSpace.IsTopologicalBasis ((fun f => ⋂₀ f) '' {f | f.Finite ∧ f ⊆ s})"
+      },
+      {
+        "id": "C16",
+        "statement": "∀ {α : Type u} [t : TopologicalSpace α] {s : Set (Set α)}, (∀ u ∈ s, IsOpen u) → (∀ (a : α) (u : Set α), a ∈ u → IsOpen u → ∃ v ∈ s, a ∈ v ∧ v ⊆ u) → TopologicalSpace.IsTopologicalBasis s"
+      }
+    ],
+    "episode_id": "MLP4B_0009",
+    "schema_version": "lemma-portfolio.dependency-compression.v4",
+    "selection_budget": 3,
+    "source_project": "mathlib",
+    "targets": [
+      {
+        "id": "T01",
+        "statement": "∀ (α : Type u) [t : TopologicalSpace α] [inst : SecondCountableTopology α], t = TopologicalSpace.generateFrom (TopologicalSpace.countableBasis α)"
+      },
+      {
+        "id": "T02",
+        "statement": "∀ (α : Type u) [t : TopologicalSpace α] [inst : SecondCountableTopology α], ∅ ∉ TopologicalSpace.countableBasis α"
+      },
+      {
+        "id": "T03",
+        "statement": "∀ {α : Type u} [t : TopologicalSpace α], TopologicalSpace.IsTopologicalBasis {U | IsOpen U}"
+      },
+      {
+        "id": "T04",
+        "statement": "∀ {α : Type u} [t : TopologicalSpace α] [SecondCountableTopology α] {ι : Type u_1} (I : Set ι) (s : ι → Set α), (∀ i ∈ I, IsOpen (s i)) → ∃ T ⊆ I, T.Countable ∧ ⋃ i ∈ T, s i = ⋃ i ∈ I, s i"
+      },
+      {
+        "id": "T05",
+        "statement": "∀ {α : Type u} [t : TopologicalSpace α] [SecondCountableTopology α] {t_1 : Set (Set α)}, TopologicalSpace.IsTopologicalBasis t_1 → ∀ {u : Set α}, IsOpen u → ∃ s ⊆ t_1, s.Countable ∧ u = ⋃ a ∈ s, a"
+      },
+      {
+        "id": "T06",
+        "statement": "∀ {α : Type u_1} [ts : TopologicalSpace α] [SecondCountableTopology α] {t : Set (Set α)}, ts = TopologicalSpace.generateFrom t → ∃ s ⊆ t, s.Countable ∧ ts = TopologicalSpace.generateFrom s"
+      },
+      {
+        "id": "T07",
+        "statement": "∀ {α : Type u} [t : TopologicalSpace α] {B B' : Set (Set α)}, TopologicalSpace.IsTopologicalBasis B → (∀ u ∈ B', IsOpen u) → (∀ u ∈ B, ∀ x ∈ u, ∃ v ∈ B', x ∈ v ∧ v ⊆ u) → TopologicalSpace.IsTopologicalBasis B'"
+      },
+      {
+        "id": "T08",
+        "statement": "∀ {ι : Type u_2} [Countable ι] {X : ι → Type u_3} {s : (i : ι) → Set (X i)} [inst : (i : ι) → TopologicalSpace (X i)], (∀ (i : ι), TopologicalSpace.IsSeparable (s i)) → TopologicalSpace.IsSeparable (Set.univ.pi s)"
+      }
+    ],
+    "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+  }
+]
+</episodes>

@@ -91,6 +91,76 @@ def check_hygiene() -> None:
                 raise RuntimeError(f"possible secret in {path.relative_to(ROOT)}")
 
 
+def check_prompt_packet() -> None:
+    """Verify exact prompt bytes and their closure over the released public rows."""
+
+    prompt_root = ROOT / "prompts"
+    manifest = prompt_root / "PROMPT_SHA256SUMS.txt"
+    declared: dict[str, str] = {}
+    for line in manifest.read_text(encoding="utf-8").splitlines():
+        expected, relative = line.split("  ", 1)
+        if relative in declared or relative.startswith("/") or ".." in Path(relative).parts:
+            raise RuntimeError(f"unsafe or duplicate prompt-manifest path: {relative}")
+        declared[relative] = expected
+    actual = {
+        path.relative_to(prompt_root).as_posix()
+        for directory in ("DIRECT_PROMPTS", "SOL_EXTRA_PROMPTS")
+        for path in (prompt_root / directory).glob("*.txt")
+    }
+    if set(declared) != actual:
+        raise RuntimeError("prompt checksum manifest does not cover the prompt packet exactly")
+    for relative, expected in declared.items():
+        if digest(prompt_root / relative) != expected:
+            raise RuntimeError(f"prompt hash mismatch: {relative}")
+
+    public_rows = [
+        json.loads(line)
+        for line in (ROOT / "data/test.public.jsonl").read_text(encoding="utf-8").splitlines()
+        if line.strip()
+    ]
+    direct_rows = []
+    for path in sorted((prompt_root / "DIRECT_PROMPTS").glob("*.txt")):
+        text = path.read_text(encoding="utf-8")
+        try:
+            payload = text.split("<episodes>\n", 1)[1].split("\n</episodes>", 1)[0]
+            rows = json.loads(payload)
+        except (IndexError, json.JSONDecodeError) as error:
+            raise RuntimeError(f"cannot parse episode payload in {path.name}") from error
+        if not isinstance(rows, list) or len(rows) != 5:
+            raise RuntimeError(f"direct prompt {path.name} does not contain five episodes")
+        direct_rows.extend(rows)
+    if direct_rows != public_rows:
+        raise RuntimeError("the twelve direct prompts differ from the 60 public rows")
+
+    structured_rows = []
+    for path in sorted((prompt_root / "SOL_EXTRA_PROMPTS").glob("*.txt")):
+        text = path.read_text(encoding="utf-8")
+        try:
+            payload = text.split("<episodes>\n", 1)[1].split("\n</episodes>", 1)[0]
+            rows = json.loads(payload)
+        except (IndexError, json.JSONDecodeError) as error:
+            raise RuntimeError(f"cannot parse episode payload in {path.name}") from error
+        if not isinstance(rows, list) or len(rows) != 5:
+            raise RuntimeError(f"structured prompt {path.name} does not contain five episodes")
+        structured_rows.extend(rows)
+    structured_ids = [row.get("episode_id") for row in structured_rows]
+    if len(structured_ids) != 20 or len(set(structured_ids)) != 20:
+        raise RuntimeError("the four structured prompts do not contain 20 unique episodes")
+    public_by_id = {row["episode_id"]: row for row in public_rows}
+    for row in structured_rows:
+        public_row = public_by_id.get(row.get("episode_id"))
+        if public_row is None:
+            raise RuntimeError("a structured prompt contains an unknown episode")
+        prompt_copy = dict(row)
+        public_copy = dict(public_row)
+        prompt_task = prompt_copy.pop("task", None)
+        public_copy.pop("task", None)
+        if prompt_copy != public_copy or not isinstance(prompt_task, str):
+            raise RuntimeError(
+                "a structured prompt row differs from the public row beyond its task"
+            )
+
+
 def regenerate_and_compare() -> None:
     with tempfile.TemporaryDirectory(prefix="lemma_portfolio_verify_") as temporary:
         output = Path(temporary)
@@ -126,6 +196,18 @@ def check_construction_tests() -> None:
     if completed.returncode:
         detail = (completed.stderr or completed.stdout)[-2000:]
         raise RuntimeError(f"construction tests failed:\n{detail}")
+
+
+def check_external_scorer_tests() -> None:
+    completed = subprocess.run(
+        [sys.executable, "-m", "unittest", "tests.test_score_predictions"],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+    )
+    if completed.returncode:
+        detail = (completed.stderr or completed.stdout)[-2000:]
+        raise RuntimeError(f"external prediction scorer tests failed:\n{detail}")
 
 
 def check_headlines() -> None:
@@ -182,7 +264,9 @@ def main() -> int:
         raise RuntimeError("Python 3.10 or newer is required")
     check_manifest()
     check_hygiene()
+    check_prompt_packet()
     check_construction_tests()
+    check_external_scorer_tests()
     regenerate_and_compare()
     check_headlines()
     report = json.loads((ROOT / "results/scores.json").read_text(encoding="utf-8"))

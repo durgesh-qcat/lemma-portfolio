@@ -9,6 +9,7 @@ __pycache__/
 *.log
 *.out
 *.synctex.gz
+paper/source/*.pdf
 .env
 .env.*
 auth.json
@@ -16,3 +17,4 @@ auth.json
 *secret*
 .local_runtime_cache/
 verification_output/
+scratch_runs/

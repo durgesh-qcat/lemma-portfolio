@@ -1,0 +1,14 @@
+{
+  "schema_version": "lemma-portfolio.predictions.v1",
+  "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+  "system_id": "replace_with_your_model_id",
+  "display_label": "Replace with your model name",
+  "notes": "Illustrative five-episode shard. Replace every selection and supply all 60 episodes for a complete evaluation.",
+  "predictions": {
+    "MLP4B_0000": ["C01", "C02", "C03"],
+    "MLP4B_0001": ["C01", "C02", "C03"],
+    "MLP4B_0002": ["C01", "C02", "C03"],
+    "MLP4B_0003": ["C01", "C02", "C03"],
+    "MLP4B_0004": ["C01", "C02", "C03"]
+  }
+}

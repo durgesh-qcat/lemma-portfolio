@@ -1,0 +1,553 @@
+You are solving five unreleased LemmaPortfolio benchmark episodes independently.
+
+For each episode, each target t has a hidden set D(t): the displayed candidate declarations used as direct theorem dependencies in that target's historical elaborated source. For a portfolio S, F(S) is the number of targets t for which D(t) intersects S. Select exactly 3 distinct candidate IDs per episode to maximize F(S). This is static dependency-portfolio compression, not a claim about causal usefulness in a new proof.
+
+Use only the supplied text. Do not use web search, tools, files, a repository, theorem proving, compiler feedback, memory, prior chats, follow-up messages, or answers from another episode. Treat every episode independently.
+
+Return one JSON object and no prose. It must have exactly one key, "predictions". Its value must be an object with exactly these episode keys: MLP4B_0055, MLP4B_0056, MLP4B_0057, MLP4B_0058, MLP4B_0059. Each value must be an array of exactly 3 distinct candidate IDs copied from that episode. Candidate order does not matter.
+
+Episode JSON array follows.
+<episodes>
+[
+  {
+    "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+    "candidates": [
+      {
+        "id": "C01",
+        "statement": "∀ {C : Type u_1} [inst : CategoryTheory.Category.{v_1, u_1} C] [inst_1 : CategoryTheory.Limits.HasZeroMorphisms C] {S : CategoryTheory.ShortComplex C} (h : S.LeftHomologyData) {A : C} (k : A ⟶ S.X₂) (hk : CategoryTheory.CategoryStruct.comp k S.g = 0), CategoryTheory.CategoryStruct.comp (h.liftK k hk) h.i = k"
+      },
+      {
+        "id": "C02",
+        "statement": "∀ {C : Type u_1} [inst : CategoryTheory.Category.{v_1, u_1} C] [inst_1 : CategoryTheory.Limits.HasZeroMorphisms C] {S₁ S₂ S₃ : CategoryTheory.ShortComplex C} (φ₁ : S₁ ⟶ S₂) (φ₂ : S₂ ⟶ S₃) (h₁ : S₁.LeftHomologyData) (h₂ : S₂.LeftHomologyData) (h₃ : S₃.LeftHomologyData), CategoryTheory.ShortComplex.cyclesMap' (CategoryTheory.CategoryStruct.comp φ₁ φ₂) h₁ h₃ = CategoryTheory.CategoryStruct.comp (CategoryTheory.ShortComplex.cyclesMap' φ₁ h₁ h₂) (CategoryTheory.ShortComplex.cyclesMap' φ₂ h₂ h₃)"
+      },
+      {
+        "id": "C03",
+        "statement": "∀ {C : Type u_1} [inst : CategoryTheory.Category.{v_1, u_1} C] [inst_1 : CategoryTheory.Limits.HasZeroMorphisms C] {S : CategoryTheory.ShortComplex C} (h : S.LeftHomologyData) [inst_2 : S.HasLeftHomology], CategoryTheory.CategoryStruct.comp h.cyclesIso.hom h.i = S.iCycles"
+      },
+      {
+        "id": "C04",
+        "statement": "∀ {C : Type u_1} [inst : CategoryTheory.Category.{v_1, u_1} C] [inst_1 : CategoryTheory.Limits.HasZeroMorphisms C] {S₁ S₂ : CategoryTheory.ShortComplex C} (φ : S₁ ⟶ S₂) (h₁ : S₁.LeftHomologyData) (h₂ : S₂.LeftHomologyData), CategoryTheory.CategoryStruct.comp h₁.f' (CategoryTheory.ShortComplex.cyclesMap' φ h₁ h₂) = CategoryTheory.CategoryStruct.comp φ.τ₁ h₂.f'"
+      },
+      {
+        "id": "C05",
+        "statement": "∀ {C : Type u_1} [inst : CategoryTheory.Category.{v_1, u_1} C] [inst_1 : CategoryTheory.Limits.HasZeroMorphisms C] {S₁ S₂ : CategoryTheory.ShortComplex C} (φ : S₁ ⟶ S₂) (h₁ : S₁.LeftHomologyData) (h₂ : S₂.LeftHomologyData), CategoryTheory.CategoryStruct.comp (CategoryTheory.ShortComplex.cyclesMap' φ h₁ h₂) h₂.i = CategoryTheory.CategoryStruct.comp h₁.i φ.τ₂"
+      },
+      {
+        "id": "C06",
+        "statement": "∀ {C : Type u_1} [inst : CategoryTheory.Category.{v_1, u_1} C] [inst_1 : CategoryTheory.Limits.HasZeroMorphisms C] (S : CategoryTheory.ShortComplex C) {A : C} (k : A ⟶ S.X₂) (hk : CategoryTheory.CategoryStruct.comp k S.g = 0) [inst_2 : S.HasLeftHomology], CategoryTheory.CategoryStruct.comp (S.liftCycles k hk) S.iCycles = k"
+      },
+      {
+        "id": "C07",
+        "statement": "∀ {C : Type u_1} [inst : CategoryTheory.Category.{v_1, u_1} C] [inst_1 : CategoryTheory.Limits.HasZeroMorphisms C] {S : CategoryTheory.ShortComplex C} (h : S.LeftHomologyData), CategoryTheory.CategoryStruct.comp h.f' h.i = S.f"
+      },
+      {
+        "id": "C08",
+        "statement": "∀ {C : Type u_1} [inst : CategoryTheory.Category.{v_1, u_1} C] [inst_1 : CategoryTheory.Limits.HasZeroMorphisms C] {S : CategoryTheory.ShortComplex C} (self : S.LeftHomologyData), CategoryTheory.CategoryStruct.comp self.i S.g = 0"
+      },
+      {
+        "id": "C09",
+        "statement": "∀ {C : Type u_1} [inst : CategoryTheory.Category.{v_1, u_1} C] [inst_1 : CategoryTheory.Limits.HasZeroMorphisms C] {S₁ S₂ : CategoryTheory.ShortComplex C} {φ : S₁ ⟶ S₂} {h₁ : S₁.LeftHomologyData} {h₂ : S₂.LeftHomologyData} (self : CategoryTheory.ShortComplex.LeftHomologyMapData φ h₁ h₂), CategoryTheory.CategoryStruct.comp self.φK h₂.i = CategoryTheory.CategoryStruct.comp h₁.i φ.τ₂"
+      },
+      {
+        "id": "C10",
+        "statement": "∀ {C : Type u_1} [inst : CategoryTheory.Category.{v_1, u_1} C] [inst_1 : CategoryTheory.Limits.HasZeroMorphisms C] {S₁ S₂ : CategoryTheory.ShortComplex C} {φ : S₁ ⟶ S₂} {h₁ : S₁.LeftHomologyData} {h₂ : S₂.LeftHomologyData} (γ : CategoryTheory.ShortComplex.LeftHomologyMapData φ h₁ h₂), CategoryTheory.ShortComplex.leftHomologyMap' φ h₁ h₂ = γ.φH"
+      },
+      {
+        "id": "C11",
+        "statement": "∀ {C : Type u_1} [inst : CategoryTheory.Category.{v_1, u_1} C] [inst_1 : CategoryTheory.Limits.HasZeroMorphisms C] {S : CategoryTheory.ShortComplex C} (h : S.LeftHomologyData), CategoryTheory.CategoryStruct.comp h.f' h.π = 0"
+      },
+      {
+        "id": "C12",
+        "statement": "∀ {C : Type u_1} [inst : CategoryTheory.Category.{v_1, u_1} C] [inst_1 : CategoryTheory.Limits.HasZeroMorphisms C] (S : CategoryTheory.ShortComplex C) [inst_2 : S.HasLeftHomology], CategoryTheory.CategoryStruct.comp S.iCycles S.g = 0"
+      },
+      {
+        "id": "C13",
+        "statement": "∀ {C : Type u_1} [inst : CategoryTheory.Category.{v_1, u_1} C] [inst_1 : CategoryTheory.Limits.HasZeroMorphisms C] {S₁ S₂ : CategoryTheory.ShortComplex C} {φ : S₁ ⟶ S₂} {h₁ : S₁.LeftHomologyData} {h₂ : S₂.LeftHomologyData} (self : CategoryTheory.ShortComplex.LeftHomologyMapData φ h₁ h₂), CategoryTheory.CategoryStruct.comp h₁.π self.φH = CategoryTheory.CategoryStruct.comp self.φK h₂.π"
+      },
+      {
+        "id": "C14",
+        "statement": "∀ {C : Type u_1} [inst : CategoryTheory.Category.{v_1, u_1} C] [inst_1 : CategoryTheory.Limits.HasZeroMorphisms C] {S₁ S₂ : CategoryTheory.ShortComplex C} {φ : S₁ ⟶ S₂} {h₁ : S₁.LeftHomologyData} {h₂ : S₂.LeftHomologyData} (γ : CategoryTheory.ShortComplex.LeftHomologyMapData φ h₁ h₂), CategoryTheory.ShortComplex.cyclesMap' φ h₁ h₂ = γ.φK"
+      },
+      {
+        "id": "C15",
+        "statement": "∀ {C : Type u_1} [inst : CategoryTheory.Category.{v_1, u_1} C] [inst_1 : CategoryTheory.Limits.HasZeroMorphisms C] {S : CategoryTheory.ShortComplex C} (h : S.LeftHomologyData) [inst_2 : S.HasLeftHomology], CategoryTheory.CategoryStruct.comp S.leftHomologyπ h.leftHomologyIso.hom = CategoryTheory.CategoryStruct.comp h.cyclesIso.hom h.π"
+      },
+      {
+        "id": "C16",
+        "statement": "∀ {C : Type u_1} [inst : CategoryTheory.Category.{v_1, u_1} C] [inst_1 : CategoryTheory.Limits.HasZeroMorphisms C] {S₁ S₂ S₃ : CategoryTheory.ShortComplex C} (φ₁ : S₁ ⟶ S₂) (φ₂ : S₂ ⟶ S₃) (h₁ : S₁.LeftHomologyData) (h₂ : S₂.LeftHomologyData) (h₃ : S₃.LeftHomologyData), CategoryTheory.ShortComplex.leftHomologyMap' (CategoryTheory.CategoryStruct.comp φ₁ φ₂) h₁ h₃ = CategoryTheory.CategoryStruct.comp (CategoryTheory.ShortComplex.leftHomologyMap' φ₁ h₁ h₂) (CategoryTheory.ShortComplex.leftHomologyMap' φ₂ h₂ h₃)"
+      }
+    ],
+    "episode_id": "MLP4B_0055",
+    "schema_version": "lemma-portfolio.dependency-compression.v4",
+    "selection_budget": 3,
+    "source_project": "mathlib",
+    "targets": [
+      {
+        "id": "T01",
+        "statement": "∀ {C : Type u_1} [inst : CategoryTheory.Category.{v_1, u_1} C] [inst_1 : CategoryTheory.Limits.HasZeroMorphisms C] {S₁ S₂ : CategoryTheory.ShortComplex C} (φ : S₁ ⟶ S₂) (h : S₂.LeftHomologyData) [inst_2 : CategoryTheory.Epi φ.τ₁] [inst_3 : CategoryTheory.IsIso φ.τ₂] [inst_4 : CategoryTheory.Mono φ.τ₃], (CategoryTheory.ShortComplex.LeftHomologyData.ofEpiOfIsIsoOfMono' φ h).f' = CategoryTheory.CategoryStruct.comp φ.τ₁ h.f'"
+      },
+      {
+        "id": "T02",
+        "statement": "∀ {C : Type u_1} [inst : CategoryTheory.Category.{v_1, u_1} C] [inst_1 : CategoryTheory.Limits.HasZeroMorphisms C] (S : CategoryTheory.ShortComplex C) [inst_2 : S.HasLeftHomology] {kf : CategoryTheory.Limits.KernelFork S.g} (hkf : CategoryTheory.Limits.IsLimit kf), CategoryTheory.CategoryStruct.comp (S.isoCyclesOfIsLimit hkf).inv (CategoryTheory.Limits.Fork.ι kf) = S.iCycles"
+      },
+      {
+        "id": "T03",
+        "statement": "∀ {C : Type u_1} [inst : CategoryTheory.Category.{v_1, u_1} C] [inst_1 : CategoryTheory.Limits.HasZeroMorphisms C] {S₁ S₂ : CategoryTheory.ShortComplex C} (φ : S₁ ⟶ S₂), CategoryTheory.IsIso φ.τ₂ → CategoryTheory.Mono φ.τ₃ → ∀ (h₁ : S₁.LeftHomologyData) (h₂ : S₂.LeftHomologyData), CategoryTheory.IsIso (CategoryTheory.ShortComplex.cyclesMap' φ h₁ h₂)"
+      },
+      {
+        "id": "T04",
+        "statement": "∀ {C : Type u_1} [inst : CategoryTheory.Category.{v_1, u_1} C] [inst_1 : CategoryTheory.Limits.HasZeroMorphisms C] (S : CategoryTheory.ShortComplex C) (hf : S.f = 0) (c : CategoryTheory.Limits.KernelFork S.g) (hc : CategoryTheory.Limits.IsLimit c), (CategoryTheory.ShortComplex.LeftHomologyData.ofIsLimitKernelFork S hf c hc).f' = 0"
+      },
+      {
+        "id": "T05",
+        "statement": "∀ {C : Type u_1} [inst : CategoryTheory.Category.{v_1, u_1} C] [inst_1 : CategoryTheory.Limits.HasZeroMorphisms C] (S : CategoryTheory.ShortComplex C) {A : C} (k : A ⟶ S.X₂) (hk : CategoryTheory.CategoryStruct.comp k S.g = 0) [inst_2 : S.HasLeftHomology] {Z : C} (h : S.X₂ ⟶ Z), CategoryTheory.CategoryStruct.comp (S.liftCycles k hk) (CategoryTheory.CategoryStruct.comp S.iCycles h) = CategoryTheory.CategoryStruct.comp k h"
+      },
+      {
+        "id": "T06",
+        "statement": "∀ {C : Type u_1} [inst : CategoryTheory.Category.{v_1, u_1} C] [inst_1 : CategoryTheory.Limits.HasZeroMorphisms C] {S₁ S₂ : CategoryTheory.ShortComplex C} [inst_2 : S₁.HasLeftHomology] [inst_3 : S₂.HasLeftHomology] (φ : S₁ ⟶ S₂), CategoryTheory.CategoryStruct.comp (CategoryTheory.ShortComplex.cyclesMap φ) S₂.iCycles = CategoryTheory.CategoryStruct.comp S₁.iCycles φ.τ₂"
+      },
+      {
+        "id": "T07",
+        "statement": "∀ {C : Type u_1} [inst : CategoryTheory.Category.{v_1, u_1} C] [inst_1 : CategoryTheory.Limits.HasZeroMorphisms C] {S : CategoryTheory.ShortComplex C} (h : S.LeftHomologyData) {A : C} (k : A ⟶ S.X₂) (hk : CategoryTheory.CategoryStruct.comp k S.g = 0) [inst_2 : S.HasLeftHomology], CategoryTheory.CategoryStruct.comp (S.liftCycles k hk) h.cyclesIso.hom = h.liftK k hk"
+      },
+      {
+        "id": "T08",
+        "statement": "∀ {C : Type u_1} [inst : CategoryTheory.Category.{v_1, u_1} C] [inst_1 : CategoryTheory.Limits.HasZeroMorphisms C] {S₁ S₂ S₃ : CategoryTheory.ShortComplex C} [inst_2 : S₁.HasLeftHomology] [inst_3 : S₂.HasLeftHomology] [inst_4 : S₃.HasLeftHomology] (φ₁ : S₁ ⟶ S₂) (φ₂ : S₂ ⟶ S₃), CategoryTheory.ShortComplex.cyclesMap (CategoryTheory.CategoryStruct.comp φ₁ φ₂) = CategoryTheory.CategoryStruct.comp (CategoryTheory.ShortComplex.cyclesMap φ₁) (CategoryTheory.ShortComplex.cyclesMap φ₂)"
+      }
+    ],
+    "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+  },
+  {
+    "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+    "candidates": [
+      {
+        "id": "C01",
+        "statement": "∀ {R : Type u_1} {M : Type u_5} [inst : CommSemiring R] [inst_1 : AddCommMonoid M] [inst_2 : Module R M] {I₁ : R →+* R} [inst_3 : LE R] {B : M →ₛₗ[I₁] M →ₗ[R] R}, B.IsPosSemidef → B.IsNonneg"
+      },
+      {
+        "id": "C02",
+        "statement": "∀ {R : Type u_1} {R₁ : Type u_2} {M : Type u_5} {M₁ : Type u_6} [inst : CommSemiring R] [inst_1 : AddCommMonoid M] [inst_2 : Module R M] [inst_3 : CommSemiring R₁] [inst_4 : AddCommMonoid M₁] [inst_5 : Module R₁ M₁] {I₁ I₂ : R₁ →+* R} {B : M₁ →ₛₗ[I₁] M₁ →ₛₗ[I₂] M}, B.IsRefl → B.flip.ker = B.ker"
+      },
+      {
+        "id": "C03",
+        "statement": "∀ {R : Type u_1} {M : Type u_5} [inst : CommSemiring R] [inst_1 : AddCommMonoid M] [inst_2 : Module R M] {I : R →+* R} {B : M →ₛₗ[I] M →ₗ[R] R}, B.IsSymm → ∀ (x y : M), I ((B x) y) = (B y) x"
+      },
+      {
+        "id": "C04",
+        "statement": "∀ {R : Type u_1} {M : Type u_5} [inst : CommRing R] [inst_1 : LinearOrder R] [IsStrictOrderedRing R] [inst_3 : AddCommGroup M] [inst_4 : Module R M] (B : LinearMap.BilinForm R M), (∀ (x : M), 0 ≤ (B x) x) → LinearMap.IsSymm B → ∀ {x : M}, (B x) x = 0 ↔ x ∈ LinearMap.ker B"
+      },
+      {
+        "id": "C05",
+        "statement": "∀ {R : Type u_1} {R₁ : Type u_2} {R₂ : Type u_3} {M : Type u_5} {M₁ : Type u_6} {M₂ : Type u_7} [inst : CommSemiring R] [inst_1 : AddCommMonoid M] [inst_2 : Module R M] [inst_3 : CommSemiring R₁] [inst_4 : AddCommMonoid M₁] [inst_5 : Module R₁ M₁] [inst_6 : CommSemiring R₂] [inst_7 : AddCommMonoid M₂] [inst_8 : Module R₂ M₂] {I₁ : R₁ →+* R} {I₂ : R₂ →+* R} {B : M₁ →ₛₗ[I₁] M₂ →ₛₗ[I₂] M}, B.flip.SeparatingRight ↔ B.SeparatingLeft"
+      },
+      {
+        "id": "C06",
+        "statement": "∀ {R : Type u_1} {R₁ : Type u_2} {M : Type u_5} {M₁ : Type u_6} [inst : CommSemiring R] [inst_1 : AddCommMonoid M] [inst_2 : Module R M] [inst_3 : CommSemiring R₁] [inst_4 : AddCommMonoid M₁] [inst_5 : Module R₁ M₁] {I₁ I₂ : R₁ →+* R} {B : M₁ →ₛₗ[I₁] M₁ →ₛₗ[I₂] M}, B.IsRefl → (B.ker = ⊥ ↔ B.flip.ker = ⊥)"
+      },
+      {
+        "id": "C07",
+        "statement": "∀ {R : Type u_1} {M : Type u_5} {M₁ : Type u_6} [inst : CommRing R] [inst_1 : AddCommGroup M] [inst_2 : Module R M] [inst_3 : AddCommGroup M₁] [inst_4 : Module R M₁] {B : M →ₗ[R] M →ₗ[R] M₁}, B.IsRefl → (B.Nondegenerate ↔ B.SeparatingLeft)"
+      },
+      {
+        "id": "C08",
+        "statement": "∀ {R : Type u_1} {M : Type u_5} [inst : CommRing R] [inst_1 : LinearOrder R] [IsStrictOrderedRing R] [inst_3 : AddCommGroup M] [inst_4 : Module R M] (B : LinearMap.BilinForm R M), (∀ (x : M), 0 ≤ (B x) x) → ∀ (x y : M), (B x) y * (B y) x ≤ (B x) x * (B y) y"
+      },
+      {
+        "id": "C09",
+        "statement": "∀ {R : Type u_1} {M : Type u_5} [inst : CommSemiring R] [inst_1 : AddCommMonoid M] [inst_2 : Module R M] {I : R →+* R} {B : M →ₛₗ[I] M →ₗ[R] R}, (∀ (x y : M), I ((B x) y) = (B y) x) → B.IsSymm"
+      },
+      {
+        "id": "C10",
+        "statement": "∀ {R : Type u_1} {M : Type u_5} [inst : CommSemiring R] [inst_1 : AddCommMonoid M] [inst_2 : Module R M] {I₁ : R →+* R} [inst_3 : LE R] {B : M →ₛₗ[I₁] M →ₗ[R] R}, B.IsSymm → B.IsNonneg → B.IsPosSemidef"
+      },
+      {
+        "id": "C11",
+        "statement": "∀ {R : Type u_1} {M : Type u_5} [inst : CommSemiring R] [inst_1 : AddCommMonoid M] [inst_2 : Module R M] {I₁ I₂ : R →+* R} [inst_3 : LE R] {B : M →ₛₗ[I₁] M →ₛₗ[I₂] R}, (∀ (x : M), 0 ≤ (B x) x) → B.IsNonneg"
+      },
+      {
+        "id": "C12",
+        "statement": "∀ {R : Type u_1} {M : Type u_5} [inst : CommSemiring R] [inst_1 : AddCommMonoid M] [inst_2 : Module R M] {I₁ I₂ : R →+* R} [inst_3 : LE R] {B : M →ₛₗ[I₁] M →ₛₗ[I₂] R}, B.IsNonneg → ∀ (x : M), 0 ≤ (B x) x"
+      },
+      {
+        "id": "C13",
+        "statement": "∀ {R : Type u_1} {R₁ : Type u_2} {M : Type u_5} {M₁ : Type u_6} [inst : CommSemiring R] [inst_1 : AddCommMonoid M] [inst_2 : Module R M] [inst_3 : CommSemiring R₁] [inst_4 : AddCommMonoid M₁] [inst_5 : Module R₁ M₁] {I₁ I₂ : R₁ →+* R} {B : M₁ →ₛₗ[I₁] M₁ →ₛₗ[I₂] M}, B.IsRefl → ∀ {x y : M₁}, (B x) y = 0 ↔ (B y) x = 0"
+      },
+      {
+        "id": "C14",
+        "statement": "∀ {R : Type u_1} {M : Type u_5} {Mₗ₁ : Type u_9} {Mₗ₁' : Type u_10} {Mₗ₂ : Type u_11} {Mₗ₂' : Type u_12} [inst : CommSemiring R] [inst_1 : AddCommMonoid M] [inst_2 : Module R M] [inst_3 : AddCommMonoid Mₗ₁] [inst_4 : AddCommMonoid Mₗ₂] [inst_5 : AddCommMonoid Mₗ₁'] [inst_6 : AddCommMonoid Mₗ₂'] [inst_7 : Module R Mₗ₁] [inst_8 : Module R Mₗ₂] [inst_9 : Module R Mₗ₁'] [inst_10 : Module R Mₗ₂'] {B : Mₗ₁ →ₗ[R] Mₗ₂ →ₗ[R] M} (e₁ : Mₗ₁ ≃ₗ[R] Mₗ₁') (e₂ : Mₗ₂ ≃ₗ[R] Mₗ₂'), ((e₁.arrowCongr (e₂.arrowCongr (LinearEquiv.refl R M))) B).SeparatingLeft ↔ B.SeparatingLeft"
+      },
+      {
+        "id": "C15",
+        "statement": "∀ {R : Type u_1} {R₁ : Type u_2} {R₂ : Type u_3} {M : Type u_5} {M₁ : Type u_6} {M₂ : Type u_7} [inst : CommSemiring R] [inst_1 : AddCommMonoid M] [inst_2 : Module R M] [inst_3 : CommSemiring R₁] [inst_4 : AddCommMonoid M₁] [inst_5 : Module R₁ M₁] [inst_6 : CommSemiring R₂] [inst_7 : AddCommMonoid M₂] [inst_8 : Module R₂ M₂] {I₁ : R₁ →+* R} {I₂ : R₂ →+* R} {B : M₁ →ₛₗ[I₁] M₂ →ₛₗ[I₂] M}, B.SeparatingRight ↔ B.flip.ker = ⊥"
+      },
+      {
+        "id": "C16",
+        "statement": "∀ {R : Type u_1} {R₁ : Type u_2} {R₂ : Type u_3} {M : Type u_5} {M₁ : Type u_6} {M₂ : Type u_7} [inst : CommSemiring R] [inst_1 : AddCommMonoid M] [inst_2 : Module R M] [inst_3 : CommSemiring R₁] [inst_4 : AddCommMonoid M₁] [inst_5 : Module R₁ M₁] [inst_6 : CommSemiring R₂] [inst_7 : AddCommMonoid M₂] [inst_8 : Module R₂ M₂] {I₁ : R₁ →+* R} {I₂ : R₂ →+* R} {B : M₁ →ₛₗ[I₁] M₂ →ₛₗ[I₂] M}, B.flip.SeparatingLeft ↔ B.SeparatingRight"
+      }
+    ],
+    "episode_id": "MLP4B_0056",
+    "schema_version": "lemma-portfolio.dependency-compression.v4",
+    "selection_budget": 3,
+    "source_project": "mathlib",
+    "targets": [
+      {
+        "id": "T01",
+        "statement": "∀ {R : Type u_1} {R₁ : Type u_2} {R₂ : Type u_3} {M : Type u_5} {M₁ : Type u_6} {M₂ : Type u_7} [inst : CommSemiring R] [inst_1 : AddCommMonoid M] [inst_2 : Module R M] [inst_3 : CommSemiring R₁] [inst_4 : AddCommMonoid M₁] [inst_5 : Module R₁ M₁] [inst_6 : CommSemiring R₂] [inst_7 : AddCommMonoid M₂] [inst_8 : Module R₂ M₂] {I₁ : R₁ →+* R} {I₂ : R₂ →+* R} {B : M₁ →ₛₗ[I₁] M₂ →ₛₗ[I₂] M}, B.flip.Nondegenerate ↔ B.Nondegenerate"
+      },
+      {
+        "id": "T02",
+        "statement": "∀ {R : Type u_1} {M : Type u_5} [inst : CommSemiring R] [inst_1 : AddCommMonoid M] [inst_2 : Module R M] {I : R →+* R} {B : M →ₛₗ[I] M →ₗ[R] R}, B.IsSymm → ∀ (p : Submodule R M), (B.domRestrict₁₂ p p).IsSymm"
+      },
+      {
+        "id": "T03",
+        "statement": "∀ {R : Type u_1} {R₁ : Type u_2} {M : Type u_5} {M₁ : Type u_6} [inst : CommSemiring R] [inst_1 : AddCommGroup M] [inst_2 : Module R M] [inst_3 : CommSemiring R₁] [inst_4 : AddCommMonoid M₁] [inst_5 : Module R₁ M₁] {I₁ I₂ : R₁ →+* R} {B : M₁ →ₛₗ[I₁] M₁ →ₛₗ[I₂] M}, B.IsAlt → ∀ {x y : M₁}, (B x) y = 0 ↔ (B y) x = 0"
+      },
+      {
+        "id": "T04",
+        "statement": "∀ {R : Type u_1} {M : Type u_5} [inst : CommRing R] [inst_1 : LinearOrder R] [IsStrictOrderedRing R] [inst_3 : AddCommGroup M] [inst_4 : Module R M] (B : LinearMap.BilinForm R M), (∀ (x : M), 0 ≤ (B x) x) → LinearMap.IsSymm B → ∀ (x y : M), (B x) y ^ 2 ≤ (B x) x * (B y) y"
+      },
+      {
+        "id": "T05",
+        "statement": "∀ {R : Type u_1} {M : Type u_5} {Mₗ₁ : Type u_9} {Mₗ₁' : Type u_10} {Mₗ₂ : Type u_11} {Mₗ₂' : Type u_12} [inst : CommSemiring R] [inst_1 : AddCommMonoid M] [inst_2 : Module R M] [inst_3 : AddCommMonoid Mₗ₁] [inst_4 : AddCommMonoid Mₗ₂] [inst_5 : AddCommMonoid Mₗ₁'] [inst_6 : AddCommMonoid Mₗ₂'] [inst_7 : Module R Mₗ₁] [inst_8 : Module R Mₗ₂] [inst_9 : Module R Mₗ₁'] [inst_10 : Module R Mₗ₂'] {B : Mₗ₁ →ₗ[R] Mₗ₂ →ₗ[R] M} (e₁ : Mₗ₁ ≃ₗ[R] Mₗ₁') (e₂ : Mₗ₂ ≃ₗ[R] Mₗ₂'), ((e₁.arrowCongr (e₂.arrowCongr (LinearEquiv.refl R M))) B).SeparatingRight ↔ B.SeparatingRight"
+      },
+      {
+        "id": "T06",
+        "statement": "∀ {R : Type u_1} {M : Type u_5} [inst : CommSemiring R] [inst_1 : AddCommMonoid M] [inst_2 : Module R M] {I : R →+* R} {B : M →ₛₗ[I] M →ₗ[R] R}, B.IsSymm ↔ ∀ (x y : M), I ((B x) y) = (B y) x"
+      },
+      {
+        "id": "T07",
+        "statement": "∀ {n : Type u_19} {R : Type u_20} {M : Type u_21} {M₁ : Type u_22} [inst : CommSemiring R] [inst_1 : AddCommMonoid M] [inst_2 : AddCommMonoid M₁] [inst_3 : Module R M] [inst_4 : Module R M₁] {I I' : R →+* R} {B : M →ₛₗ[I] M →ₛₗ[I'] M₁} [Nontrivial R] {v : Module.Basis n R M}, B.IsOrthoᵢ ⇑v → B.SeparatingRight → ∀ (i : n), (B (v i)) (v i) ≠ 0"
+      },
+      {
+        "id": "T08",
+        "statement": "∀ {R : Type u_1} {M : Type u_5} [inst : CommRing R] [inst_1 : LinearOrder R] [IsStrictOrderedRing R] [inst_3 : AddCommGroup M] [inst_4 : Module R M] (B : LinearMap.BilinForm R M) [Module.IsTorsionFree R M], (∀ (x : M), x ≠ 0 → 0 < (B x) x) → ∀ (x y : M), (B x) y * (B y) x < (B x) x * (B y) y ↔ LinearIndependent R ![x, y]"
+      }
+    ],
+    "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+  },
+  {
+    "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+    "candidates": [
+      {
+        "id": "C01",
+        "statement": "∀ {M : Type u_1} [inst : CommMonoid M] {p : ℕ} (f : Perfection M p) (n : ℕ), (Perfection.coeffMonoidHom M p (n + 1)) ((powMonoidHom p) f) = (Perfection.coeffMonoidHom M p n) f"
+      },
+      {
+        "id": "C02",
+        "statement": "∀ {K : Type u₁} [inst : Field K] {v : Valuation K NNReal} {O : Type u₂} [inst_1 : CommRing O] [inst_2 : Algebra O K] {p : ℕ}, ModP.preVal K v O p 0 = 0"
+      },
+      {
+        "id": "C03",
+        "statement": "∀ {R : Type u_1} [inst : CommSemiring R] {p : ℕ} [hp : Fact (Nat.Prime p)] [inst_1 : CharP R p] {f : Perfection R p} {n : ℕ}, (Perfection.coeff R p n) f ≠ 0 → ∀ (k : ℕ), (Perfection.coeff R p (n + k)) f ≠ 0"
+      },
+      {
+        "id": "C04",
+        "statement": "∀ {K : Type u₁} [inst : Field K] {v : Valuation K NNReal} {O : Type u₂} [inst_1 : CommRing O] [inst_2 : Algebra O K], v.Integers O → ∀ {p : ℕ} [inst_3 : Fact (Nat.Prime p)] [inst_4 : Fact ¬IsUnit ↑p] {f : PreTilt O p} {n : ℕ}, (PreTilt.coeff n) f ≠ 0 → PreTilt.valAux K v O p f = ModP.preVal K v O p ((PreTilt.coeff n) f) ^ p ^ n"
+      },
+      {
+        "id": "C05",
+        "statement": "∀ {M : Type u_1} [inst : CommMonoid M] {p : ℕ} {f g : Perfection M p}, (∀ (n : ℕ), (Perfection.coeffMonoidHom M p n) f = (Perfection.coeffMonoidHom M p n) g) → f = g"
+      },
+      {
+        "id": "C06",
+        "statement": "∀ {R : Type u_1} [inst : CommSemiring R] {p : ℕ} [hp : Fact (Nat.Prime p)] [inst_1 : CharP R p] {f g : Perfection R p}, (∀ (n : ℕ), (Perfection.coeff R p n) f = (Perfection.coeff R p n) g) → f = g"
+      },
+      {
+        "id": "C07",
+        "statement": "∀ {O : Type u₂} [inst : CommRing O] {p : ℕ} [inst_1 : Fact (Nat.Prime p)] [inst_2 : Fact ¬IsUnit ↑p] (x : PreTilt O p) (n : ℕ), (PreTilt.coeff (n + 1)) x ^ p = (PreTilt.coeff n) x"
+      },
+      {
+        "id": "C08",
+        "statement": "∀ {M : Type u_1} [inst : CommMonoid M] {p : ℕ} (f : Perfection M p) (n : ℕ), (Perfection.coeffMonoidHom M p (n + 1)) f ^ p = (Perfection.coeffMonoidHom M p n) f"
+      },
+      {
+        "id": "C09",
+        "statement": "∀ {R : Type u_1} [inst : CommSemiring R] {p : ℕ} [hp : Fact (Nat.Prime p)] [inst_1 : CharP R p], Perfection.pthRoot R p = ↑(frobeniusEquiv (Perfection R p) p).symm"
+      },
+      {
+        "id": "C10",
+        "statement": "∀ (K : Type u₁) [inst : Field K] (v v_1 : Valuation K NNReal), v = v_1 → ∀ (O : Type u₂) [inst_1 : CommRing O] [inst_2 : Algebra O K] (p : ℕ) [inst_3 : Fact (Nat.Prime p)] [inst_4 : Fact ¬IsUnit ↑p] (f f_1 : PreTilt O p), f = f_1 → PreTilt.valAux K v O p f = PreTilt.valAux K v_1 O p f_1"
+      },
+      {
+        "id": "C11",
+        "statement": "∀ {M : Type u_1} [inst : CommMonoid M] {p : ℕ}, Perfection.pthRootMonoidHom M p = ↑(powMulEquiv (Perfection M p) p).symm"
+      },
+      {
+        "id": "C12",
+        "statement": "∀ {K : Type u₁} [inst : Field K] {v : Valuation K NNReal} {O : Type u₂} [inst_1 : CommRing O] [inst_2 : Algebra O K], v.Integers O → ∀ {p : ℕ} {x : O}, (Ideal.Quotient.mk (Ideal.span {↑p})) x ≠ 0 → ModP.preVal K v O p ((Ideal.Quotient.mk (Ideal.span {↑p})) x) = v ((algebraMap O K) x)"
+      },
+      {
+        "id": "C13",
+        "statement": "∀ {M : Type u_1} [inst : CommMonoid M] {p : ℕ} (f : Perfection M p) (n m : ℕ), (Perfection.coeffMonoidHom M p (n + m)) ((⇑(powMonoidHom p))^[m] f) = (Perfection.coeffMonoidHom M p n) f"
+      },
+      {
+        "id": "C14",
+        "statement": "∀ {M : Type u_1} [inst : CommMonoid M] {p : ℕ} (f : Perfection M p) (n : ℕ), (Perfection.coeffMonoidHom M p (n + 1)) (f ^ p) = (Perfection.coeffMonoidHom M p n) f"
+      },
+      {
+        "id": "C15",
+        "statement": "∀ {M : Type u_1} [inst : CommMonoid M] {p : ℕ} (f : Perfection M p) (n : ℕ), (Perfection.coeffMonoidHom M p n) ((powMulEquiv (Perfection M p) p).symm f) = (Perfection.coeffMonoidHom M p (n + 1)) f"
+      },
+      {
+        "id": "C16",
+        "statement": "∀ {R : Type u_1} [inst : CommSemiring R] {p : ℕ} [hp : Fact (Nat.Prime p)] [inst_1 : CharP R p] (f : Perfection R p) (n : ℕ), (Perfection.coeff R p (n + 1)) (f ^ p) = (Perfection.coeff R p n) f"
+      }
+    ],
+    "episode_id": "MLP4B_0057",
+    "schema_version": "lemma-portfolio.dependency-compression.v4",
+    "selection_budget": 3,
+    "source_project": "mathlib",
+    "targets": [
+      {
+        "id": "T01",
+        "statement": "∀ {M : Type u_1} [inst : CommMonoid M] {p : ℕ} (f : Perfection M p) (n m : ℕ), m ≤ n → (Perfection.coeffMonoidHom M p n) ((⇑(powMonoidHom p))^[m] f) = (Perfection.coeffMonoidHom M p (n - m)) f"
+      },
+      {
+        "id": "T02",
+        "statement": "∀ {K : Type u₁} [inst : Field K] {v : Valuation K NNReal} {O : Type u₂} [inst_1 : CommRing O] [inst_2 : Algebra O K], v.Integers O → ∀ {p : ℕ} [inst_3 : Fact (Nat.Prime p)] [inst_4 : Fact ¬IsUnit ↑p] (f g : PreTilt O p), PreTilt.valAux K v O p (f + g) ≤ max (PreTilt.valAux K v O p f) (PreTilt.valAux K v O p g)"
+      },
+      {
+        "id": "T03",
+        "statement": "∀ {R : Type u_1} [inst : CommSemiring R] {p : ℕ} [hp : Fact (Nat.Prime p)] [inst_1 : CharP R p] (f : Perfection R p) (n : ℕ), (Perfection.coeff R p n) ((frobeniusEquiv (Perfection R p) p).symm f) = (Perfection.coeff R p (n + 1)) f"
+      },
+      {
+        "id": "T04",
+        "statement": "∀ {R : Type u_1} [inst : CommSemiring R] {p : ℕ} [hp : Fact (Nat.Prime p)] [inst_1 : CharP R p] {f g : Perfection R p}, f = g ↔ ∀ (n : ℕ), (Perfection.coeff R p n) f = (Perfection.coeff R p n) g"
+      },
+      {
+        "id": "T05",
+        "statement": "∀ {K : Type u₁} [inst : Field K] {v : Valuation K NNReal} {O : Type u₂} [inst_1 : CommRing O] [inst_2 : Algebra O K], v.Integers O → ∀ {p : ℕ} {x : ModP O p}, v ↑p < ModP.preVal K v O p x ↔ x ≠ 0"
+      },
+      {
+        "id": "T06",
+        "statement": "∀ {K : Type u₁} [inst : Field K] {v : Valuation K NNReal} {O : Type u₂} [inst_1 : CommRing O] [inst_2 : Algebra O K], v.Integers O → ∀ {p : ℕ} [inst_3 : Fact (Nat.Prime p)] [inst_4 : Fact ¬IsUnit ↑p], PreTilt.valAux K v O p 1 = 1"
+      },
+      {
+        "id": "T07",
+        "statement": "∀ {M : Type u_1} [inst : CommMonoid M] {p : ℕ} (f : Perfection M p) (n m : ℕ), (Perfection.coeffMonoidHom M p n) ((⇑(powMulEquiv (Perfection M p) p).symm)^[m] f) = (Perfection.coeffMonoidHom M p (n + m)) f"
+      },
+      {
+        "id": "T08",
+        "statement": "∀ {R : Type u_1} [inst : CommSemiring R] {p : ℕ} [hp : Fact (Nat.Prime p)] [inst_1 : CharP R p] (f : Perfection R p) (n : ℕ), (Perfection.coeff R p (n + 1)) ((frobenius (Perfection R p) p) f) = (Perfection.coeff R p n) f"
+      }
+    ],
+    "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+  },
+  {
+    "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+    "candidates": [
+      {
+        "id": "C01",
+        "statement": "∀ {p : ℕ} [hp : Fact (Nat.Prime p)] (a n : ℕ), padicValNat p (a ^ n) = n * padicValNat p a"
+      },
+      {
+        "id": "C02",
+        "statement": "∀ {p : ℕ} [hp : Fact (Nat.Prime p)] (q : ℚ) {k : ℕ}, padicValRat p (q ^ k) = ↑k * padicValRat p q"
+      },
+      {
+        "id": "C03",
+        "statement": "∀ {p : ℕ} [Fact (Nat.Prime p)], padicValNat p p = 1"
+      },
+      {
+        "id": "C04",
+        "statement": "∀ {p : ℕ}, p ≠ 1 → ∀ {a n : ℕ}, a ≠ 0 → (p ^ n ∣ a ↔ n ≤ padicValNat p a)"
+      },
+      {
+        "id": "C05",
+        "statement": "∀ {p a b : ℕ} [hp : Fact (Nat.Prime p)], a ≠ 0 → b ≠ 0 → padicValNat p (a * b) = padicValNat p a + padicValNat p b"
+      },
+      {
+        "id": "C06",
+        "statement": "∀ {p n : ℕ}, ¬p ∣ n → padicValNat p n = 0"
+      },
+      {
+        "id": "C07",
+        "statement": "∀ {p : ℕ} (n : ℕ), padicValNat p n ≤ Nat.log p n"
+      },
+      {
+        "id": "C08",
+        "statement": "∀ {p : ℕ} [hp : Fact (Nat.Prime p)] (n : ℕ), padicValNat p (p ^ n) = n"
+      },
+      {
+        "id": "C09",
+        "statement": "∀ {p : ℕ} [hp : Fact (Nat.Prime p)] (q : ℚ), padicValRat p q⁻¹ = -padicValRat p q"
+      },
+      {
+        "id": "C10",
+        "statement": "∀ {p : ℕ} {z : ℤ}, p ≠ 1 → z ≠ 0 → padicValInt p z = multiplicity (↑p) z"
+      },
+      {
+        "id": "C11",
+        "statement": "∀ {p : ℕ}, p ≠ 1 → ∀ (n a : ℕ), p ^ n ∣ a ↔ a = 0 ∨ n ≤ padicValNat p a"
+      },
+      {
+        "id": "C12",
+        "statement": "∀ {p a b : ℕ} [hp : Fact (Nat.Prime p)], b ∣ a → padicValNat p (a / b) = padicValNat p a - padicValNat p b"
+      },
+      {
+        "id": "C13",
+        "statement": "∀ {p : ℕ} [hp : Fact (Nat.Prime p)] {q r : ℚ}, q + r ≠ 0 → min (padicValRat p q) (padicValRat p r) ≤ padicValRat p (q + r)"
+      },
+      {
+        "id": "C14",
+        "statement": "∀ {p n : ℕ}, padicValRat p ↑n = ↑(padicValNat p n)"
+      },
+      {
+        "id": "C15",
+        "statement": "∀ (p : ℕ) [hp : Fact (Nat.Prime p)] {q : ℚ} {n d : ℤ}, q ≠ 0 → q = Rat.divInt n d → padicValRat p q = ↑(multiplicity (↑p) n) - ↑(multiplicity (↑p) d)"
+      },
+      {
+        "id": "C16",
+        "statement": "∀ {p : ℕ} [hp : Fact (Nat.Prime p)] (n : ℕ), (p - 1) * padicValNat p n.factorial = n - (p.digits n).sum"
+      }
+    ],
+    "episode_id": "MLP4B_0058",
+    "schema_version": "lemma-portfolio.dependency-compression.v4",
+    "selection_budget": 3,
+    "source_project": "mathlib",
+    "targets": [
+      {
+        "id": "T01",
+        "statement": "∀ (p : ℕ) [hp : Fact (Nat.Prime p)] {n : ℕ}, n ≠ 0 → (p - 1) * padicValNat p n.factorial < n"
+      },
+      {
+        "id": "T02",
+        "statement": "∀ {p : ℕ} [hp : Fact (Nat.Prime p)] (r : ℕ), padicValRat p (↑p ^ r)⁻¹ = -↑r"
+      },
+      {
+        "id": "T03",
+        "statement": "∀ {p : ℕ} [hp : Fact (Nat.Prime p)] {q r : ℚ}, q ≠ 0 → r ≠ 0 → padicValRat p (q / r) = padicValRat p q - padicValRat p r"
+      },
+      {
+        "id": "T04",
+        "statement": "∀ {p : ℕ} (n : ℕ) [hp : Fact (Nat.Prime p)], max (Nat.log p n) (padicValNat p (n + 1)) = Nat.log p (n + 1)"
+      },
+      {
+        "id": "T05",
+        "statement": "∀ {p : ℕ} [hp : Fact (Nat.Prime p)] {q r : ℚ}, q + r ≠ 0 → q ≠ 0 → r ≠ 0 → padicValRat p q ≠ padicValRat p r → padicValRat p (q + r) = min (padicValRat p q) (padicValRat p r)"
+      },
+      {
+        "id": "T06",
+        "statement": "∀ {p : ℕ} {q : ℚ}, p ≠ 1 → q ≠ 0 → padicValRat p q = ↑(multiplicity (↑p) q.num) - ↑(multiplicity p q.den)"
+      },
+      {
+        "id": "T07",
+        "statement": "∀ {p k n : ℕ} [hp : Fact (Nat.Prime p)], (p - 1) * padicValNat p ((n + k).choose k) = (p.digits k).sum + (p.digits n).sum - (p.digits (n + k)).sum"
+      },
+      {
+        "id": "T08",
+        "statement": "∀ {p q : ℕ} [hp : Fact (Nat.Prime p)] [hq : Fact (Nat.Prime q)] (n m : ℕ), p ≠ q → padicValNat p (p ^ n * q ^ m) = n"
+      }
+    ],
+    "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+  },
+  {
+    "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+    "candidates": [
+      {
+        "id": "C01",
+        "statement": "∀ {α : Type u} (a : α) (l : List α), ↑(a :: l) = Stream'.WSeq.cons a ↑l"
+      },
+      {
+        "id": "C02",
+        "statement": "∀ {α : Type u} (s : Stream'.Seq α), (↑s).destruct = Computation.pure (Option.map (fun a => (a, ↑s.tail)) s.head)"
+      },
+      {
+        "id": "C03",
+        "statement": "∀ {α : Type u} (a : α) (s : Stream'.WSeq α), (Stream'.WSeq.cons a s).tail = s"
+      },
+      {
+        "id": "C04",
+        "statement": "∀ {α : Type u} (c : Computation (Stream'.WSeq α)), (Stream'.WSeq.flatten c).destruct = c >>= Stream'.WSeq.destruct"
+      },
+      {
+        "id": "C05",
+        "statement": "∀ {α : Type u} (a : α) (s t : Stream'.WSeq α), (Stream'.WSeq.cons a s).append t = Stream'.WSeq.cons a (s.append t)"
+      },
+      {
+        "id": "C06",
+        "statement": "∀ {α : Type u} (s : Stream'.WSeq α) (b : α) {a : α}, a ∈ Stream'.WSeq.cons b s ↔ a = b ∨ a ∈ s"
+      },
+      {
+        "id": "C07",
+        "statement": "∀ {α : Type u} (s : Stream'.WSeq α), s.think.tail = s.tail.think"
+      },
+      {
+        "id": "C08",
+        "statement": "∀ {α : Type u} (s : Stream'.WSeq α), Stream'.WSeq.flatten (Computation.pure s) = s"
+      },
+      {
+        "id": "C09",
+        "statement": "∀ {α : Type u} {β : Type v} (f : α → β) (s : Stream'.WSeq α), Stream'.WSeq.map f s.think = (Stream'.WSeq.map f s).think"
+      },
+      {
+        "id": "C10",
+        "statement": "∀ {α : Type u} (s : Stream'.WSeq α), Stream'.WSeq.nil.append s = s"
+      },
+      {
+        "id": "C11",
+        "statement": "∀ {α : Type u} (s : Stream'.WSeq α), s.think.destruct = s.destruct.think"
+      },
+      {
+        "id": "C12",
+        "statement": "∀ {α : Type u} {β : Type v} (f : α → β) (a : α) (s : Stream'.WSeq α), Stream'.WSeq.map f (Stream'.WSeq.cons a s) = Stream'.WSeq.cons (f a) (Stream'.WSeq.map f s)"
+      },
+      {
+        "id": "C13",
+        "statement": "∀ {α : Type u} (s : Stream'.WSeq α) (m n : ℕ), s.drop (m + n) = (s.drop m).drop n"
+      },
+      {
+        "id": "C14",
+        "statement": "∀ {α : Type u} (S : Stream'.WSeq (Stream'.WSeq α)), S.think.join = S.join.think"
+      },
+      {
+        "id": "C15",
+        "statement": "∀ {α : Type u} (s : Stream'.WSeq α) (S : Stream'.WSeq (Stream'.WSeq α)), (Stream'.WSeq.cons s S).join = (s.append S.join).think"
+      },
+      {
+        "id": "C16",
+        "statement": "∀ {α : Type u} (s : Stream'.WSeq α), s.append Stream'.WSeq.nil = s"
+      }
+    ],
+    "episode_id": "MLP4B_0059",
+    "schema_version": "lemma-portfolio.dependency-compression.v4",
+    "selection_budget": 3,
+    "source_project": "mathlib",
+    "targets": [
+      {
+        "id": "T01",
+        "statement": "∀ {α : Type u} (S : Stream'.WSeq (Stream'.WSeq α)), S.join.destruct = S.destruct.bind Stream'.WSeq.destruct_join.aux"
+      },
+      {
+        "id": "T02",
+        "statement": "∀ {α : Type u} (s : Stream'.WSeq α) (a : α), a ∈ Stream'.WSeq.cons a s"
+      },
+      {
+        "id": "T03",
+        "statement": "∀ {α : Type u} {a : α} {S : Stream'.WSeq (Stream'.WSeq α)}, a ∈ S.join → ∃ s ∈ S, a ∈ s"
+      },
+      {
+        "id": "T04",
+        "statement": "∀ {α : Type u} {s : Stream'.WSeq α} {a : α}, a ∈ s.tail → a ∈ s"
+      },
+      {
+        "id": "T05",
+        "statement": "∀ {α : Type u} (s : Stream'.Seq α), (↑s).head = Computation.pure s.head"
+      },
+      {
+        "id": "T06",
+        "statement": "∀ {α : Type u} {s : Stream'.WSeq α} (b : α) {a : α}, a ∈ s → a ∈ Stream'.WSeq.cons b s"
+      },
+      {
+        "id": "T07",
+        "statement": "∀ {α : Type u} {β : Type v} (f : α → β) (a : α), Stream'.WSeq.map f (Stream'.WSeq.ret a) = Stream'.WSeq.ret (f a)"
+      },
+      {
+        "id": "T08",
+        "statement": "∀ {α : Type u} {β : Type v} (f : α → β) (s : Stream'.WSeq α), (Stream'.WSeq.map f s).destruct = Computation.map (Option.map (Prod.map f (Stream'.WSeq.map f))) s.destruct"
+      }
+    ],
+    "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+  }
+]
+</episodes>

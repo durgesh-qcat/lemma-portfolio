@@ -11,6 +11,18 @@ Many Lean Goals*.  It contains the 30 development and 60 test episodes, released
 labels, the supplied response PDFs and their audited transcriptions, deterministic
 baselines, scores, construction/audit receipts, and the complete paper source.
 
+It supports three distinct reproducibility tasks:
+
+1. **Validate the reported results** offline with one command.
+2. **Evaluate another model** with the exact released prompts and the generic
+   prediction scorer.
+3. **Reconstruct the benchmark** from the pinned Mathlib source snapshot and
+   rerun the Lean audit.
+
+These levels should not be conflated.  Score validation is deterministic.
+Fresh model inference is not bit-for-bit reproducible because consumer systems
+may change and do not expose every serving or decoding parameter.
+
 ## Reported V4 scores
 
 The headline is **exact optimal-portfolio accuracy out of 60**, not a score out
@@ -55,6 +67,46 @@ python3 tools/score_release.py --release-root . --output-root /tmp/lp-results
 The generated files in `/tmp/lp-results` should be byte-identical to the
 corresponding `responses/*.json` and `results/*` files in this repository.
 
+## Evaluate another model
+
+The exact twelve direct prompt files used for the 60 test episodes and the four
+structured-support prompts are in `prompts/`.  Start with
+[`prompts/START_HERE.txt`](prompts/START_HERE.txt), which specifies fresh-chat
+boundaries, order, disabled tools, retry policy, and what evidence to retain.
+
+Save each model's JSON-only response as a separate file and score all shards at
+once.  For example:
+
+```sh
+python3 tools/score_predictions.py \
+  --predictions scratch_runs/my_model/*.json \
+  --display-label "Exact model and mode shown by the provider" \
+  --output scratch_runs/my_model/score.json
+```
+
+Missing, malformed, duplicate-ID, wrong-budget, or out-of-pool selections score
+zero, exactly as in the paper.  The denominator remains 60.  The command calls
+no model and uses no package outside the Python standard library.
+
+For a scientifically useful new row, record the exact visible product/model/mode,
+date, chat boundaries, tool settings, raw responses, and every retry or error
+*before* looking at `data/test.labels.jsonl` or the existing results.  Because
+the labels are now public, this is an honor-system rerun rather than a newly
+sealed blind evaluation.  See [`docs/RERUN_MODELS.md`](docs/RERUN_MODELS.md)
+for the complete procedure and evidence boundary.
+
+## Work on the paper
+
+The checked anonymous review PDF, technical supplement, and author-check PDF
+are in `paper/`.  Their editable LaTeX sources are in `paper/source/`.  A
+co-author with repository access can clone the repository, edit the source on a
+separate Git branch, and open a pull request.  Plain-language instructions are
+in [`docs/COLLABORATING.md`](docs/COLLABORATING.md).
+
+- [Anonymous review PDF with supplement](paper/LemmaPortfolio_MATHAI2026_anonymous_review_with_supplement.pdf)
+- [Separate anonymous technical supplement](paper/LemmaPortfolio_MATHAI2026_anonymous_technical_supplement.pdf)
+- [Named author-check preprint](paper/LemmaPortfolio_MATHAI2026_author_check_preprint.pdf)
+
 ## Repository map
 
 - `data/`: public development/test episodes and released labels;
@@ -66,7 +118,10 @@ corresponding `responses/*.json` and `results/*` files in this repository.
   receipts;
 - `development_evidence/`: the frozen 15-item development check reported as
   6/15 in the paper;
+- `prompts/`: the exact 12 direct and four structured-support prompt files,
+  checksum manifest, and capture instructions;
 - `construction/`: the V4 builder, audit wrapper, tests, and reproduction notes;
+- `examples/`: example input for scoring a new model;
 - `tools/`: deterministic scorer and hash-manifest builder;
 - `paper/`: MATH-AI 2026 source, official style file, and checked PDFs; and
 - `docs/`: plain-language GitHub, Overleaf, evidence, and reproduction notes.
@@ -94,6 +149,10 @@ Keep this named repository private during double-blind review and do not put its
 URL in the anonymous manuscript.  The separate anonymous Overleaf ZIP contains
 only submission-safe paper material.  Public release should wait until the
 venue's anonymity policy permits it.
+
+For review, use the separately prepared anonymous reproducibility ZIP as
+supplementary material.  After acceptance, make the repository public, create a
+versioned release, and add its permanent URL to the camera-ready paper.
 
 ## License and citation
 
