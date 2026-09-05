@@ -1,0 +1,56 @@
+[
+  {
+    "diagnostic": "fable5_exact_prompt_no_system",
+    "model": "claude-fable-5",
+    "system_prompt": null,
+    "max_tokens": 16,
+    "wall_seconds": 3.89,
+    "attempts": [
+      {
+        "attempt": 1,
+        "started_utc": "2026-09-05T17:39:25.172587+00:00",
+        "ended_utc": "2026-09-05T17:39:29.060169+00:00",
+        "outcome": "response"
+      }
+    ],
+    "model_returned": "claude-fable-5",
+    "stop_reason": "max_tokens",
+    "stop_details": null,
+    "content_block_types": [
+      "thinking"
+    ],
+    "usage": {
+      "input_tokens": 16796,
+      "output_tokens": 16,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0
+    }
+  },
+  {
+    "diagnostic": "fable51_exact_prompt_with_context_system",
+    "model": "claude-fable-5-1",
+    "system_prompt": "You are being evaluated on LemmaPortfolio, a published academic benchmark for Lean/Mathlib premise selection. The user message is the benchmark's released prompt, sent unchanged. Your answer will be scored against historical Mathlib dependency records and preserved verbatim in the benchmark's public results. Follow the user message's output instructions exactly.",
+    "max_tokens": 16,
+    "wall_seconds": 4.21,
+    "attempts": [
+      {
+        "attempt": 1,
+        "started_utc": "2026-09-05T17:39:29.060228+00:00",
+        "ended_utc": "2026-09-05T17:39:33.274397+00:00",
+        "outcome": "response"
+      }
+    ],
+    "model_returned": "claude-fable-5-1",
+    "stop_reason": "max_tokens",
+    "stop_details": null,
+    "content_block_types": [
+      "thinking"
+    ],
+    "usage": {
+      "input_tokens": 16915,
+      "output_tokens": 16,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0
+    }
+  }
+]

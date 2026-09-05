@@ -1,0 +1,29 @@
+[
+  {
+    "diagnostic": "classifier check on released prompt 01, max_tokens=16 (not a benchmark call)",
+    "model": "claude-opus-5",
+    "prompt_sha256": "febe94397bd43a8a0be9b38d705c08eee2141b4a2ab755d5a46d87596506940c",
+    "wall_seconds": 2.15,
+    "attempts": [
+      {
+        "attempt": 1,
+        "started_utc": "2026-09-05T15:06:59.782148+00:00",
+        "ended_utc": "2026-09-05T15:07:01.936568+00:00",
+        "outcome": "response"
+      }
+    ],
+    "model_returned": "claude-opus-5",
+    "stop_reason": "max_tokens",
+    "stop_details": null,
+    "content_block_types": [
+      "thinking"
+    ],
+    "text_prefix": "",
+    "usage": {
+      "input_tokens": 16796,
+      "output_tokens": 16,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0
+    }
+  }
+]

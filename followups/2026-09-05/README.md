@@ -6,9 +6,9 @@ summaries, comparisons, usage, and diagnostics are in [FOLLOWUP_RESULTS.json](FO
 
 All retained runs are complete. This snapshot supersedes the earlier September 4
 snapshot for current reporting, without overwriting it. It adds Astra max and the
-second Sol/Astra xhigh pair. The third Codex runs were cancelled. A separately
-discovered completed Claude direct-API refusal capture is included outside the
-Codex evaluation; two other Claude captures remain incomplete and excluded.
+second Sol/Astra xhigh pair. The third Codex runs were cancelled. Two completed
+direct Anthropic API captures (Claude Fable 5 and Claude Fable 5.1, both at xhigh
+effort) are included outside the Codex evaluation; see [CLAUDE_RUNS.md](CLAUDE_RUNS.md).
 No OpenRouter result is included. The original consumer results and manuscript
 have not been modified.
 
@@ -21,6 +21,8 @@ have not been modified.
 | `sol_xhigh_r1/` | 20/60 | 302/480 |
 | `sol_xhigh_r2/` | 15/60 | 300/480 |
 | `astra_max_r1/` | 30/60 | 335/480 |
+| `claude_fable_5_xhigh_r1/` (direct API) | 26/60 | 331/480 |
+| `claude_fable_5_1_xhigh_ctx_r1/` (direct API, disclosed system prompt) | 26/60 | 335/480 |
 | `astra_diagnostic/` direct | 8/20 | 106/160 |
 | `astra_diagnostic/` structured q=2 | 4/20 | 100/160 |
 
@@ -28,6 +30,9 @@ Every direct run has 60/60 valid answers; both diagnostic arms have 20/20 valid.
 Each phase contains byte-identical raw final `responses/`, `score.json` with
 per-item results, frozen answer hashes, completion records, path-redacted run
 metadata, per-call timing/usage receipts, and author-reported capture audits.
+The two Claude phases come from a separate direct-API harness and carry raw API
+response bodies, per-attempt receipts, harness source, and run notes instead of
+Codex capture audits.
 
 - `historical_q_sweep.json`: all q=1,2,3,4 historical support and tie analyses.
 - `PROTOCOL_EXPORT.json`: the original plan with local paths removed.
@@ -38,9 +43,11 @@ metadata, per-call timing/usage receipts, and author-reported capture audits.
 - `EXPORT_MANIFEST.json`: source/export hashes and redaction disclosure.
 - `BASE_RELEASE_SHA256SUMS.txt`: repository inventory immediately before this
   final addition, at commit `dacbef9e1fd59f1e5c30f9078a4f531a7fcf25fe`.
-- `claude_fable_5_1_xhigh_r1/` and `CLAUDE_REFUSAL.md`: completed 12-request
-  direct Anthropic API refusal record, not a mathematical capability result.
-  This row is outside `FOLLOWUP_RESULTS.json`, which describes the Codex workflow.
+- `claude_fable_5_xhigh_r1/`, `claude_fable_5_1_xhigh_ctx_r1/`, `CLAUDE_RUNS.md`,
+  and `CLAUDE_RESULTS.json`: completed direct Anthropic API captures scored with
+  the released scorer, kept outside `FOLLOWUP_RESULTS.json` (which describes the
+  Codex workflow). The Fable 5.1 phase used a published system prompt because the
+  bare released prompt was refused by that model; see `CLAUDE_RUNS.md`.
 
 ## Offline verification
 
@@ -55,8 +62,10 @@ The first command checks all repository file hashes and reproduces the original
 V4 scores. The second reproduces every final follow-up score and per-item row,
 all four support widths and tie diagnostics, the recorded paired comparisons,
 repeated-run means/sample standard deviations, and usage aggregates. It also
-checks raw answer/prompt hashes, final queue disposition, and preservation of
-all previously published files except the intentionally updated root README.
+checks raw answer/prompt hashes, final queue disposition, the two Claude phases'
+answer/prompt hashes, receipts, usage, scores, and cross-run comparisons, and
+preservation of all previously published files except the intentionally updated
+root README.
 Neither command calls a model or writes generated results into the repository.
 Run the release verifier from a clean clone: local ignored `.env` or
 `scratch_runs/` files are intentionally not part of the published manifest and

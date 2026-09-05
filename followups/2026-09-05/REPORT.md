@@ -90,6 +90,13 @@ Keep the consumer panel and Codex follow-up visibly separate. Describe structure
 
 Raw final answers are byte-identical to the frozen captures. Full Codex event streams, readiness probes, model catalogs, machine-local paths, and account allowance details remain local. Audit receipts are author-reported; the exported verifier independently reproduces the mathematical scores, not the omitted operational logs or serving weights. VALIDATION.json is the original local Codex completion receipt, not proof of a later GitHub CI run. The earlier September 4 snapshot remains unchanged.
 
-## Separate Claude API refusal record
+## Separate Claude direct-API captures
 
-A completed direct Anthropic API run discovered during publication returned refusals on all 12 original prompts: 0/60 valid, strict score 0/60 exact and 0/480 coverage. It is not a mathematical-capability comparison and is not included in the Codex tables above. See [CLAUDE_REFUSAL.md](CLAUDE_REFUSAL.md) for the raw response evidence and scope. Two other incomplete Claude captures are excluded; no OpenRouter result is included.
+Two completed direct Anthropic Messages API runs of the same twelve released prompts are included outside the Codex tables above, scored with the released scorer. They used a separate harness (one stateless request per prompt, no tools, no fallback, xhigh effort).
+
+| Run | Exact optimal | Target coverage | Valid | Inference minutes | Output tokens (including reasoning) |
+|---|---:|---:|---:|---:|---:|
+| claude_fable_5_xhigh_r1 | 26/60 (43.3%) | 331/480 (69.0%) | 60/60 | 74.3 | 423,618 |
+| claude_fable_5_1_xhigh_ctx_r1 (system prompt) | 26/60 (43.3%) | 335/480 (69.8%) | 60/60 | 87.5 | 495,842 |
+
+The Fable 5.1 row carries a disclosed deviation: without a system prompt, `claude-fable-5-1` refused every bare released prompt before generation (provider category `reasoning_extraction`, reproduced at two times), so that row ran with a short, truthful operator system prompt while the released user-message bytes stayed unchanged. The Fable 5 row needed no system prompt. Paired against the Codex rows, both Claude rows are within the block-bootstrap interval of every Astra run and above both Sol runs; see [CLAUDE_RUNS.md](CLAUDE_RUNS.md) for the system prompt text, classifier diagnostics, the one provider-overload retry, and all paired comparisons, and `CLAUDE_RESULTS.json` for machine-readable rows. Single runs; not a stable ranking. No OpenRouter result is included.

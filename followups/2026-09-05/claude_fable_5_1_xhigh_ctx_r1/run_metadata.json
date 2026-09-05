@@ -1,0 +1,207 @@
+{
+  "started_utc": "2026-09-05T17:42:14.211488+00:00",
+  "started_local": "2026-09-05T10:42:14.211621-07:00",
+  "provider": "Anthropic Claude API (api.anthropic.com), Messages API",
+  "model_requested": "claude-fable-5-1",
+  "visible_mode": "output_config.effort=xhigh; thinking always on (parameter omitted)",
+  "tier": "unknown (organization rate-limit tier not queried)",
+  "session_isolation": "one stateless request per prompt; no prior context",
+  "system_prompt": "You are being evaluated on LemmaPortfolio, a published academic benchmark for Lean/Mathlib premise selection. The user message is the benchmark's released prompt, sent unchanged. Your answer will be scored against historical Mathlib dependency records and preserved verbatim in the benchmark's public results. Follow the user message's output instructions exactly.",
+  "system_prompt_sha256": "26ca2dde77fa98af25c4e3032f02911a7d369dcdd504d75ea2a1ea0cd7440b20",
+  "system_prompt_file": "scratch_runs/claude_harness/system_context.txt",
+  "protocol_deviation": "system prompt present (released user-message bytes unchanged)",
+  "tools": "none declared",
+  "web_search_browsing_files_memory_connectors": "not available to the model (bare Messages API)",
+  "fallbacks": "disabled (refusals preserved as-is)",
+  "request_params": {
+    "model": "claude-fable-5-1",
+    "max_tokens": 128000,
+    "output_config": {
+      "effort": "xhigh"
+    },
+    "system": "You are being evaluated on LemmaPortfolio, a published academic benchmark for Lean/Mathlib premise selection. The user message is the benchmark's released prompt, sent unchanged. Your answer will be scored against historical Mathlib dependency records and preserved verbatim in the benchmark's public results. Follow the user message's output instructions exactly."
+  },
+  "sdk": {
+    "package": "anthropic",
+    "version": "1.4.0",
+    "python": "3.14.6",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O"
+  },
+  "harness": {
+    "path": "scratch_runs/claude_harness/run_claude_direct.py",
+    "sha256": "76bdf78db294d16d13b3ea37e70a247600769d1988ad7ee3d1c5efa6bca71de3"
+  },
+  "released_prompt_manifest_sha256": "029f7695b346ecbfe412c96443b970ac27aa1ab3a82236cb512c9c757669892f",
+  "system_id": "claude_fable_5_1_xhigh_ctx_r1",
+  "display_label": "Claude Fable 5.1 (Claude API, xhigh, context system prompt)",
+  "calls": [
+    {
+      "name": "01",
+      "kind": "direct",
+      "prompt": "prompts/DIRECT_PROMPTS/01.txt",
+      "prompt_sha256": "febe94397bd43a8a0be9b38d705c08eee2141b4a2ab755d5a46d87596506940c",
+      "prompt_bytes": 33569,
+      "episode_ids": [
+        "MLP4B_0000",
+        "MLP4B_0001",
+        "MLP4B_0002",
+        "MLP4B_0003",
+        "MLP4B_0004"
+      ]
+    },
+    {
+      "name": "02",
+      "kind": "direct",
+      "prompt": "prompts/DIRECT_PROMPTS/02.txt",
+      "prompt_sha256": "9b736aaa054838df6d04357ab3ffcac70efccdbdbf20f212389600c2216031b4",
+      "prompt_bytes": 34308,
+      "episode_ids": [
+        "MLP4B_0005",
+        "MLP4B_0006",
+        "MLP4B_0007",
+        "MLP4B_0008",
+        "MLP4B_0009"
+      ]
+    },
+    {
+      "name": "03",
+      "kind": "direct",
+      "prompt": "prompts/DIRECT_PROMPTS/03.txt",
+      "prompt_sha256": "6a79e47946d40e8114af5f609f7e960287ed76f70e891a200f6824fcf7aa1f70",
+      "prompt_bytes": 48071,
+      "episode_ids": [
+        "MLP4B_0010",
+        "MLP4B_0011",
+        "MLP4B_0012",
+        "MLP4B_0013",
+        "MLP4B_0014"
+      ]
+    },
+    {
+      "name": "04",
+      "kind": "direct",
+      "prompt": "prompts/DIRECT_PROMPTS/04.txt",
+      "prompt_sha256": "e85ce36bf8b82e04592c7c47afd391b0b2e519ee6bd1e6bcd1197bd429dd7f3d",
+      "prompt_bytes": 32588,
+      "episode_ids": [
+        "MLP4B_0015",
+        "MLP4B_0016",
+        "MLP4B_0017",
+        "MLP4B_0018",
+        "MLP4B_0019"
+      ]
+    },
+    {
+      "name": "05",
+      "kind": "direct",
+      "prompt": "prompts/DIRECT_PROMPTS/05.txt",
+      "prompt_sha256": "942539a45bdbc8eb682bf0df4075ac226fd519be566d83273fe1c0e36b656449",
+      "prompt_bytes": 33128,
+      "episode_ids": [
+        "MLP4B_0020",
+        "MLP4B_0021",
+        "MLP4B_0022",
+        "MLP4B_0023",
+        "MLP4B_0024"
+      ]
+    },
+    {
+      "name": "06",
+      "kind": "direct",
+      "prompt": "prompts/DIRECT_PROMPTS/06.txt",
+      "prompt_sha256": "376664ae74121b60446ed72fb5801e26ec8db066e52b3097034cc53344e167d9",
+      "prompt_bytes": 31511,
+      "episode_ids": [
+        "MLP4B_0025",
+        "MLP4B_0026",
+        "MLP4B_0027",
+        "MLP4B_0028",
+        "MLP4B_0029"
+      ]
+    },
+    {
+      "name": "07",
+      "kind": "direct",
+      "prompt": "prompts/DIRECT_PROMPTS/07.txt",
+      "prompt_sha256": "fe0552e4134e2e9f9780055949d4d662459c9e0ca75134fbb4532979206652a4",
+      "prompt_bytes": 35906,
+      "episode_ids": [
+        "MLP4B_0030",
+        "MLP4B_0031",
+        "MLP4B_0032",
+        "MLP4B_0033",
+        "MLP4B_0034"
+      ]
+    },
+    {
+      "name": "08",
+      "kind": "direct",
+      "prompt": "prompts/DIRECT_PROMPTS/08.txt",
+      "prompt_sha256": "2ee2884b8afdcfc9138abe6e7076ba98a9f26aaf4a3e66fd67eac4d7c97794ae",
+      "prompt_bytes": 40376,
+      "episode_ids": [
+        "MLP4B_0035",
+        "MLP4B_0036",
+        "MLP4B_0037",
+        "MLP4B_0038",
+        "MLP4B_0039"
+      ]
+    },
+    {
+      "name": "09",
+      "kind": "direct",
+      "prompt": "prompts/DIRECT_PROMPTS/09.txt",
+      "prompt_sha256": "ebb62b772ab44523248c9b512e20525a81b4d26b81610105dcc3303f9eacccb9",
+      "prompt_bytes": 44065,
+      "episode_ids": [
+        "MLP4B_0040",
+        "MLP4B_0041",
+        "MLP4B_0042",
+        "MLP4B_0043",
+        "MLP4B_0044"
+      ]
+    },
+    {
+      "name": "10",
+      "kind": "direct",
+      "prompt": "prompts/DIRECT_PROMPTS/10.txt",
+      "prompt_sha256": "0bb3074e4eb6fc3bd1d72ca5165572e1b3fe6878fb41b39f64c319f02990a13c",
+      "prompt_bytes": 28779,
+      "episode_ids": [
+        "MLP4B_0045",
+        "MLP4B_0046",
+        "MLP4B_0047",
+        "MLP4B_0048",
+        "MLP4B_0049"
+      ]
+    },
+    {
+      "name": "11",
+      "kind": "direct",
+      "prompt": "prompts/DIRECT_PROMPTS/11.txt",
+      "prompt_sha256": "c707b901592322b395b616a6a2674fab78d0efc5293bf7f58d18425b63ef8114",
+      "prompt_bytes": 25376,
+      "episode_ids": [
+        "MLP4B_0050",
+        "MLP4B_0051",
+        "MLP4B_0052",
+        "MLP4B_0053",
+        "MLP4B_0054"
+      ]
+    },
+    {
+      "name": "12",
+      "kind": "direct",
+      "prompt": "prompts/DIRECT_PROMPTS/12.txt",
+      "prompt_sha256": "189850421d75c0d8c9a75a81241986b17b51ad10bab63df284be8e08af325e3d",
+      "prompt_bytes": 39483,
+      "episode_ids": [
+        "MLP4B_0055",
+        "MLP4B_0056",
+        "MLP4B_0057",
+        "MLP4B_0058",
+        "MLP4B_0059"
+      ]
+    }
+  ]
+}

@@ -148,33 +148,83 @@ def verify():
     same(outcome['skipped_phases'], change['cancelled_unstarted_phases'], 'Skipped runs differ')
     require(all(not (HERE / name).exists() for name in change['cancelled_unstarted_phases']),
             'Cancelled runs must not have exported answers')
-    for name in export.get('included_external_complete_phases', []):
+    claude = read(HERE / 'CLAUDE_RESULTS.json')
+    external = export.get('included_external_complete_phases', [])
+    require(sorted(external) == sorted(claude['direct_rows']), 'Claude phase list differs from CLAUDE_RESULTS.json')
+    require(not set(external) & set(combined['direct_rows']), 'Claude phases must stay outside the Codex results')
+    calls = [f'{i:02d}' for i in range(1, 13)]
+    for name in external:
         phase = HERE / name
         expected = read(phase / 'score.json')
         metadata = read(phase / 'run_metadata.json')
         receipts = read(phase / 'CALL_RECEIPTS.json')
         completion = read(phase / 'RUN_COMPLETED.json')
-        require(len(receipts) == completion['call_count'] == 12 and completion['all_twelve_completed'],
-                'Incomplete Claude refusal capture')
+        params = metadata['request_params']
+        require(params['model'] == metadata['model_requested'] and params['output_config'] == {'effort': 'xhigh'},
+                f'{name}: unexpected request parameters')
+        system = params.get('system')
+        require(system == metadata.get('system_prompt'), f'{name}: system prompt record mismatch')
+        if system is None:
+            require(metadata.get('protocol_deviation') is None, f'{name}: undisclosed deviation')
+        else:
+            require(metadata.get('protocol_deviation') and metadata.get('system_prompt_sha256') ==
+                    hashlib.sha256(system.encode('utf-8')).hexdigest() ==
+                    sha(phase / 'harness' / 'system_context.txt'), f'{name}: system prompt hash mismatch')
+            records = [r for f in sorted((phase / 'classifier_diagnostics').glob('*.json')) for r in read(f)]
+            require(any(r['model'] == params['model'] and r.get('system_prompt') is None
+                        and r.get('stop_reason') == 'refusal'
+                        and (r.get('stop_details') or {}).get('category') == 'reasoning_extraction'
+                        for r in records), f'{name}: missing bare-prompt refusal diagnostic')
+            require(any(r['model'] == params['model'] and r.get('system_prompt') == system
+                        and r.get('stop_reason') == 'max_tokens' for r in records),
+                    f'{name}: missing system-prompt acceptance diagnostic')
+        completed = [r for r in receipts if r.get('completed')]
+        require([r['call'] for r in completed] == calls, f'{name}: need one completed receipt per call, in order')
+        for r in receipts:
+            if not r.get('completed'):
+                require(r.get('fatal_error') and r['attempt_count'] == len(r['attempts']) >= 1
+                        and not any(a['outcome'] == 'response' for a in r['attempts']),
+                        f"{name}: failed receipt {r['call']} lacks a recorded provider error")
+        require(completion['call_count'] == 12 and completion['all_twelve_completed'], f'{name}: run incomplete')
         paths = sorted((phase / 'responses').iterdir())
-        require(len(paths) == 12, 'Claude answer file count mismatch')
-        for receipt in receipts:
-            response = phase / receipt['response_file']
-            rawfile = phase / 'raw_api' / (receipt['call'] + '.json')
+        require([p.name for p in paths] == [c + '.json' for c in calls], f'{name}: answer file set mismatch')
+        tokens = Counter()
+        for r in completed:
+            response = phase / r['response_file']
+            rawfile = phase / 'raw_api' / (r['call'] + '.json')
             raw = read(rawfile)
-            require(sha(response) == receipt['response_sha256'] and
-                    sha(rawfile) == receipt['raw_api_sha256'], 'Claude source hash mismatch')
-            require(sha(ROOT / receipt['prompt']) == receipt['prompt_sha256'], 'Claude prompt mismatch')
-            require(raw['stop_reason'] == receipt['stop_reason'] == 'refusal' and
-                    raw['content'] == [] and raw['usage']['output_tokens'] == 0 and
-                    response.read_bytes() == b'', 'Claude refusal evidence differs')
-            require(raw['stop_details']['category'] == 'reasoning_extraction', 'Claude refusal category differs')
+            require(response.name == r['call'] + '.json', f'{name}: response file name mismatch')
+            require(sha(response) == r['response_sha256'] and sha(rawfile) == r['raw_api_sha256'],
+                    f'{name}: source hash mismatch')
+            require(r['prompt'] == f"prompts/DIRECT_PROMPTS/{r['call']}.txt" and
+                    sha(ROOT / r['prompt']) == r['prompt_sha256'], f'{name}: released prompt mismatch')
+            texts = [b['text'] for b in raw['content'] if b['type'] == 'text']
+            require(raw['stop_reason'] == r['stop_reason'] == 'end_turn' and len(texts) == 1
+                    and texts[0] == response.read_text(encoding='utf-8')
+                    and not any(b['type'] in ('tool_use', 'server_tool_use') for b in raw['content'])
+                    and r['tool_use_block_count'] == 0 and r['valid_json_object'] is True,
+                    f"{name}: answer {r['call']} is not a clean single-text completion")
+            require(raw['model'] == r['model_returned'] == params['model'], f'{name}: served model differs')
+            require(raw['usage']['output_tokens'] == r['usage']['output_tokens'], f'{name}: usage mismatch')
+            tokens.update({k: v for k, v in r['usage'].items() if v is not None})
+        same(dict(tokens), completion['usage_totals'], f'{name}: aggregated usage differs')
+        require(abs(sum(r['wall_seconds'] for r in completed) - completion['sum_call_wall_seconds']) < 1,
+                f'{name}: call durations do not sum to the reported duration')
+        same(claude['usage'][name], {'wall_seconds': completion['sum_call_wall_seconds'],
+                                     'tokens': completion['usage_totals']}, f'{name}: CLAUDE_RESULTS usage differs')
         actual = direct.score_external_predictions(paths, ROOT, system_id=metadata['system_id'],
                     display_label=metadata['display_label'], invalid_as_missing=True)
-        same(actual, expected, 'Claude strict refusal score differs')
-        require(actual['summary']['exact_optimal'] == actual['summary']['valid'] == 0 and
-                actual['invalid_source_file_count'] == 12, 'Claude refusal incorrectly scored')
-        print(f'PASS: {name} refusal receipts and strict score (not a capability comparison)')
+        same(actual, expected, f'{name}: recomputed direct score differs')
+        same(actual['summary'], claude['direct_rows'][name], f'{name}: CLAUDE_RESULTS row differs')
+        require(actual['summary']['valid'] == 60 and actual['invalid_source_file_count'] == 0,
+                f'{name}: invalid answers present')
+        scores[name] = actual
+        print(f'PASS: {name} answer/prompt hashes, receipts, usage, and score'
+              + (' (system prompt disclosed)' if system else ''))
+    for row in claude['comparisons']:
+        same(row['comparison'], comparison(scores[row['a_phase']], scores[row['b_phase']]),
+             f"Claude comparison differs: {row['a_phase']} vs {row['b_phase']}")
+    print('PASS: Claude direct-API cross-run comparisons')
     print('PASS: historical q=1..4 sweeps, ties, paired comparisons, and original release preservation')
     print('ALL FOLLOW-UP CHECKS PASSED (mathematical reproduction; omitted operational logs are not re-audited)')
 

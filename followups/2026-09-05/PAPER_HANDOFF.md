@@ -150,25 +150,33 @@ paper edits will require updating the follow-up verifier's strict baseline-file
 preservation policy with an explicit, reviewed allowlist; do not weaken checks
 on data, prompts, responses, or numerical results.
 
-## 6. Additional Claude capture discovered at publication
+## 6. Claude direct-API rows
 
-A separate direct Anthropic API run of `claude-fable-5-1` with xhigh effort
-completed all 12 requests. Every raw API response has `stop_reason="refusal"`,
-empty content, and zero output tokens, with the provider-reported category
-`reasoning_extraction`. The strict released scorer assigns 0/60 exact, 0/480
-coverage, and 0/60 valid to the preserved empty answers. **Do not interpret this
-as a mathematical capability score or rank it against Sol/Astra.**
+Two completed direct Anthropic Messages API runs of `claude-fable-5` and
+`claude-fable-5-1`, both at xhigh effort, cover all twelve released prompts with
+60/60 valid answers each. Released-scorer results: Fable 5 **26/60 exact,
+331/480 coverage** (74.3 min); Fable 5.1 **26/60 exact, 335/480 coverage**
+(87.5 min). They are outside the Codex workflow and its audit, and are not in
+`FOLLOWUP_RESULTS.json`; use `CLAUDE_RESULTS.json` and `CLAUDE_RUNS.md`.
 
-The capture uses a different API and protocol from Codex. It was not included
-in the original Codex completion audit or combined-result JSON. Its raw API
-responses, empty answer files, metadata, call receipts, and re-scored outcome
-are now included and independently checked by the final snapshot verifier.
-See `CLAUDE_REFUSAL.md`. No billing claim has been independently verified here.
+**Report the Fable 5.1 row with its disclosure.** Without a system prompt that
+model refused every released prompt before generation (provider category
+`reasoning_extraction`; reproduced on two prompts at two times). The scored row
+ran with a short, truthful operator system prompt stating that the user message
+is a published academic benchmark prompt; the released user-message bytes were
+unchanged. The exact system prompt, its hash, and 16-token classifier
+diagnostics (bare prompt refused by Fable 5.1; accepted by Fable 5 and Opus 5;
+accepted by Fable 5.1 under the system prompt) are published. The refused bare
+run is not reported as a scored row. The Fable 5 row has no deviation.
 
-Two other local Claude captures (`claude_fable_5_xhigh_r1` and
-`claude_fable_5_1_xhigh_ctx_r1`) were incomplete at export and are not included
-in the scored results. Do not combine or splice them into the refusal run.
-No OpenRouter result is included.
+Suggested wording: single direct-API runs, same released prompts, xhigh effort,
+no tools; Fable 5.1 with a published system prompt. Both rows sit within the
+paired block-bootstrap interval of every Astra run and above both Sol runs
+(Fable 5 − Sol xhigh r1: +10.0 pp exact, +1.7 to +18.3). Do not rank the Claude
+rows against the Codex rows as a stable ordering, and do not compare their
+timings with Codex timings as compute budgets. The Fable 5 run had one
+mid-stream provider overload on call 10 that was retried; both attempts are in
+its receipts.
 
 Use a clean clone for the whole-directory release verifier; ignored local
 credentials or scratch captures are not published and deliberately fall outside

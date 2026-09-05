@@ -1,0 +1,388 @@
+{
+  "schema": "lemma-portfolio.claude-direct-api-followup.v1",
+  "generated_utc": "2026-09-05T19:19:28.417642+00:00",
+  "scope": "Two completed direct Anthropic Messages API captures of the twelve released LemmaPortfolio V4 direct prompts, scored with the released scorer. Separate harness from the Codex workflow; not part of FOLLOWUP_RESULTS.json or its completion audit. Single runs; block-bootstrap intervals do not estimate run-to-run variability.",
+  "protocol": {
+    "claude_fable_5_xhigh_r1": {
+      "provider": "Anthropic Claude API (api.anthropic.com), Messages API",
+      "model_requested": "claude-fable-5",
+      "effort": "xhigh",
+      "max_tokens": 128000,
+      "system_prompt_present": false,
+      "system_prompt_sha256": null,
+      "protocol_deviation": null,
+      "tools": "none declared",
+      "fallbacks": "disabled (refusals preserved as-is)",
+      "sdk": {
+        "package": "anthropic",
+        "version": "1.4.0",
+        "python": "3.14.6",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O"
+      },
+      "started_utc": "2026-09-05T17:40:06.705088+00:00",
+      "ended_utc": "2026-09-05T18:58:06.697839+00:00"
+    },
+    "claude_fable_5_1_xhigh_ctx_r1": {
+      "provider": "Anthropic Claude API (api.anthropic.com), Messages API",
+      "model_requested": "claude-fable-5-1",
+      "effort": "xhigh",
+      "max_tokens": 128000,
+      "system_prompt_present": true,
+      "system_prompt_sha256": "26ca2dde77fa98af25c4e3032f02911a7d369dcdd504d75ea2a1ea0cd7440b20",
+      "protocol_deviation": "system prompt present (released user-message bytes unchanged)",
+      "tools": "none declared",
+      "fallbacks": "disabled (refusals preserved as-is)",
+      "sdk": {
+        "package": "anthropic",
+        "version": "1.4.0",
+        "python": "3.14.6",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O"
+      },
+      "started_utc": "2026-09-05T17:42:14.211488+00:00",
+      "ended_utc": "2026-09-05T19:09:50.911622+00:00"
+    }
+  },
+  "direct_rows": {
+    "claude_fable_5_xhigh_r1": {
+      "system_id": "claude_fable_5_xhigh_r1",
+      "display_label": "Claude Fable 5 (Claude API, xhigh)",
+      "exact_optimal": 26,
+      "total": 60,
+      "exact_optimal_percentage": 43.333333333333336,
+      "valid": 60,
+      "valid_percentage": 100.0,
+      "achieved_target_coverage": 331,
+      "target_count": 480,
+      "target_coverage_percentage": 68.95833333333333,
+      "mean_oracle_normalized_coverage_percentage": 88.2936507936508,
+      "selected_edge_recall_percentage": 42.874692874692876,
+      "wilson_95_interval_fraction": [
+        0.3157239680468677,
+        0.5589656122387444
+      ],
+      "block_bootstrap_95_interval_fraction": [
+        0.31666666666666665,
+        0.55
+      ],
+      "exact_by_block": {
+        "D01": 0,
+        "D02": 3,
+        "D03": 2,
+        "D04": 2,
+        "D05": 1,
+        "D06": 2,
+        "D07": 4,
+        "D08": 2,
+        "D09": 3,
+        "D10": 3,
+        "D11": 2,
+        "D12": 2
+      }
+    },
+    "claude_fable_5_1_xhigh_ctx_r1": {
+      "system_id": "claude_fable_5_1_xhigh_ctx_r1",
+      "display_label": "Claude Fable 5.1 (Claude API, xhigh, context system prompt)",
+      "exact_optimal": 26,
+      "total": 60,
+      "exact_optimal_percentage": 43.333333333333336,
+      "valid": 60,
+      "valid_percentage": 100.0,
+      "achieved_target_coverage": 335,
+      "target_count": 480,
+      "target_coverage_percentage": 69.79166666666667,
+      "mean_oracle_normalized_coverage_percentage": 89.44444444444443,
+      "selected_edge_recall_percentage": 43.24324324324324,
+      "wilson_95_interval_fraction": [
+        0.3157239680468677,
+        0.5589656122387444
+      ],
+      "block_bootstrap_95_interval_fraction": [
+        0.3333333333333333,
+        0.55
+      ],
+      "exact_by_block": {
+        "D01": 1,
+        "D02": 2,
+        "D03": 2,
+        "D04": 2,
+        "D05": 2,
+        "D06": 1,
+        "D07": 4,
+        "D08": 2,
+        "D09": 3,
+        "D10": 4,
+        "D11": 2,
+        "D12": 1
+      }
+    }
+  },
+  "usage": {
+    "claude_fable_5_xhigh_r1": {
+      "wall_seconds": 4457.376,
+      "tokens": {
+        "input_tokens": 221049,
+        "output_tokens": 423618,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0
+      }
+    },
+    "claude_fable_5_1_xhigh_ctx_r1": {
+      "wall_seconds": 5250.957,
+      "tokens": {
+        "input_tokens": 222477,
+        "output_tokens": 495842,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0
+      }
+    }
+  },
+  "comparisons": [
+    {
+      "a_phase": "claude_fable_5_xhigh_r1",
+      "b_phase": "claude_fable_5_1_xhigh_ctx_r1",
+      "comparison": {
+        "a": "Claude Fable 5 (Claude API, xhigh)",
+        "b": "Claude Fable 5.1 (Claude API, xhigh, context system prompt)",
+        "n": 60,
+        "exact_delta_pp": 0.0,
+        "coverage_delta_pp": -0.8333333333333334,
+        "exact_paired_block_bootstrap_95_pp": [
+          -8.333333333333334,
+          8.333333333333334
+        ],
+        "coverage_paired_block_bootstrap_95_pp": [
+          -2.9166666666666665,
+          1.25
+        ],
+        "a_only_optimal": 10,
+        "b_only_optimal": 10,
+        "note": "Resamples prompt blocks, not independent model repetitions. Small-sample descriptive uncertainty; not corrected for multiple comparisons."
+      }
+    },
+    {
+      "a_phase": "claude_fable_5_xhigh_r1",
+      "b_phase": "astra_xhigh_r1_prior",
+      "comparison": {
+        "a": "Claude Fable 5 (Claude API, xhigh)",
+        "b": "GPT-6 Astra (Codex CLI, xhigh)",
+        "n": 60,
+        "exact_delta_pp": -1.6666666666666667,
+        "coverage_delta_pp": 0.625,
+        "exact_paired_block_bootstrap_95_pp": [
+          -8.333333333333334,
+          5.0
+        ],
+        "coverage_paired_block_bootstrap_95_pp": [
+          -1.4583333333333333,
+          3.125
+        ],
+        "a_only_optimal": 9,
+        "b_only_optimal": 10,
+        "note": "Resamples prompt blocks, not independent model repetitions. Small-sample descriptive uncertainty; not corrected for multiple comparisons."
+      }
+    },
+    {
+      "a_phase": "claude_fable_5_xhigh_r1",
+      "b_phase": "astra_xhigh_r2",
+      "comparison": {
+        "a": "Claude Fable 5 (Claude API, xhigh)",
+        "b": "astra xhigh r2",
+        "n": 60,
+        "exact_delta_pp": -6.666666666666667,
+        "coverage_delta_pp": -0.20833333333333334,
+        "exact_paired_block_bootstrap_95_pp": [
+          -16.666666666666668,
+          3.3333333333333335
+        ],
+        "coverage_paired_block_bootstrap_95_pp": [
+          -2.2916666666666665,
+          1.875
+        ],
+        "a_only_optimal": 7,
+        "b_only_optimal": 11,
+        "note": "Resamples prompt blocks, not independent model repetitions. Small-sample descriptive uncertainty; not corrected for multiple comparisons."
+      }
+    },
+    {
+      "a_phase": "claude_fable_5_xhigh_r1",
+      "b_phase": "astra_max_r1",
+      "comparison": {
+        "a": "Claude Fable 5 (Claude API, xhigh)",
+        "b": "astra max r1",
+        "n": 60,
+        "exact_delta_pp": -6.666666666666667,
+        "coverage_delta_pp": -0.8333333333333334,
+        "exact_paired_block_bootstrap_95_pp": [
+          -16.666666666666668,
+          3.3333333333333335
+        ],
+        "coverage_paired_block_bootstrap_95_pp": [
+          -3.125,
+          1.4583333333333333
+        ],
+        "a_only_optimal": 7,
+        "b_only_optimal": 11,
+        "note": "Resamples prompt blocks, not independent model repetitions. Small-sample descriptive uncertainty; not corrected for multiple comparisons."
+      }
+    },
+    {
+      "a_phase": "claude_fable_5_xhigh_r1",
+      "b_phase": "sol_xhigh_r1",
+      "comparison": {
+        "a": "Claude Fable 5 (Claude API, xhigh)",
+        "b": "sol xhigh r1",
+        "n": 60,
+        "exact_delta_pp": 10.0,
+        "coverage_delta_pp": 6.041666666666667,
+        "exact_paired_block_bootstrap_95_pp": [
+          1.6666666666666667,
+          18.333333333333332
+        ],
+        "coverage_paired_block_bootstrap_95_pp": [
+          3.5416666666666665,
+          8.541666666666666
+        ],
+        "a_only_optimal": 11,
+        "b_only_optimal": 5,
+        "note": "Resamples prompt blocks, not independent model repetitions. Small-sample descriptive uncertainty; not corrected for multiple comparisons."
+      }
+    },
+    {
+      "a_phase": "claude_fable_5_xhigh_r1",
+      "b_phase": "sol_xhigh_r2",
+      "comparison": {
+        "a": "Claude Fable 5 (Claude API, xhigh)",
+        "b": "sol xhigh r2",
+        "n": 60,
+        "exact_delta_pp": 18.333333333333332,
+        "coverage_delta_pp": 6.458333333333333,
+        "exact_paired_block_bootstrap_95_pp": [
+          6.666666666666667,
+          28.333333333333332
+        ],
+        "coverage_paired_block_bootstrap_95_pp": [
+          3.9583333333333335,
+          9.375
+        ],
+        "a_only_optimal": 14,
+        "b_only_optimal": 3,
+        "note": "Resamples prompt blocks, not independent model repetitions. Small-sample descriptive uncertainty; not corrected for multiple comparisons."
+      }
+    },
+    {
+      "a_phase": "claude_fable_5_1_xhigh_ctx_r1",
+      "b_phase": "astra_xhigh_r1_prior",
+      "comparison": {
+        "a": "Claude Fable 5.1 (Claude API, xhigh, context system prompt)",
+        "b": "GPT-6 Astra (Codex CLI, xhigh)",
+        "n": 60,
+        "exact_delta_pp": -1.6666666666666667,
+        "coverage_delta_pp": 1.4583333333333333,
+        "exact_paired_block_bootstrap_95_pp": [
+          -11.666666666666666,
+          10.0
+        ],
+        "coverage_paired_block_bootstrap_95_pp": [
+          -1.0416666666666667,
+          4.583333333333333
+        ],
+        "a_only_optimal": 11,
+        "b_only_optimal": 12,
+        "note": "Resamples prompt blocks, not independent model repetitions. Small-sample descriptive uncertainty; not corrected for multiple comparisons."
+      }
+    },
+    {
+      "a_phase": "claude_fable_5_1_xhigh_ctx_r1",
+      "b_phase": "astra_xhigh_r2",
+      "comparison": {
+        "a": "Claude Fable 5.1 (Claude API, xhigh, context system prompt)",
+        "b": "astra xhigh r2",
+        "n": 60,
+        "exact_delta_pp": -6.666666666666667,
+        "coverage_delta_pp": 0.625,
+        "exact_paired_block_bootstrap_95_pp": [
+          -18.333333333333332,
+          5.0
+        ],
+        "coverage_paired_block_bootstrap_95_pp": [
+          -2.5,
+          3.75
+        ],
+        "a_only_optimal": 10,
+        "b_only_optimal": 14,
+        "note": "Resamples prompt blocks, not independent model repetitions. Small-sample descriptive uncertainty; not corrected for multiple comparisons."
+      }
+    },
+    {
+      "a_phase": "claude_fable_5_1_xhigh_ctx_r1",
+      "b_phase": "astra_max_r1",
+      "comparison": {
+        "a": "Claude Fable 5.1 (Claude API, xhigh, context system prompt)",
+        "b": "astra max r1",
+        "n": 60,
+        "exact_delta_pp": -6.666666666666667,
+        "coverage_delta_pp": 0.0,
+        "exact_paired_block_bootstrap_95_pp": [
+          -20.0,
+          8.333333333333334
+        ],
+        "coverage_paired_block_bootstrap_95_pp": [
+          -2.9166666666666665,
+          3.125
+        ],
+        "a_only_optimal": 8,
+        "b_only_optimal": 12,
+        "note": "Resamples prompt blocks, not independent model repetitions. Small-sample descriptive uncertainty; not corrected for multiple comparisons."
+      }
+    },
+    {
+      "a_phase": "claude_fable_5_1_xhigh_ctx_r1",
+      "b_phase": "sol_xhigh_r1",
+      "comparison": {
+        "a": "Claude Fable 5.1 (Claude API, xhigh, context system prompt)",
+        "b": "sol xhigh r1",
+        "n": 60,
+        "exact_delta_pp": 10.0,
+        "coverage_delta_pp": 6.875,
+        "exact_paired_block_bootstrap_95_pp": [
+          0.0,
+          20.0
+        ],
+        "coverage_paired_block_bootstrap_95_pp": [
+          3.75,
+          10.416666666666666
+        ],
+        "a_only_optimal": 16,
+        "b_only_optimal": 10,
+        "note": "Resamples prompt blocks, not independent model repetitions. Small-sample descriptive uncertainty; not corrected for multiple comparisons."
+      }
+    },
+    {
+      "a_phase": "claude_fable_5_1_xhigh_ctx_r1",
+      "b_phase": "sol_xhigh_r2",
+      "comparison": {
+        "a": "Claude Fable 5.1 (Claude API, xhigh, context system prompt)",
+        "b": "sol xhigh r2",
+        "n": 60,
+        "exact_delta_pp": 18.333333333333332,
+        "coverage_delta_pp": 7.291666666666667,
+        "exact_paired_block_bootstrap_95_pp": [
+          8.333333333333334,
+          30.0
+        ],
+        "coverage_paired_block_bootstrap_95_pp": [
+          4.166666666666667,
+          11.041666666666666
+        ],
+        "a_only_optimal": 14,
+        "b_only_optimal": 3,
+        "note": "Resamples prompt blocks, not independent model repetitions. Small-sample descriptive uncertainty; not corrected for multiple comparisons."
+      }
+    }
+  ],
+  "notes": [
+    "claude_fable_5_xhigh_r1: no system prompt; exact released prompt bytes; fully protocol-compliant. Call 10 first attempt ended on a mid-stream provider overloaded_error before any answer text and was retried after a harness fix; both attempts are in CALL_RECEIPTS.json.",
+    "claude_fable_5_1_xhigh_ctx_r1: DISCLOSED DEVIATION - a truthful operator system prompt was present because claude-fable-5-1 refused every bare released prompt before generation (provider category reasoning_extraction). Released user-message bytes unchanged. See RUN_NOTE.md and classifier_diagnostics/.",
+    "Comparisons reuse analysis.comparison (paired prompt-block bootstrap); exploratory, not multiplicity-adjusted."
+  ]
+}

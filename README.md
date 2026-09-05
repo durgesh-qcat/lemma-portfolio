@@ -81,17 +81,37 @@ shorten the queue; this post-hoc operational amendment is disclosed. No inferenc
 remains queued in the shortened Codex workflow. The paper has not yet
 incorporated these follow-up results.
 
-A separate completed **Claude Fable 5.1 direct-API capture returned refusals on
-all 12 prompts** (0/60 valid). Its strict score is zero, but this is a refusal
-outcome, not evidence of mathematical inability. The raw API receipts and
-[refusal note](followups/2026-09-05/CLAUDE_REFUSAL.md) are included separately.
-Two other Claude captures were incomplete at export and are not scored here.
-No OpenRouter result is included.
+### Claude direct-API rows — 5 September 2026
+
+Two completed captures of the same twelve released prompts through the Anthropic
+Messages API, scored with the released scorer. They use a separate harness from
+the Codex rows above (one stateless request per prompt, no tools, no fallback,
+`effort=xhigh`), so they sit outside the Codex workflow's audit and its
+`FOLLOWUP_RESULTS.json`.
+
+| Recorded model / effort | Exact optimum | Target coverage | Valid | Inference time |
+|---|---:|---:|---:|---:|
+| Claude Fable 5 / xhigh | 26/60 (43.3%) | 331/480 (69.0%) | 60/60 | 74.3 min |
+| Claude Fable 5.1 / xhigh (published system prompt, see note) | 26/60 (43.3%) | 335/480 (69.8%) | 60/60 | 87.5 min |
+
+**Disclosure:** with no system prompt, `claude-fable-5-1` refused every released
+prompt before generation (provider category `reasoning_extraction`, reproduced on
+two prompts at two times). The Fable 5.1 row therefore ran with a short, truthful
+operator system prompt stating that the user message is a published academic
+benchmark prompt; the released user-message bytes were unchanged, and the refused
+bare run is not reported as a scored row. The Fable 5 row needed no system prompt.
+The system prompt text and hash, 16-token classifier diagnostics, per-call
+receipts, and paired comparisons are in
+[CLAUDE_RUNS.md](followups/2026-09-05/CLAUDE_RUNS.md). Both Claude rows fall
+within the paired block-bootstrap interval of every Astra run and above both Sol
+runs. These are single runs, not a stable ranking, and no OpenRouter result is
+included.
 
 - **[Start here for writing the paper: final results handoff](followups/2026-09-05/PAPER_HANDOFF.md)**
 - [Detailed results and limitations](followups/2026-09-05/REPORT.md)
 - [Raw answers, provenance, and reproduction instructions](followups/2026-09-05/README.md)
 - [Machine-readable results](followups/2026-09-05/FOLLOWUP_RESULTS.json)
+- [Claude direct-API rows, system-prompt disclosure, and comparisons](followups/2026-09-05/CLAUDE_RUNS.md)
 - [Earlier September 4 snapshot (preserved unchanged)](followups/2026-09-04/README.md)
 
 Recompute the completed follow-up scores, support-width sweeps, and comparisons
