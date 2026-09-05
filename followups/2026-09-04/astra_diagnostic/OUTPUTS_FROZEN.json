@@ -1,0 +1,37 @@
+{
+  "frozen_utc": "2026-09-05T04:10:48.033297+00:00",
+  "responses": [
+    {
+      "file": "01_direct_D04.json",
+      "sha256": "ba4fee2d5a5c0ec96d51728433746858d799e0ca02e92dce37c20ddfc23f7a2f"
+    },
+    {
+      "file": "02_support_D04.json",
+      "sha256": "b0f487b3d84f6019a8861322aa95f9f52a6d4195dfa68eefc3f5688ca1772d92"
+    },
+    {
+      "file": "03_support_D05.json",
+      "sha256": "8155dbcaf12c88607c2546a66533448a8c24ad233e2d626a09018d86a89b2928"
+    },
+    {
+      "file": "04_direct_D05.json",
+      "sha256": "e766a0b89ea33b81e194161513be1d913b50110b55a23134765b1a756613cb78"
+    },
+    {
+      "file": "05_direct_D06.json",
+      "sha256": "aea96bddcf097f357854f7bc24e39b969323ef9af1e5273df8e3de37342a0333"
+    },
+    {
+      "file": "06_support_D06.json",
+      "sha256": "f332b15f4be384d35a25f0640b1dc632457d7d4dcb5b0003ca733ba09cf9cf0c"
+    },
+    {
+      "file": "07_support_D12.json",
+      "sha256": "3cb63a212f5becb46bdff26ed37b1dac1c83483d1269d19e181da6ef00457ad6"
+    },
+    {
+      "file": "08_direct_D12.json",
+      "sha256": "12be0fa952e38417db96fd7c6470f443bbb08476249f449681cfc50295b9093c"
+    }
+  ]
+}

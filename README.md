@@ -23,7 +23,7 @@ These levels should not be conflated.  Score validation is deterministic.
 Fresh model inference is not bit-for-bit reproducible because consumer systems
 may change and do not expose every serving or decoding parameter.
 
-## Reported V4 scores
+## Original V4 consumer scores
 
 The headline is **exact optimal-portfolio accuracy out of 60**, not a score out
 of 30 and not target-level partial credit.
@@ -42,6 +42,45 @@ selected triple touches.  “Exact optimum” asks whether no other triple cover
 more targets.  The Pro row had the highest exact score, whereas xhigh had the
 highest target coverage.  The two columns are intentionally not interchangeable.
 
+## Completed Codex follow-up results — 4 September 2026
+
+The following are **post-release follow-up experiments**, separate from the
+original frozen consumer evaluation above. Dates use Pacific time; the capture
+receipts use UTC. The original data, consumer scores, and paper PDFs are unchanged.
+
+| Recorded model / effort | Exact optimum | Target coverage | Valid | Inference time |
+|---|---:|---:|---:|---:|
+| GPT-6 Astra / xhigh | 27/60 (45.0%) | 328/480 (68.3%) | 60/60 | 78.6 min |
+| GPT-5.6 Sol / xhigh | 20/60 (33.3%) | 302/480 (62.9%) | 60/60 | 80.7 min |
+
+These runs use the same Codex CLI 0.153.0 capture harness, identical released
+prompts, and fresh sessions with tools disabled. Astra found seven more exact
+optima (+11.7 percentage points) in this **single-run comparison**. Equal effort
+labels do not imply equal compute budgets, and this is not a stable model ranking
+or an apples-to-apples comparison with the consumer rows.
+
+On a fresh, matched 20-episode Astra diagnostic, direct selection scored
+**8/20 exact (106/160 targets)** versus **4/20 (100/160 targets)** for the primary
+structured-support-plus-optimizer pipeline (`q=2`). Re-scoring the same support
+rankings with `q=1,2,3,4` gave **2, 4, 4, 4 exact**, respectively. This is evidence
+about the tested complete pipeline, not proof that decomposition generally fails.
+The export also includes the historical GPT support-width and tie analyses.
+
+**Snapshot status:** Astra `max` was still in progress and four optional xhigh
+repeat runs had not started when this snapshot was exported. No partial scores
+are published. The paper has not yet incorporated these follow-up results.
+
+- [Detailed results and limitations](followups/2026-09-04/REPORT.md)
+- [Raw answers, provenance, and reproduction instructions](followups/2026-09-04/README.md)
+- [Machine-readable results](followups/2026-09-04/FOLLOWUP_RESULTS.json)
+
+Recompute the completed follow-up scores, support-width sweeps, and comparisons
+offline (no model calls):
+
+```sh
+python3 followups/2026-09-04/verify.py
+```
+
 ## One-command verification
 
 From the repository folder, run:
@@ -55,8 +94,10 @@ On macOS, a nontechnical user may instead double-click `RUN_ME.command`.
 This is free and offline.  It uses only the Python standard library, verifies
 every published file hash, reconstructs every optimum from the released
 incidence rows, reparses the response transcription, regenerates both baselines,
-and recomputes every reported score.  It does not call a model and does not need
-Lean, an API key, or a paid account.  Python 3.10 or newer is required.
+and recomputes every original V4 score. It does not call a model and does not need
+Lean, an API key, or a paid account.  Python 3.10 or newer is required. It
+recomputes the original V4 results; use the additional command above to recompute
+the separately published follow-up results.
 
 For a clean independent rerun of the scoring stage:
 
@@ -138,6 +179,8 @@ in [`docs/COLLABORATING.md`](docs/COLLABORATING.md).
   and response-order audit;
 - `results/`: baseline predictions, aggregate scores, item scores, and the
   structured-support comparisons;
+- `followups/2026-09-04/`: versioned, completed Codex follow-up answers, scores,
+  support-width/tie analyses, provenance receipts, and offline verification;
 - `provenance/`: dataset commitment, generation receipt, and Lean/static audit
   receipts;
 - `development_evidence/`: the frozen 15-item development check reported as

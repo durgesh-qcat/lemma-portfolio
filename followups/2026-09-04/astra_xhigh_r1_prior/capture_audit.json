@@ -1,0 +1,116 @@
+{
+  "status": "PASS",
+  "block_count": 12,
+  "unique_session_count": 12,
+  "checks": [
+    {
+      "block": "01",
+      "prompt_matches_release": true,
+      "raw_response_matches_event": true,
+      "fresh_session": true,
+      "single_turn": true,
+      "sequential": true,
+      "tool_calls": 0
+    },
+    {
+      "block": "02",
+      "prompt_matches_release": true,
+      "raw_response_matches_event": true,
+      "fresh_session": true,
+      "single_turn": true,
+      "sequential": true,
+      "tool_calls": 0
+    },
+    {
+      "block": "03",
+      "prompt_matches_release": true,
+      "raw_response_matches_event": true,
+      "fresh_session": true,
+      "single_turn": true,
+      "sequential": true,
+      "tool_calls": 0
+    },
+    {
+      "block": "04",
+      "prompt_matches_release": true,
+      "raw_response_matches_event": true,
+      "fresh_session": true,
+      "single_turn": true,
+      "sequential": true,
+      "tool_calls": 0
+    },
+    {
+      "block": "05",
+      "prompt_matches_release": true,
+      "raw_response_matches_event": true,
+      "fresh_session": true,
+      "single_turn": true,
+      "sequential": true,
+      "tool_calls": 0
+    },
+    {
+      "block": "06",
+      "prompt_matches_release": true,
+      "raw_response_matches_event": true,
+      "fresh_session": true,
+      "single_turn": true,
+      "sequential": true,
+      "tool_calls": 0
+    },
+    {
+      "block": "07",
+      "prompt_matches_release": true,
+      "raw_response_matches_event": true,
+      "fresh_session": true,
+      "single_turn": true,
+      "sequential": true,
+      "tool_calls": 0
+    },
+    {
+      "block": "08",
+      "prompt_matches_release": true,
+      "raw_response_matches_event": true,
+      "fresh_session": true,
+      "single_turn": true,
+      "sequential": true,
+      "tool_calls": 0
+    },
+    {
+      "block": "09",
+      "prompt_matches_release": true,
+      "raw_response_matches_event": true,
+      "fresh_session": true,
+      "single_turn": true,
+      "sequential": true,
+      "tool_calls": 0
+    },
+    {
+      "block": "10",
+      "prompt_matches_release": true,
+      "raw_response_matches_event": true,
+      "fresh_session": true,
+      "single_turn": true,
+      "sequential": true,
+      "tool_calls": 0
+    },
+    {
+      "block": "11",
+      "prompt_matches_release": true,
+      "raw_response_matches_event": true,
+      "fresh_session": true,
+      "single_turn": true,
+      "sequential": true,
+      "tool_calls": 0
+    },
+    {
+      "block": "12",
+      "prompt_matches_release": true,
+      "raw_response_matches_event": true,
+      "fresh_session": true,
+      "single_turn": true,
+      "sequential": true,
+      "tool_calls": 0
+    }
+  ],
+  "scope": "Local capture integrity and observed execution; does not independently authenticate provider weights or unseen provider system behavior."
+}
