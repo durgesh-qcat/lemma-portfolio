@@ -1,0 +1,4907 @@
+{
+  "status": "PASS",
+  "design": "Retrospective exploratory q=1..4 sweep. All four widths reported; no test-set tuning claim.",
+  "source_sha256": "9c107bb58fe2ed50490033cc38e986f5957b040ca5a86eada8726d150dd46a31",
+  "results": {
+    "gpt_sol_5_6_pro": [
+      {
+        "q": 1,
+        "summary": {
+          "system_id": "gpt_sol_5_6_pro_q1",
+          "display_label": "gpt_sol_5_6_pro support q=1",
+          "exact_optimal": 1,
+          "total": 20,
+          "exact_optimal_percentage": 5.0,
+          "valid": 20,
+          "valid_percentage": 100.0,
+          "achieved_target_coverage": 86,
+          "target_count": 160,
+          "target_coverage_percentage": 53.75,
+          "mean_oracle_normalized_coverage_percentage": 69.76190476190476,
+          "selected_edge_recall_percentage": 34.54545454545455,
+          "wilson_95_interval_fraction": [
+            0.008881448800795402,
+            0.23613119344674205
+          ],
+          "block_bootstrap_95_interval_fraction": [
+            0.0,
+            0.15
+          ],
+          "exact_by_block": {
+            "D04": 1,
+            "D05": 0,
+            "D06": 0,
+            "D12": 0
+          }
+        },
+        "support_edges": {
+          "true_positive": 128,
+          "false_positive": 29,
+          "false_negative": 147,
+          "micro_precision": 0.8152866242038217,
+          "micro_recall": 0.46545454545454545,
+          "micro_f1": 0.5925925925925926
+        },
+        "tie_summary": {
+          "valid_episodes": 20,
+          "episodes_with_multiple_predicted_optima": 18,
+          "mean_predicted_optimum_tie_count": 7.25,
+          "episodes_with_a_true_optimum_among_predicted_ties": 8,
+          "expected_exact_count_under_uniform_predicted_tie_break": 2.0166666666666666,
+          "expected_total_coverage_under_uniform_predicted_tie_break": 90.55,
+          "note": "Offline diagnostic only. All reported pipeline selections use original lexicographic tie break; true labels never select a portfolio."
+        },
+        "tie_per_item": [
+          {
+            "episode_id": "MLP4B_0015",
+            "tie_count": 15,
+            "predicted_max_coverage": 4,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 4.733333333333333,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.06666666666666667
+          },
+          {
+            "episode_id": "MLP4B_0016",
+            "tie_count": 4,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 5,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 5.25,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.25
+          },
+          {
+            "episode_id": "MLP4B_0017",
+            "tie_count": 4,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 5,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 5,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0018",
+            "tie_count": 15,
+            "predicted_max_coverage": 4,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 3,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 4.466666666666667,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.06666666666666667
+          },
+          {
+            "episode_id": "MLP4B_0019",
+            "tie_count": 1,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 6,
+            "min_true_coverage_among_ties": 6,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 6,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 1.0
+          },
+          {
+            "episode_id": "MLP4B_0020",
+            "tie_count": 4,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 5,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.25
+          },
+          {
+            "episode_id": "MLP4B_0021",
+            "tie_count": 6,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 3,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 3.8333333333333335,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0022",
+            "tie_count": 4,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 3,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 3.75,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0023",
+            "tie_count": 15,
+            "predicted_max_coverage": 4,
+            "lex_chosen_true_coverage": 3,
+            "min_true_coverage_among_ties": 3,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 3.533333333333333,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0024",
+            "tie_count": 15,
+            "predicted_max_coverage": 4,
+            "lex_chosen_true_coverage": 3,
+            "min_true_coverage_among_ties": 2,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 3.3333333333333335,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0025",
+            "tie_count": 10,
+            "predicted_max_coverage": 4,
+            "lex_chosen_true_coverage": 2,
+            "min_true_coverage_among_ties": 2,
+            "max_true_coverage_among_ties": 4,
+            "mean_true_coverage_among_ties": 2.7,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0026",
+            "tie_count": 15,
+            "predicted_max_coverage": 4,
+            "lex_chosen_true_coverage": 3,
+            "min_true_coverage_among_ties": 3,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 4.266666666666667,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.06666666666666667
+          },
+          {
+            "episode_id": "MLP4B_0027",
+            "tie_count": 1,
+            "predicted_max_coverage": 8,
+            "lex_chosen_true_coverage": 6,
+            "min_true_coverage_among_ties": 6,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 6,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0028",
+            "tie_count": 3,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 4.666666666666667,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0029",
+            "tie_count": 4,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 3,
+            "max_true_coverage_among_ties": 4,
+            "mean_true_coverage_among_ties": 3.75,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0055",
+            "tie_count": 2,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 4.5,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0056",
+            "tie_count": 15,
+            "predicted_max_coverage": 4,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 3,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 4.266666666666667,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.06666666666666667
+          },
+          {
+            "episode_id": "MLP4B_0057",
+            "tie_count": 4,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 4.75,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0058",
+            "tie_count": 4,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 5,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 5,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0059",
+            "tie_count": 4,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 6,
+            "min_true_coverage_among_ties": 5,
+            "max_true_coverage_among_ties": 7,
+            "mean_true_coverage_among_ties": 5.75,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.25
+          }
+        ],
+        "per_item": [
+          {
+            "system_id": "gpt_sol_5_6_pro_q1",
+            "episode_id": "MLP4B_0015",
+            "block_id": "D04",
+            "selected": [
+              "C03",
+              "C05",
+              "C14"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 4,
+            "hidden_edges": 15
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q1",
+            "episode_id": "MLP4B_0016",
+            "block_id": "D04",
+            "selected": [
+              "C02",
+              "C07",
+              "C10"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 13
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q1",
+            "episode_id": "MLP4B_0017",
+            "block_id": "D04",
+            "selected": [
+              "C02",
+              "C03",
+              "C09"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 14
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q1",
+            "episode_id": "MLP4B_0018",
+            "block_id": "D04",
+            "selected": [
+              "C01",
+              "C02",
+              "C16"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 4,
+            "hidden_edges": 14
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q1",
+            "episode_id": "MLP4B_0019",
+            "block_id": "D04",
+            "selected": [
+              "C04",
+              "C13",
+              "C16"
+            ],
+            "valid": true,
+            "optimal": true,
+            "coverage": 6,
+            "optimal_coverage": 6,
+            "normalized_coverage": 1.0,
+            "selected_edges": 6,
+            "hidden_edges": 18
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q1",
+            "episode_id": "MLP4B_0020",
+            "block_id": "D05",
+            "selected": [
+              "C03",
+              "C09",
+              "C16"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 4,
+            "hidden_edges": 11
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q1",
+            "episode_id": "MLP4B_0021",
+            "block_id": "D05",
+            "selected": [
+              "C05",
+              "C06",
+              "C14"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 4,
+            "hidden_edges": 15
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q1",
+            "episode_id": "MLP4B_0022",
+            "block_id": "D05",
+            "selected": [
+              "C03",
+              "C13",
+              "C15"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 7,
+            "normalized_coverage": 0.5714285714285714,
+            "selected_edges": 4,
+            "hidden_edges": 14
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q1",
+            "episode_id": "MLP4B_0023",
+            "block_id": "D05",
+            "selected": [
+              "C01",
+              "C06",
+              "C09"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 3,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.5,
+            "selected_edges": 5,
+            "hidden_edges": 15
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q1",
+            "episode_id": "MLP4B_0024",
+            "block_id": "D05",
+            "selected": [
+              "C01",
+              "C06",
+              "C15"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 3,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.5,
+            "selected_edges": 3,
+            "hidden_edges": 12
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q1",
+            "episode_id": "MLP4B_0025",
+            "block_id": "D06",
+            "selected": [
+              "C03",
+              "C07",
+              "C08"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 2,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.3333333333333333,
+            "selected_edges": 2,
+            "hidden_edges": 15
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q1",
+            "episode_id": "MLP4B_0026",
+            "block_id": "D06",
+            "selected": [
+              "C01",
+              "C04",
+              "C05"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 3,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.5,
+            "selected_edges": 4,
+            "hidden_edges": 12
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q1",
+            "episode_id": "MLP4B_0027",
+            "block_id": "D06",
+            "selected": [
+              "C02",
+              "C04",
+              "C06"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 6,
+            "optimal_coverage": 7,
+            "normalized_coverage": 0.8571428571428571,
+            "selected_edges": 7,
+            "hidden_edges": 15
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q1",
+            "episode_id": "MLP4B_0028",
+            "block_id": "D06",
+            "selected": [
+              "C03",
+              "C07",
+              "C14"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 4,
+            "hidden_edges": 13
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q1",
+            "episode_id": "MLP4B_0029",
+            "block_id": "D06",
+            "selected": [
+              "C04",
+              "C06",
+              "C16"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 5,
+            "hidden_edges": 12
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q1",
+            "episode_id": "MLP4B_0055",
+            "block_id": "D12",
+            "selected": [
+              "C02",
+              "C05",
+              "C06"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 12
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q1",
+            "episode_id": "MLP4B_0056",
+            "block_id": "D12",
+            "selected": [
+              "C03",
+              "C08",
+              "C09"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 6,
+            "hidden_edges": 11
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q1",
+            "episode_id": "MLP4B_0057",
+            "block_id": "D12",
+            "selected": [
+              "C04",
+              "C06",
+              "C15"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 6,
+            "hidden_edges": 12
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q1",
+            "episode_id": "MLP4B_0058",
+            "block_id": "D12",
+            "selected": [
+              "C05",
+              "C09",
+              "C16"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 6,
+            "hidden_edges": 13
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q1",
+            "episode_id": "MLP4B_0059",
+            "block_id": "D12",
+            "selected": [
+              "C02",
+              "C06",
+              "C12"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 6,
+            "optimal_coverage": 7,
+            "normalized_coverage": 0.8571428571428571,
+            "selected_edges": 6,
+            "hidden_edges": 19
+          }
+        ]
+      },
+      {
+        "q": 2,
+        "summary": {
+          "system_id": "gpt_sol_5_6_pro_q2",
+          "display_label": "gpt_sol_5_6_pro support q=2",
+          "exact_optimal": 1,
+          "total": 20,
+          "exact_optimal_percentage": 5.0,
+          "valid": 20,
+          "valid_percentage": 100.0,
+          "achieved_target_coverage": 92,
+          "target_count": 160,
+          "target_coverage_percentage": 57.5,
+          "mean_oracle_normalized_coverage_percentage": 74.76190476190476,
+          "selected_edge_recall_percentage": 34.54545454545455,
+          "wilson_95_interval_fraction": [
+            0.008881448800795402,
+            0.23613119344674205
+          ],
+          "block_bootstrap_95_interval_fraction": [
+            0.0,
+            0.15
+          ],
+          "exact_by_block": {
+            "D04": 1,
+            "D05": 0,
+            "D06": 0,
+            "D12": 0
+          }
+        },
+        "support_edges": {
+          "true_positive": 189,
+          "false_positive": 57,
+          "false_negative": 86,
+          "micro_precision": 0.7682926829268293,
+          "micro_recall": 0.6872727272727273,
+          "micro_f1": 0.72552783109405
+        },
+        "tie_summary": {
+          "valid_episodes": 20,
+          "episodes_with_multiple_predicted_optima": 15,
+          "mean_predicted_optimum_tie_count": 5.35,
+          "episodes_with_a_true_optimum_among_predicted_ties": 9,
+          "expected_exact_count_under_uniform_predicted_tie_break": 2.6527777777777777,
+          "expected_total_coverage_under_uniform_predicted_tie_break": 95.90277777777777,
+          "note": "Offline diagnostic only. All reported pipeline selections use original lexicographic tie break; true labels never select a portfolio."
+        },
+        "tie_per_item": [
+          {
+            "episode_id": "MLP4B_0015",
+            "tie_count": 5,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 4.6,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0016",
+            "tie_count": 2,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 3,
+            "min_true_coverage_among_ties": 3,
+            "max_true_coverage_among_ties": 4,
+            "mean_true_coverage_among_ties": 3.5,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0017",
+            "tie_count": 24,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 4.458333333333333,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0018",
+            "tie_count": 6,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 5,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.16666666666666666
+          },
+          {
+            "episode_id": "MLP4B_0019",
+            "tie_count": 1,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 6,
+            "min_true_coverage_among_ties": 6,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 6,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 1.0
+          },
+          {
+            "episode_id": "MLP4B_0020",
+            "tie_count": 4,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 5,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.25
+          },
+          {
+            "episode_id": "MLP4B_0021",
+            "tie_count": 8,
+            "predicted_max_coverage": 7,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 3,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 3.875,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0022",
+            "tie_count": 5,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 3,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 3.8,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0023",
+            "tie_count": 1,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 5,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 5,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0024",
+            "tie_count": 5,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 4.6,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0025",
+            "tie_count": 9,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 3,
+            "min_true_coverage_among_ties": 3,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 4.111111111111111,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.1111111111111111
+          },
+          {
+            "episode_id": "MLP4B_0026",
+            "tie_count": 4,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 5,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.25
+          },
+          {
+            "episode_id": "MLP4B_0027",
+            "tie_count": 1,
+            "predicted_max_coverage": 8,
+            "lex_chosen_true_coverage": 6,
+            "min_true_coverage_among_ties": 6,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 6,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0028",
+            "tie_count": 4,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 4.75,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0029",
+            "tie_count": 1,
+            "predicted_max_coverage": 8,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 4,
+            "mean_true_coverage_among_ties": 4,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0055",
+            "tie_count": 1,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 5,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 5,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0056",
+            "tie_count": 3,
+            "predicted_max_coverage": 7,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 5,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 5.333333333333333,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.3333333333333333
+          },
+          {
+            "episode_id": "MLP4B_0057",
+            "tie_count": 12,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 4.75,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.08333333333333333
+          },
+          {
+            "episode_id": "MLP4B_0058",
+            "tie_count": 8,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 5,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 5.125,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.125
+          },
+          {
+            "episode_id": "MLP4B_0059",
+            "tie_count": 3,
+            "predicted_max_coverage": 7,
+            "lex_chosen_true_coverage": 6,
+            "min_true_coverage_among_ties": 5,
+            "max_true_coverage_among_ties": 7,
+            "mean_true_coverage_among_ties": 6,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.3333333333333333
+          }
+        ],
+        "per_item": [
+          {
+            "system_id": "gpt_sol_5_6_pro_q2",
+            "episode_id": "MLP4B_0015",
+            "block_id": "D04",
+            "selected": [
+              "C03",
+              "C08",
+              "C14"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 15
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q2",
+            "episode_id": "MLP4B_0016",
+            "block_id": "D04",
+            "selected": [
+              "C01",
+              "C05",
+              "C11"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 3,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.5,
+            "selected_edges": 3,
+            "hidden_edges": 13
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q2",
+            "episode_id": "MLP4B_0017",
+            "block_id": "D04",
+            "selected": [
+              "C02",
+              "C03",
+              "C09"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 14
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q2",
+            "episode_id": "MLP4B_0018",
+            "block_id": "D04",
+            "selected": [
+              "C01",
+              "C15",
+              "C16"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 14
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q2",
+            "episode_id": "MLP4B_0019",
+            "block_id": "D04",
+            "selected": [
+              "C04",
+              "C13",
+              "C16"
+            ],
+            "valid": true,
+            "optimal": true,
+            "coverage": 6,
+            "optimal_coverage": 6,
+            "normalized_coverage": 1.0,
+            "selected_edges": 6,
+            "hidden_edges": 18
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q2",
+            "episode_id": "MLP4B_0020",
+            "block_id": "D05",
+            "selected": [
+              "C03",
+              "C09",
+              "C14"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 4,
+            "hidden_edges": 11
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q2",
+            "episode_id": "MLP4B_0021",
+            "block_id": "D05",
+            "selected": [
+              "C05",
+              "C06",
+              "C09"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 4,
+            "hidden_edges": 15
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q2",
+            "episode_id": "MLP4B_0022",
+            "block_id": "D05",
+            "selected": [
+              "C03",
+              "C13",
+              "C15"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 7,
+            "normalized_coverage": 0.5714285714285714,
+            "selected_edges": 4,
+            "hidden_edges": 14
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q2",
+            "episode_id": "MLP4B_0023",
+            "block_id": "D05",
+            "selected": [
+              "C06",
+              "C09",
+              "C11"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 15
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q2",
+            "episode_id": "MLP4B_0024",
+            "block_id": "D05",
+            "selected": [
+              "C01",
+              "C12",
+              "C15"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 4,
+            "hidden_edges": 12
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q2",
+            "episode_id": "MLP4B_0025",
+            "block_id": "D06",
+            "selected": [
+              "C03",
+              "C07",
+              "C14"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 3,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.5,
+            "selected_edges": 3,
+            "hidden_edges": 15
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q2",
+            "episode_id": "MLP4B_0026",
+            "block_id": "D06",
+            "selected": [
+              "C04",
+              "C05",
+              "C13"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 4,
+            "hidden_edges": 12
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q2",
+            "episode_id": "MLP4B_0027",
+            "block_id": "D06",
+            "selected": [
+              "C02",
+              "C04",
+              "C06"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 6,
+            "optimal_coverage": 7,
+            "normalized_coverage": 0.8571428571428571,
+            "selected_edges": 7,
+            "hidden_edges": 15
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q2",
+            "episode_id": "MLP4B_0028",
+            "block_id": "D06",
+            "selected": [
+              "C03",
+              "C07",
+              "C14"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 4,
+            "hidden_edges": 13
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q2",
+            "episode_id": "MLP4B_0029",
+            "block_id": "D06",
+            "selected": [
+              "C04",
+              "C06",
+              "C16"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 5,
+            "hidden_edges": 12
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q2",
+            "episode_id": "MLP4B_0055",
+            "block_id": "D12",
+            "selected": [
+              "C02",
+              "C05",
+              "C06"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 12
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q2",
+            "episode_id": "MLP4B_0056",
+            "block_id": "D12",
+            "selected": [
+              "C03",
+              "C08",
+              "C16"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 6,
+            "hidden_edges": 11
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q2",
+            "episode_id": "MLP4B_0057",
+            "block_id": "D12",
+            "selected": [
+              "C01",
+              "C04",
+              "C15"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 12
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q2",
+            "episode_id": "MLP4B_0058",
+            "block_id": "D12",
+            "selected": [
+              "C05",
+              "C07",
+              "C09"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 13
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q2",
+            "episode_id": "MLP4B_0059",
+            "block_id": "D12",
+            "selected": [
+              "C02",
+              "C06",
+              "C12"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 6,
+            "optimal_coverage": 7,
+            "normalized_coverage": 0.8571428571428571,
+            "selected_edges": 6,
+            "hidden_edges": 19
+          }
+        ]
+      },
+      {
+        "q": 3,
+        "summary": {
+          "system_id": "gpt_sol_5_6_pro_q3",
+          "display_label": "gpt_sol_5_6_pro support q=3",
+          "exact_optimal": 1,
+          "total": 20,
+          "exact_optimal_percentage": 5.0,
+          "valid": 20,
+          "valid_percentage": 100.0,
+          "achieved_target_coverage": 91,
+          "target_count": 160,
+          "target_coverage_percentage": 56.875,
+          "mean_oracle_normalized_coverage_percentage": 73.92857142857142,
+          "selected_edge_recall_percentage": 34.18181818181818,
+          "wilson_95_interval_fraction": [
+            0.008881448800795402,
+            0.23613119344674205
+          ],
+          "block_bootstrap_95_interval_fraction": [
+            0.0,
+            0.15
+          ],
+          "exact_by_block": {
+            "D04": 1,
+            "D05": 0,
+            "D06": 0,
+            "D12": 0
+          }
+        },
+        "support_edges": {
+          "true_positive": 204,
+          "false_positive": 71,
+          "false_negative": 71,
+          "micro_precision": 0.7418181818181818,
+          "micro_recall": 0.7418181818181818,
+          "micro_f1": 0.7418181818181818
+        },
+        "tie_summary": {
+          "valid_episodes": 20,
+          "episodes_with_multiple_predicted_optima": 15,
+          "mean_predicted_optimum_tie_count": 4.95,
+          "episodes_with_a_true_optimum_among_predicted_ties": 10,
+          "expected_exact_count_under_uniform_predicted_tie_break": 3.067460317460317,
+          "expected_total_coverage_under_uniform_predicted_tie_break": 96.41230158730158,
+          "note": "Offline diagnostic only. All reported pipeline selections use original lexicographic tie break; true labels never select a portfolio."
+        },
+        "tie_per_item": [
+          {
+            "episode_id": "MLP4B_0015",
+            "tie_count": 3,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 5,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 5,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0016",
+            "tie_count": 10,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 3,
+            "min_true_coverage_among_ties": 1,
+            "max_true_coverage_among_ties": 4,
+            "mean_true_coverage_among_ties": 2.8,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0017",
+            "tie_count": 1,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 6,
+            "min_true_coverage_among_ties": 6,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 6,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 1.0
+          },
+          {
+            "episode_id": "MLP4B_0018",
+            "tie_count": 7,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 4.857142857142857,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.14285714285714285
+          },
+          {
+            "episode_id": "MLP4B_0019",
+            "tie_count": 7,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 5,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 5.285714285714286,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.2857142857142857
+          },
+          {
+            "episode_id": "MLP4B_0020",
+            "tie_count": 4,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 5,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.25
+          },
+          {
+            "episode_id": "MLP4B_0021",
+            "tie_count": 8,
+            "predicted_max_coverage": 7,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 3,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 3.875,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0022",
+            "tie_count": 5,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 3,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 3.8,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0023",
+            "tie_count": 1,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 5,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 5,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0024",
+            "tie_count": 5,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 4.6,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0025",
+            "tie_count": 9,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 3,
+            "min_true_coverage_among_ties": 3,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 4.111111111111111,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.1111111111111111
+          },
+          {
+            "episode_id": "MLP4B_0026",
+            "tie_count": 4,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 5,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.25
+          },
+          {
+            "episode_id": "MLP4B_0027",
+            "tie_count": 1,
+            "predicted_max_coverage": 8,
+            "lex_chosen_true_coverage": 6,
+            "min_true_coverage_among_ties": 6,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 6,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0028",
+            "tie_count": 4,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 4.75,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0029",
+            "tie_count": 1,
+            "predicted_max_coverage": 8,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 4,
+            "mean_true_coverage_among_ties": 4,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0055",
+            "tie_count": 1,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 5,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 5,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0056",
+            "tie_count": 3,
+            "predicted_max_coverage": 7,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 5,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 5.333333333333333,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.3333333333333333
+          },
+          {
+            "episode_id": "MLP4B_0057",
+            "tie_count": 12,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 4.75,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.08333333333333333
+          },
+          {
+            "episode_id": "MLP4B_0058",
+            "tie_count": 9,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 5,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.1111111111111111
+          },
+          {
+            "episode_id": "MLP4B_0059",
+            "tie_count": 4,
+            "predicted_max_coverage": 7,
+            "lex_chosen_true_coverage": 6,
+            "min_true_coverage_among_ties": 5,
+            "max_true_coverage_among_ties": 7,
+            "mean_true_coverage_among_ties": 6.25,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.5
+          }
+        ],
+        "per_item": [
+          {
+            "system_id": "gpt_sol_5_6_pro_q3",
+            "episode_id": "MLP4B_0015",
+            "block_id": "D04",
+            "selected": [
+              "C03",
+              "C08",
+              "C14"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 15
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q3",
+            "episode_id": "MLP4B_0016",
+            "block_id": "D04",
+            "selected": [
+              "C01",
+              "C02",
+              "C11"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 3,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.5,
+            "selected_edges": 3,
+            "hidden_edges": 13
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q3",
+            "episode_id": "MLP4B_0017",
+            "block_id": "D04",
+            "selected": [
+              "C03",
+              "C15",
+              "C16"
+            ],
+            "valid": true,
+            "optimal": true,
+            "coverage": 6,
+            "optimal_coverage": 6,
+            "normalized_coverage": 1.0,
+            "selected_edges": 6,
+            "hidden_edges": 14
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q3",
+            "episode_id": "MLP4B_0018",
+            "block_id": "D04",
+            "selected": [
+              "C01",
+              "C15",
+              "C16"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 14
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q3",
+            "episode_id": "MLP4B_0019",
+            "block_id": "D04",
+            "selected": [
+              "C01",
+              "C05",
+              "C07"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 18
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q3",
+            "episode_id": "MLP4B_0020",
+            "block_id": "D05",
+            "selected": [
+              "C03",
+              "C09",
+              "C14"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 4,
+            "hidden_edges": 11
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q3",
+            "episode_id": "MLP4B_0021",
+            "block_id": "D05",
+            "selected": [
+              "C05",
+              "C06",
+              "C09"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 4,
+            "hidden_edges": 15
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q3",
+            "episode_id": "MLP4B_0022",
+            "block_id": "D05",
+            "selected": [
+              "C03",
+              "C13",
+              "C15"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 7,
+            "normalized_coverage": 0.5714285714285714,
+            "selected_edges": 4,
+            "hidden_edges": 14
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q3",
+            "episode_id": "MLP4B_0023",
+            "block_id": "D05",
+            "selected": [
+              "C06",
+              "C09",
+              "C11"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 15
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q3",
+            "episode_id": "MLP4B_0024",
+            "block_id": "D05",
+            "selected": [
+              "C01",
+              "C12",
+              "C15"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 4,
+            "hidden_edges": 12
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q3",
+            "episode_id": "MLP4B_0025",
+            "block_id": "D06",
+            "selected": [
+              "C03",
+              "C07",
+              "C14"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 3,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.5,
+            "selected_edges": 3,
+            "hidden_edges": 15
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q3",
+            "episode_id": "MLP4B_0026",
+            "block_id": "D06",
+            "selected": [
+              "C04",
+              "C05",
+              "C13"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 4,
+            "hidden_edges": 12
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q3",
+            "episode_id": "MLP4B_0027",
+            "block_id": "D06",
+            "selected": [
+              "C02",
+              "C04",
+              "C06"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 6,
+            "optimal_coverage": 7,
+            "normalized_coverage": 0.8571428571428571,
+            "selected_edges": 7,
+            "hidden_edges": 15
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q3",
+            "episode_id": "MLP4B_0028",
+            "block_id": "D06",
+            "selected": [
+              "C03",
+              "C07",
+              "C14"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 4,
+            "hidden_edges": 13
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q3",
+            "episode_id": "MLP4B_0029",
+            "block_id": "D06",
+            "selected": [
+              "C04",
+              "C06",
+              "C16"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 5,
+            "hidden_edges": 12
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q3",
+            "episode_id": "MLP4B_0055",
+            "block_id": "D12",
+            "selected": [
+              "C02",
+              "C05",
+              "C06"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 12
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q3",
+            "episode_id": "MLP4B_0056",
+            "block_id": "D12",
+            "selected": [
+              "C03",
+              "C08",
+              "C16"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 6,
+            "hidden_edges": 11
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q3",
+            "episode_id": "MLP4B_0057",
+            "block_id": "D12",
+            "selected": [
+              "C01",
+              "C04",
+              "C15"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 12
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q3",
+            "episode_id": "MLP4B_0058",
+            "block_id": "D12",
+            "selected": [
+              "C01",
+              "C09",
+              "C16"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 4,
+            "hidden_edges": 13
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q3",
+            "episode_id": "MLP4B_0059",
+            "block_id": "D12",
+            "selected": [
+              "C02",
+              "C06",
+              "C12"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 6,
+            "optimal_coverage": 7,
+            "normalized_coverage": 0.8571428571428571,
+            "selected_edges": 6,
+            "hidden_edges": 19
+          }
+        ]
+      },
+      {
+        "q": 4,
+        "summary": {
+          "system_id": "gpt_sol_5_6_pro_q4",
+          "display_label": "gpt_sol_5_6_pro support q=4",
+          "exact_optimal": 0,
+          "total": 20,
+          "exact_optimal_percentage": 0.0,
+          "valid": 20,
+          "valid_percentage": 100.0,
+          "achieved_target_coverage": 86,
+          "target_count": 160,
+          "target_coverage_percentage": 53.75,
+          "mean_oracle_normalized_coverage_percentage": 70.0,
+          "selected_edge_recall_percentage": 32.72727272727273,
+          "wilson_95_interval_fraction": [
+            0.0,
+            0.16112515805281938
+          ],
+          "block_bootstrap_95_interval_fraction": [
+            0.0,
+            0.0
+          ],
+          "exact_by_block": {
+            "D04": 0,
+            "D05": 0,
+            "D06": 0,
+            "D12": 0
+          }
+        },
+        "support_edges": {
+          "true_positive": 208,
+          "false_positive": 79,
+          "false_negative": 67,
+          "micro_precision": 0.7247386759581882,
+          "micro_recall": 0.7563636363636363,
+          "micro_f1": 0.7402135231316725
+        },
+        "tie_summary": {
+          "valid_episodes": 20,
+          "episodes_with_multiple_predicted_optima": 16,
+          "mean_predicted_optimum_tie_count": 5.9,
+          "episodes_with_a_true_optimum_among_predicted_ties": 11,
+          "expected_exact_count_under_uniform_predicted_tie_break": 2.2582722832722832,
+          "expected_total_coverage_under_uniform_predicted_tie_break": 94.94424464424465,
+          "note": "Offline diagnostic only. All reported pipeline selections use original lexicographic tie break; true labels never select a portfolio."
+        },
+        "tie_per_item": [
+          {
+            "episode_id": "MLP4B_0015",
+            "tie_count": 7,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 5,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.14285714285714285
+          },
+          {
+            "episode_id": "MLP4B_0016",
+            "tie_count": 11,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 3,
+            "min_true_coverage_among_ties": 1,
+            "max_true_coverage_among_ties": 4,
+            "mean_true_coverage_among_ties": 2.727272727272727,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0017",
+            "tie_count": 4,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 5,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 5.25,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.25
+          },
+          {
+            "episode_id": "MLP4B_0018",
+            "tie_count": 13,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 4.615384615384615,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.07692307692307693
+          },
+          {
+            "episode_id": "MLP4B_0019",
+            "tie_count": 8,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 5,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 5.375,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.375
+          },
+          {
+            "episode_id": "MLP4B_0020",
+            "tie_count": 4,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 5,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.25
+          },
+          {
+            "episode_id": "MLP4B_0021",
+            "tie_count": 8,
+            "predicted_max_coverage": 7,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 3,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 3.875,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0022",
+            "tie_count": 5,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 3,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 3.8,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0023",
+            "tie_count": 1,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 5,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 5,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0024",
+            "tie_count": 5,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 4.6,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0025",
+            "tie_count": 9,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 3,
+            "min_true_coverage_among_ties": 3,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 4.111111111111111,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.1111111111111111
+          },
+          {
+            "episode_id": "MLP4B_0026",
+            "tie_count": 4,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 5,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.25
+          },
+          {
+            "episode_id": "MLP4B_0027",
+            "tie_count": 1,
+            "predicted_max_coverage": 8,
+            "lex_chosen_true_coverage": 6,
+            "min_true_coverage_among_ties": 6,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 6,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0028",
+            "tie_count": 4,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 4.75,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0029",
+            "tie_count": 1,
+            "predicted_max_coverage": 8,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 4,
+            "mean_true_coverage_among_ties": 4,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0055",
+            "tie_count": 1,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 5,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 5,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0056",
+            "tie_count": 3,
+            "predicted_max_coverage": 7,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 5,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 5.333333333333333,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.3333333333333333
+          },
+          {
+            "episode_id": "MLP4B_0057",
+            "tie_count": 12,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 4.75,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.08333333333333333
+          },
+          {
+            "episode_id": "MLP4B_0058",
+            "tie_count": 10,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 4.9,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.1
+          },
+          {
+            "episode_id": "MLP4B_0059",
+            "tie_count": 7,
+            "predicted_max_coverage": 7,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 7,
+            "mean_true_coverage_among_ties": 5.857142857142857,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.2857142857142857
+          }
+        ],
+        "per_item": [
+          {
+            "system_id": "gpt_sol_5_6_pro_q4",
+            "episode_id": "MLP4B_0015",
+            "block_id": "D04",
+            "selected": [
+              "C02",
+              "C12",
+              "C14"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 4,
+            "hidden_edges": 15
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q4",
+            "episode_id": "MLP4B_0016",
+            "block_id": "D04",
+            "selected": [
+              "C01",
+              "C02",
+              "C11"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 3,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.5,
+            "selected_edges": 3,
+            "hidden_edges": 13
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q4",
+            "episode_id": "MLP4B_0017",
+            "block_id": "D04",
+            "selected": [
+              "C02",
+              "C03",
+              "C15"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 14
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q4",
+            "episode_id": "MLP4B_0018",
+            "block_id": "D04",
+            "selected": [
+              "C01",
+              "C11",
+              "C15"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 5,
+            "hidden_edges": 14
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q4",
+            "episode_id": "MLP4B_0019",
+            "block_id": "D04",
+            "selected": [
+              "C01",
+              "C05",
+              "C07"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 18
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q4",
+            "episode_id": "MLP4B_0020",
+            "block_id": "D05",
+            "selected": [
+              "C03",
+              "C09",
+              "C14"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 4,
+            "hidden_edges": 11
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q4",
+            "episode_id": "MLP4B_0021",
+            "block_id": "D05",
+            "selected": [
+              "C05",
+              "C06",
+              "C09"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 4,
+            "hidden_edges": 15
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q4",
+            "episode_id": "MLP4B_0022",
+            "block_id": "D05",
+            "selected": [
+              "C03",
+              "C13",
+              "C15"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 7,
+            "normalized_coverage": 0.5714285714285714,
+            "selected_edges": 4,
+            "hidden_edges": 14
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q4",
+            "episode_id": "MLP4B_0023",
+            "block_id": "D05",
+            "selected": [
+              "C06",
+              "C09",
+              "C11"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 15
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q4",
+            "episode_id": "MLP4B_0024",
+            "block_id": "D05",
+            "selected": [
+              "C01",
+              "C12",
+              "C15"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 4,
+            "hidden_edges": 12
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q4",
+            "episode_id": "MLP4B_0025",
+            "block_id": "D06",
+            "selected": [
+              "C03",
+              "C07",
+              "C14"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 3,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.5,
+            "selected_edges": 3,
+            "hidden_edges": 15
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q4",
+            "episode_id": "MLP4B_0026",
+            "block_id": "D06",
+            "selected": [
+              "C04",
+              "C05",
+              "C13"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 4,
+            "hidden_edges": 12
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q4",
+            "episode_id": "MLP4B_0027",
+            "block_id": "D06",
+            "selected": [
+              "C02",
+              "C04",
+              "C06"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 6,
+            "optimal_coverage": 7,
+            "normalized_coverage": 0.8571428571428571,
+            "selected_edges": 7,
+            "hidden_edges": 15
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q4",
+            "episode_id": "MLP4B_0028",
+            "block_id": "D06",
+            "selected": [
+              "C03",
+              "C07",
+              "C14"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 4,
+            "hidden_edges": 13
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q4",
+            "episode_id": "MLP4B_0029",
+            "block_id": "D06",
+            "selected": [
+              "C04",
+              "C06",
+              "C16"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 5,
+            "hidden_edges": 12
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q4",
+            "episode_id": "MLP4B_0055",
+            "block_id": "D12",
+            "selected": [
+              "C02",
+              "C05",
+              "C06"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 12
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q4",
+            "episode_id": "MLP4B_0056",
+            "block_id": "D12",
+            "selected": [
+              "C03",
+              "C08",
+              "C16"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 6,
+            "hidden_edges": 11
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q4",
+            "episode_id": "MLP4B_0057",
+            "block_id": "D12",
+            "selected": [
+              "C01",
+              "C04",
+              "C15"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 12
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q4",
+            "episode_id": "MLP4B_0058",
+            "block_id": "D12",
+            "selected": [
+              "C01",
+              "C09",
+              "C16"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 4,
+            "hidden_edges": 13
+          },
+          {
+            "system_id": "gpt_sol_5_6_pro_q4",
+            "episode_id": "MLP4B_0059",
+            "block_id": "D12",
+            "selected": [
+              "C02",
+              "C04",
+              "C06"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 7,
+            "normalized_coverage": 0.5714285714285714,
+            "selected_edges": 4,
+            "hidden_edges": 19
+          }
+        ]
+      }
+    ],
+    "gpt_sol_5_6_xhigh": [
+      {
+        "q": 1,
+        "summary": {
+          "system_id": "gpt_sol_5_6_xhigh_q1",
+          "display_label": "gpt_sol_5_6_xhigh support q=1",
+          "exact_optimal": 0,
+          "total": 20,
+          "exact_optimal_percentage": 0.0,
+          "valid": 20,
+          "valid_percentage": 100.0,
+          "achieved_target_coverage": 78,
+          "target_count": 160,
+          "target_coverage_percentage": 48.75,
+          "mean_oracle_normalized_coverage_percentage": 63.33333333333333,
+          "selected_edge_recall_percentage": 30.545454545454547,
+          "wilson_95_interval_fraction": [
+            0.0,
+            0.16112515805281938
+          ],
+          "block_bootstrap_95_interval_fraction": [
+            0.0,
+            0.0
+          ],
+          "exact_by_block": {
+            "D04": 0,
+            "D05": 0,
+            "D06": 0,
+            "D12": 0
+          }
+        },
+        "support_edges": {
+          "true_positive": 122,
+          "false_positive": 34,
+          "false_negative": 153,
+          "micro_precision": 0.782051282051282,
+          "micro_recall": 0.44363636363636366,
+          "micro_f1": 0.5661252900232019
+        },
+        "tie_summary": {
+          "valid_episodes": 20,
+          "episodes_with_multiple_predicted_optima": 18,
+          "mean_predicted_optimum_tie_count": 8.3,
+          "episodes_with_a_true_optimum_among_predicted_ties": 8,
+          "expected_exact_count_under_uniform_predicted_tie_break": 1.167857142857143,
+          "expected_total_coverage_under_uniform_predicted_tie_break": 86.47619047619048,
+          "note": "Offline diagnostic only. All reported pipeline selections use original lexicographic tie break; true labels never select a portfolio."
+        },
+        "tie_per_item": [
+          {
+            "episode_id": "MLP4B_0015",
+            "tie_count": 15,
+            "predicted_max_coverage": 4,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 4.733333333333333,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.06666666666666667
+          },
+          {
+            "episode_id": "MLP4B_0016",
+            "tie_count": 4,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 5,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.25
+          },
+          {
+            "episode_id": "MLP4B_0017",
+            "tie_count": 4,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 5,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 5,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0018",
+            "tie_count": 56,
+            "predicted_max_coverage": 3,
+            "lex_chosen_true_coverage": 1,
+            "min_true_coverage_among_ties": 0,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 2.892857142857143,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.017857142857142856
+          },
+          {
+            "episode_id": "MLP4B_0019",
+            "tie_count": 4,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 5,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 5.25,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.25
+          },
+          {
+            "episode_id": "MLP4B_0020",
+            "tie_count": 4,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 5,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 5.25,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.25
+          },
+          {
+            "episode_id": "MLP4B_0021",
+            "tie_count": 6,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 3,
+            "min_true_coverage_among_ties": 2,
+            "max_true_coverage_among_ties": 3,
+            "mean_true_coverage_among_ties": 2.8333333333333335,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0022",
+            "tie_count": 4,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 3,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 3.75,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0023",
+            "tie_count": 1,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 5,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 5,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0024",
+            "tie_count": 15,
+            "predicted_max_coverage": 4,
+            "lex_chosen_true_coverage": 3,
+            "min_true_coverage_among_ties": 2,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 3.3333333333333335,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0025",
+            "tie_count": 3,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 2,
+            "min_true_coverage_among_ties": 2,
+            "max_true_coverage_among_ties": 4,
+            "mean_true_coverage_among_ties": 3,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0026",
+            "tie_count": 15,
+            "predicted_max_coverage": 4,
+            "lex_chosen_true_coverage": 3,
+            "min_true_coverage_among_ties": 3,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 4.266666666666667,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.06666666666666667
+          },
+          {
+            "episode_id": "MLP4B_0027",
+            "tie_count": 1,
+            "predicted_max_coverage": 7,
+            "lex_chosen_true_coverage": 6,
+            "min_true_coverage_among_ties": 6,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 6,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0028",
+            "tie_count": 3,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 4.666666666666667,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0029",
+            "tie_count": 3,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 3,
+            "min_true_coverage_among_ties": 3,
+            "max_true_coverage_among_ties": 4,
+            "mean_true_coverage_among_ties": 3.6666666666666665,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0055",
+            "tie_count": 6,
+            "predicted_max_coverage": 4,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 4.833333333333333,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.16666666666666666
+          },
+          {
+            "episode_id": "MLP4B_0056",
+            "tie_count": 4,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 3,
+            "max_true_coverage_among_ties": 4,
+            "mean_true_coverage_among_ties": 3.75,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0057",
+            "tie_count": 4,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 3,
+            "min_true_coverage_among_ties": 3,
+            "max_true_coverage_among_ties": 4,
+            "mean_true_coverage_among_ties": 3.25,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0058",
+            "tie_count": 4,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 5,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 5,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0059",
+            "tie_count": 10,
+            "predicted_max_coverage": 4,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 3,
+            "max_true_coverage_among_ties": 7,
+            "mean_true_coverage_among_ties": 5,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.1
+          }
+        ],
+        "per_item": [
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q1",
+            "episode_id": "MLP4B_0015",
+            "block_id": "D04",
+            "selected": [
+              "C03",
+              "C05",
+              "C14"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 4,
+            "hidden_edges": 15
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q1",
+            "episode_id": "MLP4B_0016",
+            "block_id": "D04",
+            "selected": [
+              "C02",
+              "C07",
+              "C10"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 13
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q1",
+            "episode_id": "MLP4B_0017",
+            "block_id": "D04",
+            "selected": [
+              "C02",
+              "C03",
+              "C09"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 14
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q1",
+            "episode_id": "MLP4B_0018",
+            "block_id": "D04",
+            "selected": [
+              "C01",
+              "C04",
+              "C10"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 1,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.16666666666666666,
+            "selected_edges": 1,
+            "hidden_edges": 14
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q1",
+            "episode_id": "MLP4B_0019",
+            "block_id": "D04",
+            "selected": [
+              "C04",
+              "C05",
+              "C16"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 18
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q1",
+            "episode_id": "MLP4B_0020",
+            "block_id": "D05",
+            "selected": [
+              "C07",
+              "C09",
+              "C16"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 11
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q1",
+            "episode_id": "MLP4B_0021",
+            "block_id": "D05",
+            "selected": [
+              "C06",
+              "C09",
+              "C14"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 3,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.5,
+            "selected_edges": 3,
+            "hidden_edges": 15
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q1",
+            "episode_id": "MLP4B_0022",
+            "block_id": "D05",
+            "selected": [
+              "C03",
+              "C13",
+              "C15"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 7,
+            "normalized_coverage": 0.5714285714285714,
+            "selected_edges": 4,
+            "hidden_edges": 14
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q1",
+            "episode_id": "MLP4B_0023",
+            "block_id": "D05",
+            "selected": [
+              "C06",
+              "C09",
+              "C11"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 15
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q1",
+            "episode_id": "MLP4B_0024",
+            "block_id": "D05",
+            "selected": [
+              "C01",
+              "C06",
+              "C15"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 3,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.5,
+            "selected_edges": 3,
+            "hidden_edges": 12
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q1",
+            "episode_id": "MLP4B_0025",
+            "block_id": "D06",
+            "selected": [
+              "C03",
+              "C07",
+              "C12"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 2,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.3333333333333333,
+            "selected_edges": 2,
+            "hidden_edges": 15
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q1",
+            "episode_id": "MLP4B_0026",
+            "block_id": "D06",
+            "selected": [
+              "C01",
+              "C04",
+              "C05"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 3,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.5,
+            "selected_edges": 4,
+            "hidden_edges": 12
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q1",
+            "episode_id": "MLP4B_0027",
+            "block_id": "D06",
+            "selected": [
+              "C02",
+              "C04",
+              "C06"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 6,
+            "optimal_coverage": 7,
+            "normalized_coverage": 0.8571428571428571,
+            "selected_edges": 7,
+            "hidden_edges": 15
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q1",
+            "episode_id": "MLP4B_0028",
+            "block_id": "D06",
+            "selected": [
+              "C03",
+              "C07",
+              "C14"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 4,
+            "hidden_edges": 13
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q1",
+            "episode_id": "MLP4B_0029",
+            "block_id": "D06",
+            "selected": [
+              "C03",
+              "C04",
+              "C16"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 3,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.5,
+            "selected_edges": 3,
+            "hidden_edges": 12
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q1",
+            "episode_id": "MLP4B_0055",
+            "block_id": "D12",
+            "selected": [
+              "C02",
+              "C03",
+              "C05"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 4,
+            "hidden_edges": 12
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q1",
+            "episode_id": "MLP4B_0056",
+            "block_id": "D12",
+            "selected": [
+              "C03",
+              "C05",
+              "C08"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 5,
+            "hidden_edges": 11
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q1",
+            "episode_id": "MLP4B_0057",
+            "block_id": "D12",
+            "selected": [
+              "C04",
+              "C06",
+              "C16"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 3,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.5,
+            "selected_edges": 4,
+            "hidden_edges": 12
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q1",
+            "episode_id": "MLP4B_0058",
+            "block_id": "D12",
+            "selected": [
+              "C05",
+              "C09",
+              "C16"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 6,
+            "hidden_edges": 13
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q1",
+            "episode_id": "MLP4B_0059",
+            "block_id": "D12",
+            "selected": [
+              "C02",
+              "C03",
+              "C06"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 7,
+            "normalized_coverage": 0.5714285714285714,
+            "selected_edges": 5,
+            "hidden_edges": 19
+          }
+        ]
+      },
+      {
+        "q": 2,
+        "summary": {
+          "system_id": "gpt_sol_5_6_xhigh_q2",
+          "display_label": "gpt_sol_5_6_xhigh support q=2",
+          "exact_optimal": 0,
+          "total": 20,
+          "exact_optimal_percentage": 0.0,
+          "valid": 20,
+          "valid_percentage": 100.0,
+          "achieved_target_coverage": 78,
+          "target_count": 160,
+          "target_coverage_percentage": 48.75,
+          "mean_oracle_normalized_coverage_percentage": 63.80952380952382,
+          "selected_edge_recall_percentage": 31.272727272727273,
+          "wilson_95_interval_fraction": [
+            0.0,
+            0.16112515805281938
+          ],
+          "block_bootstrap_95_interval_fraction": [
+            0.0,
+            0.0
+          ],
+          "exact_by_block": {
+            "D04": 0,
+            "D05": 0,
+            "D06": 0,
+            "D12": 0
+          }
+        },
+        "support_edges": {
+          "true_positive": 183,
+          "false_positive": 72,
+          "false_negative": 92,
+          "micro_precision": 0.7176470588235294,
+          "micro_recall": 0.6654545454545454,
+          "micro_f1": 0.690566037735849
+        },
+        "tie_summary": {
+          "valid_episodes": 20,
+          "episodes_with_multiple_predicted_optima": 16,
+          "mean_predicted_optimum_tie_count": 9.65,
+          "episodes_with_a_true_optimum_among_predicted_ties": 9,
+          "expected_exact_count_under_uniform_predicted_tie_break": 1.2795454545454545,
+          "expected_total_coverage_under_uniform_predicted_tie_break": 87.69292929292929,
+          "note": "Offline diagnostic only. All reported pipeline selections use original lexicographic tie break; true labels never select a portfolio."
+        },
+        "tie_per_item": [
+          {
+            "episode_id": "MLP4B_0015",
+            "tie_count": 9,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 4.444444444444445,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0016",
+            "tie_count": 8,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 4.875,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.125
+          },
+          {
+            "episode_id": "MLP4B_0017",
+            "tie_count": 24,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 4.458333333333333,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0018",
+            "tie_count": 33,
+            "predicted_max_coverage": 4,
+            "lex_chosen_true_coverage": 3,
+            "min_true_coverage_among_ties": 2,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 3.9696969696969697,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.030303030303030304
+          },
+          {
+            "episode_id": "MLP4B_0019",
+            "tie_count": 9,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 5,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.1111111111111111
+          },
+          {
+            "episode_id": "MLP4B_0020",
+            "tie_count": 11,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 2,
+            "min_true_coverage_among_ties": 2,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 4,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.09090909090909091
+          },
+          {
+            "episode_id": "MLP4B_0021",
+            "tie_count": 1,
+            "predicted_max_coverage": 8,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 4,
+            "mean_true_coverage_among_ties": 4,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0022",
+            "tie_count": 20,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 1,
+            "min_true_coverage_among_ties": 0,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 2.3,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0023",
+            "tie_count": 1,
+            "predicted_max_coverage": 7,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 5,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 5,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0024",
+            "tie_count": 5,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 4.6,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0025",
+            "tie_count": 20,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 2,
+            "min_true_coverage_among_ties": 2,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 3.8,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.05
+          },
+          {
+            "episode_id": "MLP4B_0026",
+            "tie_count": 1,
+            "predicted_max_coverage": 7,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 5,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 5,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0027",
+            "tie_count": 11,
+            "predicted_max_coverage": 7,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 4.545454545454546,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0028",
+            "tie_count": 4,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 4.75,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0029",
+            "tie_count": 1,
+            "predicted_max_coverage": 7,
+            "lex_chosen_true_coverage": 3,
+            "min_true_coverage_among_ties": 3,
+            "max_true_coverage_among_ties": 3,
+            "mean_true_coverage_among_ties": 3,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0055",
+            "tie_count": 5,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 5,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.2
+          },
+          {
+            "episode_id": "MLP4B_0056",
+            "tie_count": 4,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 5,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.25
+          },
+          {
+            "episode_id": "MLP4B_0057",
+            "tie_count": 12,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 3,
+            "min_true_coverage_among_ties": 2,
+            "max_true_coverage_among_ties": 4,
+            "mean_true_coverage_among_ties": 3.0833333333333335,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0058",
+            "tie_count": 5,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 5,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 5.2,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.2
+          },
+          {
+            "episode_id": "MLP4B_0059",
+            "tie_count": 9,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 7,
+            "mean_true_coverage_among_ties": 5.666666666666667,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.2222222222222222
+          }
+        ],
+        "per_item": [
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q2",
+            "episode_id": "MLP4B_0015",
+            "block_id": "D04",
+            "selected": [
+              "C03",
+              "C08",
+              "C14"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 15
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q2",
+            "episode_id": "MLP4B_0016",
+            "block_id": "D04",
+            "selected": [
+              "C01",
+              "C02",
+              "C10"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 13
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q2",
+            "episode_id": "MLP4B_0017",
+            "block_id": "D04",
+            "selected": [
+              "C02",
+              "C03",
+              "C09"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 14
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q2",
+            "episode_id": "MLP4B_0018",
+            "block_id": "D04",
+            "selected": [
+              "C01",
+              "C05",
+              "C16"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 3,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.5,
+            "selected_edges": 4,
+            "hidden_edges": 14
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q2",
+            "episode_id": "MLP4B_0019",
+            "block_id": "D04",
+            "selected": [
+              "C02",
+              "C04",
+              "C07"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 4,
+            "hidden_edges": 18
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q2",
+            "episode_id": "MLP4B_0020",
+            "block_id": "D05",
+            "selected": [
+              "C01",
+              "C03",
+              "C13"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 2,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.3333333333333333,
+            "selected_edges": 2,
+            "hidden_edges": 11
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q2",
+            "episode_id": "MLP4B_0021",
+            "block_id": "D05",
+            "selected": [
+              "C08",
+              "C10",
+              "C14"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 4,
+            "hidden_edges": 15
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q2",
+            "episode_id": "MLP4B_0022",
+            "block_id": "D05",
+            "selected": [
+              "C01",
+              "C03",
+              "C10"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 1,
+            "optimal_coverage": 7,
+            "normalized_coverage": 0.14285714285714285,
+            "selected_edges": 1,
+            "hidden_edges": 14
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q2",
+            "episode_id": "MLP4B_0023",
+            "block_id": "D05",
+            "selected": [
+              "C06",
+              "C09",
+              "C11"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 15
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q2",
+            "episode_id": "MLP4B_0024",
+            "block_id": "D05",
+            "selected": [
+              "C01",
+              "C12",
+              "C15"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 4,
+            "hidden_edges": 12
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q2",
+            "episode_id": "MLP4B_0025",
+            "block_id": "D06",
+            "selected": [
+              "C03",
+              "C07",
+              "C12"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 2,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.3333333333333333,
+            "selected_edges": 2,
+            "hidden_edges": 15
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q2",
+            "episode_id": "MLP4B_0026",
+            "block_id": "D06",
+            "selected": [
+              "C01",
+              "C07",
+              "C15"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 12
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q2",
+            "episode_id": "MLP4B_0027",
+            "block_id": "D06",
+            "selected": [
+              "C01",
+              "C02",
+              "C06"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 7,
+            "normalized_coverage": 0.7142857142857143,
+            "selected_edges": 9,
+            "hidden_edges": 15
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q2",
+            "episode_id": "MLP4B_0028",
+            "block_id": "D06",
+            "selected": [
+              "C03",
+              "C07",
+              "C14"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 4,
+            "hidden_edges": 13
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q2",
+            "episode_id": "MLP4B_0029",
+            "block_id": "D06",
+            "selected": [
+              "C03",
+              "C04",
+              "C16"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 3,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.5,
+            "selected_edges": 3,
+            "hidden_edges": 12
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q2",
+            "episode_id": "MLP4B_0055",
+            "block_id": "D12",
+            "selected": [
+              "C01",
+              "C02",
+              "C06"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 5,
+            "hidden_edges": 12
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q2",
+            "episode_id": "MLP4B_0056",
+            "block_id": "D12",
+            "selected": [
+              "C03",
+              "C08",
+              "C16"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 6,
+            "hidden_edges": 11
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q2",
+            "episode_id": "MLP4B_0057",
+            "block_id": "D12",
+            "selected": [
+              "C02",
+              "C04",
+              "C16"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 3,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.5,
+            "selected_edges": 3,
+            "hidden_edges": 12
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q2",
+            "episode_id": "MLP4B_0058",
+            "block_id": "D12",
+            "selected": [
+              "C05",
+              "C09",
+              "C16"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 6,
+            "hidden_edges": 13
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q2",
+            "episode_id": "MLP4B_0059",
+            "block_id": "D12",
+            "selected": [
+              "C02",
+              "C04",
+              "C06"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 7,
+            "normalized_coverage": 0.5714285714285714,
+            "selected_edges": 4,
+            "hidden_edges": 19
+          }
+        ]
+      },
+      {
+        "q": 3,
+        "summary": {
+          "system_id": "gpt_sol_5_6_xhigh_q3",
+          "display_label": "gpt_sol_5_6_xhigh support q=3",
+          "exact_optimal": 0,
+          "total": 20,
+          "exact_optimal_percentage": 0.0,
+          "valid": 20,
+          "valid_percentage": 100.0,
+          "achieved_target_coverage": 81,
+          "target_count": 160,
+          "target_coverage_percentage": 50.625,
+          "mean_oracle_normalized_coverage_percentage": 66.30952380952382,
+          "selected_edge_recall_percentage": 32.0,
+          "wilson_95_interval_fraction": [
+            0.0,
+            0.16112515805281938
+          ],
+          "block_bootstrap_95_interval_fraction": [
+            0.0,
+            0.0
+          ],
+          "exact_by_block": {
+            "D04": 0,
+            "D05": 0,
+            "D06": 0,
+            "D12": 0
+          }
+        },
+        "support_edges": {
+          "true_positive": 205,
+          "false_positive": 90,
+          "false_negative": 70,
+          "micro_precision": 0.6949152542372882,
+          "micro_recall": 0.7454545454545455,
+          "micro_f1": 0.7192982456140351
+        },
+        "tie_summary": {
+          "valid_episodes": 20,
+          "episodes_with_multiple_predicted_optima": 17,
+          "mean_predicted_optimum_tie_count": 9.8,
+          "episodes_with_a_true_optimum_among_predicted_ties": 9,
+          "expected_exact_count_under_uniform_predicted_tie_break": 1.2413165266106443,
+          "expected_total_coverage_under_uniform_predicted_tie_break": 88.56785714285714,
+          "note": "Offline diagnostic only. All reported pipeline selections use original lexicographic tie break; true labels never select a portfolio."
+        },
+        "tie_per_item": [
+          {
+            "episode_id": "MLP4B_0015",
+            "tie_count": 3,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 5,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 5,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0016",
+            "tie_count": 8,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 4.875,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.125
+          },
+          {
+            "episode_id": "MLP4B_0017",
+            "tie_count": 34,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 4.5,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.029411764705882353
+          },
+          {
+            "episode_id": "MLP4B_0018",
+            "tie_count": 40,
+            "predicted_max_coverage": 4,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 2,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 4,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.025
+          },
+          {
+            "episode_id": "MLP4B_0019",
+            "tie_count": 7,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 5,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 5.285714285714286,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.2857142857142857
+          },
+          {
+            "episode_id": "MLP4B_0020",
+            "tie_count": 6,
+            "predicted_max_coverage": 7,
+            "lex_chosen_true_coverage": 2,
+            "min_true_coverage_among_ties": 2,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 3.6666666666666665,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0021",
+            "tie_count": 8,
+            "predicted_max_coverage": 8,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 3,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 4,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0022",
+            "tie_count": 24,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 1,
+            "min_true_coverage_among_ties": 0,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 2.1666666666666665,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0023",
+            "tie_count": 4,
+            "predicted_max_coverage": 7,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 5,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 5,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0024",
+            "tie_count": 1,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 4,
+            "mean_true_coverage_among_ties": 4,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0025",
+            "tie_count": 20,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 2,
+            "min_true_coverage_among_ties": 2,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 3.8,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.05
+          },
+          {
+            "episode_id": "MLP4B_0026",
+            "tie_count": 1,
+            "predicted_max_coverage": 7,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 5,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 5,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0027",
+            "tie_count": 3,
+            "predicted_max_coverage": 8,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 5,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 5.333333333333333,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0028",
+            "tie_count": 4,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 4.75,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0029",
+            "tie_count": 1,
+            "predicted_max_coverage": 7,
+            "lex_chosen_true_coverage": 3,
+            "min_true_coverage_among_ties": 3,
+            "max_true_coverage_among_ties": 3,
+            "mean_true_coverage_among_ties": 3,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0055",
+            "tie_count": 7,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 4.857142857142857,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.14285714285714285
+          },
+          {
+            "episode_id": "MLP4B_0056",
+            "tie_count": 4,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 5,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.25
+          },
+          {
+            "episode_id": "MLP4B_0057",
+            "tie_count": 3,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 3,
+            "max_true_coverage_among_ties": 4,
+            "mean_true_coverage_among_ties": 3.6666666666666665,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0058",
+            "tie_count": 9,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 5,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.1111111111111111
+          },
+          {
+            "episode_id": "MLP4B_0059",
+            "tie_count": 9,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 7,
+            "mean_true_coverage_among_ties": 5.666666666666667,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.2222222222222222
+          }
+        ],
+        "per_item": [
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q3",
+            "episode_id": "MLP4B_0015",
+            "block_id": "D04",
+            "selected": [
+              "C03",
+              "C08",
+              "C14"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 15
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q3",
+            "episode_id": "MLP4B_0016",
+            "block_id": "D04",
+            "selected": [
+              "C01",
+              "C02",
+              "C10"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 13
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q3",
+            "episode_id": "MLP4B_0017",
+            "block_id": "D04",
+            "selected": [
+              "C02",
+              "C03",
+              "C09"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 14
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q3",
+            "episode_id": "MLP4B_0018",
+            "block_id": "D04",
+            "selected": [
+              "C01",
+              "C02",
+              "C16"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 4,
+            "hidden_edges": 14
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q3",
+            "episode_id": "MLP4B_0019",
+            "block_id": "D04",
+            "selected": [
+              "C01",
+              "C05",
+              "C07"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 18
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q3",
+            "episode_id": "MLP4B_0020",
+            "block_id": "D05",
+            "selected": [
+              "C02",
+              "C03",
+              "C13"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 2,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.3333333333333333,
+            "selected_edges": 2,
+            "hidden_edges": 11
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q3",
+            "episode_id": "MLP4B_0021",
+            "block_id": "D05",
+            "selected": [
+              "C05",
+              "C07",
+              "C09"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 4,
+            "hidden_edges": 15
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q3",
+            "episode_id": "MLP4B_0022",
+            "block_id": "D05",
+            "selected": [
+              "C01",
+              "C03",
+              "C10"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 1,
+            "optimal_coverage": 7,
+            "normalized_coverage": 0.14285714285714285,
+            "selected_edges": 1,
+            "hidden_edges": 14
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q3",
+            "episode_id": "MLP4B_0023",
+            "block_id": "D05",
+            "selected": [
+              "C01",
+              "C03",
+              "C11"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 6,
+            "hidden_edges": 15
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q3",
+            "episode_id": "MLP4B_0024",
+            "block_id": "D05",
+            "selected": [
+              "C12",
+              "C15",
+              "C16"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 4,
+            "hidden_edges": 12
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q3",
+            "episode_id": "MLP4B_0025",
+            "block_id": "D06",
+            "selected": [
+              "C03",
+              "C07",
+              "C12"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 2,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.3333333333333333,
+            "selected_edges": 2,
+            "hidden_edges": 15
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q3",
+            "episode_id": "MLP4B_0026",
+            "block_id": "D06",
+            "selected": [
+              "C01",
+              "C07",
+              "C15"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 12
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q3",
+            "episode_id": "MLP4B_0027",
+            "block_id": "D06",
+            "selected": [
+              "C01",
+              "C02",
+              "C06"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 7,
+            "normalized_coverage": 0.7142857142857143,
+            "selected_edges": 9,
+            "hidden_edges": 15
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q3",
+            "episode_id": "MLP4B_0028",
+            "block_id": "D06",
+            "selected": [
+              "C03",
+              "C07",
+              "C14"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 4,
+            "hidden_edges": 13
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q3",
+            "episode_id": "MLP4B_0029",
+            "block_id": "D06",
+            "selected": [
+              "C03",
+              "C04",
+              "C16"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 3,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.5,
+            "selected_edges": 3,
+            "hidden_edges": 12
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q3",
+            "episode_id": "MLP4B_0055",
+            "block_id": "D12",
+            "selected": [
+              "C01",
+              "C02",
+              "C06"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 5,
+            "hidden_edges": 12
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q3",
+            "episode_id": "MLP4B_0056",
+            "block_id": "D12",
+            "selected": [
+              "C03",
+              "C08",
+              "C16"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 6,
+            "hidden_edges": 11
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q3",
+            "episode_id": "MLP4B_0057",
+            "block_id": "D12",
+            "selected": [
+              "C06",
+              "C12",
+              "C16"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 4,
+            "hidden_edges": 12
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q3",
+            "episode_id": "MLP4B_0058",
+            "block_id": "D12",
+            "selected": [
+              "C05",
+              "C07",
+              "C09"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 13
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q3",
+            "episode_id": "MLP4B_0059",
+            "block_id": "D12",
+            "selected": [
+              "C02",
+              "C04",
+              "C06"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 7,
+            "normalized_coverage": 0.5714285714285714,
+            "selected_edges": 4,
+            "hidden_edges": 19
+          }
+        ]
+      },
+      {
+        "q": 4,
+        "summary": {
+          "system_id": "gpt_sol_5_6_xhigh_q4",
+          "display_label": "gpt_sol_5_6_xhigh support q=4",
+          "exact_optimal": 0,
+          "total": 20,
+          "exact_optimal_percentage": 0.0,
+          "valid": 20,
+          "valid_percentage": 100.0,
+          "achieved_target_coverage": 80,
+          "target_count": 160,
+          "target_coverage_percentage": 50.0,
+          "mean_oracle_normalized_coverage_percentage": 65.47619047619047,
+          "selected_edge_recall_percentage": 31.636363636363637,
+          "wilson_95_interval_fraction": [
+            0.0,
+            0.16112515805281938
+          ],
+          "block_bootstrap_95_interval_fraction": [
+            0.0,
+            0.0
+          ],
+          "exact_by_block": {
+            "D04": 0,
+            "D05": 0,
+            "D06": 0,
+            "D12": 0
+          }
+        },
+        "support_edges": {
+          "true_positive": 210,
+          "false_positive": 93,
+          "false_negative": 65,
+          "micro_precision": 0.693069306930693,
+          "micro_recall": 0.7636363636363637,
+          "micro_f1": 0.7266435986159169
+        },
+        "tie_summary": {
+          "valid_episodes": 20,
+          "episodes_with_multiple_predicted_optima": 17,
+          "mean_predicted_optimum_tie_count": 10.1,
+          "episodes_with_a_true_optimum_among_predicted_ties": 11,
+          "expected_exact_count_under_uniform_predicted_tie_break": 1.686157796451914,
+          "expected_total_coverage_under_uniform_predicted_tie_break": 88.92380952380952,
+          "note": "Offline diagnostic only. All reported pipeline selections use original lexicographic tie break; true labels never select a portfolio."
+        },
+        "tie_per_item": [
+          {
+            "episode_id": "MLP4B_0015",
+            "tie_count": 6,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 5,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 5.166666666666667,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.16666666666666666
+          },
+          {
+            "episode_id": "MLP4B_0016",
+            "tie_count": 8,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 4.875,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.125
+          },
+          {
+            "episode_id": "MLP4B_0017",
+            "tie_count": 34,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 4.5,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.029411764705882353
+          },
+          {
+            "episode_id": "MLP4B_0018",
+            "tie_count": 40,
+            "predicted_max_coverage": 4,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 2,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 4,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.025
+          },
+          {
+            "episode_id": "MLP4B_0019",
+            "tie_count": 8,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 5,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 5.375,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.375
+          },
+          {
+            "episode_id": "MLP4B_0020",
+            "tie_count": 6,
+            "predicted_max_coverage": 7,
+            "lex_chosen_true_coverage": 2,
+            "min_true_coverage_among_ties": 2,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 3.6666666666666665,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0021",
+            "tie_count": 8,
+            "predicted_max_coverage": 8,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 3,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 4,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0022",
+            "tie_count": 24,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 1,
+            "min_true_coverage_among_ties": 0,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 2.1666666666666665,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0023",
+            "tie_count": 5,
+            "predicted_max_coverage": 7,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 5,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 5.2,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.2
+          },
+          {
+            "episode_id": "MLP4B_0024",
+            "tie_count": 1,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 4,
+            "mean_true_coverage_among_ties": 4,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0025",
+            "tie_count": 20,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 2,
+            "min_true_coverage_among_ties": 2,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 3.8,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.05
+          },
+          {
+            "episode_id": "MLP4B_0026",
+            "tie_count": 1,
+            "predicted_max_coverage": 7,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 5,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 5,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0027",
+            "tie_count": 3,
+            "predicted_max_coverage": 8,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 5,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 5.333333333333333,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0028",
+            "tie_count": 4,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 4.75,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0029",
+            "tie_count": 1,
+            "predicted_max_coverage": 7,
+            "lex_chosen_true_coverage": 3,
+            "min_true_coverage_among_ties": 3,
+            "max_true_coverage_among_ties": 3,
+            "mean_true_coverage_among_ties": 3,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0055",
+            "tie_count": 7,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 4.857142857142857,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.14285714285714285
+          },
+          {
+            "episode_id": "MLP4B_0056",
+            "tie_count": 4,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 5,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.25
+          },
+          {
+            "episode_id": "MLP4B_0057",
+            "tie_count": 3,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 3,
+            "max_true_coverage_among_ties": 4,
+            "mean_true_coverage_among_ties": 3.6666666666666665,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0058",
+            "tie_count": 10,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 4.9,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.1
+          },
+          {
+            "episode_id": "MLP4B_0059",
+            "tie_count": 9,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 7,
+            "mean_true_coverage_among_ties": 5.666666666666667,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.2222222222222222
+          }
+        ],
+        "per_item": [
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q4",
+            "episode_id": "MLP4B_0015",
+            "block_id": "D04",
+            "selected": [
+              "C03",
+              "C08",
+              "C14"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 15
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q4",
+            "episode_id": "MLP4B_0016",
+            "block_id": "D04",
+            "selected": [
+              "C01",
+              "C02",
+              "C10"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 13
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q4",
+            "episode_id": "MLP4B_0017",
+            "block_id": "D04",
+            "selected": [
+              "C02",
+              "C03",
+              "C09"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 14
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q4",
+            "episode_id": "MLP4B_0018",
+            "block_id": "D04",
+            "selected": [
+              "C01",
+              "C02",
+              "C16"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 4,
+            "hidden_edges": 14
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q4",
+            "episode_id": "MLP4B_0019",
+            "block_id": "D04",
+            "selected": [
+              "C01",
+              "C05",
+              "C07"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 18
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q4",
+            "episode_id": "MLP4B_0020",
+            "block_id": "D05",
+            "selected": [
+              "C02",
+              "C03",
+              "C13"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 2,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.3333333333333333,
+            "selected_edges": 2,
+            "hidden_edges": 11
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q4",
+            "episode_id": "MLP4B_0021",
+            "block_id": "D05",
+            "selected": [
+              "C05",
+              "C07",
+              "C09"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 4,
+            "hidden_edges": 15
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q4",
+            "episode_id": "MLP4B_0022",
+            "block_id": "D05",
+            "selected": [
+              "C01",
+              "C03",
+              "C10"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 1,
+            "optimal_coverage": 7,
+            "normalized_coverage": 0.14285714285714285,
+            "selected_edges": 1,
+            "hidden_edges": 14
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q4",
+            "episode_id": "MLP4B_0023",
+            "block_id": "D05",
+            "selected": [
+              "C01",
+              "C03",
+              "C11"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 6,
+            "hidden_edges": 15
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q4",
+            "episode_id": "MLP4B_0024",
+            "block_id": "D05",
+            "selected": [
+              "C12",
+              "C15",
+              "C16"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 4,
+            "hidden_edges": 12
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q4",
+            "episode_id": "MLP4B_0025",
+            "block_id": "D06",
+            "selected": [
+              "C03",
+              "C07",
+              "C12"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 2,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.3333333333333333,
+            "selected_edges": 2,
+            "hidden_edges": 15
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q4",
+            "episode_id": "MLP4B_0026",
+            "block_id": "D06",
+            "selected": [
+              "C01",
+              "C07",
+              "C15"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 12
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q4",
+            "episode_id": "MLP4B_0027",
+            "block_id": "D06",
+            "selected": [
+              "C01",
+              "C02",
+              "C06"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 7,
+            "normalized_coverage": 0.7142857142857143,
+            "selected_edges": 9,
+            "hidden_edges": 15
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q4",
+            "episode_id": "MLP4B_0028",
+            "block_id": "D06",
+            "selected": [
+              "C03",
+              "C07",
+              "C14"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 4,
+            "hidden_edges": 13
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q4",
+            "episode_id": "MLP4B_0029",
+            "block_id": "D06",
+            "selected": [
+              "C03",
+              "C04",
+              "C16"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 3,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.5,
+            "selected_edges": 3,
+            "hidden_edges": 12
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q4",
+            "episode_id": "MLP4B_0055",
+            "block_id": "D12",
+            "selected": [
+              "C01",
+              "C02",
+              "C06"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 5,
+            "hidden_edges": 12
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q4",
+            "episode_id": "MLP4B_0056",
+            "block_id": "D12",
+            "selected": [
+              "C03",
+              "C08",
+              "C16"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 6,
+            "hidden_edges": 11
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q4",
+            "episode_id": "MLP4B_0057",
+            "block_id": "D12",
+            "selected": [
+              "C06",
+              "C12",
+              "C16"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 4,
+            "hidden_edges": 12
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q4",
+            "episode_id": "MLP4B_0058",
+            "block_id": "D12",
+            "selected": [
+              "C01",
+              "C09",
+              "C16"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 4,
+            "hidden_edges": 13
+          },
+          {
+            "system_id": "gpt_sol_5_6_xhigh_q4",
+            "episode_id": "MLP4B_0059",
+            "block_id": "D12",
+            "selected": [
+              "C02",
+              "C04",
+              "C06"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 7,
+            "normalized_coverage": 0.5714285714285714,
+            "selected_edges": 4,
+            "hidden_edges": 19
+          }
+        ]
+      }
+    ]
+  }
+}

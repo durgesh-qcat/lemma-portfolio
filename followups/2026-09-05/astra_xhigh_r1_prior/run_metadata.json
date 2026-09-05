@@ -1,0 +1,68 @@
+{
+  "model": "gpt-6-astra",
+  "reasoning_effort": "xhigh",
+  "surface": "Codex CLI",
+  "cli_version": "codex-cli 0.153.0",
+  "cli_binary_sha256": "0166f25c39d6200d42e2c2aa3733bd6a4ac469a213427489f0fa16b656eb6f00",
+  "started_utc": "2026-09-04T23:48:24.465124+00:00",
+  "repo_commit": "1503aa03bc6fb4e9c27890eae46141137496eea0",
+  "protocol": "12 direct prompts in numerical order; fresh process and blank working directory per prompt",
+  "temperature": "not exposed",
+  "numeric_reasoning_budget": "not exposed",
+  "tools": "feature flags disabled; raw event stream audited for tool use",
+  "retry_policy": "no mathematical retries; stop on transport error and preserve evidence",
+  "system_prompt": "Codex bundled instructions; no project instructions; user config ignored",
+  "labels": "not supplied to evaluated model; released benchmark, not a new hidden split",
+  "comparison_caveat": "Codex harness differs from the prior consumer ChatGPT captures",
+  "prompts": [
+    {
+      "file": "prompts/DIRECT_PROMPTS/01.txt",
+      "sha256": "febe94397bd43a8a0be9b38d705c08eee2141b4a2ab755d5a46d87596506940c"
+    },
+    {
+      "file": "prompts/DIRECT_PROMPTS/02.txt",
+      "sha256": "9b736aaa054838df6d04357ab3ffcac70efccdbdbf20f212389600c2216031b4"
+    },
+    {
+      "file": "prompts/DIRECT_PROMPTS/03.txt",
+      "sha256": "6a79e47946d40e8114af5f609f7e960287ed76f70e891a200f6824fcf7aa1f70"
+    },
+    {
+      "file": "prompts/DIRECT_PROMPTS/04.txt",
+      "sha256": "e85ce36bf8b82e04592c7c47afd391b0b2e519ee6bd1e6bcd1197bd429dd7f3d"
+    },
+    {
+      "file": "prompts/DIRECT_PROMPTS/05.txt",
+      "sha256": "942539a45bdbc8eb682bf0df4075ac226fd519be566d83273fe1c0e36b656449"
+    },
+    {
+      "file": "prompts/DIRECT_PROMPTS/06.txt",
+      "sha256": "376664ae74121b60446ed72fb5801e26ec8db066e52b3097034cc53344e167d9"
+    },
+    {
+      "file": "prompts/DIRECT_PROMPTS/07.txt",
+      "sha256": "fe0552e4134e2e9f9780055949d4d662459c9e0ca75134fbb4532979206652a4"
+    },
+    {
+      "file": "prompts/DIRECT_PROMPTS/08.txt",
+      "sha256": "2ee2884b8afdcfc9138abe6e7076ba98a9f26aaf4a3e66fd67eac4d7c97794ae"
+    },
+    {
+      "file": "prompts/DIRECT_PROMPTS/09.txt",
+      "sha256": "ebb62b772ab44523248c9b512e20525a81b4d26b81610105dcc3303f9eacccb9"
+    },
+    {
+      "file": "prompts/DIRECT_PROMPTS/10.txt",
+      "sha256": "0bb3074e4eb6fc3bd1d72ca5165572e1b3fe6878fb41b39f64c319f02990a13c"
+    },
+    {
+      "file": "prompts/DIRECT_PROMPTS/11.txt",
+      "sha256": "c707b901592322b395b616a6a2674fab78d0efc5293bf7f58d18425b63ef8114"
+    },
+    {
+      "file": "prompts/DIRECT_PROMPTS/12.txt",
+      "sha256": "189850421d75c0d8c9a75a81241986b17b51ad10bab63df284be8e08af325e3d"
+    }
+  ],
+  "model_catalog_sha256": "c68f4104b0c13dd090276281e3acab2e1629893bad28770141ff73ee8095e21f"
+}

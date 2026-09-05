@@ -1,0 +1,53 @@
+{
+  "frozen_utc": "2026-09-05T09:51:15.361494+00:00",
+  "responses": [
+    {
+      "file": "01.json",
+      "sha256": "313d0483516f6a994c3ec67a817cb6a7c5efd9422939396227f1a14aa8aef22a"
+    },
+    {
+      "file": "02.json",
+      "sha256": "e5090bb9e1203df78f101909257cdde10f1a7fde82f0beb2fe87cc64679104c6"
+    },
+    {
+      "file": "03.json",
+      "sha256": "0c7d28db1ed343e87f4a0271bae522cd6dab53648e937e0a05ab26257bb2432a"
+    },
+    {
+      "file": "04.json",
+      "sha256": "ba4fee2d5a5c0ec96d51728433746858d799e0ca02e92dce37c20ddfc23f7a2f"
+    },
+    {
+      "file": "05.json",
+      "sha256": "5750a5cac0a05dd9f2bd822d621097c44945b276a738ab52a7b948b83c8048c8"
+    },
+    {
+      "file": "06.json",
+      "sha256": "94eda57f390687b83206f6925ed2ffad9865b6758b38c3d17d896552ce9c30fa"
+    },
+    {
+      "file": "07.json",
+      "sha256": "062f92df963ebb26a29e1cfa8cf887d7281e78e19eab4c0f1c513e09389ebecc"
+    },
+    {
+      "file": "08.json",
+      "sha256": "68f5fc22f12146414dc0ab26fd25156842739b23bae5c9d1de326d03e9da5368"
+    },
+    {
+      "file": "09.json",
+      "sha256": "4eaf9bafd9cd18fdcf7b016b572628963bcad8a348466fa9af1e856d48686ead"
+    },
+    {
+      "file": "10.json",
+      "sha256": "4a16457b580fce98eb298a97e114b4b532bcc6c6ac5c7a0414e511ed5014d93f"
+    },
+    {
+      "file": "11.json",
+      "sha256": "115a57780ed26d6db03b2f55f6ab5001968d7e331b00d6ead5232c214ec53e2f"
+    },
+    {
+      "file": "12.json",
+      "sha256": "3343144146176e87434d8b3297a37175afc259a8950a8542e75c3fae6dcaacf4"
+    }
+  ]
+}

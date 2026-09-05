@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "verified_utc": "2026-09-05T09:51:17.159893+00:00",
+  "completed_phase_audits": {
+    "sol_xhigh_r1": "PASS",
+    "astra_max_r1": "PASS",
+    "sol_xhigh_r2": "PASS",
+    "astra_xhigh_r2": "PASS",
+    "astra_diagnostic": "PASS"
+  },
+  "unique_new_sessions": 56,
+  "prior_archive_manifest": "PASS",
+  "release_verifier": "Verified exact-optimum scores:\n  GPT SOL 5.6 Pro: 25/60 (valid 55/60)\n  GPT SOL 5.6 (xhigh): 18/60 (valid 60/60)\n  DeepSeek Instant + DeepThink: 1/60 (valid 60/60)\n  DeepSeek Expert + DeepThink: 7/60 (valid 60/60)\n  Qwen 3.8 Max - Thinking: 12/60 (valid 55/60)\n  Qwen 3.7 Plus - Thinking: 6/60 (valid 60/60)\n  GPT SOL 5.6 Pro support q=2: 1/20\n  GPT SOL 5.6 (xhigh) support q=2: 0/20\nALL CHECKS PASSED\n",
+  "scorer_tests": ".......................\n----------------------------------------------------------------------\nRan 23 tests in 0.485s\n\nOK\n",
+  "git_status": "clean",
+  "scope": "Verifies completed phases only. Does not imply pending planned runs are complete."
+}

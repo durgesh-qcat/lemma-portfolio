@@ -1,0 +1,126 @@
+{
+  "started_utc": "2026-09-05T03:07:37.385425+00:00",
+  "protocol_sha256": "86a867af264a392f875a3a97474a74ec171acf7bfec79926aed9adb52df9c0fc",
+  "calls": [
+    {
+      "name": "01_direct_D04",
+      "model": "gpt-6-astra",
+      "effort": "xhigh",
+      "kind": "direct",
+      "prompt": "prompts/DIRECT_PROMPTS/04.txt",
+      "prompt_sha256": "e85ce36bf8b82e04592c7c47afd391b0b2e519ee6bd1e6bcd1197bd429dd7f3d",
+      "episode_ids": [
+        "MLP4B_0015",
+        "MLP4B_0016",
+        "MLP4B_0017",
+        "MLP4B_0018",
+        "MLP4B_0019"
+      ]
+    },
+    {
+      "name": "02_support_D04",
+      "model": "gpt-6-astra",
+      "effort": "xhigh",
+      "kind": "support",
+      "prompt": "prompts/SOL_EXTRA_PROMPTS/01.txt",
+      "prompt_sha256": "92001fa223b10dbf3592a31a9250642407f52435136e4f88553d41d20fbe9015",
+      "episode_ids": [
+        "MLP4B_0015",
+        "MLP4B_0016",
+        "MLP4B_0017",
+        "MLP4B_0018",
+        "MLP4B_0019"
+      ]
+    },
+    {
+      "name": "03_support_D05",
+      "model": "gpt-6-astra",
+      "effort": "xhigh",
+      "kind": "support",
+      "prompt": "prompts/SOL_EXTRA_PROMPTS/02.txt",
+      "prompt_sha256": "0bde06df65b2520a8d7cb727d7805bdcdcc0b89f881117643a5a78bd75ce6564",
+      "episode_ids": [
+        "MLP4B_0020",
+        "MLP4B_0021",
+        "MLP4B_0022",
+        "MLP4B_0023",
+        "MLP4B_0024"
+      ]
+    },
+    {
+      "name": "04_direct_D05",
+      "model": "gpt-6-astra",
+      "effort": "xhigh",
+      "kind": "direct",
+      "prompt": "prompts/DIRECT_PROMPTS/05.txt",
+      "prompt_sha256": "942539a45bdbc8eb682bf0df4075ac226fd519be566d83273fe1c0e36b656449",
+      "episode_ids": [
+        "MLP4B_0020",
+        "MLP4B_0021",
+        "MLP4B_0022",
+        "MLP4B_0023",
+        "MLP4B_0024"
+      ]
+    },
+    {
+      "name": "05_direct_D06",
+      "model": "gpt-6-astra",
+      "effort": "xhigh",
+      "kind": "direct",
+      "prompt": "prompts/DIRECT_PROMPTS/06.txt",
+      "prompt_sha256": "376664ae74121b60446ed72fb5801e26ec8db066e52b3097034cc53344e167d9",
+      "episode_ids": [
+        "MLP4B_0025",
+        "MLP4B_0026",
+        "MLP4B_0027",
+        "MLP4B_0028",
+        "MLP4B_0029"
+      ]
+    },
+    {
+      "name": "06_support_D06",
+      "model": "gpt-6-astra",
+      "effort": "xhigh",
+      "kind": "support",
+      "prompt": "prompts/SOL_EXTRA_PROMPTS/03.txt",
+      "prompt_sha256": "bfb9ab9068334887388273ee009b06ed225bc80472abf4a492124cc421db1935",
+      "episode_ids": [
+        "MLP4B_0025",
+        "MLP4B_0026",
+        "MLP4B_0027",
+        "MLP4B_0028",
+        "MLP4B_0029"
+      ]
+    },
+    {
+      "name": "07_support_D12",
+      "model": "gpt-6-astra",
+      "effort": "xhigh",
+      "kind": "support",
+      "prompt": "prompts/SOL_EXTRA_PROMPTS/04.txt",
+      "prompt_sha256": "2e3bd0d3847d649b316e79372156764cc39f06d2c44a17e433ff334f19d1122b",
+      "episode_ids": [
+        "MLP4B_0055",
+        "MLP4B_0056",
+        "MLP4B_0057",
+        "MLP4B_0058",
+        "MLP4B_0059"
+      ]
+    },
+    {
+      "name": "08_direct_D12",
+      "model": "gpt-6-astra",
+      "effort": "xhigh",
+      "kind": "direct",
+      "prompt": "prompts/DIRECT_PROMPTS/12.txt",
+      "prompt_sha256": "189850421d75c0d8c9a75a81241986b17b51ad10bab63df284be8e08af325e3d",
+      "episode_ids": [
+        "MLP4B_0055",
+        "MLP4B_0056",
+        "MLP4B_0057",
+        "MLP4B_0058",
+        "MLP4B_0059"
+      ]
+    }
+  ]
+}

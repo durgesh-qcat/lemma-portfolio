@@ -1,0 +1,72 @@
+{
+  "status": "PASS",
+  "call_count": 8,
+  "unique_sessions": 8,
+  "checks": [
+    {
+      "call": "01_direct_D04",
+      "fresh_session": true,
+      "single_turn": true,
+      "prompt_matches_release": true,
+      "response_matches_event": true,
+      "tool_calls": 0
+    },
+    {
+      "call": "02_support_D04",
+      "fresh_session": true,
+      "single_turn": true,
+      "prompt_matches_release": true,
+      "response_matches_event": true,
+      "tool_calls": 0
+    },
+    {
+      "call": "03_support_D05",
+      "fresh_session": true,
+      "single_turn": true,
+      "prompt_matches_release": true,
+      "response_matches_event": true,
+      "tool_calls": 0
+    },
+    {
+      "call": "04_direct_D05",
+      "fresh_session": true,
+      "single_turn": true,
+      "prompt_matches_release": true,
+      "response_matches_event": true,
+      "tool_calls": 0
+    },
+    {
+      "call": "05_direct_D06",
+      "fresh_session": true,
+      "single_turn": true,
+      "prompt_matches_release": true,
+      "response_matches_event": true,
+      "tool_calls": 0
+    },
+    {
+      "call": "06_support_D06",
+      "fresh_session": true,
+      "single_turn": true,
+      "prompt_matches_release": true,
+      "response_matches_event": true,
+      "tool_calls": 0
+    },
+    {
+      "call": "07_support_D12",
+      "fresh_session": true,
+      "single_turn": true,
+      "prompt_matches_release": true,
+      "response_matches_event": true,
+      "tool_calls": 0
+    },
+    {
+      "call": "08_direct_D12",
+      "fresh_session": true,
+      "single_turn": true,
+      "prompt_matches_release": true,
+      "response_matches_event": true,
+      "tool_calls": 0
+    }
+  ],
+  "scope": "Local capture integrity, not independent authentication of model weights or hidden serving defaults."
+}

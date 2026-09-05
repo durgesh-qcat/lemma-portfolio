@@ -1,0 +1,186 @@
+{
+  "started_utc": "2026-09-05T06:38:04.821772+00:00",
+  "protocol_sha256": "86a867af264a392f875a3a97474a74ec171acf7bfec79926aed9adb52df9c0fc",
+  "calls": [
+    {
+      "name": "01",
+      "model": "gpt-5.6-sol",
+      "effort": "xhigh",
+      "kind": "direct",
+      "prompt": "prompts/DIRECT_PROMPTS/01.txt",
+      "prompt_sha256": "febe94397bd43a8a0be9b38d705c08eee2141b4a2ab755d5a46d87596506940c",
+      "episode_ids": [
+        "MLP4B_0000",
+        "MLP4B_0001",
+        "MLP4B_0002",
+        "MLP4B_0003",
+        "MLP4B_0004"
+      ]
+    },
+    {
+      "name": "02",
+      "model": "gpt-5.6-sol",
+      "effort": "xhigh",
+      "kind": "direct",
+      "prompt": "prompts/DIRECT_PROMPTS/02.txt",
+      "prompt_sha256": "9b736aaa054838df6d04357ab3ffcac70efccdbdbf20f212389600c2216031b4",
+      "episode_ids": [
+        "MLP4B_0005",
+        "MLP4B_0006",
+        "MLP4B_0007",
+        "MLP4B_0008",
+        "MLP4B_0009"
+      ]
+    },
+    {
+      "name": "03",
+      "model": "gpt-5.6-sol",
+      "effort": "xhigh",
+      "kind": "direct",
+      "prompt": "prompts/DIRECT_PROMPTS/03.txt",
+      "prompt_sha256": "6a79e47946d40e8114af5f609f7e960287ed76f70e891a200f6824fcf7aa1f70",
+      "episode_ids": [
+        "MLP4B_0010",
+        "MLP4B_0011",
+        "MLP4B_0012",
+        "MLP4B_0013",
+        "MLP4B_0014"
+      ]
+    },
+    {
+      "name": "04",
+      "model": "gpt-5.6-sol",
+      "effort": "xhigh",
+      "kind": "direct",
+      "prompt": "prompts/DIRECT_PROMPTS/04.txt",
+      "prompt_sha256": "e85ce36bf8b82e04592c7c47afd391b0b2e519ee6bd1e6bcd1197bd429dd7f3d",
+      "episode_ids": [
+        "MLP4B_0015",
+        "MLP4B_0016",
+        "MLP4B_0017",
+        "MLP4B_0018",
+        "MLP4B_0019"
+      ]
+    },
+    {
+      "name": "05",
+      "model": "gpt-5.6-sol",
+      "effort": "xhigh",
+      "kind": "direct",
+      "prompt": "prompts/DIRECT_PROMPTS/05.txt",
+      "prompt_sha256": "942539a45bdbc8eb682bf0df4075ac226fd519be566d83273fe1c0e36b656449",
+      "episode_ids": [
+        "MLP4B_0020",
+        "MLP4B_0021",
+        "MLP4B_0022",
+        "MLP4B_0023",
+        "MLP4B_0024"
+      ]
+    },
+    {
+      "name": "06",
+      "model": "gpt-5.6-sol",
+      "effort": "xhigh",
+      "kind": "direct",
+      "prompt": "prompts/DIRECT_PROMPTS/06.txt",
+      "prompt_sha256": "376664ae74121b60446ed72fb5801e26ec8db066e52b3097034cc53344e167d9",
+      "episode_ids": [
+        "MLP4B_0025",
+        "MLP4B_0026",
+        "MLP4B_0027",
+        "MLP4B_0028",
+        "MLP4B_0029"
+      ]
+    },
+    {
+      "name": "07",
+      "model": "gpt-5.6-sol",
+      "effort": "xhigh",
+      "kind": "direct",
+      "prompt": "prompts/DIRECT_PROMPTS/07.txt",
+      "prompt_sha256": "fe0552e4134e2e9f9780055949d4d662459c9e0ca75134fbb4532979206652a4",
+      "episode_ids": [
+        "MLP4B_0030",
+        "MLP4B_0031",
+        "MLP4B_0032",
+        "MLP4B_0033",
+        "MLP4B_0034"
+      ]
+    },
+    {
+      "name": "08",
+      "model": "gpt-5.6-sol",
+      "effort": "xhigh",
+      "kind": "direct",
+      "prompt": "prompts/DIRECT_PROMPTS/08.txt",
+      "prompt_sha256": "2ee2884b8afdcfc9138abe6e7076ba98a9f26aaf4a3e66fd67eac4d7c97794ae",
+      "episode_ids": [
+        "MLP4B_0035",
+        "MLP4B_0036",
+        "MLP4B_0037",
+        "MLP4B_0038",
+        "MLP4B_0039"
+      ]
+    },
+    {
+      "name": "09",
+      "model": "gpt-5.6-sol",
+      "effort": "xhigh",
+      "kind": "direct",
+      "prompt": "prompts/DIRECT_PROMPTS/09.txt",
+      "prompt_sha256": "ebb62b772ab44523248c9b512e20525a81b4d26b81610105dcc3303f9eacccb9",
+      "episode_ids": [
+        "MLP4B_0040",
+        "MLP4B_0041",
+        "MLP4B_0042",
+        "MLP4B_0043",
+        "MLP4B_0044"
+      ]
+    },
+    {
+      "name": "10",
+      "model": "gpt-5.6-sol",
+      "effort": "xhigh",
+      "kind": "direct",
+      "prompt": "prompts/DIRECT_PROMPTS/10.txt",
+      "prompt_sha256": "0bb3074e4eb6fc3bd1d72ca5165572e1b3fe6878fb41b39f64c319f02990a13c",
+      "episode_ids": [
+        "MLP4B_0045",
+        "MLP4B_0046",
+        "MLP4B_0047",
+        "MLP4B_0048",
+        "MLP4B_0049"
+      ]
+    },
+    {
+      "name": "11",
+      "model": "gpt-5.6-sol",
+      "effort": "xhigh",
+      "kind": "direct",
+      "prompt": "prompts/DIRECT_PROMPTS/11.txt",
+      "prompt_sha256": "c707b901592322b395b616a6a2674fab78d0efc5293bf7f58d18425b63ef8114",
+      "episode_ids": [
+        "MLP4B_0050",
+        "MLP4B_0051",
+        "MLP4B_0052",
+        "MLP4B_0053",
+        "MLP4B_0054"
+      ]
+    },
+    {
+      "name": "12",
+      "model": "gpt-5.6-sol",
+      "effort": "xhigh",
+      "kind": "direct",
+      "prompt": "prompts/DIRECT_PROMPTS/12.txt",
+      "prompt_sha256": "189850421d75c0d8c9a75a81241986b17b51ad10bab63df284be8e08af325e3d",
+      "episode_ids": [
+        "MLP4B_0055",
+        "MLP4B_0056",
+        "MLP4B_0057",
+        "MLP4B_0058",
+        "MLP4B_0059"
+      ]
+    }
+  ]
+}

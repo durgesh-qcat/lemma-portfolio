@@ -1,0 +1,104 @@
+{
+  "status": "PASS",
+  "call_count": 12,
+  "unique_sessions": 12,
+  "checks": [
+    {
+      "call": "01",
+      "fresh_session": true,
+      "single_turn": true,
+      "prompt_matches_release": true,
+      "response_matches_event": true,
+      "tool_calls": 0
+    },
+    {
+      "call": "02",
+      "fresh_session": true,
+      "single_turn": true,
+      "prompt_matches_release": true,
+      "response_matches_event": true,
+      "tool_calls": 0
+    },
+    {
+      "call": "03",
+      "fresh_session": true,
+      "single_turn": true,
+      "prompt_matches_release": true,
+      "response_matches_event": true,
+      "tool_calls": 0
+    },
+    {
+      "call": "04",
+      "fresh_session": true,
+      "single_turn": true,
+      "prompt_matches_release": true,
+      "response_matches_event": true,
+      "tool_calls": 0
+    },
+    {
+      "call": "05",
+      "fresh_session": true,
+      "single_turn": true,
+      "prompt_matches_release": true,
+      "response_matches_event": true,
+      "tool_calls": 0
+    },
+    {
+      "call": "06",
+      "fresh_session": true,
+      "single_turn": true,
+      "prompt_matches_release": true,
+      "response_matches_event": true,
+      "tool_calls": 0
+    },
+    {
+      "call": "07",
+      "fresh_session": true,
+      "single_turn": true,
+      "prompt_matches_release": true,
+      "response_matches_event": true,
+      "tool_calls": 0
+    },
+    {
+      "call": "08",
+      "fresh_session": true,
+      "single_turn": true,
+      "prompt_matches_release": true,
+      "response_matches_event": true,
+      "tool_calls": 0
+    },
+    {
+      "call": "09",
+      "fresh_session": true,
+      "single_turn": true,
+      "prompt_matches_release": true,
+      "response_matches_event": true,
+      "tool_calls": 0
+    },
+    {
+      "call": "10",
+      "fresh_session": true,
+      "single_turn": true,
+      "prompt_matches_release": true,
+      "response_matches_event": true,
+      "tool_calls": 0
+    },
+    {
+      "call": "11",
+      "fresh_session": true,
+      "single_turn": true,
+      "prompt_matches_release": true,
+      "response_matches_event": true,
+      "tool_calls": 0
+    },
+    {
+      "call": "12",
+      "fresh_session": true,
+      "single_turn": true,
+      "prompt_matches_release": true,
+      "response_matches_event": true,
+      "tool_calls": 0
+    }
+  ],
+  "scope": "Local capture integrity, not independent authentication of model weights or hidden serving defaults."
+}

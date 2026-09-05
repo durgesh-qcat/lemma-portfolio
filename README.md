@@ -42,22 +42,31 @@ selected triple touches.  “Exact optimum” asks whether no other triple cover
 more targets.  The Pro row had the highest exact score, whereas xhigh had the
 highest target coverage.  The two columns are intentionally not interchangeable.
 
-## Completed Codex follow-up results — 4 September 2026
+## Final Codex follow-up results — 5 September 2026
 
 The following are **post-release follow-up experiments**, separate from the
 original frozen consumer evaluation above. Dates use Pacific time; the capture
 receipts use UTC. The original data, consumer scores, and paper PDFs are unchanged.
 
-| Recorded model / effort | Exact optimum | Target coverage | Valid | Inference time |
+| Recorded model / effort / run | Exact optimum | Target coverage | Valid | Inference time |
 |---|---:|---:|---:|---:|
-| GPT-6 Astra / xhigh | 27/60 (45.0%) | 328/480 (68.3%) | 60/60 | 78.6 min |
-| GPT-5.6 Sol / xhigh | 20/60 (33.3%) | 302/480 (62.9%) | 60/60 | 80.7 min |
+| GPT-6 Astra / xhigh / 1 | 27/60 (45.0%) | 328/480 (68.3%) | 60/60 | 78.6 min |
+| GPT-6 Astra / xhigh / 2 | 30/60 (50.0%) | 332/480 (69.2%) | 60/60 | 114.6 min |
+| GPT-5.6 Sol / xhigh / 1 | 20/60 (33.3%) | 302/480 (62.9%) | 60/60 | 80.7 min |
+| GPT-5.6 Sol / xhigh / 2 | 15/60 (25.0%) | 300/480 (62.5%) | 60/60 | 78.6 min |
+| GPT-6 Astra / max / 1 | 30/60 (50.0%) | 335/480 (69.8%) | 60/60 | 147.2 min |
 
 These runs use the same Codex CLI 0.153.0 capture harness, identical released
-prompts, and fresh sessions with tools disabled. Astra found seven more exact
-optima (+11.7 percentage points) in this **single-run comparison**. Equal effort
-labels do not imply equal compute budgets, and this is not a stable model ranking
-or an apples-to-apples comparison with the consumer rows.
+prompts, and fresh sessions with tools disabled. Across two complete runs each,
+mean exact accuracy was **47.5% for Astra xhigh** (sample SD 3.54 percentage points)
+and **29.2% for Sol xhigh** (sample SD 5.89 points). Mean target coverage was 68.75%
+and 62.71%, respectively. These are repeated evaluations of the same 60 episodes,
+not 120 independent benchmark items. Two runs provide limited evidence about
+generation variability; equal effort labels do not imply equal compute budgets.
+These results are not an apples-to-apples comparison with the consumer rows.
+
+Astra max scored 30/60, matching the second xhigh run's exact score at longer
+runtime. The one max run does not establish a reliable accuracy advantage.
 
 On a fresh, matched 20-episode Astra diagnostic, direct selection scored
 **8/20 exact (106/160 targets)** versus **4/20 (100/160 targets)** for the primary
@@ -66,19 +75,30 @@ rankings with `q=1,2,3,4` gave **2, 4, 4, 4 exact**, respectively. This is evide
 about the tested complete pipeline, not proof that decomposition generally fails.
 The export also includes the historical GPT support-width and tie analyses.
 
-**Snapshot status:** Astra `max` was still in progress and four optional xhigh
-repeat runs had not started when this snapshot was exported. No partial scores
-are published. The paper has not yet incorporated these follow-up results.
+**Final status:** all retained runs finished and passed local verification. The
+third Sol/Astra pair was cancelled before starting at the author's request to
+shorten the queue; this post-hoc operational amendment is disclosed. No inference
+remains queued in the shortened Codex workflow. The paper has not yet
+incorporated these follow-up results.
 
-- [Detailed results and limitations](followups/2026-09-04/REPORT.md)
-- [Raw answers, provenance, and reproduction instructions](followups/2026-09-04/README.md)
-- [Machine-readable results](followups/2026-09-04/FOLLOWUP_RESULTS.json)
+A separate completed **Claude Fable 5.1 direct-API capture returned refusals on
+all 12 prompts** (0/60 valid). Its strict score is zero, but this is a refusal
+outcome, not evidence of mathematical inability. The raw API receipts and
+[refusal note](followups/2026-09-05/CLAUDE_REFUSAL.md) are included separately.
+Two other Claude captures were incomplete at export and are not scored here.
+No OpenRouter result is included.
+
+- **[Start here for writing the paper: final results handoff](followups/2026-09-05/PAPER_HANDOFF.md)**
+- [Detailed results and limitations](followups/2026-09-05/REPORT.md)
+- [Raw answers, provenance, and reproduction instructions](followups/2026-09-05/README.md)
+- [Machine-readable results](followups/2026-09-05/FOLLOWUP_RESULTS.json)
+- [Earlier September 4 snapshot (preserved unchanged)](followups/2026-09-04/README.md)
 
 Recompute the completed follow-up scores, support-width sweeps, and comparisons
 offline (no model calls):
 
 ```sh
-python3 followups/2026-09-04/verify.py
+python3 followups/2026-09-05/verify.py
 ```
 
 ## One-command verification
@@ -179,8 +199,9 @@ in [`docs/COLLABORATING.md`](docs/COLLABORATING.md).
   and response-order audit;
 - `results/`: baseline predictions, aggregate scores, item scores, and the
   structured-support comparisons;
-- `followups/2026-09-04/`: versioned, completed Codex follow-up answers, scores,
-  support-width/tie analyses, provenance receipts, and offline verification;
+- `followups/2026-09-05/`: final Codex follow-up answers, repeated-run scores,
+  diagnostics, writing handoff, provenance receipts, and offline verification;
+- `followups/2026-09-04/`: unchanged earlier interim follow-up snapshot;
 - `provenance/`: dataset commitment, generation receipt, and Lean/static audit
   receipts;
 - `development_evidence/`: the frozen 15-item development check reported as

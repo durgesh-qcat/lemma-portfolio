@@ -1,0 +1,3662 @@
+{
+  "updated_utc": "2026-09-05T09:51:15.516456+00:00",
+  "core_complete": true,
+  "pending_core": [],
+  "direct_rows": {
+    "astra_xhigh_r1_prior": {
+      "achieved_target_coverage": 328,
+      "block_bootstrap_95_interval_fraction": [
+        0.31666666666666665,
+        0.5666666666666667
+      ],
+      "display_label": "GPT-6 Astra (Codex CLI, xhigh)",
+      "exact_by_block": {
+        "D01": 1,
+        "D02": 3,
+        "D03": 2,
+        "D04": 3,
+        "D05": 0,
+        "D06": 1,
+        "D07": 4,
+        "D08": 2,
+        "D09": 3,
+        "D10": 3,
+        "D11": 2,
+        "D12": 3
+      },
+      "exact_optimal": 27,
+      "exact_optimal_percentage": 45.0,
+      "mean_oracle_normalized_coverage_percentage": 87.42063492063491,
+      "selected_edge_recall_percentage": 42.13759213759214,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "target_count": 480,
+      "target_coverage_percentage": 68.33333333333333,
+      "total": 60,
+      "valid": 60,
+      "valid_percentage": 100.0,
+      "wilson_95_interval_fraction": [
+        0.3309365440675524,
+        0.5750806411466566
+      ]
+    },
+    "sol_xhigh_r1": {
+      "system_id": "sol_xhigh_r1",
+      "display_label": "sol xhigh r1",
+      "exact_optimal": 20,
+      "total": 60,
+      "exact_optimal_percentage": 33.333333333333336,
+      "valid": 60,
+      "valid_percentage": 100.0,
+      "achieved_target_coverage": 302,
+      "target_count": 480,
+      "target_coverage_percentage": 62.916666666666664,
+      "mean_oracle_normalized_coverage_percentage": 80.47619047619047,
+      "selected_edge_recall_percentage": 39.189189189189186,
+      "wilson_95_interval_fraction": [
+        0.2272926152352268,
+        0.4594313354788031
+      ],
+      "block_bootstrap_95_interval_fraction": [
+        0.2,
+        0.4666666666666667
+      ],
+      "exact_by_block": {
+        "D01": 0,
+        "D02": 2,
+        "D03": 2,
+        "D04": 2,
+        "D05": 0,
+        "D06": 0,
+        "D07": 4,
+        "D08": 2,
+        "D09": 2,
+        "D10": 2,
+        "D11": 3,
+        "D12": 1
+      }
+    },
+    "astra_max_r1": {
+      "system_id": "astra_max_r1",
+      "display_label": "astra max r1",
+      "exact_optimal": 30,
+      "total": 60,
+      "exact_optimal_percentage": 50.0,
+      "valid": 60,
+      "valid_percentage": 100.0,
+      "achieved_target_coverage": 335,
+      "target_count": 480,
+      "target_coverage_percentage": 69.79166666666667,
+      "mean_oracle_normalized_coverage_percentage": 89.36507936507937,
+      "selected_edge_recall_percentage": 43.24324324324324,
+      "wilson_95_interval_fraction": [
+        0.3773502424155577,
+        0.6226497575844423
+      ],
+      "block_bootstrap_95_interval_fraction": [
+        0.36666666666666664,
+        0.6333333333333333
+      ],
+      "exact_by_block": {
+        "D01": 1,
+        "D02": 3,
+        "D03": 3,
+        "D04": 2,
+        "D05": 1,
+        "D06": 3,
+        "D07": 4,
+        "D08": 2,
+        "D09": 5,
+        "D10": 2,
+        "D11": 1,
+        "D12": 3
+      }
+    },
+    "sol_xhigh_r2": {
+      "system_id": "sol_xhigh_r2",
+      "display_label": "sol xhigh r2",
+      "exact_optimal": 15,
+      "total": 60,
+      "exact_optimal_percentage": 25.0,
+      "valid": 60,
+      "valid_percentage": 100.0,
+      "achieved_target_coverage": 300,
+      "target_count": 480,
+      "target_coverage_percentage": 62.5,
+      "mean_oracle_normalized_coverage_percentage": 80.0,
+      "selected_edge_recall_percentage": 39.189189189189186,
+      "wilson_95_interval_fraction": [
+        0.15776522530056675,
+        0.37232070077047824
+      ],
+      "block_bootstrap_95_interval_fraction": [
+        0.15,
+        0.36666666666666664
+      ],
+      "exact_by_block": {
+        "D01": 0,
+        "D02": 1,
+        "D03": 1,
+        "D04": 1,
+        "D05": 1,
+        "D06": 1,
+        "D07": 2,
+        "D08": 1,
+        "D09": 3,
+        "D10": 1,
+        "D11": 3,
+        "D12": 0
+      }
+    },
+    "astra_xhigh_r2": {
+      "system_id": "astra_xhigh_r2",
+      "display_label": "astra xhigh r2",
+      "exact_optimal": 30,
+      "total": 60,
+      "exact_optimal_percentage": 50.0,
+      "valid": 60,
+      "valid_percentage": 100.0,
+      "achieved_target_coverage": 332,
+      "target_count": 480,
+      "target_coverage_percentage": 69.16666666666667,
+      "mean_oracle_normalized_coverage_percentage": 88.41269841269842,
+      "selected_edge_recall_percentage": 42.874692874692876,
+      "wilson_95_interval_fraction": [
+        0.3773502424155577,
+        0.6226497575844423
+      ],
+      "block_bootstrap_95_interval_fraction": [
+        0.4166666666666667,
+        0.5833333333333334
+      ],
+      "exact_by_block": {
+        "D01": 2,
+        "D02": 2,
+        "D03": 2,
+        "D04": 3,
+        "D05": 1,
+        "D06": 3,
+        "D07": 3,
+        "D08": 2,
+        "D09": 4,
+        "D10": 3,
+        "D11": 2,
+        "D12": 3
+      }
+    }
+  },
+  "usage": {
+    "sol_xhigh_r1": {
+      "wall_seconds": 4842.702,
+      "tokens": {
+        "input_tokens": 231351,
+        "cached_input_tokens": 58240,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 213575,
+        "reasoning_output_tokens": 212375
+      }
+    },
+    "astra_diagnostic": {
+      "wall_seconds": 3790.561,
+      "tokens": {
+        "input_tokens": 164866,
+        "cached_input_tokens": 36096,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 93190,
+        "reasoning_output_tokens": 90390
+      }
+    },
+    "astra_max_r1": {
+      "wall_seconds": 8830.866,
+      "tokens": {
+        "input_tokens": 267009,
+        "cached_input_tokens": 70656,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 208798,
+        "reasoning_output_tokens": 207598
+      }
+    },
+    "sol_xhigh_r2": {
+      "wall_seconds": 4713.394,
+      "tokens": {
+        "input_tokens": 231357,
+        "cached_input_tokens": 35456,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 219441,
+        "reasoning_output_tokens": 218241
+      }
+    },
+    "astra_xhigh_r2": {
+      "wall_seconds": 6875.103,
+      "tokens": {
+        "input_tokens": 254077,
+        "cached_input_tokens": 64512,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 141011,
+        "reasoning_output_tokens": 139811
+      }
+    },
+    "astra_xhigh_r1_prior": {
+      "wall_seconds": 4715.9529999999995,
+      "tokens": {
+        "input_tokens": 246297,
+        "cached_input_tokens": 43136,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 138274,
+        "reasoning_output_tokens": 137074
+      }
+    }
+  },
+  "comparisons": [
+    {
+      "a": "GPT-6 Astra (Codex CLI, xhigh)",
+      "b": "sol xhigh r1",
+      "n": 60,
+      "exact_delta_pp": 11.666666666666666,
+      "coverage_delta_pp": 5.416666666666667,
+      "exact_paired_block_bootstrap_95_pp": [
+        3.3333333333333335,
+        20.0
+      ],
+      "coverage_paired_block_bootstrap_95_pp": [
+        2.2916666666666665,
+        8.541666666666666
+      ],
+      "a_only_optimal": 11,
+      "b_only_optimal": 4,
+      "note": "Resamples prompt blocks, not independent model repetitions. Small-sample descriptive uncertainty; not corrected for multiple comparisons."
+    },
+    {
+      "a": "astra max r1",
+      "b": "GPT-6 Astra (Codex CLI, xhigh)",
+      "n": 60,
+      "exact_delta_pp": 5.0,
+      "coverage_delta_pp": 1.4583333333333333,
+      "exact_paired_block_bootstrap_95_pp": [
+        -6.666666666666667,
+        16.666666666666668
+      ],
+      "coverage_paired_block_bootstrap_95_pp": [
+        -0.8333333333333334,
+        3.5416666666666665
+      ],
+      "a_only_optimal": 6,
+      "b_only_optimal": 3,
+      "note": "Resamples prompt blocks, not independent model repetitions. Small-sample descriptive uncertainty; not corrected for multiple comparisons."
+    },
+    {
+      "a": "astra max r1",
+      "b": "sol xhigh r1",
+      "n": 60,
+      "exact_delta_pp": 16.666666666666668,
+      "coverage_delta_pp": 6.875,
+      "exact_paired_block_bootstrap_95_pp": [
+        1.6666666666666667,
+        31.666666666666668
+      ],
+      "coverage_paired_block_bootstrap_95_pp": [
+        3.3333333333333335,
+        10.208333333333334
+      ],
+      "a_only_optimal": 15,
+      "b_only_optimal": 5,
+      "note": "Resamples prompt blocks, not independent model repetitions. Small-sample descriptive uncertainty; not corrected for multiple comparisons."
+    }
+  ],
+  "repeats": {
+    "sol_xhigh": {
+      "complete_runs": 2,
+      "exact_mean_percentage": 29.166666666666668,
+      "exact_sample_sd_pp": 5.892556509887898,
+      "coverage_mean_percentage": 62.70833333333333,
+      "coverage_sample_sd_pp": 0.29462782549439315,
+      "note": "Mean of complete fixed-denominator runs, not pass@k or best-of-run."
+    },
+    "astra_xhigh": {
+      "complete_runs": 2,
+      "exact_mean_percentage": 47.5,
+      "exact_sample_sd_pp": 3.5355339059327378,
+      "coverage_mean_percentage": 68.75,
+      "coverage_sample_sd_pp": 0.5892556509887963,
+      "note": "Mean of complete fixed-denominator runs, not pass@k or best-of-run."
+    }
+  },
+  "diagnostic": {
+    "direct": {
+      "summary": {
+        "system_id": "astra_diagnostic_direct",
+        "display_label": "Astra xhigh fresh direct20",
+        "exact_optimal": 8,
+        "total": 20,
+        "exact_optimal_percentage": 40.0,
+        "valid": 20,
+        "valid_percentage": 100.0,
+        "achieved_target_coverage": 106,
+        "target_count": 160,
+        "target_coverage_percentage": 66.25,
+        "mean_oracle_normalized_coverage_percentage": 86.19047619047618,
+        "selected_edge_recall_percentage": 40.72727272727273,
+        "wilson_95_interval_fraction": [
+          0.21880653237281705,
+          0.6134184992377469
+        ],
+        "block_bootstrap_95_interval_fraction": [
+          0.15,
+          0.6
+        ],
+        "exact_by_block": {
+          "D04": 3,
+          "D05": 0,
+          "D06": 2,
+          "D12": 3
+        }
+      },
+      "per_item": [
+        {
+          "system_id": "astra_diagnostic_direct",
+          "episode_id": "MLP4B_0015",
+          "block_id": "D04",
+          "selected": [
+            "C08",
+            "C12",
+            "C14"
+          ],
+          "valid": true,
+          "optimal": false,
+          "coverage": 5,
+          "optimal_coverage": 6,
+          "normalized_coverage": 0.8333333333333334,
+          "selected_edges": 6,
+          "hidden_edges": 15
+        },
+        {
+          "system_id": "astra_diagnostic_direct",
+          "episode_id": "MLP4B_0016",
+          "block_id": "D04",
+          "selected": [
+            "C01",
+            "C02",
+            "C10"
+          ],
+          "valid": true,
+          "optimal": false,
+          "coverage": 5,
+          "optimal_coverage": 6,
+          "normalized_coverage": 0.8333333333333334,
+          "selected_edges": 5,
+          "hidden_edges": 13
+        },
+        {
+          "system_id": "astra_diagnostic_direct",
+          "episode_id": "MLP4B_0017",
+          "block_id": "D04",
+          "selected": [
+            "C03",
+            "C15",
+            "C16"
+          ],
+          "valid": true,
+          "optimal": true,
+          "coverage": 6,
+          "optimal_coverage": 6,
+          "normalized_coverage": 1.0,
+          "selected_edges": 6,
+          "hidden_edges": 14
+        },
+        {
+          "system_id": "astra_diagnostic_direct",
+          "episode_id": "MLP4B_0018",
+          "block_id": "D04",
+          "selected": [
+            "C11",
+            "C15",
+            "C16"
+          ],
+          "valid": true,
+          "optimal": true,
+          "coverage": 6,
+          "optimal_coverage": 6,
+          "normalized_coverage": 1.0,
+          "selected_edges": 6,
+          "hidden_edges": 14
+        },
+        {
+          "system_id": "astra_diagnostic_direct",
+          "episode_id": "MLP4B_0019",
+          "block_id": "D04",
+          "selected": [
+            "C04",
+            "C13",
+            "C16"
+          ],
+          "valid": true,
+          "optimal": true,
+          "coverage": 6,
+          "optimal_coverage": 6,
+          "normalized_coverage": 1.0,
+          "selected_edges": 6,
+          "hidden_edges": 18
+        },
+        {
+          "system_id": "astra_diagnostic_direct",
+          "episode_id": "MLP4B_0020",
+          "block_id": "D05",
+          "selected": [
+            "C03",
+            "C09",
+            "C14"
+          ],
+          "valid": true,
+          "optimal": false,
+          "coverage": 4,
+          "optimal_coverage": 6,
+          "normalized_coverage": 0.6666666666666666,
+          "selected_edges": 4,
+          "hidden_edges": 11
+        },
+        {
+          "system_id": "astra_diagnostic_direct",
+          "episode_id": "MLP4B_0021",
+          "block_id": "D05",
+          "selected": [
+            "C08",
+            "C12",
+            "C14"
+          ],
+          "valid": true,
+          "optimal": false,
+          "coverage": 4,
+          "optimal_coverage": 6,
+          "normalized_coverage": 0.6666666666666666,
+          "selected_edges": 4,
+          "hidden_edges": 15
+        },
+        {
+          "system_id": "astra_diagnostic_direct",
+          "episode_id": "MLP4B_0022",
+          "block_id": "D05",
+          "selected": [
+            "C05",
+            "C13",
+            "C15"
+          ],
+          "valid": true,
+          "optimal": false,
+          "coverage": 4,
+          "optimal_coverage": 7,
+          "normalized_coverage": 0.5714285714285714,
+          "selected_edges": 4,
+          "hidden_edges": 14
+        },
+        {
+          "system_id": "astra_diagnostic_direct",
+          "episode_id": "MLP4B_0023",
+          "block_id": "D05",
+          "selected": [
+            "C06",
+            "C09",
+            "C11"
+          ],
+          "valid": true,
+          "optimal": false,
+          "coverage": 5,
+          "optimal_coverage": 6,
+          "normalized_coverage": 0.8333333333333334,
+          "selected_edges": 5,
+          "hidden_edges": 15
+        },
+        {
+          "system_id": "astra_diagnostic_direct",
+          "episode_id": "MLP4B_0024",
+          "block_id": "D05",
+          "selected": [
+            "C08",
+            "C12",
+            "C15"
+          ],
+          "valid": true,
+          "optimal": false,
+          "coverage": 5,
+          "optimal_coverage": 6,
+          "normalized_coverage": 0.8333333333333334,
+          "selected_edges": 6,
+          "hidden_edges": 12
+        },
+        {
+          "system_id": "astra_diagnostic_direct",
+          "episode_id": "MLP4B_0025",
+          "block_id": "D06",
+          "selected": [
+            "C08",
+            "C14",
+            "C15"
+          ],
+          "valid": true,
+          "optimal": false,
+          "coverage": 5,
+          "optimal_coverage": 6,
+          "normalized_coverage": 0.8333333333333334,
+          "selected_edges": 5,
+          "hidden_edges": 15
+        },
+        {
+          "system_id": "astra_diagnostic_direct",
+          "episode_id": "MLP4B_0026",
+          "block_id": "D06",
+          "selected": [
+            "C04",
+            "C13",
+            "C15"
+          ],
+          "valid": true,
+          "optimal": true,
+          "coverage": 6,
+          "optimal_coverage": 6,
+          "normalized_coverage": 1.0,
+          "selected_edges": 6,
+          "hidden_edges": 12
+        },
+        {
+          "system_id": "astra_diagnostic_direct",
+          "episode_id": "MLP4B_0027",
+          "block_id": "D06",
+          "selected": [
+            "C02",
+            "C06",
+            "C11"
+          ],
+          "valid": true,
+          "optimal": true,
+          "coverage": 7,
+          "optimal_coverage": 7,
+          "normalized_coverage": 1.0,
+          "selected_edges": 8,
+          "hidden_edges": 15
+        },
+        {
+          "system_id": "astra_diagnostic_direct",
+          "episode_id": "MLP4B_0028",
+          "block_id": "D06",
+          "selected": [
+            "C07",
+            "C10",
+            "C14"
+          ],
+          "valid": true,
+          "optimal": false,
+          "coverage": 5,
+          "optimal_coverage": 6,
+          "normalized_coverage": 0.8333333333333334,
+          "selected_edges": 5,
+          "hidden_edges": 13
+        },
+        {
+          "system_id": "astra_diagnostic_direct",
+          "episode_id": "MLP4B_0029",
+          "block_id": "D06",
+          "selected": [
+            "C04",
+            "C06",
+            "C16"
+          ],
+          "valid": true,
+          "optimal": false,
+          "coverage": 4,
+          "optimal_coverage": 6,
+          "normalized_coverage": 0.6666666666666666,
+          "selected_edges": 5,
+          "hidden_edges": 12
+        },
+        {
+          "system_id": "astra_diagnostic_direct",
+          "episode_id": "MLP4B_0055",
+          "block_id": "D12",
+          "selected": [
+            "C05",
+            "C06",
+            "C07"
+          ],
+          "valid": true,
+          "optimal": true,
+          "coverage": 6,
+          "optimal_coverage": 6,
+          "normalized_coverage": 1.0,
+          "selected_edges": 6,
+          "hidden_edges": 12
+        },
+        {
+          "system_id": "astra_diagnostic_direct",
+          "episode_id": "MLP4B_0056",
+          "block_id": "D12",
+          "selected": [
+            "C03",
+            "C08",
+            "C16"
+          ],
+          "valid": true,
+          "optimal": false,
+          "coverage": 5,
+          "optimal_coverage": 6,
+          "normalized_coverage": 0.8333333333333334,
+          "selected_edges": 6,
+          "hidden_edges": 11
+        },
+        {
+          "system_id": "astra_diagnostic_direct",
+          "episode_id": "MLP4B_0057",
+          "block_id": "D12",
+          "selected": [
+            "C04",
+            "C06",
+            "C15"
+          ],
+          "valid": true,
+          "optimal": false,
+          "coverage": 5,
+          "optimal_coverage": 6,
+          "normalized_coverage": 0.8333333333333334,
+          "selected_edges": 6,
+          "hidden_edges": 12
+        },
+        {
+          "system_id": "astra_diagnostic_direct",
+          "episode_id": "MLP4B_0058",
+          "block_id": "D12",
+          "selected": [
+            "C08",
+            "C09",
+            "C16"
+          ],
+          "valid": true,
+          "optimal": true,
+          "coverage": 6,
+          "optimal_coverage": 6,
+          "normalized_coverage": 1.0,
+          "selected_edges": 6,
+          "hidden_edges": 13
+        },
+        {
+          "system_id": "astra_diagnostic_direct",
+          "episode_id": "MLP4B_0059",
+          "block_id": "D12",
+          "selected": [
+            "C06",
+            "C12",
+            "C15"
+          ],
+          "valid": true,
+          "optimal": true,
+          "coverage": 7,
+          "optimal_coverage": 7,
+          "normalized_coverage": 1.0,
+          "selected_edges": 7,
+          "hidden_edges": 19
+        }
+      ],
+      "invalid_source_files": []
+    },
+    "support_q2": {
+      "schema_version": "lemma-portfolio.external-support-score.v1",
+      "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+      "condition": "ordered_support_then_exhaustive_optimizer",
+      "support_prefix_width": 2,
+      "expected_episode_ids": [
+        "MLP4B_0015",
+        "MLP4B_0016",
+        "MLP4B_0017",
+        "MLP4B_0018",
+        "MLP4B_0019",
+        "MLP4B_0020",
+        "MLP4B_0021",
+        "MLP4B_0022",
+        "MLP4B_0023",
+        "MLP4B_0024",
+        "MLP4B_0025",
+        "MLP4B_0026",
+        "MLP4B_0027",
+        "MLP4B_0028",
+        "MLP4B_0029",
+        "MLP4B_0055",
+        "MLP4B_0056",
+        "MLP4B_0057",
+        "MLP4B_0058",
+        "MLP4B_0059"
+      ],
+      "support_files": [
+        "02_support_D04.json",
+        "03_support_D05.json",
+        "06_support_D06.json",
+        "07_support_D12.json"
+      ],
+      "invalid_source_file_count": 0,
+      "invalid_source_files": [],
+      "submitted_episode_count": 20,
+      "missing_episode_count": 0,
+      "missing_episode_ids": [],
+      "malformed_episode_count": 0,
+      "malformed_episode_ids": [],
+      "summary": {
+        "system_id": "astra_diagnostic_support_q2",
+        "display_label": "Astra xhigh support q=2",
+        "exact_optimal": 4,
+        "total": 20,
+        "exact_optimal_percentage": 20.0,
+        "valid": 20,
+        "valid_percentage": 100.0,
+        "achieved_target_coverage": 100,
+        "target_count": 160,
+        "target_coverage_percentage": 62.5,
+        "mean_oracle_normalized_coverage_percentage": 81.07142857142858,
+        "selected_edge_recall_percentage": 37.45454545454545,
+        "wilson_95_interval_fraction": [
+          0.08065766257979806,
+          0.41601743225189364
+        ],
+        "block_bootstrap_95_interval_fraction": [
+          0.0,
+          0.45
+        ],
+        "exact_by_block": {
+          "D04": 0,
+          "D05": 0,
+          "D06": 1,
+          "D12": 3
+        }
+      },
+      "support_full": {
+        "true_positive": 234,
+        "false_positive": 83,
+        "false_negative": 41,
+        "micro_precision": 0.7381703470031545,
+        "micro_recall": 0.850909090909091,
+        "micro_f1": 0.7905405405405405
+      },
+      "support_q2": {
+        "true_positive": 203,
+        "false_positive": 43,
+        "false_negative": 72,
+        "micro_precision": 0.8252032520325203,
+        "micro_recall": 0.7381818181818182,
+        "micro_f1": 0.7792706333973128
+      },
+      "per_item": [
+        {
+          "system_id": "astra_diagnostic_support_q2",
+          "episode_id": "MLP4B_0015",
+          "block_id": "D04",
+          "selected": [
+            "C03",
+            "C08",
+            "C14"
+          ],
+          "valid": true,
+          "optimal": false,
+          "coverage": 5,
+          "optimal_coverage": 6,
+          "normalized_coverage": 0.8333333333333334,
+          "selected_edges": 5,
+          "hidden_edges": 15,
+          "input_status": "valid"
+        },
+        {
+          "system_id": "astra_diagnostic_support_q2",
+          "episode_id": "MLP4B_0016",
+          "block_id": "D04",
+          "selected": [
+            "C01",
+            "C02",
+            "C10"
+          ],
+          "valid": true,
+          "optimal": false,
+          "coverage": 5,
+          "optimal_coverage": 6,
+          "normalized_coverage": 0.8333333333333334,
+          "selected_edges": 5,
+          "hidden_edges": 13,
+          "input_status": "valid"
+        },
+        {
+          "system_id": "astra_diagnostic_support_q2",
+          "episode_id": "MLP4B_0017",
+          "block_id": "D04",
+          "selected": [
+            "C02",
+            "C03",
+            "C09"
+          ],
+          "valid": true,
+          "optimal": false,
+          "coverage": 5,
+          "optimal_coverage": 6,
+          "normalized_coverage": 0.8333333333333334,
+          "selected_edges": 5,
+          "hidden_edges": 14,
+          "input_status": "valid"
+        },
+        {
+          "system_id": "astra_diagnostic_support_q2",
+          "episode_id": "MLP4B_0018",
+          "block_id": "D04",
+          "selected": [
+            "C01",
+            "C02",
+            "C15"
+          ],
+          "valid": true,
+          "optimal": false,
+          "coverage": 4,
+          "optimal_coverage": 6,
+          "normalized_coverage": 0.6666666666666666,
+          "selected_edges": 4,
+          "hidden_edges": 14,
+          "input_status": "valid"
+        },
+        {
+          "system_id": "astra_diagnostic_support_q2",
+          "episode_id": "MLP4B_0019",
+          "block_id": "D04",
+          "selected": [
+            "C04",
+            "C05",
+            "C07"
+          ],
+          "valid": true,
+          "optimal": false,
+          "coverage": 5,
+          "optimal_coverage": 6,
+          "normalized_coverage": 0.8333333333333334,
+          "selected_edges": 5,
+          "hidden_edges": 18,
+          "input_status": "valid"
+        },
+        {
+          "system_id": "astra_diagnostic_support_q2",
+          "episode_id": "MLP4B_0020",
+          "block_id": "D05",
+          "selected": [
+            "C03",
+            "C07",
+            "C14"
+          ],
+          "valid": true,
+          "optimal": false,
+          "coverage": 3,
+          "optimal_coverage": 6,
+          "normalized_coverage": 0.5,
+          "selected_edges": 3,
+          "hidden_edges": 11,
+          "input_status": "valid"
+        },
+        {
+          "system_id": "astra_diagnostic_support_q2",
+          "episode_id": "MLP4B_0021",
+          "block_id": "D05",
+          "selected": [
+            "C06",
+            "C08",
+            "C14"
+          ],
+          "valid": true,
+          "optimal": false,
+          "coverage": 4,
+          "optimal_coverage": 6,
+          "normalized_coverage": 0.6666666666666666,
+          "selected_edges": 4,
+          "hidden_edges": 15,
+          "input_status": "valid"
+        },
+        {
+          "system_id": "astra_diagnostic_support_q2",
+          "episode_id": "MLP4B_0022",
+          "block_id": "D05",
+          "selected": [
+            "C03",
+            "C04",
+            "C13"
+          ],
+          "valid": true,
+          "optimal": false,
+          "coverage": 6,
+          "optimal_coverage": 7,
+          "normalized_coverage": 0.8571428571428571,
+          "selected_edges": 6,
+          "hidden_edges": 14,
+          "input_status": "valid"
+        },
+        {
+          "system_id": "astra_diagnostic_support_q2",
+          "episode_id": "MLP4B_0023",
+          "block_id": "D05",
+          "selected": [
+            "C06",
+            "C09",
+            "C11"
+          ],
+          "valid": true,
+          "optimal": false,
+          "coverage": 5,
+          "optimal_coverage": 6,
+          "normalized_coverage": 0.8333333333333334,
+          "selected_edges": 5,
+          "hidden_edges": 15,
+          "input_status": "valid"
+        },
+        {
+          "system_id": "astra_diagnostic_support_q2",
+          "episode_id": "MLP4B_0024",
+          "block_id": "D05",
+          "selected": [
+            "C06",
+            "C12",
+            "C15"
+          ],
+          "valid": true,
+          "optimal": false,
+          "coverage": 5,
+          "optimal_coverage": 6,
+          "normalized_coverage": 0.8333333333333334,
+          "selected_edges": 5,
+          "hidden_edges": 12,
+          "input_status": "valid"
+        },
+        {
+          "system_id": "astra_diagnostic_support_q2",
+          "episode_id": "MLP4B_0025",
+          "block_id": "D06",
+          "selected": [
+            "C03",
+            "C14",
+            "C15"
+          ],
+          "valid": true,
+          "optimal": false,
+          "coverage": 4,
+          "optimal_coverage": 6,
+          "normalized_coverage": 0.6666666666666666,
+          "selected_edges": 4,
+          "hidden_edges": 15,
+          "input_status": "valid"
+        },
+        {
+          "system_id": "astra_diagnostic_support_q2",
+          "episode_id": "MLP4B_0026",
+          "block_id": "D06",
+          "selected": [
+            "C04",
+            "C13",
+            "C15"
+          ],
+          "valid": true,
+          "optimal": true,
+          "coverage": 6,
+          "optimal_coverage": 6,
+          "normalized_coverage": 1.0,
+          "selected_edges": 6,
+          "hidden_edges": 12,
+          "input_status": "valid"
+        },
+        {
+          "system_id": "astra_diagnostic_support_q2",
+          "episode_id": "MLP4B_0027",
+          "block_id": "D06",
+          "selected": [
+            "C02",
+            "C04",
+            "C06"
+          ],
+          "valid": true,
+          "optimal": false,
+          "coverage": 6,
+          "optimal_coverage": 7,
+          "normalized_coverage": 0.8571428571428571,
+          "selected_edges": 7,
+          "hidden_edges": 15,
+          "input_status": "valid"
+        },
+        {
+          "system_id": "astra_diagnostic_support_q2",
+          "episode_id": "MLP4B_0028",
+          "block_id": "D06",
+          "selected": [
+            "C03",
+            "C07",
+            "C14"
+          ],
+          "valid": true,
+          "optimal": false,
+          "coverage": 4,
+          "optimal_coverage": 6,
+          "normalized_coverage": 0.6666666666666666,
+          "selected_edges": 4,
+          "hidden_edges": 13,
+          "input_status": "valid"
+        },
+        {
+          "system_id": "astra_diagnostic_support_q2",
+          "episode_id": "MLP4B_0029",
+          "block_id": "D06",
+          "selected": [
+            "C04",
+            "C06",
+            "C16"
+          ],
+          "valid": true,
+          "optimal": false,
+          "coverage": 4,
+          "optimal_coverage": 6,
+          "normalized_coverage": 0.6666666666666666,
+          "selected_edges": 5,
+          "hidden_edges": 12,
+          "input_status": "valid"
+        },
+        {
+          "system_id": "astra_diagnostic_support_q2",
+          "episode_id": "MLP4B_0055",
+          "block_id": "D12",
+          "selected": [
+            "C05",
+            "C06",
+            "C07"
+          ],
+          "valid": true,
+          "optimal": true,
+          "coverage": 6,
+          "optimal_coverage": 6,
+          "normalized_coverage": 1.0,
+          "selected_edges": 6,
+          "hidden_edges": 12,
+          "input_status": "valid"
+        },
+        {
+          "system_id": "astra_diagnostic_support_q2",
+          "episode_id": "MLP4B_0056",
+          "block_id": "D12",
+          "selected": [
+            "C03",
+            "C08",
+            "C16"
+          ],
+          "valid": true,
+          "optimal": false,
+          "coverage": 5,
+          "optimal_coverage": 6,
+          "normalized_coverage": 0.8333333333333334,
+          "selected_edges": 6,
+          "hidden_edges": 11,
+          "input_status": "valid"
+        },
+        {
+          "system_id": "astra_diagnostic_support_q2",
+          "episode_id": "MLP4B_0057",
+          "block_id": "D12",
+          "selected": [
+            "C02",
+            "C04",
+            "C15"
+          ],
+          "valid": true,
+          "optimal": false,
+          "coverage": 5,
+          "optimal_coverage": 6,
+          "normalized_coverage": 0.8333333333333334,
+          "selected_edges": 5,
+          "hidden_edges": 12,
+          "input_status": "valid"
+        },
+        {
+          "system_id": "astra_diagnostic_support_q2",
+          "episode_id": "MLP4B_0058",
+          "block_id": "D12",
+          "selected": [
+            "C08",
+            "C09",
+            "C16"
+          ],
+          "valid": true,
+          "optimal": true,
+          "coverage": 6,
+          "optimal_coverage": 6,
+          "normalized_coverage": 1.0,
+          "selected_edges": 6,
+          "hidden_edges": 13,
+          "input_status": "valid"
+        },
+        {
+          "system_id": "astra_diagnostic_support_q2",
+          "episode_id": "MLP4B_0059",
+          "block_id": "D12",
+          "selected": [
+            "C06",
+            "C12",
+            "C14"
+          ],
+          "valid": true,
+          "optimal": true,
+          "coverage": 7,
+          "optimal_coverage": 7,
+          "normalized_coverage": 1.0,
+          "selected_edges": 7,
+          "hidden_edges": 19,
+          "input_status": "valid"
+        }
+      ]
+    },
+    "sweep": [
+      {
+        "q": 1,
+        "summary": {
+          "system_id": "astra_diagnostic_q1",
+          "display_label": "Astra xhigh support q=1",
+          "exact_optimal": 2,
+          "total": 20,
+          "exact_optimal_percentage": 10.0,
+          "valid": 20,
+          "valid_percentage": 100.0,
+          "achieved_target_coverage": 91,
+          "target_count": 160,
+          "target_coverage_percentage": 56.875,
+          "mean_oracle_normalized_coverage_percentage": 73.80952380952382,
+          "selected_edge_recall_percentage": 35.27272727272727,
+          "wilson_95_interval_fraction": [
+            0.027866481213768224,
+            0.3010336452284873
+          ],
+          "block_bootstrap_95_interval_fraction": [
+            0.0,
+            0.2
+          ],
+          "exact_by_block": {
+            "D04": 0,
+            "D05": 0,
+            "D06": 1,
+            "D12": 1
+          }
+        },
+        "support_edges": {
+          "true_positive": 135,
+          "false_positive": 21,
+          "false_negative": 140,
+          "micro_precision": 0.8653846153846154,
+          "micro_recall": 0.4909090909090909,
+          "micro_f1": 0.6264501160092807
+        },
+        "tie_summary": {
+          "valid_episodes": 20,
+          "episodes_with_multiple_predicted_optima": 17,
+          "mean_predicted_optimum_tie_count": 7.45,
+          "episodes_with_a_true_optimum_among_predicted_ties": 8,
+          "expected_exact_count_under_uniform_predicted_tie_break": 3.15,
+          "expected_total_coverage_under_uniform_predicted_tie_break": 93.63333333333334,
+          "note": "Offline diagnostic only. All reported pipeline selections use original lexicographic tie break; true labels never select a portfolio."
+        },
+        "tie_per_item": [
+          {
+            "episode_id": "MLP4B_0015",
+            "tie_count": 4,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 4.75,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0016",
+            "tie_count": 10,
+            "predicted_max_coverage": 4,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 4.7,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.1
+          },
+          {
+            "episode_id": "MLP4B_0017",
+            "tie_count": 4,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 5,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 5,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0018",
+            "tie_count": 15,
+            "predicted_max_coverage": 4,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 3,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 4.466666666666667,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.06666666666666667
+          },
+          {
+            "episode_id": "MLP4B_0019",
+            "tie_count": 4,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 5,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 5.25,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.25
+          },
+          {
+            "episode_id": "MLP4B_0020",
+            "tie_count": 15,
+            "predicted_max_coverage": 4,
+            "lex_chosen_true_coverage": 3,
+            "min_true_coverage_among_ties": 3,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 4.266666666666667,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.06666666666666667
+          },
+          {
+            "episode_id": "MLP4B_0021",
+            "tie_count": 6,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 3,
+            "max_true_coverage_among_ties": 4,
+            "mean_true_coverage_among_ties": 3.3333333333333335,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0022",
+            "tie_count": 10,
+            "predicted_max_coverage": 4,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 3,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 4,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0023",
+            "tie_count": 15,
+            "predicted_max_coverage": 4,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 3,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 3.7333333333333334,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0024",
+            "tie_count": 15,
+            "predicted_max_coverage": 4,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 2,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 3.933333333333333,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0025",
+            "tie_count": 3,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 5,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.3333333333333333
+          },
+          {
+            "episode_id": "MLP4B_0026",
+            "tie_count": 1,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 6,
+            "min_true_coverage_among_ties": 6,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 6,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 1.0
+          },
+          {
+            "episode_id": "MLP4B_0027",
+            "tie_count": 4,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 6,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 5.25,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0028",
+            "tie_count": 15,
+            "predicted_max_coverage": 4,
+            "lex_chosen_true_coverage": 3,
+            "min_true_coverage_among_ties": 3,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 4.2,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0029",
+            "tie_count": 4,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 3,
+            "max_true_coverage_among_ties": 4,
+            "mean_true_coverage_among_ties": 3.75,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0055",
+            "tie_count": 3,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 5,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 5.333333333333333,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.3333333333333333
+          },
+          {
+            "episode_id": "MLP4B_0056",
+            "tie_count": 1,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 5,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 5,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0057",
+            "tie_count": 15,
+            "predicted_max_coverage": 4,
+            "lex_chosen_true_coverage": 3,
+            "min_true_coverage_among_ties": 2,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 3.6666666666666665,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0058",
+            "tie_count": 4,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 5,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 5,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0059",
+            "tie_count": 1,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 7,
+            "min_true_coverage_among_ties": 7,
+            "max_true_coverage_among_ties": 7,
+            "mean_true_coverage_among_ties": 7,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 1.0
+          }
+        ],
+        "per_item": [
+          {
+            "system_id": "astra_diagnostic_q1",
+            "episode_id": "MLP4B_0015",
+            "block_id": "D04",
+            "selected": [
+              "C03",
+              "C08",
+              "C14"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 15
+          },
+          {
+            "system_id": "astra_diagnostic_q1",
+            "episode_id": "MLP4B_0016",
+            "block_id": "D04",
+            "selected": [
+              "C02",
+              "C04",
+              "C10"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 4,
+            "hidden_edges": 13
+          },
+          {
+            "system_id": "astra_diagnostic_q1",
+            "episode_id": "MLP4B_0017",
+            "block_id": "D04",
+            "selected": [
+              "C02",
+              "C03",
+              "C09"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 14
+          },
+          {
+            "system_id": "astra_diagnostic_q1",
+            "episode_id": "MLP4B_0018",
+            "block_id": "D04",
+            "selected": [
+              "C01",
+              "C02",
+              "C16"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 4,
+            "hidden_edges": 14
+          },
+          {
+            "system_id": "astra_diagnostic_q1",
+            "episode_id": "MLP4B_0019",
+            "block_id": "D04",
+            "selected": [
+              "C04",
+              "C05",
+              "C16"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 18
+          },
+          {
+            "system_id": "astra_diagnostic_q1",
+            "episode_id": "MLP4B_0020",
+            "block_id": "D05",
+            "selected": [
+              "C03",
+              "C07",
+              "C14"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 3,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.5,
+            "selected_edges": 3,
+            "hidden_edges": 11
+          },
+          {
+            "system_id": "astra_diagnostic_q1",
+            "episode_id": "MLP4B_0021",
+            "block_id": "D05",
+            "selected": [
+              "C06",
+              "C08",
+              "C14"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 4,
+            "hidden_edges": 15
+          },
+          {
+            "system_id": "astra_diagnostic_q1",
+            "episode_id": "MLP4B_0022",
+            "block_id": "D05",
+            "selected": [
+              "C03",
+              "C05",
+              "C13"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 7,
+            "normalized_coverage": 0.5714285714285714,
+            "selected_edges": 4,
+            "hidden_edges": 14
+          },
+          {
+            "system_id": "astra_diagnostic_q1",
+            "episode_id": "MLP4B_0023",
+            "block_id": "D05",
+            "selected": [
+              "C01",
+              "C06",
+              "C12"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 5,
+            "hidden_edges": 15
+          },
+          {
+            "system_id": "astra_diagnostic_q1",
+            "episode_id": "MLP4B_0024",
+            "block_id": "D05",
+            "selected": [
+              "C06",
+              "C08",
+              "C15"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 12
+          },
+          {
+            "system_id": "astra_diagnostic_q1",
+            "episode_id": "MLP4B_0025",
+            "block_id": "D06",
+            "selected": [
+              "C03",
+              "C14",
+              "C15"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 4,
+            "hidden_edges": 15
+          },
+          {
+            "system_id": "astra_diagnostic_q1",
+            "episode_id": "MLP4B_0026",
+            "block_id": "D06",
+            "selected": [
+              "C04",
+              "C13",
+              "C15"
+            ],
+            "valid": true,
+            "optimal": true,
+            "coverage": 6,
+            "optimal_coverage": 6,
+            "normalized_coverage": 1.0,
+            "selected_edges": 6,
+            "hidden_edges": 12
+          },
+          {
+            "system_id": "astra_diagnostic_q1",
+            "episode_id": "MLP4B_0027",
+            "block_id": "D06",
+            "selected": [
+              "C02",
+              "C04",
+              "C06"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 6,
+            "optimal_coverage": 7,
+            "normalized_coverage": 0.8571428571428571,
+            "selected_edges": 7,
+            "hidden_edges": 15
+          },
+          {
+            "system_id": "astra_diagnostic_q1",
+            "episode_id": "MLP4B_0028",
+            "block_id": "D06",
+            "selected": [
+              "C02",
+              "C03",
+              "C14"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 3,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.5,
+            "selected_edges": 3,
+            "hidden_edges": 13
+          },
+          {
+            "system_id": "astra_diagnostic_q1",
+            "episode_id": "MLP4B_0029",
+            "block_id": "D06",
+            "selected": [
+              "C04",
+              "C06",
+              "C16"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 5,
+            "hidden_edges": 12
+          },
+          {
+            "system_id": "astra_diagnostic_q1",
+            "episode_id": "MLP4B_0055",
+            "block_id": "D12",
+            "selected": [
+              "C02",
+              "C05",
+              "C07"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 12
+          },
+          {
+            "system_id": "astra_diagnostic_q1",
+            "episode_id": "MLP4B_0056",
+            "block_id": "D12",
+            "selected": [
+              "C03",
+              "C08",
+              "C16"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 6,
+            "hidden_edges": 11
+          },
+          {
+            "system_id": "astra_diagnostic_q1",
+            "episode_id": "MLP4B_0057",
+            "block_id": "D12",
+            "selected": [
+              "C04",
+              "C06",
+              "C09"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 3,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.5,
+            "selected_edges": 4,
+            "hidden_edges": 12
+          },
+          {
+            "system_id": "astra_diagnostic_q1",
+            "episode_id": "MLP4B_0058",
+            "block_id": "D12",
+            "selected": [
+              "C05",
+              "C09",
+              "C16"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 6,
+            "hidden_edges": 13
+          },
+          {
+            "system_id": "astra_diagnostic_q1",
+            "episode_id": "MLP4B_0059",
+            "block_id": "D12",
+            "selected": [
+              "C06",
+              "C12",
+              "C15"
+            ],
+            "valid": true,
+            "optimal": true,
+            "coverage": 7,
+            "optimal_coverage": 7,
+            "normalized_coverage": 1.0,
+            "selected_edges": 7,
+            "hidden_edges": 19
+          }
+        ]
+      },
+      {
+        "q": 2,
+        "summary": {
+          "system_id": "astra_diagnostic_q2",
+          "display_label": "Astra xhigh support q=2",
+          "exact_optimal": 4,
+          "total": 20,
+          "exact_optimal_percentage": 20.0,
+          "valid": 20,
+          "valid_percentage": 100.0,
+          "achieved_target_coverage": 100,
+          "target_count": 160,
+          "target_coverage_percentage": 62.5,
+          "mean_oracle_normalized_coverage_percentage": 81.07142857142858,
+          "selected_edge_recall_percentage": 37.45454545454545,
+          "wilson_95_interval_fraction": [
+            0.08065766257979806,
+            0.41601743225189364
+          ],
+          "block_bootstrap_95_interval_fraction": [
+            0.0,
+            0.45
+          ],
+          "exact_by_block": {
+            "D04": 0,
+            "D05": 0,
+            "D06": 1,
+            "D12": 3
+          }
+        },
+        "support_edges": {
+          "true_positive": 203,
+          "false_positive": 43,
+          "false_negative": 72,
+          "micro_precision": 0.8252032520325203,
+          "micro_recall": 0.7381818181818182,
+          "micro_f1": 0.7792706333973128
+        },
+        "tie_summary": {
+          "valid_episodes": 20,
+          "episodes_with_multiple_predicted_optima": 16,
+          "mean_predicted_optimum_tie_count": 6.55,
+          "episodes_with_a_true_optimum_among_predicted_ties": 13,
+          "expected_exact_count_under_uniform_predicted_tie_break": 5.653869047619048,
+          "expected_total_coverage_under_uniform_predicted_tie_break": 100.25724206349206,
+          "note": "Offline diagnostic only. All reported pipeline selections use original lexicographic tie break; true labels never select a portfolio."
+        },
+        "tie_per_item": [
+          {
+            "episode_id": "MLP4B_0015",
+            "tie_count": 5,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 4.6,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0016",
+            "tie_count": 4,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 4.75,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0017",
+            "tie_count": 20,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 4.65,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.05
+          },
+          {
+            "episode_id": "MLP4B_0018",
+            "tie_count": 32,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 2,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 3.71875,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.03125
+          },
+          {
+            "episode_id": "MLP4B_0019",
+            "tie_count": 8,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 5,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 5.125,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.125
+          },
+          {
+            "episode_id": "MLP4B_0020",
+            "tie_count": 7,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 3,
+            "min_true_coverage_among_ties": 3,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 4.285714285714286,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.14285714285714285
+          },
+          {
+            "episode_id": "MLP4B_0021",
+            "tie_count": 9,
+            "predicted_max_coverage": 7,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 3,
+            "max_true_coverage_among_ties": 4,
+            "mean_true_coverage_among_ties": 3.4444444444444446,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0022",
+            "tie_count": 14,
+            "predicted_max_coverage": 4,
+            "lex_chosen_true_coverage": 6,
+            "min_true_coverage_among_ties": 3,
+            "max_true_coverage_among_ties": 7,
+            "mean_true_coverage_among_ties": 4.5,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.07142857142857142
+          },
+          {
+            "episode_id": "MLP4B_0023",
+            "tie_count": 1,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 5,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 5,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0024",
+            "tie_count": 5,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 5,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.2
+          },
+          {
+            "episode_id": "MLP4B_0025",
+            "tie_count": 5,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 4.8,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.2
+          },
+          {
+            "episode_id": "MLP4B_0026",
+            "tie_count": 1,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 6,
+            "min_true_coverage_among_ties": 6,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 6,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 1.0
+          },
+          {
+            "episode_id": "MLP4B_0027",
+            "tie_count": 2,
+            "predicted_max_coverage": 7,
+            "lex_chosen_true_coverage": 6,
+            "min_true_coverage_among_ties": 6,
+            "max_true_coverage_among_ties": 7,
+            "mean_true_coverage_among_ties": 6.5,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.5
+          },
+          {
+            "episode_id": "MLP4B_0028",
+            "tie_count": 4,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 4.75,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0029",
+            "tie_count": 2,
+            "predicted_max_coverage": 7,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 4,
+            "mean_true_coverage_among_ties": 4,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0055",
+            "tie_count": 1,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 6,
+            "min_true_coverage_among_ties": 6,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 6,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 1.0
+          },
+          {
+            "episode_id": "MLP4B_0056",
+            "tie_count": 3,
+            "predicted_max_coverage": 7,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 5,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 5.333333333333333,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.3333333333333333
+          },
+          {
+            "episode_id": "MLP4B_0057",
+            "tie_count": 5,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 4.8,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0058",
+            "tie_count": 1,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 6,
+            "min_true_coverage_among_ties": 6,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 6,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 1.0
+          },
+          {
+            "episode_id": "MLP4B_0059",
+            "tie_count": 2,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 7,
+            "min_true_coverage_among_ties": 7,
+            "max_true_coverage_among_ties": 7,
+            "mean_true_coverage_among_ties": 7,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 1.0
+          }
+        ],
+        "per_item": [
+          {
+            "system_id": "astra_diagnostic_q2",
+            "episode_id": "MLP4B_0015",
+            "block_id": "D04",
+            "selected": [
+              "C03",
+              "C08",
+              "C14"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 15
+          },
+          {
+            "system_id": "astra_diagnostic_q2",
+            "episode_id": "MLP4B_0016",
+            "block_id": "D04",
+            "selected": [
+              "C01",
+              "C02",
+              "C10"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 13
+          },
+          {
+            "system_id": "astra_diagnostic_q2",
+            "episode_id": "MLP4B_0017",
+            "block_id": "D04",
+            "selected": [
+              "C02",
+              "C03",
+              "C09"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 14
+          },
+          {
+            "system_id": "astra_diagnostic_q2",
+            "episode_id": "MLP4B_0018",
+            "block_id": "D04",
+            "selected": [
+              "C01",
+              "C02",
+              "C15"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 4,
+            "hidden_edges": 14
+          },
+          {
+            "system_id": "astra_diagnostic_q2",
+            "episode_id": "MLP4B_0019",
+            "block_id": "D04",
+            "selected": [
+              "C04",
+              "C05",
+              "C07"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 18
+          },
+          {
+            "system_id": "astra_diagnostic_q2",
+            "episode_id": "MLP4B_0020",
+            "block_id": "D05",
+            "selected": [
+              "C03",
+              "C07",
+              "C14"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 3,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.5,
+            "selected_edges": 3,
+            "hidden_edges": 11
+          },
+          {
+            "system_id": "astra_diagnostic_q2",
+            "episode_id": "MLP4B_0021",
+            "block_id": "D05",
+            "selected": [
+              "C06",
+              "C08",
+              "C14"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 4,
+            "hidden_edges": 15
+          },
+          {
+            "system_id": "astra_diagnostic_q2",
+            "episode_id": "MLP4B_0022",
+            "block_id": "D05",
+            "selected": [
+              "C03",
+              "C04",
+              "C13"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 6,
+            "optimal_coverage": 7,
+            "normalized_coverage": 0.8571428571428571,
+            "selected_edges": 6,
+            "hidden_edges": 14
+          },
+          {
+            "system_id": "astra_diagnostic_q2",
+            "episode_id": "MLP4B_0023",
+            "block_id": "D05",
+            "selected": [
+              "C06",
+              "C09",
+              "C11"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 15
+          },
+          {
+            "system_id": "astra_diagnostic_q2",
+            "episode_id": "MLP4B_0024",
+            "block_id": "D05",
+            "selected": [
+              "C06",
+              "C12",
+              "C15"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 12
+          },
+          {
+            "system_id": "astra_diagnostic_q2",
+            "episode_id": "MLP4B_0025",
+            "block_id": "D06",
+            "selected": [
+              "C03",
+              "C14",
+              "C15"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 4,
+            "hidden_edges": 15
+          },
+          {
+            "system_id": "astra_diagnostic_q2",
+            "episode_id": "MLP4B_0026",
+            "block_id": "D06",
+            "selected": [
+              "C04",
+              "C13",
+              "C15"
+            ],
+            "valid": true,
+            "optimal": true,
+            "coverage": 6,
+            "optimal_coverage": 6,
+            "normalized_coverage": 1.0,
+            "selected_edges": 6,
+            "hidden_edges": 12
+          },
+          {
+            "system_id": "astra_diagnostic_q2",
+            "episode_id": "MLP4B_0027",
+            "block_id": "D06",
+            "selected": [
+              "C02",
+              "C04",
+              "C06"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 6,
+            "optimal_coverage": 7,
+            "normalized_coverage": 0.8571428571428571,
+            "selected_edges": 7,
+            "hidden_edges": 15
+          },
+          {
+            "system_id": "astra_diagnostic_q2",
+            "episode_id": "MLP4B_0028",
+            "block_id": "D06",
+            "selected": [
+              "C03",
+              "C07",
+              "C14"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 4,
+            "hidden_edges": 13
+          },
+          {
+            "system_id": "astra_diagnostic_q2",
+            "episode_id": "MLP4B_0029",
+            "block_id": "D06",
+            "selected": [
+              "C04",
+              "C06",
+              "C16"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 5,
+            "hidden_edges": 12
+          },
+          {
+            "system_id": "astra_diagnostic_q2",
+            "episode_id": "MLP4B_0055",
+            "block_id": "D12",
+            "selected": [
+              "C05",
+              "C06",
+              "C07"
+            ],
+            "valid": true,
+            "optimal": true,
+            "coverage": 6,
+            "optimal_coverage": 6,
+            "normalized_coverage": 1.0,
+            "selected_edges": 6,
+            "hidden_edges": 12
+          },
+          {
+            "system_id": "astra_diagnostic_q2",
+            "episode_id": "MLP4B_0056",
+            "block_id": "D12",
+            "selected": [
+              "C03",
+              "C08",
+              "C16"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 6,
+            "hidden_edges": 11
+          },
+          {
+            "system_id": "astra_diagnostic_q2",
+            "episode_id": "MLP4B_0057",
+            "block_id": "D12",
+            "selected": [
+              "C02",
+              "C04",
+              "C15"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 12
+          },
+          {
+            "system_id": "astra_diagnostic_q2",
+            "episode_id": "MLP4B_0058",
+            "block_id": "D12",
+            "selected": [
+              "C08",
+              "C09",
+              "C16"
+            ],
+            "valid": true,
+            "optimal": true,
+            "coverage": 6,
+            "optimal_coverage": 6,
+            "normalized_coverage": 1.0,
+            "selected_edges": 6,
+            "hidden_edges": 13
+          },
+          {
+            "system_id": "astra_diagnostic_q2",
+            "episode_id": "MLP4B_0059",
+            "block_id": "D12",
+            "selected": [
+              "C06",
+              "C12",
+              "C14"
+            ],
+            "valid": true,
+            "optimal": true,
+            "coverage": 7,
+            "optimal_coverage": 7,
+            "normalized_coverage": 1.0,
+            "selected_edges": 7,
+            "hidden_edges": 19
+          }
+        ]
+      },
+      {
+        "q": 3,
+        "summary": {
+          "system_id": "astra_diagnostic_q3",
+          "display_label": "Astra xhigh support q=3",
+          "exact_optimal": 4,
+          "total": 20,
+          "exact_optimal_percentage": 20.0,
+          "valid": 20,
+          "valid_percentage": 100.0,
+          "achieved_target_coverage": 96,
+          "target_count": 160,
+          "target_coverage_percentage": 60.0,
+          "mean_oracle_normalized_coverage_percentage": 77.85714285714286,
+          "selected_edge_recall_percentage": 36.36363636363637,
+          "wilson_95_interval_fraction": [
+            0.08065766257979806,
+            0.41601743225189364
+          ],
+          "block_bootstrap_95_interval_fraction": [
+            0.05,
+            0.35
+          ],
+          "exact_by_block": {
+            "D04": 1,
+            "D05": 0,
+            "D06": 1,
+            "D12": 2
+          }
+        },
+        "support_edges": {
+          "true_positive": 228,
+          "false_positive": 69,
+          "false_negative": 47,
+          "micro_precision": 0.7676767676767676,
+          "micro_recall": 0.8290909090909091,
+          "micro_f1": 0.7972027972027971
+        },
+        "tie_summary": {
+          "valid_episodes": 20,
+          "episodes_with_multiple_predicted_optima": 17,
+          "mean_predicted_optimum_tie_count": 6.75,
+          "episodes_with_a_true_optimum_among_predicted_ties": 13,
+          "expected_exact_count_under_uniform_predicted_tie_break": 6.132723577235772,
+          "expected_total_coverage_under_uniform_predicted_tie_break": 99.78143631436315,
+          "note": "Offline diagnostic only. All reported pipeline selections use original lexicographic tie break; true labels never select a portfolio."
+        },
+        "tie_per_item": [
+          {
+            "episode_id": "MLP4B_0015",
+            "tie_count": 4,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 5,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 5.25,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.25
+          },
+          {
+            "episode_id": "MLP4B_0016",
+            "tie_count": 2,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 5,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 5,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0017",
+            "tie_count": 3,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 5,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 5.333333333333333,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.3333333333333333
+          },
+          {
+            "episode_id": "MLP4B_0018",
+            "tie_count": 5,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 3,
+            "min_true_coverage_among_ties": 2,
+            "max_true_coverage_among_ties": 4,
+            "mean_true_coverage_among_ties": 3,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0019",
+            "tie_count": 3,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 6,
+            "min_true_coverage_among_ties": 6,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 6,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 1.0
+          },
+          {
+            "episode_id": "MLP4B_0020",
+            "tie_count": 8,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 2,
+            "min_true_coverage_among_ties": 2,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 4,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.125
+          },
+          {
+            "episode_id": "MLP4B_0021",
+            "tie_count": 6,
+            "predicted_max_coverage": 8,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 3,
+            "max_true_coverage_among_ties": 4,
+            "mean_true_coverage_among_ties": 3.3333333333333335,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0022",
+            "tie_count": 18,
+            "predicted_max_coverage": 4,
+            "lex_chosen_true_coverage": 6,
+            "min_true_coverage_among_ties": 2,
+            "max_true_coverage_among_ties": 7,
+            "mean_true_coverage_among_ties": 4.166666666666667,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.05555555555555555
+          },
+          {
+            "episode_id": "MLP4B_0023",
+            "tie_count": 5,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 5,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 5,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0024",
+            "tie_count": 9,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 4.777777777777778,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.1111111111111111
+          },
+          {
+            "episode_id": "MLP4B_0025",
+            "tie_count": 41,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 3,
+            "min_true_coverage_among_ties": 2,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 3.8536585365853657,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.024390243902439025
+          },
+          {
+            "episode_id": "MLP4B_0026",
+            "tie_count": 1,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 6,
+            "min_true_coverage_among_ties": 6,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 6,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 1.0
+          },
+          {
+            "episode_id": "MLP4B_0027",
+            "tie_count": 2,
+            "predicted_max_coverage": 8,
+            "lex_chosen_true_coverage": 6,
+            "min_true_coverage_among_ties": 6,
+            "max_true_coverage_among_ties": 7,
+            "mean_true_coverage_among_ties": 6.5,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.5
+          },
+          {
+            "episode_id": "MLP4B_0028",
+            "tie_count": 6,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 4.833333333333333,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0029",
+            "tie_count": 4,
+            "predicted_max_coverage": 7,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 4.5,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0055",
+            "tie_count": 1,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 6,
+            "min_true_coverage_among_ties": 6,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 6,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 1.0
+          },
+          {
+            "episode_id": "MLP4B_0056",
+            "tie_count": 3,
+            "predicted_max_coverage": 7,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 5,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 5.333333333333333,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.3333333333333333
+          },
+          {
+            "episode_id": "MLP4B_0057",
+            "tie_count": 8,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 3,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 4.5,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0058",
+            "tie_count": 1,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 6,
+            "min_true_coverage_among_ties": 6,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 6,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 1.0
+          },
+          {
+            "episode_id": "MLP4B_0059",
+            "tie_count": 5,
+            "predicted_max_coverage": 7,
+            "lex_chosen_true_coverage": 6,
+            "min_true_coverage_among_ties": 6,
+            "max_true_coverage_among_ties": 7,
+            "mean_true_coverage_among_ties": 6.4,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.4
+          }
+        ],
+        "per_item": [
+          {
+            "system_id": "astra_diagnostic_q3",
+            "episode_id": "MLP4B_0015",
+            "block_id": "D04",
+            "selected": [
+              "C03",
+              "C12",
+              "C14"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 15
+          },
+          {
+            "system_id": "astra_diagnostic_q3",
+            "episode_id": "MLP4B_0016",
+            "block_id": "D04",
+            "selected": [
+              "C01",
+              "C02",
+              "C10"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 13
+          },
+          {
+            "system_id": "astra_diagnostic_q3",
+            "episode_id": "MLP4B_0017",
+            "block_id": "D04",
+            "selected": [
+              "C02",
+              "C15",
+              "C16"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 14
+          },
+          {
+            "system_id": "astra_diagnostic_q3",
+            "episode_id": "MLP4B_0018",
+            "block_id": "D04",
+            "selected": [
+              "C02",
+              "C03",
+              "C15"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 3,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.5,
+            "selected_edges": 3,
+            "hidden_edges": 14
+          },
+          {
+            "system_id": "astra_diagnostic_q3",
+            "episode_id": "MLP4B_0019",
+            "block_id": "D04",
+            "selected": [
+              "C01",
+              "C13",
+              "C16"
+            ],
+            "valid": true,
+            "optimal": true,
+            "coverage": 6,
+            "optimal_coverage": 6,
+            "normalized_coverage": 1.0,
+            "selected_edges": 6,
+            "hidden_edges": 18
+          },
+          {
+            "system_id": "astra_diagnostic_q3",
+            "episode_id": "MLP4B_0020",
+            "block_id": "D05",
+            "selected": [
+              "C02",
+              "C03",
+              "C14"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 2,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.3333333333333333,
+            "selected_edges": 2,
+            "hidden_edges": 11
+          },
+          {
+            "system_id": "astra_diagnostic_q3",
+            "episode_id": "MLP4B_0021",
+            "block_id": "D05",
+            "selected": [
+              "C05",
+              "C09",
+              "C12"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 4,
+            "hidden_edges": 15
+          },
+          {
+            "system_id": "astra_diagnostic_q3",
+            "episode_id": "MLP4B_0022",
+            "block_id": "D05",
+            "selected": [
+              "C03",
+              "C04",
+              "C13"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 6,
+            "optimal_coverage": 7,
+            "normalized_coverage": 0.8571428571428571,
+            "selected_edges": 6,
+            "hidden_edges": 14
+          },
+          {
+            "system_id": "astra_diagnostic_q3",
+            "episode_id": "MLP4B_0023",
+            "block_id": "D05",
+            "selected": [
+              "C01",
+              "C03",
+              "C11"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 6,
+            "hidden_edges": 15
+          },
+          {
+            "system_id": "astra_diagnostic_q3",
+            "episode_id": "MLP4B_0024",
+            "block_id": "D05",
+            "selected": [
+              "C01",
+              "C12",
+              "C15"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 4,
+            "hidden_edges": 12
+          },
+          {
+            "system_id": "astra_diagnostic_q3",
+            "episode_id": "MLP4B_0025",
+            "block_id": "D06",
+            "selected": [
+              "C03",
+              "C07",
+              "C10"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 3,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.5,
+            "selected_edges": 3,
+            "hidden_edges": 15
+          },
+          {
+            "system_id": "astra_diagnostic_q3",
+            "episode_id": "MLP4B_0026",
+            "block_id": "D06",
+            "selected": [
+              "C04",
+              "C13",
+              "C15"
+            ],
+            "valid": true,
+            "optimal": true,
+            "coverage": 6,
+            "optimal_coverage": 6,
+            "normalized_coverage": 1.0,
+            "selected_edges": 6,
+            "hidden_edges": 12
+          },
+          {
+            "system_id": "astra_diagnostic_q3",
+            "episode_id": "MLP4B_0027",
+            "block_id": "D06",
+            "selected": [
+              "C02",
+              "C04",
+              "C06"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 6,
+            "optimal_coverage": 7,
+            "normalized_coverage": 0.8571428571428571,
+            "selected_edges": 7,
+            "hidden_edges": 15
+          },
+          {
+            "system_id": "astra_diagnostic_q3",
+            "episode_id": "MLP4B_0028",
+            "block_id": "D06",
+            "selected": [
+              "C03",
+              "C07",
+              "C14"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 4,
+            "hidden_edges": 13
+          },
+          {
+            "system_id": "astra_diagnostic_q3",
+            "episode_id": "MLP4B_0029",
+            "block_id": "D06",
+            "selected": [
+              "C04",
+              "C06",
+              "C16"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 5,
+            "hidden_edges": 12
+          },
+          {
+            "system_id": "astra_diagnostic_q3",
+            "episode_id": "MLP4B_0055",
+            "block_id": "D12",
+            "selected": [
+              "C05",
+              "C06",
+              "C07"
+            ],
+            "valid": true,
+            "optimal": true,
+            "coverage": 6,
+            "optimal_coverage": 6,
+            "normalized_coverage": 1.0,
+            "selected_edges": 6,
+            "hidden_edges": 12
+          },
+          {
+            "system_id": "astra_diagnostic_q3",
+            "episode_id": "MLP4B_0056",
+            "block_id": "D12",
+            "selected": [
+              "C03",
+              "C08",
+              "C16"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 6,
+            "hidden_edges": 11
+          },
+          {
+            "system_id": "astra_diagnostic_q3",
+            "episode_id": "MLP4B_0057",
+            "block_id": "D12",
+            "selected": [
+              "C02",
+              "C04",
+              "C15"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 12
+          },
+          {
+            "system_id": "astra_diagnostic_q3",
+            "episode_id": "MLP4B_0058",
+            "block_id": "D12",
+            "selected": [
+              "C08",
+              "C09",
+              "C16"
+            ],
+            "valid": true,
+            "optimal": true,
+            "coverage": 6,
+            "optimal_coverage": 6,
+            "normalized_coverage": 1.0,
+            "selected_edges": 6,
+            "hidden_edges": 13
+          },
+          {
+            "system_id": "astra_diagnostic_q3",
+            "episode_id": "MLP4B_0059",
+            "block_id": "D12",
+            "selected": [
+              "C02",
+              "C06",
+              "C11"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 6,
+            "optimal_coverage": 7,
+            "normalized_coverage": 0.8571428571428571,
+            "selected_edges": 6,
+            "hidden_edges": 19
+          }
+        ]
+      },
+      {
+        "q": 4,
+        "summary": {
+          "system_id": "astra_diagnostic_q4",
+          "display_label": "Astra xhigh support q=4",
+          "exact_optimal": 4,
+          "total": 20,
+          "exact_optimal_percentage": 20.0,
+          "valid": 20,
+          "valid_percentage": 100.0,
+          "achieved_target_coverage": 96,
+          "target_count": 160,
+          "target_coverage_percentage": 60.0,
+          "mean_oracle_normalized_coverage_percentage": 77.85714285714286,
+          "selected_edge_recall_percentage": 36.36363636363637,
+          "wilson_95_interval_fraction": [
+            0.08065766257979806,
+            0.41601743225189364
+          ],
+          "block_bootstrap_95_interval_fraction": [
+            0.05,
+            0.35
+          ],
+          "exact_by_block": {
+            "D04": 1,
+            "D05": 0,
+            "D06": 1,
+            "D12": 2
+          }
+        },
+        "support_edges": {
+          "true_positive": 234,
+          "false_positive": 83,
+          "false_negative": 41,
+          "micro_precision": 0.7381703470031545,
+          "micro_recall": 0.850909090909091,
+          "micro_f1": 0.7905405405405405
+        },
+        "tie_summary": {
+          "valid_episodes": 20,
+          "episodes_with_multiple_predicted_optima": 18,
+          "mean_predicted_optimum_tie_count": 6.15,
+          "episodes_with_a_true_optimum_among_predicted_ties": 12,
+          "expected_exact_count_under_uniform_predicted_tie_break": 5.337121212121212,
+          "expected_total_coverage_under_uniform_predicted_tie_break": 98.85252525252525,
+          "note": "Offline diagnostic only. All reported pipeline selections use original lexicographic tie break; true labels never select a portfolio."
+        },
+        "tie_per_item": [
+          {
+            "episode_id": "MLP4B_0015",
+            "tie_count": 6,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 5,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 5.166666666666667,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.16666666666666666
+          },
+          {
+            "episode_id": "MLP4B_0016",
+            "tie_count": 2,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 5,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 5,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0017",
+            "tie_count": 3,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 5,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 5.333333333333333,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.3333333333333333
+          },
+          {
+            "episode_id": "MLP4B_0018",
+            "tie_count": 9,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 3,
+            "min_true_coverage_among_ties": 2,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 3.5555555555555554,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0019",
+            "tie_count": 3,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 6,
+            "min_true_coverage_among_ties": 6,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 6,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 1.0
+          },
+          {
+            "episode_id": "MLP4B_0020",
+            "tie_count": 8,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 2,
+            "min_true_coverage_among_ties": 2,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 4,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.125
+          },
+          {
+            "episode_id": "MLP4B_0021",
+            "tie_count": 6,
+            "predicted_max_coverage": 8,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 3,
+            "max_true_coverage_among_ties": 4,
+            "mean_true_coverage_among_ties": 3.3333333333333335,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0022",
+            "tie_count": 22,
+            "predicted_max_coverage": 4,
+            "lex_chosen_true_coverage": 6,
+            "min_true_coverage_among_ties": 2,
+            "max_true_coverage_among_ties": 7,
+            "mean_true_coverage_among_ties": 3.9545454545454546,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.045454545454545456
+          },
+          {
+            "episode_id": "MLP4B_0023",
+            "tie_count": 10,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 4.5,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0024",
+            "tie_count": 10,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 4.7,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.1
+          },
+          {
+            "episode_id": "MLP4B_0025",
+            "tie_count": 11,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 3,
+            "min_true_coverage_among_ties": 3,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 3.909090909090909,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0026",
+            "tie_count": 1,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 6,
+            "min_true_coverage_among_ties": 6,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 6,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 1.0
+          },
+          {
+            "episode_id": "MLP4B_0027",
+            "tie_count": 2,
+            "predicted_max_coverage": 8,
+            "lex_chosen_true_coverage": 6,
+            "min_true_coverage_among_ties": 6,
+            "max_true_coverage_among_ties": 7,
+            "mean_true_coverage_among_ties": 6.5,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.5
+          },
+          {
+            "episode_id": "MLP4B_0028",
+            "tie_count": 6,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 4.833333333333333,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0029",
+            "tie_count": 4,
+            "predicted_max_coverage": 7,
+            "lex_chosen_true_coverage": 4,
+            "min_true_coverage_among_ties": 4,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 4.5,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0055",
+            "tie_count": 1,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 6,
+            "min_true_coverage_among_ties": 6,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 6,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 1.0
+          },
+          {
+            "episode_id": "MLP4B_0056",
+            "tie_count": 3,
+            "predicted_max_coverage": 7,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 5,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 5.333333333333333,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.3333333333333333
+          },
+          {
+            "episode_id": "MLP4B_0057",
+            "tie_count": 8,
+            "predicted_max_coverage": 5,
+            "lex_chosen_true_coverage": 5,
+            "min_true_coverage_among_ties": 3,
+            "max_true_coverage_among_ties": 5,
+            "mean_true_coverage_among_ties": 4.5,
+            "contains_true_optimum": false,
+            "uniform_tie_exact_probability": 0.0
+          },
+          {
+            "episode_id": "MLP4B_0058",
+            "tie_count": 3,
+            "predicted_max_coverage": 6,
+            "lex_chosen_true_coverage": 6,
+            "min_true_coverage_among_ties": 5,
+            "max_true_coverage_among_ties": 6,
+            "mean_true_coverage_among_ties": 5.333333333333333,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.3333333333333333
+          },
+          {
+            "episode_id": "MLP4B_0059",
+            "tie_count": 5,
+            "predicted_max_coverage": 7,
+            "lex_chosen_true_coverage": 6,
+            "min_true_coverage_among_ties": 6,
+            "max_true_coverage_among_ties": 7,
+            "mean_true_coverage_among_ties": 6.4,
+            "contains_true_optimum": true,
+            "uniform_tie_exact_probability": 0.4
+          }
+        ],
+        "per_item": [
+          {
+            "system_id": "astra_diagnostic_q4",
+            "episode_id": "MLP4B_0015",
+            "block_id": "D04",
+            "selected": [
+              "C03",
+              "C08",
+              "C14"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 15
+          },
+          {
+            "system_id": "astra_diagnostic_q4",
+            "episode_id": "MLP4B_0016",
+            "block_id": "D04",
+            "selected": [
+              "C01",
+              "C02",
+              "C10"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 13
+          },
+          {
+            "system_id": "astra_diagnostic_q4",
+            "episode_id": "MLP4B_0017",
+            "block_id": "D04",
+            "selected": [
+              "C02",
+              "C15",
+              "C16"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 14
+          },
+          {
+            "system_id": "astra_diagnostic_q4",
+            "episode_id": "MLP4B_0018",
+            "block_id": "D04",
+            "selected": [
+              "C02",
+              "C03",
+              "C15"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 3,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.5,
+            "selected_edges": 3,
+            "hidden_edges": 14
+          },
+          {
+            "system_id": "astra_diagnostic_q4",
+            "episode_id": "MLP4B_0019",
+            "block_id": "D04",
+            "selected": [
+              "C01",
+              "C13",
+              "C16"
+            ],
+            "valid": true,
+            "optimal": true,
+            "coverage": 6,
+            "optimal_coverage": 6,
+            "normalized_coverage": 1.0,
+            "selected_edges": 6,
+            "hidden_edges": 18
+          },
+          {
+            "system_id": "astra_diagnostic_q4",
+            "episode_id": "MLP4B_0020",
+            "block_id": "D05",
+            "selected": [
+              "C02",
+              "C03",
+              "C14"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 2,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.3333333333333333,
+            "selected_edges": 2,
+            "hidden_edges": 11
+          },
+          {
+            "system_id": "astra_diagnostic_q4",
+            "episode_id": "MLP4B_0021",
+            "block_id": "D05",
+            "selected": [
+              "C05",
+              "C09",
+              "C12"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 4,
+            "hidden_edges": 15
+          },
+          {
+            "system_id": "astra_diagnostic_q4",
+            "episode_id": "MLP4B_0022",
+            "block_id": "D05",
+            "selected": [
+              "C03",
+              "C04",
+              "C13"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 6,
+            "optimal_coverage": 7,
+            "normalized_coverage": 0.8571428571428571,
+            "selected_edges": 6,
+            "hidden_edges": 14
+          },
+          {
+            "system_id": "astra_diagnostic_q4",
+            "episode_id": "MLP4B_0023",
+            "block_id": "D05",
+            "selected": [
+              "C01",
+              "C03",
+              "C11"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 6,
+            "hidden_edges": 15
+          },
+          {
+            "system_id": "astra_diagnostic_q4",
+            "episode_id": "MLP4B_0024",
+            "block_id": "D05",
+            "selected": [
+              "C01",
+              "C12",
+              "C15"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 4,
+            "hidden_edges": 12
+          },
+          {
+            "system_id": "astra_diagnostic_q4",
+            "episode_id": "MLP4B_0025",
+            "block_id": "D06",
+            "selected": [
+              "C03",
+              "C08",
+              "C10"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 3,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.5,
+            "selected_edges": 3,
+            "hidden_edges": 15
+          },
+          {
+            "system_id": "astra_diagnostic_q4",
+            "episode_id": "MLP4B_0026",
+            "block_id": "D06",
+            "selected": [
+              "C04",
+              "C13",
+              "C15"
+            ],
+            "valid": true,
+            "optimal": true,
+            "coverage": 6,
+            "optimal_coverage": 6,
+            "normalized_coverage": 1.0,
+            "selected_edges": 6,
+            "hidden_edges": 12
+          },
+          {
+            "system_id": "astra_diagnostic_q4",
+            "episode_id": "MLP4B_0027",
+            "block_id": "D06",
+            "selected": [
+              "C02",
+              "C04",
+              "C06"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 6,
+            "optimal_coverage": 7,
+            "normalized_coverage": 0.8571428571428571,
+            "selected_edges": 7,
+            "hidden_edges": 15
+          },
+          {
+            "system_id": "astra_diagnostic_q4",
+            "episode_id": "MLP4B_0028",
+            "block_id": "D06",
+            "selected": [
+              "C03",
+              "C07",
+              "C14"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 4,
+            "hidden_edges": 13
+          },
+          {
+            "system_id": "astra_diagnostic_q4",
+            "episode_id": "MLP4B_0029",
+            "block_id": "D06",
+            "selected": [
+              "C04",
+              "C06",
+              "C16"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 4,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.6666666666666666,
+            "selected_edges": 5,
+            "hidden_edges": 12
+          },
+          {
+            "system_id": "astra_diagnostic_q4",
+            "episode_id": "MLP4B_0055",
+            "block_id": "D12",
+            "selected": [
+              "C05",
+              "C06",
+              "C07"
+            ],
+            "valid": true,
+            "optimal": true,
+            "coverage": 6,
+            "optimal_coverage": 6,
+            "normalized_coverage": 1.0,
+            "selected_edges": 6,
+            "hidden_edges": 12
+          },
+          {
+            "system_id": "astra_diagnostic_q4",
+            "episode_id": "MLP4B_0056",
+            "block_id": "D12",
+            "selected": [
+              "C03",
+              "C08",
+              "C16"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 6,
+            "hidden_edges": 11
+          },
+          {
+            "system_id": "astra_diagnostic_q4",
+            "episode_id": "MLP4B_0057",
+            "block_id": "D12",
+            "selected": [
+              "C02",
+              "C04",
+              "C15"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 5,
+            "optimal_coverage": 6,
+            "normalized_coverage": 0.8333333333333334,
+            "selected_edges": 5,
+            "hidden_edges": 12
+          },
+          {
+            "system_id": "astra_diagnostic_q4",
+            "episode_id": "MLP4B_0058",
+            "block_id": "D12",
+            "selected": [
+              "C08",
+              "C09",
+              "C16"
+            ],
+            "valid": true,
+            "optimal": true,
+            "coverage": 6,
+            "optimal_coverage": 6,
+            "normalized_coverage": 1.0,
+            "selected_edges": 6,
+            "hidden_edges": 13
+          },
+          {
+            "system_id": "astra_diagnostic_q4",
+            "episode_id": "MLP4B_0059",
+            "block_id": "D12",
+            "selected": [
+              "C02",
+              "C06",
+              "C11"
+            ],
+            "valid": true,
+            "optimal": false,
+            "coverage": 6,
+            "optimal_coverage": 7,
+            "normalized_coverage": 0.8571428571428571,
+            "selected_edges": 6,
+            "hidden_edges": 19
+          }
+        ]
+      }
+    ],
+    "comparison_q2_minus_direct": {
+      "a": "Astra xhigh support q=2",
+      "b": "Astra xhigh fresh direct20",
+      "n": 20,
+      "exact_delta_pp": -20.0,
+      "coverage_delta_pp": -3.75,
+      "exact_paired_block_bootstrap_95_pp": [
+        -45.0,
+        0.0
+      ],
+      "coverage_paired_block_bootstrap_95_pp": [
+        -8.75,
+        1.25
+      ],
+      "a_only_optimal": 0,
+      "b_only_optimal": 4,
+      "note": "Resamples prompt blocks, not independent model repetitions. Small-sample descriptive uncertainty; not corrected for multiple comparisons."
+    },
+    "invalid_support_files": []
+  },
+  "workflow_outcome": {
+    "status": "complete",
+    "repeat_pairs_completed": 1,
+    "queue_adjustment": {
+      "recorded_utc": "2026-09-05T07:49:33+00:00",
+      "user_request": "shorten the queue no need to finish it",
+      "interpretation": "Accept the preceding recommendation: finish the current Sol xhigh second run and one matching Astra xhigh second run; skip the third pair.",
+      "retained_phases": [
+        "sol_xhigh_r2",
+        "astra_xhigh_r2"
+      ],
+      "cancelled_unstarted_phases": [
+        "sol_xhigh_r3",
+        "astra_xhigh_r3"
+      ],
+      "reason": "User-requested time reduction to prioritize manuscript preparation.",
+      "disclosure": "Operational amendment after core scores were known, not a predeclared stopping rule. Original frozen protocol remains unchanged. Retain every started run and do not select a best run."
+    },
+    "gates": [
+      {
+        "repeat_number": 2,
+        "hours_since_protocol_freeze": 4.8604243827777776,
+        "passed": true
+      }
+    ],
+    "skipped_phases": [
+      "sol_xhigh_r3",
+      "astra_xhigh_r3"
+    ],
+    "repeat_disposition": "Second pair completed; third pair skipped at user request to shorten the queue.",
+    "ended_utc": "2026-09-05T09:51:15.487944+00:00"
+  },
+  "queue_adjustment": {
+    "recorded_utc": "2026-09-05T07:49:33+00:00",
+    "user_request": "shorten the queue no need to finish it",
+    "interpretation": "Accept the preceding recommendation: finish the current Sol xhigh second run and one matching Astra xhigh second run; skip the third pair.",
+    "retained_phases": [
+      "sol_xhigh_r2",
+      "astra_xhigh_r2"
+    ],
+    "cancelled_unstarted_phases": [
+      "sol_xhigh_r3",
+      "astra_xhigh_r3"
+    ],
+    "reason": "User-requested time reduction to prioritize manuscript preparation.",
+    "disclosure": "Operational amendment after core scores were known, not a predeclared stopping rule. Original frozen protocol remains unchanged. Retain every started run and do not select a best run."
+  },
+  "disclosure": "Post-release follow-up, not part of original frozen blind consumer panel. Original labels and results already known to analyst but not supplied to evaluated processes. Serving snapshot, numeric reasoning budget, decoding defaults and monetary charge not independently authenticated."
+}

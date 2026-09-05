@@ -1,0 +1,15 @@
+{
+  "recorded_utc": "2026-09-05T07:49:33+00:00",
+  "user_request": "shorten the queue no need to finish it",
+  "interpretation": "Accept the preceding recommendation: finish the current Sol xhigh second run and one matching Astra xhigh second run; skip the third pair.",
+  "retained_phases": [
+    "sol_xhigh_r2",
+    "astra_xhigh_r2"
+  ],
+  "cancelled_unstarted_phases": [
+    "sol_xhigh_r3",
+    "astra_xhigh_r3"
+  ],
+  "reason": "User-requested time reduction to prioritize manuscript preparation.",
+  "disclosure": "Operational amendment after core scores were known, not a predeclared stopping rule. Original frozen protocol remains unchanged. Retain every started run and do not select a best run."
+}
