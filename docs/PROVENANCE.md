@@ -8,7 +8,7 @@ preserve the final supporting evidence. Its `MANIFEST.json` records the paired
 PDF hash and every follow-up answer/prompt association. Root result mirrors
 are `RESULTS.md` and `results/paper_results.json`.
 
-The final editable source has not yet been recovered. Earlier paper PDFs and
+The final editable source is unavailable. Earlier paper PDFs and
 LaTeX source are under `paper/historical/2026-09-05/`; they do not reproduce the
 final PDF. See [paper provenance](../paper/README.md). No new model calls were
 made to assemble or verify the submitted packet.

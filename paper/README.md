@@ -18,6 +18,8 @@ The submitted PDF and ZIP are preserved byte for byte.
 
 The available LaTeX sources and earlier PDFs are preserved under
 [historical/2026-09-05/](historical/2026-09-05/README.md). They precede the final
-submission and do not reproduce the final PDF. The exact final editable source
-was not included in the submitted ZIP or the supplied local files. Future
-manuscript edits should start from the final source when it becomes available.
+submission and do not reproduce the final PDF. The author has confirmed that
+the final LaTeX file is unavailable; neither the submitted ZIP nor the supplied
+local files contain it. Use the final PDF for page- and section-specific edit
+proposals. Any future reconstruction of editable source should be clearly
+labeled and checked against that PDF.

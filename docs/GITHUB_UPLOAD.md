@@ -2,8 +2,8 @@
 
 The working repository is
 [durgesh-qcat/lemma-portfolio](https://github.com/durgesh-qcat/lemma-portfolio).
-It remains private during double-blind review. Collaborators use their own
-GitHub accounts and work on branches; see [COLLABORATING.md](COLLABORATING.md).
+It is public. Contributors work on branches and submit pull requests; see
+[COLLABORATING.md](COLLABORATING.md).
 
 ## Verify a checkout
 
@@ -36,21 +36,21 @@ The files defining this version are:
 The unpacked supplement's `MANIFEST.json` identifies its accompanying PDF by
 SHA-256. The root verifier checks that the ZIP and unpacked files agree. The
 [paper README](../paper/README.md) records source availability: the archived
-editable source and older PDFs are historical, and no verified final Overleaf
-source package is currently available.
+editable source and older PDFs are historical, and the final submitted paper's
+editable source is unavailable.
 
 Commit reviewed changes and verification results to a branch, then open a pull
 request. Preserve the final submitted files and use a new version for later
 scientific changes. A release of this submitted version should attach the exact
 PDF and supplement ZIP, with their checksums, to the verified commit.
 
-## Construction data and eventual public release
+## Construction data and public release
 
 The pinned Parquet construction inputs are separately inventoried in
 `provenance/generation_receipt.json`. They are not needed for any offline score
 check; [construction/README.md](../construction/README.md) explains the additional
 mining requirements. Keep large source archives out of ordinary Git history.
 
-When the venue permits public release, the owner can publish the verified
-version and its artifacts and add the permanent URL to the camera-ready paper.
-The current private update does not require changing repository visibility.
+The public [GitHub release](https://github.com/durgesh-qcat/lemma-portfolio/releases/tag/v4.0.1-submitted-20260907)
+provides the submitted-version artifacts. Preserve these release files when
+publishing later versions so that readers can reproduce the submitted results.

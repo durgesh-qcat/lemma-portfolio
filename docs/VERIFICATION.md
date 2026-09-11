@@ -10,6 +10,26 @@ For only the submitted scientific checks and paper pairing:
 python3 -B tools/verify_submission.py --paper paper/LemmaPortfolio.pdf
 ```
 
+## Why earlier GitHub checks are red
+
+GitHub records each workflow run against the commit or tag it tested. Fixing a
+later commit does not change the result of an earlier run. The README badge
+tracks `main`; use the [main-branch workflow history](https://github.com/durgesh-qcat/lemma-portfolio/actions/workflows/verify.yml?query=branch%3Amain)
+to check the current version. The workflow tests Python 3.10 and 3.12.
+
+The historical failures have two documented causes:
+
+| Earlier failure | Cause | Fix |
+|---|---|---|
+| [September 2, commit `632aaaa`](https://github.com/durgesh-qcat/lemma-portfolio/actions/runs/33665482646) | Generated score JSON differed by insignificant floating-point rounding across Python versions. | Commit `44e52b4` introduced structural comparison with a narrow float tolerance; the next run passed. |
+| [September 11, commit `beaae69`](https://github.com/durgesh-qcat/lemma-portfolio/actions/runs/34602797639), also tested by the old `v4.0.0-submitted-20260907` tag | The archived verifier compared a saved integer percentage of `80` with a recomputed `79.99999999999999` exactly. | Commit `9f9af38` added the metric-specific compatibility wrapper described below. |
+
+Both fixes retain exact counts, selections, and identifiers. The submitted PDF,
+ZIP, and scientific records are unchanged. The superseding
+[`v4.0.1-submitted-20260907` release check](https://github.com/durgesh-qcat/lemma-portfolio/actions/runs/34603216054)
+passed on both Python versions. Old red entries describe those earlier versions,
+rather than a failure of the current benchmark results.
+
 ## Archived Python 3.10 rounding comparison
 
 The exact submitted supplement's `verify_followups.py` applies its existing
