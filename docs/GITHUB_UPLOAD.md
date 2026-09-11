@@ -20,7 +20,7 @@ outputs outside the release inventory.
 
 ## Submitted-version artifacts
 
-The submitted-version artifact identifier is `v4.0.0-submitted-20260907`.
+The submitted-version artifact identifier is `v4.0.1-submitted-20260907`.
 The files defining this version are:
 
 - `paper/LemmaPortfolio.pdf`: exact final submitted PDF, including its technical

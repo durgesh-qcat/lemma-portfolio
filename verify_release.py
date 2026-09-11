@@ -342,7 +342,7 @@ def check_submitted_artifacts(root: Path = ROOT) -> None:
 
 
 def check_final_submission() -> None:
-    subprocess.run([sys.executable, "-B", str(ROOT / "submission/LemmaPortfolio_supplement/verify_all.py"),
+    subprocess.run([sys.executable, "-B", str(ROOT / "tools/verify_submission.py"),
                     "--paper", str(ROOT / "paper/LemmaPortfolio.pdf")], cwd=ROOT, check=True)
     subprocess.run([sys.executable, "-B", str(ROOT / "tools/verify_oracle.py")], cwd=ROOT, check=True)
     for date in ("2026-09-04", "2026-09-05"):

@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If you use LemmaPortfolio, please cite the paper and this artifact."
 title: "LemmaPortfolio: Shared-Budget Lemma Selection for Multiple Lean Goals"
 type: software
-version: 4.0.0-submitted-20260907
+version: 4.0.1-submitted-20260907
 date-released: 2026-09-11
 repository-code: "https://github.com/durgesh-qcat/lemma-portfolio"
 authors:

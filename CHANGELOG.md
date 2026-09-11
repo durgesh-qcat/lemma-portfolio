@@ -1,5 +1,14 @@
 # Changes
 
+## 4.0.1: Python 3.10 verification compatibility
+
+GitHub CI exposed an integer-versus-float comparison in the submitted verifier:
+a recorded normalized-coverage percentage of `80` can recompute as
+`79.99999999999999` on Python 3.10. The repository wrapper applies the existing
+numeric tolerance only to this continuous metric, while preserving exact
+counts and the complete submitted archive. It runs the same seven checks.
+See [verification details](docs/VERIFICATION.md).
+
 ## Submitted paper synchronization — September 11, 2026
 
 This update synchronizes the repository with submission 88,

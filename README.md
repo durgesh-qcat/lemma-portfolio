@@ -39,8 +39,11 @@ provides the same verification by double-click.
 The submitted archive can also be checked independently:
 
 ```sh
-python3 -B submission/LemmaPortfolio_supplement/verify_all.py --paper paper/LemmaPortfolio.pdf
+python3 -B tools/verify_submission.py --paper paper/LemmaPortfolio.pdf
 ```
+
+The repository wrapper handles a [Python 3.10 rounding-comparison defect](docs/VERIFICATION.md)
+in the archived verifier; the submitted PDF, ZIP, and extracted files remain unchanged.
 
 ## Results in the submitted paper
 

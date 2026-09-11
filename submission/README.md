@@ -22,9 +22,13 @@ python3 -B verify_release.py
 For the submitted supplement alone:
 
 ```sh
-python3 -B submission/LemmaPortfolio_supplement/verify_all.py \
+python3 -B tools/verify_submission.py \
   --paper paper/LemmaPortfolio.pdf
 ```
+
+The wrapper runs all seven submitted checks and handles the documented
+[Python 3.10 rounding-comparison defect](../docs/VERIFICATION.md). The archived
+`verify_all.py` is preserved exactly, including that original limitation.
 
 The extracted 309 files are unchanged from the submitted ZIP. They include the
 seven later CLI/API evaluations, six preliminary web response sets, target-wise
