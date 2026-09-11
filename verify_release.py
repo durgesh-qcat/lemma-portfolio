@@ -222,6 +222,7 @@ def check_construction_tests() -> None:
     completed = subprocess.run(
         [
             sys.executable,
+            "-B",
             "-m",
             "unittest",
             "apibench.hard_blind_v4.test_hard_blind_v4",
@@ -237,7 +238,7 @@ def check_construction_tests() -> None:
 
 def check_external_scorer_tests() -> None:
     completed = subprocess.run(
-        [sys.executable, "-m", "unittest", "discover", "-s", "tests"],
+        [sys.executable, "-B", "-m", "unittest", "discover", "-s", "tests"],
         cwd=ROOT,
         text=True,
         capture_output=True,
