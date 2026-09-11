@@ -1,0 +1,231 @@
+{
+  "audit_status": {
+    "blind_frontier_inference": "not_started_at_local_freeze",
+    "exact_pinned_lean_direct_value_reextraction": "preflight_pass_on_hash-locked_final bytes; independent post-materialization receipt pending",
+    "parquet_graph_validation": "pass",
+    "pinned_lean_audit_script": "audit_pinned_lean.py",
+    "pinned_lean_module_exclusion_count": 1
+  },
+  "committed_public_construction_diagnostics": {
+    "evaluated_blind_predictions_read": 0,
+    "file": "gated_construction_diagnostics.json",
+    "labels_read": 0,
+    "method_count_per_episode": 18,
+    "report_as_independent_baseline": false,
+    "sha256": "e2df041352e19439e6fe72a007990a2d93ac58d56f0c43bd00b1d60859214fab"
+  },
+  "construction": {
+    "all_displayed_candidates_recurrent_in_corpus": true,
+    "config_sha256": "15b72a06b5e2efdebd22dea74e16b1d05e1213554a96e37dbccbcdcb351d633d",
+    "construction_gated_method_optimal_hits": 0,
+    "development_assistance": "Codex agents assisted design/code; authors are responsible; item admission is deterministic and no blind evaluation prediction enters it.",
+    "evaluated_blind_predictions_read_or_used_by_builder": 0,
+    "pinned_lean_excluded_module_hashes": [
+      "f22caa542e02fac9b7c2bc447b23a9fa32f7f9d60c907904c99917c6873b5684"
+    ],
+    "prior_deduplication": "module hashes plus exact and leading-binder-alpha statement signatures against v1, rejected v2, and v3",
+    "private_selection_ledger_sha256": "be38d7c73ee60e36e04205a6cc944f051996c77381d7d3bead5f10827fa41b77",
+    "split_selection": "fixed-seed SHA-256 rank with a top-level-domain cap"
+  },
+  "created_on": "2026-09-01",
+  "generation_receipt": {
+    "binds_all_256_parquet_file_names_sizes_and_sha256": true,
+    "file": "generation_receipt.json",
+    "sha256": "8589f29e460e99f2aa029efca5329387321316fda44fd2e9ee9d26f539320161"
+  },
+  "label_protocol": {
+    "blind_labels_in_public_directory": false,
+    "calibration_labels_release": "separate public development artifact; never included in blind model packets",
+    "no_blind_scoring_before_output_panel_closure": true,
+    "open_blind_labels_only_after_all_blind_outputs_are_frozen": true,
+    "private_file_mode": "0600"
+  },
+  "schema_version": "lemma-portfolio.dependency-compression-manifest.v4",
+  "splits": {
+    "blind": {
+      "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+      "episodes": 60,
+      "label_commitment_sha256": "d17c1fd5c6d87635daf8035fe4a0918d1eaa29708eae37cb797cae08c19ef887",
+      "public_file": "blind.public.jsonl",
+      "public_sha256": "b54293b08bc7ddbb7110a50908049922f7cfd86f14cb49a4de4e28353aecc6d8"
+    },
+    "calibration": {
+      "benchmark_id": "lemma-portfolio.mathlib-compression-calibration-30.v4",
+      "development_batches": {
+        "A": {
+          "episodes": 15,
+          "inclusive_episode_id_range": [
+            "MLP4C_0000",
+            "MLP4C_0014"
+          ],
+          "labels_file": "calibration_a.labels.jsonl",
+          "labels_sha256": "9fec3602da660e4a293c7a5a8c9f74e7f4eddafab87d3bf84f4cea84a899d9f5",
+          "public_file": "calibration_a.public.jsonl",
+          "public_sha256": "28f2ce4563d4db0eb08b981d8b4ec2cf689f4cf0dc06b69af2c6433dbfdba4ab"
+        },
+        "B": {
+          "episodes": 15,
+          "inclusive_episode_id_range": [
+            "MLP4C_0015",
+            "MLP4C_0029"
+          ],
+          "labels_file": "calibration_b.labels.jsonl",
+          "labels_sha256": "ff6bd7ce2d13ae3d79d62152ddcd72bc5104705a3c3a80f5c47d047320eb7826",
+          "public_file": "calibration_b.public.jsonl",
+          "public_sha256": "c8c1ae94bb56663e4659cf9ef927c4a969ba036d739b2830defe557881f38380"
+        }
+      },
+      "episodes": 30,
+      "label_commitment_sha256": "bee487259392de4d36b2140a715c7b4196ce7cc2027c3b13c90e1874a19149d0",
+      "public_file": "calibration.public.jsonl",
+      "public_sha256": "404452daa5017793d9f7b10f4d92716d2bb267dca034094b0f41f8c8d9219ffc"
+    }
+  },
+  "status": "FROZEN_PREINFERENCE_LOCAL_UNTIMESTAMPED",
+  "summary": {
+    "blind": {
+      "all_candidates_recurrent": true,
+      "candidates_per_episode": 16,
+      "construction_gated_method_optimal_hits": 0,
+      "distinct_modules": 60,
+      "domain_counts": {
+        "Algebra": 10,
+        "AlgebraicGeometry": 4,
+        "Analysis": 5,
+        "CategoryTheory": 4,
+        "Combinatorics": 3,
+        "Data": 7,
+        "Dynamics": 2,
+        "Geometry": 2,
+        "GroupTheory": 2,
+        "LinearAlgebra": 2,
+        "MeasureTheory": 1,
+        "NumberTheory": 3,
+        "Order": 3,
+        "RingTheory": 7,
+        "Topology": 5
+      },
+      "episodes": 60,
+      "mean_active_candidates": "43/5",
+      "optimal_coverage_distribution": {
+        "6": 45,
+        "7": 15
+      },
+      "prior_module_or_statement_overlap": 0,
+      "selection_budget": 3,
+      "source_name_visible_pairs": 0,
+      "targets_per_episode": 8,
+      "top_level_domains": 15,
+      "total_accepted_optimal_portfolios": 78,
+      "total_direct_in_pool_edges": 814,
+      "total_multi_edge_targets": 226
+    },
+    "calibration": {
+      "all_candidates_recurrent": true,
+      "candidates_per_episode": 16,
+      "construction_gated_method_optimal_hits": 0,
+      "distinct_modules": 30,
+      "domain_counts": {
+        "Algebra": 3,
+        "Analysis": 3,
+        "CategoryTheory": 4,
+        "Combinatorics": 2,
+        "Data": 2,
+        "FieldTheory": 1,
+        "LinearAlgebra": 2,
+        "NumberTheory": 2,
+        "Order": 2,
+        "Probability": 1,
+        "RingTheory": 5,
+        "SetTheory": 2,
+        "Topology": 1
+      },
+      "episodes": 30,
+      "mean_active_candidates": "251/30",
+      "optimal_coverage_distribution": {
+        "6": 25,
+        "7": 5
+      },
+      "prior_module_or_statement_overlap": 0,
+      "selection_budget": 3,
+      "source_name_visible_pairs": 0,
+      "targets_per_episode": 8,
+      "top_level_domains": 13,
+      "total_accepted_optimal_portfolios": 30,
+      "total_direct_in_pool_edges": 386,
+      "total_multi_edge_targets": 99
+    },
+    "declarations": 350599,
+    "mining": {
+      "accepted_module_drafts": 103,
+      "blind_requested": 60,
+      "blind_selected": 60,
+      "calibration_requested": 30,
+      "calibration_selected": 30,
+      "construction_center_counts": {
+        "candidate_cohorts_pass_target_pool": 7447,
+        "candidate_cohorts_reject_small_target_pool": 2,
+        "eligible_module_centers": 7089,
+        "modules_with_at_least_k_recurrent_hubs": 346,
+        "target_seed_attempts": 224076,
+        "target_seed_reject_incomplete_conflict_or_cap_fill": 11,
+        "target_seed_reject_target_similarity": 10297,
+        "target_seed_reject_too_few_active": 49537,
+        "target_seed_reject_too_few_multi_edge": 93140,
+        "target_sets_pass_complete_fill": 224065,
+        "target_sets_pass_minimum_active": 174528,
+        "target_sets_pass_multi_edge": 81388,
+        "target_sets_pass_similarity": 71091,
+        "target_sets_pass_singleton_cap": 174528,
+        "unique_candidate_cohorts_evaluated": 7449
+      },
+      "eligible_declarations": 186680,
+      "eligible_modules": 7089,
+      "evaluated_draft_rejection_counts": {
+        "construction_gate_optimal": 6417,
+        "optimal_coverage_below_minimum": 46456,
+        "optimal_member_not_reused": 3100,
+        "source_name_visible": 44,
+        "statement_collision": 18,
+        "too_few_near_optimal": 56,
+        "too_few_nonoptimal_active": 14873,
+        "too_many_optimal_portfolios": 24
+      },
+      "pinned_lean_excluded_module_hashes": [
+        "f22caa542e02fac9b7c2bc447b23a9fa32f7f9d60c907904c99917c6873b5684"
+      ],
+      "rejected_modules": 6986,
+      "sequential_evaluated_draft_funnel": {
+        "accepted_drafts": 103,
+        "drafts_evaluated": 71091,
+        "pass_all_construction_gates_miss": 165,
+        "pass_maximum_optimal_portfolios": 24611,
+        "pass_minimum_active_candidates": 71091,
+        "pass_minimum_multi_edge_targets": 71091,
+        "pass_minimum_near_optimal_portfolios": 6582,
+        "pass_minimum_nonoptimal_active": 9738,
+        "pass_minimum_optimal_coverage": 24635,
+        "pass_nonempty_incidence": 71091,
+        "pass_optimal_member_essentiality": 6638,
+        "pass_optimal_member_reuse": 6638,
+        "pass_single_candidate_coverage_cap": 71091,
+        "pass_source_name_masking": 121,
+        "pass_within_episode_statement_identifiability": 103
+      }
+    }
+  },
+  "task_definition": {
+    "accepted_answers": "all size-three argmax portfolios",
+    "blindness_boundary": "the source declarations are public Mathlib theorems; only the newly composed episodes, hidden incidence labels, and post-freeze model evaluation are sealed",
+    "hidden_incidence": "D(t) is the exact direct proof-body edge intersection with displayed candidates",
+    "objective": "F(S) is the number of targets whose hidden incidence intersects S",
+    "primary_metric": "optimal-portfolio accuracy",
+    "secondary_metrics": [
+      "normalized target coverage F(S)/F*",
+      "direct-edge recall sum_t |D(t) intersection S| / sum_t |D(t)|"
+    ],
+    "selection_budget": 3,
+    "unit": "one target portfolio and sixteen displayed candidate declarations",
+    "validity_boundary": "historical direct-body dependency coverage, not causal lemma utility"
+  }
+}

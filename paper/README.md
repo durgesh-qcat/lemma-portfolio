@@ -1,20 +1,23 @@
-# Paper files
+# Final submitted paper
 
-The three checked PDFs are:
+[**LemmaPortfolio: Shared-Budget Lemma Selection for Multiple Lean Goals**](LemmaPortfolio.pdf)
+is the exact final paper submitted as submission 88. It has four main pages,
+one reference page, and four technical-supplement pages.
 
-- `LemmaPortfolio_MATHAI2026_anonymous_review_with_supplement.pdf`: the
-  anonymous four-page submission body, references, and technical supplement;
-- `LemmaPortfolio_MATHAI2026_author_check_preprint.pdf`: the named author copy;
-- `LemmaPortfolio_MATHAI2026_anonymous_technical_supplement.pdf`: the standalone
-  anonymous supplement.
+- [Final paper PDF](LemmaPortfolio.pdf)
+- [Exact submitted supplementary ZIP](../submission/LemmaPortfolio_supplement.zip)
+- [Browse the supplementary code, data, tests, and analyses](../submission/LemmaPortfolio_supplement/README.md)
+- [Submitted filenames, SHA-256 hashes, and provenance](../submission/SUBMITTED_ARTIFACTS.json)
+- [All thirteen direct-response result rows](../RESULTS.md)
 
-The LaTeX source is in `source/`.  From that directory, build with:
+Run `python3 -B verify_release.py` from the repository root to verify the
+paper/archive pairing, extracted supplement, scores, oracle, and tests.
+The submitted PDF and ZIP are preserved byte for byte.
 
-```sh
-latexmk -pdf -interaction=nonstopmode -halt-on-error review.tex
-latexmk -pdf -interaction=nonstopmode -halt-on-error preprint.tex
-latexmk -pdf -interaction=nonstopmode -halt-on-error -jobname=supplement supplement/supplement.tex
-```
+## Editable source and earlier drafts
 
-The anonymous Overleaf ZIP is distributed separately.  It omits `preprint.tex`
-and all named author metadata.
+The available LaTeX sources and earlier PDFs are preserved under
+[historical/2026-09-05/](historical/2026-09-05/README.md). They precede the final
+submission and do not reproduce the final PDF. The exact final editable source
+was not included in the submitted ZIP or the supplied local files. Future
+manuscript edits should start from the final source when it becomes available.

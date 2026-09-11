@@ -1,0 +1,110 @@
+{
+  "automated_shard_exception": {
+    "all_predictions_required": true,
+    "episodes_per_call": 5,
+    "fixed_prompt_manifest_order_and_boundaries": true,
+    "numeric_reasoning_token_budget": "unavailable",
+    "one_global_reasoning_setting": "max",
+    "shared_context_and_uncontrolled_per_episode_reasoning_allocation": true,
+    "system_id": "codex_gpt56_sol_max_calibration_direct"
+  },
+  "baseline_systems": [],
+  "benchmark": {
+    "benchmark_id": "lemma-portfolio.mathlib-compression-calibration-30.v4",
+    "calibration_labels_sha256_commitment": "9fec3602da660e4a293c7a5a8c9f74e7f4eddafab87d3bf84f4cea84a899d9f5",
+    "calibration_labels_unopened_during_model_run": true,
+    "episode_count": 15,
+    "public_jsonl_sha256": "28f2ce4563d4db0eb08b981d8b4ec2cf689f4cf0dc06b69af2c6433dbfdba4ab",
+    "selection_budget": 3,
+    "split_role": "public_development_calibration_only"
+  },
+  "evaluation_unit": {
+    "episode_order": "prompt manifest order",
+    "episodes_per_fresh_chat": 5,
+    "followups_regenerations_answer_selection": "forbidden",
+    "maximum_concurrent_calls_per_system": 1,
+    "messages_per_chat": 1,
+    "tools_search_memory": "off",
+    "wall_timeout_seconds": 1800
+  },
+  "freeze_policy": {
+    "calibration_output_may_be_scored_after_its_own_panel_freeze": true,
+    "development_only": true,
+    "never_promoted_to_blind_test": true
+  },
+  "primary_metric": "development_optimal_dependency_coverage_portfolio_accuracy",
+  "primary_systems": [
+    "codex_gpt56_sol_max_calibration_direct"
+  ],
+  "project_assistance_disclosure": {
+    "assisted_provider_family_also_used_for_calibration": "OpenAI gpt-5.6-sol",
+    "codex_agents_assisted": [
+      "benchmark_design",
+      "evaluation_code",
+      "manuscript_development"
+    ],
+    "limitation": "provider-family overlap and self-evaluation"
+  },
+  "retry_policy": {
+    "all_attempts_preserved": true,
+    "eligible_only_for_explicit_platform_error_before_substantive_output": true,
+    "maximum_operational_retries": 1,
+    "timeout_or_partial_output_retryable": false
+  },
+  "runtime_isolation": {
+    "credential_bytes_read_or_hashed_by_runner": false,
+    "credential_copied_by_operator_not_runner": true,
+    "must_be_outside_workspace_and_release": true,
+    "nonbenchmark_exact_schema_probe_excluded_from_scores": true,
+    "nonbenchmark_exact_schema_probe_required": true,
+    "nonbenchmark_host_readiness_probe_excluded_from_scores": true,
+    "nonbenchmark_host_readiness_probe_required": true,
+    "required_for_codex_calls": true,
+    "runtime_home_path_or_credential_material_in_receipts": false,
+    "strategy": "isolated_private_writable_codex_home_with_auth_copy"
+  },
+  "schema_version": "lemma-portfolio.panel-protocol.v4",
+  "software_commitments": {
+    "codex_auditor_py_sha256": "aa7db06d1dc57fd30ef594cd9eb7970b829b12f22bc409032d7537e2278337da",
+    "codex_control_py_sha256": "4050c27ba0fb5ab76e9a3d2cc611280d66260c8aec0b5e9288bca1530696ae3b",
+    "codex_runner_py_sha256": "537f6485145a1b7cdd6cc0d63e89e88e33150b08e67ed216f368fd015d12fdf6",
+    "common_py_sha256": "642e9244fed4267503a81a0b1b60007969d343edf12425d89bc6e08cacfade16",
+    "compare_intervention_py_sha256": "1d7ac00c697306e22de0a5606eabb7a61cf59fa829d8adec576b80bca397a8e3",
+    "freeze_all_outputs_py_sha256": "bc76280c6a733983f6453c985aef89480f82dc26394f3cddafce4837c9900fd0",
+    "freeze_calibration_protocol_py_sha256": "0b8bde41758fb338e46cd1a2dd36d3ee4048a08a5db3ee3b58f5cdc0c5b47a28",
+    "freeze_chat_run_py_sha256": "69ce762efc06e47dc464c9b8da7ffc48c997fe56a17efde2bedad9ca85581852",
+    "freeze_panel_py_sha256": "1dfee4d590e1892c65b3ac499721775f82390d4043470a4ed0e2460a1e87f09d",
+    "freeze_protocols_py_sha256": "99cc215f4499cd288e1ccd7867d42f45a2d7a59bcd76ed37dd8a218aab3b661e",
+    "generate_char_tfidf_baseline_py_sha256": "93df802d15953f1338c1103bcd9bc4b1f3f4e954af133f1d9843fea9cedc2459",
+    "generate_hash_baseline_py_sha256": "110237934bf181b6754e36370c4ee642db17ceff160ab1fc780ce6e14df34708",
+    "prepare_chat_prompts_py_sha256": "4fed5878f721cb23db17dd07cffd0104bbb281e641316b9746f271bfdcf1b555",
+    "score_frozen_panel_py_sha256": "3fdf62e4c3b6d0abedc432c8876a5c3910a3bf3733598079c8c7a58a9b93e2f0",
+    "select_support_prefix_py_sha256": "c99765b528f355a76e428997677b7c39e873ee8e21c1c50a0a26e91d2b26b4b9",
+    "support_to_portfolio_py_sha256": "db20f6dddb208306a9b4c134dd5b1d2a4810ed88092bc655fdac4842de32bfb9"
+  },
+  "status": "FROZEN",
+  "supersession": {
+    "classification": "pre_inference_clerical_protocol_correction",
+    "old_attempt_preserved": true,
+    "previous_evidence_receipt_sha256": "01ffbf0d6dfb1c5df6dab06e930f466f7245c140762014b6b40ec30580a487c6",
+    "previous_protocol_sha256": "9c04c502b52167271c0f5d30589caae899c8bd14eac49a0eeaea306c91f99c6c",
+    "replacement_uses_new_output_directory": true,
+    "substantive_model_output_observed": false
+  },
+  "systems": [
+    {
+      "account_tier": "unknown",
+      "cli_binary_sha256": "166e0593c333c1c6412cc9cea72b6e1dfc4fc79b4813da02c511a3339c9b9593",
+      "cli_version": "codex-cli 0.152.0",
+      "displayed_model_label": "gpt-5.6-sol",
+      "episodes_per_call": 5,
+      "evidence_tier": "public_development_difficulty_calibration",
+      "model_id": "gpt-5.6-sol",
+      "prompt_condition": "direct_portfolio_selection",
+      "reasoning_effort": "max",
+      "reasoning_setting": "max",
+      "surface": "Codex CLI",
+      "system_id": "codex_gpt56_sol_max_calibration_direct"
+    }
+  ]
+}

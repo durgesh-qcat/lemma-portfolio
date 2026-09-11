@@ -1,0 +1,553 @@
+You are solving five unreleased LemmaPortfolio benchmark episodes independently.
+
+For each episode, each target t has a hidden set D(t): the displayed candidate declarations used as direct theorem dependencies in that target's historical elaborated source. For a portfolio S, F(S) is the number of targets t for which D(t) intersects S. Select exactly 3 distinct candidate IDs per episode to maximize F(S). This is static dependency-portfolio compression, not a claim about causal usefulness in a new proof.
+
+Use only the supplied text. Do not use web search, tools, files, a repository, theorem proving, compiler feedback, memory, prior chats, follow-up messages, or answers from another episode. Treat every episode independently.
+
+Return one JSON object and no prose. It must have exactly one key, "predictions". Its value must be an object with exactly these episode keys: MLP4B_0050, MLP4B_0051, MLP4B_0052, MLP4B_0053, MLP4B_0054. Each value must be an array of exactly 3 distinct candidate IDs copied from that episode. Candidate order does not matter.
+
+Episode JSON array follows.
+<episodes>
+[
+  {
+    "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+    "candidates": [
+      {
+        "id": "C01",
+        "statement": "∀ {X : Type u} [inst : TopologicalSpace X] {s : Set X}, s ⊆ closure s"
+      },
+      {
+        "id": "C02",
+        "statement": "∀ {X : Type u} [inst : TopologicalSpace X] {s t : Set X}, s ⊆ t → interior s ⊆ interior t"
+      },
+      {
+        "id": "C03",
+        "statement": "∀ {X : Type u} [inst : TopologicalSpace X] {s t : Set X}, s ⊆ t → IsClosed t → closure s ⊆ t"
+      },
+      {
+        "id": "C04",
+        "statement": "∀ {X : Type u} [inst : TopologicalSpace X], closure ∅ = ∅"
+      },
+      {
+        "id": "C05",
+        "statement": "∀ {X : Type u} [inst : TopologicalSpace X] {ι : Type u_1} {s : Set ι}, s.Finite → ∀ (f : ι → Set X), interior (⋂ i ∈ s, f i) = ⋂ i ∈ s, interior (f i)"
+      },
+      {
+        "id": "C06",
+        "statement": "∀ {X : Type u} [inst : TopologicalSpace X] {s t : Set X}, interior (s ∩ t) = interior s ∩ interior t"
+      },
+      {
+        "id": "C07",
+        "statement": "∀ {X : Type u} [inst : TopologicalSpace X] {s : Set X}, IsClosed (closure s)"
+      },
+      {
+        "id": "C08",
+        "statement": "∀ {X : Type u} [inst : TopologicalSpace X] {s : Set X}, IsOpen s → s ⊆ interior (closure s)"
+      },
+      {
+        "id": "C09",
+        "statement": "∀ {X : Type u} [inst : TopologicalSpace X] {s t : Set X}, t ⊆ s → IsOpen t → t ⊆ interior s"
+      },
+      {
+        "id": "C10",
+        "statement": "∀ {X : Type u} [inst : TopologicalSpace X] {s : Set X}, IsOpen (interior s)"
+      },
+      {
+        "id": "C11",
+        "statement": "∀ {X : Type u} [inst : TopologicalSpace X] {s : Set X}, closure (closure s) = closure s"
+      },
+      {
+        "id": "C12",
+        "statement": "∀ {X : Type u} [inst : TopologicalSpace X] {s : Set X}, IsClosed s → closure s = s"
+      },
+      {
+        "id": "C13",
+        "statement": "∀ {X : Type u} [inst : TopologicalSpace X] {s : Set X}, closure s = (interior sᶜ)ᶜ"
+      },
+      {
+        "id": "C14",
+        "statement": "∀ {X : Type u} [inst : TopologicalSpace X] {s t : Set X}, IsOpen s → (s ⊆ interior t ↔ s ⊆ t)"
+      },
+      {
+        "id": "C15",
+        "statement": "∀ {X : Type u} [inst : TopologicalSpace X] {s : Set X}, frontier s ⊆ s ↔ IsClosed s"
+      },
+      {
+        "id": "C16",
+        "statement": "∀ {X : Type u} [inst : TopologicalSpace X] {s t : Set X}, closure (s ∪ t) = closure s ∪ closure t"
+      }
+    ],
+    "episode_id": "MLP4B_0050",
+    "schema_version": "lemma-portfolio.dependency-compression.v4",
+    "selection_budget": 3,
+    "source_project": "mathlib",
+    "targets": [
+      {
+        "id": "T01",
+        "statement": "∀ {X : Type u} [inst : TopologicalSpace X] {s : Set X}, closure s ⊆ s → IsClosed s"
+      },
+      {
+        "id": "T02",
+        "statement": "∀ {X : Type u} [inst : TopologicalSpace X] {s t : Set X}, s \\ t ⊆ closure t ↔ s ⊆ closure t"
+      },
+      {
+        "id": "T03",
+        "statement": "∀ {X : Type u} [inst : TopologicalSpace X] {p : Set X → Prop}, (∀ (t : Set X), IsClosed t → p t) ↔ ∀ (t : Set X), p (closure t)"
+      },
+      {
+        "id": "T04",
+        "statement": "∀ {X : Type u} [inst : TopologicalSpace X] {s : Set X}, interior s = s ↔ IsOpen s"
+      },
+      {
+        "id": "T05",
+        "statement": "∀ {X : Type u} [inst : TopologicalSpace X] (s : Set X), s \\ frontier s = interior s"
+      },
+      {
+        "id": "T06",
+        "statement": "∀ {X : Type u} [inst : TopologicalSpace X] {s : Set X}, Disjoint (frontier s) s ↔ IsOpen s"
+      },
+      {
+        "id": "T07",
+        "statement": "∀ {X : Type u} [inst : TopologicalSpace X], frontier Set.univ = ∅"
+      },
+      {
+        "id": "T08",
+        "statement": "∀ {X : Type u} [inst : TopologicalSpace X] {s : Set X}, interior (closure (interior (closure s))) = interior (closure s)"
+      }
+    ],
+    "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+  },
+  {
+    "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+    "candidates": [
+      {
+        "id": "C01",
+        "statement": "∀ {α : Type u_1} {a : α} {o : Option α}, a ∈ ↑o ↔ a ∈ o"
+      },
+      {
+        "id": "C02",
+        "statement": "∀ {α : Type u_1} (x : α), Part.some x ≠ Part.none"
+      },
+      {
+        "id": "C03",
+        "statement": "∀ {α : Type u_1} {β : Type u_2} (f : α → β) (x : Part α), (x.bind fun y => Part.some (f y)) = Part.map f x"
+      },
+      {
+        "id": "C04",
+        "statement": "∀ {α : Type u_1} {o : Part α} (h : o.Dom), o.get h ∈ o"
+      },
+      {
+        "id": "C05",
+        "statement": "∀ {α : Type u_1} {o p : Part α}, (o.Dom ↔ p.Dom) → (∀ (h₁ : o.Dom) (h₂ : p.Dom), o.get h₁ = p.get h₂) → o = p"
+      },
+      {
+        "id": "C06",
+        "statement": "∀ {α : Type u_1} {o : Part α}, o = Part.none ↔ ∀ (a : α), a ∉ o"
+      },
+      {
+        "id": "C07",
+        "statement": "∀ {α : Type u_1} {a : α} {o : Part α}, o = Part.some a ↔ a ∈ o"
+      },
+      {
+        "id": "C08",
+        "statement": "∀ {α : Type u_1} {a b : α} {o : Part α}, a ∈ o → b ∈ o → a = b"
+      },
+      {
+        "id": "C09",
+        "statement": "∀ {α : Type u_1} {a : Part α} [inst : Decidable a.Dom], a.toOption = none ↔ ¬a.Dom"
+      },
+      {
+        "id": "C10",
+        "statement": "∀ {α : Type u_1} (a : α), a ∈ Part.some a"
+      },
+      {
+        "id": "C11",
+        "statement": "∀ {α : Type u_1} {o : Part α} [inst : Decidable o.Dom] {a : α}, a ∈ o.toOption ↔ a ∈ o"
+      },
+      {
+        "id": "C12",
+        "statement": "∀ {α : Type u_1} {β : Type u_2} {γ : Type u_4} (f : Part α) (g : α → Part β) (k : β → Part γ), (f.bind g).bind k = f.bind fun x => (g x).bind k"
+      },
+      {
+        "id": "C13",
+        "statement": "∀ {α : Type u_1} {β : Type u_2} (a : α) (f : α → Part β), (Part.some a).bind f = f a"
+      },
+      {
+        "id": "C14",
+        "statement": "∀ {α : Type u_1} {β : Type u_2} (f : α → β) {o : Part α} {b : β}, b ∈ Part.map f o ↔ ∃ a ∈ o, f a = b"
+      },
+      {
+        "id": "C15",
+        "statement": "∀ {α : Type u_1} {β : Type u_2} (f : α → β) (a : α), Part.map f (Part.some a) = Part.some (f a)"
+      },
+      {
+        "id": "C16",
+        "statement": "∀ {α : Type u_1} {β : Type u_2} (f : α → β) {o : Part α} {a : α}, a ∈ o → f a ∈ Part.map f o"
+      }
+    ],
+    "episode_id": "MLP4B_0051",
+    "schema_version": "lemma-portfolio.dependency-compression.v4",
+    "selection_budget": 3,
+    "source_project": "mathlib",
+    "targets": [
+      {
+        "id": "T01",
+        "statement": "∀ {α : Type u_1} {o : Part α} {a : α}, a ∈ o → ∀ (h' : o.Dom), o.get h' = a"
+      },
+      {
+        "id": "T02",
+        "statement": "∀ {α : Type u_1} {o p : Part α}, (∀ (a : α), a ∈ o ↔ a ∈ p) → o = p"
+      },
+      {
+        "id": "T03",
+        "statement": "∀ {α : Type u_1} [inst : Inter α] (a b : α), Part.some a ∩ Part.some b = Part.some (a ∩ b)"
+      },
+      {
+        "id": "T04",
+        "statement": "∀ {α : Type u_1} (x : α), Part.none ≠ Part.some x"
+      },
+      {
+        "id": "T05",
+        "statement": "∀ {α : Type u_1} {x y : Part α} (z : Part α), x ≤ z → y ≤ z → x ≤ y ∨ y ≤ x"
+      },
+      {
+        "id": "T06",
+        "statement": "∀ {α : Type u_1}, Relator.LeftUnique fun x1 x2 => x1 ∈ x2"
+      },
+      {
+        "id": "T07",
+        "statement": "∀ {α : Type u_1} {o : Part α}, o ≠ Part.none ↔ ∃ x, o = Part.some x"
+      },
+      {
+        "id": "T08",
+        "statement": "∀ {α : Type u_1} {β : Type u_2} {o : Part α} {a : α}, a ∈ o → ∀ (f : α → Part β), o.bind f = f a"
+      }
+    ],
+    "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+  },
+  {
+    "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+    "candidates": [
+      {
+        "id": "C01",
+        "statement": "∀ (n : ℕ) {G : Type u_2} [inst : AddCommGroup G] [Module (ZMod n) G] (x : G), n • x = 0"
+      },
+      {
+        "id": "C02",
+        "statement": "∀ (n : ℕ) [Fact (1 < n)], ZMod.val 1 = 1"
+      },
+      {
+        "id": "C03",
+        "statement": "∀ (n a : ℕ), (↑a).val = a % n"
+      },
+      {
+        "id": "C04",
+        "statement": "∀ {n : ℕ} {R : Type u_1} [inst : Ring R] [NeZero n] (i : ZMod n), ↑i.val = i.cast"
+      },
+      {
+        "id": "C05",
+        "statement": "∀ {n : ℕ} [NeZero n] (a b : ZMod n), (a + b).val = (a.val + b.val) % n"
+      },
+      {
+        "id": "C06",
+        "statement": "∀ {n : ℕ} (a : ℤ) [NeZero n], ↑(↑a).val = a % ↑n"
+      },
+      {
+        "id": "C07",
+        "statement": "∀ {n : ℕ} [NeZero n] (a : ZMod n), a.val < n"
+      },
+      {
+        "id": "C08",
+        "statement": "∀ (a b : ℤ) (c : ℕ), ↑a = ↑b ↔ a ≡ b [ZMOD ↑c]"
+      },
+      {
+        "id": "C09",
+        "statement": "∀ (n : ℕ) {A : Type u_2} [inst : AddGroup A] (f : { f // f ↑n = 0 }) (x : ℤ), ((ZMod.lift n) f) ↑x = ↑f x"
+      },
+      {
+        "id": "C10",
+        "statement": "∀ {n : ℕ} (a : ZMod n), a.val = 0 ↔ a = 0"
+      },
+      {
+        "id": "C11",
+        "statement": "∀ {n : ℕ} [NeZero n] (a : ZMod n), ↑a.val = a"
+      },
+      {
+        "id": "C12",
+        "statement": "∀ {n : ℕ} {a : ZMod n}, 0 < a.val ↔ a ≠ 0"
+      },
+      {
+        "id": "C13",
+        "statement": "∀ {n : ℕ} (a : ZMod n), a * a⁻¹ = ↑(a.val.gcd n)"
+      },
+      {
+        "id": "C14",
+        "statement": "∀ {n : ℕ} (a : ZMod n), IsUnit a → a⁻¹ * a = 1"
+      },
+      {
+        "id": "C15",
+        "statement": "∀ {m n : ℕ}, m.Coprime n → ↑m * ↑(↑m)⁻¹.val = 1"
+      },
+      {
+        "id": "C16",
+        "statement": "∀ (n : ℕ) (i : ZMod n), i.cast = i"
+      }
+    ],
+    "episode_id": "MLP4B_0052",
+    "schema_version": "lemma-portfolio.dependency-compression.v4",
+    "selection_budget": 3,
+    "source_project": "mathlib",
+    "targets": [
+      {
+        "id": "T01",
+        "statement": "∀ {m n : ℕ}, m.Coprime n → ↑(↑m)⁻¹.val * ↑m = 1"
+      },
+      {
+        "id": "T02",
+        "statement": "∀ (p n : ℕ) (z : ZMod p) [NeZero p], ↑n = z ↔ ∃ k, n = z.val + p * k"
+      },
+      {
+        "id": "T03",
+        "statement": "∀ (a b c : ℕ), ↑a = ↑b ↔ a ≡ b [MOD c]"
+      },
+      {
+        "id": "T04",
+        "statement": "∀ {n : ℕ} [NeZero n] {a b : ZMod n}, b.val ≤ a.val → (a - b).val = a.val - b.val"
+      },
+      {
+        "id": "T05",
+        "statement": "∀ (a b : ℤ) (c : ℕ), ↑a = ↑b ↔ ↑c ∣ b - a"
+      },
+      {
+        "id": "T06",
+        "statement": "∀ {α : Type u_1} [inst : AddGroup α] {n : ℕ}, (Nat.card α).gcd n = 1 → ∀ (a : α), n • (↑n)⁻¹.val • a = a"
+      },
+      {
+        "id": "T07",
+        "statement": "∀ {n : ℕ} {R : Type u_1} [inst : NonAssocRing R] (f : R →+* ZMod n) (k : ZMod n), f k.cast = k"
+      },
+      {
+        "id": "T08",
+        "statement": "∀ {G : Type u_2} [inst : AddCommGroup G] [Module (ZMod 2) G] (x : G), x + x = 0"
+      }
+    ],
+    "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+  },
+  {
+    "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+    "candidates": [
+      {
+        "id": "C01",
+        "statement": "∀ {G : Type u_1} [inst : AddGroup G] {H : AddSubgroup G}, H.index = 1 ↔ H = ⊤"
+      },
+      {
+        "id": "C02",
+        "statement": "∀ {G : Type u_1} [inst : AddGroup G] {H K : AddSubgroup G}, H.relIndex K = 1 ↔ K ≤ H"
+      },
+      {
+        "id": "C03",
+        "statement": "∀ {G : Type u_1} [inst : Group G] {H K : Subgroup G}, H.IsFiniteRelIndex K ↔ H.relIndex K ≠ 0"
+      },
+      {
+        "id": "C04",
+        "statement": "∀ {G : Type u_1} [inst : AddGroup G] {H : AddSubgroup G}, H.index ∣ 2 ↔ ∃ a, ∀ (b : G), b + a ∈ H ∨ b ∈ H"
+      },
+      {
+        "id": "C05",
+        "statement": "∀ {G : Type u_1} {G' : Type u_2} [inst : AddGroup G] [inst_1 : AddGroup G'] (H : AddSubgroup G) (f : G' →+ G), (AddSubgroup.comap f H).index = H.relIndex f.range"
+      },
+      {
+        "id": "C06",
+        "statement": "∀ {G : Type u_1} [inst : AddGroup G] (H K L : AddSubgroup G), H ≤ K → K ≤ L → H.relIndex K * K.relIndex L = H.relIndex L"
+      },
+      {
+        "id": "C07",
+        "statement": "∀ {G : Type u_1} [inst : AddGroup G] {H K : AddSubgroup G}, H ≤ K → H.relIndex K * K.index = H.index"
+      },
+      {
+        "id": "C08",
+        "statement": "∀ {G : Type u_1} [inst : AddGroup G] (H : AddSubgroup G), ⊥.relIndex H = Nat.card ↥H"
+      },
+      {
+        "id": "C09",
+        "statement": "∀ {G : Type u_1} [inst : Group G] {H K : Subgroup G}, H.relIndex K = 1 ↔ K ≤ H"
+      },
+      {
+        "id": "C10",
+        "statement": "∀ {G : Type u_1} [inst : Group G] (H : Subgroup G), ⊥.relIndex H = Nat.card ↥H"
+      },
+      {
+        "id": "C11",
+        "statement": "∀ {G : Type u_1} [inst : Group G], ⊥.index = Nat.card G"
+      },
+      {
+        "id": "C12",
+        "statement": "∀ {G : Type u_1} {inst : Group G} {H : Subgroup G} [self : H.FiniteIndex], H.index ≠ 0"
+      },
+      {
+        "id": "C13",
+        "statement": "∀ {G : Type u_1} [inst : Group G] {H K L : Subgroup G}, K ≤ L → H.relIndex K = 0 → H.relIndex L = 0"
+      },
+      {
+        "id": "C14",
+        "statement": "∀ {G : Type u_1} [inst : Group G] {H : Subgroup G}, H.index = 2 ↔ ∃ a, ∀ (b : G), Xor (b * a ∈ H) (b ∈ H)"
+      },
+      {
+        "id": "C15",
+        "statement": "∀ {G : Type u_1} [inst : Group G] {H K : Subgroup G}, H.relIndex K ≠ 0 → H.IsFiniteRelIndex K"
+      },
+      {
+        "id": "C16",
+        "statement": "∀ {G : Type u_1} [inst : Group G] {H K L : Subgroup G}, H ≤ K → K.relIndex L = 0 → H.relIndex L = 0"
+      }
+    ],
+    "episode_id": "MLP4B_0053",
+    "schema_version": "lemma-portfolio.dependency-compression.v4",
+    "selection_budget": 3,
+    "source_project": "mathlib",
+    "targets": [
+      {
+        "id": "T01",
+        "statement": "∀ {G : Type u_1} [inst : Group G] (H : Subgroup G), Nat.card ↥H * H.index = Nat.card G"
+      },
+      {
+        "id": "T02",
+        "statement": "∀ {G : Type u_1} {G' : Type u_2} [inst : AddGroup G] [inst_1 : AddGroup G'] (K : AddSubgroup G) (f : G →+ G'), f.ker.relIndex K = Nat.card ↥(AddSubgroup.map f K)"
+      },
+      {
+        "id": "T03",
+        "statement": "∀ {G : Type u_1} [inst : Group G] {H K L : Subgroup G}, (H ⊓ K).relIndex L ≤ H.relIndex L * K.relIndex L"
+      },
+      {
+        "id": "T04",
+        "statement": "∀ {G : Type u_1} [inst : AddGroup G] {H : AddSubgroup G}, Nat.card ↥H = 1 ↔ H = ⊥"
+      },
+      {
+        "id": "T05",
+        "statement": "∀ {G : Type u_1} [inst : Group G] {L : Subgroup G} {ι : Type u_3} [inst_1 : Fintype ι] (f : ι → Subgroup G), (⨅ i, f i).relIndex L ≤ ∏ i, (f i).relIndex L"
+      },
+      {
+        "id": "T06",
+        "statement": "∀ {G : Type u_1} [inst : AddGroup G] (H : AddSubgroup G), H.relIndex ⊤ = H.index"
+      },
+      {
+        "id": "T07",
+        "statement": "∀ {G : Type u_1} [inst : AddGroup G] {H K : AddSubgroup G}, H < K → ∀ [H.FiniteIndex], K.index < H.index"
+      },
+      {
+        "id": "T08",
+        "statement": "∀ {G : Type u_1} {G' : Type u_2} [inst : Group G] [inst_1 : Group G'] (f : G →* G') {J K : Subgroup G'}, J.relIndex K ≠ 0 → (Subgroup.comap f J).relIndex (Subgroup.comap f K) ≠ 0"
+      }
+    ],
+    "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+  },
+  {
+    "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+    "candidates": [
+      {
+        "id": "C01",
+        "statement": "∀ {R : Type r} [inst : CommRing R] {W' : WeierstrassCurve.Projective R} (P Q : Fin 3 → R), W'.addMap ⟦P⟧ ⟦Q⟧ = ⟦W'.add P Q⟧"
+      },
+      {
+        "id": "C02",
+        "statement": "∀ {F : Type u} [inst : Field F] {W : WeierstrassCurve.Projective F} {P : Fin 3 → F}, P 2 ≠ 0 → W.neg P = P 2 • ![P 0 / P 2, W.toAffine.negY (P 0 / P 2) (P 1 / P 2), 1]"
+      },
+      {
+        "id": "C03",
+        "statement": "∀ {R : Type r} [inst : CommRing R] {W' : WeierstrassCurve.Projective R} (P : Fin 3 → R), W'.negMap ⟦P⟧ = ⟦W'.neg P⟧"
+      },
+      {
+        "id": "C04",
+        "statement": "∀ {F : Type u} [inst : Field F] {W : WeierstrassCurve.Projective F} (P : Fin 3 → F) {u : F}, IsUnit u → WeierstrassCurve.Projective.Point.toAffine W (u • P) = WeierstrassCurve.Projective.Point.toAffine W P"
+      },
+      {
+        "id": "C05",
+        "statement": "∀ {R : Type r} [inst : CommRing R] {W' : WeierstrassCurve.Projective R} [NoZeroDivisors R] {P Q : Fin 3 → R}, W'.Equation Q → P 2 ≠ 0 → Q 2 = 0 → W'.add P Q = -(Q 1 ^ 2 * P 2) • P"
+      },
+      {
+        "id": "C06",
+        "statement": "∀ {R : Type r} [inst : CommRing R] {W' : WeierstrassCurve.Projective R} (P : Fin 3 → R), W'.addX P (W'.neg P) = 0"
+      },
+      {
+        "id": "C07",
+        "statement": "∀ {F : Type u} [inst : Field F] {W : WeierstrassCurve.Projective F} {P Q : Fin 3 → F}, W.Equation P → P 2 ≠ 0 → Q 2 ≠ 0 → P 0 * Q 2 = Q 0 * P 2 → P 1 * Q 2 = Q 1 * P 2 → P 1 * Q 2 = W.negY Q * P 2 → W.add P Q = W.dblU P • ![0, 1, 0]"
+      },
+      {
+        "id": "C08",
+        "statement": "∀ {R : Type r} [inst : CommRing R] {W' : WeierstrassCurve.Projective R} (P : Fin 3 → R), W'.neg P 2 = P 2"
+      },
+      {
+        "id": "C09",
+        "statement": "∀ {F : Type u} [inst : Field F] {W : WeierstrassCurve.Projective F} {P Q : Fin 3 → F}, W.Nonsingular P → W.Nonsingular Q → P 2 = 0 → Q 2 = 0 → W.add P Q = P 1 ^ 4 • ![0, 1, 0]"
+      },
+      {
+        "id": "C10",
+        "statement": "∀ {F : Type u} [inst : Field F] {W : WeierstrassCurve.Projective F} [inst_1 : DecidableEq F] {P Q : Fin 3 → F}, W.Equation P → W.Equation Q → P 2 ≠ 0 → Q 2 ≠ 0 → P 0 * Q 2 ≠ Q 0 * P 2 → W.add P Q = W.addZ P Q • ![W.toAffine.addX (P 0 / P 2) (Q 0 / Q 2) (W.toAffine.slope (P 0 / P 2) (Q 0 / Q 2) (P 1 / P 2) (Q 1 / Q 2)), W.toAffine.addY (P 0 / P 2) (Q 0 / Q 2) (P 1 / P 2) (W.toAffine.slope (P 0 / P 2) (Q 0 / Q 2) (P 1 / P 2) (Q 1 / Q 2)), 1]"
+      },
+      {
+        "id": "C11",
+        "statement": "∀ {R : Type r} [inst : CommRing R] {W' : WeierstrassCurve.Projective R} (P : Fin 3 → R), W'.neg P 1 = W'.negY P"
+      },
+      {
+        "id": "C12",
+        "statement": "∀ {R : Type r} [inst : CommRing R] {W' : WeierstrassCurve.Projective R} [NoZeroDivisors R] {P : Fin 3 → R}, W'.Equation P → P 2 = 0 → W'.neg P = -P 1 • ![0, 1, 0]"
+      },
+      {
+        "id": "C13",
+        "statement": "∀ {R : Type r} [inst : CommRing R] {W' : WeierstrassCurve.Projective R} {P Q : Fin 3 → R}, ¬P ≈ Q → W'.add P Q = W'.addXYZ P Q"
+      },
+      {
+        "id": "C14",
+        "statement": "∀ {R : Type r} [inst : CommRing R] {W' : WeierstrassCurve.Projective R} (P : Fin 3 → R), W'.addZ P (W'.neg P) = 0"
+      },
+      {
+        "id": "C15",
+        "statement": "∀ {F : Type u} [inst : Field F] {W : WeierstrassCurve.Projective F} [inst_1 : DecidableEq F] {P Q : Fin 3 → F}, W.Equation P → W.Equation Q → P 2 ≠ 0 → Q 2 ≠ 0 → P 0 * Q 2 = Q 0 * P 2 → P 1 * Q 2 ≠ W.negY Q * P 2 → W.add P Q = W.dblZ P • ![W.toAffine.addX (P 0 / P 2) (Q 0 / Q 2) (W.toAffine.slope (P 0 / P 2) (Q 0 / Q 2) (P 1 / P 2) (Q 1 / Q 2)), W.toAffine.addY (P 0 / P 2) (Q 0 / Q 2) (P 1 / P 2) (W.toAffine.slope (P 0 / P 2) (Q 0 / Q 2) (P 1 / P 2) (Q 1 / Q 2)), 1]"
+      },
+      {
+        "id": "C16",
+        "statement": "∀ {F : Type u} [inst : Field F] {W : WeierstrassCurve.Projective F}, WeierstrassCurve.Projective.Point.toAffine W ![0, 1, 0] = 0"
+      }
+    ],
+    "episode_id": "MLP4B_0054",
+    "schema_version": "lemma-portfolio.dependency-compression.v4",
+    "selection_budget": 3,
+    "source_project": "mathlib",
+    "targets": [
+      {
+        "id": "T01",
+        "statement": "∀ {R : Type r} [inst : CommRing R] {W' : WeierstrassCurve.Projective R} {P Q : Fin 3 → R}, ¬P ≈ Q → ∀ {u v : R}, IsUnit u → IsUnit v → W'.add (u • P) (v • Q) = (u * v) ^ 2 • W'.add P Q"
+      },
+      {
+        "id": "T02",
+        "statement": "∀ {R : Type r} [inst : CommRing R] {W' : WeierstrassCurve.Projective R} [NoZeroDivisors R] {P Q : Fin 3 → R}, W'.Equation P → P 2 = 0 → Q 2 ≠ 0 → W'.add P Q = (P 1 ^ 2 * Q 2) • Q"
+      },
+      {
+        "id": "T03",
+        "statement": "∀ {F : Type u} [inst : Field F] {W : WeierstrassCurve.Projective F} {P : Fin 3 → F}, W.Nonsingular P → WeierstrassCurve.Projective.Point.toAffine W (W.neg P) = -WeierstrassCurve.Projective.Point.toAffine W P"
+      },
+      {
+        "id": "T04",
+        "statement": "∀ {R : Type r} [inst : CommRing R] {W' : WeierstrassCurve.Projective R} {P : Fin 3 → R}, W'.Equation P → W'.addY P (W'.neg P) = -W'.dblZ P"
+      },
+      {
+        "id": "T05",
+        "statement": "∀ {F : Type u} [inst : Field F] {W : WeierstrassCurve.Projective F} {P Q : Fin 3 → F}, W.Equation P → W.Equation Q → P 2 ≠ 0 → Q 2 ≠ 0 → P 0 * Q 2 = Q 0 * P 2 → P 1 * Q 2 ≠ Q 1 * P 2 → W.add P Q = WeierstrassCurve.Projective.addU P Q • ![0, 1, 0]"
+      },
+      {
+        "id": "T06",
+        "statement": "∀ {F : Type u} [inst : Field F] {W : WeierstrassCurve.Projective F} {P : Fin 3 → F}, W.Nonsingular P → P 2 = 0 → W.negMap ⟦P⟧ = ⟦![0, 1, 0]⟧"
+      },
+      {
+        "id": "T07",
+        "statement": "∀ {F : Type u} [inst : Field F] {W : WeierstrassCurve.Projective F} {P : Fin 3 → F}, P 2 ≠ 0 → W.negMap ⟦P⟧ = ⟦![P 0 / P 2, W.toAffine.negY (P 0 / P 2) (P 1 / P 2), 1]⟧"
+      },
+      {
+        "id": "T08",
+        "statement": "∀ {F : Type u} [inst : Field F] {W : WeierstrassCurve.Projective F}, WeierstrassCurve.Projective.Point.toAffineLift 0 = 0"
+      }
+    ],
+    "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+  }
+]
+</episodes>

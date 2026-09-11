@@ -1,0 +1,22 @@
+{
+  "action_if_15_valid_and_at_least_8_correct": "Do not run blind inference. Supersede the current blind split and its protocol transparently, analyze only development Batch A, revise construction using development-derived structural rules, and use untouched development Batch B once as the next confirmation gate.",
+  "action_if_15_valid_and_at_most_7_correct": "Retain the current committed blind split and proceed to freeze the complete five-deployment blind panel without opening blind labels.",
+  "action_if_fewer_than_15_valid": "Treat the difficulty calibration as operationally inconclusive. Do not use invalid responses as evidence of benchmark hardness and do not run blind inference. Resolve the failure under an explicitly superseding development-only protocol, preserving all attempts.",
+  "blind_final_policy": "After any retained blind split receives its first model call, never replace, filter, or rescore its episodes based on results. Report every predeclared row honestly even if a deployment exceeds 60 percent.",
+  "calibration_episode_count": 15,
+  "calibration_public_sha256": "28f2ce4563d4db0eb08b981d8b4ec2cf689f4cf0dc06b69af2c6433dbfdba4ab",
+  "created_utc": "2026-09-01T09:04:44Z",
+  "development_gate": "all_15_transport_valid_and_optimal_portfolio_accuracy_at_most_7_of_15",
+  "evaluation_system_id": "codex_gpt56_sol_max_calibration_direct",
+  "five_item_prompt_manifest_sha256": "58a31aa21f8cd1d5f34fc3e3f6aa367f4f02ea909be695db0531b8cc534b2284",
+  "minimum_valid_predictions": 15,
+  "purpose": "Use public development data to seek a safety margin below the requested 60 percent frontier test target without mistaking operational failure for task difficulty or censoring held-out results.",
+  "score_read_before_creation": false,
+  "schema_version": "lemma-portfolio.development-difficulty-decision.v2",
+  "sol_v5_protocol_sha256": "7b5a05678166e2595f465ccfd562afbda281b9523b29bd1cddb86e1d02241c1c",
+  "status": "FROZEN_DURING_FIRST_CALL_BEFORE_ANY_COMPLETED_CALIBRATION_OUTPUT",
+  "supersedes_rule_sha256": "abf84da9878b84b078602840ab2d95d750fb9b935130bce3a1e3acf476cea538",
+  "supersession_reason": "The first rule omitted an explicit all-items-valid precondition; without it, a transport failure could be misread as benchmark hardness.",
+  "target_is_design_goal_not_reporting_rule": true,
+  "threshold_rationale": "Seven of fifteen is 46.7 percent; eight of fifteen is 53.3 percent. Rebuilding at eight or more leaves a conservative margin below 60 percent on development while acknowledging sampling uncertainty. The gate is meaningful only when all 15 predictions are transport-valid."
+}

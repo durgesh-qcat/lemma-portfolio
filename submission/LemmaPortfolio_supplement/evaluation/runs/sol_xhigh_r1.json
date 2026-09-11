@@ -1,0 +1,927 @@
+{
+  "schema_version": "lemma-portfolio.evaluation-run.v1",
+  "run_id": "sol_xhigh_r1",
+  "evidence_status": "Projection of supplied execution records, not independent authentication of inference or serving configuration.",
+  "responses_directory": "followups/2026-09-05/sol_xhigh_r1/responses",
+  "prompt_calls": [
+    {
+      "name": "01",
+      "model": "gpt-5.6-sol",
+      "effort": "xhigh",
+      "kind": "direct",
+      "prompt": "original_release/prompts/DIRECT_PROMPTS/01.txt",
+      "prompt_sha256": "febe94397bd43a8a0be9b38d705c08eee2141b4a2ab755d5a46d87596506940c",
+      "episode_ids": [
+        "MLP4B_0000",
+        "MLP4B_0001",
+        "MLP4B_0002",
+        "MLP4B_0003",
+        "MLP4B_0004"
+      ]
+    },
+    {
+      "name": "02",
+      "model": "gpt-5.6-sol",
+      "effort": "xhigh",
+      "kind": "direct",
+      "prompt": "original_release/prompts/DIRECT_PROMPTS/02.txt",
+      "prompt_sha256": "9b736aaa054838df6d04357ab3ffcac70efccdbdbf20f212389600c2216031b4",
+      "episode_ids": [
+        "MLP4B_0005",
+        "MLP4B_0006",
+        "MLP4B_0007",
+        "MLP4B_0008",
+        "MLP4B_0009"
+      ]
+    },
+    {
+      "name": "03",
+      "model": "gpt-5.6-sol",
+      "effort": "xhigh",
+      "kind": "direct",
+      "prompt": "original_release/prompts/DIRECT_PROMPTS/03.txt",
+      "prompt_sha256": "6a79e47946d40e8114af5f609f7e960287ed76f70e891a200f6824fcf7aa1f70",
+      "episode_ids": [
+        "MLP4B_0010",
+        "MLP4B_0011",
+        "MLP4B_0012",
+        "MLP4B_0013",
+        "MLP4B_0014"
+      ]
+    },
+    {
+      "name": "04",
+      "model": "gpt-5.6-sol",
+      "effort": "xhigh",
+      "kind": "direct",
+      "prompt": "original_release/prompts/DIRECT_PROMPTS/04.txt",
+      "prompt_sha256": "e85ce36bf8b82e04592c7c47afd391b0b2e519ee6bd1e6bcd1197bd429dd7f3d",
+      "episode_ids": [
+        "MLP4B_0015",
+        "MLP4B_0016",
+        "MLP4B_0017",
+        "MLP4B_0018",
+        "MLP4B_0019"
+      ]
+    },
+    {
+      "name": "05",
+      "model": "gpt-5.6-sol",
+      "effort": "xhigh",
+      "kind": "direct",
+      "prompt": "original_release/prompts/DIRECT_PROMPTS/05.txt",
+      "prompt_sha256": "942539a45bdbc8eb682bf0df4075ac226fd519be566d83273fe1c0e36b656449",
+      "episode_ids": [
+        "MLP4B_0020",
+        "MLP4B_0021",
+        "MLP4B_0022",
+        "MLP4B_0023",
+        "MLP4B_0024"
+      ]
+    },
+    {
+      "name": "06",
+      "model": "gpt-5.6-sol",
+      "effort": "xhigh",
+      "kind": "direct",
+      "prompt": "original_release/prompts/DIRECT_PROMPTS/06.txt",
+      "prompt_sha256": "376664ae74121b60446ed72fb5801e26ec8db066e52b3097034cc53344e167d9",
+      "episode_ids": [
+        "MLP4B_0025",
+        "MLP4B_0026",
+        "MLP4B_0027",
+        "MLP4B_0028",
+        "MLP4B_0029"
+      ]
+    },
+    {
+      "name": "07",
+      "model": "gpt-5.6-sol",
+      "effort": "xhigh",
+      "kind": "direct",
+      "prompt": "original_release/prompts/DIRECT_PROMPTS/07.txt",
+      "prompt_sha256": "fe0552e4134e2e9f9780055949d4d662459c9e0ca75134fbb4532979206652a4",
+      "episode_ids": [
+        "MLP4B_0030",
+        "MLP4B_0031",
+        "MLP4B_0032",
+        "MLP4B_0033",
+        "MLP4B_0034"
+      ]
+    },
+    {
+      "name": "08",
+      "model": "gpt-5.6-sol",
+      "effort": "xhigh",
+      "kind": "direct",
+      "prompt": "original_release/prompts/DIRECT_PROMPTS/08.txt",
+      "prompt_sha256": "2ee2884b8afdcfc9138abe6e7076ba98a9f26aaf4a3e66fd67eac4d7c97794ae",
+      "episode_ids": [
+        "MLP4B_0035",
+        "MLP4B_0036",
+        "MLP4B_0037",
+        "MLP4B_0038",
+        "MLP4B_0039"
+      ]
+    },
+    {
+      "name": "09",
+      "model": "gpt-5.6-sol",
+      "effort": "xhigh",
+      "kind": "direct",
+      "prompt": "original_release/prompts/DIRECT_PROMPTS/09.txt",
+      "prompt_sha256": "ebb62b772ab44523248c9b512e20525a81b4d26b81610105dcc3303f9eacccb9",
+      "episode_ids": [
+        "MLP4B_0040",
+        "MLP4B_0041",
+        "MLP4B_0042",
+        "MLP4B_0043",
+        "MLP4B_0044"
+      ]
+    },
+    {
+      "name": "10",
+      "model": "gpt-5.6-sol",
+      "effort": "xhigh",
+      "kind": "direct",
+      "prompt": "original_release/prompts/DIRECT_PROMPTS/10.txt",
+      "prompt_sha256": "0bb3074e4eb6fc3bd1d72ca5165572e1b3fe6878fb41b39f64c319f02990a13c",
+      "episode_ids": [
+        "MLP4B_0045",
+        "MLP4B_0046",
+        "MLP4B_0047",
+        "MLP4B_0048",
+        "MLP4B_0049"
+      ]
+    },
+    {
+      "name": "11",
+      "model": "gpt-5.6-sol",
+      "effort": "xhigh",
+      "kind": "direct",
+      "prompt": "original_release/prompts/DIRECT_PROMPTS/11.txt",
+      "prompt_sha256": "c707b901592322b395b616a6a2674fab78d0efc5293bf7f58d18425b63ef8114",
+      "episode_ids": [
+        "MLP4B_0050",
+        "MLP4B_0051",
+        "MLP4B_0052",
+        "MLP4B_0053",
+        "MLP4B_0054"
+      ]
+    },
+    {
+      "name": "12",
+      "model": "gpt-5.6-sol",
+      "effort": "xhigh",
+      "kind": "direct",
+      "prompt": "original_release/prompts/DIRECT_PROMPTS/12.txt",
+      "prompt_sha256": "189850421d75c0d8c9a75a81241986b17b51ad10bab63df284be8e08af325e3d",
+      "episode_ids": [
+        "MLP4B_0055",
+        "MLP4B_0056",
+        "MLP4B_0057",
+        "MLP4B_0058",
+        "MLP4B_0059"
+      ]
+    }
+  ],
+  "metadata": {
+    "source_member": "followups/2026-09-05/sol_xhigh_r1/run_metadata.json",
+    "source_sha256": "fd887120a5c1c5e9d402fc6082efe54bc3c8f7bf5b7ec453a47329763f6ef071",
+    "removed_fields": [],
+    "record": {
+      "started_utc": "2026-09-05T01:46:50.614534+00:00",
+      "protocol_sha256": "86a867af264a392f875a3a97474a74ec171acf7bfec79926aed9adb52df9c0fc",
+      "calls": [
+        {
+          "name": "01",
+          "model": "gpt-5.6-sol",
+          "effort": "xhigh",
+          "kind": "direct",
+          "prompt": "prompts/DIRECT_PROMPTS/01.txt",
+          "prompt_sha256": "febe94397bd43a8a0be9b38d705c08eee2141b4a2ab755d5a46d87596506940c",
+          "episode_ids": [
+            "MLP4B_0000",
+            "MLP4B_0001",
+            "MLP4B_0002",
+            "MLP4B_0003",
+            "MLP4B_0004"
+          ]
+        },
+        {
+          "name": "02",
+          "model": "gpt-5.6-sol",
+          "effort": "xhigh",
+          "kind": "direct",
+          "prompt": "prompts/DIRECT_PROMPTS/02.txt",
+          "prompt_sha256": "9b736aaa054838df6d04357ab3ffcac70efccdbdbf20f212389600c2216031b4",
+          "episode_ids": [
+            "MLP4B_0005",
+            "MLP4B_0006",
+            "MLP4B_0007",
+            "MLP4B_0008",
+            "MLP4B_0009"
+          ]
+        },
+        {
+          "name": "03",
+          "model": "gpt-5.6-sol",
+          "effort": "xhigh",
+          "kind": "direct",
+          "prompt": "prompts/DIRECT_PROMPTS/03.txt",
+          "prompt_sha256": "6a79e47946d40e8114af5f609f7e960287ed76f70e891a200f6824fcf7aa1f70",
+          "episode_ids": [
+            "MLP4B_0010",
+            "MLP4B_0011",
+            "MLP4B_0012",
+            "MLP4B_0013",
+            "MLP4B_0014"
+          ]
+        },
+        {
+          "name": "04",
+          "model": "gpt-5.6-sol",
+          "effort": "xhigh",
+          "kind": "direct",
+          "prompt": "prompts/DIRECT_PROMPTS/04.txt",
+          "prompt_sha256": "e85ce36bf8b82e04592c7c47afd391b0b2e519ee6bd1e6bcd1197bd429dd7f3d",
+          "episode_ids": [
+            "MLP4B_0015",
+            "MLP4B_0016",
+            "MLP4B_0017",
+            "MLP4B_0018",
+            "MLP4B_0019"
+          ]
+        },
+        {
+          "name": "05",
+          "model": "gpt-5.6-sol",
+          "effort": "xhigh",
+          "kind": "direct",
+          "prompt": "prompts/DIRECT_PROMPTS/05.txt",
+          "prompt_sha256": "942539a45bdbc8eb682bf0df4075ac226fd519be566d83273fe1c0e36b656449",
+          "episode_ids": [
+            "MLP4B_0020",
+            "MLP4B_0021",
+            "MLP4B_0022",
+            "MLP4B_0023",
+            "MLP4B_0024"
+          ]
+        },
+        {
+          "name": "06",
+          "model": "gpt-5.6-sol",
+          "effort": "xhigh",
+          "kind": "direct",
+          "prompt": "prompts/DIRECT_PROMPTS/06.txt",
+          "prompt_sha256": "376664ae74121b60446ed72fb5801e26ec8db066e52b3097034cc53344e167d9",
+          "episode_ids": [
+            "MLP4B_0025",
+            "MLP4B_0026",
+            "MLP4B_0027",
+            "MLP4B_0028",
+            "MLP4B_0029"
+          ]
+        },
+        {
+          "name": "07",
+          "model": "gpt-5.6-sol",
+          "effort": "xhigh",
+          "kind": "direct",
+          "prompt": "prompts/DIRECT_PROMPTS/07.txt",
+          "prompt_sha256": "fe0552e4134e2e9f9780055949d4d662459c9e0ca75134fbb4532979206652a4",
+          "episode_ids": [
+            "MLP4B_0030",
+            "MLP4B_0031",
+            "MLP4B_0032",
+            "MLP4B_0033",
+            "MLP4B_0034"
+          ]
+        },
+        {
+          "name": "08",
+          "model": "gpt-5.6-sol",
+          "effort": "xhigh",
+          "kind": "direct",
+          "prompt": "prompts/DIRECT_PROMPTS/08.txt",
+          "prompt_sha256": "2ee2884b8afdcfc9138abe6e7076ba98a9f26aaf4a3e66fd67eac4d7c97794ae",
+          "episode_ids": [
+            "MLP4B_0035",
+            "MLP4B_0036",
+            "MLP4B_0037",
+            "MLP4B_0038",
+            "MLP4B_0039"
+          ]
+        },
+        {
+          "name": "09",
+          "model": "gpt-5.6-sol",
+          "effort": "xhigh",
+          "kind": "direct",
+          "prompt": "prompts/DIRECT_PROMPTS/09.txt",
+          "prompt_sha256": "ebb62b772ab44523248c9b512e20525a81b4d26b81610105dcc3303f9eacccb9",
+          "episode_ids": [
+            "MLP4B_0040",
+            "MLP4B_0041",
+            "MLP4B_0042",
+            "MLP4B_0043",
+            "MLP4B_0044"
+          ]
+        },
+        {
+          "name": "10",
+          "model": "gpt-5.6-sol",
+          "effort": "xhigh",
+          "kind": "direct",
+          "prompt": "prompts/DIRECT_PROMPTS/10.txt",
+          "prompt_sha256": "0bb3074e4eb6fc3bd1d72ca5165572e1b3fe6878fb41b39f64c319f02990a13c",
+          "episode_ids": [
+            "MLP4B_0045",
+            "MLP4B_0046",
+            "MLP4B_0047",
+            "MLP4B_0048",
+            "MLP4B_0049"
+          ]
+        },
+        {
+          "name": "11",
+          "model": "gpt-5.6-sol",
+          "effort": "xhigh",
+          "kind": "direct",
+          "prompt": "prompts/DIRECT_PROMPTS/11.txt",
+          "prompt_sha256": "c707b901592322b395b616a6a2674fab78d0efc5293bf7f58d18425b63ef8114",
+          "episode_ids": [
+            "MLP4B_0050",
+            "MLP4B_0051",
+            "MLP4B_0052",
+            "MLP4B_0053",
+            "MLP4B_0054"
+          ]
+        },
+        {
+          "name": "12",
+          "model": "gpt-5.6-sol",
+          "effort": "xhigh",
+          "kind": "direct",
+          "prompt": "prompts/DIRECT_PROMPTS/12.txt",
+          "prompt_sha256": "189850421d75c0d8c9a75a81241986b17b51ad10bab63df284be8e08af325e3d",
+          "episode_ids": [
+            "MLP4B_0055",
+            "MLP4B_0056",
+            "MLP4B_0057",
+            "MLP4B_0058",
+            "MLP4B_0059"
+          ]
+        }
+      ]
+    }
+  },
+  "receipts": {
+    "source_member": "followups/2026-09-05/sol_xhigh_r1/CALL_RECEIPTS.json",
+    "source_sha256": "1803e7544d2e2eeae13bfb60e4daa0845568945f5db03028a1dc2ea53c2d9fb6",
+    "removed_fields": [],
+    "record": [
+      {
+        "call": "01",
+        "started_utc": "2026-09-05T01:46:50.618897+00:00",
+        "prompt_sha256": "febe94397bd43a8a0be9b38d705c08eee2141b4a2ab755d5a46d87596506940c",
+        "ended_utc": "2026-09-05T01:53:08.123736+00:00",
+        "exit_code": 0,
+        "timed_out": false,
+        "wall_seconds": 377.5,
+        "usage": [
+          {
+            "input_tokens": 17888,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 16607,
+            "reasoning_output_tokens": 16507
+          }
+        ],
+        "response_present": true,
+        "valid_json": true,
+        "response_sha256": "772a9c53c77c6017a10b72921191b5d58e151011c354dad18b571872cb6abf8f",
+        "observed_tool_event_count": 0,
+        "inference_error_count": 0,
+        "source_event_log_sha256": "6f536a2154dbf01669905a2cae0e2f4d27bb4fa657a6bd752746c81d1451756e",
+        "source_invocation_sha256": "1b55da68578206df2e8dbbe2393b328ac622c56a3a6cbfcce5aef60b4959439a",
+        "source_result_sha256": "54ed566d8e1e2835e7b6c00e128b03e17e342eea5abd0209230dbccf43b3776a"
+      },
+      {
+        "call": "02",
+        "started_utc": "2026-09-05T01:53:08.127899+00:00",
+        "prompt_sha256": "9b736aaa054838df6d04357ab3ffcac70efccdbdbf20f212389600c2216031b4",
+        "ended_utc": "2026-09-05T01:59:02.751688+00:00",
+        "exit_code": 0,
+        "timed_out": false,
+        "wall_seconds": 354.619,
+        "usage": [
+          {
+            "input_tokens": 18973,
+            "cached_input_tokens": 5888,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 15120,
+            "reasoning_output_tokens": 15020
+          }
+        ],
+        "response_present": true,
+        "valid_json": true,
+        "response_sha256": "2427ff49acd44d081e3f8fecc4451d7be6f83c384bba9e3dcec2309ec5786c05",
+        "observed_tool_event_count": 0,
+        "inference_error_count": 0,
+        "source_event_log_sha256": "f07661f78da209fb3ded4e0a2472df75ee626b3a4684caf0529f50e66e203b72",
+        "source_invocation_sha256": "951e21bfa77e81715b4f29708078b25baf5fa409a79eba2c1cb1ef39d5678589",
+        "source_result_sha256": "e1c9a4687ae2cd4bc940239f9fa4167a89f97c7da27e35446a89d95496586b4f"
+      },
+      {
+        "call": "03",
+        "started_utc": "2026-09-05T01:59:02.756952+00:00",
+        "prompt_sha256": "6a79e47946d40e8114af5f609f7e960287ed76f70e891a200f6824fcf7aa1f70",
+        "ended_utc": "2026-09-05T02:05:39.191613+00:00",
+        "exit_code": 0,
+        "timed_out": false,
+        "wall_seconds": 396.429,
+        "usage": [
+          {
+            "input_tokens": 23909,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 16961,
+            "reasoning_output_tokens": 16861
+          }
+        ],
+        "response_present": true,
+        "valid_json": true,
+        "response_sha256": "9cff2dc6e30ac404edaafe9b7f363e5f49c25226a5b8de384c70b2f18c496ff0",
+        "observed_tool_event_count": 0,
+        "inference_error_count": 0,
+        "source_event_log_sha256": "c69e02cd41daa8577dc98e911c3d25abde29f201c64395c48d39624c411e787e",
+        "source_invocation_sha256": "877b73d85f263aabfdd60891630dc12293d6fadda147e88588c20d31372f4bf7",
+        "source_result_sha256": "4f48ac0821a34d78ab1a55cea6e565ad5319037cf59bd74b608bdd4b5cce9c61"
+      },
+      {
+        "call": "04",
+        "started_utc": "2026-09-05T02:05:39.197242+00:00",
+        "prompt_sha256": "e85ce36bf8b82e04592c7c47afd391b0b2e519ee6bd1e6bcd1197bd429dd7f3d",
+        "ended_utc": "2026-09-05T02:11:32.993264+00:00",
+        "exit_code": 0,
+        "timed_out": false,
+        "wall_seconds": 353.823,
+        "usage": [
+          {
+            "input_tokens": 18562,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 16656,
+            "reasoning_output_tokens": 16556
+          }
+        ],
+        "response_present": true,
+        "valid_json": true,
+        "response_sha256": "da427192444a27f43ef883d248b8eb878374708589b0e9ec06b64c663e998775",
+        "observed_tool_event_count": 0,
+        "inference_error_count": 0,
+        "source_event_log_sha256": "80956f3a47daa4b61181db9f87893b0ecbee30920306ba7cd666c140b544724c",
+        "source_invocation_sha256": "9f41472dc3947c6edccbafbd45992b0708a293eb5d4d49d3da6906b3911405dc",
+        "source_result_sha256": "7af5d8fa5d075d21c063c39b1ab5ac32e786dfcc2718bee122653fd49adbe3b5"
+      },
+      {
+        "call": "05",
+        "started_utc": "2026-09-05T02:11:32.996380+00:00",
+        "prompt_sha256": "942539a45bdbc8eb682bf0df4075ac226fd519be566d83273fe1c0e36b656449",
+        "ended_utc": "2026-09-05T02:17:27.949518+00:00",
+        "exit_code": 0,
+        "timed_out": false,
+        "wall_seconds": 354.952,
+        "usage": [
+          {
+            "input_tokens": 18376,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 14868,
+            "reasoning_output_tokens": 14768
+          }
+        ],
+        "response_present": true,
+        "valid_json": true,
+        "response_sha256": "050a2a7f6f9b6ff3366ea85b51d631462ee5a91f0996bf94cc4ff13d8b6df6ad",
+        "observed_tool_event_count": 0,
+        "inference_error_count": 0,
+        "source_event_log_sha256": "9b1f8dbd059bbcb1d6e061dc10fb457f78d251f035d9c6c2aeb64490a38c6326",
+        "source_invocation_sha256": "b960a0d268db9b705fd94f2bb61ece4c93837fd4118dd512069c32d88884cd50",
+        "source_result_sha256": "87f2c37d69449e230b4a342ab164d653eb619cfd24a471f6fbafc3d7d333e09c"
+      },
+      {
+        "call": "06",
+        "started_utc": "2026-09-05T02:17:27.952893+00:00",
+        "prompt_sha256": "376664ae74121b60446ed72fb5801e26ec8db066e52b3097034cc53344e167d9",
+        "ended_utc": "2026-09-05T02:23:36.807325+00:00",
+        "exit_code": 0,
+        "timed_out": false,
+        "wall_seconds": 368.853,
+        "usage": [
+          {
+            "input_tokens": 17888,
+            "cached_input_tokens": 5888,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 16204,
+            "reasoning_output_tokens": 16104
+          }
+        ],
+        "response_present": true,
+        "valid_json": true,
+        "response_sha256": "f1f4627e820ea53c7f6dabbc782bb43b7ba2c28b2a483af2da7496135d24f401",
+        "observed_tool_event_count": 0,
+        "inference_error_count": 0,
+        "source_event_log_sha256": "333370792fa1eb4f9aeb444d8bbc4969d299a90b6b74a09f51c65dfcc1168f8c",
+        "source_invocation_sha256": "bcd23e3b43c3c7ed6adc5b3fc26503b8f8d097effef286d9ca58f81bc9449c97",
+        "source_result_sha256": "94e47534eaf46a434e079c230769539a78df634ae35c9f0b3d1570155fe9dd95"
+      },
+      {
+        "call": "07",
+        "started_utc": "2026-09-05T02:23:36.812067+00:00",
+        "prompt_sha256": "fe0552e4134e2e9f9780055949d4d662459c9e0ca75134fbb4532979206652a4",
+        "ended_utc": "2026-09-05T02:31:03.762297+00:00",
+        "exit_code": 0,
+        "timed_out": false,
+        "wall_seconds": 446.949,
+        "usage": [
+          {
+            "input_tokens": 19118,
+            "cached_input_tokens": 18944,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 23119,
+            "reasoning_output_tokens": 23019
+          }
+        ],
+        "response_present": true,
+        "valid_json": true,
+        "response_sha256": "be98bcf60913e94eec69f532fbdd8bd2fbfc6f33dbaec22e54b01de9dcec0bc2",
+        "observed_tool_event_count": 0,
+        "inference_error_count": 0,
+        "source_event_log_sha256": "45c657250474979a46f06c3592e7ad9642157adfed92d057ce5c59d6b97aac03",
+        "source_invocation_sha256": "6c76700d9969d719443f02374b3cd72da8a2f325166e0f4ee98fdbbcf778d3a2",
+        "source_result_sha256": "95b15cfcf91abf45f13f0777d244c929c410f832ea65bcbbfb97476ba694d906"
+      },
+      {
+        "call": "08",
+        "started_utc": "2026-09-05T02:31:03.766452+00:00",
+        "prompt_sha256": "2ee2884b8afdcfc9138abe6e7076ba98a9f26aaf4a3e66fd67eac4d7c97794ae",
+        "ended_utc": "2026-09-05T02:40:42.612281+00:00",
+        "exit_code": 0,
+        "timed_out": false,
+        "wall_seconds": 578.843,
+        "usage": [
+          {
+            "input_tokens": 21638,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 24416,
+            "reasoning_output_tokens": 24316
+          }
+        ],
+        "response_present": true,
+        "valid_json": true,
+        "response_sha256": "0977d84837d18167b964dcac62f7438bb364b16bb3dd06dcb94c207c7326eb9b",
+        "observed_tool_event_count": 0,
+        "inference_error_count": 0,
+        "source_event_log_sha256": "f0043db77d54f4eba9e2429dbb7777bb7ab39f6af14b9cf6930b9f041dd0bc1c",
+        "source_invocation_sha256": "6a059751849e66ca10b5ff8445429d9c772678cb84928d33a8c9de3fb5f06202",
+        "source_result_sha256": "852d804d8dc0aa9593dc65109f0f4397f39529e69ea694a57a43f868a8e81cf6"
+      },
+      {
+        "call": "09",
+        "started_utc": "2026-09-05T02:40:42.615743+00:00",
+        "prompt_sha256": "ebb62b772ab44523248c9b512e20525a81b4d26b81610105dcc3303f9eacccb9",
+        "ended_utc": "2026-09-05T02:46:47.160516+00:00",
+        "exit_code": 0,
+        "timed_out": false,
+        "wall_seconds": 364.541,
+        "usage": [
+          {
+            "input_tokens": 21062,
+            "cached_input_tokens": 5888,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 16078,
+            "reasoning_output_tokens": 15978
+          }
+        ],
+        "response_present": true,
+        "valid_json": true,
+        "response_sha256": "6bb058c7db678471511e5df28cb6254a1273c6bbc4f5fbbe5af440ab1d98631a",
+        "observed_tool_event_count": 0,
+        "inference_error_count": 0,
+        "source_event_log_sha256": "2f8f8cd9c86a73f003f3e3645f958c86165148f7cb066f4b50022f0ed0f78e3d",
+        "source_invocation_sha256": "b95fa0329b52da8c7fd3874fec8944b5ccb593b39f4f5188451e6876da19b994",
+        "source_result_sha256": "9688310d82cf18296fa10d89d26768a2bbb030d4447ee5fe5a6402ae1057ae46"
+      },
+      {
+        "call": "10",
+        "started_utc": "2026-09-05T02:46:47.163753+00:00",
+        "prompt_sha256": "0bb3074e4eb6fc3bd1d72ca5165572e1b3fe6878fb41b39f64c319f02990a13c",
+        "ended_utc": "2026-09-05T02:53:27.120635+00:00",
+        "exit_code": 0,
+        "timed_out": false,
+        "wall_seconds": 399.955,
+        "usage": [
+          {
+            "input_tokens": 16876,
+            "cached_input_tokens": 5888,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 16596,
+            "reasoning_output_tokens": 16496
+          }
+        ],
+        "response_present": true,
+        "valid_json": true,
+        "response_sha256": "e8dcb9179bff829a2b10574889a5d2c098944c481ef786628cec573c3d21e498",
+        "observed_tool_event_count": 0,
+        "inference_error_count": 0,
+        "source_event_log_sha256": "b86e972a9df50de2da148a88e68cb0dc918da24209c136cb251b78057c1f54c2",
+        "source_invocation_sha256": "427e5bb86b10c3f2aa660a43de379918db4a1168f29716f908cd56beb94c8f77",
+        "source_result_sha256": "19d1f8178695b06c605577b3271f14ebaf510f5a28b8683ac674eea02f63aeda"
+      },
+      {
+        "call": "11",
+        "started_utc": "2026-09-05T02:53:27.123901+00:00",
+        "prompt_sha256": "c707b901592322b395b616a6a2674fab78d0efc5293bf7f58d18425b63ef8114",
+        "ended_utc": "2026-09-05T03:02:47.553706+00:00",
+        "exit_code": 0,
+        "timed_out": false,
+        "wall_seconds": 560.428,
+        "usage": [
+          {
+            "input_tokens": 15895,
+            "cached_input_tokens": 15744,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 23570,
+            "reasoning_output_tokens": 23470
+          }
+        ],
+        "response_present": true,
+        "valid_json": true,
+        "response_sha256": "6ed2c6cbef4b318cbce7865e94e08d16827b55256a371dec88e5485165c54e00",
+        "observed_tool_event_count": 0,
+        "inference_error_count": 0,
+        "source_event_log_sha256": "4790ab7be4d984dfb0f6fb9fc1956af2e327f61e266f300a9522b513fe6dd257",
+        "source_invocation_sha256": "ed2c3a97fdc1ef0bc7ccc9169ed67bed16b8464df47e02d6d5f5697dbd81ae3e",
+        "source_result_sha256": "583004bb0e282be4717caf7737825d925d00006c9f0584d0564990ae5341ea6b"
+      },
+      {
+        "call": "12",
+        "started_utc": "2026-09-05T03:02:47.556298+00:00",
+        "prompt_sha256": "189850421d75c0d8c9a75a81241986b17b51ad10bab63df284be8e08af325e3d",
+        "ended_utc": "2026-09-05T03:07:33.366906+00:00",
+        "exit_code": 0,
+        "timed_out": false,
+        "wall_seconds": 285.81,
+        "usage": [
+          {
+            "input_tokens": 21166,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 13380,
+            "reasoning_output_tokens": 13280
+          }
+        ],
+        "response_present": true,
+        "valid_json": true,
+        "response_sha256": "d0d95ec359a9cab48489b44356d6a52b618d7f51fd50a28768b55e5ff8478189",
+        "observed_tool_event_count": 0,
+        "inference_error_count": 0,
+        "source_event_log_sha256": "b45a1a5adbb5fa16a6123fd697a54dc3f5efe6d28842d8a73c1398063c267112",
+        "source_invocation_sha256": "05a9a4cd9380627c83c44d461f1d7ca46bdc1ad8d1905c652520b4564190570d",
+        "source_result_sha256": "dd379e4d6a10418f58432242bdb26bc1afa42d6587c3e7cb7d572e40dad7ecf2"
+      }
+    ]
+  },
+  "completion": {
+    "source_member": "followups/2026-09-05/sol_xhigh_r1/RUN_COMPLETED.json",
+    "source_sha256": "0cf8170744718f0d36cc1bc273ccc51e1ca09c10a1cfeca9948675cba110e931",
+    "removed_fields": [],
+    "record": {
+      "ended_utc": "2026-09-05T03:07:33.370178+00:00",
+      "call_count": 12,
+      "wall_seconds": 4842.702,
+      "usage": [
+        [
+          {
+            "input_tokens": 17888,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 16607,
+            "reasoning_output_tokens": 16507
+          }
+        ],
+        [
+          {
+            "input_tokens": 18973,
+            "cached_input_tokens": 5888,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 15120,
+            "reasoning_output_tokens": 15020
+          }
+        ],
+        [
+          {
+            "input_tokens": 23909,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 16961,
+            "reasoning_output_tokens": 16861
+          }
+        ],
+        [
+          {
+            "input_tokens": 18562,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 16656,
+            "reasoning_output_tokens": 16556
+          }
+        ],
+        [
+          {
+            "input_tokens": 18376,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 14868,
+            "reasoning_output_tokens": 14768
+          }
+        ],
+        [
+          {
+            "input_tokens": 17888,
+            "cached_input_tokens": 5888,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 16204,
+            "reasoning_output_tokens": 16104
+          }
+        ],
+        [
+          {
+            "input_tokens": 19118,
+            "cached_input_tokens": 18944,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 23119,
+            "reasoning_output_tokens": 23019
+          }
+        ],
+        [
+          {
+            "input_tokens": 21638,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 24416,
+            "reasoning_output_tokens": 24316
+          }
+        ],
+        [
+          {
+            "input_tokens": 21062,
+            "cached_input_tokens": 5888,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 16078,
+            "reasoning_output_tokens": 15978
+          }
+        ],
+        [
+          {
+            "input_tokens": 16876,
+            "cached_input_tokens": 5888,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 16596,
+            "reasoning_output_tokens": 16496
+          }
+        ],
+        [
+          {
+            "input_tokens": 15895,
+            "cached_input_tokens": 15744,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 23570,
+            "reasoning_output_tokens": 23470
+          }
+        ],
+        [
+          {
+            "input_tokens": 21166,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 13380,
+            "reasoning_output_tokens": 13280
+          }
+        ]
+      ]
+    }
+  },
+  "capture_audit": {
+    "source_member": "followups/2026-09-05/sol_xhigh_r1/capture_audit.json",
+    "source_sha256": "72372eeca6a1bc268adff7914c9d2e76d9aaf951c08b7345e9b28b5e11f25678",
+    "removed_fields": [],
+    "record": {
+      "status": "PASS",
+      "call_count": 12,
+      "unique_sessions": 12,
+      "checks": [
+        {
+          "call": "01",
+          "fresh_session": true,
+          "single_turn": true,
+          "prompt_matches_release": true,
+          "response_matches_event": true,
+          "tool_calls": 0
+        },
+        {
+          "call": "02",
+          "fresh_session": true,
+          "single_turn": true,
+          "prompt_matches_release": true,
+          "response_matches_event": true,
+          "tool_calls": 0
+        },
+        {
+          "call": "03",
+          "fresh_session": true,
+          "single_turn": true,
+          "prompt_matches_release": true,
+          "response_matches_event": true,
+          "tool_calls": 0
+        },
+        {
+          "call": "04",
+          "fresh_session": true,
+          "single_turn": true,
+          "prompt_matches_release": true,
+          "response_matches_event": true,
+          "tool_calls": 0
+        },
+        {
+          "call": "05",
+          "fresh_session": true,
+          "single_turn": true,
+          "prompt_matches_release": true,
+          "response_matches_event": true,
+          "tool_calls": 0
+        },
+        {
+          "call": "06",
+          "fresh_session": true,
+          "single_turn": true,
+          "prompt_matches_release": true,
+          "response_matches_event": true,
+          "tool_calls": 0
+        },
+        {
+          "call": "07",
+          "fresh_session": true,
+          "single_turn": true,
+          "prompt_matches_release": true,
+          "response_matches_event": true,
+          "tool_calls": 0
+        },
+        {
+          "call": "08",
+          "fresh_session": true,
+          "single_turn": true,
+          "prompt_matches_release": true,
+          "response_matches_event": true,
+          "tool_calls": 0
+        },
+        {
+          "call": "09",
+          "fresh_session": true,
+          "single_turn": true,
+          "prompt_matches_release": true,
+          "response_matches_event": true,
+          "tool_calls": 0
+        },
+        {
+          "call": "10",
+          "fresh_session": true,
+          "single_turn": true,
+          "prompt_matches_release": true,
+          "response_matches_event": true,
+          "tool_calls": 0
+        },
+        {
+          "call": "11",
+          "fresh_session": true,
+          "single_turn": true,
+          "prompt_matches_release": true,
+          "response_matches_event": true,
+          "tool_calls": 0
+        },
+        {
+          "call": "12",
+          "fresh_session": true,
+          "single_turn": true,
+          "prompt_matches_release": true,
+          "response_matches_event": true,
+          "tool_calls": 0
+        }
+      ],
+      "scope": "Local capture integrity, not independent authentication of model weights or hidden serving defaults."
+    }
+  }
+}

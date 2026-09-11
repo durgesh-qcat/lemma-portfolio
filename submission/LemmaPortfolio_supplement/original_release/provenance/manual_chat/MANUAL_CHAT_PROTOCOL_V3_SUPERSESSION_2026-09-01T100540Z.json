@@ -1,0 +1,51 @@
+{
+  "schema_version": "lemma-portfolio.manual-chat-preinference-supersession.v1",
+  "status": "FROZEN_BEFORE_ANY_BLIND_CAPTURE",
+  "created_utc": "2026-09-01T10:05:40Z",
+  "superseded": {
+    "protocol_path": "evaluation_v4/manual_chat/frozen_v2/MANUAL_CHAT_PROTOCOL.frozen.json",
+    "protocol_sha256": "2e194574baf7292d0b7ddee17f79c941430bdc58ce30ec3934c126d63df0b732",
+    "packet_manifest_path": "evaluation_v4/manual_chat/frozen_v2/PACKET_BUNDLE/PACKET_MANIFEST.frozen.json",
+    "packet_manifest_sha256": "560cd938c02bdfc5573428e2f61d3b301be32efe1565dde11abdd51794ec8850",
+    "hash_baseline_generator_sha256": "110237934bf181b6754e36370c4ee642db17ceff160ab1fc780ce6e14df34708",
+    "tfidf_baseline_generator_sha256": "93df802d15953f1338c1103bcd9bc4b1f3f4e954af133f1d9843fea9cedc2459"
+  },
+  "replacement": {
+    "protocol_path": "evaluation_v4/manual_chat/frozen_v3/MANUAL_CHAT_PROTOCOL.frozen.json",
+    "protocol_sha256": "9fd7396d416ec6431c38e84e79fe99990762fa040151d795c80568c08b58881e",
+    "packet_manifest_path": "evaluation_v4/manual_chat/frozen_v3/PACKET_BUNDLE/PACKET_MANIFEST.frozen.json",
+    "packet_manifest_sha256": "9ff07c5a7a7b677c5cc3df2c0fe1bf82f7455be4bcedf85185471c1f18492709",
+    "prompt_manifest_path": "evaluation_v4/manual_chat/frozen_v3/PACKET_BUNDLE/PROMPT_MANIFEST.frozen.json",
+    "prompt_manifest_sha256": "6fe5420937b07d74a11be43052223b99528e9c69766e9924124c9ee495735765",
+    "hash_baseline_generator_sha256": "edf240c28e3f154cdacbf916c874aca2e3ac064b1a52f0999320028274a8200d",
+    "tfidf_baseline_generator_sha256": "e9c7f7f40e878f77adca6623b886715abceb95dbe4e0cbe19b780cbb9f2e3dc1"
+  },
+  "reasons": [
+    "The v2 SHA-256 baseline generator called its bound sha256_file helper without importing it and would fail before producing a row.",
+    "The v2 TF-IDF generator unnecessarily required and hashed a private-label file even though predictions use public statement bytes only."
+  ],
+  "corrections": [
+    "Import the SHA-256 file helper in both import modes and execute-test all 60 SHA baseline predictions.",
+    "Remove every labels/private-label CLI argument and file access from TF-IDF generation; validate only the already-frozen commitment string in the public protocol.",
+    "Execute-test all 60 TF-IDF predictions without exposing any label path."
+  ],
+  "scientific_invariance": {
+    "public_jsonl_sha256": "b54293b08bc7ddbb7110a50908049922f7cfd86f14cb49a4de4e28353aecc6d8",
+    "prompt_file_count": 16,
+    "all_v2_and_v3_prompt_bytes_equal": true,
+    "prompt_row_closure_sha256": "2b44df17a1725151d88f98f932802dd42749abd3e616c64e0168324f998e6668",
+    "unchanged": [
+      "public episode bytes",
+      "episode order",
+      "five-item shard boundaries",
+      "all prompt bytes",
+      "all system IDs",
+      "baseline algorithms and frozen parameters",
+      "scoring rules"
+    ]
+  },
+  "blind_baseline_run_started_before_replacement": false,
+  "manual_blind_chat_started_before_replacement": false,
+  "labels_read": false,
+  "model_call_performed_by_this_supersession": false
+}

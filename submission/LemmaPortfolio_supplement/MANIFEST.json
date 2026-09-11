@@ -1,0 +1,1714 @@
+{
+  "accompanying_paper": {
+    "filename": "LemmaPortfolio_NeurIPS_Final.pdf",
+    "included_in_archive": false,
+    "layout": {
+      "main_pages": 4,
+      "references_pages": 1,
+      "technical_supplement_pages": 4
+    },
+    "sha256": "acbb40b43bde081a8aa4f377c2d02a9c33b23899e3503c6a8061b2210004d654",
+    "title": "LemmaPortfolio: Shared-Budget Lemma Selection for Multiple Lean Goals"
+  },
+  "selection_pattern_audit": {
+    "json": "results/selection_patterns.json",
+    "table": "results/selection_patterns.md",
+    "verification": "verify_selection_patterns.py",
+    "status": "Post-hoc hidden-label comparisons of all 780 direct answer slots, complete episode-level frequency tie sets, a descriptive non-causal error partition, and nominal per-run Wilson intervals; no new inference or response changes."
+  },
+  "consolidated_results": {
+    "json": "results/paper_results.json",
+    "table": "RESULTS.md"
+  },
+  "data_sha256": {
+    "original_release/data/development.labels.jsonl": "bee487259392de4d36b2140a715c7b4196ce7cc2027c3b13c90e1874a19149d0",
+    "original_release/data/development.public.jsonl": "404452daa5017793d9f7b10f4d92716d2bb267dca034094b0f41f8c8d9219ffc",
+    "original_release/data/test.labels.jsonl": "d17c1fd5c6d87635daf8035fe4a0918d1eaa29708eae37cb797cae08c19ef887",
+    "original_release/data/test.public.jsonl": "b54293b08bc7ddbb7110a50908049922f7cfd86f14cb49a4de4e28353aecc6d8"
+  },
+  "descriptive": {
+    "preserved_file_sha256": {
+      "descriptive/one_short_replacement_audit.json": "f808ce72303c8705cf4b89833ffceefb63dbfbbf260fd6fdf5828a83d1b8c2e4",
+      "descriptive/one_short_replacement_audit.py": "aa4305a06c4c45bc29c736857258a35dc71d7b274600f1265207309b5175b2b3",
+      "descriptive/source_records/astra_max_r1.json": "031908be76f2f53b0edb0df81d8f4e0cc3ff9ceeb2163c3d38cee0492ab28272",
+      "descriptive/source_records/astra_xhigh_r1_prior.json": "defaedaf59269dcbdd423897ccd42c2eae71089aa2c8349d885c844426362f2a",
+      "descriptive/source_records/astra_xhigh_r2.json": "5e1a5eb378980129ca3cdd4ea675db5092cc68d2189407ffdbeb1bf4ba23e5bd",
+      "descriptive/source_records/claude_fable_5_1_xhigh_ctx_r1.json": "e0b9aec680da7cc9588d814f1cdbc9a2ca9335780cf7e2a5128bf7b67adbeb85",
+      "descriptive/source_records/claude_fable_5_xhigh_r1.json": "e295691760edefe5267c346ef32161c9cb3bc98afd8e68f26f09da34c74aff6e",
+      "descriptive/source_records/sol_xhigh_r1.json": "4a5d11c3e56f1564ac29df6716f2c11cf4331c2ec7d3574ac891be407cae5022",
+      "descriptive/source_records/sol_xhigh_r2.json": "219f8f9c47adc916207e2976ead980cc61d454e61ac002296c513e4b1313348d"
+    },
+    "status": "Retrospective true-label-assisted description of saved selections; no new inference, changed rules, or repair experiment.",
+    "verification": "verify_descriptive.py replays the unchanged audit script using archived inputs in a temporary compatibility tree."
+  },
+  "evaluation_material": "evaluation/README.md",
+  "original_release_status": "Scientific data, prompts, responses and protocols retained; documentation, inventories and the verification entry point adapted to a manuscript-free submission archive.",
+  "phases": [
+    {
+      "calls": [
+        {
+          "call": "01",
+          "episode_ids": [
+            "MLP4B_0000",
+            "MLP4B_0001",
+            "MLP4B_0002",
+            "MLP4B_0003",
+            "MLP4B_0004"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/01.txt",
+          "prompt_sha256": "febe94397bd43a8a0be9b38d705c08eee2141b4a2ab755d5a46d87596506940c",
+          "response": "followups/2026-09-05/astra_xhigh_r1_prior/responses/01.json",
+          "response_sha256": "7054d00ef2ccae39849baa23c2df6da63ea78689c2728c8f7da3012afbbcaf6e"
+        },
+        {
+          "call": "02",
+          "episode_ids": [
+            "MLP4B_0005",
+            "MLP4B_0006",
+            "MLP4B_0007",
+            "MLP4B_0008",
+            "MLP4B_0009"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/02.txt",
+          "prompt_sha256": "9b736aaa054838df6d04357ab3ffcac70efccdbdbf20f212389600c2216031b4",
+          "response": "followups/2026-09-05/astra_xhigh_r1_prior/responses/02.json",
+          "response_sha256": "4fb3bd8168a240658a558c59ebedf374bc586a42350d1acfd205d735e00e31a1"
+        },
+        {
+          "call": "03",
+          "episode_ids": [
+            "MLP4B_0010",
+            "MLP4B_0011",
+            "MLP4B_0012",
+            "MLP4B_0013",
+            "MLP4B_0014"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/03.txt",
+          "prompt_sha256": "6a79e47946d40e8114af5f609f7e960287ed76f70e891a200f6824fcf7aa1f70",
+          "response": "followups/2026-09-05/astra_xhigh_r1_prior/responses/03.json",
+          "response_sha256": "51aa1ad4bee10f6246e80556a913c37009273f63710d99b25c57db41698cc2d0"
+        },
+        {
+          "call": "04",
+          "episode_ids": [
+            "MLP4B_0015",
+            "MLP4B_0016",
+            "MLP4B_0017",
+            "MLP4B_0018",
+            "MLP4B_0019"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/04.txt",
+          "prompt_sha256": "e85ce36bf8b82e04592c7c47afd391b0b2e519ee6bd1e6bcd1197bd429dd7f3d",
+          "response": "followups/2026-09-05/astra_xhigh_r1_prior/responses/04.json",
+          "response_sha256": "ba4fee2d5a5c0ec96d51728433746858d799e0ca02e92dce37c20ddfc23f7a2f"
+        },
+        {
+          "call": "05",
+          "episode_ids": [
+            "MLP4B_0020",
+            "MLP4B_0021",
+            "MLP4B_0022",
+            "MLP4B_0023",
+            "MLP4B_0024"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/05.txt",
+          "prompt_sha256": "942539a45bdbc8eb682bf0df4075ac226fd519be566d83273fe1c0e36b656449",
+          "response": "followups/2026-09-05/astra_xhigh_r1_prior/responses/05.json",
+          "response_sha256": "79cebaef643dbbbcd464f4a11f37f045f83c300964236c435591e337edbe786c"
+        },
+        {
+          "call": "06",
+          "episode_ids": [
+            "MLP4B_0025",
+            "MLP4B_0026",
+            "MLP4B_0027",
+            "MLP4B_0028",
+            "MLP4B_0029"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/06.txt",
+          "prompt_sha256": "376664ae74121b60446ed72fb5801e26ec8db066e52b3097034cc53344e167d9",
+          "response": "followups/2026-09-05/astra_xhigh_r1_prior/responses/06.json",
+          "response_sha256": "9a90dc6c6f0f1e4a43f56cf522e8bed123f23b1597ac52105483a6c02fca7ac7"
+        },
+        {
+          "call": "07",
+          "episode_ids": [
+            "MLP4B_0030",
+            "MLP4B_0031",
+            "MLP4B_0032",
+            "MLP4B_0033",
+            "MLP4B_0034"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/07.txt",
+          "prompt_sha256": "fe0552e4134e2e9f9780055949d4d662459c9e0ca75134fbb4532979206652a4",
+          "response": "followups/2026-09-05/astra_xhigh_r1_prior/responses/07.json",
+          "response_sha256": "aeb1614bbcb0783f2d0c44d066ef32e184fa12b5446b512c09781dface9b2207"
+        },
+        {
+          "call": "08",
+          "episode_ids": [
+            "MLP4B_0035",
+            "MLP4B_0036",
+            "MLP4B_0037",
+            "MLP4B_0038",
+            "MLP4B_0039"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/08.txt",
+          "prompt_sha256": "2ee2884b8afdcfc9138abe6e7076ba98a9f26aaf4a3e66fd67eac4d7c97794ae",
+          "response": "followups/2026-09-05/astra_xhigh_r1_prior/responses/08.json",
+          "response_sha256": "97dc60ae1d1d0903bae284acecabd4ba99848f8641b2fb0c2b84890bfbc5f887"
+        },
+        {
+          "call": "09",
+          "episode_ids": [
+            "MLP4B_0040",
+            "MLP4B_0041",
+            "MLP4B_0042",
+            "MLP4B_0043",
+            "MLP4B_0044"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/09.txt",
+          "prompt_sha256": "ebb62b772ab44523248c9b512e20525a81b4d26b81610105dcc3303f9eacccb9",
+          "response": "followups/2026-09-05/astra_xhigh_r1_prior/responses/09.json",
+          "response_sha256": "f5fa234d2e3921fc47240ddd76f63989f8a18a6a4f388ddef3b388bc03a43211"
+        },
+        {
+          "call": "10",
+          "episode_ids": [
+            "MLP4B_0045",
+            "MLP4B_0046",
+            "MLP4B_0047",
+            "MLP4B_0048",
+            "MLP4B_0049"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/10.txt",
+          "prompt_sha256": "0bb3074e4eb6fc3bd1d72ca5165572e1b3fe6878fb41b39f64c319f02990a13c",
+          "response": "followups/2026-09-05/astra_xhigh_r1_prior/responses/10.json",
+          "response_sha256": "3979740d40c2ec111be1145b697e46731bd7f66dcb5b1f7d6660f631f668c898"
+        },
+        {
+          "call": "11",
+          "episode_ids": [
+            "MLP4B_0050",
+            "MLP4B_0051",
+            "MLP4B_0052",
+            "MLP4B_0053",
+            "MLP4B_0054"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/11.txt",
+          "prompt_sha256": "c707b901592322b395b616a6a2674fab78d0efc5293bf7f58d18425b63ef8114",
+          "response": "followups/2026-09-05/astra_xhigh_r1_prior/responses/11.json",
+          "response_sha256": "45f5e760ef5fd36cc1229c11dfafa1e36ba18664b864d2ec2f845a22e8b01a6e"
+        },
+        {
+          "call": "12",
+          "episode_ids": [
+            "MLP4B_0055",
+            "MLP4B_0056",
+            "MLP4B_0057",
+            "MLP4B_0058",
+            "MLP4B_0059"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/12.txt",
+          "prompt_sha256": "189850421d75c0d8c9a75a81241986b17b51ad10bab63df284be8e08af325e3d",
+          "response": "followups/2026-09-05/astra_xhigh_r1_prior/responses/12.json",
+          "response_sha256": "d0e19f33ab15a9507f5fc99c22c03769475322ee29fead1b2c6e88c41ea27954"
+        }
+      ],
+      "id": "astra_xhigh_r1_prior",
+      "kind": "direct",
+      "reported_metadata": {
+        "interface": "Codex CLI 0.153.0",
+        "requested_effort": "xhigh",
+        "requested_model": "gpt-6-astra",
+        "status": "Description transcribed from uploaded records; not independently authenticated."
+      },
+      "score_file": "followups/2026-09-05/astra_xhigh_r1_prior/score.json",
+      "source_metadata_sha256": "ab8574bbb9e26c2ff6453956cf896d592ee63167048532c8df1da4bebf1023c7",
+      "source_score_sha256": "defaedaf59269dcbdd423897ccd42c2eae71089aa2c8349d885c844426362f2a"
+    },
+    {
+      "calls": [
+        {
+          "call": "01",
+          "episode_ids": [
+            "MLP4B_0000",
+            "MLP4B_0001",
+            "MLP4B_0002",
+            "MLP4B_0003",
+            "MLP4B_0004"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/01.txt",
+          "prompt_sha256": "febe94397bd43a8a0be9b38d705c08eee2141b4a2ab755d5a46d87596506940c",
+          "response": "followups/2026-09-05/astra_xhigh_r2/responses/01.json",
+          "response_sha256": "313d0483516f6a994c3ec67a817cb6a7c5efd9422939396227f1a14aa8aef22a"
+        },
+        {
+          "call": "02",
+          "episode_ids": [
+            "MLP4B_0005",
+            "MLP4B_0006",
+            "MLP4B_0007",
+            "MLP4B_0008",
+            "MLP4B_0009"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/02.txt",
+          "prompt_sha256": "9b736aaa054838df6d04357ab3ffcac70efccdbdbf20f212389600c2216031b4",
+          "response": "followups/2026-09-05/astra_xhigh_r2/responses/02.json",
+          "response_sha256": "e5090bb9e1203df78f101909257cdde10f1a7fde82f0beb2fe87cc64679104c6"
+        },
+        {
+          "call": "03",
+          "episode_ids": [
+            "MLP4B_0010",
+            "MLP4B_0011",
+            "MLP4B_0012",
+            "MLP4B_0013",
+            "MLP4B_0014"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/03.txt",
+          "prompt_sha256": "6a79e47946d40e8114af5f609f7e960287ed76f70e891a200f6824fcf7aa1f70",
+          "response": "followups/2026-09-05/astra_xhigh_r2/responses/03.json",
+          "response_sha256": "0c7d28db1ed343e87f4a0271bae522cd6dab53648e937e0a05ab26257bb2432a"
+        },
+        {
+          "call": "04",
+          "episode_ids": [
+            "MLP4B_0015",
+            "MLP4B_0016",
+            "MLP4B_0017",
+            "MLP4B_0018",
+            "MLP4B_0019"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/04.txt",
+          "prompt_sha256": "e85ce36bf8b82e04592c7c47afd391b0b2e519ee6bd1e6bcd1197bd429dd7f3d",
+          "response": "followups/2026-09-05/astra_xhigh_r2/responses/04.json",
+          "response_sha256": "ba4fee2d5a5c0ec96d51728433746858d799e0ca02e92dce37c20ddfc23f7a2f"
+        },
+        {
+          "call": "05",
+          "episode_ids": [
+            "MLP4B_0020",
+            "MLP4B_0021",
+            "MLP4B_0022",
+            "MLP4B_0023",
+            "MLP4B_0024"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/05.txt",
+          "prompt_sha256": "942539a45bdbc8eb682bf0df4075ac226fd519be566d83273fe1c0e36b656449",
+          "response": "followups/2026-09-05/astra_xhigh_r2/responses/05.json",
+          "response_sha256": "5750a5cac0a05dd9f2bd822d621097c44945b276a738ab52a7b948b83c8048c8"
+        },
+        {
+          "call": "06",
+          "episode_ids": [
+            "MLP4B_0025",
+            "MLP4B_0026",
+            "MLP4B_0027",
+            "MLP4B_0028",
+            "MLP4B_0029"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/06.txt",
+          "prompt_sha256": "376664ae74121b60446ed72fb5801e26ec8db066e52b3097034cc53344e167d9",
+          "response": "followups/2026-09-05/astra_xhigh_r2/responses/06.json",
+          "response_sha256": "94eda57f390687b83206f6925ed2ffad9865b6758b38c3d17d896552ce9c30fa"
+        },
+        {
+          "call": "07",
+          "episode_ids": [
+            "MLP4B_0030",
+            "MLP4B_0031",
+            "MLP4B_0032",
+            "MLP4B_0033",
+            "MLP4B_0034"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/07.txt",
+          "prompt_sha256": "fe0552e4134e2e9f9780055949d4d662459c9e0ca75134fbb4532979206652a4",
+          "response": "followups/2026-09-05/astra_xhigh_r2/responses/07.json",
+          "response_sha256": "062f92df963ebb26a29e1cfa8cf887d7281e78e19eab4c0f1c513e09389ebecc"
+        },
+        {
+          "call": "08",
+          "episode_ids": [
+            "MLP4B_0035",
+            "MLP4B_0036",
+            "MLP4B_0037",
+            "MLP4B_0038",
+            "MLP4B_0039"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/08.txt",
+          "prompt_sha256": "2ee2884b8afdcfc9138abe6e7076ba98a9f26aaf4a3e66fd67eac4d7c97794ae",
+          "response": "followups/2026-09-05/astra_xhigh_r2/responses/08.json",
+          "response_sha256": "68f5fc22f12146414dc0ab26fd25156842739b23bae5c9d1de326d03e9da5368"
+        },
+        {
+          "call": "09",
+          "episode_ids": [
+            "MLP4B_0040",
+            "MLP4B_0041",
+            "MLP4B_0042",
+            "MLP4B_0043",
+            "MLP4B_0044"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/09.txt",
+          "prompt_sha256": "ebb62b772ab44523248c9b512e20525a81b4d26b81610105dcc3303f9eacccb9",
+          "response": "followups/2026-09-05/astra_xhigh_r2/responses/09.json",
+          "response_sha256": "4eaf9bafd9cd18fdcf7b016b572628963bcad8a348466fa9af1e856d48686ead"
+        },
+        {
+          "call": "10",
+          "episode_ids": [
+            "MLP4B_0045",
+            "MLP4B_0046",
+            "MLP4B_0047",
+            "MLP4B_0048",
+            "MLP4B_0049"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/10.txt",
+          "prompt_sha256": "0bb3074e4eb6fc3bd1d72ca5165572e1b3fe6878fb41b39f64c319f02990a13c",
+          "response": "followups/2026-09-05/astra_xhigh_r2/responses/10.json",
+          "response_sha256": "4a16457b580fce98eb298a97e114b4b532bcc6c6ac5c7a0414e511ed5014d93f"
+        },
+        {
+          "call": "11",
+          "episode_ids": [
+            "MLP4B_0050",
+            "MLP4B_0051",
+            "MLP4B_0052",
+            "MLP4B_0053",
+            "MLP4B_0054"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/11.txt",
+          "prompt_sha256": "c707b901592322b395b616a6a2674fab78d0efc5293bf7f58d18425b63ef8114",
+          "response": "followups/2026-09-05/astra_xhigh_r2/responses/11.json",
+          "response_sha256": "115a57780ed26d6db03b2f55f6ab5001968d7e331b00d6ead5232c214ec53e2f"
+        },
+        {
+          "call": "12",
+          "episode_ids": [
+            "MLP4B_0055",
+            "MLP4B_0056",
+            "MLP4B_0057",
+            "MLP4B_0058",
+            "MLP4B_0059"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/12.txt",
+          "prompt_sha256": "189850421d75c0d8c9a75a81241986b17b51ad10bab63df284be8e08af325e3d",
+          "response": "followups/2026-09-05/astra_xhigh_r2/responses/12.json",
+          "response_sha256": "3343144146176e87434d8b3297a37175afc259a8950a8542e75c3fae6dcaacf4"
+        }
+      ],
+      "id": "astra_xhigh_r2",
+      "kind": "direct",
+      "reported_metadata": {
+        "interface": "Codex CLI 0.153.0",
+        "requested_effort": "xhigh",
+        "requested_model": "gpt-6-astra",
+        "status": "Description transcribed from uploaded records; not independently authenticated."
+      },
+      "score_file": "followups/2026-09-05/astra_xhigh_r2/score.json",
+      "source_metadata_sha256": "6291bf8dbb8511c5afe68745661a558d8c02311b8851a8d4ce3ca821f745a305",
+      "source_score_sha256": "5e1a5eb378980129ca3cdd4ea675db5092cc68d2189407ffdbeb1bf4ba23e5bd"
+    },
+    {
+      "calls": [
+        {
+          "call": "01",
+          "episode_ids": [
+            "MLP4B_0000",
+            "MLP4B_0001",
+            "MLP4B_0002",
+            "MLP4B_0003",
+            "MLP4B_0004"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/01.txt",
+          "prompt_sha256": "febe94397bd43a8a0be9b38d705c08eee2141b4a2ab755d5a46d87596506940c",
+          "response": "followups/2026-09-05/sol_xhigh_r1/responses/01.json",
+          "response_sha256": "772a9c53c77c6017a10b72921191b5d58e151011c354dad18b571872cb6abf8f"
+        },
+        {
+          "call": "02",
+          "episode_ids": [
+            "MLP4B_0005",
+            "MLP4B_0006",
+            "MLP4B_0007",
+            "MLP4B_0008",
+            "MLP4B_0009"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/02.txt",
+          "prompt_sha256": "9b736aaa054838df6d04357ab3ffcac70efccdbdbf20f212389600c2216031b4",
+          "response": "followups/2026-09-05/sol_xhigh_r1/responses/02.json",
+          "response_sha256": "2427ff49acd44d081e3f8fecc4451d7be6f83c384bba9e3dcec2309ec5786c05"
+        },
+        {
+          "call": "03",
+          "episode_ids": [
+            "MLP4B_0010",
+            "MLP4B_0011",
+            "MLP4B_0012",
+            "MLP4B_0013",
+            "MLP4B_0014"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/03.txt",
+          "prompt_sha256": "6a79e47946d40e8114af5f609f7e960287ed76f70e891a200f6824fcf7aa1f70",
+          "response": "followups/2026-09-05/sol_xhigh_r1/responses/03.json",
+          "response_sha256": "9cff2dc6e30ac404edaafe9b7f363e5f49c25226a5b8de384c70b2f18c496ff0"
+        },
+        {
+          "call": "04",
+          "episode_ids": [
+            "MLP4B_0015",
+            "MLP4B_0016",
+            "MLP4B_0017",
+            "MLP4B_0018",
+            "MLP4B_0019"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/04.txt",
+          "prompt_sha256": "e85ce36bf8b82e04592c7c47afd391b0b2e519ee6bd1e6bcd1197bd429dd7f3d",
+          "response": "followups/2026-09-05/sol_xhigh_r1/responses/04.json",
+          "response_sha256": "da427192444a27f43ef883d248b8eb878374708589b0e9ec06b64c663e998775"
+        },
+        {
+          "call": "05",
+          "episode_ids": [
+            "MLP4B_0020",
+            "MLP4B_0021",
+            "MLP4B_0022",
+            "MLP4B_0023",
+            "MLP4B_0024"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/05.txt",
+          "prompt_sha256": "942539a45bdbc8eb682bf0df4075ac226fd519be566d83273fe1c0e36b656449",
+          "response": "followups/2026-09-05/sol_xhigh_r1/responses/05.json",
+          "response_sha256": "050a2a7f6f9b6ff3366ea85b51d631462ee5a91f0996bf94cc4ff13d8b6df6ad"
+        },
+        {
+          "call": "06",
+          "episode_ids": [
+            "MLP4B_0025",
+            "MLP4B_0026",
+            "MLP4B_0027",
+            "MLP4B_0028",
+            "MLP4B_0029"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/06.txt",
+          "prompt_sha256": "376664ae74121b60446ed72fb5801e26ec8db066e52b3097034cc53344e167d9",
+          "response": "followups/2026-09-05/sol_xhigh_r1/responses/06.json",
+          "response_sha256": "f1f4627e820ea53c7f6dabbc782bb43b7ba2c28b2a483af2da7496135d24f401"
+        },
+        {
+          "call": "07",
+          "episode_ids": [
+            "MLP4B_0030",
+            "MLP4B_0031",
+            "MLP4B_0032",
+            "MLP4B_0033",
+            "MLP4B_0034"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/07.txt",
+          "prompt_sha256": "fe0552e4134e2e9f9780055949d4d662459c9e0ca75134fbb4532979206652a4",
+          "response": "followups/2026-09-05/sol_xhigh_r1/responses/07.json",
+          "response_sha256": "be98bcf60913e94eec69f532fbdd8bd2fbfc6f33dbaec22e54b01de9dcec0bc2"
+        },
+        {
+          "call": "08",
+          "episode_ids": [
+            "MLP4B_0035",
+            "MLP4B_0036",
+            "MLP4B_0037",
+            "MLP4B_0038",
+            "MLP4B_0039"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/08.txt",
+          "prompt_sha256": "2ee2884b8afdcfc9138abe6e7076ba98a9f26aaf4a3e66fd67eac4d7c97794ae",
+          "response": "followups/2026-09-05/sol_xhigh_r1/responses/08.json",
+          "response_sha256": "0977d84837d18167b964dcac62f7438bb364b16bb3dd06dcb94c207c7326eb9b"
+        },
+        {
+          "call": "09",
+          "episode_ids": [
+            "MLP4B_0040",
+            "MLP4B_0041",
+            "MLP4B_0042",
+            "MLP4B_0043",
+            "MLP4B_0044"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/09.txt",
+          "prompt_sha256": "ebb62b772ab44523248c9b512e20525a81b4d26b81610105dcc3303f9eacccb9",
+          "response": "followups/2026-09-05/sol_xhigh_r1/responses/09.json",
+          "response_sha256": "6bb058c7db678471511e5df28cb6254a1273c6bbc4f5fbbe5af440ab1d98631a"
+        },
+        {
+          "call": "10",
+          "episode_ids": [
+            "MLP4B_0045",
+            "MLP4B_0046",
+            "MLP4B_0047",
+            "MLP4B_0048",
+            "MLP4B_0049"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/10.txt",
+          "prompt_sha256": "0bb3074e4eb6fc3bd1d72ca5165572e1b3fe6878fb41b39f64c319f02990a13c",
+          "response": "followups/2026-09-05/sol_xhigh_r1/responses/10.json",
+          "response_sha256": "e8dcb9179bff829a2b10574889a5d2c098944c481ef786628cec573c3d21e498"
+        },
+        {
+          "call": "11",
+          "episode_ids": [
+            "MLP4B_0050",
+            "MLP4B_0051",
+            "MLP4B_0052",
+            "MLP4B_0053",
+            "MLP4B_0054"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/11.txt",
+          "prompt_sha256": "c707b901592322b395b616a6a2674fab78d0efc5293bf7f58d18425b63ef8114",
+          "response": "followups/2026-09-05/sol_xhigh_r1/responses/11.json",
+          "response_sha256": "6ed2c6cbef4b318cbce7865e94e08d16827b55256a371dec88e5485165c54e00"
+        },
+        {
+          "call": "12",
+          "episode_ids": [
+            "MLP4B_0055",
+            "MLP4B_0056",
+            "MLP4B_0057",
+            "MLP4B_0058",
+            "MLP4B_0059"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/12.txt",
+          "prompt_sha256": "189850421d75c0d8c9a75a81241986b17b51ad10bab63df284be8e08af325e3d",
+          "response": "followups/2026-09-05/sol_xhigh_r1/responses/12.json",
+          "response_sha256": "d0d95ec359a9cab48489b44356d6a52b618d7f51fd50a28768b55e5ff8478189"
+        }
+      ],
+      "id": "sol_xhigh_r1",
+      "kind": "direct",
+      "reported_metadata": {
+        "interface": "Codex CLI 0.153.0",
+        "requested_effort": "xhigh",
+        "requested_model": "gpt-5.6-sol",
+        "status": "Description transcribed from uploaded records; not independently authenticated."
+      },
+      "score_file": "followups/2026-09-05/sol_xhigh_r1/score.json",
+      "source_metadata_sha256": "fd887120a5c1c5e9d402fc6082efe54bc3c8f7bf5b7ec453a47329763f6ef071",
+      "source_score_sha256": "4a5d11c3e56f1564ac29df6716f2c11cf4331c2ec7d3574ac891be407cae5022"
+    },
+    {
+      "calls": [
+        {
+          "call": "01",
+          "episode_ids": [
+            "MLP4B_0000",
+            "MLP4B_0001",
+            "MLP4B_0002",
+            "MLP4B_0003",
+            "MLP4B_0004"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/01.txt",
+          "prompt_sha256": "febe94397bd43a8a0be9b38d705c08eee2141b4a2ab755d5a46d87596506940c",
+          "response": "followups/2026-09-05/sol_xhigh_r2/responses/01.json",
+          "response_sha256": "2ee72b6141910f52272f9436ba7d1955fe1fbb2457ad375f2f3cfa08971dd9c6"
+        },
+        {
+          "call": "02",
+          "episode_ids": [
+            "MLP4B_0005",
+            "MLP4B_0006",
+            "MLP4B_0007",
+            "MLP4B_0008",
+            "MLP4B_0009"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/02.txt",
+          "prompt_sha256": "9b736aaa054838df6d04357ab3ffcac70efccdbdbf20f212389600c2216031b4",
+          "response": "followups/2026-09-05/sol_xhigh_r2/responses/02.json",
+          "response_sha256": "28f440eb96033b1fa460848c025a5f664e7c561f89dad6fc6459fe00910ed6cf"
+        },
+        {
+          "call": "03",
+          "episode_ids": [
+            "MLP4B_0010",
+            "MLP4B_0011",
+            "MLP4B_0012",
+            "MLP4B_0013",
+            "MLP4B_0014"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/03.txt",
+          "prompt_sha256": "6a79e47946d40e8114af5f609f7e960287ed76f70e891a200f6824fcf7aa1f70",
+          "response": "followups/2026-09-05/sol_xhigh_r2/responses/03.json",
+          "response_sha256": "b8c4ad2a284d67b250c2c535c610edcb3b8ede6b20d5fd6246c3f1e6ffd7ebf8"
+        },
+        {
+          "call": "04",
+          "episode_ids": [
+            "MLP4B_0015",
+            "MLP4B_0016",
+            "MLP4B_0017",
+            "MLP4B_0018",
+            "MLP4B_0019"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/04.txt",
+          "prompt_sha256": "e85ce36bf8b82e04592c7c47afd391b0b2e519ee6bd1e6bcd1197bd429dd7f3d",
+          "response": "followups/2026-09-05/sol_xhigh_r2/responses/04.json",
+          "response_sha256": "9f98e7da9b888fc4652fbc9ccde4da3cc0b0ac5f0e2a396a42edf14c8a3fba8d"
+        },
+        {
+          "call": "05",
+          "episode_ids": [
+            "MLP4B_0020",
+            "MLP4B_0021",
+            "MLP4B_0022",
+            "MLP4B_0023",
+            "MLP4B_0024"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/05.txt",
+          "prompt_sha256": "942539a45bdbc8eb682bf0df4075ac226fd519be566d83273fe1c0e36b656449",
+          "response": "followups/2026-09-05/sol_xhigh_r2/responses/05.json",
+          "response_sha256": "67e1962bbd236da5bf0272e00ab09137dc3a03e75d023191dd3feac733184261"
+        },
+        {
+          "call": "06",
+          "episode_ids": [
+            "MLP4B_0025",
+            "MLP4B_0026",
+            "MLP4B_0027",
+            "MLP4B_0028",
+            "MLP4B_0029"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/06.txt",
+          "prompt_sha256": "376664ae74121b60446ed72fb5801e26ec8db066e52b3097034cc53344e167d9",
+          "response": "followups/2026-09-05/sol_xhigh_r2/responses/06.json",
+          "response_sha256": "29e5ff4f7f3406c428ff4d750f2d79dc0605650284124e842005253286a3c2e3"
+        },
+        {
+          "call": "07",
+          "episode_ids": [
+            "MLP4B_0030",
+            "MLP4B_0031",
+            "MLP4B_0032",
+            "MLP4B_0033",
+            "MLP4B_0034"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/07.txt",
+          "prompt_sha256": "fe0552e4134e2e9f9780055949d4d662459c9e0ca75134fbb4532979206652a4",
+          "response": "followups/2026-09-05/sol_xhigh_r2/responses/07.json",
+          "response_sha256": "8cf27e3db9d1e186c493174ff7aa1658ee9ccd2a2f52ca88ea4d27ec7544ed02"
+        },
+        {
+          "call": "08",
+          "episode_ids": [
+            "MLP4B_0035",
+            "MLP4B_0036",
+            "MLP4B_0037",
+            "MLP4B_0038",
+            "MLP4B_0039"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/08.txt",
+          "prompt_sha256": "2ee2884b8afdcfc9138abe6e7076ba98a9f26aaf4a3e66fd67eac4d7c97794ae",
+          "response": "followups/2026-09-05/sol_xhigh_r2/responses/08.json",
+          "response_sha256": "ab38fd0882a780ca83fc96ffdd90d1614fdf701e846591f55a6f1dfa23a2a04b"
+        },
+        {
+          "call": "09",
+          "episode_ids": [
+            "MLP4B_0040",
+            "MLP4B_0041",
+            "MLP4B_0042",
+            "MLP4B_0043",
+            "MLP4B_0044"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/09.txt",
+          "prompt_sha256": "ebb62b772ab44523248c9b512e20525a81b4d26b81610105dcc3303f9eacccb9",
+          "response": "followups/2026-09-05/sol_xhigh_r2/responses/09.json",
+          "response_sha256": "96aca5619e02293fdfd5f363ca9c4613aee802cf7511ef55d65542d922f32b77"
+        },
+        {
+          "call": "10",
+          "episode_ids": [
+            "MLP4B_0045",
+            "MLP4B_0046",
+            "MLP4B_0047",
+            "MLP4B_0048",
+            "MLP4B_0049"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/10.txt",
+          "prompt_sha256": "0bb3074e4eb6fc3bd1d72ca5165572e1b3fe6878fb41b39f64c319f02990a13c",
+          "response": "followups/2026-09-05/sol_xhigh_r2/responses/10.json",
+          "response_sha256": "158b0438b037a498ee0b4377d9aaa48295dd091e058c7151d4a68abb799bb1ac"
+        },
+        {
+          "call": "11",
+          "episode_ids": [
+            "MLP4B_0050",
+            "MLP4B_0051",
+            "MLP4B_0052",
+            "MLP4B_0053",
+            "MLP4B_0054"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/11.txt",
+          "prompt_sha256": "c707b901592322b395b616a6a2674fab78d0efc5293bf7f58d18425b63ef8114",
+          "response": "followups/2026-09-05/sol_xhigh_r2/responses/11.json",
+          "response_sha256": "e73b2c4b225ecb11a9456d8e0387a589ef614ce0d3c4b81185842d6fcf8a19e5"
+        },
+        {
+          "call": "12",
+          "episode_ids": [
+            "MLP4B_0055",
+            "MLP4B_0056",
+            "MLP4B_0057",
+            "MLP4B_0058",
+            "MLP4B_0059"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/12.txt",
+          "prompt_sha256": "189850421d75c0d8c9a75a81241986b17b51ad10bab63df284be8e08af325e3d",
+          "response": "followups/2026-09-05/sol_xhigh_r2/responses/12.json",
+          "response_sha256": "276515a4de1e6dd4f6e36f0e6b181e9f6535a2388424142cacd0687d7e899242"
+        }
+      ],
+      "id": "sol_xhigh_r2",
+      "kind": "direct",
+      "reported_metadata": {
+        "interface": "Codex CLI 0.153.0",
+        "requested_effort": "xhigh",
+        "requested_model": "gpt-5.6-sol",
+        "status": "Description transcribed from uploaded records; not independently authenticated."
+      },
+      "score_file": "followups/2026-09-05/sol_xhigh_r2/score.json",
+      "source_metadata_sha256": "92e786f3a1490b2cbcf90a0350bc8ea17929f9c731077207fceb872961b00159",
+      "source_score_sha256": "219f8f9c47adc916207e2976ead980cc61d454e61ac002296c513e4b1313348d"
+    },
+    {
+      "calls": [
+        {
+          "call": "01",
+          "episode_ids": [
+            "MLP4B_0000",
+            "MLP4B_0001",
+            "MLP4B_0002",
+            "MLP4B_0003",
+            "MLP4B_0004"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/01.txt",
+          "prompt_sha256": "febe94397bd43a8a0be9b38d705c08eee2141b4a2ab755d5a46d87596506940c",
+          "response": "followups/2026-09-05/astra_max_r1/responses/01.json",
+          "response_sha256": "699df7877d02cc6bfcd5523ffc4a3267f8745abfcb6d0f52b5248a57fd3eb271"
+        },
+        {
+          "call": "02",
+          "episode_ids": [
+            "MLP4B_0005",
+            "MLP4B_0006",
+            "MLP4B_0007",
+            "MLP4B_0008",
+            "MLP4B_0009"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/02.txt",
+          "prompt_sha256": "9b736aaa054838df6d04357ab3ffcac70efccdbdbf20f212389600c2216031b4",
+          "response": "followups/2026-09-05/astra_max_r1/responses/02.json",
+          "response_sha256": "4fb3bd8168a240658a558c59ebedf374bc586a42350d1acfd205d735e00e31a1"
+        },
+        {
+          "call": "03",
+          "episode_ids": [
+            "MLP4B_0010",
+            "MLP4B_0011",
+            "MLP4B_0012",
+            "MLP4B_0013",
+            "MLP4B_0014"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/03.txt",
+          "prompt_sha256": "6a79e47946d40e8114af5f609f7e960287ed76f70e891a200f6824fcf7aa1f70",
+          "response": "followups/2026-09-05/astra_max_r1/responses/03.json",
+          "response_sha256": "f1c32efe120a0c4ad7987a8c56150d7b2dc91a7f15565606abfd34b57f6cbbf8"
+        },
+        {
+          "call": "04",
+          "episode_ids": [
+            "MLP4B_0015",
+            "MLP4B_0016",
+            "MLP4B_0017",
+            "MLP4B_0018",
+            "MLP4B_0019"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/04.txt",
+          "prompt_sha256": "e85ce36bf8b82e04592c7c47afd391b0b2e519ee6bd1e6bcd1197bd429dd7f3d",
+          "response": "followups/2026-09-05/astra_max_r1/responses/04.json",
+          "response_sha256": "2a61e47a0ecd9faf4e54aaa66af657f9f7250ce2274b63ef41ede5704f60110d"
+        },
+        {
+          "call": "05",
+          "episode_ids": [
+            "MLP4B_0020",
+            "MLP4B_0021",
+            "MLP4B_0022",
+            "MLP4B_0023",
+            "MLP4B_0024"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/05.txt",
+          "prompt_sha256": "942539a45bdbc8eb682bf0df4075ac226fd519be566d83273fe1c0e36b656449",
+          "response": "followups/2026-09-05/astra_max_r1/responses/05.json",
+          "response_sha256": "d5a66f6b3977c0d5ab36a8297dca180685894e9dea6c1dfd9f0338b5b027a188"
+        },
+        {
+          "call": "06",
+          "episode_ids": [
+            "MLP4B_0025",
+            "MLP4B_0026",
+            "MLP4B_0027",
+            "MLP4B_0028",
+            "MLP4B_0029"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/06.txt",
+          "prompt_sha256": "376664ae74121b60446ed72fb5801e26ec8db066e52b3097034cc53344e167d9",
+          "response": "followups/2026-09-05/astra_max_r1/responses/06.json",
+          "response_sha256": "94eda57f390687b83206f6925ed2ffad9865b6758b38c3d17d896552ce9c30fa"
+        },
+        {
+          "call": "07",
+          "episode_ids": [
+            "MLP4B_0030",
+            "MLP4B_0031",
+            "MLP4B_0032",
+            "MLP4B_0033",
+            "MLP4B_0034"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/07.txt",
+          "prompt_sha256": "fe0552e4134e2e9f9780055949d4d662459c9e0ca75134fbb4532979206652a4",
+          "response": "followups/2026-09-05/astra_max_r1/responses/07.json",
+          "response_sha256": "aeb1614bbcb0783f2d0c44d066ef32e184fa12b5446b512c09781dface9b2207"
+        },
+        {
+          "call": "08",
+          "episode_ids": [
+            "MLP4B_0035",
+            "MLP4B_0036",
+            "MLP4B_0037",
+            "MLP4B_0038",
+            "MLP4B_0039"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/08.txt",
+          "prompt_sha256": "2ee2884b8afdcfc9138abe6e7076ba98a9f26aaf4a3e66fd67eac4d7c97794ae",
+          "response": "followups/2026-09-05/astra_max_r1/responses/08.json",
+          "response_sha256": "97dc60ae1d1d0903bae284acecabd4ba99848f8641b2fb0c2b84890bfbc5f887"
+        },
+        {
+          "call": "09",
+          "episode_ids": [
+            "MLP4B_0040",
+            "MLP4B_0041",
+            "MLP4B_0042",
+            "MLP4B_0043",
+            "MLP4B_0044"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/09.txt",
+          "prompt_sha256": "ebb62b772ab44523248c9b512e20525a81b4d26b81610105dcc3303f9eacccb9",
+          "response": "followups/2026-09-05/astra_max_r1/responses/09.json",
+          "response_sha256": "fe622e802afd5150fc5bfd708cefa99339629f4af1cf630e4faa0e28f3b58102"
+        },
+        {
+          "call": "10",
+          "episode_ids": [
+            "MLP4B_0045",
+            "MLP4B_0046",
+            "MLP4B_0047",
+            "MLP4B_0048",
+            "MLP4B_0049"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/10.txt",
+          "prompt_sha256": "0bb3074e4eb6fc3bd1d72ca5165572e1b3fe6878fb41b39f64c319f02990a13c",
+          "response": "followups/2026-09-05/astra_max_r1/responses/10.json",
+          "response_sha256": "18d491bbe40b61947dcb52da5826ba9b23969d2e240787f84c7c7c87ae5a6176"
+        },
+        {
+          "call": "11",
+          "episode_ids": [
+            "MLP4B_0050",
+            "MLP4B_0051",
+            "MLP4B_0052",
+            "MLP4B_0053",
+            "MLP4B_0054"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/11.txt",
+          "prompt_sha256": "c707b901592322b395b616a6a2674fab78d0efc5293bf7f58d18425b63ef8114",
+          "response": "followups/2026-09-05/astra_max_r1/responses/11.json",
+          "response_sha256": "48e08162290b521af1dc55a8cf2c3a28d47ae6a908c5ade27b5b27f9bb0e886c"
+        },
+        {
+          "call": "12",
+          "episode_ids": [
+            "MLP4B_0055",
+            "MLP4B_0056",
+            "MLP4B_0057",
+            "MLP4B_0058",
+            "MLP4B_0059"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/12.txt",
+          "prompt_sha256": "189850421d75c0d8c9a75a81241986b17b51ad10bab63df284be8e08af325e3d",
+          "response": "followups/2026-09-05/astra_max_r1/responses/12.json",
+          "response_sha256": "dfc45d61e46e7cef9293b4bd7dbc8a76db9f5a0fd66dc88a3bfc9e4786525782"
+        }
+      ],
+      "id": "astra_max_r1",
+      "kind": "direct",
+      "reported_metadata": {
+        "interface": "Codex CLI 0.153.0",
+        "requested_effort": "max",
+        "requested_model": "gpt-6-astra",
+        "status": "Description transcribed from uploaded records; not independently authenticated."
+      },
+      "score_file": "followups/2026-09-05/astra_max_r1/score.json",
+      "source_metadata_sha256": "729b0ab322be4f26b24b142079a0ad17f0cfac0ad4ba21768d463b44bd6abc2f",
+      "source_score_sha256": "031908be76f2f53b0edb0df81d8f4e0cc3ff9ceeb2163c3d38cee0492ab28272"
+    },
+    {
+      "calls": [
+        {
+          "call": "01",
+          "episode_ids": [
+            "MLP4B_0000",
+            "MLP4B_0001",
+            "MLP4B_0002",
+            "MLP4B_0003",
+            "MLP4B_0004"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/01.txt",
+          "prompt_sha256": "febe94397bd43a8a0be9b38d705c08eee2141b4a2ab755d5a46d87596506940c",
+          "response": "followups/2026-09-05/claude_fable_5_xhigh_r1/responses/01.json",
+          "response_sha256": "dfd73e899d060e4d8f1d783bd19b2a8c2ddbb236015f986b70068c0eb770113e"
+        },
+        {
+          "call": "02",
+          "episode_ids": [
+            "MLP4B_0005",
+            "MLP4B_0006",
+            "MLP4B_0007",
+            "MLP4B_0008",
+            "MLP4B_0009"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/02.txt",
+          "prompt_sha256": "9b736aaa054838df6d04357ab3ffcac70efccdbdbf20f212389600c2216031b4",
+          "response": "followups/2026-09-05/claude_fable_5_xhigh_r1/responses/02.json",
+          "response_sha256": "9b8a964eb3f0979568c8c5eefdea04c08b9381680e9db055b0179060d118201e"
+        },
+        {
+          "call": "03",
+          "episode_ids": [
+            "MLP4B_0010",
+            "MLP4B_0011",
+            "MLP4B_0012",
+            "MLP4B_0013",
+            "MLP4B_0014"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/03.txt",
+          "prompt_sha256": "6a79e47946d40e8114af5f609f7e960287ed76f70e891a200f6824fcf7aa1f70",
+          "response": "followups/2026-09-05/claude_fable_5_xhigh_r1/responses/03.json",
+          "response_sha256": "db5cb42555836b1557f331a769f0dc1fe463a6e9eb0762b5a6698b3ee92c9a84"
+        },
+        {
+          "call": "04",
+          "episode_ids": [
+            "MLP4B_0015",
+            "MLP4B_0016",
+            "MLP4B_0017",
+            "MLP4B_0018",
+            "MLP4B_0019"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/04.txt",
+          "prompt_sha256": "e85ce36bf8b82e04592c7c47afd391b0b2e519ee6bd1e6bcd1197bd429dd7f3d",
+          "response": "followups/2026-09-05/claude_fable_5_xhigh_r1/responses/04.json",
+          "response_sha256": "566a33c68a7eb47aefc6e9a43f0703098778eaea61d1072d5887da61b1f6e7bb"
+        },
+        {
+          "call": "05",
+          "episode_ids": [
+            "MLP4B_0020",
+            "MLP4B_0021",
+            "MLP4B_0022",
+            "MLP4B_0023",
+            "MLP4B_0024"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/05.txt",
+          "prompt_sha256": "942539a45bdbc8eb682bf0df4075ac226fd519be566d83273fe1c0e36b656449",
+          "response": "followups/2026-09-05/claude_fable_5_xhigh_r1/responses/05.json",
+          "response_sha256": "cb903bb790c1f2f677ce577dec2e03c050b2f5bf1fc0ca9a23cb678c90375969"
+        },
+        {
+          "call": "06",
+          "episode_ids": [
+            "MLP4B_0025",
+            "MLP4B_0026",
+            "MLP4B_0027",
+            "MLP4B_0028",
+            "MLP4B_0029"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/06.txt",
+          "prompt_sha256": "376664ae74121b60446ed72fb5801e26ec8db066e52b3097034cc53344e167d9",
+          "response": "followups/2026-09-05/claude_fable_5_xhigh_r1/responses/06.json",
+          "response_sha256": "45e4ed4cb5c75b63d6dcf4875398e9a54401911815758b622fe231970417f437"
+        },
+        {
+          "call": "07",
+          "episode_ids": [
+            "MLP4B_0030",
+            "MLP4B_0031",
+            "MLP4B_0032",
+            "MLP4B_0033",
+            "MLP4B_0034"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/07.txt",
+          "prompt_sha256": "fe0552e4134e2e9f9780055949d4d662459c9e0ca75134fbb4532979206652a4",
+          "response": "followups/2026-09-05/claude_fable_5_xhigh_r1/responses/07.json",
+          "response_sha256": "035bf2df0acb7e19014c07e6c94ac19e1125e57e03bcf18183999d1f7873695c"
+        },
+        {
+          "call": "08",
+          "episode_ids": [
+            "MLP4B_0035",
+            "MLP4B_0036",
+            "MLP4B_0037",
+            "MLP4B_0038",
+            "MLP4B_0039"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/08.txt",
+          "prompt_sha256": "2ee2884b8afdcfc9138abe6e7076ba98a9f26aaf4a3e66fd67eac4d7c97794ae",
+          "response": "followups/2026-09-05/claude_fable_5_xhigh_r1/responses/08.json",
+          "response_sha256": "18fb218d3e6857f3f88d8715be2360cea7614c302399520b176e693959820f3c"
+        },
+        {
+          "call": "09",
+          "episode_ids": [
+            "MLP4B_0040",
+            "MLP4B_0041",
+            "MLP4B_0042",
+            "MLP4B_0043",
+            "MLP4B_0044"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/09.txt",
+          "prompt_sha256": "ebb62b772ab44523248c9b512e20525a81b4d26b81610105dcc3303f9eacccb9",
+          "response": "followups/2026-09-05/claude_fable_5_xhigh_r1/responses/09.json",
+          "response_sha256": "9723dbe5f128d97e761979245703b942bfe6eddd34f3b97849e6c183ce6ccfd9"
+        },
+        {
+          "call": "10",
+          "episode_ids": [
+            "MLP4B_0045",
+            "MLP4B_0046",
+            "MLP4B_0047",
+            "MLP4B_0048",
+            "MLP4B_0049"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/10.txt",
+          "prompt_sha256": "0bb3074e4eb6fc3bd1d72ca5165572e1b3fe6878fb41b39f64c319f02990a13c",
+          "response": "followups/2026-09-05/claude_fable_5_xhigh_r1/responses/10.json",
+          "response_sha256": "78054a7646cc06ae4a473614d7a59d2b41cbf2637b7f60923110168e00ab85e5"
+        },
+        {
+          "call": "11",
+          "episode_ids": [
+            "MLP4B_0050",
+            "MLP4B_0051",
+            "MLP4B_0052",
+            "MLP4B_0053",
+            "MLP4B_0054"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/11.txt",
+          "prompt_sha256": "c707b901592322b395b616a6a2674fab78d0efc5293bf7f58d18425b63ef8114",
+          "response": "followups/2026-09-05/claude_fable_5_xhigh_r1/responses/11.json",
+          "response_sha256": "d73b1931ffd2bd1c851dec0bdab078f5727b63cfd8310a6c4fbbccc1c521461f"
+        },
+        {
+          "call": "12",
+          "episode_ids": [
+            "MLP4B_0055",
+            "MLP4B_0056",
+            "MLP4B_0057",
+            "MLP4B_0058",
+            "MLP4B_0059"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/12.txt",
+          "prompt_sha256": "189850421d75c0d8c9a75a81241986b17b51ad10bab63df284be8e08af325e3d",
+          "response": "followups/2026-09-05/claude_fable_5_xhigh_r1/responses/12.json",
+          "response_sha256": "ac948cd0ce45b65053b0c136c78b7b64766ee719cfd67b4d7a0b265a9d63a06c"
+        }
+      ],
+      "id": "claude_fable_5_xhigh_r1",
+      "kind": "direct",
+      "reported_metadata": {
+        "interface": "Anthropic Messages API",
+        "requested_effort": "xhigh",
+        "requested_model": "claude-fable-5",
+        "status": "Description transcribed from uploaded records; not independently authenticated."
+      },
+      "score_file": "followups/2026-09-05/claude_fable_5_xhigh_r1/score.json",
+      "source_metadata_sha256": "0c14929ffbffbb22d0bba91aae4e6d923a466d79e685f1eef14aca6c0018faeb",
+      "source_score_sha256": "e295691760edefe5267c346ef32161c9cb3bc98afd8e68f26f09da34c74aff6e"
+    },
+    {
+      "calls": [
+        {
+          "call": "01",
+          "episode_ids": [
+            "MLP4B_0000",
+            "MLP4B_0001",
+            "MLP4B_0002",
+            "MLP4B_0003",
+            "MLP4B_0004"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/01.txt",
+          "prompt_sha256": "febe94397bd43a8a0be9b38d705c08eee2141b4a2ab755d5a46d87596506940c",
+          "response": "followups/2026-09-05/claude_fable_5_1_xhigh_ctx_r1/responses/01.json",
+          "response_sha256": "c1dd772ebc501fad7bea3e9eb4703d280e489f13ad1b0bbabd8a57198bc8a8ba"
+        },
+        {
+          "call": "02",
+          "episode_ids": [
+            "MLP4B_0005",
+            "MLP4B_0006",
+            "MLP4B_0007",
+            "MLP4B_0008",
+            "MLP4B_0009"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/02.txt",
+          "prompt_sha256": "9b736aaa054838df6d04357ab3ffcac70efccdbdbf20f212389600c2216031b4",
+          "response": "followups/2026-09-05/claude_fable_5_1_xhigh_ctx_r1/responses/02.json",
+          "response_sha256": "9d61afdde765ac402f311d6f84c4f9951243ae403361a01edb1a94a988387a77"
+        },
+        {
+          "call": "03",
+          "episode_ids": [
+            "MLP4B_0010",
+            "MLP4B_0011",
+            "MLP4B_0012",
+            "MLP4B_0013",
+            "MLP4B_0014"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/03.txt",
+          "prompt_sha256": "6a79e47946d40e8114af5f609f7e960287ed76f70e891a200f6824fcf7aa1f70",
+          "response": "followups/2026-09-05/claude_fable_5_1_xhigh_ctx_r1/responses/03.json",
+          "response_sha256": "08766c60f8fafc2d75b20bac7de3a3923953620bd99b436e554e3248869afdc2"
+        },
+        {
+          "call": "04",
+          "episode_ids": [
+            "MLP4B_0015",
+            "MLP4B_0016",
+            "MLP4B_0017",
+            "MLP4B_0018",
+            "MLP4B_0019"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/04.txt",
+          "prompt_sha256": "e85ce36bf8b82e04592c7c47afd391b0b2e519ee6bd1e6bcd1197bd429dd7f3d",
+          "response": "followups/2026-09-05/claude_fable_5_1_xhigh_ctx_r1/responses/04.json",
+          "response_sha256": "225f3569f4ead95b71d0815e53f5a083e9b107531b3897032d77258190085ac2"
+        },
+        {
+          "call": "05",
+          "episode_ids": [
+            "MLP4B_0020",
+            "MLP4B_0021",
+            "MLP4B_0022",
+            "MLP4B_0023",
+            "MLP4B_0024"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/05.txt",
+          "prompt_sha256": "942539a45bdbc8eb682bf0df4075ac226fd519be566d83273fe1c0e36b656449",
+          "response": "followups/2026-09-05/claude_fable_5_1_xhigh_ctx_r1/responses/05.json",
+          "response_sha256": "6f1317069a2573521bb0dfcbcc3bd3398c19baa6d729553500b6bd28a1df4b5c"
+        },
+        {
+          "call": "06",
+          "episode_ids": [
+            "MLP4B_0025",
+            "MLP4B_0026",
+            "MLP4B_0027",
+            "MLP4B_0028",
+            "MLP4B_0029"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/06.txt",
+          "prompt_sha256": "376664ae74121b60446ed72fb5801e26ec8db066e52b3097034cc53344e167d9",
+          "response": "followups/2026-09-05/claude_fable_5_1_xhigh_ctx_r1/responses/06.json",
+          "response_sha256": "fce7856109457177b2997a927fbd10d9b161e5e7131192b282fb343d40e67b78"
+        },
+        {
+          "call": "07",
+          "episode_ids": [
+            "MLP4B_0030",
+            "MLP4B_0031",
+            "MLP4B_0032",
+            "MLP4B_0033",
+            "MLP4B_0034"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/07.txt",
+          "prompt_sha256": "fe0552e4134e2e9f9780055949d4d662459c9e0ca75134fbb4532979206652a4",
+          "response": "followups/2026-09-05/claude_fable_5_1_xhigh_ctx_r1/responses/07.json",
+          "response_sha256": "9dce91038afd8bf009c455cd76fe1332ceb3932128a345c7e4a65186eaaa4a73"
+        },
+        {
+          "call": "08",
+          "episode_ids": [
+            "MLP4B_0035",
+            "MLP4B_0036",
+            "MLP4B_0037",
+            "MLP4B_0038",
+            "MLP4B_0039"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/08.txt",
+          "prompt_sha256": "2ee2884b8afdcfc9138abe6e7076ba98a9f26aaf4a3e66fd67eac4d7c97794ae",
+          "response": "followups/2026-09-05/claude_fable_5_1_xhigh_ctx_r1/responses/08.json",
+          "response_sha256": "bc7275fd2731d1e75499f7788285ae9bf31b371b786ca986b1226ad9b931b1be"
+        },
+        {
+          "call": "09",
+          "episode_ids": [
+            "MLP4B_0040",
+            "MLP4B_0041",
+            "MLP4B_0042",
+            "MLP4B_0043",
+            "MLP4B_0044"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/09.txt",
+          "prompt_sha256": "ebb62b772ab44523248c9b512e20525a81b4d26b81610105dcc3303f9eacccb9",
+          "response": "followups/2026-09-05/claude_fable_5_1_xhigh_ctx_r1/responses/09.json",
+          "response_sha256": "bf3455d28f6d6ae69f15b9e91ace5e0d9ed9acce5a6723fe695c6e649e8e92e0"
+        },
+        {
+          "call": "10",
+          "episode_ids": [
+            "MLP4B_0045",
+            "MLP4B_0046",
+            "MLP4B_0047",
+            "MLP4B_0048",
+            "MLP4B_0049"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/10.txt",
+          "prompt_sha256": "0bb3074e4eb6fc3bd1d72ca5165572e1b3fe6878fb41b39f64c319f02990a13c",
+          "response": "followups/2026-09-05/claude_fable_5_1_xhigh_ctx_r1/responses/10.json",
+          "response_sha256": "51c982473b924eaa4cf508dba1a04ddc4906879354b536876fd7ee0a2cf01932"
+        },
+        {
+          "call": "11",
+          "episode_ids": [
+            "MLP4B_0050",
+            "MLP4B_0051",
+            "MLP4B_0052",
+            "MLP4B_0053",
+            "MLP4B_0054"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/11.txt",
+          "prompt_sha256": "c707b901592322b395b616a6a2674fab78d0efc5293bf7f58d18425b63ef8114",
+          "response": "followups/2026-09-05/claude_fable_5_1_xhigh_ctx_r1/responses/11.json",
+          "response_sha256": "a10754873507d3418bfa2f6519aa4048be3a52bb88fe6e35aea6fcb7ddf93d41"
+        },
+        {
+          "call": "12",
+          "episode_ids": [
+            "MLP4B_0055",
+            "MLP4B_0056",
+            "MLP4B_0057",
+            "MLP4B_0058",
+            "MLP4B_0059"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/12.txt",
+          "prompt_sha256": "189850421d75c0d8c9a75a81241986b17b51ad10bab63df284be8e08af325e3d",
+          "response": "followups/2026-09-05/claude_fable_5_1_xhigh_ctx_r1/responses/12.json",
+          "response_sha256": "d43dbc638a38167e07f1e050b46e904c0c9b843b4de40655ab92cce5ee952615"
+        }
+      ],
+      "id": "claude_fable_5_1_xhigh_ctx_r1",
+      "kind": "direct",
+      "reported_metadata": {
+        "interface": "Anthropic Messages API",
+        "requested_effort": "xhigh",
+        "requested_model": "claude-fable-5-1",
+        "status": "Description transcribed from uploaded records; not independently authenticated."
+      },
+      "score_file": "followups/2026-09-05/claude_fable_5_1_xhigh_ctx_r1/score.json",
+      "source_metadata_sha256": "080188025dd461ce6860761b6d5b3a13c688199345f769b12dee1deecce19df2",
+      "source_score_sha256": "e0b9aec680da7cc9588d814f1cdbc9a2ca9335780cf7e2a5128bf7b67adbeb85",
+      "system_context": {
+        "file": "followups/2026-09-05/claude_fable_5_1_xhigh_ctx_r1/harness/system_context.txt",
+        "sha256": "26ca2dde77fa98af25c4e3032f02911a7d369dcdd504d75ea2a1ea0cd7440b20"
+      }
+    },
+    {
+      "calls": [
+        {
+          "call": "01_direct_D04",
+          "episode_ids": [
+            "MLP4B_0015",
+            "MLP4B_0016",
+            "MLP4B_0017",
+            "MLP4B_0018",
+            "MLP4B_0019"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/04.txt",
+          "prompt_sha256": "e85ce36bf8b82e04592c7c47afd391b0b2e519ee6bd1e6bcd1197bd429dd7f3d",
+          "response": "followups/2026-09-05/astra_diagnostic/responses/01_direct_D04.json",
+          "response_sha256": "ba4fee2d5a5c0ec96d51728433746858d799e0ca02e92dce37c20ddfc23f7a2f"
+        },
+        {
+          "call": "02_support_D04",
+          "episode_ids": [
+            "MLP4B_0015",
+            "MLP4B_0016",
+            "MLP4B_0017",
+            "MLP4B_0018",
+            "MLP4B_0019"
+          ],
+          "kind": "support",
+          "prompt": "original_release/prompts/SOL_EXTRA_PROMPTS/01.txt",
+          "prompt_sha256": "92001fa223b10dbf3592a31a9250642407f52435136e4f88553d41d20fbe9015",
+          "response": "followups/2026-09-05/astra_diagnostic/responses/02_support_D04.json",
+          "response_sha256": "b0f487b3d84f6019a8861322aa95f9f52a6d4195dfa68eefc3f5688ca1772d92"
+        },
+        {
+          "call": "03_support_D05",
+          "episode_ids": [
+            "MLP4B_0020",
+            "MLP4B_0021",
+            "MLP4B_0022",
+            "MLP4B_0023",
+            "MLP4B_0024"
+          ],
+          "kind": "support",
+          "prompt": "original_release/prompts/SOL_EXTRA_PROMPTS/02.txt",
+          "prompt_sha256": "0bde06df65b2520a8d7cb727d7805bdcdcc0b89f881117643a5a78bd75ce6564",
+          "response": "followups/2026-09-05/astra_diagnostic/responses/03_support_D05.json",
+          "response_sha256": "8155dbcaf12c88607c2546a66533448a8c24ad233e2d626a09018d86a89b2928"
+        },
+        {
+          "call": "04_direct_D05",
+          "episode_ids": [
+            "MLP4B_0020",
+            "MLP4B_0021",
+            "MLP4B_0022",
+            "MLP4B_0023",
+            "MLP4B_0024"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/05.txt",
+          "prompt_sha256": "942539a45bdbc8eb682bf0df4075ac226fd519be566d83273fe1c0e36b656449",
+          "response": "followups/2026-09-05/astra_diagnostic/responses/04_direct_D05.json",
+          "response_sha256": "e766a0b89ea33b81e194161513be1d913b50110b55a23134765b1a756613cb78"
+        },
+        {
+          "call": "05_direct_D06",
+          "episode_ids": [
+            "MLP4B_0025",
+            "MLP4B_0026",
+            "MLP4B_0027",
+            "MLP4B_0028",
+            "MLP4B_0029"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/06.txt",
+          "prompt_sha256": "376664ae74121b60446ed72fb5801e26ec8db066e52b3097034cc53344e167d9",
+          "response": "followups/2026-09-05/astra_diagnostic/responses/05_direct_D06.json",
+          "response_sha256": "aea96bddcf097f357854f7bc24e39b969323ef9af1e5273df8e3de37342a0333"
+        },
+        {
+          "call": "06_support_D06",
+          "episode_ids": [
+            "MLP4B_0025",
+            "MLP4B_0026",
+            "MLP4B_0027",
+            "MLP4B_0028",
+            "MLP4B_0029"
+          ],
+          "kind": "support",
+          "prompt": "original_release/prompts/SOL_EXTRA_PROMPTS/03.txt",
+          "prompt_sha256": "bfb9ab9068334887388273ee009b06ed225bc80472abf4a492124cc421db1935",
+          "response": "followups/2026-09-05/astra_diagnostic/responses/06_support_D06.json",
+          "response_sha256": "f332b15f4be384d35a25f0640b1dc632457d7d4dcb5b0003ca733ba09cf9cf0c"
+        },
+        {
+          "call": "07_support_D12",
+          "episode_ids": [
+            "MLP4B_0055",
+            "MLP4B_0056",
+            "MLP4B_0057",
+            "MLP4B_0058",
+            "MLP4B_0059"
+          ],
+          "kind": "support",
+          "prompt": "original_release/prompts/SOL_EXTRA_PROMPTS/04.txt",
+          "prompt_sha256": "2e3bd0d3847d649b316e79372156764cc39f06d2c44a17e433ff334f19d1122b",
+          "response": "followups/2026-09-05/astra_diagnostic/responses/07_support_D12.json",
+          "response_sha256": "3cb63a212f5becb46bdff26ed37b1dac1c83483d1269d19e181da6ef00457ad6"
+        },
+        {
+          "call": "08_direct_D12",
+          "episode_ids": [
+            "MLP4B_0055",
+            "MLP4B_0056",
+            "MLP4B_0057",
+            "MLP4B_0058",
+            "MLP4B_0059"
+          ],
+          "kind": "direct",
+          "prompt": "original_release/prompts/DIRECT_PROMPTS/12.txt",
+          "prompt_sha256": "189850421d75c0d8c9a75a81241986b17b51ad10bab63df284be8e08af325e3d",
+          "response": "followups/2026-09-05/astra_diagnostic/responses/08_direct_D12.json",
+          "response_sha256": "12be0fa952e38417db96fd7c6470f443bbb08476249f449681cfc50295b9093c"
+        }
+      ],
+      "id": "astra_diagnostic",
+      "kind": "diagnostic",
+      "reported_metadata": {
+        "interface": "Codex CLI 0.153.0",
+        "requested_effort": "xhigh",
+        "requested_model": "gpt-6-astra",
+        "status": "Description transcribed from uploaded records; not independently authenticated."
+      },
+      "score_file": "followups/2026-09-05/astra_diagnostic/score.json",
+      "source_metadata_sha256": "eb702df0acce21d1833dbfe0d9b5af0e9b9f47db3d9a3b24ed78faba3931e926",
+      "source_score_sha256": "29a173cad24ef56d3447e68fe1ca7a99d994b795e7df1e59c6d1ecab018c7ed9"
+    }
+  ],
+  "preserved_original_files": {
+    "original_release/.gitattributes": "072699f9e622a8202f99ebe911c2c56997175465181d5bad2b886ba8592b2ce5",
+    "original_release/.gitignore": "61102f277ca24144903cc6454af497507e57cc9a0b0f94f21410e2d03fdccf92",
+    "original_release/LICENSE": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1",
+    "original_release/NOTICE": "777bddba55db25eee527b2e8e7e530c56024a16f8afb8b2ceda52a16f6968da7",
+    "original_release/RUN_ME.command": "ffe9b74fd7b55247b8079fc72a50c8455b46c9bebce707a8528d129aac6c9bdc",
+    "original_release/construction/apibench/hard_blind_v4/__init__.py": "9c97261b664679599167e2ff3bc259538d9db2cc9b2576925bfcb9f1eb524009",
+    "original_release/construction/apibench/hard_blind_v4/audit_pinned_lean.py": "656962f65f4b11e92bb46c3520090315f5f08c5522bee5b639cde459ec94e4d2",
+    "original_release/construction/apibench/hard_blind_v4/audit_static_bundle.py": "7431647b646ea46e5c4bbe0fec1abff371c2d707041b10f15b3e20abf4e05a98",
+    "original_release/construction/apibench/hard_blind_v4/build_hard_blind_v4.py": "41e5aedd5dc2336d58766bf23374dae86d56a0556fdb839e7e60cb9cb99fdac6",
+    "original_release/construction/apibench/hard_blind_v4/construction_diagnostics.py": "953abb699b89795796904157513e7cb2abb17a6d60d4c7cd4a1024798cc7aaa8",
+    "original_release/construction/apibench/hard_blind_v4/test_hard_blind_v4.py": "f0b7761031bbf4cc50d5377cca9a13f1ad68863c53afb95f9f0b0b3eb807f1bb",
+    "original_release/construction/apibench/pilot/mathlib_generation_receipt_v1.json": "fc4057647751c09dd141f876dfc88873685fb5fbbfbbf4a306e13db39498c4e7",
+    "original_release/construction/apibench/pilot/mathlib_labels.jsonl": "aa80f0ecafb3fda1d56b96707d12e1a21fd5570c9632a444f3344d8296e290ad",
+    "original_release/construction/apibench/pilot/mathlib_public.jsonl": "f59cfa80bdfffa5dfd487d89c087604b885e24945ca29d774b0ad06a123b8796",
+    "original_release/construction/apibench/releases/lemma_portfolio_mathlib_30_v2/public.jsonl": "909163de69a27244f42e96ca5c779632ea5c3280c958c1e8ae7ea0c7286e59b6",
+    "original_release/construction/apibench/releases/lemma_portfolio_mathlib_30_v3/labels.jsonl": "df5bd730b894844955cddba5fe517f5faed8299830fff1954959610ea3f75c11",
+    "original_release/construction/apibench/releases/lemma_portfolio_mathlib_30_v3/public.jsonl": "fb4f3791fa9d6f657b7ee3d65a8426f3ef9123f0ea01f05d35456a8e0a691558",
+    "original_release/construction/apibench/releases/lemma_portfolio_mathlib_30_v3/v2_module_exclusions.json": "bc12f7183f76ff5071ec6fe8241f6077d287430ce792bad2297248db668497f5",
+    "original_release/construction/apibench/scripts/audit_mathlib_generation_v1.py": "333f3bd5a98acbcc2b4156299c1f65187832ea3b59bca3cb2828b036ef791241",
+    "original_release/construction/apibench/scripts/audit_static_direct_value_labels.py": "7777c7f25a0e261882a45dfd5758766d4199f952ab06ca305ad551271a8df40b",
+    "original_release/construction/apibench/scripts/build_mathlib_release_v2.py": "eb26c7014aea64466fed676cf834d8be9aecdab886409ad6c63951658143aa4f",
+    "original_release/construction/apibench/scripts/mine_mathlib_portfolios.py": "2350e9e53ffd919e7b72d029900d5fbe6ff3d5280b5de58d3ef47e873f60b668",
+    "original_release/construction/requirements-construction.txt": "735f000c8ad8bccf22de8772e5eeb43079f59a1d0570f190906380538cbdb638",
+    "original_release/data/development.labels.jsonl": "bee487259392de4d36b2140a715c7b4196ce7cc2027c3b13c90e1874a19149d0",
+    "original_release/data/development.public.jsonl": "404452daa5017793d9f7b10f4d92716d2bb267dca034094b0f41f8c8d9219ffc",
+    "original_release/data/test.labels.jsonl": "d17c1fd5c6d87635daf8035fe4a0918d1eaa29708eae37cb797cae08c19ef887",
+    "original_release/data/test.public.jsonl": "b54293b08bc7ddbb7110a50908049922f7cfd86f14cb49a4de4e28353aecc6d8",
+    "original_release/development_evidence/decision_rule.json": "2140d93a6b69dece920cc8fd6dd828369d85564dc30354013cd6273437649ef2",
+    "original_release/development_evidence/frozen/PANEL_PROTOCOL.frozen.json": "7b5a05678166e2595f465ccfd562afbda281b9523b29bd1cddb86e1d02241c1c",
+    "original_release/development_evidence/frozen/PANEL_PROTOCOL.frozen.receipt.json": "70322cef7b58a5c077b40a897a1fc73e2c89b4fbe1f7c66f7d5359fde80fa24a",
+    "original_release/development_evidence/frozen/frozen_runs/OUTPUTS_FROZEN.json": "bc598103d7cd0ec4caa5f930032fc44f1531bb5154bb2c6e0409348331e39f39",
+    "original_release/development_evidence/frozen/frozen_runs/codex_gpt56_sol_max_calibration_direct/RUN_FROZEN.json": "1298df0885ff96179e86885e2ceaadabf0bc43998567dcfed29574954ec7c018",
+    "original_release/development_evidence/frozen/frozen_runs/codex_gpt56_sol_max_calibration_direct/events/MLP4C_0000.json": "1264262d8500cb9e2c7cb182932b44ebce813f151c285298700c223e05cfa573",
+    "original_release/development_evidence/frozen/frozen_runs/codex_gpt56_sol_max_calibration_direct/events/MLP4C_0001.json": "fa639a3525ca8b9e2eabc92cbf00b70a2a19fdd3563226dd8d799b9a581dd0df",
+    "original_release/development_evidence/frozen/frozen_runs/codex_gpt56_sol_max_calibration_direct/events/MLP4C_0002.json": "cfa79b7a5caa8a8861f6e8ea6ed209406eee10d6194462b9a86f62863cafcede",
+    "original_release/development_evidence/frozen/frozen_runs/codex_gpt56_sol_max_calibration_direct/events/MLP4C_0003.json": "f1270a3ce297556b956f0dea9abb380bd5f0ee886e5c468fe0658010ce322124",
+    "original_release/development_evidence/frozen/frozen_runs/codex_gpt56_sol_max_calibration_direct/events/MLP4C_0004.json": "76bfe088502c0c8e557fed29dac36f355a4a3d869c7631faab49679bee1a8267",
+    "original_release/development_evidence/frozen/frozen_runs/codex_gpt56_sol_max_calibration_direct/events/MLP4C_0005.json": "08f458a8105b38a21f94e24388780fe51458fa850fe6a6e87722243a6fb737c8",
+    "original_release/development_evidence/frozen/frozen_runs/codex_gpt56_sol_max_calibration_direct/events/MLP4C_0006.json": "e5b6d1665f1121149801750174c15e90ef33bf9649b26d0a35a54b80a8aaefc5",
+    "original_release/development_evidence/frozen/frozen_runs/codex_gpt56_sol_max_calibration_direct/events/MLP4C_0007.json": "64ab6ae8b26b9e358b0d4cc574b2ca464b4c15acb435a4c5aa14a32ea9ad94c6",
+    "original_release/development_evidence/frozen/frozen_runs/codex_gpt56_sol_max_calibration_direct/events/MLP4C_0008.json": "941a58678bb059f73cfac9716885d1ccaaeeeb770fe4516d296661d84ee70c41",
+    "original_release/development_evidence/frozen/frozen_runs/codex_gpt56_sol_max_calibration_direct/events/MLP4C_0009.json": "04b244450cf3d3abbfe12efd5d62b25a8c0a312b75848dc0cd59956274cf84cb",
+    "original_release/development_evidence/frozen/frozen_runs/codex_gpt56_sol_max_calibration_direct/events/MLP4C_0010.json": "6666c8b4a5c199aa4fc9d2a215d28c1aabdaf3526d284ab12728ebe1fc707bf4",
+    "original_release/development_evidence/frozen/frozen_runs/codex_gpt56_sol_max_calibration_direct/events/MLP4C_0011.json": "dd0c8d3b9d0a73ce07773984fac3c268a4617c5d14b607b7dc8fd0d37a05843b",
+    "original_release/development_evidence/frozen/frozen_runs/codex_gpt56_sol_max_calibration_direct/events/MLP4C_0012.json": "700ca01ac4f3ffa14c9fdd4988b24ffbfd56807fc0b79eda835f63d4db2325fa",
+    "original_release/development_evidence/frozen/frozen_runs/codex_gpt56_sol_max_calibration_direct/events/MLP4C_0013.json": "b13a0463710e121c7c586202a32b545a341c24005ef1c04bbc14257da5ea5330",
+    "original_release/development_evidence/frozen/frozen_runs/codex_gpt56_sol_max_calibration_direct/events/MLP4C_0014.json": "437ac60674229d822284d21e2d51a152ae28ac750d7ed971c359605921b160b0",
+    "original_release/development_evidence/frozen/frozen_runs/codex_gpt56_sol_max_calibration_direct/evidence/MLP4C_0000.attempt1.shard_evidence.json": "75c025fa27bd4d465e7cf6688b44dc13ddb26f8331016c7cee492148370405f0",
+    "original_release/development_evidence/frozen/frozen_runs/codex_gpt56_sol_max_calibration_direct/evidence/MLP4C_0001.attempt1.shard_evidence.json": "88bbf86cec22b2de0c1b21d03196c76552d025ad7b24158e7452a57e749e4eea",
+    "original_release/development_evidence/frozen/frozen_runs/codex_gpt56_sol_max_calibration_direct/evidence/MLP4C_0002.attempt1.shard_evidence.json": "40c91902ce26725e346e618fa172050e3ef1bc2231fb32382eccce01f4a93a51",
+    "original_release/development_evidence/frozen/frozen_runs/codex_gpt56_sol_max_calibration_direct/evidence/MLP4C_0003.attempt1.shard_evidence.json": "f3de0d15331a341af75d9b6cc56db7fa2017766e7096af4120c9017da479dba0",
+    "original_release/development_evidence/frozen/frozen_runs/codex_gpt56_sol_max_calibration_direct/evidence/MLP4C_0004.attempt1.shard_evidence.json": "3f69e9ac0e1b87e1dabb2d8968b63cf195f4cade29b3d5ad8fb0d774b178acac",
+    "original_release/development_evidence/frozen/frozen_runs/codex_gpt56_sol_max_calibration_direct/evidence/MLP4C_0005.attempt1.shard_evidence.json": "9a65b1e6b44137812ea9879b91bbcc8556abbbaae3154bdbaac1de99345a6f20",
+    "original_release/development_evidence/frozen/frozen_runs/codex_gpt56_sol_max_calibration_direct/evidence/MLP4C_0006.attempt1.shard_evidence.json": "e20abf100e59e8db99c4ecdedba1f88917b5d65f66bd8cb6e3d7e33712b30384",
+    "original_release/development_evidence/frozen/frozen_runs/codex_gpt56_sol_max_calibration_direct/evidence/MLP4C_0007.attempt1.shard_evidence.json": "b8c7c7b74600acd0b8574d3c15f674039fa8e8e30f9453edd7547742193ee09c",
+    "original_release/development_evidence/frozen/frozen_runs/codex_gpt56_sol_max_calibration_direct/evidence/MLP4C_0008.attempt1.shard_evidence.json": "979e42cea700953a6de24ed8f54070898c184f924e7f820602e1c415a20e13a1",
+    "original_release/development_evidence/frozen/frozen_runs/codex_gpt56_sol_max_calibration_direct/evidence/MLP4C_0009.attempt1.shard_evidence.json": "a3220614e79d41d58c2ffb5f0830a9ecd702c9216395b4c46e59f5cfb706c21a",
+    "original_release/development_evidence/frozen/frozen_runs/codex_gpt56_sol_max_calibration_direct/evidence/MLP4C_0010.attempt1.shard_evidence.json": "fae74890365aca0a367e9790b2b6f0147efa8839bb4d0c8eae9624b7ed560022",
+    "original_release/development_evidence/frozen/frozen_runs/codex_gpt56_sol_max_calibration_direct/evidence/MLP4C_0011.attempt1.shard_evidence.json": "3ec186ff35f3d06a19c4f68f7f0613f7624424de446cb1ff2fe968503d1e4d68",
+    "original_release/development_evidence/frozen/frozen_runs/codex_gpt56_sol_max_calibration_direct/evidence/MLP4C_0012.attempt1.shard_evidence.json": "ace8e38c05e7b734f6f766ea0c7999fa9fe38848bdb6b4e3d98222d3a9fe0b37",
+    "original_release/development_evidence/frozen/frozen_runs/codex_gpt56_sol_max_calibration_direct/evidence/MLP4C_0013.attempt1.shard_evidence.json": "ed5bd7f5a0fb171b3f331cc1ecd6aa704269d0901ed40ec1aaa253f848bd29aa",
+    "original_release/development_evidence/frozen/frozen_runs/codex_gpt56_sol_max_calibration_direct/evidence/MLP4C_0014.attempt1.shard_evidence.json": "5254cf0c38f1be41eb237a4801a7ae317f8a5e5739949b82f35829cb4406961b",
+    "original_release/development_evidence/frozen/frozen_runs/codex_gpt56_sol_max_calibration_direct/responses/MLP4C_0000.txt": "8ce19a22e53417760d07e2609244d26a8fde02d103dcc633a37ad3011aca2a29",
+    "original_release/development_evidence/frozen/frozen_runs/codex_gpt56_sol_max_calibration_direct/responses/MLP4C_0001.txt": "62c0140c844e666e8e63db0b4e393eb280836bd9356ae1dfb84bd358e4fc93b1",
+    "original_release/development_evidence/frozen/frozen_runs/codex_gpt56_sol_max_calibration_direct/responses/MLP4C_0002.txt": "563c77483a592e4d3016e3179415a853a633ee982e49fee8055a8f564c008f43",
+    "original_release/development_evidence/frozen/frozen_runs/codex_gpt56_sol_max_calibration_direct/responses/MLP4C_0003.txt": "7db0b7913cebe31bfab9307b62a1b2cc56223a06cf6396d8b74be65449865946",
+    "original_release/development_evidence/frozen/frozen_runs/codex_gpt56_sol_max_calibration_direct/responses/MLP4C_0004.txt": "798c0a0241bded8db652ce59f3c83a6102089089071d0d2560c6e5ad0badaf3e",
+    "original_release/development_evidence/frozen/frozen_runs/codex_gpt56_sol_max_calibration_direct/responses/MLP4C_0005.txt": "3e0867abd7b202a3cec3adc874d426a4c61421438555fb06c07101a42e9ad993",
+    "original_release/development_evidence/frozen/frozen_runs/codex_gpt56_sol_max_calibration_direct/responses/MLP4C_0006.txt": "8ed9cfb030d93104d355a73b4dc4b1fb55440f1a5141ba4cd651c8ad8b7378ce",
+    "original_release/development_evidence/frozen/frozen_runs/codex_gpt56_sol_max_calibration_direct/responses/MLP4C_0007.txt": "636db77f6e911254678f0aec97627e02dcc1a9dcdee6bbd19c2c6582a67eaeb7",
+    "original_release/development_evidence/frozen/frozen_runs/codex_gpt56_sol_max_calibration_direct/responses/MLP4C_0008.txt": "b7fbd8f7676367f00248bc348cee1393d09199834b7edfdd5a40908dd76e5368",
+    "original_release/development_evidence/frozen/frozen_runs/codex_gpt56_sol_max_calibration_direct/responses/MLP4C_0009.txt": "24373fa22c583296eb57d63d43b9df95420efee26ac98a7f9a4279dcb549a264",
+    "original_release/development_evidence/frozen/frozen_runs/codex_gpt56_sol_max_calibration_direct/responses/MLP4C_0010.txt": "5c87d134a02abd56fbc108bc83598e80f8aa05e5297f27c18e422669f7790af2",
+    "original_release/development_evidence/frozen/frozen_runs/codex_gpt56_sol_max_calibration_direct/responses/MLP4C_0011.txt": "b5e33131d8ed0f713d48fb1ff94dad5c2fc6a6f0b5d72baa1ea13d4f5b365f25",
+    "original_release/development_evidence/frozen/frozen_runs/codex_gpt56_sol_max_calibration_direct/responses/MLP4C_0012.txt": "6eeb8c0b3e4e5a87f2b9620378ac33bcc3d305d2a642df97872b0a8c3b59953a",
+    "original_release/development_evidence/frozen/frozen_runs/codex_gpt56_sol_max_calibration_direct/responses/MLP4C_0013.txt": "2123b352ef515a97fe421e7e407cd72fe58ebfd07db1434b77d889092f4e3928",
+    "original_release/development_evidence/frozen/frozen_runs/codex_gpt56_sol_max_calibration_direct/responses/MLP4C_0014.txt": "1c4d2e780d85bb52cc1b0b330893d89a591348a5135b2645b04fe47b7e560fa6",
+    "original_release/development_evidence/frozen/frozen_runs/codex_gpt56_sol_max_calibration_direct/run_metadata.json": "cd72faa4c2067f74d7143458002c12e658d3855da86a230da28147094f3b8aa9",
+    "original_release/development_evidence/frozen/prompts/items/MLP4C_0000.txt": "a217ddb0ef088cb4bb562b2c1da67288aaca78c453b01b643f5da8fa294794f7",
+    "original_release/development_evidence/frozen/prompts/items/MLP4C_0001.txt": "a9a3890a7df4625a3ce3fcdbe7627ac3e42d40a2673b44cfb2f4acda69d6fa4f",
+    "original_release/development_evidence/frozen/prompts/items/MLP4C_0002.txt": "9c4dec9002f6cdeda45c93a5d5ea0d32b7e234d376e3d6b9650580a90c1a65ac",
+    "original_release/development_evidence/frozen/prompts/items/MLP4C_0003.txt": "cb2aef2d85d0460c30ea84fc97efdffb53659828bc921c649312bdf35872de94",
+    "original_release/development_evidence/frozen/prompts/items/MLP4C_0004.txt": "c6ab60702ffa8def8dd5df555406a119de1d123cd1fd16a11c028367ab7f192d",
+    "original_release/development_evidence/frozen/prompts/items/MLP4C_0005.txt": "728d09a26aaaba0d38df5ac16478d4a87714e82226dc029dfb23d1852ca62ec0",
+    "original_release/development_evidence/frozen/prompts/items/MLP4C_0006.txt": "46293665c29e29a2bfccc81ed372d34bc2a68a07f5ef52664a3074d8ab14ff33",
+    "original_release/development_evidence/frozen/prompts/items/MLP4C_0007.txt": "54cf0462dfee19282f01c899da397a39fab217be43050acc3eb30e9c7d20d2f4",
+    "original_release/development_evidence/frozen/prompts/items/MLP4C_0008.txt": "94e1b967854a7f688df6899bcb796dceb4515378ab59b79809bda5db383da899",
+    "original_release/development_evidence/frozen/prompts/items/MLP4C_0009.txt": "5f91f5206d427d369791e099842e5892a319654c7f543b28882ff10db0b4fc90",
+    "original_release/development_evidence/frozen/prompts/items/MLP4C_0010.txt": "1d64c001be5720bf60dc7f66bace0230ea7d8183052401f94bdb5f28823dbb63",
+    "original_release/development_evidence/frozen/prompts/items/MLP4C_0011.txt": "f0ec1befc4d9374a46f1bc2025d00d8be9fe23f12e71ec42f262195a6d42dabf",
+    "original_release/development_evidence/frozen/prompts/items/MLP4C_0012.txt": "2c6cd966ecf0e07c7ea6d6d2311074ffddfa04347758907fcae1fe38bd648375",
+    "original_release/development_evidence/frozen/prompts/items/MLP4C_0013.txt": "cd3d9269dc4cd09137bc2e5167e2b097f3e7c35a301bf8002b74f8269cb60295",
+    "original_release/development_evidence/frozen/prompts/items/MLP4C_0014.txt": "f00f4abfecf2654eefa2c6240e54b3f8a49f33262a946e66ef837b43d4e11577",
+    "original_release/development_evidence/frozen/prompts/manifest.json": "58a31aa21f8cd1d5f34fc3e3f6aa367f4f02ea909be695db0531b8cc534b2284",
+    "original_release/development_evidence/original_results/DEVELOPMENT_DIFFICULTY_GATE.json": "feb757ec3cc183614ef660f152a851b75bf1e05c1c49b80f1f69d01b6d914fef",
+    "original_release/development_evidence/original_results/analytic_uniform_random.jsonl": "53d271be0e89fab0eddbb4f636918c30389ca902c0899f9233a005bbc58cc544",
+    "original_release/development_evidence/original_results/per_item.jsonl": "45d32fe56eed4ec8f09480d87b1427373590d0bca50390e3ebf6afe3bbc23acb",
+    "original_release/development_evidence/original_results/scores.json": "383351c708dc0b22770516dbd4b0d99425e400dcc454cac174c3ccfa9d08d0f4",
+    "original_release/docs/DATA_CARD.md": "b6885ba0a1e35932d5ba6e4cc6550dc06ef833efe65f389e4bb2f9a37b1437b0",
+    "original_release/docs/PROVENANCE.md": "21a84b4427d7df115c13e25bdb744c2c0b8f9e94f9222354b3fe067d8ce529c2",
+    "original_release/examples/predictions.example.json": "1e0f92ea11ed036033153e22978a91a682c8ec8ab4379abf9773665b21bb7c28",
+    "original_release/examples/support.example.json": "891c8fc651242df5d9f07c86dd33f48f725599f349dfafc1fee2e5884dd3c188",
+    "original_release/prompts/DIRECT_PROMPTS/01.txt": "febe94397bd43a8a0be9b38d705c08eee2141b4a2ab755d5a46d87596506940c",
+    "original_release/prompts/DIRECT_PROMPTS/02.txt": "9b736aaa054838df6d04357ab3ffcac70efccdbdbf20f212389600c2216031b4",
+    "original_release/prompts/DIRECT_PROMPTS/03.txt": "6a79e47946d40e8114af5f609f7e960287ed76f70e891a200f6824fcf7aa1f70",
+    "original_release/prompts/DIRECT_PROMPTS/04.txt": "e85ce36bf8b82e04592c7c47afd391b0b2e519ee6bd1e6bcd1197bd429dd7f3d",
+    "original_release/prompts/DIRECT_PROMPTS/05.txt": "942539a45bdbc8eb682bf0df4075ac226fd519be566d83273fe1c0e36b656449",
+    "original_release/prompts/DIRECT_PROMPTS/06.txt": "376664ae74121b60446ed72fb5801e26ec8db066e52b3097034cc53344e167d9",
+    "original_release/prompts/DIRECT_PROMPTS/07.txt": "fe0552e4134e2e9f9780055949d4d662459c9e0ca75134fbb4532979206652a4",
+    "original_release/prompts/DIRECT_PROMPTS/08.txt": "2ee2884b8afdcfc9138abe6e7076ba98a9f26aaf4a3e66fd67eac4d7c97794ae",
+    "original_release/prompts/DIRECT_PROMPTS/09.txt": "ebb62b772ab44523248c9b512e20525a81b4d26b81610105dcc3303f9eacccb9",
+    "original_release/prompts/DIRECT_PROMPTS/10.txt": "0bb3074e4eb6fc3bd1d72ca5165572e1b3fe6878fb41b39f64c319f02990a13c",
+    "original_release/prompts/DIRECT_PROMPTS/11.txt": "c707b901592322b395b616a6a2674fab78d0efc5293bf7f58d18425b63ef8114",
+    "original_release/prompts/DIRECT_PROMPTS/12.txt": "189850421d75c0d8c9a75a81241986b17b51ad10bab63df284be8e08af325e3d",
+    "original_release/prompts/PROMPT_SHA256SUMS.txt": "029f7695b346ecbfe412c96443b970ac27aa1ab3a82236cb512c9c757669892f",
+    "original_release/prompts/RETURN_TEMPLATE.md": "a67b65bc86c5f6a54ae0dfb379c9cfb0504e804bacb0e768ef97649b9d5d215a",
+    "original_release/prompts/SOL_EXTRA_PROMPTS/01.txt": "92001fa223b10dbf3592a31a9250642407f52435136e4f88553d41d20fbe9015",
+    "original_release/prompts/SOL_EXTRA_PROMPTS/02.txt": "0bde06df65b2520a8d7cb727d7805bdcdcc0b89f881117643a5a78bd75ce6564",
+    "original_release/prompts/SOL_EXTRA_PROMPTS/03.txt": "bfb9ab9068334887388273ee009b06ed225bc80472abf4a492124cc421db1935",
+    "original_release/prompts/SOL_EXTRA_PROMPTS/04.txt": "2e3bd0d3847d649b316e79372156764cc39f06d2c44a17e433ff334f19d1122b",
+    "original_release/prompts/START_HERE.txt": "ccac78c124c9fd6079909234be1bee7c58e8fe7a7fa101931846c74d26abe631",
+    "original_release/provenance/blind.pinned_lean_audit.json": "bcaa45a6cb7b88f8e65507b08dd0951af0558266ae61a588edcff8e176f1bcf3",
+    "original_release/provenance/calibration.pinned_lean_audit.json": "b5a595c03fa12950be1060ca409752d8f464a28a813bb11e6b3d363eeeb0008b",
+    "original_release/provenance/dataset_commitment.json": "57ac2ba0dbb4bfe5ee2ce5b53f49680303bee9e9f29ec8095feeedfe19e7fb56",
+    "original_release/provenance/generation_receipt.json": "8589f29e460e99f2aa029efca5329387321316fda44fd2e9ee9d26f539320161",
+    "original_release/provenance/manifest.preinference.json": "f2fa32f0ac7365c28e711baf9efcb2e3fff3e0bcbc63dba6e26a24fe49dcb6ce",
+    "original_release/provenance/manual_chat/MANUAL_CHAT_PROTOCOL.frozen.json": "9fd7396d416ec6431c38e84e79fe99990762fa040151d795c80568c08b58881e",
+    "original_release/provenance/manual_chat/MANUAL_CHAT_PROTOCOL_V3_SUPERSESSION_2026-09-01T100540Z.json": "62f49a5a95d110f6bc45e7bf7bdfb49b34d713fa01ca0cd5e2fd65bfb41ea8e9",
+    "original_release/provenance/manual_chat/README.md": "f748f4ef2699d1afad296b959566c912c8646fe5d9bce66169da19b2d50d6e35",
+    "original_release/provenance/static_bundle_audit.json": "5c4adf349eb47574728e4d78a88f64dd5cd8aa0d7c942af5c17be56260ac3f26",
+    "original_release/responses/alignment_audit.json": "8164705485c1ae304c3c2c583946348c67bd787ca8f8c9a896fb5a5322d72eea",
+    "original_release/responses/direct_transcription.json": "283a5e13da1de35909d8affe27496160a7a133f77c74c716b050a6e5ca211dfd",
+    "original_release/responses/sol_xhigh_source_extracted.txt": "ac3bfc8cac5db47000f5d42b29fb798fcbb4dd8184a4f6bf2b3e6190f7555ca3",
+    "original_release/responses/sol_xhigh_source_responses.pdf": "02abb92d1e3fd6d59dca5faa191a7fec214dffae7c4f023ce5cbb5d02b517afa",
+    "original_release/responses/source_extracted.txt": "3cd354ccb7f8533e3709a11a785748c7d09735b41f6f97930a4247d17a8f3c40",
+    "original_release/responses/source_responses.pdf": "2f20fbc4b3eb3b87c4b693058fc5744a947de04e19a2eca70f0ea5c0d54dde3f",
+    "original_release/responses/support_transcription.json": "9c107bb58fe2ed50490033cc38e986f5957b040ca5a86eada8726d150dd46a31",
+    "original_release/results/baseline_predictions.json": "49bffb65198421c78cf45c3d1687d3f9d9b80c14ca2a26f65e26a461f1b63ceb",
+    "original_release/results/development_per_item.jsonl": "e5d0aa1717a6ae95ae2ccd0f0f39b434f910e143b29951cf0149c0bb0c5b8529",
+    "original_release/results/development_score.json": "01c686373343a896daab8723e4e912830debd70ebbccd938c4f0de34d84ace28",
+    "original_release/results/per_item.jsonl": "ee6c494ba67f0025e9645d86a7fcd50a4b28d93211edf07980f5b8083c74c77d",
+    "original_release/results/posthoc_math_audit.json": "ca0aa8217a6ee630c59ffeea8042ff3e55e8a8ae7e4a4c2f950760072b743760",
+    "original_release/results/posthoc_predicted_tie_audit.json": "c416300232c7caa9541dfa0501fbcb86c813d888ebc24d750303f29c80042f59",
+    "original_release/results/scores.json": "adc0721b7fac2837bcbebb77903d7cea018e204e65b59d332c5f0b8f71d2aae4",
+    "original_release/results/structured_comparison.json": "4c5f91e063aba9ed605abf9f8daf93c695f601a90ab6638cf1d3ceeb4ff80f08",
+    "original_release/results/xhigh_structured_comparison.json": "d7a637b42644098112fa0872569005f3b472e0393c4623991cc6614f91b7f062",
+    "original_release/tests/__init__.py": "00f32811f2250dc3ed1a2927fb0871e0fe1bba8ec6bf9c97376c138cfff2f873",
+    "original_release/tests/test_score_predictions.py": "0720651b5cb7f46620b3e6c262e0d75217ac79f2050fa681a2b3c737bace0977",
+    "original_release/tests/test_score_support_predictions.py": "573d95806ff294416c5c1ddb34c9071c197dad3b622dd45065ee26bafe69ae61",
+    "original_release/tests/test_verify_release.py": "a39f2bcb0d78e649e199818b9134ea5afe708f73bfb92fb5c9a9a0189189871f",
+    "original_release/tools/adversarial_metrics.py": "a6e7331deae9c4ed6455d484e995d591ac04f03085c40915b52812778dc12667",
+    "original_release/tools/build_sha256s.py": "e944e469ca7df1d783616f8608e796f88a41acd535030dc7d9831ac2bfba05a8",
+    "original_release/tools/independent_math_audit.py": "feb63f08e5d4cc07365e78ad25cfde1f2bc33cb02195945b24521263b57bd3fc",
+    "original_release/tools/score_predictions.py": "6280a1a9c1b2479ab332cf5663f84b92b518e68939e7e14357f637cd56e6eef9",
+    "original_release/tools/score_release.py": "7d50b6f3ecfbb7e41668f5a9b778d3679e3c0419bf6ae392356ccc403bafcb74",
+    "original_release/tools/score_support_predictions.py": "441ff98caf462df0e1693f54011c7f3b0a806914297ea0ee11d2af2d20209ca2"
+  },
+  "schema_version": "lemma-portfolio.anonymous-submission.v1",
+  "scope": "Reproducibility of the accompanying paper's saved-response results, benchmark construction and proof-use annotations. Evaluation settings and evidence boundaries are documented separately.",
+  "source_snapshot": "followups/2026-09-05",
+  "verification": "python3 -B verify_all.py; optionally add --paper /path/to/LemmaPortfolio.pdf"
+}

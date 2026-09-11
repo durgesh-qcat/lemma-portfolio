@@ -1,0 +1,1064 @@
+{
+  "schema_version": "lemma-portfolio.evaluation-run.v1",
+  "run_id": "claude_fable_5_xhigh_r1",
+  "evidence_status": "Projection of supplied execution records, not independent authentication of inference or serving configuration.",
+  "responses_directory": "followups/2026-09-05/claude_fable_5_xhigh_r1/responses",
+  "prompt_calls": [
+    {
+      "name": "01",
+      "kind": "direct",
+      "prompt": "original_release/prompts/DIRECT_PROMPTS/01.txt",
+      "prompt_sha256": "febe94397bd43a8a0be9b38d705c08eee2141b4a2ab755d5a46d87596506940c",
+      "prompt_bytes": 33569,
+      "episode_ids": [
+        "MLP4B_0000",
+        "MLP4B_0001",
+        "MLP4B_0002",
+        "MLP4B_0003",
+        "MLP4B_0004"
+      ]
+    },
+    {
+      "name": "02",
+      "kind": "direct",
+      "prompt": "original_release/prompts/DIRECT_PROMPTS/02.txt",
+      "prompt_sha256": "9b736aaa054838df6d04357ab3ffcac70efccdbdbf20f212389600c2216031b4",
+      "prompt_bytes": 34308,
+      "episode_ids": [
+        "MLP4B_0005",
+        "MLP4B_0006",
+        "MLP4B_0007",
+        "MLP4B_0008",
+        "MLP4B_0009"
+      ]
+    },
+    {
+      "name": "03",
+      "kind": "direct",
+      "prompt": "original_release/prompts/DIRECT_PROMPTS/03.txt",
+      "prompt_sha256": "6a79e47946d40e8114af5f609f7e960287ed76f70e891a200f6824fcf7aa1f70",
+      "prompt_bytes": 48071,
+      "episode_ids": [
+        "MLP4B_0010",
+        "MLP4B_0011",
+        "MLP4B_0012",
+        "MLP4B_0013",
+        "MLP4B_0014"
+      ]
+    },
+    {
+      "name": "04",
+      "kind": "direct",
+      "prompt": "original_release/prompts/DIRECT_PROMPTS/04.txt",
+      "prompt_sha256": "e85ce36bf8b82e04592c7c47afd391b0b2e519ee6bd1e6bcd1197bd429dd7f3d",
+      "prompt_bytes": 32588,
+      "episode_ids": [
+        "MLP4B_0015",
+        "MLP4B_0016",
+        "MLP4B_0017",
+        "MLP4B_0018",
+        "MLP4B_0019"
+      ]
+    },
+    {
+      "name": "05",
+      "kind": "direct",
+      "prompt": "original_release/prompts/DIRECT_PROMPTS/05.txt",
+      "prompt_sha256": "942539a45bdbc8eb682bf0df4075ac226fd519be566d83273fe1c0e36b656449",
+      "prompt_bytes": 33128,
+      "episode_ids": [
+        "MLP4B_0020",
+        "MLP4B_0021",
+        "MLP4B_0022",
+        "MLP4B_0023",
+        "MLP4B_0024"
+      ]
+    },
+    {
+      "name": "06",
+      "kind": "direct",
+      "prompt": "original_release/prompts/DIRECT_PROMPTS/06.txt",
+      "prompt_sha256": "376664ae74121b60446ed72fb5801e26ec8db066e52b3097034cc53344e167d9",
+      "prompt_bytes": 31511,
+      "episode_ids": [
+        "MLP4B_0025",
+        "MLP4B_0026",
+        "MLP4B_0027",
+        "MLP4B_0028",
+        "MLP4B_0029"
+      ]
+    },
+    {
+      "name": "07",
+      "kind": "direct",
+      "prompt": "original_release/prompts/DIRECT_PROMPTS/07.txt",
+      "prompt_sha256": "fe0552e4134e2e9f9780055949d4d662459c9e0ca75134fbb4532979206652a4",
+      "prompt_bytes": 35906,
+      "episode_ids": [
+        "MLP4B_0030",
+        "MLP4B_0031",
+        "MLP4B_0032",
+        "MLP4B_0033",
+        "MLP4B_0034"
+      ]
+    },
+    {
+      "name": "08",
+      "kind": "direct",
+      "prompt": "original_release/prompts/DIRECT_PROMPTS/08.txt",
+      "prompt_sha256": "2ee2884b8afdcfc9138abe6e7076ba98a9f26aaf4a3e66fd67eac4d7c97794ae",
+      "prompt_bytes": 40376,
+      "episode_ids": [
+        "MLP4B_0035",
+        "MLP4B_0036",
+        "MLP4B_0037",
+        "MLP4B_0038",
+        "MLP4B_0039"
+      ]
+    },
+    {
+      "name": "09",
+      "kind": "direct",
+      "prompt": "original_release/prompts/DIRECT_PROMPTS/09.txt",
+      "prompt_sha256": "ebb62b772ab44523248c9b512e20525a81b4d26b81610105dcc3303f9eacccb9",
+      "prompt_bytes": 44065,
+      "episode_ids": [
+        "MLP4B_0040",
+        "MLP4B_0041",
+        "MLP4B_0042",
+        "MLP4B_0043",
+        "MLP4B_0044"
+      ]
+    },
+    {
+      "name": "10",
+      "kind": "direct",
+      "prompt": "original_release/prompts/DIRECT_PROMPTS/10.txt",
+      "prompt_sha256": "0bb3074e4eb6fc3bd1d72ca5165572e1b3fe6878fb41b39f64c319f02990a13c",
+      "prompt_bytes": 28779,
+      "episode_ids": [
+        "MLP4B_0045",
+        "MLP4B_0046",
+        "MLP4B_0047",
+        "MLP4B_0048",
+        "MLP4B_0049"
+      ]
+    },
+    {
+      "name": "11",
+      "kind": "direct",
+      "prompt": "original_release/prompts/DIRECT_PROMPTS/11.txt",
+      "prompt_sha256": "c707b901592322b395b616a6a2674fab78d0efc5293bf7f58d18425b63ef8114",
+      "prompt_bytes": 25376,
+      "episode_ids": [
+        "MLP4B_0050",
+        "MLP4B_0051",
+        "MLP4B_0052",
+        "MLP4B_0053",
+        "MLP4B_0054"
+      ]
+    },
+    {
+      "name": "12",
+      "kind": "direct",
+      "prompt": "original_release/prompts/DIRECT_PROMPTS/12.txt",
+      "prompt_sha256": "189850421d75c0d8c9a75a81241986b17b51ad10bab63df284be8e08af325e3d",
+      "prompt_bytes": 39483,
+      "episode_ids": [
+        "MLP4B_0055",
+        "MLP4B_0056",
+        "MLP4B_0057",
+        "MLP4B_0058",
+        "MLP4B_0059"
+      ]
+    }
+  ],
+  "metadata": {
+    "source_member": "followups/2026-09-05/claude_fable_5_xhigh_r1/run_metadata.json",
+    "source_sha256": "0c14929ffbffbb22d0bba91aae4e6d923a466d79e685f1eef14aca6c0018faeb",
+    "removed_fields": [
+      "started_local",
+      "harness.path"
+    ],
+    "record": {
+      "started_utc": "2026-09-05T17:40:06.705088+00:00",
+      "provider": "Anthropic Claude API (api.anthropic.com), Messages API",
+      "model_requested": "claude-fable-5",
+      "visible_mode": "output_config.effort=xhigh; thinking always on (parameter omitted)",
+      "tier": "unknown (organization rate-limit tier not queried)",
+      "session_isolation": "one stateless request per prompt; no prior context",
+      "system_prompt": null,
+      "tools": "none declared",
+      "web_search_browsing_files_memory_connectors": "not available to the model (bare Messages API)",
+      "fallbacks": "disabled (refusals preserved as-is)",
+      "request_params": {
+        "model": "claude-fable-5",
+        "max_tokens": 128000,
+        "output_config": {
+          "effort": "xhigh"
+        }
+      },
+      "sdk": {
+        "package": "anthropic",
+        "version": "1.4.0",
+        "python": "3.14.6",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O"
+      },
+      "harness": {
+        "sha256": "979e3864bf75c612cc0cb27d6d7ad0df724953b33df238b9707fd06ca5eea538"
+      },
+      "released_prompt_manifest_sha256": "029f7695b346ecbfe412c96443b970ac27aa1ab3a82236cb512c9c757669892f",
+      "system_id": "claude_fable_5_xhigh_r1",
+      "display_label": "Claude Fable 5 (Claude API, xhigh)",
+      "calls": [
+        {
+          "name": "01",
+          "kind": "direct",
+          "prompt": "prompts/DIRECT_PROMPTS/01.txt",
+          "prompt_sha256": "febe94397bd43a8a0be9b38d705c08eee2141b4a2ab755d5a46d87596506940c",
+          "prompt_bytes": 33569,
+          "episode_ids": [
+            "MLP4B_0000",
+            "MLP4B_0001",
+            "MLP4B_0002",
+            "MLP4B_0003",
+            "MLP4B_0004"
+          ]
+        },
+        {
+          "name": "02",
+          "kind": "direct",
+          "prompt": "prompts/DIRECT_PROMPTS/02.txt",
+          "prompt_sha256": "9b736aaa054838df6d04357ab3ffcac70efccdbdbf20f212389600c2216031b4",
+          "prompt_bytes": 34308,
+          "episode_ids": [
+            "MLP4B_0005",
+            "MLP4B_0006",
+            "MLP4B_0007",
+            "MLP4B_0008",
+            "MLP4B_0009"
+          ]
+        },
+        {
+          "name": "03",
+          "kind": "direct",
+          "prompt": "prompts/DIRECT_PROMPTS/03.txt",
+          "prompt_sha256": "6a79e47946d40e8114af5f609f7e960287ed76f70e891a200f6824fcf7aa1f70",
+          "prompt_bytes": 48071,
+          "episode_ids": [
+            "MLP4B_0010",
+            "MLP4B_0011",
+            "MLP4B_0012",
+            "MLP4B_0013",
+            "MLP4B_0014"
+          ]
+        },
+        {
+          "name": "04",
+          "kind": "direct",
+          "prompt": "prompts/DIRECT_PROMPTS/04.txt",
+          "prompt_sha256": "e85ce36bf8b82e04592c7c47afd391b0b2e519ee6bd1e6bcd1197bd429dd7f3d",
+          "prompt_bytes": 32588,
+          "episode_ids": [
+            "MLP4B_0015",
+            "MLP4B_0016",
+            "MLP4B_0017",
+            "MLP4B_0018",
+            "MLP4B_0019"
+          ]
+        },
+        {
+          "name": "05",
+          "kind": "direct",
+          "prompt": "prompts/DIRECT_PROMPTS/05.txt",
+          "prompt_sha256": "942539a45bdbc8eb682bf0df4075ac226fd519be566d83273fe1c0e36b656449",
+          "prompt_bytes": 33128,
+          "episode_ids": [
+            "MLP4B_0020",
+            "MLP4B_0021",
+            "MLP4B_0022",
+            "MLP4B_0023",
+            "MLP4B_0024"
+          ]
+        },
+        {
+          "name": "06",
+          "kind": "direct",
+          "prompt": "prompts/DIRECT_PROMPTS/06.txt",
+          "prompt_sha256": "376664ae74121b60446ed72fb5801e26ec8db066e52b3097034cc53344e167d9",
+          "prompt_bytes": 31511,
+          "episode_ids": [
+            "MLP4B_0025",
+            "MLP4B_0026",
+            "MLP4B_0027",
+            "MLP4B_0028",
+            "MLP4B_0029"
+          ]
+        },
+        {
+          "name": "07",
+          "kind": "direct",
+          "prompt": "prompts/DIRECT_PROMPTS/07.txt",
+          "prompt_sha256": "fe0552e4134e2e9f9780055949d4d662459c9e0ca75134fbb4532979206652a4",
+          "prompt_bytes": 35906,
+          "episode_ids": [
+            "MLP4B_0030",
+            "MLP4B_0031",
+            "MLP4B_0032",
+            "MLP4B_0033",
+            "MLP4B_0034"
+          ]
+        },
+        {
+          "name": "08",
+          "kind": "direct",
+          "prompt": "prompts/DIRECT_PROMPTS/08.txt",
+          "prompt_sha256": "2ee2884b8afdcfc9138abe6e7076ba98a9f26aaf4a3e66fd67eac4d7c97794ae",
+          "prompt_bytes": 40376,
+          "episode_ids": [
+            "MLP4B_0035",
+            "MLP4B_0036",
+            "MLP4B_0037",
+            "MLP4B_0038",
+            "MLP4B_0039"
+          ]
+        },
+        {
+          "name": "09",
+          "kind": "direct",
+          "prompt": "prompts/DIRECT_PROMPTS/09.txt",
+          "prompt_sha256": "ebb62b772ab44523248c9b512e20525a81b4d26b81610105dcc3303f9eacccb9",
+          "prompt_bytes": 44065,
+          "episode_ids": [
+            "MLP4B_0040",
+            "MLP4B_0041",
+            "MLP4B_0042",
+            "MLP4B_0043",
+            "MLP4B_0044"
+          ]
+        },
+        {
+          "name": "10",
+          "kind": "direct",
+          "prompt": "prompts/DIRECT_PROMPTS/10.txt",
+          "prompt_sha256": "0bb3074e4eb6fc3bd1d72ca5165572e1b3fe6878fb41b39f64c319f02990a13c",
+          "prompt_bytes": 28779,
+          "episode_ids": [
+            "MLP4B_0045",
+            "MLP4B_0046",
+            "MLP4B_0047",
+            "MLP4B_0048",
+            "MLP4B_0049"
+          ]
+        },
+        {
+          "name": "11",
+          "kind": "direct",
+          "prompt": "prompts/DIRECT_PROMPTS/11.txt",
+          "prompt_sha256": "c707b901592322b395b616a6a2674fab78d0efc5293bf7f58d18425b63ef8114",
+          "prompt_bytes": 25376,
+          "episode_ids": [
+            "MLP4B_0050",
+            "MLP4B_0051",
+            "MLP4B_0052",
+            "MLP4B_0053",
+            "MLP4B_0054"
+          ]
+        },
+        {
+          "name": "12",
+          "kind": "direct",
+          "prompt": "prompts/DIRECT_PROMPTS/12.txt",
+          "prompt_sha256": "189850421d75c0d8c9a75a81241986b17b51ad10bab63df284be8e08af325e3d",
+          "prompt_bytes": 39483,
+          "episode_ids": [
+            "MLP4B_0055",
+            "MLP4B_0056",
+            "MLP4B_0057",
+            "MLP4B_0058",
+            "MLP4B_0059"
+          ]
+        }
+      ],
+      "resumes": [
+        {
+          "resumed_utc": "2026-09-05T18:40:04.069687+00:00",
+          "harness_sha256": "46aca1c4c541d6e3687f7b416bb50bb062165d27e7ed59a152fa99c4f3c1b638",
+          "harness_copy": "harness/run_claude_direct.46aca1c4.py"
+        }
+      ]
+    }
+  },
+  "receipts": {
+    "source_member": "followups/2026-09-05/claude_fable_5_xhigh_r1/CALL_RECEIPTS.json",
+    "source_sha256": "244797575ccbe353081f7ae892d3032cbdbd92cb8f2aa0c55f1e6ab3cf9a9c86",
+    "removed_fields": [
+      "[0].message_id",
+      "[0].request_id",
+      "[1].message_id",
+      "[1].request_id",
+      "[2].message_id",
+      "[2].request_id",
+      "[3].message_id",
+      "[3].request_id",
+      "[4].message_id",
+      "[4].request_id",
+      "[5].message_id",
+      "[5].request_id",
+      "[6].message_id",
+      "[6].request_id",
+      "[7].message_id",
+      "[7].request_id",
+      "[8].message_id",
+      "[8].request_id",
+      "[9].attempts[0].error.request_id",
+      "[9].fatal_error.request_id",
+      "[10].message_id",
+      "[10].request_id",
+      "[11].message_id",
+      "[11].request_id",
+      "[12].message_id",
+      "[12].request_id"
+    ],
+    "record": [
+      {
+        "call": "01",
+        "kind": "direct",
+        "model_requested": "claude-fable-5",
+        "effort": "xhigh",
+        "prompt": "prompts/DIRECT_PROMPTS/01.txt",
+        "prompt_sha256": "febe94397bd43a8a0be9b38d705c08eee2141b4a2ab755d5a46d87596506940c",
+        "episode_ids": [
+          "MLP4B_0000",
+          "MLP4B_0001",
+          "MLP4B_0002",
+          "MLP4B_0003",
+          "MLP4B_0004"
+        ],
+        "started_utc": "2026-09-05T17:40:09.757985+00:00",
+        "ended_utc": "2026-09-05T17:46:02.075118+00:00",
+        "wall_seconds": 352.334,
+        "attempts": [
+          {
+            "attempt": 1,
+            "started_utc": "2026-09-05T17:40:09.757993+00:00",
+            "ended_utc": "2026-09-05T17:46:02.074980+00:00",
+            "outcome": "response"
+          }
+        ],
+        "attempt_count": 1,
+        "completed": true,
+        "model_returned": "claude-fable-5",
+        "stop_reason": "end_turn",
+        "stop_details": null,
+        "content_block_types": [
+          "thinking",
+          "text"
+        ],
+        "tool_use_block_count": 0,
+        "usage": {
+          "input_tokens": 16796,
+          "output_tokens": 33325,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0
+        },
+        "response_file": "responses/01.json",
+        "response_chars": 202,
+        "response_sha256": "dfd73e899d060e4d8f1d783bd19b2a8c2ddbb236015f986b70068c0eb770113e",
+        "valid_json_object": true,
+        "raw_api_sha256": "a8a0544e630e2d92adf7d73ee8213066f0c74395c1df5f534dcaed94cf895ea0"
+      },
+      {
+        "call": "02",
+        "kind": "direct",
+        "model_requested": "claude-fable-5",
+        "effort": "xhigh",
+        "prompt": "prompts/DIRECT_PROMPTS/02.txt",
+        "prompt_sha256": "9b736aaa054838df6d04357ab3ffcac70efccdbdbf20f212389600c2216031b4",
+        "episode_ids": [
+          "MLP4B_0005",
+          "MLP4B_0006",
+          "MLP4B_0007",
+          "MLP4B_0008",
+          "MLP4B_0009"
+        ],
+        "started_utc": "2026-09-05T17:46:02.077884+00:00",
+        "ended_utc": "2026-09-05T17:50:57.810932+00:00",
+        "wall_seconds": 295.735,
+        "attempts": [
+          {
+            "attempt": 1,
+            "started_utc": "2026-09-05T17:46:02.077900+00:00",
+            "ended_utc": "2026-09-05T17:50:57.810901+00:00",
+            "outcome": "response"
+          }
+        ],
+        "attempt_count": 1,
+        "completed": true,
+        "model_returned": "claude-fable-5",
+        "stop_reason": "end_turn",
+        "stop_details": null,
+        "content_block_types": [
+          "thinking",
+          "text"
+        ],
+        "tool_use_block_count": 0,
+        "usage": {
+          "input_tokens": 17523,
+          "output_tokens": 28425,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0
+        },
+        "response_file": "responses/02.json",
+        "response_chars": 202,
+        "response_sha256": "9b8a964eb3f0979568c8c5eefdea04c08b9381680e9db055b0179060d118201e",
+        "valid_json_object": true,
+        "raw_api_sha256": "bebbbee938fa712de0594f5d9edf86d9ffa088ca436be2fb7c3d243c5b692b8e"
+      },
+      {
+        "call": "03",
+        "kind": "direct",
+        "model_requested": "claude-fable-5",
+        "effort": "xhigh",
+        "prompt": "prompts/DIRECT_PROMPTS/03.txt",
+        "prompt_sha256": "6a79e47946d40e8114af5f609f7e960287ed76f70e891a200f6824fcf7aa1f70",
+        "episode_ids": [
+          "MLP4B_0010",
+          "MLP4B_0011",
+          "MLP4B_0012",
+          "MLP4B_0013",
+          "MLP4B_0014"
+        ],
+        "started_utc": "2026-09-05T17:50:57.814404+00:00",
+        "ended_utc": "2026-09-05T17:56:56.506862+00:00",
+        "wall_seconds": 358.695,
+        "attempts": [
+          {
+            "attempt": 1,
+            "started_utc": "2026-09-05T17:50:57.814419+00:00",
+            "ended_utc": "2026-09-05T17:56:56.506759+00:00",
+            "outcome": "response"
+          }
+        ],
+        "attempt_count": 1,
+        "completed": true,
+        "model_returned": "claude-fable-5",
+        "stop_reason": "end_turn",
+        "stop_details": null,
+        "content_block_types": [
+          "thinking",
+          "text"
+        ],
+        "tool_use_block_count": 0,
+        "usage": {
+          "input_tokens": 25963,
+          "output_tokens": 34103,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0
+        },
+        "response_file": "responses/03.json",
+        "response_chars": 202,
+        "response_sha256": "db5cb42555836b1557f331a769f0dc1fe463a6e9eb0762b5a6698b3ee92c9a84",
+        "valid_json_object": true,
+        "raw_api_sha256": "6d04e69df704734049588bbdbc8c4667ce2dd4e540f4db6e56ac77cf8fbfb09a"
+      },
+      {
+        "call": "04",
+        "kind": "direct",
+        "model_requested": "claude-fable-5",
+        "effort": "xhigh",
+        "prompt": "prompts/DIRECT_PROMPTS/04.txt",
+        "prompt_sha256": "e85ce36bf8b82e04592c7c47afd391b0b2e519ee6bd1e6bcd1197bd429dd7f3d",
+        "episode_ids": [
+          "MLP4B_0015",
+          "MLP4B_0016",
+          "MLP4B_0017",
+          "MLP4B_0018",
+          "MLP4B_0019"
+        ],
+        "started_utc": "2026-09-05T17:56:56.510406+00:00",
+        "ended_utc": "2026-09-05T18:01:46.510606+00:00",
+        "wall_seconds": 290.003,
+        "attempts": [
+          {
+            "attempt": 1,
+            "started_utc": "2026-09-05T17:56:56.510433+00:00",
+            "ended_utc": "2026-09-05T18:01:46.510568+00:00",
+            "outcome": "response"
+          }
+        ],
+        "attempt_count": 1,
+        "completed": true,
+        "model_returned": "claude-fable-5",
+        "stop_reason": "end_turn",
+        "stop_details": null,
+        "content_block_types": [
+          "thinking",
+          "text"
+        ],
+        "tool_use_block_count": 0,
+        "usage": {
+          "input_tokens": 17195,
+          "output_tokens": 28246,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0
+        },
+        "response_file": "responses/04.json",
+        "response_chars": 202,
+        "response_sha256": "566a33c68a7eb47aefc6e9a43f0703098778eaea61d1072d5887da61b1f6e7bb",
+        "valid_json_object": true,
+        "raw_api_sha256": "c6014adac5084155bfec2791fe11eaca3937a383ba1a8d8144e470c8a2aee957"
+      },
+      {
+        "call": "05",
+        "kind": "direct",
+        "model_requested": "claude-fable-5",
+        "effort": "xhigh",
+        "prompt": "prompts/DIRECT_PROMPTS/05.txt",
+        "prompt_sha256": "942539a45bdbc8eb682bf0df4075ac226fd519be566d83273fe1c0e36b656449",
+        "episode_ids": [
+          "MLP4B_0020",
+          "MLP4B_0021",
+          "MLP4B_0022",
+          "MLP4B_0023",
+          "MLP4B_0024"
+        ],
+        "started_utc": "2026-09-05T18:01:46.514587+00:00",
+        "ended_utc": "2026-09-05T18:07:36.890431+00:00",
+        "wall_seconds": 350.379,
+        "attempts": [
+          {
+            "attempt": 1,
+            "started_utc": "2026-09-05T18:01:46.514623+00:00",
+            "ended_utc": "2026-09-05T18:07:36.890392+00:00",
+            "outcome": "response"
+          }
+        ],
+        "attempt_count": 1,
+        "completed": true,
+        "model_returned": "claude-fable-5",
+        "stop_reason": "end_turn",
+        "stop_details": null,
+        "content_block_types": [
+          "thinking",
+          "text"
+        ],
+        "tool_use_block_count": 0,
+        "usage": {
+          "input_tokens": 16833,
+          "output_tokens": 33179,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0
+        },
+        "response_file": "responses/05.json",
+        "response_chars": 202,
+        "response_sha256": "cb903bb790c1f2f677ce577dec2e03c050b2f5bf1fc0ca9a23cb678c90375969",
+        "valid_json_object": true,
+        "raw_api_sha256": "2fe4d38fa395832dfaccf184d0ec5fd0f5343a0bfc7ce9bcfb8bcf4bb5cf1afb"
+      },
+      {
+        "call": "06",
+        "kind": "direct",
+        "model_requested": "claude-fable-5",
+        "effort": "xhigh",
+        "prompt": "prompts/DIRECT_PROMPTS/06.txt",
+        "prompt_sha256": "376664ae74121b60446ed72fb5801e26ec8db066e52b3097034cc53344e167d9",
+        "episode_ids": [
+          "MLP4B_0025",
+          "MLP4B_0026",
+          "MLP4B_0027",
+          "MLP4B_0028",
+          "MLP4B_0029"
+        ],
+        "started_utc": "2026-09-05T18:07:36.894407+00:00",
+        "ended_utc": "2026-09-05T18:14:36.953695+00:00",
+        "wall_seconds": 420.028,
+        "attempts": [
+          {
+            "attempt": 1,
+            "started_utc": "2026-09-05T18:07:36.894448+00:00",
+            "ended_utc": "2026-09-05T18:14:36.953660+00:00",
+            "outcome": "response"
+          }
+        ],
+        "attempt_count": 1,
+        "completed": true,
+        "model_returned": "claude-fable-5",
+        "stop_reason": "end_turn",
+        "stop_details": null,
+        "content_block_types": [
+          "thinking",
+          "text"
+        ],
+        "tool_use_block_count": 0,
+        "usage": {
+          "input_tokens": 16016,
+          "output_tokens": 40281,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0
+        },
+        "response_file": "responses/06.json",
+        "response_chars": 202,
+        "response_sha256": "45e4ed4cb5c75b63d6dcf4875398e9a54401911815758b622fe231970417f437",
+        "valid_json_object": true,
+        "raw_api_sha256": "f5a3441ed8d0680eeaa26cfc3f78fafab6ed5d9327a1a1dd7089c7573ebd8674"
+      },
+      {
+        "call": "07",
+        "kind": "direct",
+        "model_requested": "claude-fable-5",
+        "effort": "xhigh",
+        "prompt": "prompts/DIRECT_PROMPTS/07.txt",
+        "prompt_sha256": "fe0552e4134e2e9f9780055949d4d662459c9e0ca75134fbb4532979206652a4",
+        "episode_ids": [
+          "MLP4B_0030",
+          "MLP4B_0031",
+          "MLP4B_0032",
+          "MLP4B_0033",
+          "MLP4B_0034"
+        ],
+        "started_utc": "2026-09-05T18:14:36.956680+00:00",
+        "ended_utc": "2026-09-05T18:19:31.001139+00:00",
+        "wall_seconds": 294.042,
+        "attempts": [
+          {
+            "attempt": 1,
+            "started_utc": "2026-09-05T18:14:36.956707+00:00",
+            "ended_utc": "2026-09-05T18:19:31.001105+00:00",
+            "outcome": "response"
+          }
+        ],
+        "attempt_count": 1,
+        "completed": true,
+        "model_returned": "claude-fable-5",
+        "stop_reason": "end_turn",
+        "stop_details": null,
+        "content_block_types": [
+          "thinking",
+          "text"
+        ],
+        "tool_use_block_count": 0,
+        "usage": {
+          "input_tokens": 18256,
+          "output_tokens": 28500,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0
+        },
+        "response_file": "responses/07.json",
+        "response_chars": 202,
+        "response_sha256": "035bf2df0acb7e19014c07e6c94ac19e1125e57e03bcf18183999d1f7873695c",
+        "valid_json_object": true,
+        "raw_api_sha256": "777b1238ad567450908e8e6c6c3f0e4400c4ed6344eea6024fc37aceb1a64483"
+      },
+      {
+        "call": "08",
+        "kind": "direct",
+        "model_requested": "claude-fable-5",
+        "effort": "xhigh",
+        "prompt": "prompts/DIRECT_PROMPTS/08.txt",
+        "prompt_sha256": "2ee2884b8afdcfc9138abe6e7076ba98a9f26aaf4a3e66fd67eac4d7c97794ae",
+        "episode_ids": [
+          "MLP4B_0035",
+          "MLP4B_0036",
+          "MLP4B_0037",
+          "MLP4B_0038",
+          "MLP4B_0039"
+        ],
+        "started_utc": "2026-09-05T18:19:31.006151+00:00",
+        "ended_utc": "2026-09-05T18:25:53.059126+00:00",
+        "wall_seconds": 382.052,
+        "attempts": [
+          {
+            "attempt": 1,
+            "started_utc": "2026-09-05T18:19:31.006179+00:00",
+            "ended_utc": "2026-09-05T18:25:53.059092+00:00",
+            "outcome": "response"
+          }
+        ],
+        "attempt_count": 1,
+        "completed": true,
+        "model_returned": "claude-fable-5",
+        "stop_reason": "end_turn",
+        "stop_details": null,
+        "content_block_types": [
+          "thinking",
+          "text"
+        ],
+        "tool_use_block_count": 0,
+        "usage": {
+          "input_tokens": 21239,
+          "output_tokens": 37138,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0
+        },
+        "response_file": "responses/08.json",
+        "response_chars": 202,
+        "response_sha256": "18fb218d3e6857f3f88d8715be2360cea7614c302399520b176e693959820f3c",
+        "valid_json_object": true,
+        "raw_api_sha256": "11f4c8cd243ff8dbbdd209ba17450d7e8b4808112991d6c11b5239c71e7b63f1"
+      },
+      {
+        "call": "09",
+        "kind": "direct",
+        "model_requested": "claude-fable-5",
+        "effort": "xhigh",
+        "prompt": "prompts/DIRECT_PROMPTS/09.txt",
+        "prompt_sha256": "ebb62b772ab44523248c9b512e20525a81b4d26b81610105dcc3303f9eacccb9",
+        "episode_ids": [
+          "MLP4B_0040",
+          "MLP4B_0041",
+          "MLP4B_0042",
+          "MLP4B_0043",
+          "MLP4B_0044"
+        ],
+        "started_utc": "2026-09-05T18:25:53.062749+00:00",
+        "ended_utc": "2026-09-05T18:36:24.582378+00:00",
+        "wall_seconds": 631.517,
+        "attempts": [
+          {
+            "attempt": 1,
+            "started_utc": "2026-09-05T18:25:53.062794+00:00",
+            "ended_utc": "2026-09-05T18:36:24.582317+00:00",
+            "outcome": "response"
+          }
+        ],
+        "attempt_count": 1,
+        "completed": true,
+        "model_returned": "claude-fable-5",
+        "stop_reason": "end_turn",
+        "stop_details": null,
+        "content_block_types": [
+          "thinking",
+          "text"
+        ],
+        "tool_use_block_count": 0,
+        "usage": {
+          "input_tokens": 22859,
+          "output_tokens": 58154,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0
+        },
+        "response_file": "responses/09.json",
+        "response_chars": 202,
+        "response_sha256": "9723dbe5f128d97e761979245703b942bfe6eddd34f3b97849e6c183ce6ccfd9",
+        "valid_json_object": true,
+        "raw_api_sha256": "76cdaf0441fee5e9eadd8121405168f95400bbe0a2900dbe549a347ca84d7446"
+      },
+      {
+        "call": "10",
+        "kind": "direct",
+        "model_requested": "claude-fable-5",
+        "effort": "xhigh",
+        "prompt": "prompts/DIRECT_PROMPTS/10.txt",
+        "prompt_sha256": "0bb3074e4eb6fc3bd1d72ca5165572e1b3fe6878fb41b39f64c319f02990a13c",
+        "episode_ids": [
+          "MLP4B_0045",
+          "MLP4B_0046",
+          "MLP4B_0047",
+          "MLP4B_0048",
+          "MLP4B_0049"
+        ],
+        "started_utc": "2026-09-05T18:36:24.586328+00:00",
+        "ended_utc": "2026-09-05T18:38:10.349189+00:00",
+        "wall_seconds": 105.762,
+        "attempts": [
+          {
+            "attempt": 1,
+            "started_utc": "2026-09-05T18:36:24.586355+00:00",
+            "ended_utc": "2026-09-05T18:38:10.348330+00:00",
+            "outcome": "api_error",
+            "error": {
+              "type": "APIStatusError",
+              "message": "{'type': 'error', 'error': {'details': None, 'type': 'overloaded_error', 'message': 'Overloaded'}, 'request_id': '<provider-request-id-omitted>'}",
+              "status_code": 200
+            }
+          }
+        ],
+        "attempt_count": 1,
+        "completed": false,
+        "fatal_error": {
+          "type": "APIStatusError",
+          "message": "{'type': 'error', 'error': {'details': None, 'type': 'overloaded_error', 'message': 'Overloaded'}, 'request_id': '<provider-request-id-omitted>'}",
+          "status_code": 200
+        }
+      },
+      {
+        "call": "10",
+        "kind": "direct",
+        "model_requested": "claude-fable-5",
+        "effort": "xhigh",
+        "prompt": "prompts/DIRECT_PROMPTS/10.txt",
+        "prompt_sha256": "0bb3074e4eb6fc3bd1d72ca5165572e1b3fe6878fb41b39f64c319f02990a13c",
+        "episode_ids": [
+          "MLP4B_0045",
+          "MLP4B_0046",
+          "MLP4B_0047",
+          "MLP4B_0048",
+          "MLP4B_0049"
+        ],
+        "started_utc": "2026-09-05T18:40:04.096617+00:00",
+        "ended_utc": "2026-09-05T18:46:22.585845+00:00",
+        "wall_seconds": 378.492,
+        "attempts": [
+          {
+            "attempt": 1,
+            "started_utc": "2026-09-05T18:40:04.096622+00:00",
+            "ended_utc": "2026-09-05T18:46:22.585769+00:00",
+            "outcome": "response"
+          }
+        ],
+        "attempt_count": 1,
+        "completed": true,
+        "model_returned": "claude-fable-5",
+        "stop_reason": "end_turn",
+        "stop_details": null,
+        "content_block_types": [
+          "thinking",
+          "text"
+        ],
+        "tool_use_block_count": 0,
+        "usage": {
+          "input_tokens": 14477,
+          "output_tokens": 35795,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0
+        },
+        "response_file": "responses/10.json",
+        "response_chars": 202,
+        "response_sha256": "78054a7646cc06ae4a473614d7a59d2b41cbf2637b7f60923110168e00ab85e5",
+        "valid_json_object": true,
+        "raw_api_sha256": "050cf33cd2d72e297c427d3c950c8b647094cb591404c2a901121e959885d957"
+      },
+      {
+        "call": "11",
+        "kind": "direct",
+        "model_requested": "claude-fable-5",
+        "effort": "xhigh",
+        "prompt": "prompts/DIRECT_PROMPTS/11.txt",
+        "prompt_sha256": "c707b901592322b395b616a6a2674fab78d0efc5293bf7f58d18425b63ef8114",
+        "episode_ids": [
+          "MLP4B_0050",
+          "MLP4B_0051",
+          "MLP4B_0052",
+          "MLP4B_0053",
+          "MLP4B_0054"
+        ],
+        "started_utc": "2026-09-05T18:46:22.589798+00:00",
+        "ended_utc": "2026-09-05T18:52:38.165848+00:00",
+        "wall_seconds": 375.578,
+        "attempts": [
+          {
+            "attempt": 1,
+            "started_utc": "2026-09-05T18:46:22.589820+00:00",
+            "ended_utc": "2026-09-05T18:52:38.165820+00:00",
+            "outcome": "response"
+          }
+        ],
+        "attempt_count": 1,
+        "completed": true,
+        "model_returned": "claude-fable-5",
+        "stop_reason": "end_turn",
+        "stop_details": null,
+        "content_block_types": [
+          "thinking",
+          "text"
+        ],
+        "tool_use_block_count": 0,
+        "usage": {
+          "input_tokens": 12579,
+          "output_tokens": 35913,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0
+        },
+        "response_file": "responses/11.json",
+        "response_chars": 202,
+        "response_sha256": "d73b1931ffd2bd1c851dec0bdab078f5727b63cfd8310a6c4fbbccc1c521461f",
+        "valid_json_object": true,
+        "raw_api_sha256": "0eec7b762fc9e2adc2c587a1c21c263b3b6f9a8f9943cbe43c2eb96e7bc62295"
+      },
+      {
+        "call": "12",
+        "kind": "direct",
+        "model_requested": "claude-fable-5",
+        "effort": "xhigh",
+        "prompt": "prompts/DIRECT_PROMPTS/12.txt",
+        "prompt_sha256": "189850421d75c0d8c9a75a81241986b17b51ad10bab63df284be8e08af325e3d",
+        "episode_ids": [
+          "MLP4B_0055",
+          "MLP4B_0056",
+          "MLP4B_0057",
+          "MLP4B_0058",
+          "MLP4B_0059"
+        ],
+        "started_utc": "2026-09-05T18:52:38.173528+00:00",
+        "ended_utc": "2026-09-05T18:58:06.695347+00:00",
+        "wall_seconds": 328.521,
+        "attempts": [
+          {
+            "attempt": 1,
+            "started_utc": "2026-09-05T18:52:38.173548+00:00",
+            "ended_utc": "2026-09-05T18:58:06.695315+00:00",
+            "outcome": "response"
+          }
+        ],
+        "attempt_count": 1,
+        "completed": true,
+        "model_returned": "claude-fable-5",
+        "stop_reason": "end_turn",
+        "stop_details": null,
+        "content_block_types": [
+          "thinking",
+          "text"
+        ],
+        "tool_use_block_count": 0,
+        "usage": {
+          "input_tokens": 21313,
+          "output_tokens": 30559,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0
+        },
+        "response_file": "responses/12.json",
+        "response_chars": 202,
+        "response_sha256": "ac948cd0ce45b65053b0c136c78b7b64766ee719cfd67b4d7a0b265a9d63a06c",
+        "valid_json_object": true,
+        "raw_api_sha256": "d6fc2f7218ef035abd68eae910ef31e9d4a3e5bd8e77d8151fca4f5dec880c9d"
+      }
+    ]
+  },
+  "completion": {
+    "source_member": "followups/2026-09-05/claude_fable_5_xhigh_r1/RUN_COMPLETED.json",
+    "source_sha256": "c1688d0ad9b702bdcf53c903d60979e79044298650ff170ab51e18057513ad3c",
+    "removed_fields": [
+      "ended_local"
+    ],
+    "record": {
+      "ended_utc": "2026-09-05T18:58:06.697839+00:00",
+      "call_count": 12,
+      "all_twelve_completed": true,
+      "wall_seconds_this_invocation": 1082.605,
+      "sum_call_wall_seconds": 4457.376,
+      "usage_totals": {
+        "input_tokens": 221049,
+        "output_tokens": 423618,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0
+      },
+      "stop_reasons": {
+        "10": "end_turn",
+        "11": "end_turn",
+        "12": "end_turn",
+        "01": "end_turn",
+        "02": "end_turn",
+        "03": "end_turn",
+        "04": "end_turn",
+        "05": "end_turn",
+        "06": "end_turn",
+        "07": "end_turn",
+        "08": "end_turn",
+        "09": "end_turn"
+      },
+      "valid_json_count": 12,
+      "tool_use_blocks_total": 0
+    }
+  }
+}

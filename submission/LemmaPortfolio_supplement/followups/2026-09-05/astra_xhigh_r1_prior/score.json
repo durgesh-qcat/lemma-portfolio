@@ -1,0 +1,916 @@
+{
+  "summary": {
+    "exact_optimal": 27,
+    "total": 60,
+    "exact_optimal_percentage": 45,
+    "valid": 60,
+    "valid_percentage": 100,
+    "achieved_target_coverage": 328,
+    "target_count": 480,
+    "target_coverage_percentage": 68.33333333333333,
+    "mean_oracle_normalized_coverage_percentage": 87.42063492063491,
+    "selected_edge_recall_percentage": 42.13759213759214
+  },
+  "per_item": [
+    {
+      "episode_id": "MLP4B_0000",
+      "selected": [
+        "C01",
+        "C10",
+        "C15"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 5,
+      "optimal_coverage": 7,
+      "normalized_coverage": 0.7142857142857143,
+      "selected_edges": 5,
+      "hidden_edges": 19
+    },
+    {
+      "episode_id": "MLP4B_0001",
+      "selected": [
+        "C08",
+        "C09",
+        "C14"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 6,
+      "optimal_coverage": 7,
+      "normalized_coverage": 0.8571428571428571,
+      "selected_edges": 6,
+      "hidden_edges": 14
+    },
+    {
+      "episode_id": "MLP4B_0002",
+      "selected": [
+        "C06",
+        "C15",
+        "C16"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 6,
+      "optimal_coverage": 7,
+      "normalized_coverage": 0.8571428571428571,
+      "selected_edges": 7,
+      "hidden_edges": 14
+    },
+    {
+      "episode_id": "MLP4B_0003",
+      "selected": [
+        "C05",
+        "C13",
+        "C16"
+      ],
+      "valid": true,
+      "optimal": true,
+      "coverage": 6,
+      "optimal_coverage": 6,
+      "normalized_coverage": 1,
+      "selected_edges": 6,
+      "hidden_edges": 16
+    },
+    {
+      "episode_id": "MLP4B_0004",
+      "selected": [
+        "C01",
+        "C04",
+        "C16"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 5,
+      "optimal_coverage": 6,
+      "normalized_coverage": 0.8333333333333334,
+      "selected_edges": 5,
+      "hidden_edges": 13
+    },
+    {
+      "episode_id": "MLP4B_0005",
+      "selected": [
+        "C05",
+        "C12",
+        "C14"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 5,
+      "optimal_coverage": 6,
+      "normalized_coverage": 0.8333333333333334,
+      "selected_edges": 5,
+      "hidden_edges": 15
+    },
+    {
+      "episode_id": "MLP4B_0006",
+      "selected": [
+        "C06",
+        "C07",
+        "C13"
+      ],
+      "valid": true,
+      "optimal": true,
+      "coverage": 6,
+      "optimal_coverage": 6,
+      "normalized_coverage": 1,
+      "selected_edges": 6,
+      "hidden_edges": 11
+    },
+    {
+      "episode_id": "MLP4B_0007",
+      "selected": [
+        "C03",
+        "C09",
+        "C10"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 5,
+      "optimal_coverage": 6,
+      "normalized_coverage": 0.8333333333333334,
+      "selected_edges": 6,
+      "hidden_edges": 16
+    },
+    {
+      "episode_id": "MLP4B_0008",
+      "selected": [
+        "C05",
+        "C13",
+        "C16"
+      ],
+      "valid": true,
+      "optimal": true,
+      "coverage": 6,
+      "optimal_coverage": 6,
+      "normalized_coverage": 1,
+      "selected_edges": 6,
+      "hidden_edges": 11
+    },
+    {
+      "episode_id": "MLP4B_0009",
+      "selected": [
+        "C03",
+        "C08",
+        "C16"
+      ],
+      "valid": true,
+      "optimal": true,
+      "coverage": 6,
+      "optimal_coverage": 6,
+      "normalized_coverage": 1,
+      "selected_edges": 6,
+      "hidden_edges": 12
+    },
+    {
+      "episode_id": "MLP4B_0010",
+      "selected": [
+        "C02",
+        "C12",
+        "C15"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 4,
+      "optimal_coverage": 6,
+      "normalized_coverage": 0.6666666666666666,
+      "selected_edges": 4,
+      "hidden_edges": 12
+    },
+    {
+      "episode_id": "MLP4B_0011",
+      "selected": [
+        "C03",
+        "C11",
+        "C15"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 5,
+      "optimal_coverage": 6,
+      "normalized_coverage": 0.8333333333333334,
+      "selected_edges": 5,
+      "hidden_edges": 18
+    },
+    {
+      "episode_id": "MLP4B_0012",
+      "selected": [
+        "C02",
+        "C08",
+        "C13"
+      ],
+      "valid": true,
+      "optimal": true,
+      "coverage": 6,
+      "optimal_coverage": 6,
+      "normalized_coverage": 1,
+      "selected_edges": 6,
+      "hidden_edges": 15
+    },
+    {
+      "episode_id": "MLP4B_0013",
+      "selected": [
+        "C01",
+        "C11",
+        "C14"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 5,
+      "optimal_coverage": 6,
+      "normalized_coverage": 0.8333333333333334,
+      "selected_edges": 6,
+      "hidden_edges": 13
+    },
+    {
+      "episode_id": "MLP4B_0014",
+      "selected": [
+        "C01",
+        "C04",
+        "C07"
+      ],
+      "valid": true,
+      "optimal": true,
+      "coverage": 6,
+      "optimal_coverage": 6,
+      "normalized_coverage": 1,
+      "selected_edges": 6,
+      "hidden_edges": 17
+    },
+    {
+      "episode_id": "MLP4B_0015",
+      "selected": [
+        "C08",
+        "C12",
+        "C14"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 5,
+      "optimal_coverage": 6,
+      "normalized_coverage": 0.8333333333333334,
+      "selected_edges": 6,
+      "hidden_edges": 15
+    },
+    {
+      "episode_id": "MLP4B_0016",
+      "selected": [
+        "C01",
+        "C02",
+        "C10"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 5,
+      "optimal_coverage": 6,
+      "normalized_coverage": 0.8333333333333334,
+      "selected_edges": 5,
+      "hidden_edges": 13
+    },
+    {
+      "episode_id": "MLP4B_0017",
+      "selected": [
+        "C03",
+        "C15",
+        "C16"
+      ],
+      "valid": true,
+      "optimal": true,
+      "coverage": 6,
+      "optimal_coverage": 6,
+      "normalized_coverage": 1,
+      "selected_edges": 6,
+      "hidden_edges": 14
+    },
+    {
+      "episode_id": "MLP4B_0018",
+      "selected": [
+        "C11",
+        "C15",
+        "C16"
+      ],
+      "valid": true,
+      "optimal": true,
+      "coverage": 6,
+      "optimal_coverage": 6,
+      "normalized_coverage": 1,
+      "selected_edges": 6,
+      "hidden_edges": 14
+    },
+    {
+      "episode_id": "MLP4B_0019",
+      "selected": [
+        "C04",
+        "C13",
+        "C16"
+      ],
+      "valid": true,
+      "optimal": true,
+      "coverage": 6,
+      "optimal_coverage": 6,
+      "normalized_coverage": 1,
+      "selected_edges": 6,
+      "hidden_edges": 18
+    },
+    {
+      "episode_id": "MLP4B_0020",
+      "selected": [
+        "C03",
+        "C14",
+        "C16"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 4,
+      "optimal_coverage": 6,
+      "normalized_coverage": 0.6666666666666666,
+      "selected_edges": 4,
+      "hidden_edges": 11
+    },
+    {
+      "episode_id": "MLP4B_0021",
+      "selected": [
+        "C08",
+        "C10",
+        "C14"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 4,
+      "optimal_coverage": 6,
+      "normalized_coverage": 0.6666666666666666,
+      "selected_edges": 4,
+      "hidden_edges": 15
+    },
+    {
+      "episode_id": "MLP4B_0022",
+      "selected": [
+        "C05",
+        "C13",
+        "C15"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 4,
+      "optimal_coverage": 7,
+      "normalized_coverage": 0.5714285714285714,
+      "selected_edges": 4,
+      "hidden_edges": 14
+    },
+    {
+      "episode_id": "MLP4B_0023",
+      "selected": [
+        "C06",
+        "C09",
+        "C11"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 5,
+      "optimal_coverage": 6,
+      "normalized_coverage": 0.8333333333333334,
+      "selected_edges": 5,
+      "hidden_edges": 15
+    },
+    {
+      "episode_id": "MLP4B_0024",
+      "selected": [
+        "C12",
+        "C15",
+        "C16"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 4,
+      "optimal_coverage": 6,
+      "normalized_coverage": 0.6666666666666666,
+      "selected_edges": 4,
+      "hidden_edges": 12
+    },
+    {
+      "episode_id": "MLP4B_0025",
+      "selected": [
+        "C09",
+        "C14",
+        "C15"
+      ],
+      "valid": true,
+      "optimal": true,
+      "coverage": 6,
+      "optimal_coverage": 6,
+      "normalized_coverage": 1,
+      "selected_edges": 6,
+      "hidden_edges": 15
+    },
+    {
+      "episode_id": "MLP4B_0026",
+      "selected": [
+        "C04",
+        "C11",
+        "C13"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 5,
+      "optimal_coverage": 6,
+      "normalized_coverage": 0.8333333333333334,
+      "selected_edges": 5,
+      "hidden_edges": 12
+    },
+    {
+      "episode_id": "MLP4B_0027",
+      "selected": [
+        "C02",
+        "C04",
+        "C06"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 6,
+      "optimal_coverage": 7,
+      "normalized_coverage": 0.8571428571428571,
+      "selected_edges": 7,
+      "hidden_edges": 15
+    },
+    {
+      "episode_id": "MLP4B_0028",
+      "selected": [
+        "C07",
+        "C10",
+        "C14"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 5,
+      "optimal_coverage": 6,
+      "normalized_coverage": 0.8333333333333334,
+      "selected_edges": 5,
+      "hidden_edges": 13
+    },
+    {
+      "episode_id": "MLP4B_0029",
+      "selected": [
+        "C04",
+        "C06",
+        "C16"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 4,
+      "optimal_coverage": 6,
+      "normalized_coverage": 0.6666666666666666,
+      "selected_edges": 5,
+      "hidden_edges": 12
+    },
+    {
+      "episode_id": "MLP4B_0030",
+      "selected": [
+        "C01",
+        "C10",
+        "C12"
+      ],
+      "valid": true,
+      "optimal": true,
+      "coverage": 6,
+      "optimal_coverage": 6,
+      "normalized_coverage": 1,
+      "selected_edges": 6,
+      "hidden_edges": 14
+    },
+    {
+      "episode_id": "MLP4B_0031",
+      "selected": [
+        "C10",
+        "C14",
+        "C15"
+      ],
+      "valid": true,
+      "optimal": true,
+      "coverage": 6,
+      "optimal_coverage": 6,
+      "normalized_coverage": 1,
+      "selected_edges": 6,
+      "hidden_edges": 11
+    },
+    {
+      "episode_id": "MLP4B_0032",
+      "selected": [
+        "C07",
+        "C13",
+        "C16"
+      ],
+      "valid": true,
+      "optimal": true,
+      "coverage": 7,
+      "optimal_coverage": 7,
+      "normalized_coverage": 1,
+      "selected_edges": 7,
+      "hidden_edges": 12
+    },
+    {
+      "episode_id": "MLP4B_0033",
+      "selected": [
+        "C04",
+        "C06",
+        "C15"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 5,
+      "optimal_coverage": 6,
+      "normalized_coverage": 0.8333333333333334,
+      "selected_edges": 6,
+      "hidden_edges": 11
+    },
+    {
+      "episode_id": "MLP4B_0034",
+      "selected": [
+        "C12",
+        "C14",
+        "C16"
+      ],
+      "valid": true,
+      "optimal": true,
+      "coverage": 6,
+      "optimal_coverage": 6,
+      "normalized_coverage": 1,
+      "selected_edges": 6,
+      "hidden_edges": 13
+    },
+    {
+      "episode_id": "MLP4B_0035",
+      "selected": [
+        "C04",
+        "C13",
+        "C14"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 5,
+      "optimal_coverage": 7,
+      "normalized_coverage": 0.7142857142857143,
+      "selected_edges": 5,
+      "hidden_edges": 14
+    },
+    {
+      "episode_id": "MLP4B_0036",
+      "selected": [
+        "C05",
+        "C10",
+        "C16"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 5,
+      "optimal_coverage": 6,
+      "normalized_coverage": 0.8333333333333334,
+      "selected_edges": 5,
+      "hidden_edges": 11
+    },
+    {
+      "episode_id": "MLP4B_0037",
+      "selected": [
+        "C05",
+        "C14",
+        "C16"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 4,
+      "optimal_coverage": 6,
+      "normalized_coverage": 0.6666666666666666,
+      "selected_edges": 5,
+      "hidden_edges": 12
+    },
+    {
+      "episode_id": "MLP4B_0038",
+      "selected": [
+        "C03",
+        "C04",
+        "C05"
+      ],
+      "valid": true,
+      "optimal": true,
+      "coverage": 6,
+      "optimal_coverage": 6,
+      "normalized_coverage": 1,
+      "selected_edges": 6,
+      "hidden_edges": 16
+    },
+    {
+      "episode_id": "MLP4B_0039",
+      "selected": [
+        "C09",
+        "C10",
+        "C14"
+      ],
+      "valid": true,
+      "optimal": true,
+      "coverage": 7,
+      "optimal_coverage": 7,
+      "normalized_coverage": 1,
+      "selected_edges": 7,
+      "hidden_edges": 14
+    },
+    {
+      "episode_id": "MLP4B_0040",
+      "selected": [
+        "C03",
+        "C10",
+        "C14"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 5,
+      "optimal_coverage": 6,
+      "normalized_coverage": 0.8333333333333334,
+      "selected_edges": 5,
+      "hidden_edges": 11
+    },
+    {
+      "episode_id": "MLP4B_0041",
+      "selected": [
+        "C01",
+        "C04",
+        "C11"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 5,
+      "optimal_coverage": 6,
+      "normalized_coverage": 0.8333333333333334,
+      "selected_edges": 5,
+      "hidden_edges": 12
+    },
+    {
+      "episode_id": "MLP4B_0042",
+      "selected": [
+        "C05",
+        "C10",
+        "C14"
+      ],
+      "valid": true,
+      "optimal": true,
+      "coverage": 6,
+      "optimal_coverage": 6,
+      "normalized_coverage": 1,
+      "selected_edges": 6,
+      "hidden_edges": 13
+    },
+    {
+      "episode_id": "MLP4B_0043",
+      "selected": [
+        "C07",
+        "C09",
+        "C13"
+      ],
+      "valid": true,
+      "optimal": true,
+      "coverage": 7,
+      "optimal_coverage": 7,
+      "normalized_coverage": 1,
+      "selected_edges": 8,
+      "hidden_edges": 15
+    },
+    {
+      "episode_id": "MLP4B_0044",
+      "selected": [
+        "C06",
+        "C08",
+        "C16"
+      ],
+      "valid": true,
+      "optimal": true,
+      "coverage": 7,
+      "optimal_coverage": 7,
+      "normalized_coverage": 1,
+      "selected_edges": 7,
+      "hidden_edges": 15
+    },
+    {
+      "episode_id": "MLP4B_0045",
+      "selected": [
+        "C07",
+        "C10",
+        "C12"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 5,
+      "optimal_coverage": 6,
+      "normalized_coverage": 0.8333333333333334,
+      "selected_edges": 5,
+      "hidden_edges": 12
+    },
+    {
+      "episode_id": "MLP4B_0046",
+      "selected": [
+        "C01",
+        "C05",
+        "C10"
+      ],
+      "valid": true,
+      "optimal": true,
+      "coverage": 6,
+      "optimal_coverage": 6,
+      "normalized_coverage": 1,
+      "selected_edges": 6,
+      "hidden_edges": 16
+    },
+    {
+      "episode_id": "MLP4B_0047",
+      "selected": [
+        "C05",
+        "C12",
+        "C15"
+      ],
+      "valid": true,
+      "optimal": true,
+      "coverage": 6,
+      "optimal_coverage": 6,
+      "normalized_coverage": 1,
+      "selected_edges": 6,
+      "hidden_edges": 12
+    },
+    {
+      "episode_id": "MLP4B_0048",
+      "selected": [
+        "C01",
+        "C10",
+        "C14"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 5,
+      "optimal_coverage": 6,
+      "normalized_coverage": 0.8333333333333334,
+      "selected_edges": 6,
+      "hidden_edges": 11
+    },
+    {
+      "episode_id": "MLP4B_0049",
+      "selected": [
+        "C02",
+        "C03",
+        "C13"
+      ],
+      "valid": true,
+      "optimal": true,
+      "coverage": 7,
+      "optimal_coverage": 7,
+      "normalized_coverage": 1,
+      "selected_edges": 7,
+      "hidden_edges": 16
+    },
+    {
+      "episode_id": "MLP4B_0050",
+      "selected": [
+        "C01",
+        "C07",
+        "C10"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 6,
+      "optimal_coverage": 7,
+      "normalized_coverage": 0.8571428571428571,
+      "selected_edges": 8,
+      "hidden_edges": 13
+    },
+    {
+      "episode_id": "MLP4B_0051",
+      "selected": [
+        "C02",
+        "C07",
+        "C08"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 6,
+      "optimal_coverage": 7,
+      "normalized_coverage": 0.8571428571428571,
+      "selected_edges": 8,
+      "hidden_edges": 13
+    },
+    {
+      "episode_id": "MLP4B_0052",
+      "selected": [
+        "C08",
+        "C11",
+        "C15"
+      ],
+      "valid": true,
+      "optimal": true,
+      "coverage": 6,
+      "optimal_coverage": 6,
+      "normalized_coverage": 1,
+      "selected_edges": 6,
+      "hidden_edges": 11
+    },
+    {
+      "episode_id": "MLP4B_0053",
+      "selected": [
+        "C02",
+        "C05",
+        "C15"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 2,
+      "optimal_coverage": 6,
+      "normalized_coverage": 0.3333333333333333,
+      "selected_edges": 2,
+      "hidden_edges": 11
+    },
+    {
+      "episode_id": "MLP4B_0054",
+      "selected": [
+        "C03",
+        "C13",
+        "C16"
+      ],
+      "valid": true,
+      "optimal": true,
+      "coverage": 7,
+      "optimal_coverage": 7,
+      "normalized_coverage": 1,
+      "selected_edges": 7,
+      "hidden_edges": 14
+    },
+    {
+      "episode_id": "MLP4B_0055",
+      "selected": [
+        "C05",
+        "C06",
+        "C07"
+      ],
+      "valid": true,
+      "optimal": true,
+      "coverage": 6,
+      "optimal_coverage": 6,
+      "normalized_coverage": 1,
+      "selected_edges": 6,
+      "hidden_edges": 12
+    },
+    {
+      "episode_id": "MLP4B_0056",
+      "selected": [
+        "C03",
+        "C08",
+        "C16"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 5,
+      "optimal_coverage": 6,
+      "normalized_coverage": 0.8333333333333334,
+      "selected_edges": 6,
+      "hidden_edges": 11
+    },
+    {
+      "episode_id": "MLP4B_0057",
+      "selected": [
+        "C04",
+        "C15",
+        "C16"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 4,
+      "optimal_coverage": 6,
+      "normalized_coverage": 0.6666666666666666,
+      "selected_edges": 4,
+      "hidden_edges": 12
+    },
+    {
+      "episode_id": "MLP4B_0058",
+      "selected": [
+        "C08",
+        "C09",
+        "C16"
+      ],
+      "valid": true,
+      "optimal": true,
+      "coverage": 6,
+      "optimal_coverage": 6,
+      "normalized_coverage": 1,
+      "selected_edges": 6,
+      "hidden_edges": 13
+    },
+    {
+      "episode_id": "MLP4B_0059",
+      "selected": [
+        "C06",
+        "C12",
+        "C15"
+      ],
+      "valid": true,
+      "optimal": true,
+      "coverage": 7,
+      "optimal_coverage": 7,
+      "normalized_coverage": 1,
+      "selected_edges": 7,
+      "hidden_edges": 19
+    }
+  ]
+}

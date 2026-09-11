@@ -1,0 +1,26 @@
+{
+  "schema_version": "lemma-portfolio.public-preinference-commitment.v4",
+  "recorded_utc": "2026-09-01T08:32:20Z",
+  "recorded_local": "2026-09-01T14:02:20+05:30",
+  "status": "RECORDED_BEFORE_ANY_BLIND_MODEL_CALL",
+  "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+  "blind_public_jsonl_sha256": "b54293b08bc7ddbb7110a50908049922f7cfd86f14cb49a4de4e28353aecc6d8",
+  "blind_labels_sha256_commitment": "d17c1fd5c6d87635daf8035fe4a0918d1eaa29708eae37cb797cae08c19ef887",
+  "public_manifest_sha256": "f2fa32f0ac7365c28e711baf9efcb2e3fff3e0bcbc63dba6e26a24fe49dcb6ce",
+  "generation_receipt_sha256": "8589f29e460e99f2aa029efca5329387321316fda44fd2e9ee9d26f539320161",
+  "pinned_lean_audit": {
+    "targets_expected": 480,
+    "targets_reextracted_exactly": 480,
+    "stored_direct_edges": 814,
+    "reextracted_direct_edges": 814,
+    "changed_targets": 0,
+    "added_edges": 0,
+    "removed_edges": 0,
+    "empty_targets": 0,
+    "type_eqv_collisions": 0,
+    "status": "pass"
+  },
+  "static_256_shard_byte_replay_at_record_time": "running",
+  "blind_inference_authorized_at_record_time": false,
+  "note": "Blind inference remains prohibited until the static full-byte replay receipt also passes and the complete evaluation protocol is frozen."
+}

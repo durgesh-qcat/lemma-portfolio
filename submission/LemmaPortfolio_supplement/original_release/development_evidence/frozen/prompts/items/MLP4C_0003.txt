@@ -1,0 +1,122 @@
+You are solving one unreleased LemmaPortfolio benchmark episode.
+
+Each target t has a hidden set D(t): the candidate declarations used as direct theorem dependencies in that target's historical elaborated source. For a portfolio S, define F(S) as the number of targets t for which D(t) intersects S. The benchmark objective is to form a portfolio of exactly 3 distinct candidate IDs maximizing F(S). This is a static dependency-portfolio compression task; it is not a claim about which lemmas would causally help a new proof.
+
+Use only the supplied episode text. Do not use tools, web search, a repository, a theorem prover, compiler feedback, prior answers, or follow-up messages. Analyze mathematical and formal dependency structure rather than word overlap.
+
+
+Return one JSON object and no prose. It must have exactly these keys: "episode_id" and "selected". The episode_id must be copied exactly. The selected value must be an array containing exactly 3 distinct IDs copied from this episode's candidates. Candidate order does not matter.
+
+Required episode_id: MLP4C_0003
+
+Episode JSON follows.
+<episode>
+{
+  "benchmark_id": "lemma-portfolio.mathlib-compression-calibration-30.v4",
+  "candidates": [
+    {
+      "id": "C01",
+      "statement": "∀ {R : Type u_1} [inst : CommRing R] [inst_1 : IsDedekindDomain R] (K : Type u_2) [inst_2 : Field K] [inst_3 : Algebra R K] [inst_4 : IsFractionRing R K] (v : IsDedekindDomain.HeightOneSpectrum R), Function.Surjective ⇑(IsDedekindDomain.HeightOneSpectrum.valuation K v)"
+    },
+    {
+      "id": "C02",
+      "statement": "∀ {R : Type u_1} [inst : CommRing R] [inst_1 : IsDedekindDomain R] (v : IsDedekindDomain.HeightOneSpectrum R) {r : R}, r ≠ 0 → v.intValuation r = WithZero.exp (-↑((Associates.mk v.asIdeal).count (Associates.mk (Ideal.span {r})).factors))"
+    },
+    {
+      "id": "C03",
+      "statement": "∀ {R : Type u_1} [inst : CommRing R] [inst_1 : IsDedekindDomain R] (v : IsDedekindDomain.HeightOneSpectrum R) {b : NNReal} (hb : 1 < b) (r : R), (v.intAdicAbv hb) r ≤ 1"
+    },
+    {
+      "id": "C04",
+      "statement": "∀ {R : Type u_1} [inst : CommRing R] [inst_1 : IsDedekindDomain R] {K : Type u_2} [inst_2 : Field K] [inst_3 : Algebra R K] [inst_4 : IsFractionRing R K] (v : IsDedekindDomain.HeightOneSpectrum R) (r : R), (IsDedekindDomain.HeightOneSpectrum.valuation K v) ↑r = v.intValuation r"
+    },
+    {
+      "id": "C05",
+      "statement": "∀ {R : Type u_1} [inst : CommRing R] [inst_1 : IsDedekindDomain R] {K : Type u_2} [inst_2 : Field K] [inst_3 : Algebra R K] [inst_4 : IsFractionRing R K] (v : IsDedekindDomain.HeightOneSpectrum R) {b : NNReal} (hb : 1 < b) (r : R), (v.adicAbv hb) ((algebraMap R K) r) = (v.intAdicAbv hb) r"
+    },
+    {
+      "id": "C06",
+      "statement": "∀ {R : Type u_1} [inst : CommRing R] [inst_1 : IsDedekindDomain R] (K : Type u_2) [inst_2 : Field K] [inst_3 : Algebra R K] [inst_4 : IsFractionRing R K] (v : IsDedekindDomain.HeightOneSpectrum R), Function.Surjective IsDedekindDomain.HeightOneSpectrum.adicCompletion.toCompletion"
+    },
+    {
+      "id": "C07",
+      "statement": "∀ {R : Type u_1} [inst : CommRing R] [inst_1 : IsDedekindDomain R] (v : IsDedekindDomain.HeightOneSpectrum R) (r : R) (n : ℕ), v.intValuation r ≤ WithZero.exp (-↑n) ↔ v.asIdeal ^ n ∣ Ideal.span {r}"
+    },
+    {
+      "id": "C08",
+      "statement": "∀ {R : Type u_1} [inst : CommRing R] [inst_1 : IsDedekindDomain R] (v : IsDedekindDomain.HeightOneSpectrum R) {b : NNReal} (hb : 1 < b) (r : R), (v.intAdicAbv hb) r < 1 ↔ r ∈ v.asIdeal"
+    },
+    {
+      "id": "C09",
+      "statement": "∀ {R : Type u_1} [inst : CommRing R] [inst_1 : IsDedekindDomain R] (v : IsDedekindDomain.HeightOneSpectrum R) (r : R), v.intValuation r < 1 ↔ r ∈ v.asIdeal"
+    },
+    {
+      "id": "C10",
+      "statement": "∀ {R : Type u_1} [inst : CommRing R] [inst_1 : IsDedekindDomain R] (v : IsDedekindDomain.HeightOneSpectrum R) (x : R), v.intValuation x ≤ 1"
+    },
+    {
+      "id": "C11",
+      "statement": "∀ {R : Type u_1} [inst : CommRing R] [inst_1 : IsDedekindDomain R] (v : IsDedekindDomain.HeightOneSpectrum R) (x : R), x ≠ 0 → v.intValuation x ≠ 0"
+    },
+    {
+      "id": "C12",
+      "statement": "∀ (R : Type u_1) [inst : CommRing R] [inst_1 : IsDedekindDomain R] (K : Type u_2) [inst_2 : Field K] [inst_3 : Algebra R K] [inst_4 : IsFractionRing R K] (v : IsDedekindDomain.HeightOneSpectrum R) {x : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v}, x ∈ IsDedekindDomain.HeightOneSpectrum.adicCompletionIntegers K v ↔ Valued.v x ≤ 1"
+    },
+    {
+      "id": "C13",
+      "statement": "∀ {R : Type u_1} [inst : CommRing R] [inst_1 : IsDedekindDomain R] (K : Type u_2) [inst_2 : Field K] [inst_3 : Algebra R K] [inst_4 : IsFractionRing R K] (v : IsDedekindDomain.HeightOneSpectrum R) (a : R) {b : R}, b ≠ 0 → (b ∈ v.asIdeal → a ∉ v.asIdeal) → ((IsDedekindDomain.HeightOneSpectrum.valuation K v) (↑a / ↑b) ≤ 1 ↔ b ∉ v.asIdeal)"
+    },
+    {
+      "id": "C14",
+      "statement": "∀ {R : Type u_1} [inst : CommRing R] [inst_1 : IsDedekindDomain R] (v : IsDedekindDomain.HeightOneSpectrum R), ∃ π, v.intValuation π = WithZero.exp (-1)"
+    },
+    {
+      "id": "C15",
+      "statement": "∀ {R : Type u_1} [inst : CommRing R] [inst_1 : IsDedekindDomain R] {K : Type u_2} [inst_2 : Field K] [inst_3 : Algebra R K] [inst_4 : IsFractionRing R K] (v : IsDedekindDomain.HeightOneSpectrum R) (r : R), Valued.v ↑r = (IsDedekindDomain.HeightOneSpectrum.valuation K v) ↑r"
+    },
+    {
+      "id": "C16",
+      "statement": "∀ {R : Type u_1} [inst : CommRing R] [inst_1 : IsDedekindDomain R] {K : Type u_2} [inst_2 : Field K] [inst_3 : Algebra R K] [inst_4 : IsFractionRing R K] (v : IsDedekindDomain.HeightOneSpectrum R) (r : R), (IsDedekindDomain.HeightOneSpectrum.valuation K v) ↑r < 1 ↔ r ∈ v.asIdeal"
+    }
+  ],
+  "episode_id": "MLP4C_0003",
+  "schema_version": "lemma-portfolio.dependency-compression.v4",
+  "selection_budget": 3,
+  "source_project": "mathlib",
+  "targets": [
+    {
+      "id": "T01",
+      "statement": "∀ {R : Type u_1} [inst : CommRing R] [inst_1 : IsDedekindDomain R] {K : Type u_2} [inst_2 : Field K] [inst_3 : Algebra R K] [inst_4 : IsFractionRing R K] (v : IsDedekindDomain.HeightOneSpectrum R) (r : R), (IsDedekindDomain.HeightOneSpectrum.valuation K v) ↑r ≤ 1"
+    },
+    {
+      "id": "T02",
+      "statement": "∀ {R : Type u_1} [inst : CommRing R] [inst_1 : IsDedekindDomain R] (v : IsDedekindDomain.HeightOneSpectrum R) (r : R), v.intValuation r = 1 ↔ r ∈ v.asIdeal.primeCompl"
+    },
+    {
+      "id": "T03",
+      "statement": "∀ {R : Type u_1} [inst : CommRing R] [inst_1 : IsDedekindDomain R] (v : IsDedekindDomain.HeightOneSpectrum R) (π : v.intValuation.Uniformizer), v.intValuation ↑π.val = WithZero.exp (-1)"
+    },
+    {
+      "id": "T04",
+      "statement": "∀ {R : Type u_1} [inst : CommRing R] [inst_1 : IsDedekindDomain R] (v : IsDedekindDomain.HeightOneSpectrum R) {r : R} {n : ℕ}, WithZero.exp (-↑n) ≤ v.intValuation r ↔ emultiplicity v.asIdeal (Ideal.span {r}) ≤ ↑n"
+    },
+    {
+      "id": "T05",
+      "statement": "∀ {R : Type u_1} [inst : CommRing R] [inst_1 : IsDedekindDomain R] {K : Type u_2} [inst_2 : Field K] [inst_3 : Algebra R K] [inst_4 : IsFractionRing R K] (v : IsDedekindDomain.HeightOneSpectrum R) (a : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v), ∃ b ∈ nonZeroDivisors R, a * ↑b ∈ IsDedekindDomain.HeightOneSpectrum.adicCompletionIntegers K v"
+    },
+    {
+      "id": "T06",
+      "statement": "∀ {R : Type u_1} [inst : CommRing R] [inst_1 : IsDedekindDomain R] {K : Type u_2} [inst_2 : Field K] [inst_3 : Algebra R K] [inst_4 : IsFractionRing R K] (v : IsDedekindDomain.HeightOneSpectrum R) {r : R}, (IsDedekindDomain.HeightOneSpectrum.valuation K v) ((algebraMap R K) r) = 1 ↔ r ∉ v.asIdeal"
+    },
+    {
+      "id": "T07",
+      "statement": "∀ {R : Type u_1} [inst : CommRing R] [inst_1 : IsDedekindDomain R] (v : IsDedekindDomain.HeightOneSpectrum R) (r : R) (n : ℕ), v.intValuation r ≤ WithZero.exp (-↑n) ↔ r ∈ v.asIdeal ^ n"
+    },
+    {
+      "id": "T08",
+      "statement": "∀ {R : Type u_1} [inst : CommRing R] [inst_1 : IsDedekindDomain R] (v : IsDedekindDomain.HeightOneSpectrum R) {b : NNReal} (hb : 1 < b) (r : R), (v.intAdicAbv hb) r = 1 ↔ r ∉ v.asIdeal"
+    }
+  ],
+  "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+}
+</episode>

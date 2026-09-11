@@ -1,0 +1,25 @@
+{
+  "created_utc": "2026-09-01T09:43:35.046737Z",
+  "decision": "RETAIN_COMMITTED_BLIND_SPLIT",
+  "decision_rule_sha256": "2140d93a6b69dece920cc8fd6dd828369d85564dc30354013cd6273437649ef2",
+  "development_labels_were_used_for_this_gate": true,
+  "episode_count": 15,
+  "evaluation_system_id": "codex_gpt56_sol_max_calibration_direct",
+  "maximum_correct_to_retain": 7,
+  "minimum_valid_predictions_to_apply_difficulty_threshold": 15,
+  "operator_attestations": {
+    "blind_inference_has_occurred": false,
+    "blind_labels_read": false
+  },
+  "optimal_portfolio_correct": 6,
+  "panel_freeze_sha256": "bc598103d7cd0ec4caa5f930032fc44f1531bb5154bb2c6e0409348331e39f39",
+  "prompts_manifest_sha256": "58a31aa21f8cd1d5f34fc3e3f6aa367f4f02ea909be695db0531b8cc534b2284",
+  "protocol_sha256": "7b5a05678166e2595f465ccfd562afbda281b9523b29bd1cddb86e1d02241c1c",
+  "public_jsonl_sha256": "28f2ce4563d4db0eb08b981d8b4ec2cf689f4cf0dc06b69af2c6433dbfdba4ab",
+  "required_next_action": "Retain the current committed blind split and proceed to freeze the complete five-deployment blind panel without opening blind labels.",
+  "schema_version": "lemma-portfolio.development-difficulty-gate-receipt.v1",
+  "score_report_sha256": "383351c708dc0b22770516dbd4b0d99425e400dcc454cac174c3ccfa9d08d0f4",
+  "superseded_rule_sha256": "abf84da9878b84b078602840ab2d95d750fb9b935130bce3a1e3acf476cea538",
+  "target_is_design_goal_not_blind_reporting_rule": true,
+  "valid_predictions": 15
+}

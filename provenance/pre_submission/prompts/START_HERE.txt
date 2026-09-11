@@ -1,0 +1,69 @@
+LEMMA PORTFOLIO V4 - OFFLINE CHAT TEST PACKET
+
+The preserved released prompts are in DIRECT_PROMPTS/01.txt through 12.txt.
+Use the same 12 files for every model. Each file must be pasted once into a
+completely fresh chat. Do not combine files into one chat and do not ask a
+follow-up question.
+
+These files close exactly over the released public episodes and correspond to
+the supplied response captures. The captures do not include provider logs that
+independently authenticate the historical prompt bytes or operational settings.
+
+Before the first test, record every model you intend to test in one document:
+
+Product | exact visible model label | exact visible mode | tier or unknown
+
+If there is no mode selector, write NO SELECTOR. Keep web search, tools,
+agents, connectors, memory, uploaded files, and prior-chat context off.
+
+ORDINARY MODELS
+
+For every model except the designated ChatGPT Sol deployment, use this order:
+
+  DIRECT_PROMPTS/01.txt
+  DIRECT_PROMPTS/02.txt
+  ...
+  DIRECT_PROMPTS/12.txt
+
+Open a fresh chat for every file. Copy the full visible response into your
+return document immediately, unchanged. Include refusals, errors, partial
+responses, and formatting wrappers. Do not repair JSON yourself.
+
+CHATGPT SOL
+
+Use exactly this 16-chat order, with every entry in a fresh chat:
+
+  1.  DIRECT_PROMPTS/01.txt
+  2.  DIRECT_PROMPTS/02.txt
+  3.  DIRECT_PROMPTS/03.txt
+  4.  DIRECT_PROMPTS/04.txt
+  5.  SOL_EXTRA_PROMPTS/01.txt
+  6.  SOL_EXTRA_PROMPTS/02.txt
+  7.  DIRECT_PROMPTS/05.txt
+  8.  SOL_EXTRA_PROMPTS/03.txt
+  9.  DIRECT_PROMPTS/06.txt
+  10. DIRECT_PROMPTS/07.txt
+  11. DIRECT_PROMPTS/08.txt
+  12. DIRECT_PROMPTS/09.txt
+  13. DIRECT_PROMPTS/10.txt
+  14. DIRECT_PROMPTS/11.txt
+  15. DIRECT_PROMPTS/12.txt
+  16. SOL_EXTRA_PROMPTS/04.txt
+
+Keep calls 4-5, 6-7, 8-9, and 15-16 adjacent: do not run another benchmark
+chat between the two members of any pair.
+
+WHAT TO RETURN
+
+One searchable, text-selectable PDF is acceptable. It must contain:
+
+  - the exact product/model/mode/tier header for every tested model;
+  - the prompt number before every response; and
+  - every complete raw model response, not merely your calculated score.
+
+Use RETURN_TEMPLATE.md as the document outline. I will extract and score the
+responses independently. Screenshots are not required.
+
+If a product visibly invokes a tool, search, another model, or a fallback,
+preserve the response and note what appeared. If an explicit platform error
+occurs before any mathematical output, preserve it. Do not silently retry.

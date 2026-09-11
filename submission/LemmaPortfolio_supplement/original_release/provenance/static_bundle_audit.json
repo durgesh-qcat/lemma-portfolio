@@ -1,0 +1,16 @@
+{
+  "blind_episodes": 60,
+  "blind_labels_mode": "0600",
+  "blind_labels_sha256": "d17c1fd5c6d87635daf8035fe4a0918d1eaa29708eae37cb797cae08c19ef887",
+  "blind_public_sha256": "b54293b08bc7ddbb7110a50908049922f7cfd86f14cb49a4de4e28353aecc6d8",
+  "calibration_episodes": 30,
+  "calibration_labels_sha256": "bee487259392de4d36b2140a715c7b4196ce7cc2027c3b13c90e1874a19149d0",
+  "calibration_public_sha256": "404452daa5017793d9f7b10f4d92716d2bb267dca034094b0f41f8c8d9219ffc",
+  "generation_receipt_sha256": "8589f29e460e99f2aa029efca5329387321316fda44fd2e9ee9d26f539320161",
+  "parquet_shards_rehashed": 256,
+  "private_names_emitted": 0,
+  "private_selection_ledger_sha256": "be38d7c73ee60e36e04205a6cc944f051996c77381d7d3bead5f10827fa41b77",
+  "public_manifest_sha256": "f2fa32f0ac7365c28e711baf9efcb2e3fff3e0bcbc63dba6e26a24fe49dcb6ce",
+  "schema_version": "lemma-portfolio.static-bundle-audit.v4",
+  "status": "pass"
+}

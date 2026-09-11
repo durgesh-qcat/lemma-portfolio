@@ -5,7 +5,12 @@ Updated: 2026-09-05T09:51:15.516456+00:00
 Status: all core phases and the retained second repeat pair completed and audited; third runs cancelled at user request. No inference remains queued.
 
 
-These are separately disclosed post-release follow-up experiments, not additions to the original frozen blind consumer panel. Original data, consumer scores, and paper artifacts are unchanged. See PAPER_HANDOFF.md for integration guidance.
+These are separately disclosed post-release follow-up experiments, not additions
+to the original frozen blind consumer panel. Original data and consumer scores
+are unchanged. This historical export report records exploratory comparisons;
+the [final submitted paper](../../paper/LemmaPortfolio.pdf) now incorporates the
+completed runs, with its current interpretation and nominal per-run intervals.
+The preceding paper is preserved under `paper/historical/2026-09-05/`.
 
 ## Complete direct runs
 

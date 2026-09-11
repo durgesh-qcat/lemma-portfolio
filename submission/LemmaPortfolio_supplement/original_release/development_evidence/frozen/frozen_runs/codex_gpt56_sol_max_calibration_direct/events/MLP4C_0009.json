@@ -1,0 +1,48 @@
+{
+  "attempt_count": 1,
+  "calibration_export_prefix_width": null,
+  "call_id": "SHARD_0001",
+  "derived_portfolio_evaluative": true,
+  "episode_id": "MLP4C_0009",
+  "episodes_per_call": 5,
+  "evidence": {
+    "shard_evidence": "MLP4C_0009.attempt1.shard_evidence.json"
+  },
+  "finished_utc": "2026-09-01T09:20:37.184697Z",
+  "latency_seconds": 837.612818249996,
+  "notes": "Strict audit passed.",
+  "operational_retry_reason": null,
+  "postprocessor": null,
+  "predicted_support_prefix_width": null,
+  "predicted_target_coverage": null,
+  "public_target_count": null,
+  "reported_usage": {
+    "cached_input_tokens": 18176,
+    "input_tokens": 18684,
+    "output_tokens": 25120,
+    "reasoning_tokens": 25014,
+    "reported_cost": "not_exposed",
+    "sources": {
+      "cached_input_tokens": "usage.cached_input_tokens",
+      "input_tokens": "usage.input_tokens",
+      "output_tokens": "usage.output_tokens",
+      "reasoning_tokens": "usage.reasoning_output_tokens"
+    }
+  },
+  "reported_usage_scope": "call_shared_by_event_call_id",
+  "response_derivation": "deterministic_item_projection_of_hash_bound_shard_output",
+  "schema_version": "lemma-portfolio.item-event.v4",
+  "screenshot": null,
+  "shared_call_episode_ids": [
+    "MLP4C_0005",
+    "MLP4C_0006",
+    "MLP4C_0007",
+    "MLP4C_0008",
+    "MLP4C_0009"
+  ],
+  "started_utc": "2026-09-01T09:06:39.569796Z",
+  "status": "completed",
+  "substantive_output_before_retry": false,
+  "support_prefix_calibration_receipt_sha256": null,
+  "timeout_seconds": 1800
+}

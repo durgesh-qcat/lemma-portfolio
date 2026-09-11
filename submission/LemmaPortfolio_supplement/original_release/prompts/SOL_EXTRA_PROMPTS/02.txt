@@ -1,0 +1,553 @@
+You are solving five unreleased LemmaPortfolio benchmark episodes independently using a decomposition-plus-solver condition.
+
+For each episode, each target t has a hidden set D(t): the displayed candidate declarations used as direct theorem dependencies in that target's historical elaborated source. The final benchmark portfolio has budget 3, but do not choose that portfolio directly. Instead predict plausible direct-dependency support for every target. A frozen deterministic exhaustive optimizer will form the final portfolio without seeing private labels.
+
+Use only the supplied text. Do not use web search, tools, files, a repository, theorem proving, compiler feedback, memory, prior chats, follow-up messages, or answers from another episode. Treat every episode independently.
+
+Return one JSON object and no prose. It must have exactly one key, "predicted_support". Its value must be an object with exactly these episode keys: MLP4B_0020, MLP4B_0021, MLP4B_0022, MLP4B_0023, MLP4B_0024. Each episode value must be an object with exactly T01 through T08. Each target value must be an array of zero to 4 distinct candidate IDs copied from that episode, ordered from most to least plausible. The frozen optimizer retains only the first q=2 IDs for each target and breaks portfolio ties lexicographically.
+
+Episode JSON array follows.
+<episodes>
+[
+  {
+    "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+    "candidates": [
+      {
+        "id": "C01",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] [inst_1 : IsDedekindDomain R] (I : Ideal R), Associates.mk (∏ᶠ (v : IsDedekindDomain.HeightOneSpectrum R), v.maxPowDividing I) ≠ 0"
+      },
+      {
+        "id": "C02",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (K : Type u_2) [inst_1 : Field K] [inst_2 : Algebra R K] [inst_3 : IsFractionRing R K] [inst_4 : IsDedekindDomain R] (v : IsDedekindDomain.HeightOneSpectrum R) (I I' : FractionalIdeal (nonZeroDivisors R) K) [inst_5 : Decidable (I ≠ 0 ∧ I' ≠ 0)], FractionalIdeal.count K v (I * I') = if I ≠ 0 ∧ I' ≠ 0 then FractionalIdeal.count K v I + FractionalIdeal.count K v I' else 0"
+      },
+      {
+        "id": "C03",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (K : Type u_2) [inst_1 : Field K] [inst_2 : Algebra R K] [inst_3 : IsFractionRing R K] [inst_4 : IsDedekindDomain R] (v : IsDedekindDomain.HeightOneSpectrum R) {I : FractionalIdeal (nonZeroDivisors R) K}, I ≠ 0 → ∀ {a : R} {J : Ideal R}, I = FractionalIdeal.spanSingleton (nonZeroDivisors R) ((algebraMap R K) a)⁻¹ * ↑J → FractionalIdeal.count K v I = ↑((Associates.mk v.asIdeal).count (Associates.mk J).factors) - ↑((Associates.mk v.asIdeal).count (Associates.mk (Ideal.span {a})).factors)"
+      },
+      {
+        "id": "C04",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (K : Type u_2) [inst_1 : Field K] [inst_2 : Algebra R K] [inst_3 : IsFractionRing R K] [inst_4 : IsDedekindDomain R] (v : IsDedekindDomain.HeightOneSpectrum R) {w : IsDedekindDomain.HeightOneSpectrum R}, w ≠ v → FractionalIdeal.count K v ↑w.asIdeal = 0"
+      },
+      {
+        "id": "C05",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] [IsDedekindDomain R] {I J : Ideal R}, I ≤ J → I ≠ 0 → ∃ a, I ⊔ Ideal.span {a} = J"
+      },
+      {
+        "id": "C06",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (K : Type u_2) [inst_1 : Field K] [inst_2 : Algebra R K] [inst_3 : IsFractionRing R K] [inst_4 : IsDedekindDomain R] (v : IsDedekindDomain.HeightOneSpectrum R) (n : ℤ) (I : FractionalIdeal (nonZeroDivisors R) K), FractionalIdeal.count K v (I ^ n) = n * FractionalIdeal.count K v I"
+      },
+      {
+        "id": "C07",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (K : Type u_2) [inst_1 : Field K] [inst_2 : Algebra R K] [inst_3 : IsFractionRing R K] [inst_4 : IsDedekindDomain R] (v : IsDedekindDomain.HeightOneSpectrum R) (n : ℕ) (I : FractionalIdeal (nonZeroDivisors R) K), FractionalIdeal.count K v (I ^ n) = ↑n * FractionalIdeal.count K v I"
+      },
+      {
+        "id": "C08",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (K : Type u_2) [inst_1 : Field K] [inst_2 : Algebra R K] [inst_3 : IsFractionRing R K] [inst_4 : IsDedekindDomain R] (v : IsDedekindDomain.HeightOneSpectrum R), FractionalIdeal.count K v 0 = 0"
+      },
+      {
+        "id": "C09",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (K : Type u_2) [inst_1 : Field K] [inst_2 : Algebra R K] [inst_3 : IsFractionRing R K] [inst_4 : IsDedekindDomain R] (v : IsDedekindDomain.HeightOneSpectrum R) {I I' : FractionalIdeal (nonZeroDivisors R) K}, I ≠ 0 → I' ≠ 0 → FractionalIdeal.count K v (I * I') = FractionalIdeal.count K v I + FractionalIdeal.count K v I'"
+      },
+      {
+        "id": "C10",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (K : Type u_2) [inst_1 : Field K] [inst_2 : Algebra R K] [inst_3 : IsFractionRing R K] [inst_4 : IsDedekindDomain R] (v : IsDedekindDomain.HeightOneSpectrum R), FractionalIdeal.count K v 1 = 0"
+      },
+      {
+        "id": "C11",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (K : Type u_2) [inst_1 : Field K] [inst_2 : Algebra R K] [inst_3 : IsFractionRing R K] [inst_4 : IsDedekindDomain R] (v v_1 : IsDedekindDomain.HeightOneSpectrum R), v = v_1 → ∀ (I I_1 : FractionalIdeal (nonZeroDivisors R) K), I = I_1 → FractionalIdeal.count K v I = FractionalIdeal.count K v_1 I_1"
+      },
+      {
+        "id": "C12",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] {K : Type u_2} [inst_1 : Field K] [inst_2 : Algebra R K] [inst_3 : IsFractionRing R K] [inst_4 : IsDedekindDomain R] {I : FractionalIdeal (nonZeroDivisors R) K}, I ≠ 0 → ∀ {a : R} {J : Ideal R}, I = FractionalIdeal.spanSingleton (nonZeroDivisors R) ((algebraMap R K) a)⁻¹ * ↑J → ∏ᶠ (v : IsDedekindDomain.HeightOneSpectrum R), ↑v.asIdeal ^ (↑((Associates.mk v.asIdeal).count (Associates.mk J).factors) - ↑((Associates.mk v.asIdeal).count (Associates.mk (Ideal.span {a})).factors)) = I"
+      },
+      {
+        "id": "C13",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] [inst_1 : IsDedekindDomain R] (v : IsDedekindDomain.HeightOneSpectrum R) {I : Ideal R}, I ≠ 0 → v.maxPowDividing I = v.asIdeal ^ Multiset.count v.asIdeal (UniqueFactorizationMonoid.normalizedFactors I)"
+      },
+      {
+        "id": "C14",
+        "statement": "∀ {R : Type u_3} [inst : CommRing R] [inst_1 : IsDedekindDomain R] {I : Ideal R}, I ≠ ⊥ → ∀ (p : IsDedekindDomain.HeightOneSpectrum R), Multiset.count p.asIdeal (UniqueFactorizationMonoid.normalizedFactors I) = multiplicity p.asIdeal I"
+      },
+      {
+        "id": "C15",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (K : Type u_2) [inst_1 : Field K] [inst_2 : Algebra R K] [inst_3 : IsFractionRing R K] [inst_4 : IsDedekindDomain R] (v : IsDedekindDomain.HeightOneSpectrum R) (n : ℤ) (I : FractionalIdeal (nonZeroDivisors R) K), FractionalIdeal.count K v (I ^ (-n)) = -FractionalIdeal.count K v (I ^ n)"
+      },
+      {
+        "id": "C16",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] [inst_1 : IsDedekindDomain R] {I : Ideal R}, I ≠ 0 → ∏ᶠ (v : IsDedekindDomain.HeightOneSpectrum R), v.maxPowDividing I = I"
+      }
+    ],
+    "episode_id": "MLP4B_0020",
+    "schema_version": "lemma-portfolio.dependency-compression.v4",
+    "selection_budget": 3,
+    "source_project": "mathlib",
+    "targets": [
+      {
+        "id": "T01",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] [inst_1 : IsDedekindDomain R] {S : Type u_3} [inst_2 : CommRing S] [inst_3 : Algebra S R] [inst_4 : Algebra.IsIntegral S R] [inst_5 : IsDomain S] [inst_6 : Module.IsTorsionFree S R] {p : Ideal S} [inst_7 : p.IsMaximal], p ≠ 0 → Ideal.map (algebraMap S R) p = ∏ P ∈ (p.primesOver R).toFinset, P ^ P.ramificationIdx S"
+      },
+      {
+        "id": "T02",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (K : Type u_2) [inst_1 : Field K] [inst_2 : Algebra R K] [inst_3 : IsFractionRing R K] [inst_4 : IsDedekindDomain R] (v : IsDedekindDomain.HeightOneSpectrum R) (n : ℕ), FractionalIdeal.count K v (↑v.asIdeal ^ n) = ↑n"
+      },
+      {
+        "id": "T03",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (K : Type u_2) [inst_1 : Field K] [inst_2 : Algebra R K] [inst_3 : IsFractionRing R K] [inst_4 : IsDedekindDomain R] (v : IsDedekindDomain.HeightOneSpectrum R) {ι : Type u_3} (s : Finset ι) (I : ι → FractionalIdeal (nonZeroDivisors R) K), (∀ i ∈ s, I i ≠ 0) → FractionalIdeal.count K v (∏ i ∈ s, I i) = ∑ i ∈ s, FractionalIdeal.count K v (I i)"
+      },
+      {
+        "id": "T04",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (K : Type u_2) [inst_1 : Field K] [inst_2 : Algebra R K] [inst_3 : IsFractionRing R K] [inst_4 : IsDedekindDomain R] {I : FractionalIdeal (nonZeroDivisors R) K}, I ≠ 0 → ∏ᶠ (v : IsDedekindDomain.HeightOneSpectrum R), ↑v.asIdeal ^ FractionalIdeal.count K v I = I"
+      },
+      {
+        "id": "T05",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] [inst_1 : IsDedekindDomain R] {I : Ideal R}, I ≠ 0 → ⨅ i, i.maxPowDividing I = I"
+      },
+      {
+        "id": "T06",
+        "statement": "∀ {R : Type u_3} [inst : CommRing R] [IsDedekindDomain R] (p : IsDedekindDomain.HeightOneSpectrum R) {I J : Ideal R}, I ≠ ⊥ → J ≠ ⊥ → multiplicity p.asIdeal (I ⊔ J) = min (multiplicity p.asIdeal I) (multiplicity p.asIdeal J)"
+      },
+      {
+        "id": "T07",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (K : Type u_2) [inst_1 : Field K] [inst_2 : Algebra R K] [inst_3 : IsFractionRing R K] [inst_4 : IsDedekindDomain R] (v : IsDedekindDomain.HeightOneSpectrum R) {I J : FractionalIdeal (nonZeroDivisors R) K}, I ≠ 0 → I ≤ J → FractionalIdeal.count K v J ≤ FractionalIdeal.count K v I"
+      },
+      {
+        "id": "T08",
+        "statement": "∀ {R : Type u_3} [inst : CommRing R] [inst_1 : IsDedekindDomain R] {I : Ideal R}, I ≠ ⊥ → ∀ (p : IsDedekindDomain.HeightOneSpectrum R), p.maxPowDividing I = p.asIdeal ^ multiplicity p.asIdeal I"
+      }
+    ],
+    "task": "Predict plausible displayed direct-dependency candidate support independently for every target. For each of T01 through T08, provide an ordered list of zero to 4 distinct candidate IDs, from most to least plausible. Portfolio construction is performed later by the frozen q=2 optimizer."
+  },
+  {
+    "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+    "candidates": [
+      {
+        "id": "C01",
+        "statement": "∀ {R : Type u} {S : Type v} [inst : Semiring R] [inst_1 : Semiring S] (f : R ≃+* S), RingHom.ker ↑f = ⊥"
+      },
+      {
+        "id": "C02",
+        "statement": "∀ {R : Type u} {S : Type v} {F : Type u_1} [inst : Semiring R] [inst_1 : Semiring S] [inst_2 : FunLike F R S] {f : F} {I J : Ideal R}, I ≤ J → Ideal.map f I ≤ Ideal.map f J"
+      },
+      {
+        "id": "C03",
+        "statement": "∀ {R : Type u} {S : Type v} [inst : Semiring R] [inst_1 : Semiring S] {I : Ideal R} (f : R ≃+* S), Ideal.comap f.symm I = Ideal.map f I"
+      },
+      {
+        "id": "C04",
+        "statement": "∀ {R : Type u} {S : Type v} {F : Type u_1} [inst : Semiring R] [inst_1 : Semiring S] [inst_2 : FunLike F R S] {f : F} [inst_3 : RingHomClass F R S], Ideal.comap f ⊤ = ⊤"
+      },
+      {
+        "id": "C05",
+        "statement": "∀ {R : Type u} {S : Type v} {F : Type u_1} [inst : Semiring R] [inst_1 : Semiring S] [inst_2 : FunLike F R S] [rcf : RingHomClass F R S] (f : F), RingHom.ker f = Ideal.comap f ⊥"
+      },
+      {
+        "id": "C06",
+        "statement": "∀ {R : Type u} {S : Type v} {T : Type w} [inst : Semiring R] [inst_1 : Semiring S] [inst_2 : Semiring T] (f : S →+* R) (g : T →+* S), Ideal.comap g (RingHom.ker f) = RingHom.ker (f.comp g)"
+      },
+      {
+        "id": "C07",
+        "statement": "∀ {R : Type u} {S : Type v} {F : Type u_1} [inst : Semiring R] [inst_1 : Semiring S] [inst_2 : FunLike F R S] (f : F) (K : Ideal S) [inst_3 : RingHomClass F R S], Ideal.comap f (Ideal.map f (Ideal.comap f K)) = Ideal.comap f K"
+      },
+      {
+        "id": "C08",
+        "statement": "∀ {R : Type u} {S : Type v} {F : Type u_1} [inst : Semiring R] [inst_1 : Semiring S] [inst_2 : FunLike F R S] (f : F) {I : Ideal R} {x : R}, x ∈ I → f x ∈ Ideal.map f I"
+      },
+      {
+        "id": "C09",
+        "statement": "∀ {R : Type u} {S : Type v} {F : Type u_1} [inst : Semiring R] [inst_1 : Semiring S] [inst_2 : FunLike F R S] {f : F} {I : Ideal R} {K : Ideal S} [inst_3 : RingHomClass F R S], Ideal.map f I ≤ K ↔ I ≤ Ideal.comap f K"
+      },
+      {
+        "id": "C10",
+        "statement": "∀ {R : Type u} {S : Type v} {F : Type u_1} [inst : Ring R] [inst_1 : Semiring S] [inst_2 : FunLike F R S] [rc : RingHomClass F R S] (f : F), Function.Injective ⇑f ↔ RingHom.ker f = ⊥"
+      },
+      {
+        "id": "C11",
+        "statement": "∀ {R : Type u} {S : Type v} {F : Type u_1} [inst : Semiring R] [inst_1 : Semiring S] [inst_2 : FunLike F R S] {f : F} [RingHomClass F R S], Ideal.map f ⊥ = ⊥"
+      },
+      {
+        "id": "C12",
+        "statement": "∀ {R : Type u} {S : Type v} {F : Type u_1} [inst : Semiring R] [inst_1 : Semiring S] [inst_2 : FunLike F R S] {f : F} {K : Ideal S} [inst_3 : RingHomClass F R S] {x : R}, x ∈ Ideal.comap f K ↔ f x ∈ K"
+      },
+      {
+        "id": "C13",
+        "statement": "∀ {R : Type u} {S : Type v} {F : Type u_1} [inst : Semiring R] [inst_1 : Semiring S] [inst_2 : FunLike F R S] {f : F} {K L : Ideal S} [inst_3 : RingHomClass F R S], K ≤ L → Ideal.comap f K ≤ Ideal.comap f L"
+      },
+      {
+        "id": "C14",
+        "statement": "∀ {R : Type u} {S : Type v} {F : Type u_1} [inst : Semiring R] [inst_1 : Semiring S] [inst_2 : FunLike F R S] (f : F) [inst_3 : RingHomClass F R S], Function.Surjective ⇑f → ∀ (I : Ideal S), Ideal.map f (Ideal.comap f I) = I"
+      },
+      {
+        "id": "C15",
+        "statement": "∀ {R : Type u} {S : Type v} [inst : Semiring R] [inst_1 : Semiring S] {T : Type u_3} [inst_2 : Semiring T] {I : Ideal T} (f : R →+* S) (g : S →+* T), Ideal.comap f (Ideal.comap g I) = Ideal.comap (g.comp f) I"
+      },
+      {
+        "id": "C16",
+        "statement": "∀ {R : Type u} [inst : Semiring R] (I : Ideal R), Ideal.map (RingHom.id R) I = I"
+      }
+    ],
+    "episode_id": "MLP4B_0021",
+    "schema_version": "lemma-portfolio.dependency-compression.v4",
+    "selection_budget": 3,
+    "source_project": "mathlib",
+    "targets": [
+      {
+        "id": "T01",
+        "statement": "∀ {R : Type u_1} {S : Type u_2} [inst : CommRing R] [inst_1 : CommRing S] {I J : Ideal R} (f : R →+* S), Function.Surjective ⇑f → (Ideal.map f I = Ideal.map f J ↔ I ⊔ RingHom.ker f = J ⊔ RingHom.ker f)"
+      },
+      {
+        "id": "T02",
+        "statement": "∀ {R : Type u} {S : Type v} {F : Type u_1} [inst : Semiring R] [inst_1 : Semiring S] [inst_2 : FunLike F R S] (f : F) {G : Type u_2} [inst_3 : FunLike G S R] [inst_4 : RingHomClass F R S] (g : G) (I : Ideal S), Set.LeftInvOn (⇑g) (⇑f) (⇑f ⁻¹' ↑I) → Ideal.comap f I ≤ Ideal.map g I"
+      },
+      {
+        "id": "T03",
+        "statement": "∀ {R : Type u_1} {S : Type u_2} {F : Type u_3} [inst : Ring R] [inst_1 : Ring S] [inst_2 : FunLike F R S] [rc : RingHomClass F R S] {f : F}, Function.Surjective ⇑f → ∀ {m : Ideal R} [m.IsMaximal], RingHom.ker f ≤ m → (Ideal.map f m).IsMaximal"
+      },
+      {
+        "id": "T04",
+        "statement": "∀ {R : Type u} {S : Type v} {F : Type u_1} [inst : Semiring R] [inst_1 : Semiring S] [inst_2 : FunLike F R S] (f : F) {I : Ideal R} [inst_3 : RingHomClass F R S], Function.Injective ⇑f → Ideal.comap f ⊥ ≤ I"
+      },
+      {
+        "id": "T05",
+        "statement": "∀ {R : Type u} {S : Type v} {F : Type u_1} [inst : Ring R] [inst_1 : Ring S] [inst_2 : FunLike F R S] [inst_3 : RingHomClass F R S] (f : F), Function.Surjective ⇑f → ∀ {K : Ideal S} [H : K.IsMaximal], (Ideal.comap f K).IsMaximal"
+      },
+      {
+        "id": "T06",
+        "statement": "∀ {R : Type u} {S : Type v} {T : Type w} [inst : Ring R] [inst_1 : Semiring S] [inst_2 : Semiring T] (g : T →+* R) {f : R →+* S}, Function.Injective ⇑f → RingHom.ker (f.comp g) = RingHom.ker g"
+      },
+      {
+        "id": "T07",
+        "statement": "∀ {R : Type u} {S : Type v} {F : Type u_1} [inst : Semiring R] [inst_1 : Semiring S] [inst_2 : FunLike F R S] (f : F) [RingHomClass F R S] (s : Set R), Ideal.map f (Ideal.span s) = Ideal.span (⇑f '' s)"
+      },
+      {
+        "id": "T08",
+        "statement": "∀ {R : Type u} {S : Type v} {F : Type u_1} [inst : Ring R] [inst_1 : Ring S] [inst_2 : FunLike F R S] [inst_3 : RingHomClass F R S] (f : F), Function.Surjective ⇑f → ∀ (I : Ideal S), Order.coheight (Ideal.comap f I) = Order.coheight I"
+      }
+    ],
+    "task": "Predict plausible displayed direct-dependency candidate support independently for every target. For each of T01 through T08, provide an ordered list of zero to 4 distinct candidate IDs, from most to least plausible. Portfolio construction is performed later by the frozen q=2 optimizer."
+  },
+  {
+    "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+    "candidates": [
+      {
+        "id": "C01",
+        "statement": "∀ {R : Type u_3} {c₁ c₂ c₃ : R} (a : QuaternionAlgebra R c₁ c₂ c₃) [inst : CommRing R], a + star a = ↑(2 * a.re + c₂ * a.imI)"
+      },
+      {
+        "id": "C02",
+        "statement": "∀ {R : Type u_3} {c₁ c₂ c₃ : R} (x y : R) [inst : CommRing R], ↑(x * y) = ↑x * ↑y"
+      },
+      {
+        "id": "C03",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] [inst_1 : LinearOrder R] [IsStrictOrderedRing R] {a : Quaternion R}, Quaternion.normSq a = 0 ↔ a = 0"
+      },
+      {
+        "id": "C04",
+        "statement": "∀ {R : Type u_3} [inst : CommRing R] (x y : R), ↑(x * y) = ↑x * ↑y"
+      },
+      {
+        "id": "C05",
+        "statement": "∀ {R : Type u_3} [inst : CommRing R] (x : R), (↑x).re = x"
+      },
+      {
+        "id": "C06",
+        "statement": "∀ {R : Type u_3} (c₁ c₂ c₃ : R) [inst : CommRing R] [StrongRankCondition R], Module.rank R (QuaternionAlgebra R c₁ c₂ c₃) = 4"
+      },
+      {
+        "id": "C07",
+        "statement": "∀ {R : Type u_3} {c₁ c₂ c₃ : R} (x y : R) [inst : AddZeroClass R], ↑(x + y) = ↑x + ↑y"
+      },
+      {
+        "id": "C08",
+        "statement": "∀ {R : Type u_3} [inst : CommRing R] (a : Quaternion R), star a * a = ↑(Quaternion.normSq a)"
+      },
+      {
+        "id": "C09",
+        "statement": "∀ {R : Type u_3} {c₁ c₂ c₃ : R} [inst : CommRing R] {a : QuaternionAlgebra R c₁ c₂ c₃} {x : R}, a = ↑x → a = ↑a.re"
+      },
+      {
+        "id": "C10",
+        "statement": "∀ {R : Type u_1} (c₁ c₂ c₃ : R), Cardinal.mk (QuaternionAlgebra R c₁ c₂ c₃) = Cardinal.mk R ^ 4"
+      },
+      {
+        "id": "C11",
+        "statement": "∀ {R : Type u_3} {c₁ c₂ c₃ : R} [inst : Zero R], Function.Injective QuaternionAlgebra.coe"
+      },
+      {
+        "id": "C12",
+        "statement": "∀ {R : Type u_3} {c₁ c₂ c₃ : R} (x : R) [inst : AddGroup R], ↑(-x) = -↑x"
+      },
+      {
+        "id": "C13",
+        "statement": "∀ {R : Type u_1} (c₁ c₂ c₃ : R), Cardinal.mk ↑Set.univ = Cardinal.mk R ^ 4"
+      },
+      {
+        "id": "C14",
+        "statement": "∀ {R : Type u_3} [inst : CommRing R] (a : Quaternion R), Quaternion.normSq a = a.re ^ 2 + a.imI ^ 2 + a.imJ ^ 2 + a.imK ^ 2"
+      },
+      {
+        "id": "C15",
+        "statement": "∀ {R : Type u_3} {c₁ c₂ c₃ : R} (a : QuaternionAlgebra R c₁ c₂ c₃) [inst : CommRing R], star a + a = ↑(2 * a.re + c₂ * a.imI)"
+      },
+      {
+        "id": "C16",
+        "statement": "∀ {R : Type u_3} [inst : CommRing R] (a b : Quaternion R), a.re = b.re → a.imI = b.imI → a.imJ = b.imJ → a.imK = b.imK → a = b"
+      }
+    ],
+    "episode_id": "MLP4B_0022",
+    "schema_version": "lemma-portfolio.dependency-compression.v4",
+    "selection_budget": 3,
+    "source_project": "mathlib",
+    "targets": [
+      {
+        "id": "T01",
+        "statement": "∀ {R : Type u_1} (c₁ c₂ c₃ : R) [Infinite R], Cardinal.mk ↑Set.univ = Cardinal.mk R"
+      },
+      {
+        "id": "T02",
+        "statement": "∀ {R : Type u_3} {c₁ c₂ c₃ : R} (a : QuaternionAlgebra R c₁ c₂ c₃) [inst : CommRing R], star a * a = ↑(star a * a).re"
+      },
+      {
+        "id": "T03",
+        "statement": "∀ {R : Type u_3} [inst : CommRing R] (x : R), ↑(-x) = -↑x"
+      },
+      {
+        "id": "T04",
+        "statement": "∀ (R : Type u_1) [inst : Zero R] [inst_1 : One R] [inst_2 : Neg R], Cardinal.mk ↑Set.univ = Cardinal.mk R ^ 4"
+      },
+      {
+        "id": "T05",
+        "statement": "∀ {R : Type u_3} [inst : CommRing R] (x : R), Quaternion.normSq ↑x = x ^ 2"
+      },
+      {
+        "id": "T06",
+        "statement": "∀ {R : Type u_3} [inst : CommRing R] (a : Quaternion R), star a + a = ↑(2 * a.re)"
+      },
+      {
+        "id": "T07",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] [inst_1 : LinearOrder R] [IsStrictOrderedRing R] {a : Quaternion R}, Quaternion.normSq a ≠ 0 ↔ a ≠ 0"
+      },
+      {
+        "id": "T08",
+        "statement": "∀ {R : Type u_3} [inst : CommRing R] (a : Quaternion R), star a = ↑(2 * a.re) - a"
+      }
+    ],
+    "task": "Predict plausible displayed direct-dependency candidate support independently for every target. For each of T01 through T08, provide an ordered list of zero to 4 distinct candidate IDs, from most to least plausible. Portfolio construction is performed later by the frozen q=2 optimizer."
+  },
+  {
+    "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+    "candidates": [
+      {
+        "id": "C01",
+        "statement": "∀ {α : Type u} [inst : PseudoEMetricSpace α] (ε δ : ℝ) (s : Set α), Metric.thickening ε (Metric.thickening δ s) ⊆ Metric.thickening (ε + δ) s"
+      },
+      {
+        "id": "C02",
+        "statement": "∀ {α : Type u} [inst : PseudoEMetricSpace α] (δ : ℝ) (E : Set α), closure E ⊆ Metric.cthickening δ E"
+      },
+      {
+        "id": "C03",
+        "statement": "∀ {α : Type u} [inst : PseudoEMetricSpace α] (δ : ℝ) {E₁ E₂ : Set α}, E₁ ⊆ E₂ → Metric.thickening δ E₁ ⊆ Metric.thickening δ E₂"
+      },
+      {
+        "id": "C04",
+        "statement": "∀ {α : Type u} [inst : PseudoEMetricSpace α] {δ : ℝ} {E : Set α}, IsOpen (Metric.thickening δ E)"
+      },
+      {
+        "id": "C05",
+        "statement": "∀ {α : Type u} [inst : PseudoEMetricSpace α] {s : Set α} (ε : NNReal), Metric.ediam (Metric.cthickening (↑ε) s) ≤ Metric.ediam s + 2 * ↑ε"
+      },
+      {
+        "id": "C06",
+        "statement": "∀ {X : Type u} [inst : PseudoMetricSpace X] (δ : ℝ) (x : X), Metric.thickening δ {x} = Metric.ball x δ"
+      },
+      {
+        "id": "C07",
+        "statement": "∀ {α : Type u} [inst : PseudoEMetricSpace α] {δ : ℝ}, 0 < δ → ∀ (E : Set α), E ⊆ Metric.thickening δ E"
+      },
+      {
+        "id": "C08",
+        "statement": "∀ {α : Type u} [inst : PseudoEMetricSpace α] {δ : ℝ}, δ ≤ 0 → ∀ (E : Set α), Metric.cthickening δ E = closure E"
+      },
+      {
+        "id": "C09",
+        "statement": "∀ {α : Type u} [inst : PseudoEMetricSpace α] {s t : Set α}, IsCompact s → IsOpen t → s ⊆ t → ∃ δ, 0 < δ ∧ Metric.thickening δ s ⊆ t"
+      },
+      {
+        "id": "C10",
+        "statement": "∀ {α : Type u} [inst : PseudoEMetricSpace α] {K : Set α}, IsCompact K → (nhdsSet K).HasBasis (fun δ => 0 < δ) fun δ => Metric.thickening δ K"
+      },
+      {
+        "id": "C11",
+        "statement": "∀ {α : Type u} [inst : PseudoEMetricSpace α] {δ : ℝ}, 0 ≤ δ → ∀ (E : Set α), Metric.cthickening δ E = ⋂ ε, ⋂ (_ : δ < ε), Metric.thickening ε E"
+      },
+      {
+        "id": "C12",
+        "statement": "∀ {α : Type u} [inst : PseudoEMetricSpace α] {δ₁ δ₂ : ℝ}, 0 < δ₂ → δ₁ < δ₂ → ∀ (E : Set α), Metric.cthickening δ₁ E ⊆ Metric.thickening δ₂ E"
+      },
+      {
+        "id": "C13",
+        "statement": "∀ {α : Type u} [inst : PseudoEMetricSpace α] {δ : ℝ} (E : Set α), E ⊆ Metric.cthickening δ E"
+      },
+      {
+        "id": "C14",
+        "statement": "∀ {α : Type u_2} [inst : PseudoMetricSpace α] {x : α} {E : Set α}, x ∈ E → ∀ (δ : ℝ), Metric.closedBall x δ ⊆ Metric.cthickening δ E"
+      },
+      {
+        "id": "C15",
+        "statement": "∀ {α : Type u} [inst : PseudoEMetricSpace α] (E : Set α), Metric.cthickening 0 E = closure E"
+      },
+      {
+        "id": "C16",
+        "statement": "∀ {α : Type u} [inst : PseudoEMetricSpace α] (E : Set α) {δ : ℝ}, 0 < δ → Metric.thickening δ E ∈ nhdsSet E"
+      }
+    ],
+    "episode_id": "MLP4B_0023",
+    "schema_version": "lemma-portfolio.dependency-compression.v4",
+    "selection_budget": 3,
+    "source_project": "mathlib",
+    "targets": [
+      {
+        "id": "T01",
+        "statement": "∀ {α : Type u} [inst : PseudoEMetricSpace α] {β : Type u_2} [inst_1 : PseudoEMetricSpace β] {f : α → β} {K : Set α} {U : Set β}, IsCompact K → IsOpen U → (∀ x ∈ K, ContinuousAt f x) → Set.MapsTo f K U → ∃ ε > 0, ∃ V ∈ nhdsSet K, Metric.thickening ε (f '' V) ⊆ U"
+      },
+      {
+        "id": "T02",
+        "statement": "∀ {α : Type u} [inst : PseudoEMetricSpace α] {s t : Set α}, Disjoint s t → IsCompact s → IsClosed t → ∃ δ, 0 < δ ∧ Disjoint (Metric.cthickening δ s) (Metric.cthickening δ t)"
+      },
+      {
+        "id": "T03",
+        "statement": "∀ {δ : ℝ} {α : Type u_2} [inst : PseudoMetricSpace α] [ProperSpace α] (E : Set α), 0 ≤ δ → Metric.cthickening δ E = ⋃ x ∈ closure E, Metric.closedBall x δ"
+      },
+      {
+        "id": "T04",
+        "statement": "∀ {α : Type u_2} [inst : PseudoMetricSpace α] (x : α) (ε δ : ℝ), Metric.thickening ε (Metric.ball x δ) ⊆ Metric.ball x (ε + δ)"
+      },
+      {
+        "id": "T05",
+        "statement": "∀ {α : Type u} [inst : PseudoEMetricSpace α] (δ : ℝ) (E : Set α), Metric.cthickening δ E = ⋂ ε, ⋂ (_ : max 0 δ < ε), Metric.thickening ε E"
+      },
+      {
+        "id": "T06",
+        "statement": "∀ {X : Type u} [inst : PseudoMetricSpace X] {x : X} {E : Set X}, x ∈ E → ∀ (δ : ℝ), Metric.ball x δ ⊆ Metric.thickening δ E"
+      },
+      {
+        "id": "T07",
+        "statement": "∀ {α : Type u} [inst : PseudoEMetricSpace α] {ε : ℝ} {s : Set α}, 0 < ε → (Metric.thickening ε s = ∅ ↔ s = ∅)"
+      },
+      {
+        "id": "T08",
+        "statement": "∀ {α : Type u} [inst : PseudoEMetricSpace α] (E : Set α), closure E = ⋂ δ, ⋂ (_ : 0 < δ), Metric.thickening δ E"
+      }
+    ],
+    "task": "Predict plausible displayed direct-dependency candidate support independently for every target. For each of T01 through T08, provide an ordered list of zero to 4 distinct candidate IDs, from most to least plausible. Portfolio construction is performed later by the frozen q=2 optimizer."
+  },
+  {
+    "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+    "candidates": [
+      {
+        "id": "C01",
+        "statement": "∀ {α : Type ua} [inst : UniformSpace α], Filter.comap Prod.swap (uniformity α) = uniformity α"
+      },
+      {
+        "id": "C02",
+        "statement": "∀ {α : Type ua} [inst : UniformSpace α] {x : α} {s : Set α}, s ∈ nhds x ↔ {p | p.1 = x → p.2 ∈ s} ∈ uniformity α"
+      },
+      {
+        "id": "C03",
+        "statement": "∀ {α : Type ua} [inst : UniformSpace α] {x : α}, nhds x = Filter.comap (Prod.mk x) (uniformity α)"
+      },
+      {
+        "id": "C04",
+        "statement": "∀ {α : Type ua} [inst : UniformSpace α] {x : α} {s : SetRel α α}, s ∈ uniformity α → (x, x) ∈ s"
+      },
+      {
+        "id": "C05",
+        "statement": "∀ {α : Type ua} {ι : Sort u_1} [inst : UniformSpace α] {p : ι → Prop} {s : ι → SetRel α α}, (uniformity α).HasBasis p s → ∀ {x : α}, (nhds x).HasBasis p fun i => {y | (y, x) ∈ s i}"
+      },
+      {
+        "id": "C06",
+        "statement": "∀ {α : Type ua} {u₁ u₂ : UniformSpace α}, uniformity α = uniformity α → u₁ = u₂"
+      },
+      {
+        "id": "C07",
+        "statement": "∀ {α : Type ua} [inst : UniformSpace α] {s : SetRel α α}, s ∈ uniformity α → s.IsRefl"
+      },
+      {
+        "id": "C08",
+        "statement": "∀ {α : Type ua} [inst : UniformSpace α] (x : α) {s : SetRel α α}, s ∈ uniformity α → {y | (x, y) ∈ s} ∈ nhds x"
+      },
+      {
+        "id": "C09",
+        "statement": "∀ {α : Type u} (self : UniformSpace.Core α), Filter.principal SetRel.id ≤ self.uniformity"
+      },
+      {
+        "id": "C10",
+        "statement": "∀ {α : Type ua} [inst : UniformSpace α], Filter.map Prod.swap (uniformity α) ≤ uniformity α"
+      },
+      {
+        "id": "C11",
+        "statement": "∀ {α : Type u} [self : UniformSpace α] (x : α), nhds x = Filter.comap (Prod.mk x) UniformSpace.uniformity"
+      },
+      {
+        "id": "C12",
+        "statement": "∀ {α : Type ua} [inst : UniformSpace α] {s : SetRel α α}, s ∈ uniformity α → ∃ t ∈ uniformity α, SetRel.comp t t ⊆ s"
+      },
+      {
+        "id": "C13",
+        "statement": "∀ {α : Type ua} [inst : UniformSpace α] {x : α} {s : Set α}, s ∈ nhds x ↔ ∃ V ∈ uniformity α, UniformSpace.ball x V ⊆ s"
+      },
+      {
+        "id": "C14",
+        "statement": "∀ {α : Type ua} [inst : UniformSpace α] {x : α} {T : Set α}, x ∈ T → ∀ (S : Set α), nhdsWithin x S = Filter.comap (Prod.mk x) (uniformity α ⊓ Filter.principal (T ×ˢ S))"
+      },
+      {
+        "id": "C15",
+        "statement": "∀ {β : Type ub} {V : SetRel β β} [V.IsSymm] {x y : β}, x ∈ UniformSpace.ball y V ↔ y ∈ UniformSpace.ball x V"
+      },
+      {
+        "id": "C16",
+        "statement": "∀ {α : Type ua} [inst : UniformSpace α] {V : SetRel α α}, V ∈ uniformity α → V.symmetrize ∈ uniformity α"
+      }
+    ],
+    "episode_id": "MLP4B_0024",
+    "schema_version": "lemma-portfolio.dependency-compression.v4",
+    "selection_budget": 3,
+    "source_project": "mathlib",
+    "targets": [
+      {
+        "id": "T01",
+        "statement": "∀ {α : Type ua} [inst : UniformSpace α] {s : SetRel α α}, s ∈ uniformity α → ∃ t ∈ uniformity α, SetRel.IsSymm t ∧ t ⊆ s"
+      },
+      {
+        "id": "T02",
+        "statement": "∀ {α : Type ua} [inst : UniformSpace α] {s : SetRel α α}, s ∈ uniformity α → ∃ t ∈ uniformity α, SetRel.comp t (SetRel.comp t t) ⊆ s"
+      },
+      {
+        "id": "T03",
+        "statement": "∀ {β : Type ub} {V : SetRel β β} [V.IsSymm] {x : β}, UniformSpace.ball x V = {y | (y, x) ∈ V}"
+      },
+      {
+        "id": "T04",
+        "statement": "∀ {α : Type ua} [inst : UniformSpace α] {x : α} (S : Set α), nhdsWithin x S = Filter.comap (Prod.mk x) (uniformity α ⊓ Filter.principal (Set.univ ×ˢ S))"
+      },
+      {
+        "id": "T05",
+        "statement": "∀ {α : Type u_2} [i : TopologicalSpace α] (u : UniformSpace α) (h : i = u.toTopologicalSpace), u.replaceTopology h = u"
+      },
+      {
+        "id": "T06",
+        "statement": "∀ {β : Type ub} {V W M : SetRel β β} [W.IsSymm] {p : β × β}, p ∈ (V.comp M).comp W ↔ (UniformSpace.ball p.1 V ×ˢ UniformSpace.ball p.2 W ∩ M).Nonempty"
+      },
+      {
+        "id": "T07",
+        "statement": "∀ {α : Type ua} [inst : UniformSpace α] (y : α) {s : SetRel α α}, s ∈ uniformity α → {x | (x, y) ∈ s} ∈ nhds y"
+      },
+      {
+        "id": "T08",
+        "statement": "∀ {α : Type ua} [inst : UniformSpace α] {a : α} {U : Set α}, U ∈ nhds a → ∃ V ∈ nhds a, ∃ t ∈ uniformity α, ∀ a' ∈ V, UniformSpace.ball a' t ⊆ U"
+      }
+    ],
+    "task": "Predict plausible displayed direct-dependency candidate support independently for every target. For each of T01 through T08, provide an ordered list of zero to 4 distinct candidate IDs, from most to least plausible. Portfolio construction is performed later by the frozen q=2 optimizer."
+  }
+]
+</episodes>

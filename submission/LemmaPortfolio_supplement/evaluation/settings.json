@@ -1,0 +1,334 @@
+{
+  "schema_version": "lemma-portfolio.evaluation-settings.v1",
+  "scope": "Inventory of saved responses and reported inference settings. The submission can reproduce scoring without model calls; historical model outputs and hidden serving conditions are not guaranteed reproducible.",
+  "paths_relative_to": "submission archive root",
+  "test_scoring": {
+    "episodes": 60,
+    "targets_per_episode": 8,
+    "candidates_per_episode": 16,
+    "selection_budget": 3,
+    "portfolios_per_episode": 560,
+    "missing_or_malformed_answers": "score zero, retain fixed denominator of 60"
+  },
+  "prompts": {
+    "direct_directory": "original_release/prompts/DIRECT_PROMPTS",
+    "direct_calls": 12,
+    "episodes_per_call": 5,
+    "support_directory": "original_release/prompts/SOL_EXTRA_PROMPTS",
+    "support_calls": 4,
+    "prompt_manifest": "original_release/prompts/PROMPT_SHA256SUMS.txt",
+    "prompt_manifest_sha256": "029f7695b346ecbfe412c96443b970ac27aa1ab3a82236cb512c9c757669892f",
+    "labels_not_model_input": true
+  },
+  "original_response_sets": [
+    {
+      "system_id": "gpt_sol_5_6_pro",
+      "display_label": "GPT SOL 5.6 Pro",
+      "valid_answers": 55,
+      "invalidity_note": "Five missing episode answers.",
+      "predictions_file": "original_release/responses/direct_transcription.json",
+      "predictions_key": "gpt_sol_5_6_pro",
+      "capture_surface": "original saved web-chat responses",
+      "source_capture": "original_release/responses/source_responses.pdf"
+    },
+    {
+      "system_id": "gpt_sol_5_6_xhigh",
+      "display_label": "GPT SOL 5.6 (xhigh)",
+      "valid_answers": 60,
+      "invalidity_note": null,
+      "predictions_file": "original_release/responses/direct_transcription.json",
+      "predictions_key": "gpt_sol_5_6_xhigh",
+      "capture_surface": "original saved web-chat responses",
+      "source_capture": "original_release/responses/sol_xhigh_source_responses.pdf"
+    },
+    {
+      "system_id": "deepseek_instant_deepthink",
+      "display_label": "DeepSeek Instant + DeepThink",
+      "valid_answers": 60,
+      "invalidity_note": null,
+      "predictions_file": "original_release/responses/direct_transcription.json",
+      "predictions_key": "deepseek_instant_deepthink",
+      "capture_surface": "original saved web-chat responses",
+      "source_capture": "original_release/responses/source_responses.pdf"
+    },
+    {
+      "system_id": "deepseek_expert_deepthink",
+      "display_label": "DeepSeek Expert + DeepThink",
+      "valid_answers": 60,
+      "invalidity_note": null,
+      "predictions_file": "original_release/responses/direct_transcription.json",
+      "predictions_key": "deepseek_expert_deepthink",
+      "capture_surface": "original saved web-chat responses",
+      "source_capture": "original_release/responses/source_responses.pdf"
+    },
+    {
+      "system_id": "qwen_3_8_max_thinking",
+      "display_label": "Qwen 3.8 Max - Thinking",
+      "valid_answers": 55,
+      "invalidity_note": "Five malformed episode answers in D12.",
+      "predictions_file": "original_release/responses/direct_transcription.json",
+      "predictions_key": "qwen_3_8_max_thinking",
+      "capture_surface": "original saved web-chat responses",
+      "source_capture": "original_release/responses/source_responses.pdf"
+    },
+    {
+      "system_id": "qwen_3_7_plus_thinking",
+      "display_label": "Qwen 3.7 Plus - Thinking",
+      "valid_answers": 60,
+      "invalidity_note": null,
+      "predictions_file": "original_release/responses/direct_transcription.json",
+      "predictions_key": "qwen_3_7_plus_thinking",
+      "capture_surface": "original saved web-chat responses",
+      "source_capture": "original_release/responses/source_responses.pdf"
+    }
+  ],
+  "original_protocol": {
+    "file": "original_release/provenance/manual_chat/MANUAL_CHAT_PROTOCOL.frozen.json",
+    "scope": "Intended two-system core protocol, not an independently verified execution record for all six saved response sets.",
+    "limitations_file": "original_release/provenance/manual_chat/README.md",
+    "new_manual_run_instructions": "original_release/docs/RERUN_MODELS.md",
+    "historical_targetwise_predictions": "original_release/responses/support_transcription.json",
+    "historical_targetwise_blocks": [
+      "D04",
+      "D05",
+      "D06",
+      "D12"
+    ],
+    "historical_targetwise_scope": "Saved descriptive comparisons, not completion of the frozen protocol's different hash-selected optional subset."
+  },
+  "followup_runs": [
+    {
+      "run_id": "astra_xhigh_r1_prior",
+      "model_requested": "gpt-6-astra",
+      "effort": "xhigh",
+      "surface": "Codex CLI",
+      "repeat": 1,
+      "call_count": 12,
+      "episode_count": 60,
+      "valid_answers": 60,
+      "run_evidence": "evaluation/runs/astra_xhigh_r1_prior.json",
+      "responses_directory": "followups/2026-09-05/astra_xhigh_r1_prior/responses"
+    },
+    {
+      "run_id": "astra_xhigh_r2",
+      "model_requested": "gpt-6-astra",
+      "effort": "xhigh",
+      "surface": "Codex CLI",
+      "repeat": 2,
+      "call_count": 12,
+      "episode_count": 60,
+      "valid_answers": 60,
+      "run_evidence": "evaluation/runs/astra_xhigh_r2.json",
+      "responses_directory": "followups/2026-09-05/astra_xhigh_r2/responses"
+    },
+    {
+      "run_id": "astra_max_r1",
+      "model_requested": "gpt-6-astra",
+      "effort": "max",
+      "surface": "Codex CLI",
+      "repeat": 1,
+      "call_count": 12,
+      "episode_count": 60,
+      "valid_answers": 60,
+      "run_evidence": "evaluation/runs/astra_max_r1.json",
+      "responses_directory": "followups/2026-09-05/astra_max_r1/responses"
+    },
+    {
+      "run_id": "sol_xhigh_r1",
+      "model_requested": "gpt-5.6-sol",
+      "effort": "xhigh",
+      "surface": "Codex CLI",
+      "repeat": 1,
+      "call_count": 12,
+      "episode_count": 60,
+      "valid_answers": 60,
+      "run_evidence": "evaluation/runs/sol_xhigh_r1.json",
+      "responses_directory": "followups/2026-09-05/sol_xhigh_r1/responses"
+    },
+    {
+      "run_id": "sol_xhigh_r2",
+      "model_requested": "gpt-5.6-sol",
+      "effort": "xhigh",
+      "surface": "Codex CLI",
+      "repeat": 2,
+      "call_count": 12,
+      "episode_count": 60,
+      "valid_answers": 60,
+      "run_evidence": "evaluation/runs/sol_xhigh_r2.json",
+      "responses_directory": "followups/2026-09-05/sol_xhigh_r2/responses"
+    },
+    {
+      "run_id": "claude_fable_5_xhigh_r1",
+      "model_requested": "claude-fable-5",
+      "effort": "xhigh",
+      "surface": "Anthropic Messages API",
+      "repeat": 1,
+      "call_count": 12,
+      "episode_count": 60,
+      "valid_answers": 60,
+      "run_evidence": "evaluation/runs/claude_fable_5_xhigh_r1.json",
+      "responses_directory": "followups/2026-09-05/claude_fable_5_xhigh_r1/responses"
+    },
+    {
+      "run_id": "claude_fable_5_1_xhigh_ctx_r1",
+      "model_requested": "claude-fable-5-1",
+      "effort": "xhigh",
+      "surface": "Anthropic Messages API",
+      "repeat": 1,
+      "call_count": 12,
+      "episode_count": 60,
+      "valid_answers": 60,
+      "run_evidence": "evaluation/runs/claude_fable_5_1_xhigh_ctx_r1.json",
+      "responses_directory": "followups/2026-09-05/claude_fable_5_1_xhigh_ctx_r1/responses"
+    }
+  ],
+  "astra_targetwise_diagnostic": {
+    "run_id": "astra_diagnostic",
+    "model_requested": "gpt-6-astra",
+    "effort": "xhigh",
+    "surface": "Codex CLI",
+    "call_count": 8,
+    "paired_episode_count": 20,
+    "run_evidence": "evaluation/runs/astra_diagnostic.json",
+    "responses_directory": "followups/2026-09-05/astra_diagnostic/responses",
+    "order": [
+      "D04 direct",
+      "D04 support",
+      "D05 support",
+      "D05 direct",
+      "D06 direct",
+      "D06 support",
+      "D12 support",
+      "D12 direct"
+    ],
+    "separate_sessions": true,
+    "primary_q": 2,
+    "secondary_q": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "selection": "Keep each target's first q ordered candidate predictions; exhaustively maximize predicted coverage over all 560 triples; break ties lexicographically by candidate ID. True occurrences are used only for evaluation.",
+    "not_spliced_into_full_direct_runs": true
+  },
+  "codex_settings": {
+    "source": "evaluation/protocol.json",
+    "cli_version": "codex-cli 0.153.0",
+    "cli_binary_sha256": "0166f25c39d6200d42e2c2aa3733bd6a4ac469a213427489f0fa16b656eb6f00",
+    "reported_harness_sha256": "4c1a2b41a8693d2962df814593b7cd9540293c81c00e1e33cede0dbe0f43125c",
+    "reported_runner_sha256": "0f6cb5b8cdfb9c5246ae4eb2d4fd08c1002afedc056b91586ab329115eae530d",
+    "exact_runner_source_available": false,
+    "exact_invocation_commands_available": false,
+    "timeout_seconds": 2400,
+    "session_isolation": "Fresh process, blank working directory for each prompt.",
+    "system_instructions": "Bundled Codex instructions; user configuration ignored; no project instructions. Exact bundled system text is not included.",
+    "tools": "No tools, skills, memory, delegation, web, project files, or previous conversation supplied; capture-audit summaries report zero tool events.",
+    "temperature": "not exposed",
+    "numeric_reasoning_budget": "not exposed",
+    "automatic_retries": false,
+    "malformed_answer_repair": false,
+    "execution_evidence": "Reported receipts and capture-audit summaries, not independent authentication of model weights or hidden serving defaults."
+  },
+  "fable_settings": {
+    "sdk_package": "anthropic",
+    "sdk_version": "1.4.0",
+    "python_version": "3.14.6",
+    "api": "Anthropic Messages API",
+    "endpoint": "api.anthropic.com",
+    "streaming": true,
+    "max_tokens": 128000,
+    "output_config": {
+      "effort": "xhigh"
+    },
+    "thinking_parameter": "omitted",
+    "temperature_parameter": "omitted",
+    "top_p_parameter": "omitted",
+    "tools": "none declared",
+    "session_isolation": "One stateless request per prompt; no prior conversation.",
+    "sdk_max_retries": 0,
+    "request_timeout_seconds": 3600,
+    "connection_timeout_seconds": 60,
+    "exact_historical_command_lines_available": false,
+    "actual_max_attempts_override": "not recorded; source defaults are listed per harness",
+    "mathematical_answer_retries": false,
+    "fable_5_system_prompt": null,
+    "fable_5_1_system_context": "followups/2026-09-05/claude_fable_5_1_xhigh_ctx_r1/harness/system_context.txt",
+    "fable_5_1_system_context_sha256": "26ca2dde77fa98af25c4e3032f02911a7d369dcdd504d75ea2a1ea0cd7440b20",
+    "harnesses": [
+      {
+        "file": "evaluation/harnesses/fable5_initial_979e3864.py",
+        "source_member": "followups/2026-09-05/claude_fable_5_xhigh_r1/harness/run_claude_direct.py",
+        "sha256": "979e3864bf75c612cc0cb27d6d7ad0df724953b33df238b9707fd06ca5eea538",
+        "used_for": "Fable 5: completed calls 01-09 and the failed first call 10.",
+        "default_max_attempts": 4,
+        "backoff_seconds": [
+          30,
+          60,
+          120
+        ],
+        "has_system_file_option": false
+      },
+      {
+        "file": "evaluation/harnesses/fable5_resume_46aca1c4.py",
+        "source_member": "followups/2026-09-05/claude_fable_5_xhigh_r1/harness/run_claude_direct.46aca1c4.py",
+        "sha256": "46aca1c4c541d6e3687f7b416bb50bb062165d27e7ed59a152fa99c4f3c1b638",
+        "used_for": "Fable 5: manual resume completed calls 10-12; no system prompt used.",
+        "default_max_attempts": 6,
+        "backoff_seconds": [
+          30,
+          60,
+          120,
+          300
+        ],
+        "has_system_file_option": true
+      },
+      {
+        "file": "evaluation/harnesses/fable51_context_76bdf78d.py",
+        "source_member": "followups/2026-09-05/claude_fable_5_1_xhigh_ctx_r1/harness/run_claude_direct.py",
+        "sha256": "76bdf78db294d16d13b3ea37e70a247600769d1988ad7ee3d1c5efa6bca71de3",
+        "used_for": "Fable 5.1: all twelve context-system-prompt calls.",
+        "default_max_attempts": 4,
+        "backoff_seconds": [
+          30,
+          60,
+          120
+        ],
+        "has_system_file_option": true
+      }
+    ],
+    "transport_event": "Fable 5 call 10 failed with an HTTP-200 stream overload; the run resumed using the 46aca1c4 harness, retaining calls 01-09.",
+    "bare_fable_5_1_refusals": {
+      "reported_call_count": 12,
+      "scored": false,
+      "full_records_in_supplied_export": false,
+      "available_diagnostics": "evaluation/fable_refusal_diagnostics.json",
+      "diagnostic_scope": "Small classifier checks with max_tokens=16, not scored benchmark responses."
+    }
+  },
+  "protocol_events": {
+    "evidence": "evaluation/protocol.json",
+    "first_astra_run_predates_freeze": true,
+    "frozen_utc": "2026-09-05T01:46:26.664828+00:00",
+    "amendment_utc": "2026-09-05T07:49:33+00:00",
+    "amendment": "After core scores were known, finish second Sol/Astra xhigh runs and cancel the unstarted third pair.",
+    "cancelled_unstarted_runs": [
+      "sol_xhigh_r3",
+      "astra_xhigh_r3"
+    ],
+    "all_started_scored_runs_retained": true,
+    "post_release": true,
+    "labels_known_to_experimenter_but_not_supplied_to_models": true
+  },
+  "record_projection": {
+    "source_fields_omitted": [
+      "repository identity commits",
+      "local paths",
+      "local-time timezone identifiers",
+      "provider request/message IDs",
+      "classifier text prefixes"
+    ],
+    "retained": "Scientific settings, UTC times, usage, protocol decisions, source hashes, prompt and response hashes.",
+    "source_hash_semantics": "Each source_sha256 is the hash of the source record before projection, not the hash of the cleaned JSON. Referenced source event streams and raw API payloads are not bundled."
+  }
+}

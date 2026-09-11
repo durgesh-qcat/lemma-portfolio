@@ -1,0 +1,1302 @@
+{
+  "incidence": [
+    {
+      "f1": 0.7402135231316725,
+      "fn": 67,
+      "fp": 79,
+      "matched": false,
+      "precision": 0.7247386759581882,
+      "prefix": null,
+      "q2_oracle_recall_ceiling": 0.8654545454545455,
+      "recall": 0.7563636363636363,
+      "system": "gpt_sol_5_6_pro",
+      "tp": 208
+    },
+    {
+      "f1": 0.72552783109405,
+      "fn": 86,
+      "fp": 57,
+      "matched": false,
+      "precision": 0.7682926829268293,
+      "prefix": 2,
+      "q2_oracle_recall_ceiling": 0.8654545454545455,
+      "recall": 0.6872727272727273,
+      "system": "gpt_sol_5_6_pro",
+      "tp": 189
+    },
+    {
+      "f1": 0.7156398104265402,
+      "fn": 57,
+      "fp": 63,
+      "matched": true,
+      "precision": 0.705607476635514,
+      "prefix": null,
+      "q2_oracle_recall_ceiling": 0.8701923076923077,
+      "recall": 0.7259615384615384,
+      "system": "gpt_sol_5_6_pro",
+      "tp": 151
+    },
+    {
+      "f1": 0.7088607594936709,
+      "fn": 68,
+      "fp": 47,
+      "matched": true,
+      "precision": 0.7486631016042781,
+      "prefix": 2,
+      "q2_oracle_recall_ceiling": 0.8701923076923077,
+      "recall": 0.6730769230769231,
+      "system": "gpt_sol_5_6_pro",
+      "tp": 140
+    },
+    {
+      "f1": 0.726643598615917,
+      "fn": 65,
+      "fp": 93,
+      "matched": false,
+      "precision": 0.693069306930693,
+      "prefix": null,
+      "q2_oracle_recall_ceiling": 0.8654545454545455,
+      "recall": 0.7636363636363637,
+      "system": "gpt_sol_5_6_xhigh",
+      "tp": 210
+    },
+    {
+      "f1": 0.690566037735849,
+      "fn": 92,
+      "fp": 72,
+      "matched": false,
+      "precision": 0.7176470588235294,
+      "prefix": 2,
+      "q2_oracle_recall_ceiling": 0.8654545454545455,
+      "recall": 0.6654545454545454,
+      "system": "gpt_sol_5_6_xhigh",
+      "tp": 183
+    },
+    {
+      "f1": 0.726643598615917,
+      "fn": 65,
+      "fp": 93,
+      "matched": true,
+      "precision": 0.693069306930693,
+      "prefix": null,
+      "q2_oracle_recall_ceiling": 0.8654545454545455,
+      "recall": 0.7636363636363637,
+      "system": "gpt_sol_5_6_xhigh",
+      "tp": 210
+    },
+    {
+      "f1": 0.690566037735849,
+      "fn": 92,
+      "fp": 72,
+      "matched": true,
+      "precision": 0.7176470588235294,
+      "prefix": 2,
+      "q2_oracle_recall_ceiling": 0.8654545454545455,
+      "recall": 0.6654545454545454,
+      "system": "gpt_sol_5_6_xhigh",
+      "tp": 183
+    }
+  ],
+  "interpretation": {
+    "matched": "Matched excludes Pro D12, for which the direct selections are missing. xhigh has all 20 direct answers.",
+    "oracle_existence_count": "episodes_with_optimum_among_ties counts ALL predicted maximizers, including singleton maximizing sets; this is an upper bound achievable only by an oracle that can use the hidden true labels to break predicted ties.",
+    "uniform_tie_expectation": "For each episode, select uniformly from its complete set of predicted maximizers, then sum its true-optimal probability. This is an analytic expectation, not a run, optimized rule, or inference about model quality."
+  },
+  "predicted_optimizer_audit": {
+    "gpt_sol_5_6_pro": {
+      "all": {
+        "best_coverage_if_oracle_ties": 109,
+        "direct_coverage": 75,
+        "direct_exact": 4,
+        "direct_within_one": 11,
+        "episodes_where_all_true_optima_excluded": 11,
+        "episodes_with_optimum_among_multiple_ties": 8,
+        "episodes_with_optimum_among_ties": 9,
+        "episodes_with_ties": 15,
+        "n": 20,
+        "selected_coverage": 92,
+        "selected_exact": 1,
+        "selected_within_one": 11,
+        "tie_count_min_median_max": [
+          1,
+          4,
+          24
+        ],
+        "uniform_tie_expected_coverage": 95.90277777777777,
+        "uniform_tie_expected_exact": 2.6527777777777777,
+        "uniform_tie_expected_exact_fraction": "191/72"
+      },
+      "matched": {
+        "best_coverage_if_oracle_ties": 79,
+        "direct_coverage": 75,
+        "direct_exact": 4,
+        "direct_within_one": 11,
+        "episodes_where_all_true_optima_excluded": 10,
+        "episodes_with_optimum_among_multiple_ties": 4,
+        "episodes_with_optimum_among_ties": 5,
+        "episodes_with_ties": 11,
+        "n": 15,
+        "selected_coverage": 66,
+        "selected_exact": 1,
+        "selected_within_one": 6,
+        "tie_count_min_median_max": [
+          1,
+          4,
+          24
+        ],
+        "uniform_tie_expected_coverage": 69.69444444444444,
+        "uniform_tie_expected_exact": 1.7777777777777777,
+        "uniform_tie_expected_exact_fraction": "16/9"
+      },
+      "rows": [
+        {
+          "actual_chosen": 5,
+          "actual_oracle": 6,
+          "actual_tie_max": 5,
+          "actual_tie_min": 4,
+          "direct_coverage": 5,
+          "direct_valid": true,
+          "episode_id": "MLP4B_0015",
+          "lexicographic_choice": [
+            "C03",
+            "C08",
+            "C14"
+          ],
+          "predicted_max": 5,
+          "ties": 5,
+          "true_optima_retained": 0,
+          "uniform_tie_expected_coverage": 4.6,
+          "uniform_tie_optimal_probability": 0.0
+        },
+        {
+          "actual_chosen": 3,
+          "actual_oracle": 6,
+          "actual_tie_max": 4,
+          "actual_tie_min": 3,
+          "direct_coverage": 5,
+          "direct_valid": true,
+          "episode_id": "MLP4B_0016",
+          "lexicographic_choice": [
+            "C01",
+            "C05",
+            "C11"
+          ],
+          "predicted_max": 6,
+          "ties": 2,
+          "true_optima_retained": 0,
+          "uniform_tie_expected_coverage": 3.5,
+          "uniform_tie_optimal_probability": 0.0
+        },
+        {
+          "actual_chosen": 5,
+          "actual_oracle": 6,
+          "actual_tie_max": 5,
+          "actual_tie_min": 4,
+          "direct_coverage": 6,
+          "direct_valid": true,
+          "episode_id": "MLP4B_0017",
+          "lexicographic_choice": [
+            "C02",
+            "C03",
+            "C09"
+          ],
+          "predicted_max": 5,
+          "ties": 24,
+          "true_optima_retained": 0,
+          "uniform_tie_expected_coverage": 4.458333333333333,
+          "uniform_tie_optimal_probability": 0.0
+        },
+        {
+          "actual_chosen": 5,
+          "actual_oracle": 6,
+          "actual_tie_max": 6,
+          "actual_tie_min": 4,
+          "direct_coverage": 5,
+          "direct_valid": true,
+          "episode_id": "MLP4B_0018",
+          "lexicographic_choice": [
+            "C01",
+            "C15",
+            "C16"
+          ],
+          "predicted_max": 5,
+          "ties": 6,
+          "true_optima_retained": 1,
+          "uniform_tie_expected_coverage": 5.0,
+          "uniform_tie_optimal_probability": 0.16666666666666666
+        },
+        {
+          "actual_chosen": 6,
+          "actual_oracle": 6,
+          "actual_tie_max": 6,
+          "actual_tie_min": 6,
+          "direct_coverage": 6,
+          "direct_valid": true,
+          "episode_id": "MLP4B_0019",
+          "lexicographic_choice": [
+            "C04",
+            "C13",
+            "C16"
+          ],
+          "predicted_max": 6,
+          "ties": 1,
+          "true_optima_retained": 1,
+          "uniform_tie_expected_coverage": 6.0,
+          "uniform_tie_optimal_probability": 1.0
+        },
+        {
+          "actual_chosen": 4,
+          "actual_oracle": 6,
+          "actual_tie_max": 6,
+          "actual_tie_min": 4,
+          "direct_coverage": 6,
+          "direct_valid": true,
+          "episode_id": "MLP4B_0020",
+          "lexicographic_choice": [
+            "C03",
+            "C09",
+            "C14"
+          ],
+          "predicted_max": 6,
+          "ties": 4,
+          "true_optima_retained": 1,
+          "uniform_tie_expected_coverage": 5.0,
+          "uniform_tie_optimal_probability": 0.25
+        },
+        {
+          "actual_chosen": 4,
+          "actual_oracle": 6,
+          "actual_tie_max": 5,
+          "actual_tie_min": 3,
+          "direct_coverage": 5,
+          "direct_valid": true,
+          "episode_id": "MLP4B_0021",
+          "lexicographic_choice": [
+            "C05",
+            "C06",
+            "C09"
+          ],
+          "predicted_max": 7,
+          "ties": 8,
+          "true_optima_retained": 0,
+          "uniform_tie_expected_coverage": 3.875,
+          "uniform_tie_optimal_probability": 0.0
+        },
+        {
+          "actual_chosen": 4,
+          "actual_oracle": 7,
+          "actual_tie_max": 5,
+          "actual_tie_min": 3,
+          "direct_coverage": 4,
+          "direct_valid": true,
+          "episode_id": "MLP4B_0022",
+          "lexicographic_choice": [
+            "C03",
+            "C13",
+            "C15"
+          ],
+          "predicted_max": 5,
+          "ties": 5,
+          "true_optima_retained": 0,
+          "uniform_tie_expected_coverage": 3.8,
+          "uniform_tie_optimal_probability": 0.0
+        },
+        {
+          "actual_chosen": 5,
+          "actual_oracle": 6,
+          "actual_tie_max": 5,
+          "actual_tie_min": 5,
+          "direct_coverage": 5,
+          "direct_valid": true,
+          "episode_id": "MLP4B_0023",
+          "lexicographic_choice": [
+            "C06",
+            "C09",
+            "C11"
+          ],
+          "predicted_max": 6,
+          "ties": 1,
+          "true_optima_retained": 0,
+          "uniform_tie_expected_coverage": 5.0,
+          "uniform_tie_optimal_probability": 0.0
+        },
+        {
+          "actual_chosen": 4,
+          "actual_oracle": 6,
+          "actual_tie_max": 5,
+          "actual_tie_min": 4,
+          "direct_coverage": 4,
+          "direct_valid": true,
+          "episode_id": "MLP4B_0024",
+          "lexicographic_choice": [
+            "C01",
+            "C12",
+            "C15"
+          ],
+          "predicted_max": 5,
+          "ties": 5,
+          "true_optima_retained": 0,
+          "uniform_tie_expected_coverage": 4.6,
+          "uniform_tie_optimal_probability": 0.0
+        },
+        {
+          "actual_chosen": 3,
+          "actual_oracle": 6,
+          "actual_tie_max": 6,
+          "actual_tie_min": 3,
+          "direct_coverage": 3,
+          "direct_valid": true,
+          "episode_id": "MLP4B_0025",
+          "lexicographic_choice": [
+            "C03",
+            "C07",
+            "C14"
+          ],
+          "predicted_max": 5,
+          "ties": 9,
+          "true_optima_retained": 1,
+          "uniform_tie_expected_coverage": 4.111111111111111,
+          "uniform_tie_optimal_probability": 0.1111111111111111
+        },
+        {
+          "actual_chosen": 4,
+          "actual_oracle": 6,
+          "actual_tie_max": 6,
+          "actual_tie_min": 4,
+          "direct_coverage": 6,
+          "direct_valid": true,
+          "episode_id": "MLP4B_0026",
+          "lexicographic_choice": [
+            "C04",
+            "C05",
+            "C13"
+          ],
+          "predicted_max": 5,
+          "ties": 4,
+          "true_optima_retained": 1,
+          "uniform_tie_expected_coverage": 5.0,
+          "uniform_tie_optimal_probability": 0.25
+        },
+        {
+          "actual_chosen": 6,
+          "actual_oracle": 7,
+          "actual_tie_max": 6,
+          "actual_tie_min": 6,
+          "direct_coverage": 6,
+          "direct_valid": true,
+          "episode_id": "MLP4B_0027",
+          "lexicographic_choice": [
+            "C02",
+            "C04",
+            "C06"
+          ],
+          "predicted_max": 8,
+          "ties": 1,
+          "true_optima_retained": 0,
+          "uniform_tie_expected_coverage": 6.0,
+          "uniform_tie_optimal_probability": 0.0
+        },
+        {
+          "actual_chosen": 4,
+          "actual_oracle": 6,
+          "actual_tie_max": 5,
+          "actual_tie_min": 4,
+          "direct_coverage": 5,
+          "direct_valid": true,
+          "episode_id": "MLP4B_0028",
+          "lexicographic_choice": [
+            "C03",
+            "C07",
+            "C14"
+          ],
+          "predicted_max": 6,
+          "ties": 4,
+          "true_optima_retained": 0,
+          "uniform_tie_expected_coverage": 4.75,
+          "uniform_tie_optimal_probability": 0.0
+        },
+        {
+          "actual_chosen": 4,
+          "actual_oracle": 6,
+          "actual_tie_max": 4,
+          "actual_tie_min": 4,
+          "direct_coverage": 4,
+          "direct_valid": true,
+          "episode_id": "MLP4B_0029",
+          "lexicographic_choice": [
+            "C04",
+            "C06",
+            "C16"
+          ],
+          "predicted_max": 8,
+          "ties": 1,
+          "true_optima_retained": 0,
+          "uniform_tie_expected_coverage": 4.0,
+          "uniform_tie_optimal_probability": 0.0
+        },
+        {
+          "actual_chosen": 5,
+          "actual_oracle": 6,
+          "actual_tie_max": 5,
+          "actual_tie_min": 5,
+          "direct_coverage": 0,
+          "direct_valid": false,
+          "episode_id": "MLP4B_0055",
+          "lexicographic_choice": [
+            "C02",
+            "C05",
+            "C06"
+          ],
+          "predicted_max": 6,
+          "ties": 1,
+          "true_optima_retained": 0,
+          "uniform_tie_expected_coverage": 5.0,
+          "uniform_tie_optimal_probability": 0.0
+        },
+        {
+          "actual_chosen": 5,
+          "actual_oracle": 6,
+          "actual_tie_max": 6,
+          "actual_tie_min": 5,
+          "direct_coverage": 0,
+          "direct_valid": false,
+          "episode_id": "MLP4B_0056",
+          "lexicographic_choice": [
+            "C03",
+            "C08",
+            "C16"
+          ],
+          "predicted_max": 7,
+          "ties": 3,
+          "true_optima_retained": 1,
+          "uniform_tie_expected_coverage": 5.333333333333333,
+          "uniform_tie_optimal_probability": 0.3333333333333333
+        },
+        {
+          "actual_chosen": 5,
+          "actual_oracle": 6,
+          "actual_tie_max": 6,
+          "actual_tie_min": 4,
+          "direct_coverage": 0,
+          "direct_valid": false,
+          "episode_id": "MLP4B_0057",
+          "lexicographic_choice": [
+            "C01",
+            "C04",
+            "C15"
+          ],
+          "predicted_max": 5,
+          "ties": 12,
+          "true_optima_retained": 1,
+          "uniform_tie_expected_coverage": 4.75,
+          "uniform_tie_optimal_probability": 0.08333333333333333
+        },
+        {
+          "actual_chosen": 5,
+          "actual_oracle": 6,
+          "actual_tie_max": 6,
+          "actual_tie_min": 5,
+          "direct_coverage": 0,
+          "direct_valid": false,
+          "episode_id": "MLP4B_0058",
+          "lexicographic_choice": [
+            "C05",
+            "C07",
+            "C09"
+          ],
+          "predicted_max": 5,
+          "ties": 8,
+          "true_optima_retained": 1,
+          "uniform_tie_expected_coverage": 5.125,
+          "uniform_tie_optimal_probability": 0.125
+        },
+        {
+          "actual_chosen": 6,
+          "actual_oracle": 7,
+          "actual_tie_max": 7,
+          "actual_tie_min": 5,
+          "direct_coverage": 0,
+          "direct_valid": false,
+          "episode_id": "MLP4B_0059",
+          "lexicographic_choice": [
+            "C02",
+            "C06",
+            "C12"
+          ],
+          "predicted_max": 7,
+          "ties": 3,
+          "true_optima_retained": 1,
+          "uniform_tie_expected_coverage": 6.0,
+          "uniform_tie_optimal_probability": 0.3333333333333333
+        }
+      ]
+    },
+    "gpt_sol_5_6_xhigh": {
+      "all": {
+        "best_coverage_if_oracle_ties": 107,
+        "direct_coverage": 93,
+        "direct_exact": 1,
+        "direct_within_one": 13,
+        "episodes_where_all_true_optima_excluded": 11,
+        "episodes_with_optimum_among_multiple_ties": 9,
+        "episodes_with_optimum_among_ties": 9,
+        "episodes_with_ties": 16,
+        "n": 20,
+        "selected_coverage": 78,
+        "selected_exact": 0,
+        "selected_within_one": 7,
+        "tie_count_min_median_max": [
+          1,
+          9,
+          33
+        ],
+        "uniform_tie_expected_coverage": 87.69292929292929,
+        "uniform_tie_expected_exact": 1.2795454545454545,
+        "uniform_tie_expected_exact_fraction": "563/440"
+      },
+      "matched": {
+        "best_coverage_if_oracle_ties": 107,
+        "direct_coverage": 93,
+        "direct_exact": 1,
+        "direct_within_one": 13,
+        "episodes_where_all_true_optima_excluded": 11,
+        "episodes_with_optimum_among_multiple_ties": 9,
+        "episodes_with_optimum_among_ties": 9,
+        "episodes_with_ties": 16,
+        "n": 20,
+        "selected_coverage": 78,
+        "selected_exact": 0,
+        "selected_within_one": 7,
+        "tie_count_min_median_max": [
+          1,
+          9,
+          33
+        ],
+        "uniform_tie_expected_coverage": 87.69292929292929,
+        "uniform_tie_expected_exact": 1.2795454545454545,
+        "uniform_tie_expected_exact_fraction": "563/440"
+      },
+      "rows": [
+        {
+          "actual_chosen": 5,
+          "actual_oracle": 6,
+          "actual_tie_max": 5,
+          "actual_tie_min": 4,
+          "direct_coverage": 5,
+          "direct_valid": true,
+          "episode_id": "MLP4B_0015",
+          "lexicographic_choice": [
+            "C03",
+            "C08",
+            "C14"
+          ],
+          "predicted_max": 5,
+          "ties": 9,
+          "true_optima_retained": 0,
+          "uniform_tie_expected_coverage": 4.444444444444445,
+          "uniform_tie_optimal_probability": 0.0
+        },
+        {
+          "actual_chosen": 5,
+          "actual_oracle": 6,
+          "actual_tie_max": 6,
+          "actual_tie_min": 4,
+          "direct_coverage": 5,
+          "direct_valid": true,
+          "episode_id": "MLP4B_0016",
+          "lexicographic_choice": [
+            "C01",
+            "C02",
+            "C10"
+          ],
+          "predicted_max": 5,
+          "ties": 8,
+          "true_optima_retained": 1,
+          "uniform_tie_expected_coverage": 4.875,
+          "uniform_tie_optimal_probability": 0.125
+        },
+        {
+          "actual_chosen": 5,
+          "actual_oracle": 6,
+          "actual_tie_max": 5,
+          "actual_tie_min": 4,
+          "direct_coverage": 5,
+          "direct_valid": true,
+          "episode_id": "MLP4B_0017",
+          "lexicographic_choice": [
+            "C02",
+            "C03",
+            "C09"
+          ],
+          "predicted_max": 5,
+          "ties": 24,
+          "true_optima_retained": 0,
+          "uniform_tie_expected_coverage": 4.458333333333333,
+          "uniform_tie_optimal_probability": 0.0
+        },
+        {
+          "actual_chosen": 3,
+          "actual_oracle": 6,
+          "actual_tie_max": 6,
+          "actual_tie_min": 2,
+          "direct_coverage": 5,
+          "direct_valid": true,
+          "episode_id": "MLP4B_0018",
+          "lexicographic_choice": [
+            "C01",
+            "C05",
+            "C16"
+          ],
+          "predicted_max": 4,
+          "ties": 33,
+          "true_optima_retained": 1,
+          "uniform_tie_expected_coverage": 3.9696969696969697,
+          "uniform_tie_optimal_probability": 0.030303030303030304
+        },
+        {
+          "actual_chosen": 4,
+          "actual_oracle": 6,
+          "actual_tie_max": 6,
+          "actual_tie_min": 4,
+          "direct_coverage": 6,
+          "direct_valid": true,
+          "episode_id": "MLP4B_0019",
+          "lexicographic_choice": [
+            "C02",
+            "C04",
+            "C07"
+          ],
+          "predicted_max": 5,
+          "ties": 9,
+          "true_optima_retained": 1,
+          "uniform_tie_expected_coverage": 5.0,
+          "uniform_tie_optimal_probability": 0.1111111111111111
+        },
+        {
+          "actual_chosen": 2,
+          "actual_oracle": 6,
+          "actual_tie_max": 6,
+          "actual_tie_min": 2,
+          "direct_coverage": 4,
+          "direct_valid": true,
+          "episode_id": "MLP4B_0020",
+          "lexicographic_choice": [
+            "C01",
+            "C03",
+            "C13"
+          ],
+          "predicted_max": 6,
+          "ties": 11,
+          "true_optima_retained": 1,
+          "uniform_tie_expected_coverage": 4.0,
+          "uniform_tie_optimal_probability": 0.09090909090909091
+        },
+        {
+          "actual_chosen": 4,
+          "actual_oracle": 6,
+          "actual_tie_max": 4,
+          "actual_tie_min": 4,
+          "direct_coverage": 4,
+          "direct_valid": true,
+          "episode_id": "MLP4B_0021",
+          "lexicographic_choice": [
+            "C08",
+            "C10",
+            "C14"
+          ],
+          "predicted_max": 8,
+          "ties": 1,
+          "true_optima_retained": 0,
+          "uniform_tie_expected_coverage": 4.0,
+          "uniform_tie_optimal_probability": 0.0
+        },
+        {
+          "actual_chosen": 1,
+          "actual_oracle": 7,
+          "actual_tie_max": 5,
+          "actual_tie_min": 0,
+          "direct_coverage": 4,
+          "direct_valid": true,
+          "episode_id": "MLP4B_0022",
+          "lexicographic_choice": [
+            "C01",
+            "C03",
+            "C10"
+          ],
+          "predicted_max": 5,
+          "ties": 20,
+          "true_optima_retained": 0,
+          "uniform_tie_expected_coverage": 2.3,
+          "uniform_tie_optimal_probability": 0.0
+        },
+        {
+          "actual_chosen": 5,
+          "actual_oracle": 6,
+          "actual_tie_max": 5,
+          "actual_tie_min": 5,
+          "direct_coverage": 5,
+          "direct_valid": true,
+          "episode_id": "MLP4B_0023",
+          "lexicographic_choice": [
+            "C06",
+            "C09",
+            "C11"
+          ],
+          "predicted_max": 7,
+          "ties": 1,
+          "true_optima_retained": 0,
+          "uniform_tie_expected_coverage": 5.0,
+          "uniform_tie_optimal_probability": 0.0
+        },
+        {
+          "actual_chosen": 4,
+          "actual_oracle": 6,
+          "actual_tie_max": 5,
+          "actual_tie_min": 4,
+          "direct_coverage": 4,
+          "direct_valid": true,
+          "episode_id": "MLP4B_0024",
+          "lexicographic_choice": [
+            "C01",
+            "C12",
+            "C15"
+          ],
+          "predicted_max": 5,
+          "ties": 5,
+          "true_optima_retained": 0,
+          "uniform_tie_expected_coverage": 4.6,
+          "uniform_tie_optimal_probability": 0.0
+        },
+        {
+          "actual_chosen": 2,
+          "actual_oracle": 6,
+          "actual_tie_max": 6,
+          "actual_tie_min": 2,
+          "direct_coverage": 2,
+          "direct_valid": true,
+          "episode_id": "MLP4B_0025",
+          "lexicographic_choice": [
+            "C03",
+            "C07",
+            "C12"
+          ],
+          "predicted_max": 5,
+          "ties": 20,
+          "true_optima_retained": 1,
+          "uniform_tie_expected_coverage": 3.8,
+          "uniform_tie_optimal_probability": 0.05
+        },
+        {
+          "actual_chosen": 5,
+          "actual_oracle": 6,
+          "actual_tie_max": 5,
+          "actual_tie_min": 5,
+          "direct_coverage": 5,
+          "direct_valid": true,
+          "episode_id": "MLP4B_0026",
+          "lexicographic_choice": [
+            "C01",
+            "C07",
+            "C15"
+          ],
+          "predicted_max": 7,
+          "ties": 1,
+          "true_optima_retained": 0,
+          "uniform_tie_expected_coverage": 5.0,
+          "uniform_tie_optimal_probability": 0.0
+        },
+        {
+          "actual_chosen": 5,
+          "actual_oracle": 7,
+          "actual_tie_max": 6,
+          "actual_tie_min": 4,
+          "direct_coverage": 6,
+          "direct_valid": true,
+          "episode_id": "MLP4B_0027",
+          "lexicographic_choice": [
+            "C01",
+            "C02",
+            "C06"
+          ],
+          "predicted_max": 7,
+          "ties": 11,
+          "true_optima_retained": 0,
+          "uniform_tie_expected_coverage": 4.545454545454546,
+          "uniform_tie_optimal_probability": 0.0
+        },
+        {
+          "actual_chosen": 4,
+          "actual_oracle": 6,
+          "actual_tie_max": 5,
+          "actual_tie_min": 4,
+          "direct_coverage": 5,
+          "direct_valid": true,
+          "episode_id": "MLP4B_0028",
+          "lexicographic_choice": [
+            "C03",
+            "C07",
+            "C14"
+          ],
+          "predicted_max": 6,
+          "ties": 4,
+          "true_optima_retained": 0,
+          "uniform_tie_expected_coverage": 4.75,
+          "uniform_tie_optimal_probability": 0.0
+        },
+        {
+          "actual_chosen": 3,
+          "actual_oracle": 6,
+          "actual_tie_max": 3,
+          "actual_tie_min": 3,
+          "direct_coverage": 4,
+          "direct_valid": true,
+          "episode_id": "MLP4B_0029",
+          "lexicographic_choice": [
+            "C03",
+            "C04",
+            "C16"
+          ],
+          "predicted_max": 7,
+          "ties": 1,
+          "true_optima_retained": 0,
+          "uniform_tie_expected_coverage": 3.0,
+          "uniform_tie_optimal_probability": 0.0
+        },
+        {
+          "actual_chosen": 4,
+          "actual_oracle": 6,
+          "actual_tie_max": 6,
+          "actual_tie_min": 4,
+          "direct_coverage": 5,
+          "direct_valid": true,
+          "episode_id": "MLP4B_0055",
+          "lexicographic_choice": [
+            "C01",
+            "C02",
+            "C06"
+          ],
+          "predicted_max": 5,
+          "ties": 5,
+          "true_optima_retained": 1,
+          "uniform_tie_expected_coverage": 5.0,
+          "uniform_tie_optimal_probability": 0.2
+        },
+        {
+          "actual_chosen": 5,
+          "actual_oracle": 6,
+          "actual_tie_max": 6,
+          "actual_tie_min": 4,
+          "direct_coverage": 5,
+          "direct_valid": true,
+          "episode_id": "MLP4B_0056",
+          "lexicographic_choice": [
+            "C03",
+            "C08",
+            "C16"
+          ],
+          "predicted_max": 6,
+          "ties": 4,
+          "true_optima_retained": 1,
+          "uniform_tie_expected_coverage": 5.0,
+          "uniform_tie_optimal_probability": 0.25
+        },
+        {
+          "actual_chosen": 3,
+          "actual_oracle": 6,
+          "actual_tie_max": 4,
+          "actual_tie_min": 2,
+          "direct_coverage": 5,
+          "direct_valid": true,
+          "episode_id": "MLP4B_0057",
+          "lexicographic_choice": [
+            "C02",
+            "C04",
+            "C16"
+          ],
+          "predicted_max": 5,
+          "ties": 12,
+          "true_optima_retained": 0,
+          "uniform_tie_expected_coverage": 3.0833333333333335,
+          "uniform_tie_optimal_probability": 0.0
+        },
+        {
+          "actual_chosen": 5,
+          "actual_oracle": 6,
+          "actual_tie_max": 6,
+          "actual_tie_min": 5,
+          "direct_coverage": 5,
+          "direct_valid": true,
+          "episode_id": "MLP4B_0058",
+          "lexicographic_choice": [
+            "C05",
+            "C09",
+            "C16"
+          ],
+          "predicted_max": 5,
+          "ties": 5,
+          "true_optima_retained": 1,
+          "uniform_tie_expected_coverage": 5.2,
+          "uniform_tie_optimal_probability": 0.2
+        },
+        {
+          "actual_chosen": 4,
+          "actual_oracle": 7,
+          "actual_tie_max": 7,
+          "actual_tie_min": 4,
+          "direct_coverage": 4,
+          "direct_valid": true,
+          "episode_id": "MLP4B_0059",
+          "lexicographic_choice": [
+            "C02",
+            "C04",
+            "C06"
+          ],
+          "predicted_max": 5,
+          "ties": 9,
+          "true_optima_retained": 2,
+          "uniform_tie_expected_coverage": 5.666666666666667,
+          "uniform_tie_optimal_probability": 0.2222222222222222
+        }
+      ]
+    }
+  },
+  "scores": {
+    "deepseek_expert_deepthink": {
+      "all_edges": 814,
+      "coverage": 276,
+      "coverage_hist": {
+        "0": 1,
+        "2": 2,
+        "3": 8,
+        "4": 11,
+        "5": 27,
+        "6": 8,
+        "7": 3
+      },
+      "exact": 7,
+      "mean_ratios_pct": 73.41269841269842,
+      "n": 60,
+      "ratio_sums_pct": 73.6,
+      "recall_pct": 36.85503685503686,
+      "selected_edges": 300,
+      "shortfall_hist": {
+        "0": 7,
+        "1": 26,
+        "2": 13,
+        "3": 11,
+        "4": 2,
+        "6": 1
+      },
+      "valid": 60,
+      "within_one": 33
+    },
+    "deepseek_instant_deepthink": {
+      "all_edges": 814,
+      "coverage": 252,
+      "coverage_hist": {
+        "2": 2,
+        "3": 14,
+        "4": 20,
+        "5": 19,
+        "6": 4,
+        "7": 1
+      },
+      "exact": 1,
+      "mean_ratios_pct": 67.06349206349206,
+      "n": 60,
+      "ratio_sums_pct": 67.2,
+      "recall_pct": 34.88943488943489,
+      "selected_edges": 284,
+      "shortfall_hist": {
+        "0": 1,
+        "1": 18,
+        "2": 22,
+        "3": 15,
+        "4": 4
+      },
+      "valid": 60,
+      "within_one": 19
+    },
+    "gpt_sol_5_6_pro": {
+      "all_edges": 814,
+      "coverage": 299,
+      "coverage_hist": {
+        "0": 5,
+        "3": 2,
+        "4": 8,
+        "5": 16,
+        "6": 22,
+        "7": 7
+      },
+      "exact": 25,
+      "mean_ratios_pct": 79.64285714285714,
+      "n": 60,
+      "ratio_sums_pct": 79.73333333333333,
+      "recall_pct": 38.943488943488944,
+      "selected_edges": 317,
+      "shortfall_hist": {
+        "0": 25,
+        "1": 19,
+        "2": 7,
+        "3": 4,
+        "6": 4,
+        "7": 1
+      },
+      "valid": 55,
+      "within_one": 44
+    },
+    "gpt_sol_5_6_pro_matched_direct": {
+      "all_edges": 275,
+      "coverage": 75,
+      "coverage_hist": {
+        "0": 5,
+        "3": 1,
+        "4": 3,
+        "5": 6,
+        "6": 5
+      },
+      "exact": 4,
+      "mean_ratios_pct": 61.30952380952382,
+      "n": 20,
+      "ratio_sums_pct": 60.97560975609756,
+      "recall_pct": 28.0,
+      "selected_edges": 77,
+      "shortfall_hist": {
+        "0": 4,
+        "1": 7,
+        "2": 2,
+        "3": 2,
+        "6": 4,
+        "7": 1
+      },
+      "valid": 15,
+      "within_one": 11
+    },
+    "gpt_sol_5_6_pro_support_q2": {
+      "all_edges": 275,
+      "coverage": 92,
+      "coverage_hist": {
+        "3": 2,
+        "4": 7,
+        "5": 8,
+        "6": 3
+      },
+      "exact": 1,
+      "mean_ratios_pct": 74.76190476190476,
+      "n": 20,
+      "ratio_sums_pct": 74.79674796747967,
+      "recall_pct": 34.54545454545455,
+      "selected_edges": 95,
+      "shortfall_hist": {
+        "0": 1,
+        "1": 10,
+        "2": 6,
+        "3": 3
+      },
+      "valid": 20,
+      "within_one": 11
+    },
+    "gpt_sol_5_6_xhigh": {
+      "all_edges": 814,
+      "coverage": 305,
+      "coverage_hist": {
+        "2": 1,
+        "3": 4,
+        "4": 11,
+        "5": 23,
+        "6": 15,
+        "7": 6
+      },
+      "exact": 18,
+      "mean_ratios_pct": 81.3888888888889,
+      "n": 60,
+      "ratio_sums_pct": 81.33333333333333,
+      "recall_pct": 39.8034398034398,
+      "selected_edges": 324,
+      "shortfall_hist": {
+        "0": 18,
+        "1": 25,
+        "2": 8,
+        "3": 7,
+        "4": 2
+      },
+      "valid": 60,
+      "within_one": 43
+    },
+    "gpt_sol_5_6_xhigh_matched_direct": {
+      "all_edges": 275,
+      "coverage": 93,
+      "coverage_hist": {
+        "2": 1,
+        "4": 6,
+        "5": 11,
+        "6": 2
+      },
+      "exact": 1,
+      "mean_ratios_pct": 75.83333333333333,
+      "n": 20,
+      "ratio_sums_pct": 75.60975609756098,
+      "recall_pct": 35.63636363636363,
+      "selected_edges": 98,
+      "shortfall_hist": {
+        "0": 1,
+        "1": 12,
+        "2": 4,
+        "3": 2,
+        "4": 1
+      },
+      "valid": 20,
+      "within_one": 13
+    },
+    "gpt_sol_5_6_xhigh_support_q2": {
+      "all_edges": 275,
+      "coverage": 78,
+      "coverage_hist": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 6,
+        "5": 8
+      },
+      "exact": 0,
+      "mean_ratios_pct": 63.80952380952382,
+      "n": 20,
+      "ratio_sums_pct": 63.41463414634146,
+      "recall_pct": 31.272727272727273,
+      "selected_edges": 86,
+      "shortfall_hist": {
+        "1": 7,
+        "2": 6,
+        "3": 4,
+        "4": 2,
+        "6": 1
+      },
+      "valid": 20,
+      "within_one": 7
+    },
+    "public_text_char_tfidf_facility": {
+      "all_edges": 814,
+      "coverage": 226,
+      "coverage_hist": {
+        "1": 3,
+        "2": 9,
+        "3": 12,
+        "4": 16,
+        "5": 15,
+        "6": 5
+      },
+      "exact": 0,
+      "mean_ratios_pct": 60.3968253968254,
+      "n": 60,
+      "ratio_sums_pct": 60.266666666666666,
+      "recall_pct": 29.484029484029485,
+      "selected_edges": 240,
+      "shortfall_hist": {
+        "1": 18,
+        "2": 17,
+        "3": 10,
+        "4": 9,
+        "5": 5,
+        "6": 1
+      },
+      "valid": 60,
+      "within_one": 18
+    },
+    "qwen_3_7_plus_thinking": {
+      "all_edges": 814,
+      "coverage": 243,
+      "coverage_hist": {
+        "1": 3,
+        "2": 7,
+        "3": 10,
+        "4": 16,
+        "5": 15,
+        "6": 6,
+        "7": 3
+      },
+      "exact": 6,
+      "mean_ratios_pct": 64.64285714285714,
+      "n": 60,
+      "ratio_sums_pct": 64.8,
+      "recall_pct": 31.818181818181817,
+      "selected_edges": 259,
+      "shortfall_hist": {
+        "0": 6,
+        "1": 17,
+        "2": 12,
+        "3": 13,
+        "4": 8,
+        "5": 4
+      },
+      "valid": 60,
+      "within_one": 23
+    },
+    "qwen_3_8_max_thinking": {
+      "all_edges": 814,
+      "coverage": 259,
+      "coverage_hist": {
+        "0": 5,
+        "2": 2,
+        "3": 8,
+        "4": 14,
+        "5": 15,
+        "6": 12,
+        "7": 4
+      },
+      "exact": 12,
+      "mean_ratios_pct": 68.92857142857142,
+      "n": 60,
+      "ratio_sums_pct": 69.06666666666666,
+      "recall_pct": 34.02948402948403,
+      "selected_edges": 277,
+      "shortfall_hist": {
+        "0": 12,
+        "1": 18,
+        "2": 11,
+        "3": 11,
+        "4": 3,
+        "6": 4,
+        "7": 1
+      },
+      "valid": 55,
+      "within_one": 30
+    },
+    "sha256_random_portfolio": {
+      "all_edges": 814,
+      "coverage": 138,
+      "coverage_hist": {
+        "0": 9,
+        "1": 9,
+        "2": 12,
+        "3": 17,
+        "4": 11,
+        "5": 2
+      },
+      "exact": 0,
+      "mean_ratios_pct": 37.1031746031746,
+      "n": 60,
+      "ratio_sums_pct": 36.8,
+      "recall_pct": 18.91891891891892,
+      "selected_edges": 154,
+      "shortfall_hist": {
+        "1": 1,
+        "2": 12,
+        "3": 10,
+        "4": 18,
+        "5": 7,
+        "6": 9,
+        "7": 3
+      },
+      "valid": 60,
+      "within_one": 1
+    }
+  },
+  "uniform_random": {
+    "all_edges": 814,
+    "exact": 0.1392857142857141,
+    "mean_coverage": 2.3469642857142854,
+    "mean_normalized": 0.3762032312925171,
+    "total_coverage": 140.81785714285712,
+    "within_one": 1.8517857142857126
+  }
+}

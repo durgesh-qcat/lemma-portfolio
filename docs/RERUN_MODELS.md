@@ -1,5 +1,11 @@
 # Rerunning LemmaPortfolio on another model
 
+This guide accompanies the final 7 September 2026 submission,
+*LemmaPortfolio: Shared-Budget Lemma Selection for Multiple Lean Goals*.
+[RESULTS.md](../RESULTS.md) consolidates all thirteen saved direct-response
+sets; the main paper reports seven CLI/API runs and the technical supplement
+retains the six preliminary web-interface sets.
+
 This guide separates two activities:
 
 - **score reproduction**: deterministically recheck the numbers already in the
@@ -8,8 +14,9 @@ This guide separates two activities:
   its new answers.
 
 The first is deterministically reproducible (with a tiny tolerance only for
-last-bit floating-point differences across Python/libm versions).  The second is not expected to recreate an
-old consumer-chat output byte-for-byte because providers may change routing,
+last-bit floating-point differences across Python/libm versions). The second
+need not recreate an old consumer-chat output byte-for-byte because providers
+may change routing,
 checkpoints, system prompts, and decoding without exposing those changes.
 
 ## A. Validate the paper results
@@ -17,14 +24,21 @@ checkpoints, system prompts, and decoding without exposing those changes.
 From the repository root:
 
 ```sh
-python3 verify_release.py
+python3 -B verify_release.py
 ```
 
 The last line must be `ALL CHECKS PASSED`.  This verifies the release hashes,
 reconstructs every optimal portfolio, reparses the preserved response sources,
-regenerates the deterministic baselines, and checks every reported score.  It
-uses Python 3.10 or newer and no third-party package, model call, API key, Lean
+regenerates the baselines, and checks every reported score. It also verifies
+the exact submitted PDF/ZIP, all thirteen rows and final analyses, the oracle
+benchmark, and parser/scorer/construction tests. It uses Python 3.10 or newer and no third-party package, model call, API key, Lean
 installation, or paid service.
+
+The submitted [evaluation records](../submission/LemmaPortfolio_supplement/evaluation/README.md)
+list the actual CLI/API settings, available calling code, Fable 5.1 context
+prompt and missing historical records. The original web-chat procedure below
+is a reusable capture protocol, not a reconstruction of every historical
+CLI/API invocation.
 
 ## B. Prepare a fresh model run
 
@@ -34,6 +48,8 @@ installation, or paid service.
    - product/provider;
    - exact visible model label;
    - exact visible reasoning or thinking mode, or `NO SELECTOR`;
+   - API/CLI version and invocation, if applicable;
+   - every system/developer prompt, including harness-supplied instructions;
    - account tier, or `unknown`;
    - local date/time and timezone; and
    - whether memory, browsing, search, tools, connectors, and file uploads are
@@ -50,8 +66,15 @@ installation, or paid service.
 5. Do not inspect `data/test.labels.jsonl`, `results/`, or another model's
    answers until the complete raw run has been saved.
 
+For a CLI/API run, save the exact invocation and available execution logs, use
+a fresh process or stateless request for each prompt, and disclose all additional
+context. Preserve provider errors/refusals and predeclare retry handling. If
+context or settings change after a refusal, report the changed condition as a
+separate run and retain the original attempts. The Fable 5.1 submitted row is
+explicitly context-conditioned; it does not claim success under a bare prompt.
+
 The released labels are necessarily public for auditability, so this separation
-is procedural rather than cryptographic.  A genuinely new blind evaluation
+is procedural rather than cryptographic. A new blind evaluation
 requires a newly committed hidden split and an independent custodian.
 
 ## C. Run the twelve direct prompts
@@ -118,8 +141,11 @@ python3 tools/score_support_predictions.py \
 
 This reproduces the prompt-defined support subset, truncation to two candidates
 per target, lexicographically tie-broken exhaustive optimizer, 20-item exact
-and coverage scores, and full/truncated support-edge metrics. The same strict
-alignment and explicit invalid-file rules as the direct scorer apply. Smoke-test
+and coverage scores, and full/truncated support-edge metrics. For comparisons
+with direct selection, report the common paired IDs and denominator separately;
+the final paper uses 15 complete original Pro pairs and 20 pairs for original
+Sol and the separate Astra diagnostic. The same strict alignment and explicit
+invalid-file rules as the direct scorer apply. Smoke-test
 it with `examples/support.example.json` if desired.
 
 ## E. Score the saved direct answers
@@ -171,8 +197,13 @@ Keep the following together:
 - the scorer's JSON output; and
 - a SHA-256 manifest of the run directory.
 
-Do not overwrite the published `responses/` or `results/` directories.  New
+Do not overwrite published `responses/`, `results/`, or `submission/` files. New
 results should be reviewed independently before they are added to the paper or
 released as another version.  Report consumer labels as observed deployments,
 not as stable or reproducible model checkpoints unless provider-side evidence
 supports that stronger claim.
+
+The submitted ZIP and its unpacked contents are an immutable snapshot. Keep new
+model calls and analysis outputs outside that snapshot, and record a new version
+before incorporating them into a later paper. Follow the
+[collaboration guide](COLLABORATING.md) for reviewing repository additions.

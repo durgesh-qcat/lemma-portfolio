@@ -1,0 +1,56 @@
+{
+  "call_artifacts": [
+    {
+      "bytes": 40853,
+      "path": "shards/SHARD_0000/prompt.txt",
+      "sha256": "5806ee5f2e07e380c1a3df697dfb047f0b3ac3c363f070660d257d3bf76ae027"
+    },
+    {
+      "bytes": 3227,
+      "path": "shards/SHARD_0000/output_schema.json",
+      "sha256": "48cf02f6a4053fbb153f4b038d615ac909518dc682fd6fddee117c7e91fb9362"
+    },
+    {
+      "bytes": 2776,
+      "path": "shards/SHARD_0000/planned_invocation.json",
+      "sha256": "b6510d8dc01de1365f578624fa39462a47effefdaea40e6a7bbc9853dd745603"
+    },
+    {
+      "bytes": 571,
+      "path": "shards/SHARD_0000/raw.jsonl",
+      "sha256": "081247cf726bbb9add605e5f1c2949cac4d5b9e226fe8bab96291f36b9c44123"
+    },
+    {
+      "bytes": 0,
+      "path": "shards/SHARD_0000/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1063,
+      "path": "shards/SHARD_0000/process_result.json",
+      "sha256": "5de1f0f66b59f3e5d2f390d6b86ce2560c0adc981942a368310b2a84abddccaa"
+    },
+    {
+      "bytes": 1364,
+      "path": "shards/SHARD_0000/audit.json",
+      "sha256": "9be93ed540d084c7d16511908df35f9b3e1f75da945374f1438bc2960de51ef2"
+    },
+    {
+      "bytes": 182,
+      "path": "shards/SHARD_0000/last_message.json",
+      "sha256": "1b23a8c6b064f476e789ad77340456df1a94126b5a7cfd6a08bc44151cfb71d3"
+    }
+  ],
+  "call_capture_path": "shards/SHARD_0000",
+  "call_id": "SHARD_0000",
+  "episode_id": "MLP4C_0004",
+  "raw_shard_prediction_sha256": "1b23a8c6b064f476e789ad77340456df1a94126b5a7cfd6a08bc44151cfb71d3",
+  "schema_version": "lemma-portfolio.codex-cli-shard-evidence.v1",
+  "shared_episode_ids": [
+    "MLP4C_0000",
+    "MLP4C_0001",
+    "MLP4C_0002",
+    "MLP4C_0003",
+    "MLP4C_0004"
+  ]
+}

@@ -1,0 +1,418 @@
+{
+  "biproduct_example": {
+    "candidate_targets": {
+      "C05": [
+        "T01",
+        "T08"
+      ],
+      "C08": [
+        "T04",
+        "T08"
+      ],
+      "C13": [
+        "T02",
+        "T06"
+      ],
+      "C16": [
+        "T05",
+        "T07"
+      ]
+    },
+    "episode_id": "MLP4B_0003",
+    "improved": [
+      "C05",
+      "C13",
+      "C16"
+    ],
+    "initial": [
+      "C05",
+      "C08",
+      "C16"
+    ]
+  },
+  "development_episodes": 30,
+  "direct_rows": [
+    {
+      "covered_targets": 226,
+      "episodes": 60,
+      "exact_optimal": 0,
+      "id": "public_text_char_tfidf_facility",
+      "label": "Character TF-IDF",
+      "mean_coverage": 3.7666666666666666,
+      "occurrence_recall_percent": 29.484029484029485,
+      "recorded_occurrences": 814,
+      "selected_occurrences": 240,
+      "share_of_maximum_coverage_percent": 60.3968253968254,
+      "target_instances": 480,
+      "valid": 60
+    },
+    {
+      "covered_targets": 299,
+      "episodes": 60,
+      "exact_optimal": 25,
+      "id": "gpt_sol_5_6_pro",
+      "label": "GPT SOL 5.6 Pro",
+      "mean_coverage": 4.983333333333333,
+      "occurrence_recall_percent": 38.943488943488944,
+      "recorded_occurrences": 814,
+      "selected_occurrences": 317,
+      "share_of_maximum_coverage_percent": 79.64285714285714,
+      "target_instances": 480,
+      "valid": 55
+    },
+    {
+      "covered_targets": 305,
+      "episodes": 60,
+      "exact_optimal": 18,
+      "id": "gpt_sol_5_6_xhigh",
+      "label": "GPT SOL 5.6 xhigh",
+      "mean_coverage": 5.083333333333333,
+      "occurrence_recall_percent": 39.8034398034398,
+      "recorded_occurrences": 814,
+      "selected_occurrences": 324,
+      "share_of_maximum_coverage_percent": 81.38888888888889,
+      "target_instances": 480,
+      "valid": 60
+    },
+    {
+      "covered_targets": 252,
+      "episodes": 60,
+      "exact_optimal": 1,
+      "id": "deepseek_instant_deepthink",
+      "label": "DeepSeek Instant + DeepThink",
+      "mean_coverage": 4.2,
+      "occurrence_recall_percent": 34.88943488943489,
+      "recorded_occurrences": 814,
+      "selected_occurrences": 284,
+      "share_of_maximum_coverage_percent": 67.06349206349206,
+      "target_instances": 480,
+      "valid": 60
+    },
+    {
+      "covered_targets": 276,
+      "episodes": 60,
+      "exact_optimal": 7,
+      "id": "deepseek_expert_deepthink",
+      "label": "DeepSeek Expert + DeepThink",
+      "mean_coverage": 4.6,
+      "occurrence_recall_percent": 36.85503685503686,
+      "recorded_occurrences": 814,
+      "selected_occurrences": 300,
+      "share_of_maximum_coverage_percent": 73.41269841269842,
+      "target_instances": 480,
+      "valid": 60
+    },
+    {
+      "covered_targets": 259,
+      "episodes": 60,
+      "exact_optimal": 12,
+      "id": "qwen_3_8_max_thinking",
+      "label": "Qwen 3.8 Max-Thinking",
+      "mean_coverage": 4.316666666666666,
+      "occurrence_recall_percent": 34.02948402948403,
+      "recorded_occurrences": 814,
+      "selected_occurrences": 277,
+      "share_of_maximum_coverage_percent": 68.92857142857143,
+      "target_instances": 480,
+      "valid": 55
+    },
+    {
+      "covered_targets": 243,
+      "episodes": 60,
+      "exact_optimal": 6,
+      "id": "qwen_3_7_plus_thinking",
+      "label": "Qwen 3.7 Plus-Thinking",
+      "mean_coverage": 4.05,
+      "occurrence_recall_percent": 31.818181818181817,
+      "recorded_occurrences": 814,
+      "selected_occurrences": 259,
+      "share_of_maximum_coverage_percent": 64.64285714285714,
+      "target_instances": 480,
+      "valid": 60
+    },
+    {
+      "covered_targets": 328,
+      "episodes": 60,
+      "exact_optimal": 27,
+      "id": "astra_xhigh_r1_prior",
+      "label": "GPT-6 Astra / xhigh / 1",
+      "mean_coverage": 5.466666666666667,
+      "occurrence_recall_percent": 42.13759213759214,
+      "recorded_occurrences": 814,
+      "selected_occurrences": 343,
+      "share_of_maximum_coverage_percent": 87.42063492063492,
+      "target_instances": 480,
+      "valid": 60
+    },
+    {
+      "covered_targets": 332,
+      "episodes": 60,
+      "exact_optimal": 30,
+      "id": "astra_xhigh_r2",
+      "label": "GPT-6 Astra / xhigh / 2",
+      "mean_coverage": 5.533333333333333,
+      "occurrence_recall_percent": 42.874692874692876,
+      "recorded_occurrences": 814,
+      "selected_occurrences": 349,
+      "share_of_maximum_coverage_percent": 88.41269841269842,
+      "target_instances": 480,
+      "valid": 60
+    },
+    {
+      "covered_targets": 302,
+      "episodes": 60,
+      "exact_optimal": 20,
+      "id": "sol_xhigh_r1",
+      "label": "GPT-5.6 Sol / xhigh / 1",
+      "mean_coverage": 5.033333333333333,
+      "occurrence_recall_percent": 39.189189189189186,
+      "recorded_occurrences": 814,
+      "selected_occurrences": 319,
+      "share_of_maximum_coverage_percent": 80.47619047619048,
+      "target_instances": 480,
+      "valid": 60
+    },
+    {
+      "covered_targets": 300,
+      "episodes": 60,
+      "exact_optimal": 15,
+      "id": "sol_xhigh_r2",
+      "label": "GPT-5.6 Sol / xhigh / 2",
+      "mean_coverage": 5.0,
+      "occurrence_recall_percent": 39.189189189189186,
+      "recorded_occurrences": 814,
+      "selected_occurrences": 319,
+      "share_of_maximum_coverage_percent": 80.0,
+      "target_instances": 480,
+      "valid": 60
+    },
+    {
+      "covered_targets": 335,
+      "episodes": 60,
+      "exact_optimal": 30,
+      "id": "astra_max_r1",
+      "label": "GPT-6 Astra / max / 1",
+      "mean_coverage": 5.583333333333333,
+      "occurrence_recall_percent": 43.24324324324324,
+      "recorded_occurrences": 814,
+      "selected_occurrences": 352,
+      "share_of_maximum_coverage_percent": 89.36507936507937,
+      "target_instances": 480,
+      "valid": 60
+    },
+    {
+      "covered_targets": 331,
+      "episodes": 60,
+      "exact_optimal": 26,
+      "id": "claude_fable_5_xhigh_r1",
+      "label": "Claude Fable 5 / xhigh",
+      "mean_coverage": 5.516666666666667,
+      "occurrence_recall_percent": 42.874692874692876,
+      "recorded_occurrences": 814,
+      "selected_occurrences": 349,
+      "share_of_maximum_coverage_percent": 88.2936507936508,
+      "target_instances": 480,
+      "valid": 60
+    },
+    {
+      "covered_targets": 335,
+      "episodes": 60,
+      "exact_optimal": 26,
+      "id": "claude_fable_5_1_xhigh_ctx_r1",
+      "label": "Claude Fable 5.1 / xhigh / context",
+      "mean_coverage": 5.583333333333333,
+      "occurrence_recall_percent": 43.24324324324324,
+      "recorded_occurrences": 814,
+      "selected_occurrences": 352,
+      "share_of_maximum_coverage_percent": 89.44444444444444,
+      "target_instances": 480,
+      "valid": 60
+    }
+  ],
+  "one_target_short": {
+    "answers": 163,
+    "minimum_replacements": {
+      "1": 134,
+      "2": 26,
+      "3": 3
+    },
+    "optimal_single_swap_neighbors": {
+      "0": 29,
+      "1": 122,
+      "2": 10,
+      "3": 2
+    }
+  },
+  "paired_target_wise": [
+    {
+      "direct": {
+        "covered_targets": 75,
+        "episodes": 15,
+        "exact_optimal": 4,
+        "id": "gpt_sol_5_6_pro_paired_direct",
+        "label": "gpt_sol_5_6_pro paired direct",
+        "mean_coverage": 5.0,
+        "occurrence_recall_percent": 37.01923076923077,
+        "recorded_occurrences": 208,
+        "selected_occurrences": 77,
+        "share_of_maximum_coverage_percent": 81.74603174603175,
+        "target_instances": 120,
+        "valid": 15
+      },
+      "episode_ids": [
+        "MLP4B_0015",
+        "MLP4B_0016",
+        "MLP4B_0017",
+        "MLP4B_0018",
+        "MLP4B_0019",
+        "MLP4B_0020",
+        "MLP4B_0021",
+        "MLP4B_0022",
+        "MLP4B_0023",
+        "MLP4B_0024",
+        "MLP4B_0025",
+        "MLP4B_0026",
+        "MLP4B_0027",
+        "MLP4B_0028",
+        "MLP4B_0029"
+      ],
+      "id": "gpt_sol_5_6_pro",
+      "target_wise_q2": {
+        "covered_targets": 66,
+        "episodes": 15,
+        "exact_optimal": 1,
+        "id": "gpt_sol_5_6_pro_paired_q2",
+        "label": "gpt_sol_5_6_pro paired target-wise",
+        "mean_coverage": 4.4,
+        "occurrence_recall_percent": 32.69230769230769,
+        "recorded_occurrences": 208,
+        "selected_occurrences": 68,
+        "share_of_maximum_coverage_percent": 71.74603174603175,
+        "target_instances": 120,
+        "valid": 15
+      }
+    },
+    {
+      "direct": {
+        "covered_targets": 93,
+        "episodes": 20,
+        "exact_optimal": 1,
+        "id": "gpt_sol_5_6_xhigh_paired_direct",
+        "label": "gpt_sol_5_6_xhigh paired direct",
+        "mean_coverage": 4.65,
+        "occurrence_recall_percent": 35.63636363636363,
+        "recorded_occurrences": 275,
+        "selected_occurrences": 98,
+        "share_of_maximum_coverage_percent": 75.83333333333333,
+        "target_instances": 160,
+        "valid": 20
+      },
+      "episode_ids": [
+        "MLP4B_0015",
+        "MLP4B_0016",
+        "MLP4B_0017",
+        "MLP4B_0018",
+        "MLP4B_0019",
+        "MLP4B_0020",
+        "MLP4B_0021",
+        "MLP4B_0022",
+        "MLP4B_0023",
+        "MLP4B_0024",
+        "MLP4B_0025",
+        "MLP4B_0026",
+        "MLP4B_0027",
+        "MLP4B_0028",
+        "MLP4B_0029",
+        "MLP4B_0055",
+        "MLP4B_0056",
+        "MLP4B_0057",
+        "MLP4B_0058",
+        "MLP4B_0059"
+      ],
+      "id": "gpt_sol_5_6_xhigh",
+      "target_wise_q2": {
+        "covered_targets": 78,
+        "episodes": 20,
+        "exact_optimal": 0,
+        "id": "gpt_sol_5_6_xhigh_paired_q2",
+        "label": "gpt_sol_5_6_xhigh paired target-wise",
+        "mean_coverage": 3.9,
+        "occurrence_recall_percent": 31.272727272727273,
+        "recorded_occurrences": 275,
+        "selected_occurrences": 86,
+        "share_of_maximum_coverage_percent": 63.80952380952381,
+        "target_instances": 160,
+        "valid": 20
+      }
+    },
+    {
+      "direct": {
+        "covered_targets": 106,
+        "episodes": 20,
+        "exact_optimal": 8,
+        "id": "astra_diagnostic_direct",
+        "label": "Astra paired direct",
+        "mean_coverage": 5.3,
+        "occurrence_recall_percent": 40.72727272727273,
+        "recorded_occurrences": 275,
+        "selected_occurrences": 112,
+        "share_of_maximum_coverage_percent": 86.19047619047619,
+        "target_instances": 160,
+        "valid": 20
+      },
+      "episode_ids": [
+        "MLP4B_0015",
+        "MLP4B_0016",
+        "MLP4B_0017",
+        "MLP4B_0018",
+        "MLP4B_0019",
+        "MLP4B_0020",
+        "MLP4B_0021",
+        "MLP4B_0022",
+        "MLP4B_0023",
+        "MLP4B_0024",
+        "MLP4B_0025",
+        "MLP4B_0026",
+        "MLP4B_0027",
+        "MLP4B_0028",
+        "MLP4B_0029",
+        "MLP4B_0055",
+        "MLP4B_0056",
+        "MLP4B_0057",
+        "MLP4B_0058",
+        "MLP4B_0059"
+      ],
+      "id": "astra_diagnostic",
+      "target_wise_q2": {
+        "covered_targets": 100,
+        "episodes": 20,
+        "exact_optimal": 4,
+        "id": "astra_diagnostic_q2",
+        "label": "Astra paired target-wise",
+        "mean_coverage": 5.0,
+        "occurrence_recall_percent": 37.45454545454545,
+        "recorded_occurrences": 275,
+        "selected_occurrences": 103,
+        "share_of_maximum_coverage_percent": 81.07142857142857,
+        "target_instances": 160,
+        "valid": 20
+      }
+    }
+  ],
+  "portfolios_per_episode": 560,
+  "schema_version": "lemma-portfolio.submission-results.v1",
+  "test_episodes": 60,
+  "test_maximum_histogram": {
+    "6": 45,
+    "7": 15
+  },
+  "test_optimal_portfolios": 78,
+  "uniform_random": {
+    "expected_mean_coverage": 2.346964285714286,
+    "expected_mean_coverage_fraction": "13143/5600",
+    "expected_optimal_answers": 0.1392857142857143,
+    "expected_optimal_answers_fraction": "39/280",
+    "occurrence_recall_percent": 18.75,
+    "share_of_maximum_coverage_percent": 37.6203231292517
+  }
+}

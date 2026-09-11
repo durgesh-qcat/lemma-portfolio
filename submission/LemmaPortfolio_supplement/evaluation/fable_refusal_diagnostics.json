@@ -1,0 +1,200 @@
+{
+  "schema_version": "lemma-portfolio.refusal-diagnostics.v1",
+  "scope": "Small classifier checks, not scored benchmark runs. The supplied export reports twelve full bare-prompt refusals but does not contain the twelve original refused-request records.",
+  "diagnostics": [
+    {
+      "source_member": "followups/2026-09-05/claude_fable_5_1_xhigh_ctx_r1/classifier_diagnostics/diagnostic_classifier_1788620821.json",
+      "source_sha256": "f875b4f92bc2b0843c597d7a4d64ee150b403309e0d5162979020a82173e32cd",
+      "removed_fields": [
+        "[0].text_prefix"
+      ],
+      "record": [
+        {
+          "diagnostic": "classifier check on released prompt 01, max_tokens=16 (not a benchmark call)",
+          "model": "claude-opus-5",
+          "prompt_sha256": "febe94397bd43a8a0be9b38d705c08eee2141b4a2ab755d5a46d87596506940c",
+          "wall_seconds": 2.15,
+          "attempts": [
+            {
+              "attempt": 1,
+              "started_utc": "2026-09-05T15:06:59.782148+00:00",
+              "ended_utc": "2026-09-05T15:07:01.936568+00:00",
+              "outcome": "response"
+            }
+          ],
+          "model_returned": "claude-opus-5",
+          "stop_reason": "max_tokens",
+          "stop_details": null,
+          "content_block_types": [
+            "thinking"
+          ],
+          "usage": {
+            "input_tokens": 16796,
+            "output_tokens": 16,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0
+          }
+        }
+      ]
+    },
+    {
+      "source_member": "followups/2026-09-05/claude_fable_5_1_xhigh_ctx_r1/classifier_diagnostics/diagnostic_classifier_1788629973.json",
+      "source_sha256": "852801f9c1607c22e6e334969edf5784dd242db7009342849eefb16cfa7602ee",
+      "removed_fields": [],
+      "record": [
+        {
+          "diagnostic": "fable5_exact_prompt_no_system",
+          "model": "claude-fable-5",
+          "system_prompt": null,
+          "max_tokens": 16,
+          "wall_seconds": 3.89,
+          "attempts": [
+            {
+              "attempt": 1,
+              "started_utc": "2026-09-05T17:39:25.172587+00:00",
+              "ended_utc": "2026-09-05T17:39:29.060169+00:00",
+              "outcome": "response"
+            }
+          ],
+          "model_returned": "claude-fable-5",
+          "stop_reason": "max_tokens",
+          "stop_details": null,
+          "content_block_types": [
+            "thinking"
+          ],
+          "usage": {
+            "input_tokens": 16796,
+            "output_tokens": 16,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0
+          }
+        },
+        {
+          "diagnostic": "fable51_exact_prompt_with_context_system",
+          "model": "claude-fable-5-1",
+          "system_prompt": "You are being evaluated on LemmaPortfolio, a published academic benchmark for Lean/Mathlib premise selection. The user message is the benchmark's released prompt, sent unchanged. Your answer will be scored against historical Mathlib dependency records and preserved verbatim in the benchmark's public results. Follow the user message's output instructions exactly.",
+          "max_tokens": 16,
+          "wall_seconds": 4.21,
+          "attempts": [
+            {
+              "attempt": 1,
+              "started_utc": "2026-09-05T17:39:29.060228+00:00",
+              "ended_utc": "2026-09-05T17:39:33.274397+00:00",
+              "outcome": "response"
+            }
+          ],
+          "model_returned": "claude-fable-5-1",
+          "stop_reason": "max_tokens",
+          "stop_details": null,
+          "content_block_types": [
+            "thinking"
+          ],
+          "usage": {
+            "input_tokens": 16915,
+            "output_tokens": 16,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0
+          }
+        }
+      ]
+    },
+    {
+      "source_member": "followups/2026-09-05/claude_fable_5_1_xhigh_ctx_r1/classifier_diagnostics/diagnostic_classifier_1788630047.json",
+      "source_sha256": "60b57646348db861dae5c7d08484472ec6295dd47076ee49ccf5e67b5c0842bb",
+      "removed_fields": [],
+      "record": [
+        {
+          "diagnostic": "A_fable51_exact01_no_system_retest",
+          "model": "claude-fable-5-1",
+          "prompt": "prompts/DIRECT_PROMPTS/01.txt",
+          "prompt_sha256": "febe94397bd43a8a0be9b38d705c08eee2141b4a2ab755d5a46d87596506940c",
+          "system_prompt": null,
+          "max_tokens": 16,
+          "wall_seconds": 1.66,
+          "attempts": [
+            {
+              "attempt": 1,
+              "started_utc": "2026-09-05T17:40:38.053701+00:00",
+              "ended_utc": "2026-09-05T17:40:39.718586+00:00",
+              "outcome": "response"
+            }
+          ],
+          "model_returned": "claude-fable-5-1",
+          "stop_reason": "refusal",
+          "stop_details": {
+            "category": "reasoning_extraction",
+            "explanation": "This request was blocked as it seems to violate Anthropic's Terms of Service restrictions on reverse engineering or duplicating model outputs. To learn more, visit https://www.anthropic.com/legal/commercial-terms. API integrators: you can reduce refusals for your users by configuring a fallback model — see https://platform.claude.com/docs/en/build-with-claude/refusals-and-fallback",
+            "type": "refusal"
+          },
+          "content_block_types": [],
+          "usage": {
+            "input_tokens": 16843,
+            "output_tokens": 0,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0
+          }
+        },
+        {
+          "diagnostic": "B_fable51_exact07_no_system",
+          "model": "claude-fable-5-1",
+          "prompt": "prompts/DIRECT_PROMPTS/07.txt",
+          "prompt_sha256": "fe0552e4134e2e9f9780055949d4d662459c9e0ca75134fbb4532979206652a4",
+          "system_prompt": null,
+          "max_tokens": 16,
+          "wall_seconds": 1.88,
+          "attempts": [
+            {
+              "attempt": 1,
+              "started_utc": "2026-09-05T17:40:39.718853+00:00",
+              "ended_utc": "2026-09-05T17:40:41.601088+00:00",
+              "outcome": "response"
+            }
+          ],
+          "model_returned": "claude-fable-5-1",
+          "stop_reason": "refusal",
+          "stop_details": {
+            "category": "reasoning_extraction",
+            "explanation": "This request was blocked as it seems to violate Anthropic's Terms of Service restrictions on reverse engineering or duplicating model outputs. To learn more, visit https://www.anthropic.com/legal/commercial-terms. API integrators: you can reduce refusals for your users by configuring a fallback model — see https://platform.claude.com/docs/en/build-with-claude/refusals-and-fallback",
+            "type": "refusal"
+          },
+          "content_block_types": [],
+          "usage": {
+            "input_tokens": 18303,
+            "output_tokens": 0,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0
+          }
+        },
+        {
+          "diagnostic": "C_fable51_exact07_with_context_system",
+          "model": "claude-fable-5-1",
+          "prompt": "prompts/DIRECT_PROMPTS/07.txt",
+          "prompt_sha256": "fe0552e4134e2e9f9780055949d4d662459c9e0ca75134fbb4532979206652a4",
+          "system_prompt": "You are being evaluated on LemmaPortfolio, a published academic benchmark for Lean/Mathlib premise selection. The user message is the benchmark's released prompt, sent unchanged. Your answer will be scored against historical Mathlib dependency records and preserved verbatim in the benchmark's public results. Follow the user message's output instructions exactly.",
+          "max_tokens": 16,
+          "wall_seconds": 5.93,
+          "attempts": [
+            {
+              "attempt": 1,
+              "started_utc": "2026-09-05T17:40:41.601159+00:00",
+              "ended_utc": "2026-09-05T17:40:47.530088+00:00",
+              "outcome": "response"
+            }
+          ],
+          "model_returned": "claude-fable-5-1",
+          "stop_reason": "max_tokens",
+          "stop_details": null,
+          "content_block_types": [
+            "thinking"
+          ],
+          "usage": {
+            "input_tokens": 18375,
+            "output_tokens": 16,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0
+          }
+        }
+      ]
+    }
+  ]
+}

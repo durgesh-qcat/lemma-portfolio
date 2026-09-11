@@ -1,0 +1,553 @@
+You are solving five unreleased LemmaPortfolio benchmark episodes independently.
+
+For each episode, each target t has a hidden set D(t): the displayed candidate declarations used as direct theorem dependencies in that target's historical elaborated source. For a portfolio S, F(S) is the number of targets t for which D(t) intersects S. Select exactly 3 distinct candidate IDs per episode to maximize F(S). This is static dependency-portfolio compression, not a claim about causal usefulness in a new proof.
+
+Use only the supplied text. Do not use web search, tools, files, a repository, theorem proving, compiler feedback, memory, prior chats, follow-up messages, or answers from another episode. Treat every episode independently.
+
+Return one JSON object and no prose. It must have exactly one key, "predictions". Its value must be an object with exactly these episode keys: MLP4B_0040, MLP4B_0041, MLP4B_0042, MLP4B_0043, MLP4B_0044. Each value must be an array of exactly 3 distinct candidate IDs copied from that episode. Candidate order does not matter.
+
+Episode JSON array follows.
+<episodes>
+[
+  {
+    "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+    "candidates": [
+      {
+        "id": "C01",
+        "statement": "∀ {X : Type u_1} {F : Set X} (T : X → X), F.Nonempty → ∀ (U : SetRel X X), Dynamics.coverMincard T F U 0 = 1"
+      },
+      {
+        "id": "C02",
+        "statement": "∀ {X : Type u_1} (T : X → X) (F : Set X) (U : SetRel X X), Dynamics.coverEntropyInfEntourage T F U ≤ Dynamics.coverEntropyEntourage T F U"
+      },
+      {
+        "id": "C03",
+        "statement": "∀ {X : Type u_1} {F : Set X} (T : X → X), F.Nonempty → ∀ (n : ℕ), Dynamics.coverMincard T F Set.univ n = 1"
+      },
+      {
+        "id": "C04",
+        "statement": "∀ {X : Type u_1} {T : X → X} {U : SetRel X X} {n : ℕ}, Dynamics.coverMincard T ∅ U n = 0"
+      },
+      {
+        "id": "C05",
+        "statement": "∀ {X : Type u_1} (T : X → X) (F : Set X) (U : SetRel X X), Monotone fun n => Dynamics.coverMincard T F U n"
+      },
+      {
+        "id": "C06",
+        "statement": "∀ {X : Type u_1} {T : X → X} {U : SetRel X X} {F : Set X} [inst : UniformSpace X], IsCompact F → Set.MapsTo T F F → U ∈ uniformity X → ∀ (n : ℕ), ∃ s, Dynamics.IsDynCoverOf T F U n ↑s"
+      },
+      {
+        "id": "C07",
+        "statement": "∀ {X : Type u_1} [inst : UniformSpace X] (T : X → X) (F : Set X), Dynamics.coverEntropyInf T F ≤ Dynamics.coverEntropy T F"
+      },
+      {
+        "id": "C08",
+        "statement": "∀ {X : Type u_1} {T : X → X} {U : SetRel X X} {F : Set X} {m : ℕ}, Set.MapsTo T F F → ∀ [U.IsSymm] (n : ℕ) {s : Finset X}, Dynamics.IsDynCoverOf T F U m ↑s → ∃ t, Dynamics.IsDynCoverOf T F (U.comp U) (m * n) ↑t ∧ t.card ≤ s.card ^ n"
+      },
+      {
+        "id": "C09",
+        "statement": "∀ {X : Type u_1} {s : Set X} (T : X → X) (F : Set X) (U : SetRel X X), s.Nonempty → Dynamics.IsDynCoverOf T F U 0 s"
+      },
+      {
+        "id": "C10",
+        "statement": "∀ {X : Type u_1} {T : X → X} {U : SetRel X X} {F : Set X} {n : ℕ} {s : Finset X}, Dynamics.IsDynCoverOf T F U n ↑s → Dynamics.coverMincard T F U n ≤ ↑s.card"
+      },
+      {
+        "id": "C11",
+        "statement": "∀ {X : Type u_1} {T : X → X} {U : SetRel X X}, Dynamics.coverEntropyEntourage T ∅ U = ⊥"
+      },
+      {
+        "id": "C12",
+        "statement": "∀ {X : Type u_1} {T : X → X} {U V : SetRel X X} {F s : Set X} {n : ℕ}, U ⊆ V → Dynamics.IsDynCoverOf T F U n s → Dynamics.IsDynCoverOf T F V n s"
+      },
+      {
+        "id": "C13",
+        "statement": "∀ {X : Type u_1} (T : X → X) (F : Set X), Antitone fun U => Dynamics.coverEntropyEntourage T F U"
+      },
+      {
+        "id": "C14",
+        "statement": "∀ {X : Type u_1} {T : X → X} {U : SetRel X X} {F : Set X} {n : ℕ}, Set.MapsTo T F F → ∀ [U.IsSymm], n ≠ 0 → Dynamics.coverEntropyEntourage T F (U.comp U) ≤ (↑(Dynamics.coverMincard T F U n)).log / ↑n"
+      },
+      {
+        "id": "C15",
+        "statement": "∀ {X : Type u_1} (T : X → X) (F : Set X) (U : SetRel X X) (n : ℕ), 1 ≤ Dynamics.coverMincard T F U n ↔ F.Nonempty"
+      },
+      {
+        "id": "C16",
+        "statement": "∀ {X : Type u_1} {T : X → X} {U : SetRel X X} {F : Set X}, Set.MapsTo T F F → ∀ [U.IsSymm] (m n : ℕ), Dynamics.coverMincard T F (U.comp U) (m * n) ≤ Dynamics.coverMincard T F U m ^ n"
+      }
+    ],
+    "episode_id": "MLP4B_0040",
+    "schema_version": "lemma-portfolio.dependency-compression.v4",
+    "selection_budget": 3,
+    "source_project": "mathlib",
+    "targets": [
+      {
+        "id": "T01",
+        "statement": "∀ {X : Type u_1} {T : X → X} {U : SetRel X X} {F : Set X} [inst : UniformSpace X], IsCompact F → Set.MapsTo T F F → U ∈ uniformity X → ∀ (n : ℕ), Dynamics.coverMincard T F U n < ⊤"
+      },
+      {
+        "id": "T02",
+        "statement": "∀ {X : Type u_1} {F : Set X} (T : X → X), F.Nonempty → Dynamics.coverEntropyInfEntourage T F Set.univ = 0"
+      },
+      {
+        "id": "T03",
+        "statement": "∀ {X : Type u_1} {T : X → X} {U : SetRel X X} {F : Set X} [inst : UniformSpace X], IsCompact F → UniformContinuous T → U ∈ uniformity X → ∀ (n : ℕ), Dynamics.coverMincard T F U n < ⊤"
+      },
+      {
+        "id": "T04",
+        "statement": "∀ {X : Type u_1} {T : X → X} {U : SetRel X X} {F : Set X} [inst : UniformSpace X], IsCompact F → Set.MapsTo T F F → U ∈ uniformity X → Dynamics.coverEntropyEntourage T F U < ⊤"
+      },
+      {
+        "id": "T05",
+        "statement": "∀ {X : Type u_1} {F : Set X} (T : X → X), F.Nonempty → Dynamics.coverEntropyEntourage T F Set.univ = 0"
+      },
+      {
+        "id": "T06",
+        "statement": "∀ {X : Type u_1} {T : X → X} {U : SetRel X X} {F : Set X}, Set.MapsTo T F F → ∀ [U.IsSymm], Dynamics.coverEntropyEntourage T F (U.comp U) ≤ Dynamics.coverEntropyInfEntourage T F U"
+      },
+      {
+        "id": "T07",
+        "statement": "∀ {X : Type u_1} {T : X → X} {U : SetRel X X}, Dynamics.coverEntropyInfEntourage T ∅ U = ⊥"
+      },
+      {
+        "id": "T08",
+        "statement": "∀ {X : Type u_1} [inst : UniformSpace X] {ι : Sort u_2} {p : ι → Prop} {s : ι → SetRel X X}, (uniformity X).HasBasis p s → ∀ (T : X → X) (F : Set X), Dynamics.coverEntropy T F = ⨆ i, ⨆ (_ : p i), Dynamics.coverEntropyEntourage T F (s i)"
+      }
+    ],
+    "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+  },
+  {
+    "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+    "candidates": [
+      {
+        "id": "C01",
+        "statement": "∀ {G : Type u_1} [inst : Group G] {S T : Set G}, Subgroup.IsComplement S T → S * T = Set.univ"
+      },
+      {
+        "id": "C02",
+        "statement": "∀ {G : Type u_1} [inst : Group G] {S T : Set G}, Subgroup.IsComplement S T ↔ ∀ (g : G), ∃! x, ↑x.1 * ↑x.2 = g"
+      },
+      {
+        "id": "C03",
+        "statement": "∀ {G : Type u_1} [inst : Group G] {S T : Set G} (hST : Subgroup.IsComplement S T) (g : G), ↑(hST.equiv g).1 * ↑(hST.equiv g).2 = g"
+      },
+      {
+        "id": "C04",
+        "statement": "∀ {G : Type u_1} [inst : Group G] {S T : Set G} (hST : Subgroup.IsComplement S T) (g : G), ↑(hST.equiv g).2 = (↑(hST.equiv g).1)⁻¹ * g"
+      },
+      {
+        "id": "C05",
+        "statement": "∀ {G : Type u_1} [inst : AddGroup G] {H : AddSubgroup G} {T : Set G}, AddSubgroup.IsComplement (↑H) T ↔ Function.Bijective (T.domRestrict Quotient.mk'')"
+      },
+      {
+        "id": "C06",
+        "statement": "∀ {G : Type u_1} [inst : Group G] {H : Subgroup G} {T : Set G}, Subgroup.IsComplement (↑H) T ↔ Function.Bijective (T.domRestrict Quotient.mk'')"
+      },
+      {
+        "id": "C07",
+        "statement": "∀ {G : Type u_1} [inst : AddGroup G] {S T : Set G}, AddSubgroup.IsComplement S T → Nat.card ↑S * Nat.card ↑T = Nat.card G"
+      },
+      {
+        "id": "C08",
+        "statement": "∀ {G : Type u_1} [inst : Group G] {g : G}, Subgroup.IsComplement {g} Set.univ"
+      },
+      {
+        "id": "C09",
+        "statement": "∀ {G : Type u_1} [inst : Group G] {S T : Set G} (hST : Subgroup.IsComplement S T) {g : G}, 1 ∈ S → ∀ (hg : g ∈ T), (hST.equiv g).2 = ⟨g, hg⟩"
+      },
+      {
+        "id": "C10",
+        "statement": "∀ {G : Type u_1} [inst : Group G] {H K : Subgroup G}, H.IsComplement' K → Nat.card ↥H * Nat.card ↥K = Nat.card G"
+      },
+      {
+        "id": "C11",
+        "statement": "∀ {G : Type u_1} [inst : Group G] {S T : Set G} (hST : Subgroup.IsComplement S T) (g : G), ↑(hST.equiv g).1 = g * (↑(hST.equiv g).2)⁻¹"
+      },
+      {
+        "id": "C12",
+        "statement": "∀ {G : Type u_1} [inst : Group G] {H : Subgroup G} {S : Set G}, Subgroup.IsComplement S ↑H ↔ Function.Bijective (S.domRestrict QuotientGroup.mk)"
+      },
+      {
+        "id": "C13",
+        "statement": "∀ {G : Type u_1} [inst : AddGroup G] {g : G}, AddSubgroup.IsComplement Set.univ {g}"
+      },
+      {
+        "id": "C14",
+        "statement": "∀ {G : Type u_1} [inst : Group G] {H : Subgroup G} {S : Set G}, Subgroup.IsComplement S ↑H → Nat.card ↑S = H.index"
+      },
+      {
+        "id": "C15",
+        "statement": "∀ {G : Type u_1} [inst : Group G] {S T : Set G}, Subgroup.IsComplement S T → Nat.card ↑S * Nat.card ↑T = Nat.card G"
+      },
+      {
+        "id": "C16",
+        "statement": "∀ {G : Type u_1} [inst : Group G] {g : G}, Subgroup.IsComplement Set.univ {g}"
+      }
+    ],
+    "episode_id": "MLP4B_0041",
+    "schema_version": "lemma-portfolio.dependency-compression.v4",
+    "selection_budget": 3,
+    "source_project": "mathlib",
+    "targets": [
+      {
+        "id": "T01",
+        "statement": "∀ {G : Type u_1} [inst : AddGroup G] {S : Set G}, AddSubgroup.IsComplement Set.univ S ↔ ∃ g, S = {g}"
+      },
+      {
+        "id": "T02",
+        "statement": "∀ {G : Type u_1} [inst : Group G] {S : Set G} {g : G}, Subgroup.IsComplement {g} S ↔ S = Set.univ"
+      },
+      {
+        "id": "T03",
+        "statement": "∀ {G : Type u_1} [inst : Group G] {K : Subgroup G} {S : Set G} (hSK : Subgroup.IsComplement S ↑K) {g₁ g₂ : G}, (hSK.equiv g₁).1 = (hSK.equiv g₂).1 ↔ LeftCosetEquivalence (↑K) g₁ g₂"
+      },
+      {
+        "id": "T04",
+        "statement": "∀ {G : Type u_1} [inst : Group G], ⊥.IsComplement' ⊤"
+      },
+      {
+        "id": "T05",
+        "statement": "∀ {G : Type u_1} [inst : Group G] {H' H : Subgroup G}, H' ≤ H → ∃ S, S * ↑H' = ↑H ∧ Nat.card ↑S * Nat.card ↥H' = Nat.card ↥H"
+      },
+      {
+        "id": "T06",
+        "statement": "∀ {G : Type u_1} [inst : Group G] {S T : Set G} (hST : Subgroup.IsComplement S T) {g : G} (h1 : 1 ∈ T), g ∈ S → (hST.equiv g).2 = ⟨1, h1⟩"
+      },
+      {
+        "id": "T07",
+        "statement": "∀ {G : Type u_1} [inst : Group G] {H : Subgroup G} {T : Set G} (hHT : Subgroup.IsComplement (↑H) T) {g₁ g₂ : G}, (hHT.equiv g₁).2 = (hHT.equiv g₂).2 ↔ RightCosetEquivalence (↑H) g₁ g₂"
+      },
+      {
+        "id": "T08",
+        "statement": "∀ {G : Type u_1} [inst : Group G] {S T : Set G} (hST : Subgroup.IsComplement S T) {g : G} (h1 : 1 ∈ S), g ∈ T → (hST.equiv g).1 = ⟨1, h1⟩"
+      }
+    ],
+    "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+  },
+  {
+    "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+    "candidates": [
+      {
+        "id": "C01",
+        "statement": "∀ {C : Type u₁} {inst : CategoryTheory.Category.{v₁, u₁} C} {inst_1 : CategoryTheory.MonoidalCategory C} {inst_2 : CategoryTheory.BraidedCategory C} (X : C) {inst_3 : CategoryTheory.MonObj X} [self : CategoryTheory.IsCommMonObj X], CategoryTheory.CategoryStruct.comp (β_ X X).hom CategoryTheory.MonObj.mul = CategoryTheory.MonObj.mul"
+      },
+      {
+        "id": "C02",
+        "statement": "∀ {C : Type u₁} [inst : CategoryTheory.Category.{v₁, u₁} C] [inst_1 : CategoryTheory.MonoidalCategory C] (M : C) [inst_2 : CategoryTheory.AddMonObj M] [inst_3 : CategoryTheory.BraidedCategory C] [CategoryTheory.IsCommAddMonObj M], CategoryTheory.CategoryStruct.comp (β_ M M).inv CategoryTheory.AddMonObj.add = CategoryTheory.AddMonObj.add"
+      },
+      {
+        "id": "C03",
+        "statement": "∀ {C : Type u₁} {inst : CategoryTheory.Category.{v₁, u₁} C} {inst_1 : CategoryTheory.MonoidalCategory C} {M' N' : C} {inst_2 : CategoryTheory.AddMonObj M'} {inst_3 : CategoryTheory.AddMonObj N'} (f : M' ⟶ N') [self : CategoryTheory.IsAddMonHom f], CategoryTheory.CategoryStruct.comp CategoryTheory.AddMonObj.add f = CategoryTheory.CategoryStruct.comp (CategoryTheory.MonoidalCategoryStruct.tensorHom f f) CategoryTheory.AddMonObj.add"
+      },
+      {
+        "id": "C04",
+        "statement": "∀ {C : Type u₁} [inst : CategoryTheory.Category.{v₁, u₁} C] [inst_1 : CategoryTheory.MonoidalCategory C] (M : C) [inst_2 : CategoryTheory.MonObj M] [inst_3 : CategoryTheory.BraidedCategory C] [CategoryTheory.IsCommMonObj M], CategoryTheory.CategoryStruct.comp (β_ M M).inv CategoryTheory.MonObj.mul = CategoryTheory.MonObj.mul"
+      },
+      {
+        "id": "C05",
+        "statement": "∀ {C : Type u₁} [inst : CategoryTheory.Category.{v₁, u₁} C] [inst_1 : CategoryTheory.MonoidalCategory C] {M' N' : C} [inst_2 : CategoryTheory.AddMonObj M'] [inst_3 : CategoryTheory.AddMonObj N'] {f : M' ⟶ N'}, autoParam (CategoryTheory.CategoryStruct.comp CategoryTheory.AddMonObj.zero f = CategoryTheory.AddMonObj.zero) CategoryTheory.IsAddMonHom.zero_hom._autoParam → autoParam (CategoryTheory.CategoryStruct.comp CategoryTheory.AddMonObj.add f = CategoryTheory.CategoryStruct.comp (CategoryTheory.MonoidalCategoryStruct.tensorHom f f) CategoryTheory.AddMonObj.add) CategoryTheory.IsAddMonHom.add_hom._autoParam → CategoryTheory.IsAddMonHom f"
+      },
+      {
+        "id": "C06",
+        "statement": "∀ {C : Type u₁} [inst : CategoryTheory.Category.{v₁, u₁} C] [inst_1 : CategoryTheory.MonoidalCategory C] {W X₁ X₂ Y₁ Y₂ Z₁ Z₂ : C} (f : X₁ ⟶ X₂) (g : Y₁ ⟶ Y₂) (h : Z₁ ⟶ Z₂) (gh : CategoryTheory.MonoidalCategoryStruct.tensorObj Y₂ Z₂ ⟶ W) {Z : C} (h_1 : CategoryTheory.MonoidalCategoryStruct.tensorObj X₂ W ⟶ Z), CategoryTheory.CategoryStruct.comp (CategoryTheory.MonoidalCategoryStruct.associator X₁ Y₁ Z₁).hom (CategoryTheory.CategoryStruct.comp (CategoryTheory.MonoidalCategoryStruct.tensorHom f (CategoryTheory.CategoryStruct.comp (CategoryTheory.MonoidalCategoryStruct.tensorHom g h) gh)) h_1) = CategoryTheory.CategoryStruct.comp (CategoryTheory.MonoidalCategoryStruct.tensorHom (CategoryTheory.MonoidalCategoryStruct.tensorHom f g) h) (CategoryTheory.CategoryStruct.comp (CategoryTheory.MonoidalCategoryStruct.associator X₂ Y₂ Z₂).hom (CategoryTheory.CategoryStruct.comp (CategoryTheory.MonoidalCategoryStruct.tensorHom (CategoryTheory.CategoryStruct.id X₂) gh) h_1))"
+      },
+      {
+        "id": "C07",
+        "statement": "∀ {C : Type u₁} [inst : CategoryTheory.Category.{v₁, u₁} C] [inst_1 : CategoryTheory.MonoidalCategory C] {M X : C} [inst_2 : CategoryTheory.MonObj M] (f : X ⟶ M), CategoryTheory.CategoryStruct.comp (CategoryTheory.MonoidalCategoryStruct.associator X M M).hom (CategoryTheory.CategoryStruct.comp (CategoryTheory.MonoidalCategoryStruct.tensorHom f CategoryTheory.MonObj.mul) CategoryTheory.MonObj.mul) = CategoryTheory.CategoryStruct.comp (CategoryTheory.MonoidalCategoryStruct.tensorHom (CategoryTheory.CategoryStruct.comp (CategoryTheory.MonoidalCategoryStruct.tensorHom f (CategoryTheory.CategoryStruct.id M)) CategoryTheory.MonObj.mul) (CategoryTheory.CategoryStruct.id M)) CategoryTheory.MonObj.mul"
+      },
+      {
+        "id": "C08",
+        "statement": "∀ {C : Type u₁} {inst : CategoryTheory.Category.{v₁, u₁} C} {inst_1 : CategoryTheory.MonoidalCategory C} {M N : CategoryTheory.AddMon C} {x y : M.Hom N}, x.hom = y.hom → x = y"
+      },
+      {
+        "id": "C09",
+        "statement": "∀ {C : Type u₁} {inst : CategoryTheory.Category.{v₁, u₁} C} {inst_1 : CategoryTheory.MonoidalCategory C} (X : C) [self : CategoryTheory.AddMonObj X], CategoryTheory.CategoryStruct.comp (CategoryTheory.MonoidalCategoryStruct.whiskerRight CategoryTheory.AddMonObj.zero X) CategoryTheory.AddMonObj.add = (CategoryTheory.MonoidalCategoryStruct.leftUnitor X).hom"
+      },
+      {
+        "id": "C10",
+        "statement": "∀ {C : Type u₁} [inst : CategoryTheory.Category.{v₁, u₁} C] [inst_1 : CategoryTheory.MonoidalCategory C] {M X : C} [inst_2 : CategoryTheory.AddMonObj M] (f : X ⟶ M), CategoryTheory.CategoryStruct.comp (CategoryTheory.MonoidalCategoryStruct.associator X M M).hom (CategoryTheory.CategoryStruct.comp (CategoryTheory.MonoidalCategoryStruct.tensorHom f CategoryTheory.AddMonObj.add) CategoryTheory.AddMonObj.add) = CategoryTheory.CategoryStruct.comp (CategoryTheory.MonoidalCategoryStruct.tensorHom (CategoryTheory.CategoryStruct.comp (CategoryTheory.MonoidalCategoryStruct.tensorHom f (CategoryTheory.CategoryStruct.id M)) CategoryTheory.AddMonObj.add) (CategoryTheory.CategoryStruct.id M)) CategoryTheory.AddMonObj.add"
+      },
+      {
+        "id": "C11",
+        "statement": "∀ {C : Type u₁} {inst : CategoryTheory.Category.{v₁, u₁} C} {inst_1 : CategoryTheory.MonoidalCategory C} {M N : C} {inst_2 : CategoryTheory.MonObj M} {inst_3 : CategoryTheory.MonObj N} (f : M ⟶ N) [self : CategoryTheory.IsMonHom f], CategoryTheory.CategoryStruct.comp CategoryTheory.MonObj.one f = CategoryTheory.MonObj.one"
+      },
+      {
+        "id": "C12",
+        "statement": "∀ {C : Type u₁} [inst : CategoryTheory.Category.{v₁, u₁} C] [inst_1 : CategoryTheory.MonoidalCategory C] {M N : C} [inst_2 : CategoryTheory.MonObj M] [inst_3 : CategoryTheory.MonObj N] {f : M ⟶ N}, autoParam (CategoryTheory.CategoryStruct.comp CategoryTheory.MonObj.one f = CategoryTheory.MonObj.one) CategoryTheory.IsMonHom.one_hom._autoParam → autoParam (CategoryTheory.CategoryStruct.comp CategoryTheory.MonObj.mul f = CategoryTheory.CategoryStruct.comp (CategoryTheory.MonoidalCategoryStruct.tensorHom f f) CategoryTheory.MonObj.mul) CategoryTheory.IsMonHom.mul_hom._autoParam → CategoryTheory.IsMonHom f"
+      },
+      {
+        "id": "C13",
+        "statement": "∀ {C : Type u₁} {inst : CategoryTheory.Category.{v₁, u₁} C} {inst_1 : CategoryTheory.MonoidalCategory C} (X : C) [self : CategoryTheory.AddMonObj X], CategoryTheory.CategoryStruct.comp (CategoryTheory.MonoidalCategoryStruct.whiskerRight CategoryTheory.AddMonObj.add X) CategoryTheory.AddMonObj.add = CategoryTheory.CategoryStruct.comp (CategoryTheory.MonoidalCategoryStruct.associator X X X).hom (CategoryTheory.CategoryStruct.comp (CategoryTheory.MonoidalCategoryStruct.whiskerLeft X CategoryTheory.AddMonObj.add) CategoryTheory.AddMonObj.add)"
+      },
+      {
+        "id": "C14",
+        "statement": "∀ {C : Type u₁} [inst : CategoryTheory.Category.{v₁, u₁} C] [inst_1 : CategoryTheory.MonoidalCategory C] {M X : C} [inst_2 : CategoryTheory.MonObj M] (f : X ⟶ M), CategoryTheory.CategoryStruct.comp (CategoryTheory.MonoidalCategoryStruct.associator M M X).inv (CategoryTheory.CategoryStruct.comp (CategoryTheory.MonoidalCategoryStruct.tensorHom CategoryTheory.MonObj.mul f) CategoryTheory.MonObj.mul) = CategoryTheory.CategoryStruct.comp (CategoryTheory.MonoidalCategoryStruct.tensorHom (CategoryTheory.CategoryStruct.id M) (CategoryTheory.CategoryStruct.comp (CategoryTheory.MonoidalCategoryStruct.tensorHom (CategoryTheory.CategoryStruct.id M) f) CategoryTheory.MonObj.mul)) CategoryTheory.MonObj.mul"
+      },
+      {
+        "id": "C15",
+        "statement": "∀ {C : Type u₁} {inst : CategoryTheory.Category.{v₁, u₁} C} {inst_1 : CategoryTheory.MonoidalCategory C} (X : C) [self : CategoryTheory.MonObj X], CategoryTheory.CategoryStruct.comp (CategoryTheory.MonoidalCategoryStruct.whiskerLeft X CategoryTheory.MonObj.one) CategoryTheory.MonObj.mul = (CategoryTheory.MonoidalCategoryStruct.rightUnitor X).hom"
+      },
+      {
+        "id": "C16",
+        "statement": "∀ {C : Type u₁} [inst : CategoryTheory.Category.{v₁, u₁} C] [inst_1 : CategoryTheory.MonoidalCategory C] {M X : C} [inst_2 : CategoryTheory.AddMonObj M] (e : M ≅ X), CategoryTheory.AddMonObj.add = CategoryTheory.CategoryStruct.comp (CategoryTheory.MonoidalCategoryStruct.tensorHom e.inv e.inv) (CategoryTheory.CategoryStruct.comp CategoryTheory.AddMonObj.add e.hom)"
+      }
+    ],
+    "episode_id": "MLP4B_0042",
+    "schema_version": "lemma-portfolio.dependency-compression.v4",
+    "selection_budget": 3,
+    "source_project": "mathlib",
+    "targets": [
+      {
+        "id": "T01",
+        "statement": "∀ (C : Type u₁) [inst : CategoryTheory.Category.{v₁, u₁} C] [inst_1 : CategoryTheory.MonoidalCategory C] (F : CategoryTheory.AddMon C), CategoryTheory.IsAddMonHom (CategoryTheory.AddMon.EquivLaxMonoidalFunctorPUnit.counitIsoAux C F).hom"
+      },
+      {
+        "id": "T02",
+        "statement": "∀ {C : Type u₁} [inst : CategoryTheory.Category.{v₁, u₁} C] [inst_1 : CategoryTheory.MonoidalCategory C] (M : C) [inst_2 : CategoryTheory.MonObj M] [inst_3 : CategoryTheory.BraidedCategory C] [CategoryTheory.IsCommMonObj M], CategoryTheory.CategoryStruct.comp (CategoryTheory.MonoidalCategory.tensorμ M M M M) (CategoryTheory.CategoryStruct.comp (CategoryTheory.MonoidalCategoryStruct.tensorHom CategoryTheory.MonObj.mul CategoryTheory.MonObj.mul) CategoryTheory.MonObj.mul) = CategoryTheory.CategoryStruct.comp (CategoryTheory.MonoidalCategoryStruct.tensorHom CategoryTheory.MonObj.mul CategoryTheory.MonObj.mul) CategoryTheory.MonObj.mul"
+      },
+      {
+        "id": "T03",
+        "statement": "∀ {C : Type u₁} [inst : CategoryTheory.Category.{v₁, u₁} C] [inst_1 : CategoryTheory.MonoidalCategory C] {M X : C} [inst_2 : CategoryTheory.AddMonObj M] (f : X ⟶ M) {Z : C} (h : M ⟶ Z), CategoryTheory.CategoryStruct.comp (CategoryTheory.MonoidalCategoryStruct.associator X M M).hom (CategoryTheory.CategoryStruct.comp (CategoryTheory.MonoidalCategoryStruct.tensorHom f CategoryTheory.AddMonObj.add) (CategoryTheory.CategoryStruct.comp CategoryTheory.AddMonObj.add h)) = CategoryTheory.CategoryStruct.comp (CategoryTheory.MonoidalCategoryStruct.tensorHom (CategoryTheory.CategoryStruct.comp (CategoryTheory.MonoidalCategoryStruct.tensorHom f (CategoryTheory.CategoryStruct.id M)) CategoryTheory.AddMonObj.add) (CategoryTheory.CategoryStruct.id M)) (CategoryTheory.CategoryStruct.comp CategoryTheory.AddMonObj.add h)"
+      },
+      {
+        "id": "T04",
+        "statement": "∀ {C : Type u₁} [inst : CategoryTheory.Category.{v₁, u₁} C] [inst_1 : CategoryTheory.MonoidalCategory C] {M : C} [inst_2 : CategoryTheory.AddMonObj M] {Z : C} (f : Z ⟶ M), CategoryTheory.CategoryStruct.comp (CategoryTheory.MonoidalCategoryStruct.tensorHom CategoryTheory.AddMonObj.zero f) CategoryTheory.AddMonObj.add = CategoryTheory.CategoryStruct.comp (CategoryTheory.MonoidalCategoryStruct.leftUnitor Z).hom f"
+      },
+      {
+        "id": "T05",
+        "statement": "∀ {C : Type u₁} [inst : CategoryTheory.Category.{v₁, u₁} C] [inst_1 : CategoryTheory.MonoidalCategory C] {M X₁ : C} [inst_2 : CategoryTheory.MonObj M] (f : X₁ ⟶ M), CategoryTheory.CategoryStruct.comp (CategoryTheory.MonoidalCategoryStruct.rightUnitor X₁).inv (CategoryTheory.CategoryStruct.comp (CategoryTheory.MonoidalCategoryStruct.tensorHom f CategoryTheory.MonObj.one) CategoryTheory.MonObj.mul) = f"
+      },
+      {
+        "id": "T06",
+        "statement": "∀ {C : Type u₁} [inst : CategoryTheory.Category.{v₁, u₁} C] [inst_1 : CategoryTheory.MonoidalCategory C] {M X : C} [inst_2 : CategoryTheory.MonObj M] (f : X ⟶ M) {Z : C} (h : M ⟶ Z), CategoryTheory.CategoryStruct.comp (CategoryTheory.MonoidalCategoryStruct.associator M M X).inv (CategoryTheory.CategoryStruct.comp (CategoryTheory.MonoidalCategoryStruct.tensorHom CategoryTheory.MonObj.mul f) (CategoryTheory.CategoryStruct.comp CategoryTheory.MonObj.mul h)) = CategoryTheory.CategoryStruct.comp (CategoryTheory.MonoidalCategoryStruct.tensorHom (CategoryTheory.CategoryStruct.id M) (CategoryTheory.CategoryStruct.comp (CategoryTheory.MonoidalCategoryStruct.tensorHom (CategoryTheory.CategoryStruct.id M) f) CategoryTheory.MonObj.mul)) (CategoryTheory.CategoryStruct.comp CategoryTheory.MonObj.mul h)"
+      },
+      {
+        "id": "T07",
+        "statement": "∀ {C : Type u₁} [inst : CategoryTheory.Category.{v₁, u₁} C] [inst_1 : CategoryTheory.MonoidalCategory C] (M : C) [inst_2 : CategoryTheory.AddMonObj M] [inst_3 : CategoryTheory.BraidedCategory C] [CategoryTheory.IsCommAddMonObj M], CategoryTheory.CategoryStruct.comp (CategoryTheory.MonoidalCategory.tensorμ M M M M) (CategoryTheory.CategoryStruct.comp (CategoryTheory.MonoidalCategoryStruct.tensorHom CategoryTheory.AddMonObj.add CategoryTheory.AddMonObj.add) CategoryTheory.AddMonObj.add) = CategoryTheory.CategoryStruct.comp (CategoryTheory.MonoidalCategoryStruct.tensorHom CategoryTheory.AddMonObj.add CategoryTheory.AddMonObj.add) CategoryTheory.AddMonObj.add"
+      },
+      {
+        "id": "T08",
+        "statement": "∀ {C : Type u₁} [inst : CategoryTheory.Category.{v₁, u₁} C] [inst_1 : CategoryTheory.MonoidalCategory C] {M X : C} [inst_2 : CategoryTheory.AddMonObj M] (e : M ≅ X), CategoryTheory.IsAddMonHom e.hom"
+      }
+    ],
+    "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+  },
+  {
+    "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+    "candidates": [
+      {
+        "id": "C01",
+        "statement": "∀ {C : Type u₁} [inst : CategoryTheory.Category.{v₁, u₁} C] {D : Type u₂} [inst_1 : CategoryTheory.Category.{v₂, u₂} D] {F : CategoryTheory.Functor C D} {G : CategoryTheory.Functor D C} (self : CategoryTheory.Adjunction.CoreHomEquiv F G) {X : C} {Y Y' : D} (f : F.obj X ⟶ Y) (g : Y ⟶ Y'), (self.homEquiv X Y') (CategoryTheory.CategoryStruct.comp f g) = CategoryTheory.CategoryStruct.comp ((self.homEquiv X Y) f) (G.map g)"
+      },
+      {
+        "id": "C02",
+        "statement": "∀ {C : Type u₁} [inst : CategoryTheory.Category.{v₁, u₁} C] {D : Type u₂} [inst_1 : CategoryTheory.Category.{v₂, u₂} D] {F : CategoryTheory.Functor C D} [F.IsEquivalence], F.IsLeftAdjoint"
+      },
+      {
+        "id": "C03",
+        "statement": "∀ {C : Type u₁} [inst : CategoryTheory.Category.{v₁, u₁} C] {D : Type u₂} [inst_1 : CategoryTheory.Category.{v₂, u₂} D] {F : CategoryTheory.Functor C D} {G : CategoryTheory.Functor D C} (adj : F ⊣ G) {X Y : C} (f : X ⟶ Y) {Z : C} (h : G.obj (F.obj Y) ⟶ Z), CategoryTheory.CategoryStruct.comp (adj.unit.app X) (CategoryTheory.CategoryStruct.comp (G.map (F.map f)) h) = CategoryTheory.CategoryStruct.comp f (CategoryTheory.CategoryStruct.comp (adj.unit.app Y) h)"
+      },
+      {
+        "id": "C04",
+        "statement": "∀ {C : Type u₁} [inst : CategoryTheory.Category.{v₁, u₁} C] {D : Type u₂} [inst_1 : CategoryTheory.Category.{v₂, u₂} D] {F : CategoryTheory.Functor C D} {G : CategoryTheory.Functor D C} (adj : F ⊣ G) {X' X : C} {Y : D} (f : X' ⟶ X) (g : X ⟶ G.obj Y), (adj.homEquiv X' Y).symm (CategoryTheory.CategoryStruct.comp f g) = CategoryTheory.CategoryStruct.comp (F.map f) ((adj.homEquiv X Y).symm g)"
+      },
+      {
+        "id": "C05",
+        "statement": "∀ {C : Type u₁} [inst : CategoryTheory.Category.{v₁, u₁} C] {D : Type u₂} [inst_1 : CategoryTheory.Category.{v₂, u₂} D] {F : CategoryTheory.Functor C D} {G : CategoryTheory.Functor D C} (self : F ⊣ G) (Y : D), CategoryTheory.CategoryStruct.comp (self.unit.app (G.obj Y)) (G.map (self.counit.app Y)) = CategoryTheory.CategoryStruct.id (G.obj Y)"
+      },
+      {
+        "id": "C06",
+        "statement": "∀ {C : Type u₁} [inst : CategoryTheory.Category.{v₁, u₁} C] {D : Type u₂} [inst_1 : CategoryTheory.Category.{v₂, u₂} D] {E : Type u₃} [inst_2 : CategoryTheory.Category.{v₃, u₃} E] {F : CategoryTheory.Functor C D} {G : CategoryTheory.Functor D E} [F.IsRightAdjoint] [G.IsRightAdjoint], (F.comp G).IsRightAdjoint"
+      },
+      {
+        "id": "C07",
+        "statement": "∀ {C : Type u₁} [inst : CategoryTheory.Category.{v₁, u₁} C] {D : Type u₂} [inst_1 : CategoryTheory.Category.{v₂, u₂} D] {F : CategoryTheory.Functor C D} {G : CategoryTheory.Functor D C} (adj : G ⊣ F) {X Y : C} (f : Y ⟶ X), CategoryTheory.CategoryStruct.comp (G.map (F.map f)) (adj.counit.app X) = CategoryTheory.CategoryStruct.comp (adj.counit.app Y) f"
+      },
+      {
+        "id": "C08",
+        "statement": "∀ {C : Type u₁} [inst : CategoryTheory.Category.{v₁, u₁} C] {D : Type u₂} [inst_1 : CategoryTheory.Category.{v₂, u₂} D] {F : CategoryTheory.Functor C D} {G : CategoryTheory.Functor D C} (adj : F ⊣ G) {X' X : C} {Y Y' : D} (f : X' ⟶ X) (g : X ⟶ G.obj Y') (h : X' ⟶ G.obj Y) (k : Y ⟶ Y'), CategoryTheory.CategoryStruct.comp f g = CategoryTheory.CategoryStruct.comp h (G.map k) → CategoryTheory.CategoryStruct.comp (F.map f) ((adj.homEquiv X Y').symm g) = CategoryTheory.CategoryStruct.comp ((adj.homEquiv X' Y).symm h) k"
+      },
+      {
+        "id": "C09",
+        "statement": "∀ {C : Type u₁} [inst : CategoryTheory.Category.{v₁, u₁} C] {D : Type u₂} [inst_1 : CategoryTheory.Category.{v₂, u₂} D] {F : CategoryTheory.Functor C D} {G : CategoryTheory.Functor D C} (adj : F ⊣ G) (X : C) (Y : D) (g : X ⟶ G.obj Y), (adj.homEquiv X Y).symm g = CategoryTheory.CategoryStruct.comp (F.map g) (adj.counit.app Y)"
+      },
+      {
+        "id": "C10",
+        "statement": "∀ {C : Type u₁} [inst : CategoryTheory.Category.{v₁, u₁} C] {D : Type u₂} [inst_1 : CategoryTheory.Category.{v₂, u₂} D] {right : CategoryTheory.Functor D C}, (∃ left, Nonempty (left ⊣ right)) → right.IsRightAdjoint"
+      },
+      {
+        "id": "C11",
+        "statement": "∀ {C : Type u₁} [inst : CategoryTheory.Category.{v₁, u₁} C] {D : Type u₂} [inst_1 : CategoryTheory.Category.{v₂, u₂} D] {left : CategoryTheory.Functor C D}, (∃ right, Nonempty (left ⊣ right)) → left.IsLeftAdjoint"
+      },
+      {
+        "id": "C12",
+        "statement": "∀ {C : Type u₁} [inst : CategoryTheory.Category.{v₁, u₁} C] {D : Type u₂} [inst_1 : CategoryTheory.Category.{v₂, u₂} D] {E : Type u₃} [inst_2 : CategoryTheory.Category.{v₃, u₃} E] (F : CategoryTheory.Functor C D) (G : CategoryTheory.Functor D E) [F.IsLeftAdjoint] [G.IsLeftAdjoint], (F.comp G).IsLeftAdjoint"
+      },
+      {
+        "id": "C13",
+        "statement": "∀ {C : Type u₁} [inst : CategoryTheory.Category.{v₁, u₁} C] {D : Type u₂} [inst_1 : CategoryTheory.Category.{v₂, u₂} D] {F : CategoryTheory.Functor C D} {G : CategoryTheory.Functor D C} (adj : F ⊣ G) (X : C) (Y : D) (f : F.obj X ⟶ Y), (adj.homEquiv X Y) f = CategoryTheory.CategoryStruct.comp (adj.unit.app X) (G.map f)"
+      },
+      {
+        "id": "C14",
+        "statement": "∀ {C : Type u₁} [inst : CategoryTheory.Category.{v₁, u₁} C] {D : Type u₂} [inst_1 : CategoryTheory.Category.{v₂, u₂} D] {F : CategoryTheory.Functor C D} {G : CategoryTheory.Functor D C} (self : F ⊣ G) (X : C), CategoryTheory.CategoryStruct.comp (F.map (self.unit.app X)) (self.counit.app (F.obj X)) = CategoryTheory.CategoryStruct.id (F.obj X)"
+      },
+      {
+        "id": "C15",
+        "statement": "∀ {C : Type u₁} [inst : CategoryTheory.Category.{v₁, u₁} C] {D : Type u₂} [inst_1 : CategoryTheory.Category.{v₂, u₂} D] {F G : CategoryTheory.Functor C D} (h : F ≅ G) [F.IsRightAdjoint], G.IsRightAdjoint"
+      },
+      {
+        "id": "C16",
+        "statement": "∀ {C : Type u₁} [inst : CategoryTheory.Category.{v₁, u₁} C] {D : Type u₂} [inst_1 : CategoryTheory.Category.{v₂, u₂} D] {F : CategoryTheory.Functor C D} {G : CategoryTheory.Functor D C} (self : F ⊣ G) (X : C) {Z : D} (h : F.obj X ⟶ Z), CategoryTheory.CategoryStruct.comp (F.map (self.unit.app X)) (CategoryTheory.CategoryStruct.comp (self.counit.app (F.obj X)) h) = h"
+      }
+    ],
+    "episode_id": "MLP4B_0043",
+    "schema_version": "lemma-portfolio.dependency-compression.v4",
+    "selection_budget": 3,
+    "source_project": "mathlib",
+    "targets": [
+      {
+        "id": "T01",
+        "statement": "∀ {C : Type u₁} [inst : CategoryTheory.Category.{v₁, u₁} C] {D : Type u₂} [inst_1 : CategoryTheory.Category.{v₁, u₂} D] {F : CategoryTheory.Functor C D} {G : CategoryTheory.Functor D C} (adj : F ⊣ G) (X : Cᵒᵖ) (X_1 : D) (x : Opposite.unop X ⟶ G.obj X_1), (CategoryTheory.ConcreteCategory.hom ((adj.compCoyonedaIso.inv.app X).app X_1)) x = CategoryTheory.CategoryStruct.comp (F.map x) (adj.counit.app X_1)"
+      },
+      {
+        "id": "T02",
+        "statement": "∀ {C : Type u₁} [inst : CategoryTheory.Category.{v₁, u₁} C] {D : Type u₂} [inst_1 : CategoryTheory.Category.{v₂, u₂} D] {F : CategoryTheory.Functor C D} {G : CategoryTheory.Functor D C} (adj : F ⊣ G) (X : C), (adj.homEquiv X (F.obj X)) (CategoryTheory.CategoryStruct.id (F.obj X)) = adj.unit.app X"
+      },
+      {
+        "id": "T03",
+        "statement": "∀ {C : Type u₁} [inst : CategoryTheory.Category.{v₁, u₁} C] {D : Type u₂} [inst_1 : CategoryTheory.Category.{v₂, u₂} D] {F G : CategoryTheory.Functor C D} {H : CategoryTheory.Functor D C} (adj : F ⊣ H) (iso : F ≅ G) {X : C} {Y : D} (f : X ⟶ H.obj Y), ((adj.ofNatIsoLeft iso).homEquiv X Y).symm f = CategoryTheory.CategoryStruct.comp (iso.inv.app X) ((adj.homEquiv X Y).symm f)"
+      },
+      {
+        "id": "T04",
+        "statement": "∀ {C : Type u₁} [inst : CategoryTheory.Category.{v₁, u₁} C] {D : Type u₂} [inst_1 : CategoryTheory.Category.{v₂, u₂} D] {F : CategoryTheory.Functor C D} {G : CategoryTheory.Functor D C} (adj : F ⊣ G) {X Y : D} (g : X ⟶ Y) (Z : C), (Function.Bijective fun f => CategoryTheory.CategoryStruct.comp f (G.map g)) ↔ Function.Bijective fun f => CategoryTheory.CategoryStruct.comp f g"
+      },
+      {
+        "id": "T05",
+        "statement": "∀ {C : Type u₁} [inst : CategoryTheory.Category.{v₁, u₁} C] {D : Type u₂} [inst_1 : CategoryTheory.Category.{v₂, u₂} D] {F : CategoryTheory.Functor C D} {G : CategoryTheory.Functor D C} {adj adj' : F ⊣ G}, adj.unit = adj'.unit → adj = adj'"
+      },
+      {
+        "id": "T06",
+        "statement": "∀ {C : Type u₁} [inst : CategoryTheory.Category.{v₁, u₁} C] {D : Type u₂} [inst_1 : CategoryTheory.Category.{v₂, u₂} D] {F : CategoryTheory.Functor C D} {G : CategoryTheory.Functor D C} (adj : G ⊣ F) {X Y : C} (f : Y ⟶ X) {Z : C} (h : X ⟶ Z), CategoryTheory.CategoryStruct.comp (G.map (F.map f)) (CategoryTheory.CategoryStruct.comp (adj.counit.app X) h) = CategoryTheory.CategoryStruct.comp (adj.counit.app Y) (CategoryTheory.CategoryStruct.comp f h)"
+      },
+      {
+        "id": "T07",
+        "statement": "∀ {C : Type u₁} [inst : CategoryTheory.Category.{v₁, u₁} C] {D : Type u₂} [inst_1 : CategoryTheory.Category.{v₂, u₂} D] {E : Type u₃} [inst_2 : CategoryTheory.Category.{v₃, u₃} E] (F : CategoryTheory.Functor C D) (G : CategoryTheory.Functor D E) [F.IsEquivalence], (F.comp G).IsRightAdjoint ↔ G.IsRightAdjoint"
+      },
+      {
+        "id": "T08",
+        "statement": "∀ {C : Type u₁} [inst : CategoryTheory.Category.{v₁, u₁} C] {D : Type u₂} [inst_1 : CategoryTheory.Category.{v₂, u₂} D] {F : CategoryTheory.Functor C D} {G : CategoryTheory.Functor D C} (adj : F ⊣ G) {A : C} {B : D} (f : F.obj A ⟶ B) (g : A ⟶ G.obj B), CategoryTheory.CategoryStruct.comp (adj.unit.app A) (G.map f) = g ↔ f = CategoryTheory.CategoryStruct.comp (F.map g) (adj.counit.app B)"
+      }
+    ],
+    "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+  },
+  {
+    "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+    "candidates": [
+      {
+        "id": "C01",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (f g : Polynomial R) (m n : ℕ) (r : R), f.resultant (Polynomial.C r * g) m n = r ^ m * f.resultant g m n"
+      },
+      {
+        "id": "C02",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (f g p : Polynomial R) (m n : ℕ), p.natDegree + m ≤ n → f.natDegree ≤ m → f.resultant (g + f * p) m n = f.resultant g m n"
+      },
+      {
+        "id": "C03",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (f g : Polynomial R) (m : ℕ), f.resultant g 0 m = f.coeff 0 ^ m"
+      },
+      {
+        "id": "C04",
+        "statement": "∀ {m n : ℕ} {R : Type u_1} [inst : CommRing R] (f g : Polynomial R) (hf : f.natDegree ≤ m) (hg : g.natDegree ≤ n), (LinearMap.toMatrix (((Polynomial.degreeLT.basis R m).prod (Polynomial.degreeLT.basis R n)).reindex finSumFinEquiv) (Polynomial.degreeLT.basis R (m + n))) (f.sylvesterMap g hf hg) = f.sylvester g m n"
+      },
+      {
+        "id": "C05",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (f g : Polynomial R) (m : ℕ), f.resultant g m 0 = g.coeff 0 ^ m"
+      },
+      {
+        "id": "C06",
+        "statement": "∀ {R : Type u_1} {S : Type u_2} [inst : CommRing R] [inst_1 : CommRing S] (f g : Polynomial R) (m n : ℕ) (φ : R →+* S), (Polynomial.map φ f).resultant (Polynomial.map φ g) m n = φ (f.resultant g m n)"
+      },
+      {
+        "id": "C07",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (f g₁ g₂ : Polynomial R) (m : ℕ), f.natDegree ≤ m → f.resultant (g₁ * g₂) m (g₁.natDegree + g₂.natDegree) = f.resultant g₁ m * f.resultant g₂ m"
+      },
+      {
+        "id": "C08",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (f g : Polynomial R) (m n : ℕ), f.resultant g m n = (-1) ^ (m * n) * g.resultant f n m"
+      },
+      {
+        "id": "C09",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (f₁ f₂ g : Polynomial R) (n : ℕ), g.natDegree ≤ n → (f₁ * f₂).resultant g (f₁.natDegree + f₂.natDegree) n = f₁.resultant g f₁.natDegree n * f₂.resultant g f₂.natDegree n"
+      },
+      {
+        "id": "C10",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (f g : Polynomial R) (m n k : ℕ), f.natDegree ≤ m → f.resultant g (m + k) n = (-1) ^ (n * k) * g.coeff n ^ k * f.resultant g m n"
+      },
+      {
+        "id": "C11",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (r : R) (g : Polynomial R) (m n : ℕ), g.natDegree ≤ n → ((Polynomial.X - Polynomial.C r) ^ m).resultant g m n = Polynomial.eval r g ^ m"
+      },
+      {
+        "id": "C12",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (f g : Polynomial R) (m n : ℕ) (r : R), (Polynomial.C r * f).resultant g m n = r ^ n * f.resultant g m n"
+      },
+      {
+        "id": "C13",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] {ι : Type u_3} (s : Finset ι) (f : ι → Polynomial R) (g : Polynomial R) (n : ℕ), ∏ i ∈ s, (f i).leadingCoeff ≠ 0 → g.natDegree ≤ n → (∏ i ∈ s, f i).resultant g (∏ i ∈ s, f i).natDegree n = ∏ i ∈ s, (f i).resultant g (f i).natDegree n"
+      },
+      {
+        "id": "C14",
+        "statement": "∀ {m n : ℕ} {R : Type u_1} [inst : CommRing R] (f g : Polynomial R) (hf : f.natDegree ≤ m) (hg : g.natDegree ≤ n) (pq : ↥(Polynomial.degreeLT R m) × ↥(Polynomial.degreeLT R n)), ↑((f.sylvesterMap g hf hg) pq) = f * ↑pq.2 + g * ↑pq.1"
+      },
+      {
+        "id": "C15",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] [inst_1 : IsDomain R] (f g : Polynomial R) (n : ℕ), g.natDegree ≤ n → f.Splits → f.resultant g f.natDegree n = f.leadingCoeff ^ n * (Multiset.map (fun x => Polynomial.eval x g) f.roots).prod"
+      },
+      {
+        "id": "C16",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (f g : Polynomial R) (m n k : ℕ), g.natDegree ≤ n → f.resultant g m (n + k) = f.coeff m ^ k * f.resultant g m n"
+      }
+    ],
+    "episode_id": "MLP4B_0044",
+    "schema_version": "lemma-portfolio.dependency-compression.v4",
+    "selection_budget": 3,
+    "source_project": "mathlib",
+    "targets": [
+      {
+        "id": "T01",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (f g : Polynomial R) (m n : ℕ), f.leadingCoeff ^ m ≠ 0 → g.natDegree ≤ n → (f ^ m).resultant g (f ^ m).natDegree n = f.resultant g f.natDegree n ^ m"
+      },
+      {
+        "id": "T02",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (f : Polynomial R) (m n : ℕ) (r : R), f.resultant (Polynomial.C r) m n = f.coeff m ^ n * r ^ m"
+      },
+      {
+        "id": "T03",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (f g : Polynomial R) (r : R), ((Polynomial.taylor r) f).resultant ((Polynomial.taylor r) g) = f.resultant g"
+      },
+      {
+        "id": "T04",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (f : Polynomial R), f.resultant f = 0 ^ f.natDegree"
+      },
+      {
+        "id": "T05",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] {f : Polynomial R}, 0 < f.degree → f.resultant (Polynomial.derivative f) f.natDegree (f.natDegree - 1) = (-1) ^ (f.natDegree * (f.natDegree - 1) / 2) * f.leadingCoeff * f.discr"
+      },
+      {
+        "id": "T06",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (g : Polynomial R) (m n : ℕ), Polynomial.resultant 0 g m n = 0 ^ n * g.coeff 0 ^ m"
+      },
+      {
+        "id": "T07",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (f : Polynomial R) (r : R) (m n : ℕ), f.natDegree ≤ m → f.resultant ((Polynomial.X - Polynomial.C r) ^ n) m n = (-1) ^ (m * n) * Polynomial.eval r f ^ n"
+      },
+      {
+        "id": "T08",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (f g : Polynomial R) (m n : ℕ), f.natDegree < m → g.natDegree < n → f.resultant g m n = 0"
+      }
+    ],
+    "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+  }
+]
+</episodes>

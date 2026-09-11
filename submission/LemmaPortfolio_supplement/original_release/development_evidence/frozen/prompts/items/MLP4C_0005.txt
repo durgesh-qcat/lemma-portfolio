@@ -1,0 +1,122 @@
+You are solving one unreleased LemmaPortfolio benchmark episode.
+
+Each target t has a hidden set D(t): the candidate declarations used as direct theorem dependencies in that target's historical elaborated source. For a portfolio S, define F(S) as the number of targets t for which D(t) intersects S. The benchmark objective is to form a portfolio of exactly 3 distinct candidate IDs maximizing F(S). This is a static dependency-portfolio compression task; it is not a claim about which lemmas would causally help a new proof.
+
+Use only the supplied episode text. Do not use tools, web search, a repository, a theorem prover, compiler feedback, prior answers, or follow-up messages. Analyze mathematical and formal dependency structure rather than word overlap.
+
+
+Return one JSON object and no prose. It must have exactly these keys: "episode_id" and "selected". The episode_id must be copied exactly. The selected value must be an array containing exactly 3 distinct IDs copied from this episode's candidates. Candidate order does not matter.
+
+Required episode_id: MLP4C_0005
+
+Episode JSON follows.
+<episode>
+{
+  "benchmark_id": "lemma-portfolio.mathlib-compression-calibration-30.v4",
+  "candidates": [
+    {
+      "id": "C01",
+      "statement": "∀ {R : Type u} {L : Type v} {M : Type w} [inst : CommRing R] [inst_1 : LieRing L] [inst_2 : AddCommGroup M] [inst_3 : Module R M] [inst_4 : LieRingModule L M] {s : Set M} {N : LieSubmodule R L M}, LieSubmodule.lieSpan R L s ≤ N ↔ s ⊆ ↑N"
+    },
+    {
+      "id": "C02",
+      "statement": "∀ {R : Type u} {L : Type v} {M : Type w} [inst : CommRing R] [inst_1 : LieRing L] [inst_2 : AddCommGroup M] [inst_3 : Module R M] [inst_4 : LieRingModule L M], ↑⊥ = ⊥"
+    },
+    {
+      "id": "C03",
+      "statement": "∀ {R : Type u} {L : Type v} {M : Type w} {M' : Type w₁} [inst : CommRing R] [inst_1 : LieRing L] [inst_2 : AddCommGroup M] [inst_3 : Module R M] [inst_4 : LieRingModule L M] [inst_5 : AddCommGroup M'] [inst_6 : Module R M'] [inst_7 : LieRingModule L M'] {f : M →ₗ⁅R,L⁆ M'} {N N₂ : LieSubmodule R L M}, N ≤ N₂ → LieSubmodule.map f N ≤ LieSubmodule.map f N₂"
+    },
+    {
+      "id": "C04",
+      "statement": "∀ {R : Type u} {L : Type v} {M : Type w} [inst : CommRing R] [inst_1 : LieRing L] [inst_2 : AddCommGroup M] [inst_3 : Module R M] [inst_4 : LieRingModule L M], ↑⊤ = ⊤"
+    },
+    {
+      "id": "C05",
+      "statement": "∀ {R : Type u} {L : Type v} {M : Type w} [inst : CommRing R] [inst_1 : LieRing L] [inst_2 : AddCommGroup M] [inst_3 : Module R M] [inst_4 : LieRingModule L M] (N : LieSubmodule R L M) {x : M}, x ∈ ↑N ↔ x ∈ N"
+    },
+    {
+      "id": "C06",
+      "statement": "∀ {R : Type u} {L : Type v} {M : Type w} [inst : CommRing R] [inst_1 : LieRing L] [inst_2 : AddCommGroup M] [inst_3 : Module R M] [inst_4 : LieRingModule L M] (N : LieSubmodule R L M), ↑↑N = ↑N"
+    },
+    {
+      "id": "C07",
+      "statement": "∀ {R : Type u} {L : Type v} {M : Type w} [inst : CommRing R] [inst_1 : LieRing L] [inst_2 : AddCommGroup M] [inst_3 : Module R M] [inst_4 : LieRingModule L M] (self : LieSubmodule R L M) {x : L} {m : M}, m ∈ (↑self).carrier → ⁅x, m⁆ ∈ (↑self).carrier"
+    },
+    {
+      "id": "C08",
+      "statement": "∀ {R : Type u} {L : Type v} {M : Type w} [inst : CommRing R] [inst_1 : LieRing L] [inst_2 : AddCommGroup M] [inst_3 : Module R M] [inst_4 : LieRingModule L M] (S : Set (LieSubmodule R L M)), ↑(sInf S) = sInf {x | ∃ s ∈ S, ↑s = x}"
+    },
+    {
+      "id": "C09",
+      "statement": "∀ {R : Type u} {L : Type v} {M : Type w} [inst : CommRing R] [inst_1 : LieRing L] [inst_2 : AddCommGroup M] [inst_3 : Module R M] [inst_4 : LieRingModule L M] (N N' : LieSubmodule R L M), ↑(N ⊔ N') = ↑N ⊔ ↑N'"
+    },
+    {
+      "id": "C10",
+      "statement": "∀ {R : Type u} {L : Type v} {M : Type w} [inst : CommRing R] [inst_1 : LieRing L] [inst_2 : AddCommGroup M] [inst_3 : Module R M] [inst_4 : LieRingModule L M] (N : LieSubmodule R L M), N.incl.range = N"
+    },
+    {
+      "id": "C11",
+      "statement": "∀ {R : Type u} {L : Type v} {M : Type w} {N : Type w₁} [inst : CommRing R] [inst_1 : LieRing L] [inst_2 : AddCommGroup M] [inst_3 : Module R M] [inst_4 : LieRingModule L M] [inst_5 : AddCommGroup N] [inst_6 : Module R N] [inst_7 : LieRingModule L N] (f : M →ₗ⁅R,L⁆ N), LieSubmodule.map f ⊤ = f.range"
+    },
+    {
+      "id": "C12",
+      "statement": "∀ {R : Type u} {L : Type v} {M : Type w} [inst : CommRing R] [inst_1 : LieRing L] [inst_2 : AddCommGroup M] [inst_3 : Module R M] [inst_4 : LieRingModule L M] (N N' : LieSubmodule R L M), (∀ (m : M), m ∈ N ↔ m ∈ N') → N = N'"
+    },
+    {
+      "id": "C13",
+      "statement": "∀ {R : Type u} {L : Type v} {M : Type w} [inst : CommRing R] [inst_1 : LieRing L] [inst_2 : AddCommGroup M] [inst_3 : Module R M] [inst_4 : LieRingModule L M] {s : Set M}, s ⊆ ↑(LieSubmodule.lieSpan R L s)"
+    },
+    {
+      "id": "C14",
+      "statement": "∀ {R : Type u} {L : Type v} {M : Type w} [inst : CommRing R] [inst_1 : LieRing L] [inst_2 : AddCommGroup M] [inst_3 : Module R M] [inst_4 : LieRingModule L M] (N N' : LieSubmodule R L M), ↑(N ⊓ N') = ↑N ⊓ ↑N'"
+    },
+    {
+      "id": "C15",
+      "statement": "∀ {R : Type u} {L : Type v} {M : Type w} [inst : CommRing R] [inst_1 : LieRing L] [inst_2 : AddCommGroup M] [inst_3 : Module R M] [inst_4 : LieRingModule L M] {ι : Sort u_1} (p : ι → LieSubmodule R L M), ↑(⨆ i, p i) = ⨆ i, ↑(p i)"
+    },
+    {
+      "id": "C16",
+      "statement": "∀ {R : Type u} {L : Type v} {M : Type w} [inst : CommRing R] [inst_1 : LieRing L] [inst_2 : AddCommGroup M] [inst_3 : Module R M] [inst_4 : LieRingModule L M] (N N' : LieSubmodule R L M), ↑N = ↑N' ↔ N = N'"
+    }
+  ],
+  "episode_id": "MLP4C_0005",
+  "schema_version": "lemma-portfolio.dependency-compression.v4",
+  "selection_budget": 3,
+  "source_project": "mathlib",
+  "targets": [
+    {
+      "id": "T01",
+      "statement": "∀ {R : Type u} {L : Type v} {M : Type w} [inst : CommRing R] [inst_1 : LieRing L] [inst_2 : AddCommGroup M] [inst_3 : Module R M] [inst_4 : LieRingModule L M] (S : Set (LieSubmodule R L M)), ↑(sInf S) = ⋂ s ∈ S, ↑s"
+    },
+    {
+      "id": "T02",
+      "statement": "∀ (R : Type u) (L : Type v) (M : Type w) [inst : CommRing R] [inst_1 : LieRing L] [inst_2 : AddCommGroup M] [inst_3 : Module R M] [inst_4 : LieRingModule L M], LieSubmodule.lieSpan R L Set.univ = ⊤"
+    },
+    {
+      "id": "T03",
+      "statement": "∀ {R : Type u} {L : Type v} {M : Type w} [inst : CommRing R] [inst_1 : LieRing L] [inst_2 : AddCommGroup M] [inst_3 : Module R M] [inst_4 : LieRingModule L M] {N : LieSubmodule R L M} {N' : LieSubmodule R L ↥N}, LieSubmodule.map N.incl N' ≤ N"
+    },
+    {
+      "id": "T04",
+      "statement": "∀ {R : Type u} {L : Type v} {M : Type w} [inst : CommRing R] [inst_1 : LieRing L] [inst_2 : AddCommGroup M] [inst_3 : Module R M] [inst_4 : LieRingModule L M] {ι : Type u_1} {N : ι → LieSubmodule R L M}, (iSupIndep fun i => ↑(N i)) ↔ iSupIndep N"
+    },
+    {
+      "id": "T05",
+      "statement": "∀ {R : Type u} {L : Type v} {M : Type w} {M' : Type w₁} [inst : CommRing R] [inst_1 : LieRing L] [inst_2 : AddCommGroup M] [inst_3 : Module R M] [inst_4 : LieRingModule L M] [inst_5 : AddCommGroup M'] [inst_6 : Module R M'] [inst_7 : LieRingModule L M'] {f : M →ₗ⁅R,L⁆ M'}, LieSubmodule.map f ⊥ = ⊥"
+    },
+    {
+      "id": "T06",
+      "statement": "∀ {R : Type u} {L : Type v} {M : Type w} [inst : CommRing R] [inst_1 : LieRing L] [inst_2 : AddCommGroup M] [inst_3 : Module R M] [inst_4 : LieRingModule L M] (N : LieSubmodule R L M) [inst_5 : LieAlgebra R L] (H : LieSubalgebra R L), LieSubmodule.map (N.incl.restrictLie H) ⊤ = N.restr H"
+    },
+    {
+      "id": "T07",
+      "statement": "∀ {R : Type u} {L : Type v} {M : Type w} [inst : CommRing R] [inst_1 : LieRing L] [inst_2 : AddCommGroup M] [inst_3 : Module R M] [inst_4 : LieRingModule L M] {ι : Sort u_1} (p : ι → LieSubmodule R L M), ↑(⨅ i, p i) = ⨅ i, ↑(p i)"
+    },
+    {
+      "id": "T08",
+      "statement": "∀ {R : Type u} {L : Type v} {M : Type w} [inst : CommRing R] [inst_1 : LieRing L] [inst_2 : AddCommGroup M] [inst_3 : Module R M] [inst_4 : LieRingModule L M] {p : Submodule R M}, ↑(LieSubmodule.lieSpan R L ↑p) = p ↔ ∃ N, ↑N = p"
+    }
+  ],
+  "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+}
+</episode>

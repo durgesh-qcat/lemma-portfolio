@@ -3,3 +3,5 @@ responses/source_extracted.txt -text
 responses/sol_xhigh_source_extracted.txt -text
 *.pdf binary
 *.zip binary
+submission/LemmaPortfolio_supplement/** -text
+provenance/pre_submission/** -text

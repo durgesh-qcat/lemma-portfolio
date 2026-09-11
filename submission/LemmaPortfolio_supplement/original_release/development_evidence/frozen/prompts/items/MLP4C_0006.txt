@@ -1,0 +1,122 @@
+You are solving one unreleased LemmaPortfolio benchmark episode.
+
+Each target t has a hidden set D(t): the candidate declarations used as direct theorem dependencies in that target's historical elaborated source. For a portfolio S, define F(S) as the number of targets t for which D(t) intersects S. The benchmark objective is to form a portfolio of exactly 3 distinct candidate IDs maximizing F(S). This is a static dependency-portfolio compression task; it is not a claim about which lemmas would causally help a new proof.
+
+Use only the supplied episode text. Do not use tools, web search, a repository, a theorem prover, compiler feedback, prior answers, or follow-up messages. Analyze mathematical and formal dependency structure rather than word overlap.
+
+
+Return one JSON object and no prose. It must have exactly these keys: "episode_id" and "selected". The episode_id must be copied exactly. The selected value must be an array containing exactly 3 distinct IDs copied from this episode's candidates. Candidate order does not matter.
+
+Required episode_id: MLP4C_0006
+
+Episode JSON follows.
+<episode>
+{
+  "benchmark_id": "lemma-portfolio.mathlib-compression-calibration-30.v4",
+  "candidates": [
+    {
+      "id": "C01",
+      "statement": "∀ {R : Type u} {σ : Type u_1} {a : R} {s : σ →₀ ℕ} [inst : CommSemiring R] [h : Decidable (a = 0)], ((MvPolynomial.monomial s) a).support = if a = 0 then ∅ else {s}"
+    },
+    {
+      "id": "C02",
+      "statement": "∀ {R : Type u} {σ : Type u_1} [inst : CommSemiring R] {α : Type u_2} (s : Finset α) (f : α → σ →₀ ℕ) (a : R), (MvPolynomial.monomial (∑ i ∈ s, f i)) a = MvPolynomial.C a * ∏ i ∈ s, (MvPolynomial.monomial (f i)) 1"
+    },
+    {
+      "id": "C03",
+      "statement": "∀ {R : Type u} {σ : Type u_1} [inst : CommSemiring R] {X : Type u_2} (s : Finset X) (f : X → MvPolynomial σ R) (m : σ →₀ ℕ), MvPolynomial.coeff m (∑ x ∈ s, f x) = ∑ x ∈ s, MvPolynomial.coeff m (f x)"
+    },
+    {
+      "id": "C04",
+      "statement": "∀ {R : Type u} {σ : Type u_1} [inst : CommSemiring R], MvPolynomial.C 0 = 0"
+    },
+    {
+      "id": "C05",
+      "statement": "∀ {R : Type u} {σ : Type u_1} [inst : CommSemiring R] (m s : σ →₀ ℕ) (r : R) (p : MvPolynomial σ R), MvPolynomial.coeff (m + s) (p * (MvPolynomial.monomial s) r) = MvPolynomial.coeff m p * r"
+    },
+    {
+      "id": "C06",
+      "statement": "∀ {R : Type u} {σ : Type u_1} [inst : CommSemiring R] {p : MvPolynomial σ R} {m : σ →₀ ℕ}, m ∉ p.support ↔ MvPolynomial.coeff m p = 0"
+    },
+    {
+      "id": "C07",
+      "statement": "∀ {R : Type u} {σ : Type u_1} [inst : CommSemiring R] [inst_1 : DecidableEq σ] (i : σ) (m : σ →₀ ℕ), MvPolynomial.coeff m (MvPolynomial.X i) = if (fun₀ | i => 1) = m then 1 else 0"
+    },
+    {
+      "id": "C08",
+      "statement": "∀ {R : Type u} {σ : Type u_1} [inst : CommSemiring R] {A : Type u_2} [inst_1 : Semiring A] {f g : MvPolynomial σ R →+* A}, f.comp MvPolynomial.C = g.comp MvPolynomial.C → (∀ (i : σ), f (MvPolynomial.X i) = g (MvPolynomial.X i)) → f = g"
+    },
+    {
+      "id": "C09",
+      "statement": "∀ {R : Type u} {σ : Type u_1} [inst : CommSemiring R] (m s : σ →₀ ℕ) (r : R) (p : MvPolynomial σ R), MvPolynomial.coeff m (p * (MvPolynomial.monomial s) r) = if s ≤ m then MvPolynomial.coeff (m - s) p * r else 0"
+    },
+    {
+      "id": "C10",
+      "statement": "∀ {R : Type u} {σ : Type u_1} [inst : CommSemiring R] {p : MvPolynomial σ R}, p ≠ 0 ↔ ∃ d, MvPolynomial.coeff d p ≠ 0"
+    },
+    {
+      "id": "C11",
+      "statement": "∀ {R : Type u} {σ : Type u_1} {e : ℕ} {n : σ} [inst : CommSemiring R], MvPolynomial.X n ^ e = (MvPolynomial.monomial fun₀ | n => e) 1"
+    },
+    {
+      "id": "C12",
+      "statement": "∀ {R : Type u} {σ : Type u_1} [inst : CommSemiring R] {s s' : σ →₀ ℕ} {a b : R}, (MvPolynomial.monomial s) a * (MvPolynomial.monomial s') b = (MvPolynomial.monomial (s + s')) (a * b)"
+    },
+    {
+      "id": "C13",
+      "statement": "∀ {R : Type u} {σ : Type u_1} [inst : CommSemiring R] {p : MvPolynomial σ R} {m : σ →₀ ℕ}, m ∈ p.support ↔ MvPolynomial.coeff m p ≠ 0"
+    },
+    {
+      "id": "C14",
+      "statement": "∀ {R : Type u} {σ : Type u_1} [inst : CommSemiring R] [inst_1 : DecidableEq σ] (m n : σ →₀ ℕ) (a : R), MvPolynomial.coeff m ((MvPolynomial.monomial n) a) = if n = m then a else 0"
+    },
+    {
+      "id": "C15",
+      "statement": "∀ {R : Type u} {σ : Type u_1} [inst : CommSemiring R] (p q : MvPolynomial σ R), (∀ (m : σ →₀ ℕ), MvPolynomial.coeff m p = MvPolynomial.coeff m q) → p = q"
+    },
+    {
+      "id": "C16",
+      "statement": "∀ {R : Type u} {σ : Type u_1} [inst : CommSemiring R] (a : R), MvPolynomial.coeff 0 (MvPolynomial.C a) = a"
+    }
+  ],
+  "episode_id": "MLP4C_0006",
+  "schema_version": "lemma-portfolio.dependency-compression.v4",
+  "selection_budget": 3,
+  "source_project": "mathlib",
+  "targets": [
+    {
+      "id": "T01",
+      "statement": "∀ {R : Type u} {σ : Type u_1} [inst : CommSemiring R] {α : Type u_2} (s : Finset α) (f : α → σ →₀ ℕ) (g : α → R), (MvPolynomial.monomial (∑ i ∈ s, f i)) (∏ i ∈ s, g i) = ∏ i ∈ s, (MvPolynomial.monomial (f i)) (g i)"
+    },
+    {
+      "id": "T02",
+      "statement": "∀ {R : Type u} {σ : Type u_1} [inst : CommSemiring R] (r : R) (φ : MvPolynomial σ R), MvPolynomial.C r ∣ φ ↔ ∀ (i : σ →₀ ℕ), r ∣ MvPolynomial.coeff i φ"
+    },
+    {
+      "id": "T03",
+      "statement": "∀ {R : Type u} {σ : Type u_1} [inst : CommSemiring R] (m : σ →₀ ℕ) (s : σ) (p : MvPolynomial σ R), MvPolynomial.coeff (m + fun₀ | s => 1) (p * MvPolynomial.X s) = MvPolynomial.coeff m p"
+    },
+    {
+      "id": "T04",
+      "statement": "∀ {R : Type u} {σ : Type u_1} [inst : CommSemiring R] {α : Type u_2} {β : Type u_3} [inst_1 : Zero β] (f : α →₀ β) (g : α → β → σ →₀ ℕ) (a : R), (MvPolynomial.monomial (f.sum g)) a = MvPolynomial.C a * f.prod fun a b => (MvPolynomial.monomial (g a b)) 1"
+    },
+    {
+      "id": "T05",
+      "statement": "∀ {R : Type u} {S₂ : Type w} {σ : Type u_1} [inst : CommSemiring R] [inst_1 : Semiring S₂] (f g : MvPolynomial σ R →+* S₂), f.comp MvPolynomial.C = g.comp MvPolynomial.C → (∀ (n : σ), f (MvPolynomial.X n) = g (MvPolynomial.X n)) → ∀ (p : MvPolynomial σ R), f p = g p"
+    },
+    {
+      "id": "T06",
+      "statement": "∀ {R : Type u} {σ : Type u_1} [inst : CommSemiring R] {p : MvPolynomial σ R} (m : σ →₀ ℕ), MvPolynomial.coeff m p ≠ 0 → MvPolynomial.coeff m p ∈ p.coeffs"
+    },
+    {
+      "id": "T07",
+      "statement": "∀ {R : Type u_2} {S : Type u_3} {σ : Type u_4} [inst : CommSemiring R] [inst_1 : CommSemiring S] [inst_2 : Module R S] (M : Submodule R S), MvPolynomial.coeffsIn σ M = Submodule.span R {x | ∃ m ∈ M, ∃ i, (MvPolynomial.monomial i) m = x}"
+    },
+    {
+      "id": "T08",
+      "statement": "∀ {R : Type u} {σ : Type u_1} [inst : CommSemiring R] [inst_1 : DecidableEq R] {p q : MvPolynomial σ R}, Disjoint p.support q.support → (p + q).coeffs = p.coeffs ∪ q.coeffs"
+    }
+  ],
+  "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+}
+</episode>

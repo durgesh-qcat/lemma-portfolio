@@ -1,0 +1,1739 @@
+{
+  "development": {
+    "all_numeric_structural_filters_pass": true,
+    "analytic": {
+      "coverage": {
+        "fraction": "18843/280",
+        "value": 67.29642857142858
+      },
+      "normalized": {
+        "fraction": "42853/3920",
+        "value": 10.931887755102041
+      },
+      "optimal": {
+        "fraction": "3/56",
+        "value": 0.05357142857142857
+      },
+      "random_tie_greedy_coverage": {
+        "fraction": "5201/30",
+        "value": 173.36666666666667
+      },
+      "random_tie_greedy_optimal": {
+        "fraction": "551/30",
+        "value": 18.366666666666667
+      },
+      "reverse_display_greedy_coverage": {
+        "fraction": "183",
+        "value": 183.0
+      },
+      "reverse_display_greedy_optimal": {
+        "fraction": "28",
+        "value": 28.0
+      },
+      "uniform_boundary_tie_frequency_optimal": {
+        "fraction": "123/20",
+        "value": 6.15
+      },
+      "within_one": {
+        "fraction": "4/5",
+        "value": 0.8
+      }
+    },
+    "episodes": 30,
+    "frequency_optimal_under_some_tie_paths": 26,
+    "greedy_always_suboptimal_ids": [
+      "MLP4C_0015"
+    ],
+    "greedy_details": [
+      {
+        "episode_id": "MLP4C_0000",
+        "fixed_greedy": 6,
+        "optimum": 7,
+        "paths": 7,
+        "possible_scores": [
+          6,
+          7
+        ],
+        "random_tie_coverage_probabilities": {
+          "6": "1/2",
+          "7": "1/2"
+        },
+        "random_tie_optimal_probability": 0.5,
+        "reverse_display_greedy": 7
+      },
+      {
+        "episode_id": "MLP4C_0001",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 16,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/3",
+          "6": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4C_0002",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 16,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/3",
+          "6": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4C_0003",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 16,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/3",
+          "6": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4C_0004",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 22,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/3",
+          "6": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4C_0005",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 14,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/3",
+          "6": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4C_0006",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 14,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/3",
+          "6": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4C_0007",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 26,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "8/15",
+          "6": "7/15"
+        },
+        "random_tie_optimal_probability": 0.4666666666666667,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4C_0008",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 56,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "3/5",
+          "6": "2/5"
+        },
+        "random_tie_optimal_probability": 0.4,
+        "reverse_display_greedy": 5
+      },
+      {
+        "episode_id": "MLP4C_0009",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 14,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/3",
+          "6": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4C_0010",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 20,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/3",
+          "6": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4C_0011",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 14,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/3",
+          "6": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4C_0012",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 16,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/3",
+          "6": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4C_0013",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 16,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/3",
+          "6": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4C_0014",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 14,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/3",
+          "6": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4C_0015",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 20,
+        "possible_scores": [
+          5
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1"
+        },
+        "random_tie_optimal_probability": 0.0,
+        "reverse_display_greedy": 5
+      },
+      {
+        "episode_id": "MLP4C_0016",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 16,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/3",
+          "6": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4C_0017",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 18,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/3",
+          "6": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4C_0018",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 14,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/3",
+          "6": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4C_0019",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 20,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/3",
+          "6": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4C_0020",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 14,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/3",
+          "6": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4C_0021",
+        "fixed_greedy": 6,
+        "optimum": 7,
+        "paths": 6,
+        "possible_scores": [
+          6,
+          7
+        ],
+        "random_tie_coverage_probabilities": {
+          "6": "1/3",
+          "7": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 7
+      },
+      {
+        "episode_id": "MLP4C_0022",
+        "fixed_greedy": 6,
+        "optimum": 7,
+        "paths": 5,
+        "possible_scores": [
+          6,
+          7
+        ],
+        "random_tie_coverage_probabilities": {
+          "6": "1/2",
+          "7": "1/2"
+        },
+        "random_tie_optimal_probability": 0.5,
+        "reverse_display_greedy": 7
+      },
+      {
+        "episode_id": "MLP4C_0023",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 16,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/3",
+          "6": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4C_0024",
+        "fixed_greedy": 6,
+        "optimum": 7,
+        "paths": 5,
+        "possible_scores": [
+          6,
+          7
+        ],
+        "random_tie_coverage_probabilities": {
+          "6": "1/2",
+          "7": "1/2"
+        },
+        "random_tie_optimal_probability": 0.5,
+        "reverse_display_greedy": 7
+      },
+      {
+        "episode_id": "MLP4C_0025",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 14,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/3",
+          "6": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4C_0026",
+        "fixed_greedy": 6,
+        "optimum": 7,
+        "paths": 5,
+        "possible_scores": [
+          6,
+          7
+        ],
+        "random_tie_coverage_probabilities": {
+          "6": "1/3",
+          "7": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 7
+      },
+      {
+        "episode_id": "MLP4C_0027",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 14,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/3",
+          "6": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4C_0028",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 14,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/3",
+          "6": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4C_0029",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 14,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/3",
+          "6": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 6
+      }
+    ],
+    "greedy_optimal_under_some_tie_paths": 29,
+    "greedy_possible_score_histogram": {
+      "5": 1,
+      "5,6": 24,
+      "6,7": 5
+    },
+    "means": {
+      "coverage": {
+        "fraction": "6281/2800",
+        "value": 2.2432142857142856
+      },
+      "normalized": {
+        "fraction": "42853/117600",
+        "value": 0.36439625850340135
+      },
+      "optimal": {
+        "fraction": "1/560",
+        "value": 0.0017857142857142857
+      },
+      "random_tie_greedy_coverage": {
+        "fraction": "5201/900",
+        "value": 5.778888888888889
+      },
+      "random_tie_greedy_optimal": {
+        "fraction": "551/900",
+        "value": 0.6122222222222222
+      },
+      "reverse_display_greedy_coverage": {
+        "fraction": "61/10",
+        "value": 6.1
+      },
+      "reverse_display_greedy_optimal": {
+        "fraction": "14/15",
+        "value": 0.9333333333333333
+      },
+      "uniform_boundary_tie_frequency_optimal": {
+        "fraction": "41/200",
+        "value": 0.205
+      },
+      "within_one": {
+        "fraction": "2/75",
+        "value": 0.02666666666666667
+      }
+    },
+    "optimal_coverage_histogram": {
+      "6": 25,
+      "7": 5
+    },
+    "source_names_ending_assoc": [
+      "CategoryTheory.MonoidalCategory.tensorHom_comp_tensorHom_assoc",
+      "CategoryTheory.CartesianMonoidalCategory.associator_hom_fst_assoc",
+      "CategoryTheory.CartesianMonoidalCategory.whiskerRight_snd_assoc",
+      "CategoryTheory.Limits.biprod.inr_desc_assoc"
+    ],
+    "total_optimal_portfolios": 30
+  },
+  "independent_model_rescoring": [
+    {
+      "coverage": 276,
+      "hidden_edges": 814,
+      "optimal": 7,
+      "selected_edges": 300,
+      "system": "deepseek_expert_deepthink",
+      "valid": 60,
+      "within_one": 33
+    },
+    {
+      "coverage": 252,
+      "hidden_edges": 814,
+      "optimal": 1,
+      "selected_edges": 284,
+      "system": "deepseek_instant_deepthink",
+      "valid": 60,
+      "within_one": 19
+    },
+    {
+      "coverage": 299,
+      "hidden_edges": 814,
+      "optimal": 25,
+      "selected_edges": 317,
+      "system": "gpt_sol_5_6_pro",
+      "valid": 55,
+      "within_one": 44
+    },
+    {
+      "coverage": 305,
+      "hidden_edges": 814,
+      "optimal": 18,
+      "selected_edges": 324,
+      "system": "gpt_sol_5_6_xhigh",
+      "valid": 60,
+      "within_one": 43
+    },
+    {
+      "coverage": 243,
+      "hidden_edges": 814,
+      "optimal": 6,
+      "selected_edges": 259,
+      "system": "qwen_3_7_plus_thinking",
+      "valid": 60,
+      "within_one": 23
+    },
+    {
+      "coverage": 259,
+      "hidden_edges": 814,
+      "optimal": 12,
+      "selected_edges": 277,
+      "system": "qwen_3_8_max_thinking",
+      "valid": 55,
+      "within_one": 30
+    },
+    {
+      "coverage": 226,
+      "hidden_edges": 814,
+      "optimal": 0,
+      "selected_edges": 240,
+      "system": "public_text_char_tfidf_facility",
+      "valid": 60,
+      "within_one": 18
+    },
+    {
+      "coverage": 138,
+      "hidden_edges": 814,
+      "optimal": 0,
+      "selected_edges": 154,
+      "system": "sha256_random_portfolio",
+      "valid": 60,
+      "within_one": 1
+    }
+  ],
+  "input_sha256": {
+    "data/development.labels.jsonl": "bee487259392de4d36b2140a715c7b4196ce7cc2027c3b13c90e1874a19149d0",
+    "data/development.public.jsonl": "404452daa5017793d9f7b10f4d92716d2bb267dca034094b0f41f8c8d9219ffc",
+    "data/test.labels.jsonl": "d17c1fd5c6d87635daf8035fe4a0918d1eaa29708eae37cb797cae08c19ef887",
+    "data/test.public.jsonl": "b54293b08bc7ddbb7110a50908049922f7cfd86f14cb49a4de4e28353aecc6d8",
+    "responses/direct_transcription.json": "283a5e13da1de35909d8affe27496160a7a133f77c74c716b050a6e5ca211dfd",
+    "results/baseline_predictions.json": "49bffb65198421c78cf45c3d1687d3f9d9b80c14ca2a26f65e26a461f1b63ceb",
+    "results/scores.json": "adc0721b7fac2837bcbebb77903d7cea018e204e65b59d332c5f0b8f71d2aae4"
+  },
+  "method": "Independent coverage enumeration, sequential greedy tie-branch enumeration with exact rational probabilities, separate subset-state dynamic-programming check, and independent TF-IDF rebuild. No model inference or Lean re-extraction.",
+  "test": {
+    "all_numeric_structural_filters_pass": true,
+    "analytic": {
+      "coverage": {
+        "fraction": "39429/280",
+        "value": 140.81785714285715
+      },
+      "normalized": {
+        "fraction": "88483/3920",
+        "value": 22.57219387755102
+      },
+      "optimal": {
+        "fraction": "39/280",
+        "value": 0.1392857142857143
+      },
+      "random_tie_greedy_coverage": {
+        "fraction": "126869/360",
+        "value": 352.4138888888889
+      },
+      "random_tie_greedy_optimal": {
+        "fraction": "13469/360",
+        "value": 37.41388888888889
+      },
+      "reverse_display_greedy_coverage": {
+        "fraction": "372",
+        "value": 372.0
+      },
+      "reverse_display_greedy_optimal": {
+        "fraction": "57",
+        "value": 57.0
+      },
+      "uniform_boundary_tie_frequency_optimal": {
+        "fraction": "841/70",
+        "value": 12.014285714285714
+      },
+      "within_one": {
+        "fraction": "1037/560",
+        "value": 1.8517857142857144
+      }
+    },
+    "episodes": 60,
+    "frequency_optimal_under_some_tie_paths": 53,
+    "greedy_always_suboptimal_ids": [
+      "MLP4B_0005"
+    ],
+    "greedy_details": [
+      {
+        "episode_id": "MLP4B_0000",
+        "fixed_greedy": 6,
+        "optimum": 7,
+        "paths": 10,
+        "possible_scores": [
+          6,
+          7
+        ],
+        "random_tie_coverage_probabilities": {
+          "6": "2/3",
+          "7": "1/3"
+        },
+        "random_tie_optimal_probability": 0.3333333333333333,
+        "reverse_display_greedy": 7
+      },
+      {
+        "episode_id": "MLP4B_0001",
+        "fixed_greedy": 6,
+        "optimum": 7,
+        "paths": 7,
+        "possible_scores": [
+          6,
+          7
+        ],
+        "random_tie_coverage_probabilities": {
+          "6": "1/6",
+          "7": "5/6"
+        },
+        "random_tie_optimal_probability": 0.8333333333333334,
+        "reverse_display_greedy": 7
+      },
+      {
+        "episode_id": "MLP4B_0002",
+        "fixed_greedy": 6,
+        "optimum": 7,
+        "paths": 11,
+        "possible_scores": [
+          6,
+          7
+        ],
+        "random_tie_coverage_probabilities": {
+          "6": "3/5",
+          "7": "2/5"
+        },
+        "random_tie_optimal_probability": 0.4,
+        "reverse_display_greedy": 7
+      },
+      {
+        "episode_id": "MLP4B_0003",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 36,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "35/72",
+          "6": "37/72"
+        },
+        "random_tie_optimal_probability": 0.5138888888888888,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4B_0004",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 18,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/3",
+          "6": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4B_0005",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 20,
+        "possible_scores": [
+          5
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1"
+        },
+        "random_tie_optimal_probability": 0.0,
+        "reverse_display_greedy": 5
+      },
+      {
+        "episode_id": "MLP4B_0006",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 16,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/3",
+          "6": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4B_0007",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 26,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/4",
+          "6": "3/4"
+        },
+        "random_tie_optimal_probability": 0.75,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4B_0008",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 14,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/3",
+          "6": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4B_0009",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 14,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/3",
+          "6": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4B_0010",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 16,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/3",
+          "6": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4B_0011",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 40,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "2/5",
+          "6": "3/5"
+        },
+        "random_tie_optimal_probability": 0.6,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4B_0012",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 44,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/4",
+          "6": "3/4"
+        },
+        "random_tie_optimal_probability": 0.75,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4B_0013",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 32,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/3",
+          "6": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4B_0014",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 36,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "2/5",
+          "6": "3/5"
+        },
+        "random_tie_optimal_probability": 0.6,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4B_0015",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 14,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/3",
+          "6": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4B_0016",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 18,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/3",
+          "6": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4B_0017",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 32,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/2",
+          "6": "1/2"
+        },
+        "random_tie_optimal_probability": 0.5,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4B_0018",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 18,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/3",
+          "6": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4B_0019",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 56,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/3",
+          "6": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4B_0020",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 14,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/3",
+          "6": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4B_0021",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 22,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/3",
+          "6": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4B_0022",
+        "fixed_greedy": 6,
+        "optimum": 7,
+        "paths": 6,
+        "possible_scores": [
+          6,
+          7
+        ],
+        "random_tie_coverage_probabilities": {
+          "6": "1/2",
+          "7": "1/2"
+        },
+        "random_tie_optimal_probability": 0.5,
+        "reverse_display_greedy": 7
+      },
+      {
+        "episode_id": "MLP4B_0023",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 26,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/2",
+          "6": "1/2"
+        },
+        "random_tie_optimal_probability": 0.5,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4B_0024",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 16,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/3",
+          "6": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4B_0025",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 20,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/3",
+          "6": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4B_0026",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 16,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/3",
+          "6": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4B_0027",
+        "fixed_greedy": 6,
+        "optimum": 7,
+        "paths": 9,
+        "possible_scores": [
+          6,
+          7
+        ],
+        "random_tie_coverage_probabilities": {
+          "6": "1/3",
+          "7": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 7
+      },
+      {
+        "episode_id": "MLP4B_0028",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 18,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/3",
+          "6": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4B_0029",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 18,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/3",
+          "6": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4B_0030",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 38,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/3",
+          "6": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4B_0031",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 16,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/3",
+          "6": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4B_0032",
+        "fixed_greedy": 6,
+        "optimum": 7,
+        "paths": 5,
+        "possible_scores": [
+          6,
+          7
+        ],
+        "random_tie_coverage_probabilities": {
+          "6": "1/3",
+          "7": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 7
+      },
+      {
+        "episode_id": "MLP4B_0033",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 16,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/3",
+          "6": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4B_0034",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 26,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "8/15",
+          "6": "7/15"
+        },
+        "random_tie_optimal_probability": 0.4666666666666667,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4B_0035",
+        "fixed_greedy": 6,
+        "optimum": 7,
+        "paths": 8,
+        "possible_scores": [
+          6,
+          7
+        ],
+        "random_tie_coverage_probabilities": {
+          "6": "1/3",
+          "7": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 7
+      },
+      {
+        "episode_id": "MLP4B_0036",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 16,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/3",
+          "6": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4B_0037",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 14,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/3",
+          "6": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4B_0038",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 48,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/3",
+          "6": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4B_0039",
+        "fixed_greedy": 6,
+        "optimum": 7,
+        "paths": 6,
+        "possible_scores": [
+          6,
+          7
+        ],
+        "random_tie_coverage_probabilities": {
+          "6": "1/3",
+          "7": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 7
+      },
+      {
+        "episode_id": "MLP4B_0040",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 16,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/3",
+          "6": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4B_0041",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 18,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/3",
+          "6": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4B_0042",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 14,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/3",
+          "6": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4B_0043",
+        "fixed_greedy": 6,
+        "optimum": 7,
+        "paths": 8,
+        "possible_scores": [
+          6,
+          7
+        ],
+        "random_tie_coverage_probabilities": {
+          "6": "1/6",
+          "7": "5/6"
+        },
+        "random_tie_optimal_probability": 0.8333333333333334,
+        "reverse_display_greedy": 7
+      },
+      {
+        "episode_id": "MLP4B_0044",
+        "fixed_greedy": 6,
+        "optimum": 7,
+        "paths": 8,
+        "possible_scores": [
+          6,
+          7
+        ],
+        "random_tie_coverage_probabilities": {
+          "6": "1/3",
+          "7": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 7
+      },
+      {
+        "episode_id": "MLP4B_0045",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 22,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/2",
+          "6": "1/2"
+        },
+        "random_tie_optimal_probability": 0.5,
+        "reverse_display_greedy": 5
+      },
+      {
+        "episode_id": "MLP4B_0046",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 50,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/3",
+          "6": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4B_0047",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 16,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/3",
+          "6": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4B_0048",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 14,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/3",
+          "6": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4B_0049",
+        "fixed_greedy": 6,
+        "optimum": 7,
+        "paths": 11,
+        "possible_scores": [
+          6,
+          7
+        ],
+        "random_tie_coverage_probabilities": {
+          "6": "1/4",
+          "7": "3/4"
+        },
+        "random_tie_optimal_probability": 0.75,
+        "reverse_display_greedy": 7
+      },
+      {
+        "episode_id": "MLP4B_0050",
+        "fixed_greedy": 6,
+        "optimum": 7,
+        "paths": 8,
+        "possible_scores": [
+          6,
+          7
+        ],
+        "random_tie_coverage_probabilities": {
+          "6": "2/3",
+          "7": "1/3"
+        },
+        "random_tie_optimal_probability": 0.3333333333333333,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4B_0051",
+        "fixed_greedy": 6,
+        "optimum": 7,
+        "paths": 10,
+        "possible_scores": [
+          6,
+          7
+        ],
+        "random_tie_coverage_probabilities": {
+          "6": "2/3",
+          "7": "1/3"
+        },
+        "random_tie_optimal_probability": 0.3333333333333333,
+        "reverse_display_greedy": 7
+      },
+      {
+        "episode_id": "MLP4B_0052",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 16,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/3",
+          "6": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4B_0053",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 16,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/3",
+          "6": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4B_0054",
+        "fixed_greedy": 6,
+        "optimum": 7,
+        "paths": 12,
+        "possible_scores": [
+          6,
+          7
+        ],
+        "random_tie_coverage_probabilities": {
+          "6": "1/2",
+          "7": "1/2"
+        },
+        "random_tie_optimal_probability": 0.5,
+        "reverse_display_greedy": 7
+      },
+      {
+        "episode_id": "MLP4B_0055",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 14,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/3",
+          "6": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4B_0056",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 14,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/3",
+          "6": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4B_0057",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 16,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/3",
+          "6": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4B_0058",
+        "fixed_greedy": 5,
+        "optimum": 6,
+        "paths": 16,
+        "possible_scores": [
+          5,
+          6
+        ],
+        "random_tie_coverage_probabilities": {
+          "5": "1/3",
+          "6": "2/3"
+        },
+        "random_tie_optimal_probability": 0.6666666666666666,
+        "reverse_display_greedy": 6
+      },
+      {
+        "episode_id": "MLP4B_0059",
+        "fixed_greedy": 6,
+        "optimum": 7,
+        "paths": 12,
+        "possible_scores": [
+          6,
+          7
+        ],
+        "random_tie_coverage_probabilities": {
+          "6": "1/4",
+          "7": "3/4"
+        },
+        "random_tie_optimal_probability": 0.75,
+        "reverse_display_greedy": 7
+      }
+    ],
+    "greedy_optimal_under_some_tie_paths": 59,
+    "greedy_possible_score_histogram": {
+      "5": 1,
+      "5,6": 44,
+      "6,7": 15
+    },
+    "means": {
+      "coverage": {
+        "fraction": "13143/5600",
+        "value": 2.346964285714286
+      },
+      "normalized": {
+        "fraction": "88483/235200",
+        "value": 0.376203231292517
+      },
+      "optimal": {
+        "fraction": "13/5600",
+        "value": 0.0023214285714285715
+      },
+      "random_tie_greedy_coverage": {
+        "fraction": "126869/21600",
+        "value": 5.873564814814815
+      },
+      "random_tie_greedy_optimal": {
+        "fraction": "13469/21600",
+        "value": 0.6235648148148148
+      },
+      "reverse_display_greedy_coverage": {
+        "fraction": "31/5",
+        "value": 6.2
+      },
+      "reverse_display_greedy_optimal": {
+        "fraction": "19/20",
+        "value": 0.95
+      },
+      "uniform_boundary_tie_frequency_optimal": {
+        "fraction": "841/4200",
+        "value": 0.20023809523809524
+      },
+      "within_one": {
+        "fraction": "1037/33600",
+        "value": 0.030863095238095238
+      }
+    },
+    "optimal_coverage_histogram": {
+      "6": 45,
+      "7": 15
+    },
+    "source_names_ending_assoc": [
+      "CategoryTheory.Limits.biproduct.toSubtype_\u03c0_assoc",
+      "CategoryTheory.Limits.bicone_\u03b9_\u03c0_ne_assoc",
+      "CategoryTheory.Limits.biproduct.fromSubtype_\u03c0_subtype_assoc",
+      "CategoryTheory.Limits.biproduct.lift_\u03c0_assoc",
+      "HomologicalComplex.homotopyCofiber.d_sndX_assoc",
+      "HomologicalComplex.cylinder.\u03b9\u2080_desc_assoc",
+      "HomologicalComplex.cylinder.\u03b9\u2081_\u03c0_assoc",
+      "lcm_assoc",
+      "CategoryTheory.Iso.hom_inv_id_assoc",
+      "CategoryTheory.IsIso.inv_hom_id_assoc",
+      "CategoryTheory.Mathlib.Tactic.MonTauto.add_assoc_hom_assoc",
+      "CategoryTheory.Mathlib.Tactic.MonTauto.mul_assoc_inv_assoc",
+      "CategoryTheory.Adjunction.counit_naturality_assoc",
+      "CategoryTheory.ShortComplex.liftCycles_i_assoc"
+    ],
+    "total_optimal_portfolios": 78
+  },
+  "tfidf_independent_rebuild_mismatches": []
+}

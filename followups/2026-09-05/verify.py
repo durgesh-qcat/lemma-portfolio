@@ -11,6 +11,7 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
 sys.path.insert(0, str(ROOT))
 from verify_release import equivalent_generated
+from tools.verify_historical_baseline import verify_historical_baseline
 from analysis import comparison, direct, release, support, sweep
 
 
@@ -40,10 +41,7 @@ def verify():
                 f"Export hash mismatch: {row['exported_file']}")
         if not row['transformed']:
             require(row['source_sha256'] == row['exported_sha256'], 'Raw source changed')
-    for line in (HERE / 'BASE_RELEASE_SHA256SUMS.txt').read_text().splitlines():
-        expected, relative = line.split('  ', 1)
-        if relative != 'README.md':
-            require(sha(ROOT / relative) == expected, f'Original release changed: {relative}')
+    verify_historical_baseline(ROOT, HERE / 'BASE_RELEASE_SHA256SUMS.txt')
 
     public, labels = release.load_benchmark(ROOT)
     ids = support.expected_support_episode_ids(ROOT, public)

@@ -1,0 +1,36 @@
+{
+  "title": "LemmaPortfolio: Shared-Budget Lemma Selection for Multiple Lean Goals",
+  "submission_number": 88,
+  "downloaded_date": "2026-09-07",
+  "repository_sync_date": "2026-09-11",
+  "source_status": "Exact submitted LaTeX source is not present in this checkout. Earlier source is explicitly archived under paper/historical/2026-09-05/source.",
+  "artifacts": [
+    {
+      "path": "paper/LemmaPortfolio.pdf",
+      "downloaded_filename": "88_LemmaPortfolio_Shared_Budge.pdf",
+      "sha256": "acbb40b43bde081a8aa4f377c2d02a9c33b23899e3503c6a8061b2210004d654",
+      "size_bytes": 90045
+    },
+    {
+      "path": "submission/LemmaPortfolio_supplement.zip",
+      "downloaded_filename": "88_LemmaPortfolio_Shared_Budge_Supplementary Material.zip",
+      "sha256": "6b73997cd97e98bad1fa8daa8d5bb959e8a0979249fce6c250c35411e1bdfa85",
+      "size_bytes": 959780
+    }
+  ],
+  "result_mirrors": {
+    "results/paper_results.json": "submission/LemmaPortfolio_supplement/results/paper_results.json",
+    "results/masking_sensitivity.json": "submission/LemmaPortfolio_supplement/results/masking_sensitivity.json",
+    "results/selection_patterns.json": "submission/LemmaPortfolio_supplement/results/selection_patterns.json"
+  },
+  "author_confirmed_files": [
+    {
+      "filename": "final paper.pdf",
+      "matches": "paper/LemmaPortfolio.pdf"
+    },
+    {
+      "filename": "88_LemmaPortfolio_Shared_Budge_Supplementary Material (1).zip",
+      "matches": "submission/LemmaPortfolio_supplement.zip"
+    }
+  ]
+}

@@ -1,5 +1,10 @@
 # Completed follow-up snapshot — 4 September 2026 (Pacific)
 
+This is an earlier workflow snapshot. The completed export is
+[2026-09-05](../2026-09-05/README.md), and the
+[final submitted paper](../../paper/LemmaPortfolio.pdf) incorporates those results.
+Pending-run statements below describe the time of this historical export.
+
 This versioned addition is separate from the original frozen V4 consumer panel.
 It contains one complete Astra xhigh run, one complete matched Sol xhigh run,
 and a fresh Astra direct-versus-structured diagnostic. All raw final answers
@@ -75,9 +80,13 @@ At export, Astra max was running and the four optional repeat runs were pending.
 No incomplete answers or partial scores are included; future completed results
 require an explicit new snapshot/update. This directory is not a live dashboard.
 
-Original data, prompts, response captures, results, and paper artifacts remain
-unchanged. `BASE_RELEASE_SHA256SUMS.txt` preserves the previous inventory at commit
-`1503aa03bc6fb4e9c27890eae46141137496eea0`; only the root README and root manifest
-are updated among the pre-existing files. The paper still requires integration.
+Original data, prompts, response captures, and numerical results remain unchanged.
+`BASE_RELEASE_SHA256SUMS.txt` preserves the previous inventory at commit
+`1503aa03bc6fb4e9c27890eae46141137496eea0`. The verifier checks every original
+hash, including the historical README. The
+[relocation map](../../provenance/PRE_SUBMISSION_FILES.json) binds the original
+documentation and tooling to exact archived copies; the preceding manuscript
+is under [paper/historical/2026-09-05/](../../paper/historical/2026-09-05/).
+The submitted paper has integrated the completed follow-up results.
 Keep the named repository private during double-blind review; this export is not
 an independently prepared anonymous review artifact.

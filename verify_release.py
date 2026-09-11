@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""One-command integrity and score check for the LemmaPortfolio V4 release."""
+"""Offline verification of the submitted paper, supplement, and repository."""
 
 from __future__ import annotations
 
@@ -11,6 +11,7 @@ import re
 import subprocess
 import sys
 import tempfile
+import zipfile
 
 
 ROOT = Path(__file__).resolve().parent
@@ -58,7 +59,7 @@ def check_manifest() -> None:
         path.relative_to(ROOT).as_posix()
         for path in ROOT.rglob("*")
         if path.is_file()
-        and path.name != "SHA256SUMS"
+        and path != manifest
         and ".git" not in path.relative_to(ROOT).parts
         and "__pycache__" not in path.relative_to(ROOT).parts
     }
@@ -275,7 +276,7 @@ def check_headlines() -> None:
     for tex in ROOT.glob("paper/**/*.tex"):
         if b"RESULTS PENDING" in tex.read_bytes():
             raise RuntimeError(f"pending-result sentinel in {tex.relative_to(ROOT)}")
-    results_tex = (ROOT / "paper/source/generated/results_section.tex").read_text(
+    results_tex = (ROOT / "paper/historical/2026-09-05/source/generated/results_section.tex").read_text(
         encoding="utf-8"
     )
     for expected in (
@@ -290,9 +291,63 @@ def check_headlines() -> None:
     ):
         if expected not in results_tex:
             raise RuntimeError(f"paper result is absent or stale: {expected}")
-    body_tex = (ROOT / "paper/source/body.tex").read_text(encoding="utf-8")
+    body_tex = (ROOT / "paper/historical/2026-09-05/source/body.tex").read_text(encoding="utf-8")
     if "6/15 exact optima" not in body_tex:
         raise RuntimeError("paper development-check result is absent or stale")
+
+
+def check_submitted_artifacts(root: Path = ROOT) -> None:
+    """Bind the downloaded PDF/ZIP, exact extracted files, and result mirrors."""
+    record = json.loads((root / "submission/SUBMITTED_ARTIFACTS.json").read_text())
+    for artifact in record["artifacts"]:
+        path = root / artifact["path"]
+        if path.stat().st_size != artifact["size_bytes"] or digest(path) != artifact["sha256"]:
+            raise RuntimeError(f"submitted artifact differs: {artifact['path']}")
+    supplement = root / "submission/LemmaPortfolio_supplement"
+    with zipfile.ZipFile(root / "submission/LemmaPortfolio_supplement.zip") as archive:
+        archived = set()
+        for info in archive.infolist():
+            relative = Path(info.filename)
+            if (relative.is_absolute() or ".." in relative.parts
+                    or not relative.parts or relative.parts[0] != supplement.name
+                    or (info.external_attr >> 16) & 0o170000 == 0o120000):
+                raise RuntimeError(f"unsafe submitted ZIP entry: {info.filename}")
+            if info.is_dir():
+                continue
+            name = Path(*relative.parts[1:]).as_posix()
+            if name in archived:
+                raise RuntimeError(f"duplicate submitted ZIP entry: {info.filename}")
+            archived.add(name)
+            if (supplement / name).read_bytes() != archive.read(info):
+                raise RuntimeError(f"extracted supplement differs from submitted ZIP: {name}")
+        actual = {p.relative_to(supplement).as_posix() for p in supplement.rglob("*")
+                  if p.is_file() and "__pycache__" not in p.relative_to(supplement).parts}
+        if actual != archived:
+            raise RuntimeError("extracted supplement file set differs from submitted ZIP")
+    manifest = json.loads((supplement / "MANIFEST.json").read_text())
+    if digest(root / "paper/LemmaPortfolio.pdf") != manifest["accompanying_paper"]["sha256"]:
+        raise RuntimeError("submitted paper and supplement are not paired")
+    if record["title"] != manifest["accompanying_paper"]["title"]:
+        raise RuntimeError("submitted paper title differs")
+    for destination, source in record["result_mirrors"].items():
+        if (root / destination).read_bytes() != (root / source).read_bytes():
+            raise RuntimeError(f"final result mirror differs: {destination}")
+    for directory in ("data", "prompts", "responses"):
+        for source in (supplement / "original_release" / directory).rglob("*"):
+            if not source.is_file() or "__pycache__" in source.parts:
+                continue
+            relative = source.relative_to(supplement / "original_release")
+            if (root / relative).read_bytes() != source.read_bytes():
+                raise RuntimeError(f"root benchmark evidence differs from submission: {relative}")
+
+
+def check_final_submission() -> None:
+    subprocess.run([sys.executable, "-B", str(ROOT / "submission/LemmaPortfolio_supplement/verify_all.py"),
+                    "--paper", str(ROOT / "paper/LemmaPortfolio.pdf")], cwd=ROOT, check=True)
+    subprocess.run([sys.executable, "-B", str(ROOT / "tools/verify_oracle.py")], cwd=ROOT, check=True)
+    for date in ("2026-09-04", "2026-09-05"):
+        subprocess.run([sys.executable, "-B", str(ROOT / "followups" / date / "verify.py")],
+                       cwd=ROOT, check=True)
 
 
 def main() -> int:
@@ -300,13 +355,15 @@ def main() -> int:
         raise RuntimeError("Python 3.10 or newer is required")
     check_manifest()
     check_hygiene()
+    check_submitted_artifacts()
     check_prompt_packet()
     check_construction_tests()
     check_external_scorer_tests()
     regenerate_and_compare()
     check_headlines()
+    check_final_submission()
     report = json.loads((ROOT / "results/scores.json").read_text(encoding="utf-8"))
-    print("Verified exact-optimum scores:")
+    print("Verified preliminary web exact-optimum scores:")
     for row in report["rows"]:
         if row["system_id"] in EXPECTED_EXACT:
             print(
@@ -315,6 +372,14 @@ def main() -> int:
             )
     print("  GPT SOL 5.6 Pro support q=2: 1/20")
     print("  GPT SOL 5.6 (xhigh) support q=2: 0/20")
+    final = json.loads((ROOT / "results/paper_results.json").read_text())
+    print("Verified final main-paper runs:")
+    for row in final["direct_rows"]:
+        if row["id"].startswith(("astra_", "sol_", "claude_")):
+            print(f"  {row['label']}: {row['exact_optimal']}/{row['episodes']} "
+                  f"(coverage {row['mean_coverage']:.2f}/8)")
+    print("  Exhaustive oracle: 60/60, mean coverage 6.25/8")
+    print("Verified exact final paper, submitted supplement, and both final audits")
     print("ALL CHECKS PASSED")
     return 0
 

@@ -1,0 +1,125 @@
+{
+  "direct_summary": {
+    "achieved_target_coverage": 75,
+    "block_bootstrap_95_interval_fraction": [
+      0.05,
+      0.35
+    ],
+    "display_label": "GPT SOL 5.6 Pro matched direct",
+    "exact_by_block": {
+      "D04": 2,
+      "D05": 1,
+      "D06": 1,
+      "D12": 0
+    },
+    "exact_optimal": 4,
+    "exact_optimal_percentage": 20.0,
+    "mean_oracle_normalized_coverage_percentage": 61.30952380952382,
+    "selected_edge_recall_percentage": 28.0,
+    "system_id": "gpt_sol_5_6_pro_matched_direct",
+    "target_count": 160,
+    "target_coverage_percentage": 46.875,
+    "total": 20,
+    "valid": 15,
+    "valid_percentage": 75.0,
+    "wilson_95_interval_fraction": [
+      0.08065766257979806,
+      0.41601743225189364
+    ]
+  },
+  "episode_ids": [
+    "MLP4B_0015",
+    "MLP4B_0016",
+    "MLP4B_0017",
+    "MLP4B_0018",
+    "MLP4B_0019",
+    "MLP4B_0020",
+    "MLP4B_0021",
+    "MLP4B_0022",
+    "MLP4B_0023",
+    "MLP4B_0024",
+    "MLP4B_0025",
+    "MLP4B_0026",
+    "MLP4B_0027",
+    "MLP4B_0028",
+    "MLP4B_0029",
+    "MLP4B_0055",
+    "MLP4B_0056",
+    "MLP4B_0057",
+    "MLP4B_0058",
+    "MLP4B_0059"
+  ],
+  "exact_accuracy_delta_percentage_points": -15.0,
+  "per_block": [
+    {
+      "block_id": "D04",
+      "delta_percentage_points": -20,
+      "direct_exact": 2,
+      "structured_exact": 1
+    },
+    {
+      "block_id": "D05",
+      "delta_percentage_points": -20,
+      "direct_exact": 1,
+      "structured_exact": 0
+    },
+    {
+      "block_id": "D06",
+      "delta_percentage_points": -20,
+      "direct_exact": 1,
+      "structured_exact": 0
+    },
+    {
+      "block_id": "D12",
+      "delta_percentage_points": 0,
+      "direct_exact": 0,
+      "structured_exact": 0
+    }
+  ],
+  "source_display_label": "GPT SOL 5.6 Pro",
+  "source_system_id": "gpt_sol_5_6_pro",
+  "structured_summary": {
+    "achieved_target_coverage": 92,
+    "block_bootstrap_95_interval_fraction": [
+      0.0,
+      0.15
+    ],
+    "display_label": "GPT SOL 5.6 Pro support q=2",
+    "exact_by_block": {
+      "D04": 1,
+      "D05": 0,
+      "D06": 0,
+      "D12": 0
+    },
+    "exact_optimal": 1,
+    "exact_optimal_percentage": 5.0,
+    "mean_oracle_normalized_coverage_percentage": 74.76190476190476,
+    "selected_edge_recall_percentage": 34.54545454545455,
+    "system_id": "gpt_sol_5_6_pro_support_q2",
+    "target_count": 160,
+    "target_coverage_percentage": 57.5,
+    "total": 20,
+    "valid": 20,
+    "valid_percentage": 100.0,
+    "wilson_95_interval_fraction": [
+      0.008881448800795402,
+      0.23613119344674205
+    ]
+  },
+  "support_full": {
+    "false_negative": 67,
+    "false_positive": 79,
+    "micro_f1": 0.7402135231316725,
+    "micro_precision": 0.7247386759581882,
+    "micro_recall": 0.7563636363636363,
+    "true_positive": 208
+  },
+  "support_q2": {
+    "false_negative": 86,
+    "false_positive": 57,
+    "micro_f1": 0.72552783109405,
+    "micro_precision": 0.7682926829268293,
+    "micro_recall": 0.6872727272727273,
+    "true_positive": 189
+  }
+}

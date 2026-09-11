@@ -1,0 +1,302 @@
+{
+  "schema_version": "lemma-portfolio.historical-relocations.v1",
+  "purpose": "Preserve every frozen baseline hash while current documentation and tooling describe the final submitted paper. Original data, prompts, responses, results, and scientific protocols remain at their existing paths. Historical copies are not the current paper or current instructions.",
+  "baselines": {
+    "followups/2026-09-04/BASE_RELEASE_SHA256SUMS.txt": {
+      "source_commit": "1503aa03bc6fb4e9c27890eae46141137496eea0",
+      "manifest_sha256": "508b45f8e9e526c4e7285ae43be59d0945d76c9564359501d8ff5adcb7eb7c27",
+      "relocations": {
+        ".gitattributes": {
+          "path": "provenance/pre_submission/.gitattributes",
+          "sha256": "072699f9e622a8202f99ebe911c2c56997175465181d5bad2b886ba8592b2ce5"
+        },
+        ".github/workflows/verify.yml": {
+          "path": "provenance/pre_submission/.github/workflows/verify.yml",
+          "sha256": "b47722c0693dc671b13d207aa818f726bf40eb48b75522e781284e8d079c3b99"
+        },
+        ".gitignore": {
+          "path": "provenance/pre_submission/.gitignore",
+          "sha256": "61102f277ca24144903cc6454af497507e57cc9a0b0f94f21410e2d03fdccf92"
+        },
+        "CITATION.cff": {
+          "path": "provenance/pre_submission/CITATION.cff",
+          "sha256": "4282f99fb392892d35365c97985cae63a2bf88272bdc6187d84fada711ea9c21"
+        },
+        "README.md": {
+          "path": "provenance/pre_submission/1503aa0/README.md",
+          "sha256": "5c2896fdcc14d213f7ab2efb82ccbf7858e9ad0f055610eacde22a6fdb0048f9"
+        },
+        "RUN_ME.command": {
+          "path": "provenance/pre_submission/RUN_ME.command",
+          "sha256": "ffe9b74fd7b55247b8079fc72a50c8455b46c9bebce707a8528d129aac6c9bdc"
+        },
+        "docs/COLLABORATING.md": {
+          "path": "provenance/pre_submission/docs/COLLABORATING.md",
+          "sha256": "84dd46f10912a1dd5dbe1aea844dbc23b592e997a6ff301b0e7c6c6eee88935e"
+        },
+        "docs/DATA_CARD.md": {
+          "path": "provenance/pre_submission/docs/DATA_CARD.md",
+          "sha256": "99e4b26f3a8ed83eb1a6af89b4796ee4a0f3ed53aae4d0fbffbd3d9657f10aca"
+        },
+        "docs/GITHUB_UPLOAD.md": {
+          "path": "provenance/pre_submission/docs/GITHUB_UPLOAD.md",
+          "sha256": "19eaa7623a08ea8aba595001d4bfb40b1bcf952f8a0b7c52b96ff62e8d8f88d4"
+        },
+        "docs/OVERLEAF.md": {
+          "path": "provenance/pre_submission/docs/OVERLEAF.md",
+          "sha256": "bd532779644229d1d734aa76d5eefad636b49580c54e8f9412b4073fc0c3ecf3"
+        },
+        "docs/PROVENANCE.md": {
+          "path": "provenance/pre_submission/docs/PROVENANCE.md",
+          "sha256": "e4ea80f76a9cd2730eb36461102d0ab0eac298ebddcb8bd4aa343482a30d3da8"
+        },
+        "docs/RERUN_MODELS.md": {
+          "path": "provenance/pre_submission/docs/RERUN_MODELS.md",
+          "sha256": "3e069891bcbb2f6c96594967b292aa9a230db370189ade3794988929250eb08c"
+        },
+        "docs/SUBMISSION_CHECKLIST.md": {
+          "path": "provenance/pre_submission/docs/SUBMISSION_CHECKLIST.md",
+          "sha256": "0b91ba26f0aa4b6651a4a830a666bf1cc6aef0fe9af8850d0fc271492caf69cb"
+        },
+        "paper/LemmaPortfolio_MATHAI2026_anonymous_review_with_supplement.pdf": {
+          "path": "paper/historical/2026-09-05/LemmaPortfolio_MATHAI2026_anonymous_review_with_supplement.pdf",
+          "sha256": "ab39d0f79158d3ec204e89cc65bfe4e78b97415fa32cefef03cb85797e01f10a"
+        },
+        "paper/LemmaPortfolio_MATHAI2026_anonymous_technical_supplement.pdf": {
+          "path": "paper/historical/2026-09-05/LemmaPortfolio_MATHAI2026_anonymous_technical_supplement.pdf",
+          "sha256": "ed46e741b9d2da4c49dc422ce00e4fcc5dbc968dafea3c77757e1099fa870d5b"
+        },
+        "paper/LemmaPortfolio_MATHAI2026_author_check_preprint.pdf": {
+          "path": "paper/historical/2026-09-05/LemmaPortfolio_MATHAI2026_author_check_preprint.pdf",
+          "sha256": "d116c2a075dd7a14d216a28e2ac6b2cb55c3a798648afba82af42251a71ac59a"
+        },
+        "paper/README.md": {
+          "path": "provenance/pre_submission/paper/README.md",
+          "sha256": "64bdfe1e4c8d3c7c570e89665079b1e391a7bfda86c7584dc9f0e3eed9607cd9"
+        },
+        "paper/source/body.tex": {
+          "path": "paper/historical/2026-09-05/source/body.tex",
+          "sha256": "c9586831bd640ee3a003b7a09b2fefd2509cfc11df447e0e6aacbbdfa4283dc9"
+        },
+        "paper/source/generated/audit_tables.tex": {
+          "path": "paper/historical/2026-09-05/source/generated/audit_tables.tex",
+          "sha256": "f6518781f2368867b1e5fe05e15550f27cb83c04772a85bf7de5582d2c626d85"
+        },
+        "paper/source/generated/construction_tables.tex": {
+          "path": "paper/historical/2026-09-05/source/generated/construction_tables.tex",
+          "sha256": "05ff92078420640c3b8d13bb28cde0d1501943051513922a90bd61753a2f177b"
+        },
+        "paper/source/generated/results_macros.tex": {
+          "path": "paper/historical/2026-09-05/source/generated/results_macros.tex",
+          "sha256": "1183145529e73187fc1be05e549920fb92811c3c6377122f978cb514dcb6eeb5"
+        },
+        "paper/source/generated/results_section.tex": {
+          "path": "paper/historical/2026-09-05/source/generated/results_section.tex",
+          "sha256": "0516a635f23113dfa74f2001992a268529176c0d510608076b2898d32501b31d"
+        },
+        "paper/source/generated/supplement_results.tex": {
+          "path": "paper/historical/2026-09-05/source/generated/supplement_results.tex",
+          "sha256": "a7bca4f74ecc64a611a4ea6011624002355dede2dcb9a92934a3bc6d3449d3cd"
+        },
+        "paper/source/neurips_2026.sty": {
+          "path": "paper/historical/2026-09-05/source/neurips_2026.sty",
+          "sha256": "c3fc2894e83d2517ca18b66741d6c595986d97957dc08ec08bb2125a7ec4555a"
+        },
+        "paper/source/preamble.tex": {
+          "path": "paper/historical/2026-09-05/source/preamble.tex",
+          "sha256": "f15d1f020dd61b3794a3e18c642232a848d5630f0f2ecd41d20eebadff73ba69"
+        },
+        "paper/source/preprint.tex": {
+          "path": "paper/historical/2026-09-05/source/preprint.tex",
+          "sha256": "a07c4908e5c8d60e73cb7bcb9f0b2eeaa546eccf66996afb9205e3a6d8c9d9e0"
+        },
+        "paper/source/references.bib": {
+          "path": "paper/historical/2026-09-05/source/references.bib",
+          "sha256": "2a7bc1dd7288be64c87a2899780d18875b746d7b8534148eace5748730b3c36e"
+        },
+        "paper/source/review.tex": {
+          "path": "paper/historical/2026-09-05/source/review.tex",
+          "sha256": "8cadedd730ed2d8689cdc1688f2435ba5bce74a3c65143c09d7d8afdeb2c5509"
+        },
+        "paper/source/supplement/supplement.tex": {
+          "path": "paper/historical/2026-09-05/source/supplement/supplement.tex",
+          "sha256": "7d6a50044ccfd1f7a1d716b57ad39bb16c984e521da0e56336058e2f9d012325"
+        },
+        "paper/source/supplement/supplement_body.tex": {
+          "path": "paper/historical/2026-09-05/source/supplement/supplement_body.tex",
+          "sha256": "4678f1c00ca3f4ffc395144a2039865477f51c13491e400426af397f58d261cd"
+        },
+        "prompts/RETURN_TEMPLATE.md": {
+          "path": "provenance/pre_submission/prompts/RETURN_TEMPLATE.md",
+          "sha256": "fb67325985b41f1554f0dfd6843df251da02a8b3d6afa9899e19568649864651"
+        },
+        "prompts/START_HERE.txt": {
+          "path": "provenance/pre_submission/prompts/START_HERE.txt",
+          "sha256": "3b862fe932abb41a3b1ed229d923506822354e2c4ae833e9bfaf910eab8b32d7"
+        },
+        "tools/build_sha256s.py": {
+          "path": "provenance/pre_submission/tools/build_sha256s.py",
+          "sha256": "e944e469ca7df1d783616f8608e796f88a41acd535030dc7d9831ac2bfba05a8"
+        },
+        "verify_release.py": {
+          "path": "provenance/pre_submission/verify_release.py",
+          "sha256": "2c885f9aab43472b8268f7eef52f20abf973b57160cbaad3673145ee539ebc89"
+        }
+      }
+    },
+    "followups/2026-09-05/BASE_RELEASE_SHA256SUMS.txt": {
+      "source_commit": "dacbef9e1fd59f1e5c30f9078a4f531a7fcf25fe",
+      "manifest_sha256": "1c5cb16a328f6b79b5841aaf8397e07621ccf796e7f865d8361fd57ccfe5b42d",
+      "relocations": {
+        ".gitattributes": {
+          "path": "provenance/pre_submission/.gitattributes",
+          "sha256": "072699f9e622a8202f99ebe911c2c56997175465181d5bad2b886ba8592b2ce5"
+        },
+        ".github/workflows/verify.yml": {
+          "path": "provenance/pre_submission/.github/workflows/verify.yml",
+          "sha256": "b47722c0693dc671b13d207aa818f726bf40eb48b75522e781284e8d079c3b99"
+        },
+        ".gitignore": {
+          "path": "provenance/pre_submission/.gitignore",
+          "sha256": "61102f277ca24144903cc6454af497507e57cc9a0b0f94f21410e2d03fdccf92"
+        },
+        "CITATION.cff": {
+          "path": "provenance/pre_submission/CITATION.cff",
+          "sha256": "4282f99fb392892d35365c97985cae63a2bf88272bdc6187d84fada711ea9c21"
+        },
+        "README.md": {
+          "path": "provenance/pre_submission/dacbef9/README.md",
+          "sha256": "295b4d0aef10fbd04210f18cb9772a6e0e62092df429172c0f4c446014a28466"
+        },
+        "RUN_ME.command": {
+          "path": "provenance/pre_submission/RUN_ME.command",
+          "sha256": "ffe9b74fd7b55247b8079fc72a50c8455b46c9bebce707a8528d129aac6c9bdc"
+        },
+        "docs/COLLABORATING.md": {
+          "path": "provenance/pre_submission/docs/COLLABORATING.md",
+          "sha256": "84dd46f10912a1dd5dbe1aea844dbc23b592e997a6ff301b0e7c6c6eee88935e"
+        },
+        "docs/DATA_CARD.md": {
+          "path": "provenance/pre_submission/docs/DATA_CARD.md",
+          "sha256": "99e4b26f3a8ed83eb1a6af89b4796ee4a0f3ed53aae4d0fbffbd3d9657f10aca"
+        },
+        "docs/GITHUB_UPLOAD.md": {
+          "path": "provenance/pre_submission/docs/GITHUB_UPLOAD.md",
+          "sha256": "19eaa7623a08ea8aba595001d4bfb40b1bcf952f8a0b7c52b96ff62e8d8f88d4"
+        },
+        "docs/OVERLEAF.md": {
+          "path": "provenance/pre_submission/docs/OVERLEAF.md",
+          "sha256": "bd532779644229d1d734aa76d5eefad636b49580c54e8f9412b4073fc0c3ecf3"
+        },
+        "docs/PROVENANCE.md": {
+          "path": "provenance/pre_submission/docs/PROVENANCE.md",
+          "sha256": "e4ea80f76a9cd2730eb36461102d0ab0eac298ebddcb8bd4aa343482a30d3da8"
+        },
+        "docs/RERUN_MODELS.md": {
+          "path": "provenance/pre_submission/docs/RERUN_MODELS.md",
+          "sha256": "3e069891bcbb2f6c96594967b292aa9a230db370189ade3794988929250eb08c"
+        },
+        "docs/SUBMISSION_CHECKLIST.md": {
+          "path": "provenance/pre_submission/docs/SUBMISSION_CHECKLIST.md",
+          "sha256": "0b91ba26f0aa4b6651a4a830a666bf1cc6aef0fe9af8850d0fc271492caf69cb"
+        },
+        "followups/2026-09-04/README.md": {
+          "path": "provenance/pre_submission/followups/2026-09-04/README.md",
+          "sha256": "c9b68351d4d776ae78367fe789b3fb3e758fe1e0bf32f0f2a4430f735ed3d118"
+        },
+        "followups/2026-09-04/REPORT.md": {
+          "path": "provenance/pre_submission/followups/2026-09-04/REPORT.md",
+          "sha256": "84bc8c81384b5dc98c7d347045ae0c238c6d3b38b4b640d79384ab1332c2337c"
+        },
+        "followups/2026-09-04/verify.py": {
+          "path": "provenance/pre_submission/followups/2026-09-04/verify.py",
+          "sha256": "472884ecc8daf3a89bc007dbbb451ac20b96e2939e1db38d82f2e9edb7a148b9"
+        },
+        "paper/LemmaPortfolio_MATHAI2026_anonymous_review_with_supplement.pdf": {
+          "path": "paper/historical/2026-09-05/LemmaPortfolio_MATHAI2026_anonymous_review_with_supplement.pdf",
+          "sha256": "ab39d0f79158d3ec204e89cc65bfe4e78b97415fa32cefef03cb85797e01f10a"
+        },
+        "paper/LemmaPortfolio_MATHAI2026_anonymous_technical_supplement.pdf": {
+          "path": "paper/historical/2026-09-05/LemmaPortfolio_MATHAI2026_anonymous_technical_supplement.pdf",
+          "sha256": "ed46e741b9d2da4c49dc422ce00e4fcc5dbc968dafea3c77757e1099fa870d5b"
+        },
+        "paper/LemmaPortfolio_MATHAI2026_author_check_preprint.pdf": {
+          "path": "paper/historical/2026-09-05/LemmaPortfolio_MATHAI2026_author_check_preprint.pdf",
+          "sha256": "d116c2a075dd7a14d216a28e2ac6b2cb55c3a798648afba82af42251a71ac59a"
+        },
+        "paper/README.md": {
+          "path": "provenance/pre_submission/paper/README.md",
+          "sha256": "64bdfe1e4c8d3c7c570e89665079b1e391a7bfda86c7584dc9f0e3eed9607cd9"
+        },
+        "paper/source/body.tex": {
+          "path": "paper/historical/2026-09-05/source/body.tex",
+          "sha256": "c9586831bd640ee3a003b7a09b2fefd2509cfc11df447e0e6aacbbdfa4283dc9"
+        },
+        "paper/source/generated/audit_tables.tex": {
+          "path": "paper/historical/2026-09-05/source/generated/audit_tables.tex",
+          "sha256": "f6518781f2368867b1e5fe05e15550f27cb83c04772a85bf7de5582d2c626d85"
+        },
+        "paper/source/generated/construction_tables.tex": {
+          "path": "paper/historical/2026-09-05/source/generated/construction_tables.tex",
+          "sha256": "05ff92078420640c3b8d13bb28cde0d1501943051513922a90bd61753a2f177b"
+        },
+        "paper/source/generated/results_macros.tex": {
+          "path": "paper/historical/2026-09-05/source/generated/results_macros.tex",
+          "sha256": "1183145529e73187fc1be05e549920fb92811c3c6377122f978cb514dcb6eeb5"
+        },
+        "paper/source/generated/results_section.tex": {
+          "path": "paper/historical/2026-09-05/source/generated/results_section.tex",
+          "sha256": "0516a635f23113dfa74f2001992a268529176c0d510608076b2898d32501b31d"
+        },
+        "paper/source/generated/supplement_results.tex": {
+          "path": "paper/historical/2026-09-05/source/generated/supplement_results.tex",
+          "sha256": "a7bca4f74ecc64a611a4ea6011624002355dede2dcb9a92934a3bc6d3449d3cd"
+        },
+        "paper/source/neurips_2026.sty": {
+          "path": "paper/historical/2026-09-05/source/neurips_2026.sty",
+          "sha256": "c3fc2894e83d2517ca18b66741d6c595986d97957dc08ec08bb2125a7ec4555a"
+        },
+        "paper/source/preamble.tex": {
+          "path": "paper/historical/2026-09-05/source/preamble.tex",
+          "sha256": "f15d1f020dd61b3794a3e18c642232a848d5630f0f2ecd41d20eebadff73ba69"
+        },
+        "paper/source/preprint.tex": {
+          "path": "paper/historical/2026-09-05/source/preprint.tex",
+          "sha256": "a07c4908e5c8d60e73cb7bcb9f0b2eeaa546eccf66996afb9205e3a6d8c9d9e0"
+        },
+        "paper/source/references.bib": {
+          "path": "paper/historical/2026-09-05/source/references.bib",
+          "sha256": "2a7bc1dd7288be64c87a2899780d18875b746d7b8534148eace5748730b3c36e"
+        },
+        "paper/source/review.tex": {
+          "path": "paper/historical/2026-09-05/source/review.tex",
+          "sha256": "8cadedd730ed2d8689cdc1688f2435ba5bce74a3c65143c09d7d8afdeb2c5509"
+        },
+        "paper/source/supplement/supplement.tex": {
+          "path": "paper/historical/2026-09-05/source/supplement/supplement.tex",
+          "sha256": "7d6a50044ccfd1f7a1d716b57ad39bb16c984e521da0e56336058e2f9d012325"
+        },
+        "paper/source/supplement/supplement_body.tex": {
+          "path": "paper/historical/2026-09-05/source/supplement/supplement_body.tex",
+          "sha256": "4678f1c00ca3f4ffc395144a2039865477f51c13491e400426af397f58d261cd"
+        },
+        "prompts/RETURN_TEMPLATE.md": {
+          "path": "provenance/pre_submission/prompts/RETURN_TEMPLATE.md",
+          "sha256": "fb67325985b41f1554f0dfd6843df251da02a8b3d6afa9899e19568649864651"
+        },
+        "prompts/START_HERE.txt": {
+          "path": "provenance/pre_submission/prompts/START_HERE.txt",
+          "sha256": "3b862fe932abb41a3b1ed229d923506822354e2c4ae833e9bfaf910eab8b32d7"
+        },
+        "tools/build_sha256s.py": {
+          "path": "provenance/pre_submission/tools/build_sha256s.py",
+          "sha256": "e944e469ca7df1d783616f8608e796f88a41acd535030dc7d9831ac2bfba05a8"
+        },
+        "verify_release.py": {
+          "path": "provenance/pre_submission/verify_release.py",
+          "sha256": "2c885f9aab43472b8268f7eef52f20abf973b57160cbaad3673145ee539ebc89"
+        }
+      }
+    }
+  }
+}

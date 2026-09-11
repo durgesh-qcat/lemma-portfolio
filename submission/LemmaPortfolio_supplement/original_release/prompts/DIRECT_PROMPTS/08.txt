@@ -1,0 +1,553 @@
+You are solving five unreleased LemmaPortfolio benchmark episodes independently.
+
+For each episode, each target t has a hidden set D(t): the displayed candidate declarations used as direct theorem dependencies in that target's historical elaborated source. For a portfolio S, F(S) is the number of targets t for which D(t) intersects S. Select exactly 3 distinct candidate IDs per episode to maximize F(S). This is static dependency-portfolio compression, not a claim about causal usefulness in a new proof.
+
+Use only the supplied text. Do not use web search, tools, files, a repository, theorem proving, compiler feedback, memory, prior chats, follow-up messages, or answers from another episode. Treat every episode independently.
+
+Return one JSON object and no prose. It must have exactly one key, "predictions". Its value must be an object with exactly these episode keys: MLP4B_0035, MLP4B_0036, MLP4B_0037, MLP4B_0038, MLP4B_0039. Each value must be an array of exactly 3 distinct candidate IDs copied from that episode. Candidate order does not matter.
+
+Episode JSON array follows.
+<episodes>
+[
+  {
+    "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+    "candidates": [
+      {
+        "id": "C01",
+        "statement": "∀ {R : Type u_1} {M : Type u_4} [inst : Semiring R] [inst_1 : AddCommMonoid M] [inst_2 : Module R M] {ι : Sort u_9} [Nonempty ι] (S : ι → Submodule R M), Directed (fun x1 x2 => x1 ≤ x2) S → ∀ {x : M}, x ∈ iSup S ↔ ∃ i, x ∈ S i"
+      },
+      {
+        "id": "C02",
+        "statement": "∀ {R : Type u_1} {M : Type u_4} [inst : Semiring R] [inst_1 : AddCommMonoid M] [inst_2 : Module R M] {x y : M}, x ∈ R ∙ y ↔ ∃ a, a • y = x"
+      },
+      {
+        "id": "C03",
+        "statement": "∀ {R : Type u_1} {M : Type u_4} [inst : Semiring R] [inst_1 : AddCommMonoid M] [inst_2 : Module R M] {s : Set M}, s ⊆ ↑(Submodule.span R s)"
+      },
+      {
+        "id": "C04",
+        "statement": "∀ {R : Type u_1} {M : Type u_4} [inst : Semiring R] [inst_1 : AddCommMonoid M] [inst_2 : Module R M] {x : M} {p p' : Submodule R M}, x ∈ p ⊔ p' ↔ ∃ y ∈ p, ∃ z ∈ p', y + z = x"
+      },
+      {
+        "id": "C05",
+        "statement": "∀ {R : Type u_1} {M : Type u_4} [inst : Semiring R] [inst_1 : AddCommMonoid M] [inst_2 : Module R M] (p : Submodule R M), Submodule.span R ↑p = p"
+      },
+      {
+        "id": "C06",
+        "statement": "∀ {R : Type u_1} {M : Type u_4} [inst : Semiring R] [inst_1 : AddCommMonoid M] [inst_2 : Module R M] {S : Submodule R M}, (∃ a, S = R ∙ a) → S.IsPrincipal"
+      },
+      {
+        "id": "C07",
+        "statement": "∀ {R : Type u_1} {M : Type u_4} [inst : Semiring R] [inst_1 : AddCommMonoid M] [inst_2 : Module R M] {x : M} {s : Set M} {y : M}, x ∈ Submodule.span R (insert y s) ↔ ∃ a, ∃ z ∈ Submodule.span R s, x = a • y + z"
+      },
+      {
+        "id": "C08",
+        "statement": "∀ {R : Type u_1} {M : Type u_4} [inst : Semiring R] [inst_1 : AddCommMonoid M] [inst_2 : Module R M] {ι : Sort u_9} [Nonempty ι] (S : ι → Submodule R M), Directed (fun x1 x2 => x1 ≤ x2) S → ↑(iSup S) = ⋃ i, ↑(S i)"
+      },
+      {
+        "id": "C09",
+        "statement": "∀ {R : Type u_1} {M : Type u_4} [inst : Semiring R] [inst_1 : AddCommMonoid M] [inst_2 : Module R M], Submodule.span R ∅ = ⊥"
+      },
+      {
+        "id": "C10",
+        "statement": "∀ {R : Type u_1} {M : Type u_4} [inst : Semiring R] [inst_1 : AddCommMonoid M] [inst_2 : Module R M] {s : Set M} {p : Submodule R M}, Submodule.span R s ≤ p ↔ s ⊆ ↑p"
+      },
+      {
+        "id": "C11",
+        "statement": "∀ {R : Type u_1} {M : Type u_4} [inst : Semiring R] [inst_1 : AddCommMonoid M] [inst_2 : Module R M] (s t : Set M), Submodule.span R (s ∪ t) = Submodule.span R s ⊔ Submodule.span R t"
+      },
+      {
+        "id": "C12",
+        "statement": "∀ {R : Type u_1} {M : Type u_4} [inst : Semiring R] [inst_1 : AddCommMonoid M] [inst_2 : Module R M] (x : M), x ∈ R ∙ x"
+      },
+      {
+        "id": "C13",
+        "statement": "∀ {R : Type u_1} {M : Type u_4} [inst : Semiring R] [inst_1 : AddCommMonoid M] [inst_2 : Module R M] (m : M) (p : Submodule R M), R ∙ m ≤ p ↔ m ∈ p"
+      },
+      {
+        "id": "C14",
+        "statement": "∀ {R : Type u_1} {M : Type u_4} [inst : Semiring R] [inst_1 : AddCommMonoid M] [inst_2 : Module R M] {s t : Set M}, s ⊆ t → Submodule.span R s ≤ Submodule.span R t"
+      },
+      {
+        "id": "C15",
+        "statement": "∀ {R : Type u_1} {M : Type u_4} {inst : Semiring R} {inst_1 : AddCommMonoid M} {inst_2 : Module R M} (S : Submodule R M) [self : S.IsPrincipal], ∃ a, S = R ∙ a"
+      },
+      {
+        "id": "C16",
+        "statement": "∀ {R : Type u_1} {M : Type u_4} [inst : Semiring R] [inst_1 : AddCommMonoid M] [inst_2 : Module R M] (p : Submodule R M) {s : Set M}, s ⊆ ↑p → p ≤ Submodule.span R s → Submodule.span R s = p"
+      }
+    ],
+    "episode_id": "MLP4B_0035",
+    "schema_version": "lemma-portfolio.dependency-compression.v4",
+    "selection_budget": 3,
+    "source_project": "mathlib",
+    "targets": [
+      {
+        "id": "T01",
+        "statement": "∀ {R : Type u_1} {M : Type u_4} [inst : Semiring R] [inst_1 : AddCommMonoid M] [inst_2 : Module R M] (s : Set (Submodule R M)), Submodule.span R (⋂ S ∈ s, ↑S) = sInf s"
+      },
+      {
+        "id": "T02",
+        "statement": "∀ {R : Type u_1} {M : Type u_4} [inst : Semiring R] [inst_1 : AddCommMonoid M] [inst_2 : Module R M], Monotone (Submodule.span R)"
+      },
+      {
+        "id": "T03",
+        "statement": "∀ {R : Type u_1} {M : Type u_4} [inst : Semiring R] [inst_1 : AddCommMonoid M] [inst_2 : Module R M] {x : M} {s : Set M}, x ∈ Submodule.span R s → Submodule.span R (insert x s) = Submodule.span R s"
+      },
+      {
+        "id": "T04",
+        "statement": "∀ {R : Type u_1} {M : Type u_4} [inst : Semiring R] [inst_1 : AddCommMonoid M] [inst_2 : Module R M] {x : M} {p p' : Submodule R M}, x ∈ p ⊔ p' ↔ ∃ y z, ↑y + ↑z = x"
+      },
+      {
+        "id": "T05",
+        "statement": "∀ {R : Type u_1} {M : Type u_4} [inst : Semiring R] [inst_1 : AddCommMonoid M] [inst_2 : Module R M] {s : Set M}, Submodule.span R (insert 0 s) = Submodule.span R s"
+      },
+      {
+        "id": "T06",
+        "statement": "∀ (R : Type u_1) {M : Type u_4} [inst : Semiring R] [inst_1 : AddCommMonoid M] [inst_2 : Module R M] {S : Type u_9} [inst_3 : SMul S R] [inst_4 : SMul S M] [IsScalarTower S R M] (r : S) (x : M), R ∙ r • x ≤ R ∙ x"
+      },
+      {
+        "id": "T07",
+        "statement": "∀ {M : Type u_4} [inst : AddCommMonoid M] (s : Set M), (Submodule.span ℕ s).toAddSubmonoid = AddSubmonoid.closure s"
+      },
+      {
+        "id": "T08",
+        "statement": "∀ {R : Type u_1} {M : Type u_4} [inst : Semiring R] [inst_1 : AddCommMonoid M] [inst_2 : Module R M] (p p' : Submodule R M), ↑(p ⊔ p') = ↑p + ↑p'"
+      }
+    ],
+    "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+  },
+  {
+    "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+    "candidates": [
+      {
+        "id": "C01",
+        "statement": "∀ {α : Type u_1} (a : α), a ∉ 0"
+      },
+      {
+        "id": "C02",
+        "statement": "∀ {α : Type u_1} {s : Multiset α}, s ⊆ 0 → s = 0"
+      },
+      {
+        "id": "C03",
+        "statement": "∀ {α : Type u_1} {a b : α} {as bs : Multiset α}, a ::ₘ as = b ::ₘ bs ↔ a = b ∧ as = bs ∨ a ≠ b ∧ ∃ cs, as = b ::ₘ cs ∧ bs = a ::ₘ cs"
+      },
+      {
+        "id": "C04",
+        "statement": "∀ {α : Type u_1} {s : Multiset α}, (∀ (x : α), x ∉ s) → s = 0"
+      },
+      {
+        "id": "C05",
+        "statement": "∀ {α : Type u_1} (a b : α) (s : Multiset α), a ::ₘ b ::ₘ s = b ::ₘ a ::ₘ s"
+      },
+      {
+        "id": "C06",
+        "statement": "∀ {α : Type u_1} (a : α) (s : Multiset α), (a ::ₘ s).card = s.card + 1"
+      },
+      {
+        "id": "C07",
+        "statement": "∀ {α : Type u_1} (s : Multiset α) (a : α), s ≤ a ::ₘ s"
+      },
+      {
+        "id": "C08",
+        "statement": "∀ {α : Type u_1} {s t : Multiset α} (a : α), a ::ₘ s ≤ a ::ₘ t ↔ s ≤ t"
+      },
+      {
+        "id": "C09",
+        "statement": "∀ {α : Type u_1} (a : α), {a} ≠ 0"
+      },
+      {
+        "id": "C10",
+        "statement": "∀ {α : Type u_1} {β : Type v} {r : α → β → Prop} {s : Multiset β} {t : Multiset α}, Multiset.Rel (flip r) s t ↔ Multiset.Rel r t s"
+      },
+      {
+        "id": "C11",
+        "statement": "∀ {α : Type u_1} (a : α), a ::ₘ 0 = {a}"
+      },
+      {
+        "id": "C12",
+        "statement": "∀ {α : Type u_1} {s t : Multiset α} (a : α), s ≤ t → a ::ₘ s ≤ a ::ₘ t"
+      },
+      {
+        "id": "C13",
+        "statement": "∀ {α : Type u_1} (s : Multiset α), 0 ≤ s"
+      },
+      {
+        "id": "C14",
+        "statement": "∀ {α : Type u_1} {s : Multiset α} {a : α}, a ∈ s → ∃ t, s = a ::ₘ t"
+      },
+      {
+        "id": "C15",
+        "statement": "∀ {α : Type u_1} (a : α) (s : Multiset α), a ∈ a ::ₘ s"
+      },
+      {
+        "id": "C16",
+        "statement": "∀ {α : Type u_1} {β : Type v} (r : α → β → Prop) (a : Multiset α) (a_1 : Multiset β), Multiset.Rel r a a_1 ↔ a = 0 ∧ a_1 = 0 ∨ ∃ a_2 b as bs, r a_2 b ∧ Multiset.Rel r as bs ∧ a = a_2 ::ₘ as ∧ a_1 = b ::ₘ bs"
+      }
+    ],
+    "episode_id": "MLP4B_0036",
+    "schema_version": "lemma-portfolio.dependency-compression.v4",
+    "selection_budget": 3,
+    "source_project": "mathlib",
+    "targets": [
+      {
+        "id": "T01",
+        "statement": "∀ {α : Type u_1} {β : Type v} {r : α → β → Prop} {a : α} {as : Multiset α} {bs : Multiset β}, Multiset.Rel r (a ::ₘ as) bs ↔ ∃ b bs', r a b ∧ Multiset.Rel r as bs' ∧ bs = b ::ₘ bs'"
+      },
+      {
+        "id": "T02",
+        "statement": "∀ {α : Type u_1} {s t : Multiset α}, Multiset.Rel (fun a b => b = a) s t ↔ s = t"
+      },
+      {
+        "id": "T03",
+        "statement": "∀ {α : Type u_1} (x y : α), {x, y} = {y, x}"
+      },
+      {
+        "id": "T04",
+        "statement": "∀ {α : Type u_1} {β : Type v} {r : α → β → Prop} {b : Multiset β}, Multiset.Rel r 0 b ↔ b = 0"
+      },
+      {
+        "id": "T05",
+        "statement": "∀ {α : Type u_1} {a b : α} (m : Multiset α), {a} = b ::ₘ m ↔ a = b ∧ m = 0"
+      },
+      {
+        "id": "T06",
+        "statement": "∀ {α : Type u_1} {β : Type v} {r : α → β → Prop} {a : Multiset α}, Multiset.Rel r a 0 ↔ a = 0"
+      },
+      {
+        "id": "T07",
+        "statement": "∀ {α : Type u_1} (a : α), a ∈ {a}"
+      },
+      {
+        "id": "T08",
+        "statement": "∀ {α : Type u_1} {s : Multiset α} {n : ℕ}, s.card = n + 1 ↔ ∃ a t, a ::ₘ t = s ∧ t.card = n"
+      }
+    ],
+    "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+  },
+  {
+    "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+    "candidates": [
+      {
+        "id": "C01",
+        "statement": "∀ {R : Type u_1} {A : Type u_2} {p : A → Prop} [inst : CommSemiring R] [inst_1 : StarRing R] [inst_2 : MetricSpace R] [inst_3 : IsTopologicalSemiring R] [inst_4 : ContinuousStar R] [inst_5 : TopologicalSpace A] [inst_6 : Ring A] [inst_7 : StarRing A] [inst_8 : Algebra R A] [instCFC : ContinuousFunctionalCalculus R A p] (f : R → R) (n : ℕ) (a : A), autoParam (ContinuousOn f (spectrum R a)) cfc_pow._auto_1 → autoParam (p a) cfc_pow._auto_3 → cfc (fun x => f x ^ n) a = cfc f a ^ n"
+      },
+      {
+        "id": "C02",
+        "statement": "∀ {R : Type u_1} {A : Type u_2} {p : A → Prop} [inst : CommRing R] [inst_1 : StarRing R] [inst_2 : MetricSpace R] [inst_3 : IsTopologicalRing R] [inst_4 : ContinuousStar R] [inst_5 : TopologicalSpace A] [inst_6 : Ring A] [inst_7 : StarRing A] [inst_8 : Algebra R A] [inst_9 : ContinuousFunctionalCalculus R A p] (f : R → R) (a : A), cfc (fun x => -f x) a = -cfc f a"
+      },
+      {
+        "id": "C03",
+        "statement": "∀ {R : Type u_1} {A : Type u_2} {p : A → Prop} [inst : CommSemiring R] [inst_1 : StarRing R] [inst_2 : MetricSpace R] [inst_3 : IsTopologicalSemiring R] [inst_4 : ContinuousStar R] [inst_5 : TopologicalSpace A] [inst_6 : Ring A] [inst_7 : StarRing A] [inst_8 : Algebra R A] [instCFC : ContinuousFunctionalCalculus R A p] {S : Type u_3} [inst_9 : SMul S R] [ContinuousConstSMul S R] [inst_11 : SMulZeroClass S A] [IsScalarTower S R A] [IsScalarTower S R (R → R)] (s : S) (f : R → R) (a : A), autoParam (ContinuousOn f (spectrum R a)) cfc_smul._auto_1 → cfc (fun x => s • f x) a = s • cfc f a"
+      },
+      {
+        "id": "C04",
+        "statement": "∀ {R : Type u_1} {A : Type u_2} {p : A → Prop} [inst : CommSemiring R] [inst_1 : StarRing R] [inst_2 : MetricSpace R] [inst_3 : IsTopologicalSemiring R] [inst_4 : ContinuousStar R] [inst_5 : TopologicalSpace A] [inst_6 : Ring A] [inst_7 : StarRing A] [inst_8 : Algebra R A] [instCFC : ContinuousFunctionalCalculus R A p] [Nontrivial A] (r : R), spectrum R ((algebraMap R A) r) = {r}"
+      },
+      {
+        "id": "C05",
+        "statement": "∀ {R : Type u_1} {A : Type u_2} {p : A → Prop} [inst : Semifield R] [inst_1 : StarRing R] [inst_2 : MetricSpace R] [inst_3 : IsTopologicalSemiring R] [inst_4 : ContinuousStar R] [inst_5 : TopologicalSpace A] [inst_6 : Ring A] [inst_7 : StarRing A] [inst_8 : Algebra R A] [inst_9 : ContinuousFunctionalCalculus R A p] [ContinuousInv₀ R] (a : Aˣ), autoParam (p ↑a) cfc_inv_id._auto_1 → cfc (fun x => x⁻¹) ↑a = ↑a⁻¹"
+      },
+      {
+        "id": "C06",
+        "statement": "∀ {R : Type u_1} {A : Type u_2} {p : A → Prop} [inst : CommSemiring R] [inst_1 : PartialOrder R] [inst_2 : StarRing R] [inst_3 : MetricSpace R] [inst_4 : IsTopologicalSemiring R] [inst_5 : ContinuousStar R] [ContinuousSqrt R] [StarOrderedRing R] [inst_8 : TopologicalSpace A] [inst_9 : Ring A] [inst_10 : StarRing A] [inst_11 : PartialOrder A] [StarOrderedRing A] [inst_13 : Algebra R A] [instCFC : ContinuousFunctionalCalculus R A p] {a : A} (ha : p a) {f g : C(↑(spectrum R a), R)}, f ≤ g → (cfcHom ha) f ≤ (cfcHom ha) g"
+      },
+      {
+        "id": "C07",
+        "statement": "∀ {R : Type u_1} {A : Type u_2} {p : A → Prop} [inst : CommSemiring R] [inst_1 : StarRing R] [inst_2 : MetricSpace R] [inst_3 : IsTopologicalSemiring R] [inst_4 : ContinuousStar R] [inst_5 : TopologicalSpace A] [inst_6 : Ring A] [inst_7 : StarRing A] [inst_8 : Algebra R A] [instCFC : ContinuousFunctionalCalculus R A p] {S : Type u_3} [inst_9 : SMul S R] [ContinuousConstSMul S R] [inst_11 : SMulZeroClass S A] [IsScalarTower S R A] [IsScalarTower S R (R → R)] (s : S) (a : A), autoParam (p a) cfc_smul_id._auto_1 → cfc (fun x => s • x) a = s • a"
+      },
+      {
+        "id": "C08",
+        "statement": "∀ {R : Type u_1} {A : Type u_2} {p : A → Prop} [inst : CommSemiring R] [inst_1 : StarRing R] [inst_2 : MetricSpace R] [inst_3 : IsTopologicalSemiring R] [inst_4 : ContinuousStar R] [inst_5 : TopologicalSpace A] [inst_6 : Ring A] [inst_7 : StarRing A] [inst_8 : Algebra R A] [instCFC : ContinuousFunctionalCalculus R A p] {a : A} (ha : p a) (f : C(↑(spectrum R a), R)), spectrum R ((cfcHom ha) f) = Set.range ⇑f"
+      },
+      {
+        "id": "C09",
+        "statement": "∀ {R : Type u_3} {A : Type u_4} {p p_1 : A → Prop} (e_p : p = p_1) [inst : CommSemiring R] [inst_1 : StarRing R] [inst_2 : MetricSpace R] [inst_3 : IsTopologicalSemiring R] [inst_4 : ContinuousStar R] [inst_5 : TopologicalSpace A] [inst_6 : Ring A] [inst_7 : StarRing A] [inst_8 : Algebra R A] [instCFC : ContinuousFunctionalCalculus R A p] (f f_1 : R → R), f = f_1 → ∀ (a a_1 : A), a = a_1 → cfc f a = cfc f_1 a_1"
+      },
+      {
+        "id": "C10",
+        "statement": "∀ {R : Type u_1} {A : Type u_2} {p : A → Prop} [inst : CommSemiring R] [inst_1 : StarRing R] [inst_2 : MetricSpace R] [inst_3 : IsTopologicalSemiring R] [inst_4 : ContinuousStar R] [inst_5 : TopologicalSpace A] [inst_6 : Ring A] [inst_7 : StarRing A] [inst_8 : Algebra R A] [instCFC : ContinuousFunctionalCalculus R A p] (a : A) (n : ℕ), autoParam (p a) cfc_pow_id._auto_1 → cfc (fun x => x ^ n) a = a ^ n"
+      },
+      {
+        "id": "C11",
+        "statement": "∀ {R : Type u_1} {A : Type u_2} {p : A → Prop} [inst : CommSemiring R] [inst_1 : StarRing R] [inst_2 : MetricSpace R] [inst_3 : IsTopologicalSemiring R] [inst_4 : ContinuousStar R] [inst_5 : TopologicalSpace A] [inst_6 : Ring A] [inst_7 : StarRing A] [inst_8 : Algebra R A] [instCFC : ContinuousFunctionalCalculus R A p] (a : A) (r : R), spectrum R a ⊆ {r} → autoParam (p a) CFC.eq_algebraMap_of_spectrum_subset_singleton._auto_1 → a = (algebraMap R A) r"
+      },
+      {
+        "id": "C12",
+        "statement": "∀ (R : Type u_1) {A : Type u_2} {p : A → Prop} [inst : CommSemiring R] [inst_1 : StarRing R] [inst_2 : MetricSpace R] [inst_3 : IsTopologicalSemiring R] [inst_4 : ContinuousStar R] [inst_5 : TopologicalSpace A] [inst_6 : Ring A] [inst_7 : StarRing A] [inst_8 : Algebra R A] [instCFC : ContinuousFunctionalCalculus R A p] (a : A), autoParam (p a) cfc_id._auto_1 → cfc id a = a"
+      },
+      {
+        "id": "C13",
+        "statement": "∀ {R : Type u_1} {A : Type u_2} {p : A → Prop} [inst : CommSemiring R] [inst_1 : StarRing R] [inst_2 : MetricSpace R] [inst_3 : IsTopologicalSemiring R] [inst_4 : ContinuousStar R] [inst_5 : TopologicalSpace A] [inst_6 : Ring A] [inst_7 : StarRing A] [inst_8 : Algebra R A] [instCFC : ContinuousFunctionalCalculus R A p] {f : R → R} (a : A), ¬ContinuousOn f (spectrum R a) → cfc f a = 0"
+      },
+      {
+        "id": "C14",
+        "statement": "∀ {R : Type u_1} {A : Type u_2} {p : A → Prop} [inst : CommSemiring R] [inst_1 : StarRing R] [inst_2 : MetricSpace R] [inst_3 : IsTopologicalSemiring R] [inst_4 : ContinuousStar R] [inst_5 : TopologicalSpace A] [inst_6 : Ring A] [inst_7 : StarRing A] [inst_8 : Algebra R A] [instCFC : ContinuousFunctionalCalculus R A p] {f : R → R} (a : A), ¬p a → cfc f a = 0"
+      },
+      {
+        "id": "C15",
+        "statement": "∀ {R : Type u_1} {A : Type u_2} {p : A → Prop} [inst : CommSemiring R] [inst_1 : PartialOrder R] [inst_2 : StarRing R] [inst_3 : MetricSpace R] [inst_4 : IsTopologicalSemiring R] [inst_5 : ContinuousStar R] [ContinuousSqrt R] [StarOrderedRing R] [inst_8 : TopologicalSpace A] [inst_9 : Ring A] [inst_10 : StarRing A] [inst_11 : PartialOrder A] [StarOrderedRing A] [inst_13 : Algebra R A] [instCFC : ContinuousFunctionalCalculus R A p] [NonnegSpectrumClass R A] {a : A} (ha : p a) {f : C(↑(spectrum R a), R)}, 0 ≤ (cfcHom ha) f ↔ 0 ≤ f"
+      },
+      {
+        "id": "C16",
+        "statement": "∀ {R : Type u_1} {A : Type u_2} {p : A → Prop} [inst : CommSemiring R] [inst_1 : StarRing R] [inst_2 : MetricSpace R] [inst_3 : IsTopologicalSemiring R] [inst_4 : ContinuousStar R] [inst_5 : TopologicalSpace A] [inst_6 : Ring A] [inst_7 : StarRing A] [inst_8 : Algebra R A] [instCFC : ContinuousFunctionalCalculus R A p] [ContinuousMap.UniqueHom R A] (g f : R → R) (a : A), autoParam (ContinuousOn g (f '' spectrum R a)) cfc_comp'._auto_1 → autoParam (ContinuousOn f (spectrum R a)) cfc_comp'._auto_3 → autoParam (p a) cfc_comp'._auto_5 → cfc (fun x => g (f x)) a = cfc g (cfc f a)"
+      }
+    ],
+    "episode_id": "MLP4B_0037",
+    "schema_version": "lemma-portfolio.dependency-compression.v4",
+    "selection_budget": 3,
+    "source_project": "mathlib",
+    "targets": [
+      {
+        "id": "T01",
+        "statement": "∀ {R : Type u_1} {A : Type u_2} {p : A → Prop} [inst : CommSemiring R] [inst_1 : StarRing R] [inst_2 : MetricSpace R] [inst_3 : IsTopologicalSemiring R] [inst_4 : ContinuousStar R] [inst_5 : TopologicalSpace A] [inst_6 : Ring A] [inst_7 : StarRing A] [inst_8 : Algebra R A] [instCFC : ContinuousFunctionalCalculus R A p] {ι : Type u_3} (f : ι → R → R) (a : A) (s : Finset ι), autoParam (∀ i ∈ s, ContinuousOn (f i) (spectrum R a)) cfc_sum._auto_1 → cfc (∑ i ∈ s, f i) a = ∑ i ∈ s, cfc (f i) a"
+      },
+      {
+        "id": "T02",
+        "statement": "∀ {R : Type u_1} {A : Type u_2} {p : A → Prop} [inst : CommSemiring R] [inst_1 : PartialOrder R] [inst_2 : StarRing R] [inst_3 : MetricSpace R] [inst_4 : IsTopologicalSemiring R] [inst_5 : ContinuousStar R] [ContinuousSqrt R] [StarOrderedRing R] [inst_8 : TopologicalSpace A] [inst_9 : Ring A] [inst_10 : StarRing A] [inst_11 : PartialOrder A] [StarOrderedRing A] [inst_13 : Algebra R A] [instCFC : ContinuousFunctionalCalculus R A p] [NonnegSpectrumClass R A] (a : A), autoParam (p a) StarOrderedRing.isStrictlyPositive_iff_spectrum_pos._auto_1 → (IsStrictlyPositive a ↔ ∀ x ∈ spectrum R a, 0 < x)"
+      },
+      {
+        "id": "T03",
+        "statement": "∀ {R : Type u_1} {A : Type u_2} {p : A → Prop} [inst : Semifield R] [inst_1 : StarRing R] [inst_2 : MetricSpace R] [inst_3 : IsTopologicalSemiring R] [inst_4 : ContinuousStar R] [inst_5 : TopologicalSpace A] [inst_6 : Ring A] [inst_7 : StarRing A] [inst_8 : Algebra R A] [inst_9 : ContinuousFunctionalCalculus R A p] [ContinuousInv₀ R] [ContinuousMap.UniqueHom R A] (f : R → R) (a : Aˣ), autoParam (ContinuousOn f ((fun x => x⁻¹) '' spectrum R ↑a)) cfc_comp_inv._auto_1 → autoParam (p ↑a) cfc_comp_inv._auto_3 → cfc (fun x => f x⁻¹) ↑a = cfc f ↑a⁻¹"
+      },
+      {
+        "id": "T04",
+        "statement": "∀ {R : Type u_1} {A : Type u_2} {p : A → Prop} [inst : CommSemiring R] [inst_1 : PartialOrder R] [inst_2 : StarRing R] [inst_3 : MetricSpace R] [inst_4 : IsTopologicalSemiring R] [inst_5 : ContinuousStar R] [ContinuousSqrt R] [StarOrderedRing R] [inst_8 : TopologicalSpace A] [inst_9 : Ring A] [inst_10 : StarRing A] [inst_11 : PartialOrder A] [StarOrderedRing A] [inst_13 : Algebra R A] [instCFC : ContinuousFunctionalCalculus R A p] {f : R → R} {a : A}, (∀ x ∈ spectrum R a, 0 ≤ f x) → 0 ≤ cfc f a"
+      },
+      {
+        "id": "T05",
+        "statement": "∀ {R : Type u_1} {A : Type u_2} {p : A → Prop} [inst : Semifield R] [inst_1 : StarRing R] [inst_2 : MetricSpace R] [inst_3 : IsTopologicalSemiring R] [inst_4 : ContinuousStar R] [inst_5 : TopologicalSpace A] [inst_6 : Ring A] [inst_7 : StarRing A] [inst_8 : Algebra R A] [inst_9 : ContinuousFunctionalCalculus R A p] [ContinuousInv₀ R] (f g : R → R) (a : A), (∀ x ∈ spectrum R a, g x ≠ 0) → autoParam (ContinuousOn f (spectrum R a)) cfc_map_div._auto_1 → autoParam (ContinuousOn g (spectrum R a)) cfc_map_div._auto_3 → autoParam (p a) cfc_map_div._auto_5 → cfc (fun x => f x / g x) a = cfc f a * Ring.inverse (cfc g a)"
+      },
+      {
+        "id": "T06",
+        "statement": "∀ {R : Type u_1} {A : Type u_2} {p : A → Prop} [inst : CommSemiring R] [inst_1 : StarRing R] [inst_2 : MetricSpace R] [inst_3 : IsTopologicalSemiring R] [inst_4 : ContinuousStar R] [inst_5 : TopologicalSpace A] [inst_6 : Ring A] [inst_7 : StarRing A] [inst_8 : Algebra R A] [instCFC : ContinuousFunctionalCalculus R A p] [ContinuousMap.UniqueHom R A] (q : Polynomial R) (f : R → R) (a : A), autoParam (ContinuousOn f ((fun x => Polynomial.eval x q) '' spectrum R a)) cfc_comp_polynomial._auto_1 → autoParam (p a) cfc_comp_polynomial._auto_3 → cfc (fun x => f (Polynomial.eval x q)) a = cfc f ((Polynomial.aeval a) q)"
+      },
+      {
+        "id": "T07",
+        "statement": "∀ {R : Type u_1} {A : Type u_2} {p : A → Prop} [inst : CommRing R] [inst_1 : PartialOrder R] [inst_2 : StarRing R] [inst_3 : MetricSpace R] [inst_4 : IsTopologicalRing R] [inst_5 : ContinuousStar R] [ContinuousSqrt R] [StarOrderedRing R] [inst_8 : TopologicalSpace A] [inst_9 : Ring A] [inst_10 : StarRing A] [inst_11 : PartialOrder A] [StarOrderedRing A] [inst_13 : Algebra R A] [instCFC : ContinuousFunctionalCalculus R A p] [NonnegSpectrumClass R A] {r : R} {a : A}, autoParam (p a) le_algebraMap_iff_spectrum_le._auto_1 → (a ≤ (algebraMap R A) r ↔ ∀ x ∈ spectrum R a, x ≤ r)"
+      },
+      {
+        "id": "T08",
+        "statement": "∀ {R : Type u_1} {A : Type u_2} {p : A → Prop} [inst : Semifield R] [inst_1 : StarRing R] [inst_2 : MetricSpace R] [inst_3 : IsTopologicalSemiring R] [inst_4 : ContinuousStar R] [inst_5 : TopologicalSpace A] [inst_6 : Ring A] [inst_7 : StarRing A] [inst_8 : Algebra R A] [inst_9 : ContinuousFunctionalCalculus R A p] [ContinuousInv₀ R] (a : Aˣ) (n : ℤ), autoParam (p ↑a) cfc_zpow._auto_1 → cfc (fun x => x ^ n) ↑a = ↑(a ^ n)"
+      }
+    ],
+    "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+  },
+  {
+    "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+    "candidates": [
+      {
+        "id": "C01",
+        "statement": "∀ {R : Type u} [inst : PartialOrder R] [inst_1 : Semiring R] {M : Type u_9} [inst_2 : IsStrictOrderedRing R] (x y : M) {s t : R} (hs : 0 ≤ s) (ht : 0 ≤ t) (h : s + t = 1), (Convexity.StdSimplex.duple x y hs ht h).weights = (fun₀ | x => s) + fun₀ | y => t"
+      },
+      {
+        "id": "C02",
+        "statement": "∀ {R : Type u_1} {I : Type u_6} {J : Type u_7} [inst : PartialOrder R] [inst_1 : Semiring R] [inst_2 : IsStrictOrderedRing R] (s : Convexity.StdSimplex R (Convexity.StdSimplex R I)) (f : I → J), Convexity.StdSimplex.map f (Convexity.sConvexComb s) = Convexity.sConvexComb (Convexity.StdSimplex.map (Convexity.StdSimplex.map f) s)"
+      },
+      {
+        "id": "C03",
+        "statement": "∀ {R : Type u_1} {M : Type u_3} {N : Type u_4} [inst : PartialOrder R] [inst_1 : Semiring R] [inst_2 : IsStrictOrderedRing R] [inst_3 : Convexity.ConvexSpace R M] [inst_4 : Convexity.ConvexSpace R N] {f : M → N}, (∀ (s : Convexity.StdSimplex R M), f (Convexity.sConvexComb s) = Convexity.sConvexComb (Convexity.StdSimplex.map f s)) → Convexity.IsAffineMap R f"
+      },
+      {
+        "id": "C04",
+        "statement": "∀ {R : Type u_1} {M : Type u_3} [inst : PartialOrder R] [inst_1 : Semiring R] [inst_2 : IsStrictOrderedRing R] [inst_3 : Convexity.ConvexSpace R M] {s t : R} (hs : 0 ≤ s) (ht : 0 ≤ t) (h : s + t = 1) {J₁ : Type u₁} {J₂ : Type u₂} (g₁ : Convexity.StdSimplex R J₁) (g₂ : Convexity.StdSimplex R J₂) (m₁ : J₁ → M) (m₂ : J₂ → M), Convexity.convexCombPair s t hs ht h (Convexity.iConvexComb g₁ m₁) (Convexity.iConvexComb g₂ m₂) = Convexity.sConvexComb (Convexity.convexCombPair s t hs ht h (Convexity.StdSimplex.map m₁ g₁) (Convexity.StdSimplex.map m₂ g₂))"
+      },
+      {
+        "id": "C05",
+        "statement": "∀ {R : Type u} [inst : PartialOrder R] [inst_1 : Semiring R] {M : Type u_9} {f g : Convexity.StdSimplex R M}, f.weights = g.weights → f = g"
+      },
+      {
+        "id": "C06",
+        "statement": "∀ {R : Type u} [inst : LE R] [inst_1 : AddCommMonoid R] [inst_2 : One R] {M : Type v} (self : Convexity.StdSimplex R M), (self.weights.sum fun x r => r) = 1"
+      },
+      {
+        "id": "C07",
+        "statement": "∀ {R : Type u} [inst : PartialOrder R] [inst_1 : Semiring R] {M : Type u_9} [inst_2 : IsStrictOrderedRing R] (x : M), (Convexity.StdSimplex.single x).weights = fun₀ | x => 1"
+      },
+      {
+        "id": "C08",
+        "statement": "∀ {R : Type u_1} {M : Type u_3} {I : Type u_6} [inst : PartialOrder R] [inst_1 : Semiring R] [inst_2 : IsStrictOrderedRing R] [inst_3 : Convexity.ConvexSpace R M] {w : Convexity.StdSimplex R I} {f g : I → M}, (∀ (i : I), w.weights i ≠ 0 → f i = g i) → Convexity.iConvexComb w f = Convexity.iConvexComb w g"
+      },
+      {
+        "id": "C09",
+        "statement": "∀ {R : Type u_1} {M : Type u_3} {I : Type u_6} [inst : PartialOrder R] [inst_1 : Semiring R] [inst_2 : IsStrictOrderedRing R] [inst_3 : Convexity.ConvexSpace R M] (s : Convexity.StdSimplex R I) (m : M), (Convexity.iConvexComb s fun x => m) = m"
+      },
+      {
+        "id": "C10",
+        "statement": "∀ {R : Type u_9} {M : Type u_10} {I : Type u_11} [inst : PartialOrder R] [inst_1 : CommSemiring R] [inst_2 : IsStrictOrderedRing R] [inst_3 : Convexity.ConvexSpace R M] {s t : R} (hs : 0 ≤ s) (ht : 0 ≤ t) (h : s + t = 1) (f : Convexity.StdSimplex R I) (e₁ e₂ : I → M), (Convexity.iConvexComb f fun x => Convexity.convexCombPair s t hs ht h (e₁ x) (e₂ x)) = Convexity.convexCombPair s t hs ht h (Convexity.iConvexComb f e₁) (Convexity.iConvexComb f e₂)"
+      },
+      {
+        "id": "C11",
+        "statement": "∀ {R : Type u} {M : Type v} {inst₁ : PartialOrder R} {inst₂ : Semiring R} {inst₃ : IsStrictOrderedRing R} [self : Convexity.ConvexSpace R M] (x : M), Convexity.sConvexComb (Convexity.StdSimplex.single x) = x"
+      },
+      {
+        "id": "C12",
+        "statement": "∀ {R : Type u} [inst : PartialOrder R] [inst_1 : Semiring R] {M : Type u_9} {N : Type u_10} [inst_2 : IsStrictOrderedRing R] {s t : R} (hs : 0 ≤ s) (ht : 0 ≤ t) (h : s + t = 1) (x y : M) (f : M → N), Convexity.StdSimplex.map f (Convexity.StdSimplex.duple x y hs ht h) = Convexity.StdSimplex.duple (f x) (f y) hs ht h"
+      },
+      {
+        "id": "C13",
+        "statement": "∀ {R : Type u} [inst : PartialOrder R] [inst_1 : Semiring R] {M : Type u_9} {N : Type u_10} {P : Type u_11} [inst_2 : IsStrictOrderedRing R] (f : Convexity.StdSimplex R M) (g₁ : M → N) (g₂ : N → P), Convexity.StdSimplex.map g₂ (Convexity.StdSimplex.map g₁ f) = Convexity.StdSimplex.map (fun x => g₂ (g₁ x)) f"
+      },
+      {
+        "id": "C14",
+        "statement": "∀ {R : Type u} [inst : PartialOrder R] [inst_1 : Semiring R] {M : Type u_9} {N : Type u_10} {P : Type u_11} [inst_2 : IsStrictOrderedRing R] (f : Convexity.StdSimplex R M) (g₁ : M → N) (g₂ : N → P), Convexity.StdSimplex.map (g₂ ∘ g₁) f = Convexity.StdSimplex.map g₂ (Convexity.StdSimplex.map g₁ f)"
+      },
+      {
+        "id": "C15",
+        "statement": "∀ {R : Type u} [inst : PartialOrder R] [inst_1 : Semiring R] {M : Type u_9} {N : Type u_10} [inst_2 : IsStrictOrderedRing R] (f : Convexity.StdSimplex R M) (x : N), Convexity.StdSimplex.map (fun x_1 => x) f = Convexity.StdSimplex.single x"
+      },
+      {
+        "id": "C16",
+        "statement": "∀ {R : Type u_1} {M : Type u_3} [inst : PartialOrder R] [inst_1 : Semiring R] [inst_2 : IsStrictOrderedRing R] [inst_3 : Convexity.ConvexSpace R M] (w : Convexity.StdSimplex R M), (Convexity.iConvexComb w fun x => x) = Convexity.sConvexComb w"
+      }
+    ],
+    "episode_id": "MLP4B_0038",
+    "schema_version": "lemma-portfolio.dependency-compression.v4",
+    "selection_budget": 3,
+    "source_project": "mathlib",
+    "targets": [
+      {
+        "id": "T01",
+        "statement": "∀ {R : Type u} [inst : PartialOrder R] [inst_1 : Semiring R] {M : Type u_9} {f g : Convexity.StdSimplex R M}, f = g ↔ f.weights = g.weights"
+      },
+      {
+        "id": "T02",
+        "statement": "∀ {R : Type u_1} {M : Type u_3} [inst : PartialOrder R] [inst_1 : Semiring R] [inst_2 : IsStrictOrderedRing R] [inst_3 : Convexity.ConvexSpace R M] {s t : R} (hs : 0 ≤ s) (ht : 0 ≤ t) (h : s + t = 1) {x : M}, Convexity.convexCombPair s t hs ht h x x = x"
+      },
+      {
+        "id": "T03",
+        "statement": "∀ {R : Type u_9} {M : Type u_10} {I : Type u_11} {J : Type u_12} [inst : PartialOrder R] [inst_1 : CommSemiring R] [inst_2 : IsStrictOrderedRing R] [inst_3 : Convexity.ConvexSpace R M] (f : Convexity.StdSimplex R I) (g : Convexity.StdSimplex R J) (e : I → J → M), (Convexity.iConvexComb f fun i => Convexity.iConvexComb g (e i)) = Convexity.iConvexComb g fun j => Convexity.iConvexComb f fun i => e i j"
+      },
+      {
+        "id": "T04",
+        "statement": "∀ (R : Type u_1) {I : Type u_6} {J : Type u_7} [inst : PartialOrder R] [inst_1 : Semiring R] [inst_2 : IsStrictOrderedRing R] (f : I → J), Convexity.IsAffineMap R (Convexity.StdSimplex.map f)"
+      },
+      {
+        "id": "T05",
+        "statement": "∀ {R : Type u_1} {M : Type u_3} {J : Type u_7} [inst : PartialOrder R] [inst_1 : Semiring R] [inst_2 : IsStrictOrderedRing R] [inst_3 : Convexity.ConvexSpace R M] {s t : R} (hs : 0 ≤ s) (ht : 0 ≤ t) (h : s + t = 1) (g : Convexity.StdSimplex R J) (e : J → M) (m : M), Convexity.convexCombPair s t hs ht h (Convexity.iConvexComb g e) m = Convexity.sConvexComb (Convexity.convexCombPair s t hs ht h (Convexity.StdSimplex.map e g) (Convexity.StdSimplex.single m))"
+      },
+      {
+        "id": "T06",
+        "statement": "∀ {R : Type u_1} {M : Type u_3} {N : Type u_4} {P : Type u_5} [inst : PartialOrder R] [inst_1 : Semiring R] [inst_2 : IsStrictOrderedRing R] [inst_3 : Convexity.ConvexSpace R M] [inst_4 : Convexity.ConvexSpace R N] [inst_5 : Convexity.ConvexSpace R P] {g : N → P}, Convexity.IsAffineMap R g → ∀ {f : M → N}, Convexity.IsAffineMap R f → Convexity.IsAffineMap R (g ∘ f)"
+      },
+      {
+        "id": "T07",
+        "statement": "∀ {R : Type u_1} {M : Type u_3} {J : Type u_7} [inst : PartialOrder R] [inst_1 : Semiring R] [inst_2 : IsStrictOrderedRing R] [inst_3 : Convexity.ConvexSpace R M] {s t : R} (hs : 0 ≤ s) (ht : 0 ≤ t) (h : s + t = 1) (m : M) (g : Convexity.StdSimplex R J) (e : J → M), Convexity.convexCombPair s t hs ht h m (Convexity.iConvexComb g e) = Convexity.sConvexComb (Convexity.convexCombPair s t hs ht h (Convexity.StdSimplex.single m) (Convexity.StdSimplex.map e g))"
+      },
+      {
+        "id": "T08",
+        "statement": "∀ {R : Type u_1} {I : Type u_6} [inst : PartialOrder R] [inst_1 : Semiring R] [inst_2 : IsStrictOrderedRing R] (w w' : Convexity.StdSimplex R I) (s t : R) (hs : 0 ≤ s) (ht : 0 ≤ t) (hst : s + t = 1), (Convexity.convexCombPair s t hs ht hst w w').weights = s • w.weights + t • w'.weights"
+      }
+    ],
+    "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+  },
+  {
+    "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+    "candidates": [
+      {
+        "id": "C01",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] {W : WeierstrassCurve R} [W.IsShortNF], W.IsCharThreeNF"
+      },
+      {
+        "id": "C02",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] {W : WeierstrassCurve R}, W.a₁ = 0 → W.a₃ = 0 → W.a₄ = 0 → W.IsCharThreeJNeZeroNF"
+      },
+      {
+        "id": "C03",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (W : WeierstrassCurve R) [W.IsCharNeTwoNF], W.b₄ = 2 * W.a₄"
+      },
+      {
+        "id": "C04",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (W : WeierstrassCurve R) [W.IsCharTwoJEqZeroNF], W.b₂ = 0"
+      },
+      {
+        "id": "C05",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (W : WeierstrassCurve R) [W.IsCharNeTwoNF], W.b₈ = 4 * W.a₂ * W.a₆ - W.a₄ ^ 2"
+      },
+      {
+        "id": "C06",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (W : WeierstrassCurve R) [inst_1 : Invertible 2], W.toCharNeTwoNF.u = 1"
+      },
+      {
+        "id": "C07",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (W : WeierstrassCurve R) [W.IsCharTwoJEqZeroNF], W.Δ = -(64 * W.a₄ ^ 3 + 27 * W.b₆ ^ 2)"
+      },
+      {
+        "id": "C08",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (W : WeierstrassCurve R) [W.IsCharTwoJEqZeroNF], W.c₄ = -48 * W.a₄"
+      },
+      {
+        "id": "C09",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (W : WeierstrassCurve R) [W.IsShortNF], W.IsCharNeTwoNF"
+      },
+      {
+        "id": "C10",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (W : WeierstrassCurve R) [W.IsCharNeTwoNF], W.b₆ = 4 * W.a₆"
+      },
+      {
+        "id": "C11",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (W : WeierstrassCurve R) [W.IsCharNeTwoNF], W.Δ = -64 * W.a₂ ^ 3 * W.a₆ + 16 * W.a₂ ^ 2 * W.a₄ ^ 2 - 64 * W.a₄ ^ 3 - 432 * W.a₆ ^ 2 + 288 * W.a₂ * W.a₄ * W.a₆"
+      },
+      {
+        "id": "C12",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (W : WeierstrassCurve R) [W.IsCharNeTwoNF], W.a₁ = 0"
+      },
+      {
+        "id": "C13",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (W : WeierstrassCurve R) [W.IsCharTwoJNeZeroNF], W.b₄ = 0"
+      },
+      {
+        "id": "C14",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (W : WeierstrassCurve R) [W.IsCharThreeJNeZeroNF], W.a₄ = 0"
+      },
+      {
+        "id": "C15",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (W : WeierstrassCurve R) [W.IsCharTwoJNeZeroNF], W.a₄ = 0"
+      },
+      {
+        "id": "C16",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (W : WeierstrassCurve R) [W.IsCharNeTwoNF], W.c₄ = 16 * W.a₂ ^ 2 - 48 * W.a₄"
+      }
+    ],
+    "episode_id": "MLP4B_0039",
+    "schema_version": "lemma-portfolio.dependency-compression.v4",
+    "selection_budget": 3,
+    "source_project": "mathlib",
+    "targets": [
+      {
+        "id": "T01",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (W : WeierstrassCurve R) [W.IsCharThreeJNeZeroNF], W.Δ = -64 * W.a₂ ^ 3 * W.a₆ - 432 * W.a₆ ^ 2"
+      },
+      {
+        "id": "T02",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (W : WeierstrassCurve R) [W.IsCharThreeJNeZeroNF], W.b₆ = 4 * W.a₆"
+      },
+      {
+        "id": "T03",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (W : WeierstrassCurve R) [W.IsCharThreeJNeZeroNF], W.b₄ = 0"
+      },
+      {
+        "id": "T04",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (W : WeierstrassCurve R) [W.IsCharThreeNF], W.IsCharNeTwoNF"
+      },
+      {
+        "id": "T05",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (W : WeierstrassCurve R) [W.IsCharTwoJEqZeroNF] [CharP R 2], W.c₄ = 0"
+      },
+      {
+        "id": "T06",
+        "statement": "∀ {F : Type u_2} [inst : Field F] (W : WeierstrassCurve F) [inst_1 : W.IsElliptic] [W.IsShortNF] [CharP F 3], W.j = 0"
+      },
+      {
+        "id": "T07",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (W : WeierstrassCurve R) [W.IsShortNF], W.b₈ = -W.a₄ ^ 2"
+      },
+      {
+        "id": "T08",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (W : WeierstrassCurve R) [W.IsCharNeTwoNF], W.c₆ = -64 * W.a₂ ^ 3 + 288 * W.a₂ * W.a₄ - 864 * W.a₆"
+      }
+    ],
+    "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+  }
+]
+</episodes>

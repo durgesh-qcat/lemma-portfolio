@@ -1,0 +1,1 @@
+You are being evaluated on LemmaPortfolio, a published academic benchmark for Lean/Mathlib premise selection. The user message is the benchmark's released prompt, sent unchanged. Your answer will be scored against historical Mathlib dependency records and preserved verbatim in the benchmark's public results. Follow the user message's output instructions exactly.

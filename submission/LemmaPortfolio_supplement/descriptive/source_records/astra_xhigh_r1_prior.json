@@ -1,0 +1,1143 @@
+{
+  "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+  "invalid_source_file_count": 0,
+  "invalid_source_files": [],
+  "malformed_episode_count": 0,
+  "malformed_episode_ids": [],
+  "missing_episode_count": 0,
+  "missing_episode_ids": [],
+  "per_item": [
+    {
+      "block_id": "D01",
+      "coverage": 5,
+      "episode_id": "MLP4B_0000",
+      "hidden_edges": 19,
+      "input_status": "valid",
+      "normalized_coverage": 0.7142857142857143,
+      "optimal": false,
+      "optimal_coverage": 7,
+      "selected": [
+        "C01",
+        "C10",
+        "C15"
+      ],
+      "selected_edges": 5,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "valid": true
+    },
+    {
+      "block_id": "D01",
+      "coverage": 6,
+      "episode_id": "MLP4B_0001",
+      "hidden_edges": 14,
+      "input_status": "valid",
+      "normalized_coverage": 0.8571428571428571,
+      "optimal": false,
+      "optimal_coverage": 7,
+      "selected": [
+        "C08",
+        "C09",
+        "C14"
+      ],
+      "selected_edges": 6,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "valid": true
+    },
+    {
+      "block_id": "D01",
+      "coverage": 6,
+      "episode_id": "MLP4B_0002",
+      "hidden_edges": 14,
+      "input_status": "valid",
+      "normalized_coverage": 0.8571428571428571,
+      "optimal": false,
+      "optimal_coverage": 7,
+      "selected": [
+        "C06",
+        "C15",
+        "C16"
+      ],
+      "selected_edges": 7,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "valid": true
+    },
+    {
+      "block_id": "D01",
+      "coverage": 6,
+      "episode_id": "MLP4B_0003",
+      "hidden_edges": 16,
+      "input_status": "valid",
+      "normalized_coverage": 1.0,
+      "optimal": true,
+      "optimal_coverage": 6,
+      "selected": [
+        "C05",
+        "C13",
+        "C16"
+      ],
+      "selected_edges": 6,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "valid": true
+    },
+    {
+      "block_id": "D01",
+      "coverage": 5,
+      "episode_id": "MLP4B_0004",
+      "hidden_edges": 13,
+      "input_status": "valid",
+      "normalized_coverage": 0.8333333333333334,
+      "optimal": false,
+      "optimal_coverage": 6,
+      "selected": [
+        "C01",
+        "C04",
+        "C16"
+      ],
+      "selected_edges": 5,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "valid": true
+    },
+    {
+      "block_id": "D02",
+      "coverage": 5,
+      "episode_id": "MLP4B_0005",
+      "hidden_edges": 15,
+      "input_status": "valid",
+      "normalized_coverage": 0.8333333333333334,
+      "optimal": false,
+      "optimal_coverage": 6,
+      "selected": [
+        "C05",
+        "C12",
+        "C14"
+      ],
+      "selected_edges": 5,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "valid": true
+    },
+    {
+      "block_id": "D02",
+      "coverage": 6,
+      "episode_id": "MLP4B_0006",
+      "hidden_edges": 11,
+      "input_status": "valid",
+      "normalized_coverage": 1.0,
+      "optimal": true,
+      "optimal_coverage": 6,
+      "selected": [
+        "C06",
+        "C07",
+        "C13"
+      ],
+      "selected_edges": 6,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "valid": true
+    },
+    {
+      "block_id": "D02",
+      "coverage": 5,
+      "episode_id": "MLP4B_0007",
+      "hidden_edges": 16,
+      "input_status": "valid",
+      "normalized_coverage": 0.8333333333333334,
+      "optimal": false,
+      "optimal_coverage": 6,
+      "selected": [
+        "C03",
+        "C09",
+        "C10"
+      ],
+      "selected_edges": 6,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "valid": true
+    },
+    {
+      "block_id": "D02",
+      "coverage": 6,
+      "episode_id": "MLP4B_0008",
+      "hidden_edges": 11,
+      "input_status": "valid",
+      "normalized_coverage": 1.0,
+      "optimal": true,
+      "optimal_coverage": 6,
+      "selected": [
+        "C05",
+        "C13",
+        "C16"
+      ],
+      "selected_edges": 6,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "valid": true
+    },
+    {
+      "block_id": "D02",
+      "coverage": 6,
+      "episode_id": "MLP4B_0009",
+      "hidden_edges": 12,
+      "input_status": "valid",
+      "normalized_coverage": 1.0,
+      "optimal": true,
+      "optimal_coverage": 6,
+      "selected": [
+        "C03",
+        "C08",
+        "C16"
+      ],
+      "selected_edges": 6,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "valid": true
+    },
+    {
+      "block_id": "D03",
+      "coverage": 4,
+      "episode_id": "MLP4B_0010",
+      "hidden_edges": 12,
+      "input_status": "valid",
+      "normalized_coverage": 0.6666666666666666,
+      "optimal": false,
+      "optimal_coverage": 6,
+      "selected": [
+        "C02",
+        "C12",
+        "C15"
+      ],
+      "selected_edges": 4,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "valid": true
+    },
+    {
+      "block_id": "D03",
+      "coverage": 5,
+      "episode_id": "MLP4B_0011",
+      "hidden_edges": 18,
+      "input_status": "valid",
+      "normalized_coverage": 0.8333333333333334,
+      "optimal": false,
+      "optimal_coverage": 6,
+      "selected": [
+        "C03",
+        "C11",
+        "C15"
+      ],
+      "selected_edges": 5,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "valid": true
+    },
+    {
+      "block_id": "D03",
+      "coverage": 6,
+      "episode_id": "MLP4B_0012",
+      "hidden_edges": 15,
+      "input_status": "valid",
+      "normalized_coverage": 1.0,
+      "optimal": true,
+      "optimal_coverage": 6,
+      "selected": [
+        "C02",
+        "C08",
+        "C13"
+      ],
+      "selected_edges": 6,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "valid": true
+    },
+    {
+      "block_id": "D03",
+      "coverage": 5,
+      "episode_id": "MLP4B_0013",
+      "hidden_edges": 13,
+      "input_status": "valid",
+      "normalized_coverage": 0.8333333333333334,
+      "optimal": false,
+      "optimal_coverage": 6,
+      "selected": [
+        "C01",
+        "C11",
+        "C14"
+      ],
+      "selected_edges": 6,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "valid": true
+    },
+    {
+      "block_id": "D03",
+      "coverage": 6,
+      "episode_id": "MLP4B_0014",
+      "hidden_edges": 17,
+      "input_status": "valid",
+      "normalized_coverage": 1.0,
+      "optimal": true,
+      "optimal_coverage": 6,
+      "selected": [
+        "C01",
+        "C04",
+        "C07"
+      ],
+      "selected_edges": 6,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "valid": true
+    },
+    {
+      "block_id": "D04",
+      "coverage": 5,
+      "episode_id": "MLP4B_0015",
+      "hidden_edges": 15,
+      "input_status": "valid",
+      "normalized_coverage": 0.8333333333333334,
+      "optimal": false,
+      "optimal_coverage": 6,
+      "selected": [
+        "C08",
+        "C12",
+        "C14"
+      ],
+      "selected_edges": 6,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "valid": true
+    },
+    {
+      "block_id": "D04",
+      "coverage": 5,
+      "episode_id": "MLP4B_0016",
+      "hidden_edges": 13,
+      "input_status": "valid",
+      "normalized_coverage": 0.8333333333333334,
+      "optimal": false,
+      "optimal_coverage": 6,
+      "selected": [
+        "C01",
+        "C02",
+        "C10"
+      ],
+      "selected_edges": 5,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "valid": true
+    },
+    {
+      "block_id": "D04",
+      "coverage": 6,
+      "episode_id": "MLP4B_0017",
+      "hidden_edges": 14,
+      "input_status": "valid",
+      "normalized_coverage": 1.0,
+      "optimal": true,
+      "optimal_coverage": 6,
+      "selected": [
+        "C03",
+        "C15",
+        "C16"
+      ],
+      "selected_edges": 6,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "valid": true
+    },
+    {
+      "block_id": "D04",
+      "coverage": 6,
+      "episode_id": "MLP4B_0018",
+      "hidden_edges": 14,
+      "input_status": "valid",
+      "normalized_coverage": 1.0,
+      "optimal": true,
+      "optimal_coverage": 6,
+      "selected": [
+        "C11",
+        "C15",
+        "C16"
+      ],
+      "selected_edges": 6,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "valid": true
+    },
+    {
+      "block_id": "D04",
+      "coverage": 6,
+      "episode_id": "MLP4B_0019",
+      "hidden_edges": 18,
+      "input_status": "valid",
+      "normalized_coverage": 1.0,
+      "optimal": true,
+      "optimal_coverage": 6,
+      "selected": [
+        "C04",
+        "C13",
+        "C16"
+      ],
+      "selected_edges": 6,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "valid": true
+    },
+    {
+      "block_id": "D05",
+      "coverage": 4,
+      "episode_id": "MLP4B_0020",
+      "hidden_edges": 11,
+      "input_status": "valid",
+      "normalized_coverage": 0.6666666666666666,
+      "optimal": false,
+      "optimal_coverage": 6,
+      "selected": [
+        "C03",
+        "C14",
+        "C16"
+      ],
+      "selected_edges": 4,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "valid": true
+    },
+    {
+      "block_id": "D05",
+      "coverage": 4,
+      "episode_id": "MLP4B_0021",
+      "hidden_edges": 15,
+      "input_status": "valid",
+      "normalized_coverage": 0.6666666666666666,
+      "optimal": false,
+      "optimal_coverage": 6,
+      "selected": [
+        "C08",
+        "C10",
+        "C14"
+      ],
+      "selected_edges": 4,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "valid": true
+    },
+    {
+      "block_id": "D05",
+      "coverage": 4,
+      "episode_id": "MLP4B_0022",
+      "hidden_edges": 14,
+      "input_status": "valid",
+      "normalized_coverage": 0.5714285714285714,
+      "optimal": false,
+      "optimal_coverage": 7,
+      "selected": [
+        "C05",
+        "C13",
+        "C15"
+      ],
+      "selected_edges": 4,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "valid": true
+    },
+    {
+      "block_id": "D05",
+      "coverage": 5,
+      "episode_id": "MLP4B_0023",
+      "hidden_edges": 15,
+      "input_status": "valid",
+      "normalized_coverage": 0.8333333333333334,
+      "optimal": false,
+      "optimal_coverage": 6,
+      "selected": [
+        "C06",
+        "C09",
+        "C11"
+      ],
+      "selected_edges": 5,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "valid": true
+    },
+    {
+      "block_id": "D05",
+      "coverage": 4,
+      "episode_id": "MLP4B_0024",
+      "hidden_edges": 12,
+      "input_status": "valid",
+      "normalized_coverage": 0.6666666666666666,
+      "optimal": false,
+      "optimal_coverage": 6,
+      "selected": [
+        "C12",
+        "C15",
+        "C16"
+      ],
+      "selected_edges": 4,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "valid": true
+    },
+    {
+      "block_id": "D06",
+      "coverage": 6,
+      "episode_id": "MLP4B_0025",
+      "hidden_edges": 15,
+      "input_status": "valid",
+      "normalized_coverage": 1.0,
+      "optimal": true,
+      "optimal_coverage": 6,
+      "selected": [
+        "C09",
+        "C14",
+        "C15"
+      ],
+      "selected_edges": 6,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "valid": true
+    },
+    {
+      "block_id": "D06",
+      "coverage": 5,
+      "episode_id": "MLP4B_0026",
+      "hidden_edges": 12,
+      "input_status": "valid",
+      "normalized_coverage": 0.8333333333333334,
+      "optimal": false,
+      "optimal_coverage": 6,
+      "selected": [
+        "C04",
+        "C11",
+        "C13"
+      ],
+      "selected_edges": 5,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "valid": true
+    },
+    {
+      "block_id": "D06",
+      "coverage": 6,
+      "episode_id": "MLP4B_0027",
+      "hidden_edges": 15,
+      "input_status": "valid",
+      "normalized_coverage": 0.8571428571428571,
+      "optimal": false,
+      "optimal_coverage": 7,
+      "selected": [
+        "C02",
+        "C04",
+        "C06"
+      ],
+      "selected_edges": 7,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "valid": true
+    },
+    {
+      "block_id": "D06",
+      "coverage": 5,
+      "episode_id": "MLP4B_0028",
+      "hidden_edges": 13,
+      "input_status": "valid",
+      "normalized_coverage": 0.8333333333333334,
+      "optimal": false,
+      "optimal_coverage": 6,
+      "selected": [
+        "C07",
+        "C10",
+        "C14"
+      ],
+      "selected_edges": 5,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "valid": true
+    },
+    {
+      "block_id": "D06",
+      "coverage": 4,
+      "episode_id": "MLP4B_0029",
+      "hidden_edges": 12,
+      "input_status": "valid",
+      "normalized_coverage": 0.6666666666666666,
+      "optimal": false,
+      "optimal_coverage": 6,
+      "selected": [
+        "C04",
+        "C06",
+        "C16"
+      ],
+      "selected_edges": 5,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "valid": true
+    },
+    {
+      "block_id": "D07",
+      "coverage": 6,
+      "episode_id": "MLP4B_0030",
+      "hidden_edges": 14,
+      "input_status": "valid",
+      "normalized_coverage": 1.0,
+      "optimal": true,
+      "optimal_coverage": 6,
+      "selected": [
+        "C01",
+        "C10",
+        "C12"
+      ],
+      "selected_edges": 6,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "valid": true
+    },
+    {
+      "block_id": "D07",
+      "coverage": 6,
+      "episode_id": "MLP4B_0031",
+      "hidden_edges": 11,
+      "input_status": "valid",
+      "normalized_coverage": 1.0,
+      "optimal": true,
+      "optimal_coverage": 6,
+      "selected": [
+        "C10",
+        "C14",
+        "C15"
+      ],
+      "selected_edges": 6,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "valid": true
+    },
+    {
+      "block_id": "D07",
+      "coverage": 7,
+      "episode_id": "MLP4B_0032",
+      "hidden_edges": 12,
+      "input_status": "valid",
+      "normalized_coverage": 1.0,
+      "optimal": true,
+      "optimal_coverage": 7,
+      "selected": [
+        "C07",
+        "C13",
+        "C16"
+      ],
+      "selected_edges": 7,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "valid": true
+    },
+    {
+      "block_id": "D07",
+      "coverage": 5,
+      "episode_id": "MLP4B_0033",
+      "hidden_edges": 11,
+      "input_status": "valid",
+      "normalized_coverage": 0.8333333333333334,
+      "optimal": false,
+      "optimal_coverage": 6,
+      "selected": [
+        "C04",
+        "C06",
+        "C15"
+      ],
+      "selected_edges": 6,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "valid": true
+    },
+    {
+      "block_id": "D07",
+      "coverage": 6,
+      "episode_id": "MLP4B_0034",
+      "hidden_edges": 13,
+      "input_status": "valid",
+      "normalized_coverage": 1.0,
+      "optimal": true,
+      "optimal_coverage": 6,
+      "selected": [
+        "C12",
+        "C14",
+        "C16"
+      ],
+      "selected_edges": 6,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "valid": true
+    },
+    {
+      "block_id": "D08",
+      "coverage": 5,
+      "episode_id": "MLP4B_0035",
+      "hidden_edges": 14,
+      "input_status": "valid",
+      "normalized_coverage": 0.7142857142857143,
+      "optimal": false,
+      "optimal_coverage": 7,
+      "selected": [
+        "C04",
+        "C13",
+        "C14"
+      ],
+      "selected_edges": 5,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "valid": true
+    },
+    {
+      "block_id": "D08",
+      "coverage": 5,
+      "episode_id": "MLP4B_0036",
+      "hidden_edges": 11,
+      "input_status": "valid",
+      "normalized_coverage": 0.8333333333333334,
+      "optimal": false,
+      "optimal_coverage": 6,
+      "selected": [
+        "C05",
+        "C10",
+        "C16"
+      ],
+      "selected_edges": 5,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "valid": true
+    },
+    {
+      "block_id": "D08",
+      "coverage": 4,
+      "episode_id": "MLP4B_0037",
+      "hidden_edges": 12,
+      "input_status": "valid",
+      "normalized_coverage": 0.6666666666666666,
+      "optimal": false,
+      "optimal_coverage": 6,
+      "selected": [
+        "C05",
+        "C14",
+        "C16"
+      ],
+      "selected_edges": 5,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "valid": true
+    },
+    {
+      "block_id": "D08",
+      "coverage": 6,
+      "episode_id": "MLP4B_0038",
+      "hidden_edges": 16,
+      "input_status": "valid",
+      "normalized_coverage": 1.0,
+      "optimal": true,
+      "optimal_coverage": 6,
+      "selected": [
+        "C03",
+        "C04",
+        "C05"
+      ],
+      "selected_edges": 6,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "valid": true
+    },
+    {
+      "block_id": "D08",
+      "coverage": 7,
+      "episode_id": "MLP4B_0039",
+      "hidden_edges": 14,
+      "input_status": "valid",
+      "normalized_coverage": 1.0,
+      "optimal": true,
+      "optimal_coverage": 7,
+      "selected": [
+        "C09",
+        "C10",
+        "C14"
+      ],
+      "selected_edges": 7,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "valid": true
+    },
+    {
+      "block_id": "D09",
+      "coverage": 5,
+      "episode_id": "MLP4B_0040",
+      "hidden_edges": 11,
+      "input_status": "valid",
+      "normalized_coverage": 0.8333333333333334,
+      "optimal": false,
+      "optimal_coverage": 6,
+      "selected": [
+        "C03",
+        "C10",
+        "C14"
+      ],
+      "selected_edges": 5,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "valid": true
+    },
+    {
+      "block_id": "D09",
+      "coverage": 5,
+      "episode_id": "MLP4B_0041",
+      "hidden_edges": 12,
+      "input_status": "valid",
+      "normalized_coverage": 0.8333333333333334,
+      "optimal": false,
+      "optimal_coverage": 6,
+      "selected": [
+        "C01",
+        "C04",
+        "C11"
+      ],
+      "selected_edges": 5,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "valid": true
+    },
+    {
+      "block_id": "D09",
+      "coverage": 6,
+      "episode_id": "MLP4B_0042",
+      "hidden_edges": 13,
+      "input_status": "valid",
+      "normalized_coverage": 1.0,
+      "optimal": true,
+      "optimal_coverage": 6,
+      "selected": [
+        "C05",
+        "C10",
+        "C14"
+      ],
+      "selected_edges": 6,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "valid": true
+    },
+    {
+      "block_id": "D09",
+      "coverage": 7,
+      "episode_id": "MLP4B_0043",
+      "hidden_edges": 15,
+      "input_status": "valid",
+      "normalized_coverage": 1.0,
+      "optimal": true,
+      "optimal_coverage": 7,
+      "selected": [
+        "C07",
+        "C09",
+        "C13"
+      ],
+      "selected_edges": 8,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "valid": true
+    },
+    {
+      "block_id": "D09",
+      "coverage": 7,
+      "episode_id": "MLP4B_0044",
+      "hidden_edges": 15,
+      "input_status": "valid",
+      "normalized_coverage": 1.0,
+      "optimal": true,
+      "optimal_coverage": 7,
+      "selected": [
+        "C06",
+        "C08",
+        "C16"
+      ],
+      "selected_edges": 7,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "valid": true
+    },
+    {
+      "block_id": "D10",
+      "coverage": 5,
+      "episode_id": "MLP4B_0045",
+      "hidden_edges": 12,
+      "input_status": "valid",
+      "normalized_coverage": 0.8333333333333334,
+      "optimal": false,
+      "optimal_coverage": 6,
+      "selected": [
+        "C07",
+        "C10",
+        "C12"
+      ],
+      "selected_edges": 5,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "valid": true
+    },
+    {
+      "block_id": "D10",
+      "coverage": 6,
+      "episode_id": "MLP4B_0046",
+      "hidden_edges": 16,
+      "input_status": "valid",
+      "normalized_coverage": 1.0,
+      "optimal": true,
+      "optimal_coverage": 6,
+      "selected": [
+        "C01",
+        "C05",
+        "C10"
+      ],
+      "selected_edges": 6,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "valid": true
+    },
+    {
+      "block_id": "D10",
+      "coverage": 6,
+      "episode_id": "MLP4B_0047",
+      "hidden_edges": 12,
+      "input_status": "valid",
+      "normalized_coverage": 1.0,
+      "optimal": true,
+      "optimal_coverage": 6,
+      "selected": [
+        "C05",
+        "C12",
+        "C15"
+      ],
+      "selected_edges": 6,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "valid": true
+    },
+    {
+      "block_id": "D10",
+      "coverage": 5,
+      "episode_id": "MLP4B_0048",
+      "hidden_edges": 11,
+      "input_status": "valid",
+      "normalized_coverage": 0.8333333333333334,
+      "optimal": false,
+      "optimal_coverage": 6,
+      "selected": [
+        "C01",
+        "C10",
+        "C14"
+      ],
+      "selected_edges": 6,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "valid": true
+    },
+    {
+      "block_id": "D10",
+      "coverage": 7,
+      "episode_id": "MLP4B_0049",
+      "hidden_edges": 16,
+      "input_status": "valid",
+      "normalized_coverage": 1.0,
+      "optimal": true,
+      "optimal_coverage": 7,
+      "selected": [
+        "C02",
+        "C03",
+        "C13"
+      ],
+      "selected_edges": 7,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "valid": true
+    },
+    {
+      "block_id": "D11",
+      "coverage": 6,
+      "episode_id": "MLP4B_0050",
+      "hidden_edges": 13,
+      "input_status": "valid",
+      "normalized_coverage": 0.8571428571428571,
+      "optimal": false,
+      "optimal_coverage": 7,
+      "selected": [
+        "C01",
+        "C07",
+        "C10"
+      ],
+      "selected_edges": 8,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "valid": true
+    },
+    {
+      "block_id": "D11",
+      "coverage": 6,
+      "episode_id": "MLP4B_0051",
+      "hidden_edges": 13,
+      "input_status": "valid",
+      "normalized_coverage": 0.8571428571428571,
+      "optimal": false,
+      "optimal_coverage": 7,
+      "selected": [
+        "C02",
+        "C07",
+        "C08"
+      ],
+      "selected_edges": 8,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "valid": true
+    },
+    {
+      "block_id": "D11",
+      "coverage": 6,
+      "episode_id": "MLP4B_0052",
+      "hidden_edges": 11,
+      "input_status": "valid",
+      "normalized_coverage": 1.0,
+      "optimal": true,
+      "optimal_coverage": 6,
+      "selected": [
+        "C08",
+        "C11",
+        "C15"
+      ],
+      "selected_edges": 6,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "valid": true
+    },
+    {
+      "block_id": "D11",
+      "coverage": 2,
+      "episode_id": "MLP4B_0053",
+      "hidden_edges": 11,
+      "input_status": "valid",
+      "normalized_coverage": 0.3333333333333333,
+      "optimal": false,
+      "optimal_coverage": 6,
+      "selected": [
+        "C02",
+        "C05",
+        "C15"
+      ],
+      "selected_edges": 2,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "valid": true
+    },
+    {
+      "block_id": "D11",
+      "coverage": 7,
+      "episode_id": "MLP4B_0054",
+      "hidden_edges": 14,
+      "input_status": "valid",
+      "normalized_coverage": 1.0,
+      "optimal": true,
+      "optimal_coverage": 7,
+      "selected": [
+        "C03",
+        "C13",
+        "C16"
+      ],
+      "selected_edges": 7,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "valid": true
+    },
+    {
+      "block_id": "D12",
+      "coverage": 6,
+      "episode_id": "MLP4B_0055",
+      "hidden_edges": 12,
+      "input_status": "valid",
+      "normalized_coverage": 1.0,
+      "optimal": true,
+      "optimal_coverage": 6,
+      "selected": [
+        "C05",
+        "C06",
+        "C07"
+      ],
+      "selected_edges": 6,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "valid": true
+    },
+    {
+      "block_id": "D12",
+      "coverage": 5,
+      "episode_id": "MLP4B_0056",
+      "hidden_edges": 11,
+      "input_status": "valid",
+      "normalized_coverage": 0.8333333333333334,
+      "optimal": false,
+      "optimal_coverage": 6,
+      "selected": [
+        "C03",
+        "C08",
+        "C16"
+      ],
+      "selected_edges": 6,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "valid": true
+    },
+    {
+      "block_id": "D12",
+      "coverage": 4,
+      "episode_id": "MLP4B_0057",
+      "hidden_edges": 12,
+      "input_status": "valid",
+      "normalized_coverage": 0.6666666666666666,
+      "optimal": false,
+      "optimal_coverage": 6,
+      "selected": [
+        "C04",
+        "C15",
+        "C16"
+      ],
+      "selected_edges": 4,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "valid": true
+    },
+    {
+      "block_id": "D12",
+      "coverage": 6,
+      "episode_id": "MLP4B_0058",
+      "hidden_edges": 13,
+      "input_status": "valid",
+      "normalized_coverage": 1.0,
+      "optimal": true,
+      "optimal_coverage": 6,
+      "selected": [
+        "C08",
+        "C09",
+        "C16"
+      ],
+      "selected_edges": 6,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "valid": true
+    },
+    {
+      "block_id": "D12",
+      "coverage": 7,
+      "episode_id": "MLP4B_0059",
+      "hidden_edges": 19,
+      "input_status": "valid",
+      "normalized_coverage": 1.0,
+      "optimal": true,
+      "optimal_coverage": 7,
+      "selected": [
+        "C06",
+        "C12",
+        "C15"
+      ],
+      "selected_edges": 7,
+      "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+      "valid": true
+    }
+  ],
+  "prediction_files": [
+    "01.json",
+    "02.json",
+    "03.json",
+    "04.json",
+    "05.json",
+    "06.json",
+    "07.json",
+    "08.json",
+    "09.json",
+    "10.json",
+    "11.json",
+    "12.json"
+  ],
+  "schema_version": "lemma-portfolio.external-prediction-score.v1",
+  "submitted_episode_count": 60,
+  "summary": {
+    "achieved_target_coverage": 328,
+    "block_bootstrap_95_interval_fraction": [
+      0.31666666666666665,
+      0.5666666666666667
+    ],
+    "display_label": "GPT-6 Astra (Codex CLI, xhigh)",
+    "exact_by_block": {
+      "D01": 1,
+      "D02": 3,
+      "D03": 2,
+      "D04": 3,
+      "D05": 0,
+      "D06": 1,
+      "D07": 4,
+      "D08": 2,
+      "D09": 3,
+      "D10": 3,
+      "D11": 2,
+      "D12": 3
+    },
+    "exact_optimal": 27,
+    "exact_optimal_percentage": 45.0,
+    "mean_oracle_normalized_coverage_percentage": 87.42063492063491,
+    "selected_edge_recall_percentage": 42.13759213759214,
+    "system_id": "gpt6_astra_codex_xhigh_2026_09_04",
+    "target_count": 480,
+    "target_coverage_percentage": 68.33333333333333,
+    "total": 60,
+    "valid": 60,
+    "valid_percentage": 100.0,
+    "wilson_95_interval_fraction": [
+      0.3309365440675524,
+      0.5750806411466566
+    ]
+  }
+}

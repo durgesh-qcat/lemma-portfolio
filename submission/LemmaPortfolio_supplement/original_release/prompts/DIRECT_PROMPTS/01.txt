@@ -1,0 +1,553 @@
+You are solving five unreleased LemmaPortfolio benchmark episodes independently.
+
+For each episode, each target t has a hidden set D(t): the displayed candidate declarations used as direct theorem dependencies in that target's historical elaborated source. For a portfolio S, F(S) is the number of targets t for which D(t) intersects S. Select exactly 3 distinct candidate IDs per episode to maximize F(S). This is static dependency-portfolio compression, not a claim about causal usefulness in a new proof.
+
+Use only the supplied text. Do not use web search, tools, files, a repository, theorem proving, compiler feedback, memory, prior chats, follow-up messages, or answers from another episode. Treat every episode independently.
+
+Return one JSON object and no prose. It must have exactly one key, "predictions". Its value must be an object with exactly these episode keys: MLP4B_0000, MLP4B_0001, MLP4B_0002, MLP4B_0003, MLP4B_0004. Each value must be an array of exactly 3 distinct candidate IDs copied from that episode. Candidate order does not matter.
+
+Episode JSON array follows.
+<episodes>
+[
+  {
+    "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+    "candidates": [
+      {
+        "id": "C01",
+        "statement": "∀ {α : Type u} {l : List α} {n : ℕ}, n ≤ l.length → l.rotate' n = List.drop n l ++ List.take n l"
+      },
+      {
+        "id": "C02",
+        "statement": "∀ {α : Type u} (l : List α) (n : ℕ), (l.rotate n).length = l.length"
+      },
+      {
+        "id": "C03",
+        "statement": "∀ {α : Type u} {l l' : List α} {n : ℕ}, l.rotate n = l' ↔ l = l'.rotate (l'.length - n % l'.length)"
+      },
+      {
+        "id": "C04",
+        "statement": "∀ {α : Type u} {l : List α} {n : ℕ}, n ≤ l.length → l.rotate n = List.drop n l ++ List.take n l"
+      },
+      {
+        "id": "C05",
+        "statement": "∀ {α : Type u} (l : List α) (a : α) (n : ℕ), (a :: l).rotate (n + 1) = (l ++ [a]).rotate n"
+      },
+      {
+        "id": "C06",
+        "statement": "∀ {α : Type u} (l : List α) (n : ℕ), (l.rotate' n).length = l.length"
+      },
+      {
+        "id": "C07",
+        "statement": "∀ {α : Type u} (n : ℕ), [].rotate n = []"
+      },
+      {
+        "id": "C08",
+        "statement": "∀ {α : Type u} (l : List α), l.rotate 0 = l"
+      },
+      {
+        "id": "C09",
+        "statement": "∀ {α : Type u} (l : List α) (n m : ℕ), (l.rotate n).rotate m = l.rotate (n + m)"
+      },
+      {
+        "id": "C10",
+        "statement": "∀ {α : Type u} (l : List α) (n : ℕ), l.rotate (n % l.length) = l.rotate n"
+      },
+      {
+        "id": "C11",
+        "statement": "∀ {α : Type u} {l : List α} {n : ℕ}, n < l.length → (l.rotate n).head? = l[n]?"
+      },
+      {
+        "id": "C12",
+        "statement": "∀ {α : Type u} (a : α) (n k : ℕ), (List.replicate n a).rotate k = List.replicate n a"
+      },
+      {
+        "id": "C13",
+        "statement": "∀ {α : Type u} (l : List α), l.cyclicPermutations ≠ []"
+      },
+      {
+        "id": "C14",
+        "statement": "∀ {α : Type u} (l : List α), l ≠ [] → l.cyclicPermutations.length = l.length"
+      },
+      {
+        "id": "C15",
+        "statement": "∀ {α : Type u} {l : List α} {n : ℕ}, l.rotate n = List.drop (n % l.length) l ++ List.take (n % l.length) l"
+      },
+      {
+        "id": "C16",
+        "statement": "∀ {α : Type u} {l l' : List α}, l ~r l' ↔ l' ~r l"
+      }
+    ],
+    "episode_id": "MLP4B_0000",
+    "schema_version": "lemma-portfolio.dependency-compression.v4",
+    "selection_budget": 3,
+    "source_project": "mathlib",
+    "targets": [
+      {
+        "id": "T01",
+        "statement": "∀ {α : Type u} {l : List α}, l.Nodup → ∀ {n : ℕ}, l.rotate n = l ↔ n % l.length = 0 ∨ l = []"
+      },
+      {
+        "id": "T02",
+        "statement": "∀ {α : Type u} (l : List α) (n : ℕ), l.rotate n = l.rotate' n"
+      },
+      {
+        "id": "T03",
+        "statement": "∀ {α : Type u} (l : List α) (n : ℕ), (l.rotate n).reverse = l.reverse.rotate (l.length - n % l.length)"
+      },
+      {
+        "id": "T04",
+        "statement": "∀ {α : Type u} (l : List α) (k : ℕ), (l.rotate k).cyclicPermutations = l.cyclicPermutations.rotate k"
+      },
+      {
+        "id": "T05",
+        "statement": "∀ {α : Type u} {l : List α}, l.Nodup → l ≠ [] → ∀ (i j : ℕ), l.rotate i = l.rotate j → i % l.length = j % l.length"
+      },
+      {
+        "id": "T06",
+        "statement": "∀ {α : Type u} {β : Type u_1} (f : α → α → β) (x y : α) (l : List α), List.zipWith f (x :: y :: l) ((x :: y :: l).rotate 1) = f x y :: List.zipWith f (y :: l) (l ++ [x])"
+      },
+      {
+        "id": "T07",
+        "statement": "∀ {α : Type u} (l : List α), l.rotate' l.length = l"
+      },
+      {
+        "id": "T08",
+        "statement": "∀ {α : Type u} {β : Type u_1} {γ : Type u_2} (f : α → β → γ) (l : List α) (l' : List β) (n : ℕ), l.length = l'.length → (List.zipWith f l l').rotate n = List.zipWith f (l.rotate n) (l'.rotate n)"
+      }
+    ],
+    "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+  },
+  {
+    "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+    "candidates": [
+      {
+        "id": "C01",
+        "statement": "∀ {R : Type u} [inst : Ring R] (p : Polynomial R) {q : Polynomial R}, q.Monic → (p %ₘ q).degree ≤ q.degree"
+      },
+      {
+        "id": "C02",
+        "statement": "∀ {R : Type u} [inst : Ring R] (p q : Polynomial R), p %ₘ q + q * (p /ₘ q) = p"
+      },
+      {
+        "id": "C03",
+        "statement": "∀ {R : Type u} [inst : CommRing R] (p : Polynomial R) (a : R), p %ₘ (Polynomial.X - Polynomial.C a) = Polynomial.C (Polynomial.eval a p)"
+      },
+      {
+        "id": "C04",
+        "statement": "∀ {R : Type u} [inst : Ring R] (p : Polynomial R), 0 /ₘ p = 0"
+      },
+      {
+        "id": "C05",
+        "statement": "∀ {R : Type u} [inst : Ring R] {p q : Polynomial R}, q.degree ≤ p.degree ∧ p ≠ 0 → q.Monic → (p - q * (Polynomial.C p.leadingCoeff * Polynomial.X ^ (p.natDegree - q.natDegree))).degree < p.degree"
+      },
+      {
+        "id": "C06",
+        "statement": "∀ {R : Type u} {S : Type v} [inst : Ring R] {p q : Polynomial R} [inst_1 : Ring S] (f : R →+* S), q.Monic → Polynomial.map f (p /ₘ q) = Polynomial.map f p /ₘ Polynomial.map f q ∧ Polynomial.map f (p %ₘ q) = Polynomial.map f p %ₘ Polynomial.map f q"
+      },
+      {
+        "id": "C07",
+        "statement": "∀ {R : Type u} [inst : Semiring R] {p q : Polynomial R}, p.Monic → p ∣ q → q.natDegree ≤ p.natDegree → q = p * Polynomial.C q.leadingCoeff"
+      },
+      {
+        "id": "C08",
+        "statement": "∀ {R : Type u} [inst : Ring R] {q : Polynomial R} (p : Polynomial R), ¬q.Monic → p /ₘ q = 0"
+      },
+      {
+        "id": "C09",
+        "statement": "∀ {R : Type u} [inst : Ring R] {p q : Polynomial R}, q.Monic → (p %ₘ q = 0 ↔ q ∣ p)"
+      },
+      {
+        "id": "C10",
+        "statement": "∀ {R : Type u} [inst : Ring R] {q : Polynomial R} (p : Polynomial R), ¬q.Monic → p %ₘ q = p"
+      },
+      {
+        "id": "C11",
+        "statement": "∀ {R : Type u} {a : R} [inst : CommRing R] {p : Polynomial R}, Polynomial.X - Polynomial.C a ∣ p ↔ p.IsRoot a"
+      },
+      {
+        "id": "C12",
+        "statement": "∀ {R : Type u} [inst : Ring R] {x : R}, Polynomial.rootMultiplicity x 0 = 0"
+      },
+      {
+        "id": "C13",
+        "statement": "∀ {R : Type u} [inst : Ring R] (p q : Polynomial R), p %ₘ q = p - q * (p /ₘ q)"
+      },
+      {
+        "id": "C14",
+        "statement": "∀ {R : Type u} [inst : Ring R] [Nontrivial R] (p : Polynomial R) {q : Polynomial R}, q.Monic → (p %ₘ q).degree < q.degree"
+      },
+      {
+        "id": "C15",
+        "statement": "∀ {R : Type u} [inst : Ring R] [inst_1 : DecidableEq R] (p : Polynomial R) (a : R), Polynomial.rootMultiplicity a p = if p = 0 then 0 else multiplicity (Polynomial.X - Polynomial.C a) p"
+      },
+      {
+        "id": "C16",
+        "statement": "∀ {R : Type u} [inst : Ring R] {p q : Polynomial R}, q.Monic → q.degree ≤ p.degree → q.degree + (p /ₘ q).degree = p.degree"
+      }
+    ],
+    "episode_id": "MLP4B_0001",
+    "schema_version": "lemma-portfolio.dependency-compression.v4",
+    "selection_budget": 3,
+    "source_project": "mathlib",
+    "targets": [
+      {
+        "id": "T01",
+        "statement": "∀ {R : Type u} [inst : Ring R] {p q : Polynomial R}, q.Monic → ∀ {n : ℕ}, q.degree ≤ ↑n → ∑ i, (Polynomial.monomial ↑i) ((p %ₘ q).coeff ↑i) = p %ₘ q"
+      },
+      {
+        "id": "T02",
+        "statement": "∀ {R : Type u} {S : Type v} [inst : Ring R] {p q : Polynomial R} [inst_1 : Ring S] (f : R →+* S), q.Monic → Polynomial.map f (p /ₘ q) = Polynomial.map f p /ₘ Polynomial.map f q"
+      },
+      {
+        "id": "T03",
+        "statement": "∀ {R : Type u} [inst : Ring R] (p : Polynomial R), p /ₘ 0 = 0"
+      },
+      {
+        "id": "T04",
+        "statement": "∀ {R : Type u} [inst : Ring R] (p : Polynomial R) (a : R), (Polynomial.X - Polynomial.C a) ^ Polynomial.rootMultiplicity a p * (p /ₘ (Polynomial.X - Polynomial.C a) ^ Polynomial.rootMultiplicity a p) = p"
+      },
+      {
+        "id": "T05",
+        "statement": "∀ {R : Type u} [inst : Ring R] {p q : Polynomial R} [Nontrivial R], q.Monic → (p %ₘ q = p ↔ p.degree < q.degree)"
+      },
+      {
+        "id": "T06",
+        "statement": "∀ {R : Type u} [inst : Ring R] {p : Polynomial R}, p.Monic → p %ₘ p = 0"
+      },
+      {
+        "id": "T07",
+        "statement": "∀ {R : Type u} [inst : CommRing R] {p₁ p₂ q : Polynomial R}, q.Monic → q ∣ p₁ - p₂ → p₁ %ₘ q = p₂ %ₘ q"
+      },
+      {
+        "id": "T08",
+        "statement": "∀ {R : Type u} [inst : Ring R] (p q : Polynomial R), (p /ₘ q).degree ≤ p.degree"
+      }
+    ],
+    "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+  },
+  {
+    "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+    "candidates": [
+      {
+        "id": "C01",
+        "statement": "∀ (R : Type u_1) [inst : CommRing R] (n : ℤ), Polynomial.Chebyshev.C R (-n) = Polynomial.Chebyshev.C R n"
+      },
+      {
+        "id": "C02",
+        "statement": "∀ (R : Type u_1) [inst : CommRing R] [IsDomain R] [NeZero 2] (n : ℤ), n ≠ -1 → (Polynomial.Chebyshev.U R n).degree = ↑((n + 1).natAbs - 1)"
+      },
+      {
+        "id": "C03",
+        "statement": "∀ (R : Type u_1) [inst : CommRing R] (n : ℤ), Polynomial.Chebyshev.S R (n - 1) = Polynomial.X * Polynomial.Chebyshev.S R n - Polynomial.Chebyshev.S R (n + 1)"
+      },
+      {
+        "id": "C04",
+        "statement": "∀ (R : Type u_1) [inst : CommRing R] (n : ℤ), Polynomial.Chebyshev.T R (n + 2) = 2 * Polynomial.X * Polynomial.Chebyshev.T R (n + 1) - Polynomial.Chebyshev.T R n"
+      },
+      {
+        "id": "C05",
+        "statement": "∀ (R : Type u_1) [inst : CommRing R] (n : ℤ), Polynomial.Chebyshev.T R (n + 2) = Polynomial.X * Polynomial.Chebyshev.U R (n + 1) - Polynomial.Chebyshev.U R n"
+      },
+      {
+        "id": "C06",
+        "statement": "∀ (R : Type u_1) [inst : CommRing R], Polynomial.Chebyshev.T R 1 = Polynomial.X"
+      },
+      {
+        "id": "C07",
+        "statement": "∀ (R : Type u_1) [inst : CommRing R] (n : ℤ), Polynomial.Chebyshev.C R (n - 2) = Polynomial.X * Polynomial.Chebyshev.C R (n - 1) - Polynomial.Chebyshev.C R n"
+      },
+      {
+        "id": "C08",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (n : ℤ) (k : ℕ), ↑(∏ l ∈ Finset.range k, (2 * l + 3)) * Polynomial.eval 1 ((⇑Polynomial.derivative)^[k] (Polynomial.Chebyshev.U R n)) = ↑(∏ l ∈ Finset.range k, ((n + 1) ^ 2 - (↑l + 1) ^ 2)) * (↑n + 1)"
+      },
+      {
+        "id": "C09",
+        "statement": "∀ (R : Type u_1) [inst : CommRing R] (n : ℤ), Polynomial.eval 1 (Polynomial.Chebyshev.U R n) = ↑n + 1"
+      },
+      {
+        "id": "C10",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (n : ℤ) (k : ℕ) (x : R), (1 - x ^ 2) * Polynomial.eval x ((⇑Polynomial.derivative)^[k + 2] (Polynomial.Chebyshev.T R n)) = (2 * ↑k + 1) * x * Polynomial.eval x ((⇑Polynomial.derivative)^[k + 1] (Polynomial.Chebyshev.T R n)) - (↑n ^ 2 - ↑k ^ 2) * Polynomial.eval x ((⇑Polynomial.derivative)^[k] (Polynomial.Chebyshev.T R n))"
+      },
+      {
+        "id": "C11",
+        "statement": "∀ (R : Type u_1) [inst : CommRing R] [IsDomain R] [NeZero 2] (n : ℕ), (Polynomial.Chebyshev.U R ↑n).degree = ↑n"
+      },
+      {
+        "id": "C12",
+        "statement": "∀ (R : Type u_1) [inst : CommRing R] (n : ℤ), Polynomial.Chebyshev.U R (n - 1) = 2 * Polynomial.X * Polynomial.Chebyshev.U R n - Polynomial.Chebyshev.U R (n + 1)"
+      },
+      {
+        "id": "C13",
+        "statement": "∀ (R : Type u_1) [inst : CommRing R] (n : ℤ), Polynomial.Chebyshev.T R (n - 1) = 2 * Polynomial.X * Polynomial.Chebyshev.T R n - Polynomial.Chebyshev.T R (n + 1)"
+      },
+      {
+        "id": "C14",
+        "statement": "∀ (R : Type u_1) [inst : CommRing R] (n : ℤ), Polynomial.Chebyshev.U R (-n) = -Polynomial.Chebyshev.U R (n - 2)"
+      },
+      {
+        "id": "C15",
+        "statement": "∀ (R : Type u_1) [inst : CommRing R] (n : ℤ), Polynomial.Chebyshev.T R (-n) = Polynomial.Chebyshev.T R n"
+      },
+      {
+        "id": "C16",
+        "statement": "∀ (R : Type u_1) [inst : CommRing R], Polynomial.Chebyshev.C R 0 = 2"
+      }
+    ],
+    "episode_id": "MLP4B_0002",
+    "schema_version": "lemma-portfolio.dependency-compression.v4",
+    "selection_budget": 3,
+    "source_project": "mathlib",
+    "targets": [
+      {
+        "id": "T01",
+        "statement": "∀ (R : Type u_1) [inst : CommRing R] (n : ℤ), Polynomial.Chebyshev.T R ↑n.natAbs = Polynomial.Chebyshev.T R n"
+      },
+      {
+        "id": "T02",
+        "statement": "∀ (R : Type u_1) [inst : CommRing R] (n : ℤ), Polynomial.eval (-2) (Polynomial.Chebyshev.C R n) = 2 * ↑↑n.negOnePow"
+      },
+      {
+        "id": "T03",
+        "statement": "∀ {R : Type u_1} {R' : Type u_2} [inst : CommRing R] [inst_1 : CommRing R'] (f : R →+* R') (n : ℤ), Polynomial.map f (Polynomial.Chebyshev.S R n) = Polynomial.Chebyshev.S R' n"
+      },
+      {
+        "id": "T04",
+        "statement": "∀ (R : Type u_1) [inst : CommRing R] (n : ℤ), Polynomial.eval 0 (Polynomial.Chebyshev.U R n) = ↑(if Even n then ↑(n / 2).negOnePow else 0)"
+      },
+      {
+        "id": "T05",
+        "statement": "∀ (R : Type u_1) [inst : CommRing R] (n : ℤ), Polynomial.eval 0 (Polynomial.Chebyshev.T R n) = ↑(if Even n then ↑(n / 2).negOnePow else 0)"
+      },
+      {
+        "id": "T06",
+        "statement": "∀ {R : Type u_1} [inst : CommRing R] (n : ℤ), Polynomial.derivative (Polynomial.Chebyshev.T R n) = ↑n * Polynomial.Chebyshev.U R (n - 1)"
+      },
+      {
+        "id": "T07",
+        "statement": "∀ (R : Type u_1) [inst : CommRing R], Polynomial.Chebyshev.C R 2 = Polynomial.X ^ 2 - 2"
+      },
+      {
+        "id": "T08",
+        "statement": "∀ (R : Type u_1) [inst : CommRing R] (m n : ℤ), Polynomial.Chebyshev.C R (m * n) = (Polynomial.Chebyshev.C R m).comp (Polynomial.Chebyshev.C R n)"
+      }
+    ],
+    "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+  },
+  {
+    "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+    "candidates": [
+      {
+        "id": "C01",
+        "statement": "{J : Type w} → {C : Type uC} → [inst : CategoryTheory.Category.{uC', uC} C] → [inst_1 : CategoryTheory.Limits.HasZeroMorphisms C] → (F : J → C) → [inst_2 : CategoryTheory.Limits.HasBiproduct F] → CategoryTheory.Limits.IsColimit (CategoryTheory.Limits.biproduct.bicone F).toCocone"
+      },
+      {
+        "id": "C02",
+        "statement": "∀ {J : Type w} {C : Type u} [inst : CategoryTheory.Category.{v, u} C] [inst_1 : CategoryTheory.Limits.HasZeroMorphisms C] {f : J → C} [inst_2 : CategoryTheory.Limits.HasBiproduct f] {Z : C} (g h : Z ⟶ ⨁ f), (∀ (j : J), CategoryTheory.CategoryStruct.comp g (CategoryTheory.Limits.biproduct.π f j) = CategoryTheory.CategoryStruct.comp h (CategoryTheory.Limits.biproduct.π f j)) → g = h"
+      },
+      {
+        "id": "C03",
+        "statement": "{J : Type w} → {C : Type uC} → [inst : CategoryTheory.Category.{uC', uC} C] → [inst_1 : CategoryTheory.Limits.HasZeroMorphisms C] → {F : J → C} → {B : CategoryTheory.Limits.Bicone F} → B.IsBilimit → CategoryTheory.Limits.IsColimit B.toCocone"
+      },
+      {
+        "id": "C04",
+        "statement": "∀ {J : Type w} {C : Type u} [inst : CategoryTheory.Category.{v, u} C] [inst_1 : CategoryTheory.Limits.HasZeroMorphisms C] {f : J → C} [inst_2 : CategoryTheory.Limits.HasBiproduct f], (CategoryTheory.Limits.biproduct.isoCoproduct f).inv = CategoryTheory.Limits.Sigma.desc (CategoryTheory.Limits.biproduct.ι f)"
+      },
+      {
+        "id": "C05",
+        "statement": "∀ {J : Type w} {C : Type u} [inst : CategoryTheory.Category.{v, u} C] [inst_1 : CategoryTheory.Limits.HasZeroMorphisms C] (f : J → C) [inst_2 : CategoryTheory.Limits.HasBiproduct f] (p : J → Prop) [inst_3 : CategoryTheory.Limits.HasBiproduct (Subtype.restrict p f)] (j : Subtype p), CategoryTheory.CategoryStruct.comp (CategoryTheory.Limits.biproduct.toSubtype f p) (CategoryTheory.Limits.biproduct.π (Subtype.restrict p f) j) = CategoryTheory.Limits.biproduct.π f ↑j"
+      },
+      {
+        "id": "C06",
+        "statement": "∀ {J : Type w} {C : Type u} [inst : CategoryTheory.Category.{v, u} C] [inst_1 : CategoryTheory.Limits.HasZeroMorphisms C] {f : J → C} [inst_2 : CategoryTheory.Limits.HasBiproduct f], (CategoryTheory.Limits.biproduct.isoProduct f).hom = CategoryTheory.Limits.Pi.lift (CategoryTheory.Limits.biproduct.π f)"
+      },
+      {
+        "id": "C07",
+        "statement": "∀ {J : Type w} {C : Type u} [inst : CategoryTheory.Category.{v, u} C] [inst_1 : CategoryTheory.Limits.HasZeroMorphisms C] {f g : J → C} [inst_2 : CategoryTheory.Limits.HasBiproduct f] [inst_3 : CategoryTheory.Limits.HasBiproduct g] (p : (j : J) → f j ⟶ g j) (j : J), CategoryTheory.CategoryStruct.comp (CategoryTheory.Limits.biproduct.map p) (CategoryTheory.Limits.biproduct.π g j) = CategoryTheory.CategoryStruct.comp (CategoryTheory.Limits.biproduct.π f j) (p j)"
+      },
+      {
+        "id": "C08",
+        "statement": "∀ {J : Type w} {C : Type u} [inst : CategoryTheory.Category.{v, u} C] [inst_1 : CategoryTheory.Limits.HasZeroMorphisms C] (f : J → C) [inst_2 : CategoryTheory.Limits.HasBiproduct f] (p : J → Prop) [inst_3 : CategoryTheory.Limits.HasBiproduct (Subtype.restrict p f)] (j : Subtype p), CategoryTheory.CategoryStruct.comp (CategoryTheory.Limits.biproduct.fromSubtype f p) (CategoryTheory.Limits.biproduct.π f ↑j) = CategoryTheory.Limits.biproduct.π (Subtype.restrict p f) j"
+      },
+      {
+        "id": "C09",
+        "statement": "∀ {J : Type w} {C : Type u} [inst : CategoryTheory.Category.{v, u} C] [inst_1 : CategoryTheory.Limits.HasZeroMorphisms C] (f : J → C) [inst_2 : CategoryTheory.Limits.HasBiproduct f] {j j' : J}, j ≠ j' → CategoryTheory.CategoryStruct.comp (CategoryTheory.Limits.biproduct.ι f j) (CategoryTheory.Limits.biproduct.π f j') = 0"
+      },
+      {
+        "id": "C10",
+        "statement": "∀ {J : Type w} {C : Type u} [inst : CategoryTheory.Category.{v, u} C] [inst_1 : CategoryTheory.Limits.HasZeroMorphisms C] {f : J → C} [inst_2 : CategoryTheory.Limits.HasBiproduct f] {Z : C} (g h : ⨁ f ⟶ Z), (∀ (j : J), CategoryTheory.CategoryStruct.comp (CategoryTheory.Limits.biproduct.ι f j) g = CategoryTheory.CategoryStruct.comp (CategoryTheory.Limits.biproduct.ι f j) h) → g = h"
+      },
+      {
+        "id": "C11",
+        "statement": "∀ {J : Type w} {C : Type u} [inst : CategoryTheory.Category.{v, u} C] [inst_1 : CategoryTheory.Limits.HasZeroMorphisms C] (f : J → C) [inst_2 : CategoryTheory.Limits.HasBiproduct f] (p : J → Prop) [inst_3 : CategoryTheory.Limits.HasBiproduct (Subtype.restrict p f)] [inst_4 : DecidablePred p] (j : J), CategoryTheory.CategoryStruct.comp (CategoryTheory.Limits.biproduct.ι f j) (CategoryTheory.Limits.biproduct.toSubtype f p) = if h : p j then CategoryTheory.Limits.biproduct.ι (Subtype.restrict p f) ⟨j, h⟩ else 0"
+      },
+      {
+        "id": "C12",
+        "statement": "∀ {J : Type w} {C : Type uC} [inst : CategoryTheory.Category.{uC', uC} C] [inst_1 : CategoryTheory.Limits.HasZeroMorphisms C] {F : J → C} (B : CategoryTheory.Limits.Bicone F) (j : J), CategoryTheory.CategoryStruct.comp (B.ι j) (B.π j) = CategoryTheory.CategoryStruct.id (F j)"
+      },
+      {
+        "id": "C13",
+        "statement": "∀ {J : Type w} {C : Type u} [inst : CategoryTheory.Category.{v, u} C] [inst_1 : CategoryTheory.Limits.HasZeroMorphisms C] {f : J → C} [inst_2 : CategoryTheory.Limits.HasBiproduct f] {P : C} (p : (b : J) → f b ⟶ P) (j : J), CategoryTheory.CategoryStruct.comp (CategoryTheory.Limits.biproduct.ι f j) (CategoryTheory.Limits.biproduct.desc p) = p j"
+      },
+      {
+        "id": "C14",
+        "statement": "∀ {J : Type} [inst : Finite J] {K : Type} [inst_1 : Finite K] {C : Type u} [inst_2 : CategoryTheory.Category.{v, u} C] [inst_3 : CategoryTheory.Limits.HasZeroMorphisms C] [inst_4 : CategoryTheory.Limits.HasFiniteBiproducts C] {f : J → C} {g : K → C} (m : (j : J) → (k : K) → f j ⟶ g k) (k : K), CategoryTheory.CategoryStruct.comp (CategoryTheory.Limits.biproduct.matrix m) (CategoryTheory.Limits.biproduct.π g k) = CategoryTheory.Limits.biproduct.desc fun j => m j k"
+      },
+      {
+        "id": "C15",
+        "statement": "∀ {J : Type w} {C : Type uC} [inst : CategoryTheory.Category.{uC', uC} C] [inst_1 : CategoryTheory.Limits.HasZeroMorphisms C] {F : J → C} (B : CategoryTheory.Limits.Bicone F) {j j' : J}, j ≠ j' → CategoryTheory.CategoryStruct.comp (B.ι j) (B.π j') = 0"
+      },
+      {
+        "id": "C16",
+        "statement": "∀ {J : Type w} {C : Type u} [inst : CategoryTheory.Category.{v, u} C] [inst_1 : CategoryTheory.Limits.HasZeroMorphisms C] {f : J → C} [inst_2 : CategoryTheory.Limits.HasBiproduct f] {P : C} (p : (b : J) → P ⟶ f b) (j : J), CategoryTheory.CategoryStruct.comp (CategoryTheory.Limits.biproduct.lift p) (CategoryTheory.Limits.biproduct.π f j) = p j"
+      }
+    ],
+    "episode_id": "MLP4B_0003",
+    "schema_version": "lemma-portfolio.dependency-compression.v4",
+    "selection_budget": 3,
+    "source_project": "mathlib",
+    "targets": [
+      {
+        "id": "T01",
+        "statement": "∀ {J : Type w} {C : Type u} [inst : CategoryTheory.Category.{v, u} C] [inst_1 : CategoryTheory.Limits.HasZeroMorphisms C] (f : J → C) [inst_2 : CategoryTheory.Limits.HasBiproduct f] (p : J → Prop) [inst_3 : CategoryTheory.Limits.HasBiproduct (Subtype.restrict p f)] (j : Subtype p) {Z : C} (h : Subtype.restrict p f j ⟶ Z), CategoryTheory.CategoryStruct.comp (CategoryTheory.Limits.biproduct.toSubtype f p) (CategoryTheory.CategoryStruct.comp (CategoryTheory.Limits.biproduct.π (Subtype.restrict p f) j) h) = CategoryTheory.CategoryStruct.comp (CategoryTheory.Limits.biproduct.π f ↑j) h"
+      },
+      {
+        "id": "T02",
+        "statement": "∀ {J : Type w} {C : Type u} [inst : CategoryTheory.Category.{v, u} C] [inst_1 : CategoryTheory.Limits.HasZeroMorphisms C] {f : J → C} [inst_2 : CategoryTheory.Limits.HasBiproduct f], (CategoryTheory.Limits.biproduct.isoCoproduct f).hom = CategoryTheory.Limits.biproduct.desc (CategoryTheory.Limits.Sigma.ι f)"
+      },
+      {
+        "id": "T03",
+        "statement": "∀ {J : Type w} {C : Type uC} [inst : CategoryTheory.Category.{uC', uC} C] [inst_1 : CategoryTheory.Limits.HasZeroMorphisms C] {F : J → C} (B : CategoryTheory.Limits.Bicone F) {j j' : J}, j ≠ j' → ∀ {Z : C} (h : F j' ⟶ Z), CategoryTheory.CategoryStruct.comp (B.ι j) (CategoryTheory.CategoryStruct.comp (B.π j') h) = CategoryTheory.CategoryStruct.comp 0 h"
+      },
+      {
+        "id": "T04",
+        "statement": "∀ {J : Type w} {C : Type u} [inst : CategoryTheory.Category.{v, u} C] [inst_1 : CategoryTheory.Limits.HasZeroMorphisms C] (f : J → C) [inst_2 : CategoryTheory.Limits.HasBiproduct f] (p : J → Prop) [inst_3 : CategoryTheory.Limits.HasBiproduct (Subtype.restrict p f)] (j : Subtype p) {Z : C} (h : f ↑j ⟶ Z), CategoryTheory.CategoryStruct.comp (CategoryTheory.Limits.biproduct.fromSubtype f p) (CategoryTheory.CategoryStruct.comp (CategoryTheory.Limits.biproduct.π f ↑j) h) = CategoryTheory.CategoryStruct.comp (CategoryTheory.Limits.biproduct.π (Subtype.restrict p f) j) h"
+      },
+      {
+        "id": "T05",
+        "statement": "∀ {J : Type w} {K : Type u_1} {C : Type u} [inst : CategoryTheory.Category.{v, u} C] [inst_1 : CategoryTheory.Limits.HasZeroMorphisms C] {f : J → C} {g : K → C} (e : J ≃ K) (w : (j : J) → g (e j) ≅ f j) [inst_2 : CategoryTheory.Limits.HasBiproduct f] [inst_3 : CategoryTheory.Limits.HasBiproduct g], (CategoryTheory.Limits.biproduct.whiskerEquiv e w).inv = CategoryTheory.Limits.biproduct.lift fun j => CategoryTheory.CategoryStruct.comp (CategoryTheory.Limits.biproduct.π g (e j)) (w j).hom"
+      },
+      {
+        "id": "T06",
+        "statement": "∀ {J : Type w} {C : Type u} [inst : CategoryTheory.Category.{v, u} C] [inst_1 : CategoryTheory.Limits.HasZeroMorphisms C] (f : J → C) [inst_2 : CategoryTheory.Limits.HasBiproduct f] (p : J → Prop) [inst_3 : CategoryTheory.Limits.HasBiproduct (Subtype.restrict p f)] (j : Subtype p), CategoryTheory.CategoryStruct.comp (CategoryTheory.Limits.biproduct.ι (Subtype.restrict p f) j) (CategoryTheory.Limits.biproduct.fromSubtype f p) = CategoryTheory.Limits.biproduct.ι f ↑j"
+      },
+      {
+        "id": "T07",
+        "statement": "∀ {J : Type w} {C : Type u} [inst : CategoryTheory.Category.{v, u} C] [inst_1 : CategoryTheory.Limits.HasZeroMorphisms C] {f : J → C} [inst_2 : CategoryTheory.Limits.HasBiproduct f] {P : C} (p : (b : J) → P ⟶ f b) (j : J) {Z : C} (h : f j ⟶ Z), CategoryTheory.CategoryStruct.comp (CategoryTheory.Limits.biproduct.lift p) (CategoryTheory.CategoryStruct.comp (CategoryTheory.Limits.biproduct.π f j) h) = CategoryTheory.CategoryStruct.comp (p j) h"
+      },
+      {
+        "id": "T08",
+        "statement": "∀ {J : Type w} {C : Type u} [inst : CategoryTheory.Category.{v, u} C] [inst_1 : CategoryTheory.Limits.HasZeroMorphisms C] (f : J → C) [inst_2 : CategoryTheory.Limits.HasBiproduct f] (p : J → Prop) [inst_3 : CategoryTheory.Limits.HasBiproduct (Subtype.restrict p f)], CategoryTheory.CategoryStruct.comp (CategoryTheory.Limits.biproduct.fromSubtype f p) (CategoryTheory.Limits.biproduct.toSubtype f p) = CategoryTheory.CategoryStruct.id (⨁ Subtype.restrict p f)"
+      }
+    ],
+    "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+  },
+  {
+    "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+    "candidates": [
+      {
+        "id": "C01",
+        "statement": "∀ {α : Type u} (f : α → α) (s : Stream'.Seq α) (n m : ℕ), (s.update n f).get? m = if m = n then Option.map f (s.get? m) else s.get? m"
+      },
+      {
+        "id": "C02",
+        "statement": "∀ {α : Type u} {s : Stream'.Seq α}, ¬s.Terminates → s.length' = ⊤"
+      },
+      {
+        "id": "C03",
+        "statement": "∀ {α : Type u} {β : Type v} {γ : Type w} {α' : Type u'} {β' : Type v'} (s₁ : Stream'.Seq α) (s₂ : Stream'.Seq β) (f₁ : α → α') (f₂ : β → β') (g : α' → β' → γ), Stream'.Seq.zipWith g (Stream'.Seq.map f₁ s₁) (Stream'.Seq.map f₂ s₂) = Stream'.Seq.zipWith (fun a b => g (f₁ a) (f₂ b)) s₁ s₂"
+      },
+      {
+        "id": "C04",
+        "statement": "∀ {α : Type u} {s : Stream'.Seq α} {n : ℕ}, (∀ (h : s.Terminates), n < s.length h) ↔ ∃ a, a ∈ s.get? n"
+      },
+      {
+        "id": "C05",
+        "statement": "∀ {α : Type u} (a b : α) (s : Stream'.Seq α) (S : Stream'.Seq (Stream'.Seq1 α)), Stream'.Seq1.join ((a, Stream'.Seq.cons b s), S) = (a, (Stream'.Seq.cons (b, s) S).join)"
+      },
+      {
+        "id": "C06",
+        "statement": "∀ {α : Type u} (s : Stream'.Seq α), Stream'.Seq.nil.append s = s"
+      },
+      {
+        "id": "C07",
+        "statement": "∀ {α : Type u} {β : Type v} (f : α → β) (s : Stream'.Seq α) (n : ℕ), (Stream'.Seq.map f s).get? n = Option.map f (s.get? n)"
+      },
+      {
+        "id": "C08",
+        "statement": "∀ {α : Type u} (s t u : Stream'.Seq α), (s.append t).append u = s.append (t.append u)"
+      },
+      {
+        "id": "C09",
+        "statement": "∀ {α : Type u} (s : Stream'.Seq α), s.append Stream'.Seq.nil = s"
+      },
+      {
+        "id": "C10",
+        "statement": "∀ {α : Type u} (a : α) (s : Stream'.Seq α) (S : Stream'.Seq (Stream'.Seq1 α)), (Stream'.Seq.cons (a, s) S).join = Stream'.Seq.cons a (s.append S.join)"
+      },
+      {
+        "id": "C11",
+        "statement": "∀ {α : Type u} (S T : Stream'.Seq (Stream'.Seq1 α)), (S.append T).join = S.join.append T.join"
+      },
+      {
+        "id": "C12",
+        "statement": "∀ {α : Type u} (x : α) (s : Stream'.Seq α), (Stream'.Seq.cons x s).length' = s.length' + 1"
+      },
+      {
+        "id": "C13",
+        "statement": "∀ {α : Type u} {β : Type v} (f : α → β) (a : α) (s : Stream'.Seq α), Stream'.Seq.map f (Stream'.Seq.cons a s) = Stream'.Seq.cons (f a) (Stream'.Seq.map f s)"
+      },
+      {
+        "id": "C14",
+        "statement": "∀ {α : Type u} {s : Stream'.Seq α} (h : s.Terminates), s.length' = ↑(s.length h)"
+      },
+      {
+        "id": "C15",
+        "statement": "∀ {α : Type u} {β : Type v} (s : Stream'.Seq α) (t : Stream'.Seq β) (n : ℕ), (s.zip t).get? n = Option.map₂ Prod.mk (s.get? n) (t.get? n)"
+      },
+      {
+        "id": "C16",
+        "statement": "∀ {α : Type u} (a : α) (s t : Stream'.Seq α), (Stream'.Seq.cons a s).append t = Stream'.Seq.cons a (s.append t)"
+      }
+    ],
+    "episode_id": "MLP4B_0004",
+    "schema_version": "lemma-portfolio.dependency-compression.v4",
+    "selection_budget": 3,
+    "source_project": "mathlib",
+    "targets": [
+      {
+        "id": "T01",
+        "statement": "∀ {α : Type u} (l l' : List α), ↑(l ++ l') = (↑l).append ↑l'"
+      },
+      {
+        "id": "T02",
+        "statement": "∀ {α : Type u} {β : Type v} (a : α) (f : α → Stream'.Seq1 β), (Stream'.Seq1.ret a).bind f = f a"
+      },
+      {
+        "id": "T03",
+        "statement": "∀ {α : Type u} {s : Stream'.Seq α} {n : ℕ} {h : s.Terminates}, n < s.length h ↔ ∃ a, a ∈ s.get? n"
+      },
+      {
+        "id": "T04",
+        "statement": "∀ {α : Type u} (x : α) {s : Stream'.Seq α} {n : ℕ}, s.TerminatedAt n → (s.set n x).get? n = none"
+      },
+      {
+        "id": "T05",
+        "statement": "∀ {α : Type u} (hd : α) (tl : Stream'.Seq α) (f : α → α), (Stream'.Seq.cons hd tl).update 0 f = Stream'.Seq.cons (f hd) tl"
+      },
+      {
+        "id": "T06",
+        "statement": "∀ {α : Type u} (s : Stream'.Seq α) (n : ℕ), s.enum.get? n = Option.map (Prod.mk n) (s.get? n)"
+      },
+      {
+        "id": "T07",
+        "statement": "∀ {α : Type u} {s₁ s₂ : Stream'.Seq α} {a : α}, a ∈ s₁ → a ∈ s₁.append s₂"
+      },
+      {
+        "id": "T08",
+        "statement": "∀ {α : Type u} (s : Stream'.Seq α), (Stream'.Seq.map Stream'.Seq1.ret s).join = s"
+      }
+    ],
+    "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+  }
+]
+</episodes>

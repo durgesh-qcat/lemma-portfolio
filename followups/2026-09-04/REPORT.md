@@ -2,9 +2,14 @@
 
 Updated: 2026-09-05T04:12:59.405602+00:00
 
-Status: in progress; pending core phases: astra_max_r1.
+Status at this historical export: in progress; pending core phase: astra_max_r1.
+The completed [September 5 snapshot](../2026-09-05/README.md) and
+[final submitted paper](../../paper/LemmaPortfolio.pdf) supersede this workflow status.
 
-These are separately disclosed post-release follow-up experiments, not additions to the original frozen blind consumer panel. The original benchmark data, consumer scores, and paper have not been edited; the repository README now links this separate follow-up.
+These are separately disclosed post-release follow-up experiments, not additions
+to the original frozen blind consumer panel. Original benchmark data and consumer
+scores remain unchanged. The preceding manuscript is preserved under
+`paper/historical/2026-09-05/`; the submitted paper includes the completed results.
 
 ## Complete direct runs
 

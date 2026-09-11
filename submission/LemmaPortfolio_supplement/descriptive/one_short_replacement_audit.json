@@ -1,0 +1,2990 @@
+{
+  "changed_selection_rules": false,
+  "definition": "Analyze only valid saved triples with true coverage exactly one below the episode maximum. Replacement distance is 3 minus the largest intersection with any true optimal triple. The 39 one-swap neighbors replace one selected candidate by one unselected candidate.",
+  "interpretation": "Retrospective, true-label-assisted diagnosis of existing answers. An optimal neighbor's existence does not show that a model can identify the replacement, repair its answer, or attain the oracle score. Within-one is the existing post-hoc coverage diagnostic and includes exact optima only where explicitly stated.",
+  "new_inference_calls": 0,
+  "pooled_response_instances": {
+    "aggregation_caution": "Descriptive pooling of seven saved runs on the same 60 episodes; these are repeated response instances, not 420 independent benchmark problems or a representative model sample.",
+    "distinct_episode_ids_in_subset": 47,
+    "exact_optimal_response_instances": 174,
+    "exactly_one_target_short_count": 163,
+    "minimum_replacement_histogram": {
+      "1": 134,
+      "2": 26,
+      "3": 3
+    },
+    "more_than_one_target_short_response_instances": 83,
+    "number_of_runs": 7,
+    "one_swap_reachable_count": 134,
+    "one_swap_reachable_percentage_of_one_short": 82.20858895705521,
+    "optimal_one_swap_neighbor_histogram": {
+      "0": 29,
+      "1": 122,
+      "2": 10,
+      "3": 2
+    },
+    "optimal_one_swap_neighbors_max": 3,
+    "optimal_one_swap_neighbors_mean": 0.9079754601226994,
+    "optimal_one_swap_neighbors_mean_fraction": "148/163",
+    "optimal_one_swap_neighbors_median": 1,
+    "optimal_one_swap_neighbors_min": 0,
+    "optimal_one_swap_neighbors_total": 148,
+    "response_instance_denominator": 420,
+    "unique_benchmark_episode_denominator": 60,
+    "within_one_response_instances_including_exact": 337
+  },
+  "runs": [
+    {
+      "achieved_target_coverage": 328,
+      "display_label": "GPT-6 Astra (Codex CLI, xhigh)",
+      "distance_summary": {
+        "distinct_episode_ids_in_subset": 22,
+        "exactly_one_target_short_count": 22,
+        "minimum_replacement_histogram": {
+          "1": 18,
+          "2": 3,
+          "3": 1
+        },
+        "one_swap_reachable_count": 18,
+        "one_swap_reachable_percentage_of_one_short": 81.81818181818181,
+        "optimal_one_swap_neighbor_histogram": {
+          "0": 4,
+          "1": 17,
+          "2": 1
+        },
+        "optimal_one_swap_neighbors_max": 2,
+        "optimal_one_swap_neighbors_mean": 0.8636363636363636,
+        "optimal_one_swap_neighbors_mean_fraction": "19/22",
+        "optimal_one_swap_neighbors_median": 1.0,
+        "optimal_one_swap_neighbors_min": 0,
+        "optimal_one_swap_neighbors_total": 19
+      },
+      "exact_optimal": 27,
+      "more_than_one_target_short": 11,
+      "one_short_per_item": [
+        {
+          "coverage": 6,
+          "episode_id": "MLP4B_0001",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 7,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "astra_xhigh_r1_prior",
+          "selected": [
+            "C08",
+            "C09",
+            "C14"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 6,
+          "episode_id": "MLP4B_0002",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 7,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "astra_xhigh_r1_prior",
+          "selected": [
+            "C06",
+            "C15",
+            "C16"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0004",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "astra_xhigh_r1_prior",
+          "selected": [
+            "C01",
+            "C04",
+            "C16"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0005",
+          "minimum_replacements_to_any_optimum": 3,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 0,
+          "phase": "astra_xhigh_r1_prior",
+          "selected": [
+            "C05",
+            "C12",
+            "C14"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0007",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "astra_xhigh_r1_prior",
+          "selected": [
+            "C03",
+            "C09",
+            "C10"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 2
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0011",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 2,
+          "phase": "astra_xhigh_r1_prior",
+          "selected": [
+            "C03",
+            "C11",
+            "C15"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 2
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0013",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "astra_xhigh_r1_prior",
+          "selected": [
+            "C01",
+            "C11",
+            "C14"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 2
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0015",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "astra_xhigh_r1_prior",
+          "selected": [
+            "C08",
+            "C12",
+            "C14"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0016",
+          "minimum_replacements_to_any_optimum": 2,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 0,
+          "phase": "astra_xhigh_r1_prior",
+          "selected": [
+            "C01",
+            "C02",
+            "C10"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0023",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "astra_xhigh_r1_prior",
+          "selected": [
+            "C06",
+            "C09",
+            "C11"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0026",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "astra_xhigh_r1_prior",
+          "selected": [
+            "C04",
+            "C11",
+            "C13"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 6,
+          "episode_id": "MLP4B_0027",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 7,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "astra_xhigh_r1_prior",
+          "selected": [
+            "C02",
+            "C04",
+            "C06"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0028",
+          "minimum_replacements_to_any_optimum": 2,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 0,
+          "phase": "astra_xhigh_r1_prior",
+          "selected": [
+            "C07",
+            "C10",
+            "C14"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0033",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "astra_xhigh_r1_prior",
+          "selected": [
+            "C04",
+            "C06",
+            "C15"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0036",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "astra_xhigh_r1_prior",
+          "selected": [
+            "C05",
+            "C10",
+            "C16"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0040",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "astra_xhigh_r1_prior",
+          "selected": [
+            "C03",
+            "C10",
+            "C14"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0041",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "astra_xhigh_r1_prior",
+          "selected": [
+            "C01",
+            "C04",
+            "C11"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0045",
+          "minimum_replacements_to_any_optimum": 2,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 0,
+          "phase": "astra_xhigh_r1_prior",
+          "selected": [
+            "C07",
+            "C10",
+            "C12"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0048",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "astra_xhigh_r1_prior",
+          "selected": [
+            "C01",
+            "C10",
+            "C14"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 6,
+          "episode_id": "MLP4B_0050",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 7,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "astra_xhigh_r1_prior",
+          "selected": [
+            "C01",
+            "C07",
+            "C10"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 6,
+          "episode_id": "MLP4B_0051",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 7,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "astra_xhigh_r1_prior",
+          "selected": [
+            "C02",
+            "C07",
+            "C08"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0056",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "astra_xhigh_r1_prior",
+          "selected": [
+            "C03",
+            "C08",
+            "C16"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        }
+      ],
+      "phase": "astra_xhigh_r1_prior",
+      "target_count": 480,
+      "test_episode_count": 60,
+      "valid": 60,
+      "within_one_including_exact": 49
+    },
+    {
+      "achieved_target_coverage": 332,
+      "display_label": "astra xhigh r2",
+      "distance_summary": {
+        "distinct_episode_ids_in_subset": 20,
+        "exactly_one_target_short_count": 20,
+        "minimum_replacement_histogram": {
+          "1": 15,
+          "2": 4,
+          "3": 1
+        },
+        "one_swap_reachable_count": 15,
+        "one_swap_reachable_percentage_of_one_short": 75.0,
+        "optimal_one_swap_neighbor_histogram": {
+          "0": 5,
+          "1": 14,
+          "2": 1
+        },
+        "optimal_one_swap_neighbors_max": 2,
+        "optimal_one_swap_neighbors_mean": 0.8,
+        "optimal_one_swap_neighbors_mean_fraction": "4/5",
+        "optimal_one_swap_neighbors_median": 1.0,
+        "optimal_one_swap_neighbors_min": 0,
+        "optimal_one_swap_neighbors_total": 16
+      },
+      "exact_optimal": 30,
+      "more_than_one_target_short": 10,
+      "one_short_per_item": [
+        {
+          "coverage": 6,
+          "episode_id": "MLP4B_0001",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 7,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "astra_xhigh_r2",
+          "selected": [
+            "C08",
+            "C09",
+            "C14"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0004",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "astra_xhigh_r2",
+          "selected": [
+            "C01",
+            "C09",
+            "C16"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0005",
+          "minimum_replacements_to_any_optimum": 3,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 0,
+          "phase": "astra_xhigh_r2",
+          "selected": [
+            "C05",
+            "C12",
+            "C14"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0007",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "astra_xhigh_r2",
+          "selected": [
+            "C03",
+            "C09",
+            "C10"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 2
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0009",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "astra_xhigh_r2",
+          "selected": [
+            "C03",
+            "C12",
+            "C16"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0011",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 2,
+          "phase": "astra_xhigh_r2",
+          "selected": [
+            "C03",
+            "C11",
+            "C15"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 2
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0015",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "astra_xhigh_r2",
+          "selected": [
+            "C08",
+            "C12",
+            "C14"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0016",
+          "minimum_replacements_to_any_optimum": 2,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 0,
+          "phase": "astra_xhigh_r2",
+          "selected": [
+            "C01",
+            "C02",
+            "C10"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0023",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "astra_xhigh_r2",
+          "selected": [
+            "C06",
+            "C09",
+            "C11"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0028",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "astra_xhigh_r2",
+          "selected": [
+            "C09",
+            "C10",
+            "C14"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0033",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "astra_xhigh_r2",
+          "selected": [
+            "C04",
+            "C06",
+            "C15"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 6,
+          "episode_id": "MLP4B_0035",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 7,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "astra_xhigh_r2",
+          "selected": [
+            "C03",
+            "C04",
+            "C14"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0036",
+          "minimum_replacements_to_any_optimum": 2,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 0,
+          "phase": "astra_xhigh_r2",
+          "selected": [
+            "C03",
+            "C10",
+            "C16"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0037",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "astra_xhigh_r2",
+          "selected": [
+            "C12",
+            "C14",
+            "C16"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0040",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "astra_xhigh_r2",
+          "selected": [
+            "C03",
+            "C10",
+            "C14"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0045",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "astra_xhigh_r2",
+          "selected": [
+            "C10",
+            "C12",
+            "C13"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 6,
+          "episode_id": "MLP4B_0050",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 7,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "astra_xhigh_r2",
+          "selected": [
+            "C01",
+            "C07",
+            "C10"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 6,
+          "episode_id": "MLP4B_0051",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 7,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "astra_xhigh_r2",
+          "selected": [
+            "C02",
+            "C07",
+            "C08"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0056",
+          "minimum_replacements_to_any_optimum": 2,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 0,
+          "phase": "astra_xhigh_r2",
+          "selected": [
+            "C03",
+            "C13",
+            "C16"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0057",
+          "minimum_replacements_to_any_optimum": 2,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 0,
+          "phase": "astra_xhigh_r2",
+          "selected": [
+            "C04",
+            "C13",
+            "C15"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        }
+      ],
+      "phase": "astra_xhigh_r2",
+      "target_count": 480,
+      "test_episode_count": 60,
+      "valid": 60,
+      "within_one_including_exact": 50
+    },
+    {
+      "achieved_target_coverage": 335,
+      "display_label": "astra max r1",
+      "distance_summary": {
+        "distinct_episode_ids_in_subset": 22,
+        "exactly_one_target_short_count": 22,
+        "minimum_replacement_histogram": {
+          "1": 19,
+          "2": 2,
+          "3": 1
+        },
+        "one_swap_reachable_count": 19,
+        "one_swap_reachable_percentage_of_one_short": 86.36363636363636,
+        "optimal_one_swap_neighbor_histogram": {
+          "0": 3,
+          "1": 18,
+          "2": 1
+        },
+        "optimal_one_swap_neighbors_max": 2,
+        "optimal_one_swap_neighbors_mean": 0.9090909090909091,
+        "optimal_one_swap_neighbors_mean_fraction": "10/11",
+        "optimal_one_swap_neighbors_median": 1.0,
+        "optimal_one_swap_neighbors_min": 0,
+        "optimal_one_swap_neighbors_total": 20
+      },
+      "exact_optimal": 30,
+      "more_than_one_target_short": 8,
+      "one_short_per_item": [
+        {
+          "coverage": 6,
+          "episode_id": "MLP4B_0000",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 7,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "astra_max_r1",
+          "selected": [
+            "C08",
+            "C10",
+            "C15"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 6,
+          "episode_id": "MLP4B_0001",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 7,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "astra_max_r1",
+          "selected": [
+            "C08",
+            "C09",
+            "C14"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 6,
+          "episode_id": "MLP4B_0002",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 7,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "astra_max_r1",
+          "selected": [
+            "C06",
+            "C15",
+            "C16"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0004",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "astra_max_r1",
+          "selected": [
+            "C01",
+            "C06",
+            "C16"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0005",
+          "minimum_replacements_to_any_optimum": 3,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 0,
+          "phase": "astra_max_r1",
+          "selected": [
+            "C05",
+            "C12",
+            "C14"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0007",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "astra_max_r1",
+          "selected": [
+            "C03",
+            "C09",
+            "C10"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 2
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0011",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 2,
+          "phase": "astra_max_r1",
+          "selected": [
+            "C03",
+            "C11",
+            "C15"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 2
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0013",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "astra_max_r1",
+          "selected": [
+            "C01",
+            "C11",
+            "C14"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 2
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0015",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "astra_max_r1",
+          "selected": [
+            "C08",
+            "C12",
+            "C14"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0016",
+          "minimum_replacements_to_any_optimum": 2,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 0,
+          "phase": "astra_max_r1",
+          "selected": [
+            "C01",
+            "C02",
+            "C10"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0018",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "astra_max_r1",
+          "selected": [
+            "C07",
+            "C15",
+            "C16"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0023",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "astra_max_r1",
+          "selected": [
+            "C06",
+            "C09",
+            "C11"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0024",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "astra_max_r1",
+          "selected": [
+            "C08",
+            "C12",
+            "C15"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0028",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "astra_max_r1",
+          "selected": [
+            "C09",
+            "C10",
+            "C14"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0033",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "astra_max_r1",
+          "selected": [
+            "C04",
+            "C06",
+            "C15"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0036",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "astra_max_r1",
+          "selected": [
+            "C05",
+            "C10",
+            "C16"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0046",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "astra_max_r1",
+          "selected": [
+            "C01",
+            "C05",
+            "C16"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 3
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0048",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "astra_max_r1",
+          "selected": [
+            "C01",
+            "C10",
+            "C14"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 6,
+          "episode_id": "MLP4B_0050",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 7,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "astra_max_r1",
+          "selected": [
+            "C01",
+            "C07",
+            "C10"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 6,
+          "episode_id": "MLP4B_0051",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 7,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "astra_max_r1",
+          "selected": [
+            "C02",
+            "C07",
+            "C08"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0056",
+          "minimum_replacements_to_any_optimum": 2,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 0,
+          "phase": "astra_max_r1",
+          "selected": [
+            "C03",
+            "C13",
+            "C16"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0057",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "astra_max_r1",
+          "selected": [
+            "C04",
+            "C06",
+            "C15"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        }
+      ],
+      "phase": "astra_max_r1",
+      "target_count": 480,
+      "test_episode_count": 60,
+      "valid": 60,
+      "within_one_including_exact": 52
+    },
+    {
+      "achieved_target_coverage": 302,
+      "display_label": "sol xhigh r1",
+      "distance_summary": {
+        "distinct_episode_ids_in_subset": 18,
+        "exactly_one_target_short_count": 18,
+        "minimum_replacement_histogram": {
+          "1": 15,
+          "2": 3,
+          "3": 0
+        },
+        "one_swap_reachable_count": 15,
+        "one_swap_reachable_percentage_of_one_short": 83.33333333333333,
+        "optimal_one_swap_neighbor_histogram": {
+          "0": 3,
+          "1": 13,
+          "2": 2
+        },
+        "optimal_one_swap_neighbors_max": 2,
+        "optimal_one_swap_neighbors_mean": 0.9444444444444444,
+        "optimal_one_swap_neighbors_mean_fraction": "17/18",
+        "optimal_one_swap_neighbors_median": 1.0,
+        "optimal_one_swap_neighbors_min": 0,
+        "optimal_one_swap_neighbors_total": 17
+      },
+      "exact_optimal": 20,
+      "more_than_one_target_short": 22,
+      "one_short_per_item": [
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0003",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 2,
+          "phase": "sol_xhigh_r1",
+          "selected": [
+            "C05",
+            "C08",
+            "C16"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 2
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0004",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "sol_xhigh_r1",
+          "selected": [
+            "C01",
+            "C06",
+            "C16"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0007",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "sol_xhigh_r1",
+          "selected": [
+            "C06",
+            "C09",
+            "C10"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 2
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0011",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 2,
+          "phase": "sol_xhigh_r1",
+          "selected": [
+            "C01",
+            "C03",
+            "C15"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 2
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0015",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "sol_xhigh_r1",
+          "selected": [
+            "C08",
+            "C12",
+            "C14"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0017",
+          "minimum_replacements_to_any_optimum": 2,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 0,
+          "phase": "sol_xhigh_r1",
+          "selected": [
+            "C03",
+            "C11",
+            "C14"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0018",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "sol_xhigh_r1",
+          "selected": [
+            "C05",
+            "C15",
+            "C16"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0023",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "sol_xhigh_r1",
+          "selected": [
+            "C06",
+            "C09",
+            "C11"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0026",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "sol_xhigh_r1",
+          "selected": [
+            "C04",
+            "C11",
+            "C13"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 6,
+          "episode_id": "MLP4B_0027",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 7,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "sol_xhigh_r1",
+          "selected": [
+            "C02",
+            "C04",
+            "C06"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0028",
+          "minimum_replacements_to_any_optimum": 2,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 0,
+          "phase": "sol_xhigh_r1",
+          "selected": [
+            "C07",
+            "C10",
+            "C14"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 6,
+          "episode_id": "MLP4B_0035",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 7,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "sol_xhigh_r1",
+          "selected": [
+            "C03",
+            "C04",
+            "C14"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0036",
+          "minimum_replacements_to_any_optimum": 2,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 0,
+          "phase": "sol_xhigh_r1",
+          "selected": [
+            "C03",
+            "C06",
+            "C16"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0040",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "sol_xhigh_r1",
+          "selected": [
+            "C03",
+            "C10",
+            "C14"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 6,
+          "episode_id": "MLP4B_0044",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 7,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "sol_xhigh_r1",
+          "selected": [
+            "C08",
+            "C13",
+            "C16"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 6,
+          "episode_id": "MLP4B_0050",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 7,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "sol_xhigh_r1",
+          "selected": [
+            "C01",
+            "C07",
+            "C10"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0055",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "sol_xhigh_r1",
+          "selected": [
+            "C03",
+            "C05",
+            "C07"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0056",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "sol_xhigh_r1",
+          "selected": [
+            "C03",
+            "C08",
+            "C16"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        }
+      ],
+      "phase": "sol_xhigh_r1",
+      "target_count": 480,
+      "test_episode_count": 60,
+      "valid": 60,
+      "within_one_including_exact": 38
+    },
+    {
+      "achieved_target_coverage": 300,
+      "display_label": "sol xhigh r2",
+      "distance_summary": {
+        "distinct_episode_ids_in_subset": 27,
+        "exactly_one_target_short_count": 27,
+        "minimum_replacement_histogram": {
+          "1": 22,
+          "2": 5,
+          "3": 0
+        },
+        "one_swap_reachable_count": 22,
+        "one_swap_reachable_percentage_of_one_short": 81.48148148148148,
+        "optimal_one_swap_neighbor_histogram": {
+          "0": 5,
+          "1": 21,
+          "2": 1
+        },
+        "optimal_one_swap_neighbors_max": 2,
+        "optimal_one_swap_neighbors_mean": 0.8518518518518519,
+        "optimal_one_swap_neighbors_mean_fraction": "23/27",
+        "optimal_one_swap_neighbors_median": 1,
+        "optimal_one_swap_neighbors_min": 0,
+        "optimal_one_swap_neighbors_total": 23
+      },
+      "exact_optimal": 15,
+      "more_than_one_target_short": 18,
+      "one_short_per_item": [
+        {
+          "coverage": 6,
+          "episode_id": "MLP4B_0001",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 7,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "sol_xhigh_r2",
+          "selected": [
+            "C08",
+            "C09",
+            "C14"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0004",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "sol_xhigh_r2",
+          "selected": [
+            "C01",
+            "C06",
+            "C16"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0005",
+          "minimum_replacements_to_any_optimum": 2,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 0,
+          "phase": "sol_xhigh_r2",
+          "selected": [
+            "C02",
+            "C05",
+            "C12"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0007",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "sol_xhigh_r2",
+          "selected": [
+            "C02",
+            "C09",
+            "C10"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 2
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0008",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "sol_xhigh_r2",
+          "selected": [
+            "C03",
+            "C05",
+            "C13"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0009",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "sol_xhigh_r2",
+          "selected": [
+            "C03",
+            "C11",
+            "C16"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0010",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "sol_xhigh_r2",
+          "selected": [
+            "C02",
+            "C05",
+            "C13"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0011",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 2,
+          "phase": "sol_xhigh_r2",
+          "selected": [
+            "C03",
+            "C11",
+            "C15"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 2
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0015",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "sol_xhigh_r2",
+          "selected": [
+            "C08",
+            "C14",
+            "C15"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0016",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "sol_xhigh_r2",
+          "selected": [
+            "C02",
+            "C07",
+            "C10"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0017",
+          "minimum_replacements_to_any_optimum": 2,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 0,
+          "phase": "sol_xhigh_r2",
+          "selected": [
+            "C03",
+            "C11",
+            "C14"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0018",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "sol_xhigh_r2",
+          "selected": [
+            "C01",
+            "C15",
+            "C16"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0021",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "sol_xhigh_r2",
+          "selected": [
+            "C05",
+            "C08",
+            "C14"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0023",
+          "minimum_replacements_to_any_optimum": 2,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 0,
+          "phase": "sol_xhigh_r2",
+          "selected": [
+            "C01",
+            "C11",
+            "C14"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 6,
+          "episode_id": "MLP4B_0027",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 7,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "sol_xhigh_r2",
+          "selected": [
+            "C02",
+            "C04",
+            "C06"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0028",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "sol_xhigh_r2",
+          "selected": [
+            "C07",
+            "C09",
+            "C14"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0029",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "sol_xhigh_r2",
+          "selected": [
+            "C04",
+            "C10",
+            "C16"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0030",
+          "minimum_replacements_to_any_optimum": 2,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 0,
+          "phase": "sol_xhigh_r2",
+          "selected": [
+            "C01",
+            "C04",
+            "C16"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 2
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0034",
+          "minimum_replacements_to_any_optimum": 2,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 0,
+          "phase": "sol_xhigh_r2",
+          "selected": [
+            "C03",
+            "C10",
+            "C16"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 6,
+          "episode_id": "MLP4B_0035",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 7,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "sol_xhigh_r2",
+          "selected": [
+            "C03",
+            "C04",
+            "C14"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0038",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "sol_xhigh_r2",
+          "selected": [
+            "C01",
+            "C03",
+            "C04"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 3
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0040",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "sol_xhigh_r2",
+          "selected": [
+            "C03",
+            "C10",
+            "C14"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0047",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "sol_xhigh_r2",
+          "selected": [
+            "C05",
+            "C07",
+            "C15"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 6,
+          "episode_id": "MLP4B_0050",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 7,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "sol_xhigh_r2",
+          "selected": [
+            "C01",
+            "C07",
+            "C10"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0055",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "sol_xhigh_r2",
+          "selected": [
+            "C02",
+            "C05",
+            "C06"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0056",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "sol_xhigh_r2",
+          "selected": [
+            "C03",
+            "C08",
+            "C16"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0058",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "sol_xhigh_r2",
+          "selected": [
+            "C09",
+            "C13",
+            "C16"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        }
+      ],
+      "phase": "sol_xhigh_r2",
+      "target_count": 480,
+      "test_episode_count": 60,
+      "valid": 60,
+      "within_one_including_exact": 42
+    },
+    {
+      "achieved_target_coverage": 331,
+      "display_label": "Claude Fable 5 (Claude API, xhigh)",
+      "distance_summary": {
+        "distinct_episode_ids_in_subset": 25,
+        "exactly_one_target_short_count": 25,
+        "minimum_replacement_histogram": {
+          "1": 21,
+          "2": 4,
+          "3": 0
+        },
+        "one_swap_reachable_count": 21,
+        "one_swap_reachable_percentage_of_one_short": 84.0,
+        "optimal_one_swap_neighbor_histogram": {
+          "0": 4,
+          "1": 19,
+          "2": 2
+        },
+        "optimal_one_swap_neighbors_max": 2,
+        "optimal_one_swap_neighbors_mean": 0.92,
+        "optimal_one_swap_neighbors_mean_fraction": "23/25",
+        "optimal_one_swap_neighbors_median": 1,
+        "optimal_one_swap_neighbors_min": 0,
+        "optimal_one_swap_neighbors_total": 23
+      },
+      "exact_optimal": 26,
+      "more_than_one_target_short": 9,
+      "one_short_per_item": [
+        {
+          "coverage": 6,
+          "episode_id": "MLP4B_0000",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 7,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "claude_fable_5_xhigh_r1",
+          "selected": [
+            "C01",
+            "C05",
+            "C10"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 6,
+          "episode_id": "MLP4B_0001",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 7,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "claude_fable_5_xhigh_r1",
+          "selected": [
+            "C08",
+            "C09",
+            "C14"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 6,
+          "episode_id": "MLP4B_0002",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 7,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "claude_fable_5_xhigh_r1",
+          "selected": [
+            "C04",
+            "C12",
+            "C16"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0003",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 2,
+          "phase": "claude_fable_5_xhigh_r1",
+          "selected": [
+            "C05",
+            "C08",
+            "C16"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 2
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0004",
+          "minimum_replacements_to_any_optimum": 2,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 0,
+          "phase": "claude_fable_5_xhigh_r1",
+          "selected": [
+            "C01",
+            "C06",
+            "C15"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0005",
+          "minimum_replacements_to_any_optimum": 2,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 0,
+          "phase": "claude_fable_5_xhigh_r1",
+          "selected": [
+            "C05",
+            "C09",
+            "C12"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0009",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "claude_fable_5_xhigh_r1",
+          "selected": [
+            "C03",
+            "C12",
+            "C16"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0011",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 2,
+          "phase": "claude_fable_5_xhigh_r1",
+          "selected": [
+            "C03",
+            "C04",
+            "C15"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 2
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0015",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "claude_fable_5_xhigh_r1",
+          "selected": [
+            "C08",
+            "C12",
+            "C14"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0017",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "claude_fable_5_xhigh_r1",
+          "selected": [
+            "C03",
+            "C14",
+            "C15"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0018",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "claude_fable_5_xhigh_r1",
+          "selected": [
+            "C05",
+            "C15",
+            "C16"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0021",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "claude_fable_5_xhigh_r1",
+          "selected": [
+            "C04",
+            "C05",
+            "C08"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0023",
+          "minimum_replacements_to_any_optimum": 2,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 0,
+          "phase": "claude_fable_5_xhigh_r1",
+          "selected": [
+            "C01",
+            "C11",
+            "C12"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0024",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "claude_fable_5_xhigh_r1",
+          "selected": [
+            "C12",
+            "C14",
+            "C15"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 6,
+          "episode_id": "MLP4B_0027",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 7,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "claude_fable_5_xhigh_r1",
+          "selected": [
+            "C02",
+            "C04",
+            "C06"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0028",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "claude_fable_5_xhigh_r1",
+          "selected": [
+            "C07",
+            "C09",
+            "C14"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0030",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "claude_fable_5_xhigh_r1",
+          "selected": [
+            "C10",
+            "C14",
+            "C16"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 2
+        },
+        {
+          "coverage": 6,
+          "episode_id": "MLP4B_0035",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 7,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "claude_fable_5_xhigh_r1",
+          "selected": [
+            "C03",
+            "C04",
+            "C14"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0041",
+          "minimum_replacements_to_any_optimum": 2,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 0,
+          "phase": "claude_fable_5_xhigh_r1",
+          "selected": [
+            "C03",
+            "C08",
+            "C13"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 6,
+          "episode_id": "MLP4B_0050",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 7,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "claude_fable_5_xhigh_r1",
+          "selected": [
+            "C01",
+            "C07",
+            "C10"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0052",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "claude_fable_5_xhigh_r1",
+          "selected": [
+            "C01",
+            "C08",
+            "C15"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0053",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "claude_fable_5_xhigh_r1",
+          "selected": [
+            "C08",
+            "C10",
+            "C16"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0056",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "claude_fable_5_xhigh_r1",
+          "selected": [
+            "C08",
+            "C13",
+            "C16"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0057",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "claude_fable_5_xhigh_r1",
+          "selected": [
+            "C04",
+            "C12",
+            "C15"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0058",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "claude_fable_5_xhigh_r1",
+          "selected": [
+            "C05",
+            "C09",
+            "C16"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        }
+      ],
+      "phase": "claude_fable_5_xhigh_r1",
+      "target_count": 480,
+      "test_episode_count": 60,
+      "valid": 60,
+      "within_one_including_exact": 51
+    },
+    {
+      "achieved_target_coverage": 335,
+      "display_label": "Claude Fable 5.1 (Claude API, xhigh, context system prompt)",
+      "distance_summary": {
+        "distinct_episode_ids_in_subset": 29,
+        "exactly_one_target_short_count": 29,
+        "minimum_replacement_histogram": {
+          "1": 24,
+          "2": 5,
+          "3": 0
+        },
+        "one_swap_reachable_count": 24,
+        "one_swap_reachable_percentage_of_one_short": 82.75862068965517,
+        "optimal_one_swap_neighbor_histogram": {
+          "0": 5,
+          "1": 20,
+          "2": 2,
+          "3": 2
+        },
+        "optimal_one_swap_neighbors_max": 3,
+        "optimal_one_swap_neighbors_mean": 1.0344827586206897,
+        "optimal_one_swap_neighbors_mean_fraction": "30/29",
+        "optimal_one_swap_neighbors_median": 1,
+        "optimal_one_swap_neighbors_min": 0,
+        "optimal_one_swap_neighbors_total": 30
+      },
+      "exact_optimal": 26,
+      "more_than_one_target_short": 5,
+      "one_short_per_item": [
+        {
+          "coverage": 6,
+          "episode_id": "MLP4B_0000",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 7,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "claude_fable_5_1_xhigh_ctx_r1",
+          "selected": [
+            "C01",
+            "C05",
+            "C10"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 6,
+          "episode_id": "MLP4B_0001",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 7,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "claude_fable_5_1_xhigh_ctx_r1",
+          "selected": [
+            "C08",
+            "C09",
+            "C14"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 6,
+          "episode_id": "MLP4B_0002",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 7,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "claude_fable_5_1_xhigh_ctx_r1",
+          "selected": [
+            "C04",
+            "C15",
+            "C16"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0003",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 2,
+          "phase": "claude_fable_5_1_xhigh_ctx_r1",
+          "selected": [
+            "C05",
+            "C08",
+            "C13"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 2
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0005",
+          "minimum_replacements_to_any_optimum": 2,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 0,
+          "phase": "claude_fable_5_1_xhigh_ctx_r1",
+          "selected": [
+            "C02",
+            "C05",
+            "C12"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0007",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "claude_fable_5_1_xhigh_ctx_r1",
+          "selected": [
+            "C01",
+            "C10",
+            "C11"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 2
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0009",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "claude_fable_5_1_xhigh_ctx_r1",
+          "selected": [
+            "C03",
+            "C12",
+            "C16"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0010",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "claude_fable_5_1_xhigh_ctx_r1",
+          "selected": [
+            "C02",
+            "C08",
+            "C12"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0011",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 2,
+          "phase": "claude_fable_5_1_xhigh_ctx_r1",
+          "selected": [
+            "C03",
+            "C11",
+            "C15"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 2
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0013",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "claude_fable_5_1_xhigh_ctx_r1",
+          "selected": [
+            "C09",
+            "C11",
+            "C14"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 2
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0015",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "claude_fable_5_1_xhigh_ctx_r1",
+          "selected": [
+            "C08",
+            "C12",
+            "C14"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0016",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "claude_fable_5_1_xhigh_ctx_r1",
+          "selected": [
+            "C02",
+            "C07",
+            "C10"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0018",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "claude_fable_5_1_xhigh_ctx_r1",
+          "selected": [
+            "C02",
+            "C15",
+            "C16"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0021",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "claude_fable_5_1_xhigh_ctx_r1",
+          "selected": [
+            "C04",
+            "C05",
+            "C08"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0023",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "claude_fable_5_1_xhigh_ctx_r1",
+          "selected": [
+            "C06",
+            "C11",
+            "C12"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0025",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "claude_fable_5_1_xhigh_ctx_r1",
+          "selected": [
+            "C09",
+            "C10",
+            "C14"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 6,
+          "episode_id": "MLP4B_0027",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 7,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "claude_fable_5_1_xhigh_ctx_r1",
+          "selected": [
+            "C02",
+            "C04",
+            "C06"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0028",
+          "minimum_replacements_to_any_optimum": 2,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 0,
+          "phase": "claude_fable_5_1_xhigh_ctx_r1",
+          "selected": [
+            "C07",
+            "C10",
+            "C14"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0034",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "claude_fable_5_1_xhigh_ctx_r1",
+          "selected": [
+            "C03",
+            "C14",
+            "C16"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0038",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 3,
+          "phase": "claude_fable_5_1_xhigh_ctx_r1",
+          "selected": [
+            "C03",
+            "C05",
+            "C11"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 3
+        },
+        {
+          "coverage": 6,
+          "episode_id": "MLP4B_0043",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 7,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "claude_fable_5_1_xhigh_ctx_r1",
+          "selected": [
+            "C06",
+            "C07",
+            "C13"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 6,
+          "episode_id": "MLP4B_0044",
+          "minimum_replacements_to_any_optimum": 2,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 7,
+          "optimal_one_swap_neighbor_count": 0,
+          "phase": "claude_fable_5_1_xhigh_ctx_r1",
+          "selected": [
+            "C05",
+            "C08",
+            "C13"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0046",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 3,
+          "phase": "claude_fable_5_1_xhigh_ctx_r1",
+          "selected": [
+            "C05",
+            "C10",
+            "C16"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 3
+        },
+        {
+          "coverage": 6,
+          "episode_id": "MLP4B_0050",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 7,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "claude_fable_5_1_xhigh_ctx_r1",
+          "selected": [
+            "C01",
+            "C07",
+            "C10"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 6,
+          "episode_id": "MLP4B_0051",
+          "minimum_replacements_to_any_optimum": 2,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 7,
+          "optimal_one_swap_neighbor_count": 0,
+          "phase": "claude_fable_5_1_xhigh_ctx_r1",
+          "selected": [
+            "C05",
+            "C07",
+            "C08"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0053",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "claude_fable_5_1_xhigh_ctx_r1",
+          "selected": [
+            "C07",
+            "C08",
+            "C10"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0056",
+          "minimum_replacements_to_any_optimum": 2,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 0,
+          "phase": "claude_fable_5_1_xhigh_ctx_r1",
+          "selected": [
+            "C03",
+            "C13",
+            "C16"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0057",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "claude_fable_5_1_xhigh_ctx_r1",
+          "selected": [
+            "C04",
+            "C06",
+            "C15"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        },
+        {
+          "coverage": 5,
+          "episode_id": "MLP4B_0058",
+          "minimum_replacements_to_any_optimum": 1,
+          "one_swap_neighbor_count": 39,
+          "optimal_coverage": 6,
+          "optimal_one_swap_neighbor_count": 1,
+          "phase": "claude_fable_5_1_xhigh_ctx_r1",
+          "selected": [
+            "C05",
+            "C09",
+            "C16"
+          ],
+          "target_shortfall": 1,
+          "total_true_optimal_portfolios": 1
+        }
+      ],
+      "phase": "claude_fable_5_1_xhigh_ctx_r1",
+      "target_count": 480,
+      "test_episode_count": 60,
+      "valid": 60,
+      "within_one_including_exact": 55
+    }
+  ],
+  "schema_version": "lemma-portfolio.one-short-replacement-audit.v1",
+  "script_sha256": "aa4305a06c4c45bc29c736857258a35dc71d7b274600f1265207309b5175b2b3",
+  "source_commit": "83360eb6a43e1239af7eec4ad45b6e9f7ab7dbe5",
+  "source_sha256": {
+    "data/test.labels.jsonl": "d17c1fd5c6d87635daf8035fe4a0918d1eaa29708eae37cb797cae08c19ef887",
+    "data/test.public.jsonl": "b54293b08bc7ddbb7110a50908049922f7cfd86f14cb49a4de4e28353aecc6d8",
+    "followups/2026-09-05/astra_max_r1/responses/01.json": "699df7877d02cc6bfcd5523ffc4a3267f8745abfcb6d0f52b5248a57fd3eb271",
+    "followups/2026-09-05/astra_max_r1/responses/02.json": "4fb3bd8168a240658a558c59ebedf374bc586a42350d1acfd205d735e00e31a1",
+    "followups/2026-09-05/astra_max_r1/responses/03.json": "f1c32efe120a0c4ad7987a8c56150d7b2dc91a7f15565606abfd34b57f6cbbf8",
+    "followups/2026-09-05/astra_max_r1/responses/04.json": "2a61e47a0ecd9faf4e54aaa66af657f9f7250ce2274b63ef41ede5704f60110d",
+    "followups/2026-09-05/astra_max_r1/responses/05.json": "d5a66f6b3977c0d5ab36a8297dca180685894e9dea6c1dfd9f0338b5b027a188",
+    "followups/2026-09-05/astra_max_r1/responses/06.json": "94eda57f390687b83206f6925ed2ffad9865b6758b38c3d17d896552ce9c30fa",
+    "followups/2026-09-05/astra_max_r1/responses/07.json": "aeb1614bbcb0783f2d0c44d066ef32e184fa12b5446b512c09781dface9b2207",
+    "followups/2026-09-05/astra_max_r1/responses/08.json": "97dc60ae1d1d0903bae284acecabd4ba99848f8641b2fb0c2b84890bfbc5f887",
+    "followups/2026-09-05/astra_max_r1/responses/09.json": "fe622e802afd5150fc5bfd708cefa99339629f4af1cf630e4faa0e28f3b58102",
+    "followups/2026-09-05/astra_max_r1/responses/10.json": "18d491bbe40b61947dcb52da5826ba9b23969d2e240787f84c7c7c87ae5a6176",
+    "followups/2026-09-05/astra_max_r1/responses/11.json": "48e08162290b521af1dc55a8cf2c3a28d47ae6a908c5ade27b5b27f9bb0e886c",
+    "followups/2026-09-05/astra_max_r1/responses/12.json": "dfc45d61e46e7cef9293b4bd7dbc8a76db9f5a0fd66dc88a3bfc9e4786525782",
+    "followups/2026-09-05/astra_max_r1/score.json": "031908be76f2f53b0edb0df81d8f4e0cc3ff9ceeb2163c3d38cee0492ab28272",
+    "followups/2026-09-05/astra_xhigh_r1_prior/responses/01.json": "7054d00ef2ccae39849baa23c2df6da63ea78689c2728c8f7da3012afbbcaf6e",
+    "followups/2026-09-05/astra_xhigh_r1_prior/responses/02.json": "4fb3bd8168a240658a558c59ebedf374bc586a42350d1acfd205d735e00e31a1",
+    "followups/2026-09-05/astra_xhigh_r1_prior/responses/03.json": "51aa1ad4bee10f6246e80556a913c37009273f63710d99b25c57db41698cc2d0",
+    "followups/2026-09-05/astra_xhigh_r1_prior/responses/04.json": "ba4fee2d5a5c0ec96d51728433746858d799e0ca02e92dce37c20ddfc23f7a2f",
+    "followups/2026-09-05/astra_xhigh_r1_prior/responses/05.json": "79cebaef643dbbbcd464f4a11f37f045f83c300964236c435591e337edbe786c",
+    "followups/2026-09-05/astra_xhigh_r1_prior/responses/06.json": "9a90dc6c6f0f1e4a43f56cf522e8bed123f23b1597ac52105483a6c02fca7ac7",
+    "followups/2026-09-05/astra_xhigh_r1_prior/responses/07.json": "aeb1614bbcb0783f2d0c44d066ef32e184fa12b5446b512c09781dface9b2207",
+    "followups/2026-09-05/astra_xhigh_r1_prior/responses/08.json": "97dc60ae1d1d0903bae284acecabd4ba99848f8641b2fb0c2b84890bfbc5f887",
+    "followups/2026-09-05/astra_xhigh_r1_prior/responses/09.json": "f5fa234d2e3921fc47240ddd76f63989f8a18a6a4f388ddef3b388bc03a43211",
+    "followups/2026-09-05/astra_xhigh_r1_prior/responses/10.json": "3979740d40c2ec111be1145b697e46731bd7f66dcb5b1f7d6660f631f668c898",
+    "followups/2026-09-05/astra_xhigh_r1_prior/responses/11.json": "45f5e760ef5fd36cc1229c11dfafa1e36ba18664b864d2ec2f845a22e8b01a6e",
+    "followups/2026-09-05/astra_xhigh_r1_prior/responses/12.json": "d0e19f33ab15a9507f5fc99c22c03769475322ee29fead1b2c6e88c41ea27954",
+    "followups/2026-09-05/astra_xhigh_r1_prior/score.json": "defaedaf59269dcbdd423897ccd42c2eae71089aa2c8349d885c844426362f2a",
+    "followups/2026-09-05/astra_xhigh_r2/responses/01.json": "313d0483516f6a994c3ec67a817cb6a7c5efd9422939396227f1a14aa8aef22a",
+    "followups/2026-09-05/astra_xhigh_r2/responses/02.json": "e5090bb9e1203df78f101909257cdde10f1a7fde82f0beb2fe87cc64679104c6",
+    "followups/2026-09-05/astra_xhigh_r2/responses/03.json": "0c7d28db1ed343e87f4a0271bae522cd6dab53648e937e0a05ab26257bb2432a",
+    "followups/2026-09-05/astra_xhigh_r2/responses/04.json": "ba4fee2d5a5c0ec96d51728433746858d799e0ca02e92dce37c20ddfc23f7a2f",
+    "followups/2026-09-05/astra_xhigh_r2/responses/05.json": "5750a5cac0a05dd9f2bd822d621097c44945b276a738ab52a7b948b83c8048c8",
+    "followups/2026-09-05/astra_xhigh_r2/responses/06.json": "94eda57f390687b83206f6925ed2ffad9865b6758b38c3d17d896552ce9c30fa",
+    "followups/2026-09-05/astra_xhigh_r2/responses/07.json": "062f92df963ebb26a29e1cfa8cf887d7281e78e19eab4c0f1c513e09389ebecc",
+    "followups/2026-09-05/astra_xhigh_r2/responses/08.json": "68f5fc22f12146414dc0ab26fd25156842739b23bae5c9d1de326d03e9da5368",
+    "followups/2026-09-05/astra_xhigh_r2/responses/09.json": "4eaf9bafd9cd18fdcf7b016b572628963bcad8a348466fa9af1e856d48686ead",
+    "followups/2026-09-05/astra_xhigh_r2/responses/10.json": "4a16457b580fce98eb298a97e114b4b532bcc6c6ac5c7a0414e511ed5014d93f",
+    "followups/2026-09-05/astra_xhigh_r2/responses/11.json": "115a57780ed26d6db03b2f55f6ab5001968d7e331b00d6ead5232c214ec53e2f",
+    "followups/2026-09-05/astra_xhigh_r2/responses/12.json": "3343144146176e87434d8b3297a37175afc259a8950a8542e75c3fae6dcaacf4",
+    "followups/2026-09-05/astra_xhigh_r2/score.json": "5e1a5eb378980129ca3cdd4ea675db5092cc68d2189407ffdbeb1bf4ba23e5bd",
+    "followups/2026-09-05/claude_fable_5_1_xhigh_ctx_r1/responses/01.json": "c1dd772ebc501fad7bea3e9eb4703d280e489f13ad1b0bbabd8a57198bc8a8ba",
+    "followups/2026-09-05/claude_fable_5_1_xhigh_ctx_r1/responses/02.json": "9d61afdde765ac402f311d6f84c4f9951243ae403361a01edb1a94a988387a77",
+    "followups/2026-09-05/claude_fable_5_1_xhigh_ctx_r1/responses/03.json": "08766c60f8fafc2d75b20bac7de3a3923953620bd99b436e554e3248869afdc2",
+    "followups/2026-09-05/claude_fable_5_1_xhigh_ctx_r1/responses/04.json": "225f3569f4ead95b71d0815e53f5a083e9b107531b3897032d77258190085ac2",
+    "followups/2026-09-05/claude_fable_5_1_xhigh_ctx_r1/responses/05.json": "6f1317069a2573521bb0dfcbcc3bd3398c19baa6d729553500b6bd28a1df4b5c",
+    "followups/2026-09-05/claude_fable_5_1_xhigh_ctx_r1/responses/06.json": "fce7856109457177b2997a927fbd10d9b161e5e7131192b282fb343d40e67b78",
+    "followups/2026-09-05/claude_fable_5_1_xhigh_ctx_r1/responses/07.json": "9dce91038afd8bf009c455cd76fe1332ceb3932128a345c7e4a65186eaaa4a73",
+    "followups/2026-09-05/claude_fable_5_1_xhigh_ctx_r1/responses/08.json": "bc7275fd2731d1e75499f7788285ae9bf31b371b786ca986b1226ad9b931b1be",
+    "followups/2026-09-05/claude_fable_5_1_xhigh_ctx_r1/responses/09.json": "bf3455d28f6d6ae69f15b9e91ace5e0d9ed9acce5a6723fe695c6e649e8e92e0",
+    "followups/2026-09-05/claude_fable_5_1_xhigh_ctx_r1/responses/10.json": "51c982473b924eaa4cf508dba1a04ddc4906879354b536876fd7ee0a2cf01932",
+    "followups/2026-09-05/claude_fable_5_1_xhigh_ctx_r1/responses/11.json": "a10754873507d3418bfa2f6519aa4048be3a52bb88fe6e35aea6fcb7ddf93d41",
+    "followups/2026-09-05/claude_fable_5_1_xhigh_ctx_r1/responses/12.json": "d43dbc638a38167e07f1e050b46e904c0c9b843b4de40655ab92cce5ee952615",
+    "followups/2026-09-05/claude_fable_5_1_xhigh_ctx_r1/score.json": "e0b9aec680da7cc9588d814f1cdbc9a2ca9335780cf7e2a5128bf7b67adbeb85",
+    "followups/2026-09-05/claude_fable_5_xhigh_r1/responses/01.json": "dfd73e899d060e4d8f1d783bd19b2a8c2ddbb236015f986b70068c0eb770113e",
+    "followups/2026-09-05/claude_fable_5_xhigh_r1/responses/02.json": "9b8a964eb3f0979568c8c5eefdea04c08b9381680e9db055b0179060d118201e",
+    "followups/2026-09-05/claude_fable_5_xhigh_r1/responses/03.json": "db5cb42555836b1557f331a769f0dc1fe463a6e9eb0762b5a6698b3ee92c9a84",
+    "followups/2026-09-05/claude_fable_5_xhigh_r1/responses/04.json": "566a33c68a7eb47aefc6e9a43f0703098778eaea61d1072d5887da61b1f6e7bb",
+    "followups/2026-09-05/claude_fable_5_xhigh_r1/responses/05.json": "cb903bb790c1f2f677ce577dec2e03c050b2f5bf1fc0ca9a23cb678c90375969",
+    "followups/2026-09-05/claude_fable_5_xhigh_r1/responses/06.json": "45e4ed4cb5c75b63d6dcf4875398e9a54401911815758b622fe231970417f437",
+    "followups/2026-09-05/claude_fable_5_xhigh_r1/responses/07.json": "035bf2df0acb7e19014c07e6c94ac19e1125e57e03bcf18183999d1f7873695c",
+    "followups/2026-09-05/claude_fable_5_xhigh_r1/responses/08.json": "18fb218d3e6857f3f88d8715be2360cea7614c302399520b176e693959820f3c",
+    "followups/2026-09-05/claude_fable_5_xhigh_r1/responses/09.json": "9723dbe5f128d97e761979245703b942bfe6eddd34f3b97849e6c183ce6ccfd9",
+    "followups/2026-09-05/claude_fable_5_xhigh_r1/responses/10.json": "78054a7646cc06ae4a473614d7a59d2b41cbf2637b7f60923110168e00ab85e5",
+    "followups/2026-09-05/claude_fable_5_xhigh_r1/responses/11.json": "d73b1931ffd2bd1c851dec0bdab078f5727b63cfd8310a6c4fbbccc1c521461f",
+    "followups/2026-09-05/claude_fable_5_xhigh_r1/responses/12.json": "ac948cd0ce45b65053b0c136c78b7b64766ee719cfd67b4d7a0b265a9d63a06c",
+    "followups/2026-09-05/claude_fable_5_xhigh_r1/score.json": "e295691760edefe5267c346ef32161c9cb3bc98afd8e68f26f09da34c74aff6e",
+    "followups/2026-09-05/sol_xhigh_r1/responses/01.json": "772a9c53c77c6017a10b72921191b5d58e151011c354dad18b571872cb6abf8f",
+    "followups/2026-09-05/sol_xhigh_r1/responses/02.json": "2427ff49acd44d081e3f8fecc4451d7be6f83c384bba9e3dcec2309ec5786c05",
+    "followups/2026-09-05/sol_xhigh_r1/responses/03.json": "9cff2dc6e30ac404edaafe9b7f363e5f49c25226a5b8de384c70b2f18c496ff0",
+    "followups/2026-09-05/sol_xhigh_r1/responses/04.json": "da427192444a27f43ef883d248b8eb878374708589b0e9ec06b64c663e998775",
+    "followups/2026-09-05/sol_xhigh_r1/responses/05.json": "050a2a7f6f9b6ff3366ea85b51d631462ee5a91f0996bf94cc4ff13d8b6df6ad",
+    "followups/2026-09-05/sol_xhigh_r1/responses/06.json": "f1f4627e820ea53c7f6dabbc782bb43b7ba2c28b2a483af2da7496135d24f401",
+    "followups/2026-09-05/sol_xhigh_r1/responses/07.json": "be98bcf60913e94eec69f532fbdd8bd2fbfc6f33dbaec22e54b01de9dcec0bc2",
+    "followups/2026-09-05/sol_xhigh_r1/responses/08.json": "0977d84837d18167b964dcac62f7438bb364b16bb3dd06dcb94c207c7326eb9b",
+    "followups/2026-09-05/sol_xhigh_r1/responses/09.json": "6bb058c7db678471511e5df28cb6254a1273c6bbc4f5fbbe5af440ab1d98631a",
+    "followups/2026-09-05/sol_xhigh_r1/responses/10.json": "e8dcb9179bff829a2b10574889a5d2c098944c481ef786628cec573c3d21e498",
+    "followups/2026-09-05/sol_xhigh_r1/responses/11.json": "6ed2c6cbef4b318cbce7865e94e08d16827b55256a371dec88e5485165c54e00",
+    "followups/2026-09-05/sol_xhigh_r1/responses/12.json": "d0d95ec359a9cab48489b44356d6a52b618d7f51fd50a28768b55e5ff8478189",
+    "followups/2026-09-05/sol_xhigh_r1/score.json": "4a5d11c3e56f1564ac29df6716f2c11cf4331c2ec7d3574ac891be407cae5022",
+    "followups/2026-09-05/sol_xhigh_r2/responses/01.json": "2ee72b6141910f52272f9436ba7d1955fe1fbb2457ad375f2f3cfa08971dd9c6",
+    "followups/2026-09-05/sol_xhigh_r2/responses/02.json": "28f440eb96033b1fa460848c025a5f664e7c561f89dad6fc6459fe00910ed6cf",
+    "followups/2026-09-05/sol_xhigh_r2/responses/03.json": "b8c4ad2a284d67b250c2c535c610edcb3b8ede6b20d5fd6246c3f1e6ffd7ebf8",
+    "followups/2026-09-05/sol_xhigh_r2/responses/04.json": "9f98e7da9b888fc4652fbc9ccde4da3cc0b0ac5f0e2a396a42edf14c8a3fba8d",
+    "followups/2026-09-05/sol_xhigh_r2/responses/05.json": "67e1962bbd236da5bf0272e00ab09137dc3a03e75d023191dd3feac733184261",
+    "followups/2026-09-05/sol_xhigh_r2/responses/06.json": "29e5ff4f7f3406c428ff4d750f2d79dc0605650284124e842005253286a3c2e3",
+    "followups/2026-09-05/sol_xhigh_r2/responses/07.json": "8cf27e3db9d1e186c493174ff7aa1658ee9ccd2a2f52ca88ea4d27ec7544ed02",
+    "followups/2026-09-05/sol_xhigh_r2/responses/08.json": "ab38fd0882a780ca83fc96ffdd90d1614fdf701e846591f55a6f1dfa23a2a04b",
+    "followups/2026-09-05/sol_xhigh_r2/responses/09.json": "96aca5619e02293fdfd5f363ca9c4613aee802cf7511ef55d65542d922f32b77",
+    "followups/2026-09-05/sol_xhigh_r2/responses/10.json": "158b0438b037a498ee0b4377d9aaa48295dd091e058c7151d4a68abb799bb1ac",
+    "followups/2026-09-05/sol_xhigh_r2/responses/11.json": "e73b2c4b225ecb11a9456d8e0387a589ef614ce0d3c4b81185842d6fcf8a19e5",
+    "followups/2026-09-05/sol_xhigh_r2/responses/12.json": "276515a4de1e6dd4f6e36f0e6b181e9f6535a2388424142cacd0687d7e899242",
+    "followups/2026-09-05/sol_xhigh_r2/score.json": "219f8f9c47adc916207e2976ead980cc61d454e61ac002296c513e4b1313348d"
+  }
+}

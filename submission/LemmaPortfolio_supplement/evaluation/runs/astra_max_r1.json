@@ -1,0 +1,927 @@
+{
+  "schema_version": "lemma-portfolio.evaluation-run.v1",
+  "run_id": "astra_max_r1",
+  "evidence_status": "Projection of supplied execution records, not independent authentication of inference or serving configuration.",
+  "responses_directory": "followups/2026-09-05/astra_max_r1/responses",
+  "prompt_calls": [
+    {
+      "name": "01",
+      "model": "gpt-6-astra",
+      "effort": "max",
+      "kind": "direct",
+      "prompt": "original_release/prompts/DIRECT_PROMPTS/01.txt",
+      "prompt_sha256": "febe94397bd43a8a0be9b38d705c08eee2141b4a2ab755d5a46d87596506940c",
+      "episode_ids": [
+        "MLP4B_0000",
+        "MLP4B_0001",
+        "MLP4B_0002",
+        "MLP4B_0003",
+        "MLP4B_0004"
+      ]
+    },
+    {
+      "name": "02",
+      "model": "gpt-6-astra",
+      "effort": "max",
+      "kind": "direct",
+      "prompt": "original_release/prompts/DIRECT_PROMPTS/02.txt",
+      "prompt_sha256": "9b736aaa054838df6d04357ab3ffcac70efccdbdbf20f212389600c2216031b4",
+      "episode_ids": [
+        "MLP4B_0005",
+        "MLP4B_0006",
+        "MLP4B_0007",
+        "MLP4B_0008",
+        "MLP4B_0009"
+      ]
+    },
+    {
+      "name": "03",
+      "model": "gpt-6-astra",
+      "effort": "max",
+      "kind": "direct",
+      "prompt": "original_release/prompts/DIRECT_PROMPTS/03.txt",
+      "prompt_sha256": "6a79e47946d40e8114af5f609f7e960287ed76f70e891a200f6824fcf7aa1f70",
+      "episode_ids": [
+        "MLP4B_0010",
+        "MLP4B_0011",
+        "MLP4B_0012",
+        "MLP4B_0013",
+        "MLP4B_0014"
+      ]
+    },
+    {
+      "name": "04",
+      "model": "gpt-6-astra",
+      "effort": "max",
+      "kind": "direct",
+      "prompt": "original_release/prompts/DIRECT_PROMPTS/04.txt",
+      "prompt_sha256": "e85ce36bf8b82e04592c7c47afd391b0b2e519ee6bd1e6bcd1197bd429dd7f3d",
+      "episode_ids": [
+        "MLP4B_0015",
+        "MLP4B_0016",
+        "MLP4B_0017",
+        "MLP4B_0018",
+        "MLP4B_0019"
+      ]
+    },
+    {
+      "name": "05",
+      "model": "gpt-6-astra",
+      "effort": "max",
+      "kind": "direct",
+      "prompt": "original_release/prompts/DIRECT_PROMPTS/05.txt",
+      "prompt_sha256": "942539a45bdbc8eb682bf0df4075ac226fd519be566d83273fe1c0e36b656449",
+      "episode_ids": [
+        "MLP4B_0020",
+        "MLP4B_0021",
+        "MLP4B_0022",
+        "MLP4B_0023",
+        "MLP4B_0024"
+      ]
+    },
+    {
+      "name": "06",
+      "model": "gpt-6-astra",
+      "effort": "max",
+      "kind": "direct",
+      "prompt": "original_release/prompts/DIRECT_PROMPTS/06.txt",
+      "prompt_sha256": "376664ae74121b60446ed72fb5801e26ec8db066e52b3097034cc53344e167d9",
+      "episode_ids": [
+        "MLP4B_0025",
+        "MLP4B_0026",
+        "MLP4B_0027",
+        "MLP4B_0028",
+        "MLP4B_0029"
+      ]
+    },
+    {
+      "name": "07",
+      "model": "gpt-6-astra",
+      "effort": "max",
+      "kind": "direct",
+      "prompt": "original_release/prompts/DIRECT_PROMPTS/07.txt",
+      "prompt_sha256": "fe0552e4134e2e9f9780055949d4d662459c9e0ca75134fbb4532979206652a4",
+      "episode_ids": [
+        "MLP4B_0030",
+        "MLP4B_0031",
+        "MLP4B_0032",
+        "MLP4B_0033",
+        "MLP4B_0034"
+      ]
+    },
+    {
+      "name": "08",
+      "model": "gpt-6-astra",
+      "effort": "max",
+      "kind": "direct",
+      "prompt": "original_release/prompts/DIRECT_PROMPTS/08.txt",
+      "prompt_sha256": "2ee2884b8afdcfc9138abe6e7076ba98a9f26aaf4a3e66fd67eac4d7c97794ae",
+      "episode_ids": [
+        "MLP4B_0035",
+        "MLP4B_0036",
+        "MLP4B_0037",
+        "MLP4B_0038",
+        "MLP4B_0039"
+      ]
+    },
+    {
+      "name": "09",
+      "model": "gpt-6-astra",
+      "effort": "max",
+      "kind": "direct",
+      "prompt": "original_release/prompts/DIRECT_PROMPTS/09.txt",
+      "prompt_sha256": "ebb62b772ab44523248c9b512e20525a81b4d26b81610105dcc3303f9eacccb9",
+      "episode_ids": [
+        "MLP4B_0040",
+        "MLP4B_0041",
+        "MLP4B_0042",
+        "MLP4B_0043",
+        "MLP4B_0044"
+      ]
+    },
+    {
+      "name": "10",
+      "model": "gpt-6-astra",
+      "effort": "max",
+      "kind": "direct",
+      "prompt": "original_release/prompts/DIRECT_PROMPTS/10.txt",
+      "prompt_sha256": "0bb3074e4eb6fc3bd1d72ca5165572e1b3fe6878fb41b39f64c319f02990a13c",
+      "episode_ids": [
+        "MLP4B_0045",
+        "MLP4B_0046",
+        "MLP4B_0047",
+        "MLP4B_0048",
+        "MLP4B_0049"
+      ]
+    },
+    {
+      "name": "11",
+      "model": "gpt-6-astra",
+      "effort": "max",
+      "kind": "direct",
+      "prompt": "original_release/prompts/DIRECT_PROMPTS/11.txt",
+      "prompt_sha256": "c707b901592322b395b616a6a2674fab78d0efc5293bf7f58d18425b63ef8114",
+      "episode_ids": [
+        "MLP4B_0050",
+        "MLP4B_0051",
+        "MLP4B_0052",
+        "MLP4B_0053",
+        "MLP4B_0054"
+      ]
+    },
+    {
+      "name": "12",
+      "model": "gpt-6-astra",
+      "effort": "max",
+      "kind": "direct",
+      "prompt": "original_release/prompts/DIRECT_PROMPTS/12.txt",
+      "prompt_sha256": "189850421d75c0d8c9a75a81241986b17b51ad10bab63df284be8e08af325e3d",
+      "episode_ids": [
+        "MLP4B_0055",
+        "MLP4B_0056",
+        "MLP4B_0057",
+        "MLP4B_0058",
+        "MLP4B_0059"
+      ]
+    }
+  ],
+  "metadata": {
+    "source_member": "followups/2026-09-05/astra_max_r1/run_metadata.json",
+    "source_sha256": "729b0ab322be4f26b24b142079a0ad17f0cfac0ad4ba21768d463b44bd6abc2f",
+    "removed_fields": [],
+    "record": {
+      "started_utc": "2026-09-05T04:10:48.441626+00:00",
+      "protocol_sha256": "86a867af264a392f875a3a97474a74ec171acf7bfec79926aed9adb52df9c0fc",
+      "calls": [
+        {
+          "name": "01",
+          "model": "gpt-6-astra",
+          "effort": "max",
+          "kind": "direct",
+          "prompt": "prompts/DIRECT_PROMPTS/01.txt",
+          "prompt_sha256": "febe94397bd43a8a0be9b38d705c08eee2141b4a2ab755d5a46d87596506940c",
+          "episode_ids": [
+            "MLP4B_0000",
+            "MLP4B_0001",
+            "MLP4B_0002",
+            "MLP4B_0003",
+            "MLP4B_0004"
+          ]
+        },
+        {
+          "name": "02",
+          "model": "gpt-6-astra",
+          "effort": "max",
+          "kind": "direct",
+          "prompt": "prompts/DIRECT_PROMPTS/02.txt",
+          "prompt_sha256": "9b736aaa054838df6d04357ab3ffcac70efccdbdbf20f212389600c2216031b4",
+          "episode_ids": [
+            "MLP4B_0005",
+            "MLP4B_0006",
+            "MLP4B_0007",
+            "MLP4B_0008",
+            "MLP4B_0009"
+          ]
+        },
+        {
+          "name": "03",
+          "model": "gpt-6-astra",
+          "effort": "max",
+          "kind": "direct",
+          "prompt": "prompts/DIRECT_PROMPTS/03.txt",
+          "prompt_sha256": "6a79e47946d40e8114af5f609f7e960287ed76f70e891a200f6824fcf7aa1f70",
+          "episode_ids": [
+            "MLP4B_0010",
+            "MLP4B_0011",
+            "MLP4B_0012",
+            "MLP4B_0013",
+            "MLP4B_0014"
+          ]
+        },
+        {
+          "name": "04",
+          "model": "gpt-6-astra",
+          "effort": "max",
+          "kind": "direct",
+          "prompt": "prompts/DIRECT_PROMPTS/04.txt",
+          "prompt_sha256": "e85ce36bf8b82e04592c7c47afd391b0b2e519ee6bd1e6bcd1197bd429dd7f3d",
+          "episode_ids": [
+            "MLP4B_0015",
+            "MLP4B_0016",
+            "MLP4B_0017",
+            "MLP4B_0018",
+            "MLP4B_0019"
+          ]
+        },
+        {
+          "name": "05",
+          "model": "gpt-6-astra",
+          "effort": "max",
+          "kind": "direct",
+          "prompt": "prompts/DIRECT_PROMPTS/05.txt",
+          "prompt_sha256": "942539a45bdbc8eb682bf0df4075ac226fd519be566d83273fe1c0e36b656449",
+          "episode_ids": [
+            "MLP4B_0020",
+            "MLP4B_0021",
+            "MLP4B_0022",
+            "MLP4B_0023",
+            "MLP4B_0024"
+          ]
+        },
+        {
+          "name": "06",
+          "model": "gpt-6-astra",
+          "effort": "max",
+          "kind": "direct",
+          "prompt": "prompts/DIRECT_PROMPTS/06.txt",
+          "prompt_sha256": "376664ae74121b60446ed72fb5801e26ec8db066e52b3097034cc53344e167d9",
+          "episode_ids": [
+            "MLP4B_0025",
+            "MLP4B_0026",
+            "MLP4B_0027",
+            "MLP4B_0028",
+            "MLP4B_0029"
+          ]
+        },
+        {
+          "name": "07",
+          "model": "gpt-6-astra",
+          "effort": "max",
+          "kind": "direct",
+          "prompt": "prompts/DIRECT_PROMPTS/07.txt",
+          "prompt_sha256": "fe0552e4134e2e9f9780055949d4d662459c9e0ca75134fbb4532979206652a4",
+          "episode_ids": [
+            "MLP4B_0030",
+            "MLP4B_0031",
+            "MLP4B_0032",
+            "MLP4B_0033",
+            "MLP4B_0034"
+          ]
+        },
+        {
+          "name": "08",
+          "model": "gpt-6-astra",
+          "effort": "max",
+          "kind": "direct",
+          "prompt": "prompts/DIRECT_PROMPTS/08.txt",
+          "prompt_sha256": "2ee2884b8afdcfc9138abe6e7076ba98a9f26aaf4a3e66fd67eac4d7c97794ae",
+          "episode_ids": [
+            "MLP4B_0035",
+            "MLP4B_0036",
+            "MLP4B_0037",
+            "MLP4B_0038",
+            "MLP4B_0039"
+          ]
+        },
+        {
+          "name": "09",
+          "model": "gpt-6-astra",
+          "effort": "max",
+          "kind": "direct",
+          "prompt": "prompts/DIRECT_PROMPTS/09.txt",
+          "prompt_sha256": "ebb62b772ab44523248c9b512e20525a81b4d26b81610105dcc3303f9eacccb9",
+          "episode_ids": [
+            "MLP4B_0040",
+            "MLP4B_0041",
+            "MLP4B_0042",
+            "MLP4B_0043",
+            "MLP4B_0044"
+          ]
+        },
+        {
+          "name": "10",
+          "model": "gpt-6-astra",
+          "effort": "max",
+          "kind": "direct",
+          "prompt": "prompts/DIRECT_PROMPTS/10.txt",
+          "prompt_sha256": "0bb3074e4eb6fc3bd1d72ca5165572e1b3fe6878fb41b39f64c319f02990a13c",
+          "episode_ids": [
+            "MLP4B_0045",
+            "MLP4B_0046",
+            "MLP4B_0047",
+            "MLP4B_0048",
+            "MLP4B_0049"
+          ]
+        },
+        {
+          "name": "11",
+          "model": "gpt-6-astra",
+          "effort": "max",
+          "kind": "direct",
+          "prompt": "prompts/DIRECT_PROMPTS/11.txt",
+          "prompt_sha256": "c707b901592322b395b616a6a2674fab78d0efc5293bf7f58d18425b63ef8114",
+          "episode_ids": [
+            "MLP4B_0050",
+            "MLP4B_0051",
+            "MLP4B_0052",
+            "MLP4B_0053",
+            "MLP4B_0054"
+          ]
+        },
+        {
+          "name": "12",
+          "model": "gpt-6-astra",
+          "effort": "max",
+          "kind": "direct",
+          "prompt": "prompts/DIRECT_PROMPTS/12.txt",
+          "prompt_sha256": "189850421d75c0d8c9a75a81241986b17b51ad10bab63df284be8e08af325e3d",
+          "episode_ids": [
+            "MLP4B_0055",
+            "MLP4B_0056",
+            "MLP4B_0057",
+            "MLP4B_0058",
+            "MLP4B_0059"
+          ]
+        }
+      ]
+    }
+  },
+  "receipts": {
+    "source_member": "followups/2026-09-05/astra_max_r1/CALL_RECEIPTS.json",
+    "source_sha256": "dce8467f5f543e3d2ce4ada1279320f52432dddf2a5f900cc41e123405bccb8a",
+    "removed_fields": [],
+    "record": [
+      {
+        "call": "01",
+        "started_utc": "2026-09-05T04:10:48.445987+00:00",
+        "prompt_sha256": "febe94397bd43a8a0be9b38d705c08eee2141b4a2ab755d5a46d87596506940c",
+        "ended_utc": "2026-09-05T04:23:27.733798+00:00",
+        "exit_code": 0,
+        "timed_out": false,
+        "wall_seconds": 759.278,
+        "usage": [
+          {
+            "input_tokens": 19132,
+            "cached_input_tokens": 2816,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 20584,
+            "reasoning_output_tokens": 20484
+          }
+        ],
+        "response_present": true,
+        "valid_json": true,
+        "response_sha256": "699df7877d02cc6bfcd5523ffc4a3267f8745abfcb6d0f52b5248a57fd3eb271",
+        "observed_tool_event_count": 0,
+        "inference_error_count": 0,
+        "source_event_log_sha256": "d0b12b024da2387b6dcdf5e5864405a47108372fbe10593c7171dce970c43a5e",
+        "source_invocation_sha256": "95ba313a3eb4395d736f8d3be9b51065a619c91493530058fd4f086995498216",
+        "source_result_sha256": "3229893fd3e876abb1e73422cc26eba535b7d58f6ef8432d99fd2715aceb8d74"
+      },
+      {
+        "call": "02",
+        "started_utc": "2026-09-05T04:23:27.738977+00:00",
+        "prompt_sha256": "9b736aaa054838df6d04357ab3ffcac70efccdbdbf20f212389600c2216031b4",
+        "ended_utc": "2026-09-05T04:33:15.280912+00:00",
+        "exit_code": 0,
+        "timed_out": false,
+        "wall_seconds": 587.535,
+        "usage": [
+          {
+            "input_tokens": 20221,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 16008,
+            "reasoning_output_tokens": 15908
+          }
+        ],
+        "response_present": true,
+        "valid_json": true,
+        "response_sha256": "4fb3bd8168a240658a558c59ebedf374bc586a42350d1acfd205d735e00e31a1",
+        "observed_tool_event_count": 0,
+        "inference_error_count": 0,
+        "source_event_log_sha256": "0779ebe0087d62412f5bbb4c9ab4da0748e6140fe660189951a7495d804c6dab",
+        "source_invocation_sha256": "7b27d1e0fa69b9acf88ebba2556bbd5bb5ecb1b8d625f7b33c1c93f8a2fe9b41",
+        "source_result_sha256": "5f93fc2880f197fe38f445b4753aadf3fef4d3f8413e04f15ed87e9b60bf7210"
+      },
+      {
+        "call": "03",
+        "started_utc": "2026-09-05T04:33:15.285680+00:00",
+        "prompt_sha256": "6a79e47946d40e8114af5f609f7e960287ed76f70e891a200f6824fcf7aa1f70",
+        "ended_utc": "2026-09-05T04:46:41.092589+00:00",
+        "exit_code": 0,
+        "timed_out": false,
+        "wall_seconds": 805.802,
+        "usage": [
+          {
+            "input_tokens": 25151,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 20660,
+            "reasoning_output_tokens": 20560
+          }
+        ],
+        "response_present": true,
+        "valid_json": true,
+        "response_sha256": "f1c32efe120a0c4ad7987a8c56150d7b2dc91a7f15565606abfd34b57f6cbbf8",
+        "observed_tool_event_count": 0,
+        "inference_error_count": 0,
+        "source_event_log_sha256": "0755659cf8cc907a627bf4b82416952498d7d2fc26dd072008faf342350655c6",
+        "source_invocation_sha256": "198fd474e9f12d01a1e1ea91efb9b1c23889bd260986137a7c34e2fda6ff4e6f",
+        "source_result_sha256": "9fb2fa585a9ecfd8646e03ee6567594da461f0fee4556f342d6a131d35927660"
+      },
+      {
+        "call": "04",
+        "started_utc": "2026-09-05T04:46:41.097334+00:00",
+        "prompt_sha256": "e85ce36bf8b82e04592c7c47afd391b0b2e519ee6bd1e6bcd1197bd429dd7f3d",
+        "ended_utc": "2026-09-05T05:00:20.453637+00:00",
+        "exit_code": 0,
+        "timed_out": false,
+        "wall_seconds": 819.348,
+        "usage": [
+          {
+            "input_tokens": 19808,
+            "cached_input_tokens": 6912,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 20537,
+            "reasoning_output_tokens": 20437
+          }
+        ],
+        "response_present": true,
+        "valid_json": true,
+        "response_sha256": "2a61e47a0ecd9faf4e54aaa66af657f9f7250ce2274b63ef41ede5704f60110d",
+        "observed_tool_event_count": 0,
+        "inference_error_count": 0,
+        "source_event_log_sha256": "bf67bdc6dadbe251253bfe86df58f196f584e178e99c63ba31370986e86122e2",
+        "source_invocation_sha256": "96b107e112cf0a6e72751b6b72f01d4bc6673669037636fbaec8e315c2f1a622",
+        "source_result_sha256": "8294113ee5560444ecf6d2b01c08855cd2ab3773d23cd46f7ed455a288bf315f"
+      },
+      {
+        "call": "05",
+        "started_utc": "2026-09-05T05:00:20.458053+00:00",
+        "prompt_sha256": "942539a45bdbc8eb682bf0df4075ac226fd519be566d83273fe1c0e36b656449",
+        "ended_utc": "2026-09-05T05:12:56.260684+00:00",
+        "exit_code": 0,
+        "timed_out": false,
+        "wall_seconds": 755.795,
+        "usage": [
+          {
+            "input_tokens": 19622,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 17838,
+            "reasoning_output_tokens": 17738
+          }
+        ],
+        "response_present": true,
+        "valid_json": true,
+        "response_sha256": "d5a66f6b3977c0d5ab36a8297dca180685894e9dea6c1dfd9f0338b5b027a188",
+        "observed_tool_event_count": 0,
+        "inference_error_count": 0,
+        "source_event_log_sha256": "293bd8c4b8610590092e1168bd251c61ef69c1617aa798604847c700472d19cc",
+        "source_invocation_sha256": "7a577711217d83211323ce6dc15421f9bd06ce0c77eb3094db05bad3c23f0b9f",
+        "source_result_sha256": "73046eaa676b2011fff743f7c95e289ac49d34b1211255d74abb9c7507567ac1"
+      },
+      {
+        "call": "06",
+        "started_utc": "2026-09-05T05:12:56.266356+00:00",
+        "prompt_sha256": "376664ae74121b60446ed72fb5801e26ec8db066e52b3097034cc53344e167d9",
+        "ended_utc": "2026-09-05T05:24:59.900603+00:00",
+        "exit_code": 0,
+        "timed_out": false,
+        "wall_seconds": 723.661,
+        "usage": [
+          {
+            "input_tokens": 19128,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 18869,
+            "reasoning_output_tokens": 18769
+          }
+        ],
+        "response_present": true,
+        "valid_json": true,
+        "response_sha256": "94eda57f390687b83206f6925ed2ffad9865b6758b38c3d17d896552ce9c30fa",
+        "observed_tool_event_count": 0,
+        "inference_error_count": 0,
+        "source_event_log_sha256": "3e1a23dc562a5ce82e6fbe9133d13ad9042618c1c60f175948175799a20c0f1d",
+        "source_invocation_sha256": "08baa0bfa74457ba833e46949572603fa0c83a045cedbcd181abe6426c2701a2",
+        "source_result_sha256": "de7e86a81f5646e9a4fdf4d5d8dbea2d29f4229170b7756bea890dc29d967b44"
+      },
+      {
+        "call": "07",
+        "started_utc": "2026-09-05T05:24:59.905589+00:00",
+        "prompt_sha256": "fe0552e4134e2e9f9780055949d4d662459c9e0ca75134fbb4532979206652a4",
+        "ended_utc": "2026-09-05T05:35:35.929027+00:00",
+        "exit_code": 0,
+        "timed_out": false,
+        "wall_seconds": 636.023,
+        "usage": [
+          {
+            "input_tokens": 20362,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 17230,
+            "reasoning_output_tokens": 17130
+          }
+        ],
+        "response_present": true,
+        "valid_json": true,
+        "response_sha256": "aeb1614bbcb0783f2d0c44d066ef32e184fa12b5446b512c09781dface9b2207",
+        "observed_tool_event_count": 0,
+        "inference_error_count": 0,
+        "source_event_log_sha256": "12a9bb753eacda317603ccd50e167fc50a11c6095dd76cbb18102368c98c4ba7",
+        "source_invocation_sha256": "e32c68ec150ea10842a11a61c131077ce25a025dbfc9ebb9daa8a58598aaef48",
+        "source_result_sha256": "0f8d988327a4dd4c3e99232709bc40547f4aaeae41ca0dc451b2e36d1cd1424a"
+      },
+      {
+        "call": "08",
+        "started_utc": "2026-09-05T05:35:35.932131+00:00",
+        "prompt_sha256": "2ee2884b8afdcfc9138abe6e7076ba98a9f26aaf4a3e66fd67eac4d7c97794ae",
+        "ended_utc": "2026-09-05T05:46:14.818523+00:00",
+        "exit_code": 0,
+        "timed_out": false,
+        "wall_seconds": 638.886,
+        "usage": [
+          {
+            "input_tokens": 22884,
+            "cached_input_tokens": 6912,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 19284,
+            "reasoning_output_tokens": 19184
+          }
+        ],
+        "response_present": true,
+        "valid_json": true,
+        "response_sha256": "97dc60ae1d1d0903bae284acecabd4ba99848f8641b2fb0c2b84890bfbc5f887",
+        "observed_tool_event_count": 0,
+        "inference_error_count": 0,
+        "source_event_log_sha256": "ba28096b224d2c65d11a625b35212858a7a4576b79a6029d604753b86015d4d1",
+        "source_invocation_sha256": "cb07e2a4d3acc2c8c883f5efd042439be56cd44100938f0efadf3f27be9de35a",
+        "source_result_sha256": "51d81bd218d502d99c16d49aa3403b0234a033223b8b4b85d6f7fc7cddd8271f"
+      },
+      {
+        "call": "09",
+        "started_utc": "2026-09-05T05:46:14.823022+00:00",
+        "prompt_sha256": "ebb62b772ab44523248c9b512e20525a81b4d26b81610105dcc3303f9eacccb9",
+        "ended_utc": "2026-09-05T05:58:12.452096+00:00",
+        "exit_code": 0,
+        "timed_out": false,
+        "wall_seconds": 717.64,
+        "usage": [
+          {
+            "input_tokens": 22308,
+            "cached_input_tokens": 6912,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 17789,
+            "reasoning_output_tokens": 17689
+          }
+        ],
+        "response_present": true,
+        "valid_json": true,
+        "response_sha256": "fe622e802afd5150fc5bfd708cefa99339629f4af1cf630e4faa0e28f3b58102",
+        "observed_tool_event_count": 0,
+        "inference_error_count": 0,
+        "source_event_log_sha256": "a89901ac89a08b741c3035d6e786bd2e6b00f0da0989b9fc5659d8ce28decdb6",
+        "source_invocation_sha256": "2b955159e93b51c5d7092fda7fe42320f8dc1f5ebffe3c4929c441d5aab4b798",
+        "source_result_sha256": "cf7167bbe0edcf91a609fb6a959cf252bd7608c4c2dd11ce1ae9755eabca525c"
+      },
+      {
+        "call": "10",
+        "started_utc": "2026-09-05T05:58:12.456787+00:00",
+        "prompt_sha256": "0bb3074e4eb6fc3bd1d72ca5165572e1b3fe6878fb41b39f64c319f02990a13c",
+        "ended_utc": "2026-09-05T06:14:27.145047+00:00",
+        "exit_code": 0,
+        "timed_out": false,
+        "wall_seconds": 974.691,
+        "usage": [
+          {
+            "input_tokens": 32628,
+            "cached_input_tokens": 17920,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 10199,
+            "reasoning_output_tokens": 10099
+          }
+        ],
+        "response_present": true,
+        "valid_json": true,
+        "response_sha256": "18d491bbe40b61947dcb52da5826ba9b23969d2e240787f84c7c7c87ae5a6176",
+        "observed_tool_event_count": 0,
+        "inference_error_count": 0,
+        "source_event_log_sha256": "c3ae7fc6896daebe940be71bf53dd59d75af2c20dc0ce778dc5d93934e5f2735",
+        "source_invocation_sha256": "1a4f9d56684405b28b8929ef65ab8fa9c022527633617fd86cab7d9edc69fa96",
+        "source_result_sha256": "3b9099b8d3eee895ac782f26173aaff3a54179feb5d1e1d4c2cac4ed3f786446"
+      },
+      {
+        "call": "11",
+        "started_utc": "2026-09-05T06:14:27.150091+00:00",
+        "prompt_sha256": "c707b901592322b395b616a6a2674fab78d0efc5293bf7f58d18425b63ef8114",
+        "ended_utc": "2026-09-05T06:26:11.859650+00:00",
+        "exit_code": 0,
+        "timed_out": false,
+        "wall_seconds": 704.684,
+        "usage": [
+          {
+            "input_tokens": 17137,
+            "cached_input_tokens": 6912,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 18392,
+            "reasoning_output_tokens": 18292
+          }
+        ],
+        "response_present": true,
+        "valid_json": true,
+        "response_sha256": "48e08162290b521af1dc55a8cf2c3a28d47ae6a908c5ade27b5b27f9bb0e886c",
+        "observed_tool_event_count": 0,
+        "inference_error_count": 0,
+        "source_event_log_sha256": "e28190ec9df36a582934e93ed06dd1f81e8c7bec89a6915d7c489be679b8407b",
+        "source_invocation_sha256": "a35c3c63dfe4acf8a850f4dc03ffdc01422d84b48228d1bd3508e5e38a39ed1e",
+        "source_result_sha256": "ec6a69a8c0684c7e3bb2e1494a977becf87738f2d533b06a58c353ac5dbd3fe7"
+      },
+      {
+        "call": "12",
+        "started_utc": "2026-09-05T06:26:11.864549+00:00",
+        "prompt_sha256": "189850421d75c0d8c9a75a81241986b17b51ad10bab63df284be8e08af325e3d",
+        "ended_utc": "2026-09-05T06:37:59.391478+00:00",
+        "exit_code": 0,
+        "timed_out": false,
+        "wall_seconds": 707.523,
+        "usage": [
+          {
+            "input_tokens": 28628,
+            "cached_input_tokens": 22272,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 11408,
+            "reasoning_output_tokens": 11308
+          }
+        ],
+        "response_present": true,
+        "valid_json": true,
+        "response_sha256": "dfc45d61e46e7cef9293b4bd7dbc8a76db9f5a0fd66dc88a3bfc9e4786525782",
+        "observed_tool_event_count": 0,
+        "inference_error_count": 0,
+        "source_event_log_sha256": "c960d6a2d78327422f03498c5181904fec9c80adfaa8e30f0d66cb9436db7667",
+        "source_invocation_sha256": "92e8f8afba857b52995d9555eadd674e738ad156dc45f746a52256c9da2c0838",
+        "source_result_sha256": "0ee79a07b160f623eaadbbb304b18222dd3f707fc247d7b483c92a873e29dee6"
+      }
+    ]
+  },
+  "completion": {
+    "source_member": "followups/2026-09-05/astra_max_r1/RUN_COMPLETED.json",
+    "source_sha256": "9cb93bc2cc262e599de2e180ae603dcc2a2964435d26b9396964a82df93a9e8c",
+    "removed_fields": [],
+    "record": {
+      "ended_utc": "2026-09-05T06:37:59.396655+00:00",
+      "call_count": 12,
+      "wall_seconds": 8830.866,
+      "usage": [
+        [
+          {
+            "input_tokens": 19132,
+            "cached_input_tokens": 2816,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 20584,
+            "reasoning_output_tokens": 20484
+          }
+        ],
+        [
+          {
+            "input_tokens": 20221,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 16008,
+            "reasoning_output_tokens": 15908
+          }
+        ],
+        [
+          {
+            "input_tokens": 25151,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 20660,
+            "reasoning_output_tokens": 20560
+          }
+        ],
+        [
+          {
+            "input_tokens": 19808,
+            "cached_input_tokens": 6912,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 20537,
+            "reasoning_output_tokens": 20437
+          }
+        ],
+        [
+          {
+            "input_tokens": 19622,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 17838,
+            "reasoning_output_tokens": 17738
+          }
+        ],
+        [
+          {
+            "input_tokens": 19128,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 18869,
+            "reasoning_output_tokens": 18769
+          }
+        ],
+        [
+          {
+            "input_tokens": 20362,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 17230,
+            "reasoning_output_tokens": 17130
+          }
+        ],
+        [
+          {
+            "input_tokens": 22884,
+            "cached_input_tokens": 6912,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 19284,
+            "reasoning_output_tokens": 19184
+          }
+        ],
+        [
+          {
+            "input_tokens": 22308,
+            "cached_input_tokens": 6912,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 17789,
+            "reasoning_output_tokens": 17689
+          }
+        ],
+        [
+          {
+            "input_tokens": 32628,
+            "cached_input_tokens": 17920,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 10199,
+            "reasoning_output_tokens": 10099
+          }
+        ],
+        [
+          {
+            "input_tokens": 17137,
+            "cached_input_tokens": 6912,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 18392,
+            "reasoning_output_tokens": 18292
+          }
+        ],
+        [
+          {
+            "input_tokens": 28628,
+            "cached_input_tokens": 22272,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 11408,
+            "reasoning_output_tokens": 11308
+          }
+        ]
+      ]
+    }
+  },
+  "capture_audit": {
+    "source_member": "followups/2026-09-05/astra_max_r1/capture_audit.json",
+    "source_sha256": "72372eeca6a1bc268adff7914c9d2e76d9aaf951c08b7345e9b28b5e11f25678",
+    "removed_fields": [],
+    "record": {
+      "status": "PASS",
+      "call_count": 12,
+      "unique_sessions": 12,
+      "checks": [
+        {
+          "call": "01",
+          "fresh_session": true,
+          "single_turn": true,
+          "prompt_matches_release": true,
+          "response_matches_event": true,
+          "tool_calls": 0
+        },
+        {
+          "call": "02",
+          "fresh_session": true,
+          "single_turn": true,
+          "prompt_matches_release": true,
+          "response_matches_event": true,
+          "tool_calls": 0
+        },
+        {
+          "call": "03",
+          "fresh_session": true,
+          "single_turn": true,
+          "prompt_matches_release": true,
+          "response_matches_event": true,
+          "tool_calls": 0
+        },
+        {
+          "call": "04",
+          "fresh_session": true,
+          "single_turn": true,
+          "prompt_matches_release": true,
+          "response_matches_event": true,
+          "tool_calls": 0
+        },
+        {
+          "call": "05",
+          "fresh_session": true,
+          "single_turn": true,
+          "prompt_matches_release": true,
+          "response_matches_event": true,
+          "tool_calls": 0
+        },
+        {
+          "call": "06",
+          "fresh_session": true,
+          "single_turn": true,
+          "prompt_matches_release": true,
+          "response_matches_event": true,
+          "tool_calls": 0
+        },
+        {
+          "call": "07",
+          "fresh_session": true,
+          "single_turn": true,
+          "prompt_matches_release": true,
+          "response_matches_event": true,
+          "tool_calls": 0
+        },
+        {
+          "call": "08",
+          "fresh_session": true,
+          "single_turn": true,
+          "prompt_matches_release": true,
+          "response_matches_event": true,
+          "tool_calls": 0
+        },
+        {
+          "call": "09",
+          "fresh_session": true,
+          "single_turn": true,
+          "prompt_matches_release": true,
+          "response_matches_event": true,
+          "tool_calls": 0
+        },
+        {
+          "call": "10",
+          "fresh_session": true,
+          "single_turn": true,
+          "prompt_matches_release": true,
+          "response_matches_event": true,
+          "tool_calls": 0
+        },
+        {
+          "call": "11",
+          "fresh_session": true,
+          "single_turn": true,
+          "prompt_matches_release": true,
+          "response_matches_event": true,
+          "tool_calls": 0
+        },
+        {
+          "call": "12",
+          "fresh_session": true,
+          "single_turn": true,
+          "prompt_matches_release": true,
+          "response_matches_event": true,
+          "tool_calls": 0
+        }
+      ],
+      "scope": "Local capture integrity, not independent authentication of model weights or hidden serving defaults."
+    }
+  }
+}

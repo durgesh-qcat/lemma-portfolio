@@ -11,7 +11,7 @@ for path in sorted(root.rglob("*")):
     relative = path.relative_to(root)
     if (
         not path.is_file()
-        or path.name == "SHA256SUMS"
+        or path == root / "SHA256SUMS"
         or ".git" in relative.parts
         or "__pycache__" in relative.parts
     ):

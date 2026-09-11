@@ -1,0 +1,553 @@
+You are solving five unreleased LemmaPortfolio benchmark episodes independently.
+
+For each episode, each target t has a hidden set D(t): the displayed candidate declarations used as direct theorem dependencies in that target's historical elaborated source. For a portfolio S, F(S) is the number of targets t for which D(t) intersects S. Select exactly 3 distinct candidate IDs per episode to maximize F(S). This is static dependency-portfolio compression, not a claim about causal usefulness in a new proof.
+
+Use only the supplied text. Do not use web search, tools, files, a repository, theorem proving, compiler feedback, memory, prior chats, follow-up messages, or answers from another episode. Treat every episode independently.
+
+Return one JSON object and no prose. It must have exactly one key, "predictions". Its value must be an object with exactly these episode keys: MLP4B_0010, MLP4B_0011, MLP4B_0012, MLP4B_0013, MLP4B_0014. Each value must be an array of exactly 3 distinct candidate IDs copied from that episode. Candidate order does not matter.
+
+Episode JSON array follows.
+<episodes>
+[
+  {
+    "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+    "candidates": [
+      {
+        "id": "C01",
+        "statement": "∀ {𝕜 : Type u_1} {E : Type u_2} {M : Type u_3} {H : Type u_4} [inst : NontriviallyNormedField 𝕜] [inst_1 : NormedAddCommGroup E] [inst_2 : NormedSpace 𝕜 E] [inst_3 : TopologicalSpace H] [inst_4 : TopologicalSpace M] (f : OpenPartialHomeomorph M H) {I : ModelWithCorners 𝕜 E H} [I.Boundaryless] {x : M}, x ∈ f.source → Filter.map (↑(f.extend I)) (nhds x) = nhds (↑(f.extend I) x)"
+      },
+      {
+        "id": "C02",
+        "statement": "∀ {𝕜 : Type u_1} {E : Type u_2} {M : Type u_3} {H : Type u_4} [inst : NontriviallyNormedField 𝕜] [inst_1 : NormedAddCommGroup E] [inst_2 : NormedSpace 𝕜 E] [inst_3 : TopologicalSpace H] [inst_4 : TopologicalSpace M] {I : ModelWithCorners 𝕜 E H} [inst_5 : ChartedSpace H M] {x y : M}, y ∈ (extChartAt I x).source → (extChartAt I x).target ∈ nhdsWithin (↑(extChartAt I x) y) (Set.range ↑I)"
+      },
+      {
+        "id": "C03",
+        "statement": "∀ {𝕜 : Type u_1} {E : Type u_2} {M : Type u_3} {H : Type u_4} [inst : NontriviallyNormedField 𝕜] [inst_1 : NormedAddCommGroup E] [inst_2 : NormedSpace 𝕜 E] [inst_3 : TopologicalSpace H] [inst_4 : TopologicalSpace M] {I : ModelWithCorners 𝕜 E H} [inst_5 : ChartedSpace H M] (x : M), (extChartAt I x).source ∈ nhds x"
+      },
+      {
+        "id": "C04",
+        "statement": "∀ {𝕜 : Type u_1} {E : Type u_2} {M : Type u_3} {H : Type u_4} [inst : NontriviallyNormedField 𝕜] [inst_1 : NormedAddCommGroup E] [inst_2 : NormedSpace 𝕜 E] [inst_3 : TopologicalSpace H] [inst_4 : TopologicalSpace M] {I : ModelWithCorners 𝕜 E H} [inst_5 : ChartedSpace H M] (x : M), x ∈ (extChartAt I x).source"
+      },
+      {
+        "id": "C05",
+        "statement": "∀ {𝕜 : Type u_1} {E : Type u_2} {M : Type u_3} {H : Type u_4} [inst : NontriviallyNormedField 𝕜] [inst_1 : NormedAddCommGroup E] [inst_2 : NormedSpace 𝕜 E] [inst_3 : TopologicalSpace H] [inst_4 : TopologicalSpace M] {I : ModelWithCorners 𝕜 E H} [inst_5 : ChartedSpace H M] {x x' : M}, x' ∈ (extChartAt I x).source → ContinuousAt (↑(extChartAt I x)) x'"
+      },
+      {
+        "id": "C06",
+        "statement": "∀ {𝕜 : Type u_1} {E : Type u_2} {M : Type u_3} {H : Type u_4} [inst : NontriviallyNormedField 𝕜] [inst_1 : NormedAddCommGroup E] [inst_2 : NormedSpace 𝕜 E] [inst_3 : TopologicalSpace H] [inst_4 : TopologicalSpace M] {I : ModelWithCorners 𝕜 E H} [inst_5 : ChartedSpace H M] {x y : M}, y ∈ (extChartAt I x).source → nhdsWithin (↑(extChartAt I x) y) (extChartAt I x).target = nhdsWithin (↑(extChartAt I x) y) (Set.range ↑I)"
+      },
+      {
+        "id": "C07",
+        "statement": "∀ {𝕜 : Type u_1} {E : Type u_2} {M : Type u_3} {H : Type u_4} [inst : NontriviallyNormedField 𝕜] [inst_1 : NormedAddCommGroup E] [inst_2 : NormedSpace 𝕜 E] [inst_3 : TopologicalSpace H] [inst_4 : TopologicalSpace M] {I : ModelWithCorners 𝕜 E H} [inst_5 : ChartedSpace H M] {x x' : M}, x' ∈ (extChartAt I x).source → (extChartAt I x).source ∈ nhds x'"
+      },
+      {
+        "id": "C08",
+        "statement": "∀ {𝕜 : Type u_1} {E : Type u_2} {M : Type u_3} {H : Type u_4} [inst : NontriviallyNormedField 𝕜] [inst_1 : NormedAddCommGroup E] [inst_2 : NormedSpace 𝕜 E] [inst_3 : TopologicalSpace H] [inst_4 : TopologicalSpace M] (f : OpenPartialHomeomorph M H) {I : ModelWithCorners 𝕜 E H} {s : Set M} {x : M}, x ∈ f.source → (f.extend I).source ∈ nhdsWithin x s"
+      },
+      {
+        "id": "C09",
+        "statement": "∀ {𝕜 : Type u_1} {E : Type u_2} {M : Type u_3} {H : Type u_4} [inst : NontriviallyNormedField 𝕜] [inst_1 : NormedAddCommGroup E] [inst_2 : NormedSpace 𝕜 E] [inst_3 : TopologicalSpace H] [inst_4 : TopologicalSpace M] (f : OpenPartialHomeomorph M H) {I : ModelWithCorners 𝕜 E H} {y : M}, y ∈ f.source → (f.extend I).target ∈ nhdsWithin (↑(f.extend I) y) (Set.range ↑I)"
+      },
+      {
+        "id": "C10",
+        "statement": "∀ {𝕜 : Type u_1} {E : Type u_2} {M : Type u_3} {H : Type u_4} [inst : NontriviallyNormedField 𝕜] [inst_1 : NormedAddCommGroup E] [inst_2 : NormedSpace 𝕜 E] [inst_3 : TopologicalSpace H] [inst_4 : TopologicalSpace M] (f : OpenPartialHomeomorph M H) {I : ModelWithCorners 𝕜 E H} {x : M}, x ∈ f.source → Filter.map (↑(f.extend I)) (nhds x) = nhdsWithin (↑(f.extend I) x) (Set.range ↑I)"
+      },
+      {
+        "id": "C11",
+        "statement": "∀ {𝕜 : Type u_1} {E : Type u_2} {M : Type u_3} {H : Type u_4} [inst : NontriviallyNormedField 𝕜] [inst_1 : NormedAddCommGroup E] [inst_2 : NormedSpace 𝕜 E] [inst_3 : TopologicalSpace H] [inst_4 : TopologicalSpace M] (I : ModelWithCorners 𝕜 E H) [inst_5 : ChartedSpace H M] (x : M), (extChartAt I x).source = (chartAt H x).source"
+      },
+      {
+        "id": "C12",
+        "statement": "∀ {𝕜 : Type u_1} {E : Type u_2} {M : Type u_3} {H : Type u_4} [inst : NontriviallyNormedField 𝕜] [inst_1 : NormedAddCommGroup E] [inst_2 : NormedSpace 𝕜 E] [inst_3 : TopologicalSpace H] [inst_4 : TopologicalSpace M] (f : OpenPartialHomeomorph M H) {I : ModelWithCorners 𝕜 E H}, (f.extend I).source = f.source"
+      },
+      {
+        "id": "C13",
+        "statement": "∀ {𝕜 : Type u_1} {E : Type u_2} {M : Type u_3} {H : Type u_4} [inst : NontriviallyNormedField 𝕜] [inst_1 : NormedAddCommGroup E] [inst_2 : NormedSpace 𝕜 E] [inst_3 : TopologicalSpace H] [inst_4 : TopologicalSpace M] (f : OpenPartialHomeomorph M H) {I : ModelWithCorners 𝕜 E H} {s : Set M} {y : M}, y ∈ f.source → Filter.map (↑(f.extend I)) (nhdsWithin y s) = nhdsWithin (↑(f.extend I) y) (↑(f.extend I).symm ⁻¹' s ∩ Set.range ↑I)"
+      },
+      {
+        "id": "C14",
+        "statement": "∀ {𝕜 : Type u_1} {E : Type u_2} {M : Type u_3} {H : Type u_4} [inst : NontriviallyNormedField 𝕜] [inst_1 : NormedAddCommGroup E] [inst_2 : NormedSpace 𝕜 E] [inst_3 : TopologicalSpace H] [inst_4 : TopologicalSpace M] (f : OpenPartialHomeomorph M H) {I : ModelWithCorners 𝕜 E H}, IsOpen (f.extend I).source"
+      },
+      {
+        "id": "C15",
+        "statement": "∀ {𝕜 : Type u_1} {E : Type u_2} {M : Type u_3} {H : Type u_4} [inst : NontriviallyNormedField 𝕜] [inst_1 : NormedAddCommGroup E] [inst_2 : NormedSpace 𝕜 E] [inst_3 : TopologicalSpace H] [inst_4 : TopologicalSpace M] (f : OpenPartialHomeomorph M H) {I : ModelWithCorners 𝕜 E H} {x : E}, x ∈ (f.extend I).target → ContinuousAt (↑(f.extend I).symm) x"
+      },
+      {
+        "id": "C16",
+        "statement": "∀ {𝕜 : Type u_1} {E : Type u_2} {M : Type u_3} {H : Type u_4} [inst : NontriviallyNormedField 𝕜] [inst_1 : NormedAddCommGroup E] [inst_2 : NormedSpace 𝕜 E] [inst_3 : TopologicalSpace H] [inst_4 : TopologicalSpace M] (f : OpenPartialHomeomorph M H) {I : ModelWithCorners 𝕜 E H} {y : M}, y ∈ f.source → nhdsWithin (↑(f.extend I) y) (f.extend I).target = nhdsWithin (↑(f.extend I) y) (Set.range ↑I)"
+      }
+    ],
+    "episode_id": "MLP4B_0010",
+    "schema_version": "lemma-portfolio.dependency-compression.v4",
+    "selection_budget": 3,
+    "source_project": "mathlib",
+    "targets": [
+      {
+        "id": "T01",
+        "statement": "∀ {𝕜 : Type u_1} {E : Type u_2} {M : Type u_3} {H : Type u_4} {E' : Type u_5} {M' : Type u_6} {H' : Type u_7} [inst : NontriviallyNormedField 𝕜] [inst_1 : NormedAddCommGroup E] [inst_2 : NormedSpace 𝕜 E] [inst_3 : TopologicalSpace H] [inst_4 : TopologicalSpace M] {I : ModelWithCorners 𝕜 E H} [inst_5 : NormedAddCommGroup E'] [inst_6 : NormedSpace 𝕜 E'] [inst_7 : TopologicalSpace H'] [inst_8 : TopologicalSpace M'] {I' : ModelWithCorners 𝕜 E' H'} {s : Set M} [inst_9 : ChartedSpace H M] [inst_10 : ChartedSpace H' M'] {f : M → M'} {x : M}, ContinuousWithinAt f s x → nhdsWithin (↑(extChartAt I x) x) (↑(extChartAt I x).symm ⁻¹' s ∩ Set.range ↑I) = nhdsWithin (↑(extChartAt I x) x) ((extChartAt I x).target ∩ ↑(extChartAt I x).symm ⁻¹' (s ∩ f ⁻¹' (extChartAt I' (f x)).source))"
+      },
+      {
+        "id": "T02",
+        "statement": "∀ {𝕜 : Type u_1} {E : Type u_2} {M : Type u_3} {H : Type u_4} [inst : NontriviallyNormedField 𝕜] [inst_1 : NormedAddCommGroup E] [inst_2 : NormedSpace 𝕜 E] [inst_3 : TopologicalSpace H] [inst_4 : TopologicalSpace M] (f : OpenPartialHomeomorph M H) {I : ModelWithCorners 𝕜 E H} {s : Set M} {y : M}, y ∈ f.source → Filter.map (↑(f.extend I).symm) (nhdsWithin (↑(f.extend I) y) (↑(f.extend I).symm ⁻¹' s ∩ Set.range ↑I)) = nhdsWithin y s"
+      },
+      {
+        "id": "T03",
+        "statement": "∀ {𝕜 : Type u_1} {E : Type u_2} {M : Type u_3} {H : Type u_4} [inst : NontriviallyNormedField 𝕜] [inst_1 : NormedAddCommGroup E] [inst_2 : NormedSpace 𝕜 E] [inst_3 : TopologicalSpace H] [inst_4 : TopologicalSpace M] {I : ModelWithCorners 𝕜 E H} {s : Set M} [inst_5 : ChartedSpace H M] {x₀ x : M}, x ∈ closure (interior s) → x ∈ (extChartAt I x₀).source → ↑(extChartAt I x₀) x ∈ closure (interior (↑(extChartAt I x₀).symm ⁻¹' s ∩ (extChartAt I x₀).target))"
+      },
+      {
+        "id": "T04",
+        "statement": "∀ {𝕜 : Type u_1} {E : Type u_2} {M : Type u_3} {H : Type u_4} [inst : NontriviallyNormedField 𝕜] [inst_1 : NormedAddCommGroup E] [inst_2 : NormedSpace 𝕜 E] [inst_3 : TopologicalSpace H] [inst_4 : TopologicalSpace M] {I : ModelWithCorners 𝕜 E H} [inst_5 : ChartedSpace H M] (x : M), (extChartAt I x).target ∈ nhdsWithin (↑(extChartAt I x) x) (Set.range ↑I)"
+      },
+      {
+        "id": "T05",
+        "statement": "∀ {𝕜 : Type u_1} {E : Type u_2} {M : Type u_3} {H : Type u_4} [inst : NontriviallyNormedField 𝕜] [inst_1 : NormedAddCommGroup E] [inst_2 : NormedSpace 𝕜 E] [inst_3 : TopologicalSpace H] [inst_4 : TopologicalSpace M] (f : OpenPartialHomeomorph M H) {I : ModelWithCorners 𝕜 E H} {s : Set M} {y : M}, y ∈ f.source → Filter.map (↑(f.extend I)) (nhdsWithin y s) = nhdsWithin (↑(f.extend I) y) (↑(f.extend I) '' ((f.extend I).source ∩ s))"
+      },
+      {
+        "id": "T06",
+        "statement": "∀ {𝕜 : Type u_1} {E : Type u_2} {M : Type u_3} {H : Type u_4} [inst : NontriviallyNormedField 𝕜] [inst_1 : NormedAddCommGroup E] [inst_2 : NormedSpace 𝕜 E] [inst_3 : TopologicalSpace H] [inst_4 : TopologicalSpace M] (f : OpenPartialHomeomorph M H) {I : ModelWithCorners 𝕜 E H} {x : M}, x ∈ f.source → (f.extend I).source ∈ nhds x"
+      },
+      {
+        "id": "T07",
+        "statement": "∀ {𝕜 : Type u_1} {E : Type u_2} {M : Type u_3} {H : Type u_4} {E' : Type u_5} {M' : Type u_6} {H' : Type u_7} [inst : NontriviallyNormedField 𝕜] [inst_1 : NormedAddCommGroup E] [inst_2 : NormedSpace 𝕜 E] [inst_3 : TopologicalSpace H] [inst_4 : TopologicalSpace M] (f : OpenPartialHomeomorph M H) {I : ModelWithCorners 𝕜 E H} [inst_5 : NormedAddCommGroup E'] [inst_6 : NormedSpace 𝕜 E'] [inst_7 : TopologicalSpace H'] [inst_8 : TopologicalSpace M'] {I' : ModelWithCorners 𝕜 E' H'} {s : Set M} {f' : OpenPartialHomeomorph M' H'} {g : M → M'}, s ⊆ f.source → Set.MapsTo g s f'.source → (ContinuousOn (↑(f'.extend I') ∘ g ∘ ↑(f.extend I).symm) (↑(f.extend I) '' s) ↔ ContinuousOn g s)"
+      },
+      {
+        "id": "T08",
+        "statement": "∀ {𝕜 : Type u_1} {E : Type u_2} {M : Type u_3} {H : Type u_4} [inst : NontriviallyNormedField 𝕜] [inst_1 : NormedAddCommGroup E] [inst_2 : NormedSpace 𝕜 E] [inst_3 : TopologicalSpace H] [inst_4 : TopologicalSpace M] {I : ModelWithCorners 𝕜 E H} [inst_5 : ChartedSpace H M] {x : M} {y : E}, y ∈ (extChartAt I x).target → (extChartAt I x).target ∈ nhdsWithin y (Set.range ↑I)"
+      }
+    ],
+    "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+  },
+  {
+    "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+    "candidates": [
+      {
+        "id": "C01",
+        "statement": "∀ {C : Type u_1} [inst : CategoryTheory.Category.{v_1, u_1} C] [inst_1 : CategoryTheory.Preadditive C] {ι : Type u_2} {c : ComplexShape ι} {F G : HomologicalComplex C c} (φ : F ⟶ G) [inst_2 : HomologicalComplex.HasHomotopyCofiber φ] [inst_3 : DecidableRel c.Rel] (i j : ι) (hij : c.Rel i j) {A : C} {f g : A ⟶ HomologicalComplex.homotopyCofiber.X φ i}, CategoryTheory.CategoryStruct.comp f (HomologicalComplex.homotopyCofiber.fstX φ i j hij) = CategoryTheory.CategoryStruct.comp g (HomologicalComplex.homotopyCofiber.fstX φ i j hij) → CategoryTheory.CategoryStruct.comp f (HomologicalComplex.homotopyCofiber.sndX φ i) = CategoryTheory.CategoryStruct.comp g (HomologicalComplex.homotopyCofiber.sndX φ i) → f = g"
+      },
+      {
+        "id": "C02",
+        "statement": "∀ {C : Type u_1} [inst : CategoryTheory.Category.{v_1, u_1} C] [inst_1 : CategoryTheory.Preadditive C] {ι : Type u_2} {c : ComplexShape ι} {F K : HomologicalComplex C c} [inst_2 : DecidableRel c.Rel] [inst_3 : ∀ (i : ι), CategoryTheory.Limits.HasBinaryBiproduct (K.X i) (K.X i)] [inst_4 : K.HasCylinder] (φ₀ φ₁ : K ⟶ F) (h : Homotopy φ₀ φ₁), CategoryTheory.CategoryStruct.comp (HomologicalComplex.cylinder.ι₁ K) (HomologicalComplex.cylinder.desc φ₀ φ₁ h) = φ₁"
+      },
+      {
+        "id": "C03",
+        "statement": "∀ {C : Type u_1} [inst : CategoryTheory.Category.{v_1, u_1} C] [inst_1 : CategoryTheory.Preadditive C] {ι : Type u_2} {c : ComplexShape ι} {F G : HomologicalComplex C c} (φ : F ⟶ G) [inst_2 : HomologicalComplex.HasHomotopyCofiber φ] [inst_3 : DecidableRel c.Rel] (i j : ι) (hij : c.Rel i j), CategoryTheory.CategoryStruct.comp (HomologicalComplex.homotopyCofiber.d φ i j) (HomologicalComplex.homotopyCofiber.sndX φ j) = CategoryTheory.CategoryStruct.comp (HomologicalComplex.homotopyCofiber.fstX φ i j hij) (φ.f j) + CategoryTheory.CategoryStruct.comp (HomologicalComplex.homotopyCofiber.sndX φ i) (G.d i j)"
+      },
+      {
+        "id": "C04",
+        "statement": "∀ {C : Type u_1} [inst : CategoryTheory.Category.{v_1, u_1} C] [inst_1 : CategoryTheory.Preadditive C] {ι : Type u_2} {c : ComplexShape ι} {F K : HomologicalComplex C c} [inst_2 : DecidableRel c.Rel] [inst_3 : ∀ (i : ι), CategoryTheory.Limits.HasBinaryBiproduct (K.X i) (K.X i)] [inst_4 : K.HasCylinder] (φ₀ φ₁ : K ⟶ F) (h : Homotopy φ₀ φ₁), CategoryTheory.CategoryStruct.comp (HomologicalComplex.cylinder.ι₀ K) (HomologicalComplex.cylinder.desc φ₀ φ₁ h) = φ₀"
+      },
+      {
+        "id": "C05",
+        "statement": "∀ {C : Type u_1} [inst : CategoryTheory.Category.{v_1, u_1} C] [inst_1 : CategoryTheory.Preadditive C] {ι : Type u_2} {c : ComplexShape ι} {F G : HomologicalComplex C c} (φ : F ⟶ G) [inst_2 : HomologicalComplex.HasHomotopyCofiber φ] [inst_3 : DecidableRel c.Rel] {D : Type u_3} [inst_4 : CategoryTheory.Category.{v_2, u_3} D] [inst_5 : CategoryTheory.Preadditive D] (H : CategoryTheory.Functor C D) [inst_6 : H.Additive] [inst_7 : HomologicalComplex.HasHomotopyCofiber ((H.mapHomologicalComplex c).map φ)] (i : ι), CategoryTheory.CategoryStruct.comp (H.map (HomologicalComplex.homotopyCofiber.inrX φ i)) (HomologicalComplex.homotopyCofiber.mapHomologicalComplexObjXIso φ H i).hom = HomologicalComplex.homotopyCofiber.inrX ((H.mapHomologicalComplex c).map φ) i"
+      },
+      {
+        "id": "C06",
+        "statement": "∀ {C : Type u_1} [inst : CategoryTheory.Category.{v_1, u_1} C] [inst_1 : CategoryTheory.Preadditive C] {ι : Type u_2} {c : ComplexShape ι} {F G : HomologicalComplex C c} (φ : F ⟶ G) [inst_2 : HomologicalComplex.HasHomotopyCofiber φ] [inst_3 : DecidableRel c.Rel] (i j : ι) (hij : c.Rel j i) {Z : C} (h : G.X j ⟶ Z), CategoryTheory.CategoryStruct.comp (HomologicalComplex.homotopyCofiber.inlX φ i j hij) (CategoryTheory.CategoryStruct.comp (HomologicalComplex.homotopyCofiber.sndX φ j) h) = CategoryTheory.CategoryStruct.comp 0 h"
+      },
+      {
+        "id": "C07",
+        "statement": "∀ {C : Type u_1} [inst : CategoryTheory.Category.{v_1, u_1} C] [inst_1 : CategoryTheory.Preadditive C] {ι : Type u_2} {c : ComplexShape ι} {F G : HomologicalComplex C c} (φ : F ⟶ G) [inst_2 : HomologicalComplex.HasHomotopyCofiber φ] [inst_3 : DecidableRel c.Rel] (i j : ι) (hij : c.Rel i j), CategoryTheory.CategoryStruct.comp (HomologicalComplex.homotopyCofiber.inrX φ i) (HomologicalComplex.homotopyCofiber.fstX φ i j hij) = 0"
+      },
+      {
+        "id": "C08",
+        "statement": "∀ {C : Type u_1} [inst : CategoryTheory.Category.{v_1, u_1} C] [inst_1 : CategoryTheory.Preadditive C] {ι : Type u_2} {c : ComplexShape ι} {F G : HomologicalComplex C c} (φ : F ⟶ G) [inst_2 : HomologicalComplex.HasHomotopyCofiber φ] [inst_3 : DecidableRel c.Rel] (i : ι), (HomologicalComplex.homotopyCofiber.inr φ).f i = HomologicalComplex.homotopyCofiber.inrX φ i"
+      },
+      {
+        "id": "C09",
+        "statement": "∀ {C : Type u_1} [inst : CategoryTheory.Category.{v_1, u_1} C] [inst_1 : CategoryTheory.Preadditive C] {ι : Type u_2} {c : ComplexShape ι} {F G K : HomologicalComplex C c} (φ : F ⟶ G) [inst_2 : HomologicalComplex.HasHomotopyCofiber φ] [inst_3 : DecidableRel c.Rel] (α : G ⟶ K) (hα : Homotopy (CategoryTheory.CategoryStruct.comp φ α) 0) (j k : ι) (hjk : c.Rel j k), (HomologicalComplex.homotopyCofiber.desc φ α hα).f j = CategoryTheory.CategoryStruct.comp (HomologicalComplex.homotopyCofiber.fstX φ j k hjk) (hα.hom k j) + CategoryTheory.CategoryStruct.comp (HomologicalComplex.homotopyCofiber.sndX φ j) (α.f j)"
+      },
+      {
+        "id": "C10",
+        "statement": "∀ {C : Type u_1} [inst : CategoryTheory.Category.{v_1, u_1} C] [inst_1 : CategoryTheory.Preadditive C] {ι : Type u_2} {c : ComplexShape ι} {F G : HomologicalComplex C c} (φ : F ⟶ G) [inst_2 : HomologicalComplex.HasHomotopyCofiber φ] [inst_3 : DecidableRel c.Rel] (hc : ∀ (j : ι), ∃ i, c.Rel i j) (i j : ι) (hij : c.Rel j i), (HomologicalComplex.homotopyCofiber.inrCompHomotopy φ hc).hom i j = HomologicalComplex.homotopyCofiber.inlX φ i j hij"
+      },
+      {
+        "id": "C11",
+        "statement": "∀ {C : Type u_1} [inst : CategoryTheory.Category.{v_1, u_1} C] [inst_1 : CategoryTheory.Preadditive C] {ι : Type u_2} {c : ComplexShape ι} {F G K : HomologicalComplex C c} (φ : F ⟶ G) [inst_2 : HomologicalComplex.HasHomotopyCofiber φ] [inst_3 : DecidableRel c.Rel] (α : G ⟶ K) (hα : Homotopy (CategoryTheory.CategoryStruct.comp φ α) 0) (i j : ι) (hjk : c.Rel j i), CategoryTheory.CategoryStruct.comp (HomologicalComplex.homotopyCofiber.inlX φ i j hjk) ((HomologicalComplex.homotopyCofiber.desc φ α hα).f j) = hα.hom i j"
+      },
+      {
+        "id": "C12",
+        "statement": "∀ {C : Type u_1} [inst : CategoryTheory.Category.{v_1, u_1} C] [inst_1 : CategoryTheory.Preadditive C] {ι : Type u_2} {c : ComplexShape ι} {F G : HomologicalComplex C c} (φ : F ⟶ G) [inst_2 : HomologicalComplex.HasHomotopyCofiber φ] [inst_3 : DecidableRel c.Rel] (i j : ι) (hij : c.Rel j i), CategoryTheory.CategoryStruct.comp (HomologicalComplex.homotopyCofiber.inlX φ i j hij) (HomologicalComplex.homotopyCofiber.sndX φ j) = 0"
+      },
+      {
+        "id": "C13",
+        "statement": "∀ {C : Type u_1} [inst : CategoryTheory.Category.{v_1, u_1} C] [inst_1 : CategoryTheory.Preadditive C] {ι : Type u_2} {c : ComplexShape ι} {F G : HomologicalComplex C c} (φ : F ⟶ G) [inst_2 : HomologicalComplex.HasHomotopyCofiber φ] [inst_3 : DecidableRel c.Rel] (i j k : ι) (hij : c.Rel i j) (hjk : c.Rel j k), CategoryTheory.CategoryStruct.comp (HomologicalComplex.homotopyCofiber.d φ i j) (HomologicalComplex.homotopyCofiber.fstX φ j k hjk) = -CategoryTheory.CategoryStruct.comp (HomologicalComplex.homotopyCofiber.fstX φ i j hij) (F.d j k)"
+      },
+      {
+        "id": "C14",
+        "statement": "∀ {C : Type u_1} [inst : CategoryTheory.Category.{v_1, u_1} C] [inst_1 : CategoryTheory.Preadditive C] {ι : Type u_2} {c : ComplexShape ι} {F G : HomologicalComplex C c} (φ : F ⟶ G) [inst_2 : HomologicalComplex.HasHomotopyCofiber φ] [inst_3 : DecidableRel c.Rel] (i j : ι) (hij : c.Rel j i) {Z : C} (h : F.X i ⟶ Z), CategoryTheory.CategoryStruct.comp (HomologicalComplex.homotopyCofiber.inlX φ i j hij) (CategoryTheory.CategoryStruct.comp (HomologicalComplex.homotopyCofiber.fstX φ j i hij) h) = h"
+      },
+      {
+        "id": "C15",
+        "statement": "∀ {C : Type u_1} [inst : CategoryTheory.Category.{v_1, u_1} C] [inst_1 : CategoryTheory.Preadditive C] {ι : Type u_2} {c : ComplexShape ι} (K : HomologicalComplex C c) [inst_2 : DecidableRel c.Rel] [inst_3 : ∀ (i : ι), CategoryTheory.Limits.HasBinaryBiproduct (K.X i) (K.X i)] [inst_4 : K.HasCylinder], CategoryTheory.CategoryStruct.comp (HomologicalComplex.cylinder.ι₁ K) (HomologicalComplex.cylinder.π K) = CategoryTheory.CategoryStruct.id K"
+      },
+      {
+        "id": "C16",
+        "statement": "∀ {C : Type u_1} [inst : CategoryTheory.Category.{v_1, u_1} C] [inst_1 : CategoryTheory.Preadditive C] {ι : Type u_2} {c : ComplexShape ι} {F G K : HomologicalComplex C c} (φ : F ⟶ G) [inst_2 : HomologicalComplex.HasHomotopyCofiber φ] [inst_3 : DecidableRel c.Rel] (α : G ⟶ K) (hα : Homotopy (CategoryTheory.CategoryStruct.comp φ α) 0), CategoryTheory.CategoryStruct.comp (HomologicalComplex.homotopyCofiber.inr φ) (HomologicalComplex.homotopyCofiber.desc φ α hα) = α"
+      }
+    ],
+    "episode_id": "MLP4B_0011",
+    "schema_version": "lemma-portfolio.dependency-compression.v4",
+    "selection_budget": 3,
+    "source_project": "mathlib",
+    "targets": [
+      {
+        "id": "T01",
+        "statement": "∀ {C : Type u_1} [inst : CategoryTheory.Category.{v_1, u_1} C] [inst_1 : CategoryTheory.Preadditive C] {ι : Type u_2} {c : ComplexShape ι} {F G : HomologicalComplex C c} (φ : F ⟶ G) [inst_2 : HomologicalComplex.HasHomotopyCofiber φ] [inst_3 : DecidableRel c.Rel] (H : ∀ (j : ι), ∃ i, c.Rel i j), HomologicalComplex.homotopyCofiber.mapArrowHom φ φ H (CategoryTheory.CategoryStruct.id (CategoryTheory.Arrow.mk φ)) = CategoryTheory.CategoryStruct.id (HomologicalComplex.homotopyCofiber φ)"
+      },
+      {
+        "id": "T02",
+        "statement": "∀ {C : Type u_1} [inst : CategoryTheory.Category.{v_1, u_1} C] [inst_1 : CategoryTheory.Preadditive C] {ι : Type u_2} {c : ComplexShape ι} {F G : HomologicalComplex C c} (φ : F ⟶ G) [inst_2 : HomologicalComplex.HasHomotopyCofiber φ] [inst_3 : DecidableRel c.Rel] (i j : ι), CategoryTheory.CategoryStruct.comp (HomologicalComplex.homotopyCofiber.inrX φ i) (HomologicalComplex.homotopyCofiber.d φ i j) = CategoryTheory.CategoryStruct.comp (G.d i j) (HomologicalComplex.homotopyCofiber.inrX φ j)"
+      },
+      {
+        "id": "T03",
+        "statement": "∀ {C : Type u_1} [inst : CategoryTheory.Category.{v_1, u_1} C] [inst_1 : CategoryTheory.Preadditive C] {ι : Type u_2} {c : ComplexShape ι} {F G : HomologicalComplex C c} (φ : F ⟶ G) [inst_2 : HomologicalComplex.HasHomotopyCofiber φ] [inst_3 : DecidableRel c.Rel] (i j : ι) (hij : c.Rel i j) {Z : C} (h : G.X j ⟶ Z), CategoryTheory.CategoryStruct.comp (HomologicalComplex.homotopyCofiber.d φ i j) (CategoryTheory.CategoryStruct.comp (HomologicalComplex.homotopyCofiber.sndX φ j) h) = CategoryTheory.CategoryStruct.comp (CategoryTheory.CategoryStruct.comp (HomologicalComplex.homotopyCofiber.fstX φ i j hij) (φ.f j) + CategoryTheory.CategoryStruct.comp (HomologicalComplex.homotopyCofiber.sndX φ i) (G.d i j)) h"
+      },
+      {
+        "id": "T04",
+        "statement": "∀ {C : Type u_1} [inst : CategoryTheory.Category.{v_1, u_1} C] [inst_1 : CategoryTheory.Preadditive C] {ι : Type u_2} {c : ComplexShape ι} {F K : HomologicalComplex C c} [inst_2 : DecidableRel c.Rel] [inst_3 : ∀ (i : ι), CategoryTheory.Limits.HasBinaryBiproduct (K.X i) (K.X i)] [inst_4 : K.HasCylinder] (φ₀ φ₁ : K ⟶ F) (h : Homotopy φ₀ φ₁) {Z : HomologicalComplex C c} (h_1 : F ⟶ Z), CategoryTheory.CategoryStruct.comp (HomologicalComplex.cylinder.ι₀ K) (CategoryTheory.CategoryStruct.comp (HomologicalComplex.cylinder.desc φ₀ φ₁ h) h_1) = CategoryTheory.CategoryStruct.comp φ₀ h_1"
+      },
+      {
+        "id": "T05",
+        "statement": "∀ {C : Type u_1} [inst : CategoryTheory.Category.{v_1, u_1} C] [inst_1 : CategoryTheory.Preadditive C] {ι : Type u_2} {c : ComplexShape ι} (K : HomologicalComplex C c) [inst_2 : DecidableRel c.Rel] [inst_3 : ∀ (i : ι), CategoryTheory.Limits.HasBinaryBiproduct (K.X i) (K.X i)] [inst_4 : K.HasCylinder] {Z : HomologicalComplex C c} (h : K ⟶ Z), CategoryTheory.CategoryStruct.comp (HomologicalComplex.cylinder.ι₁ K) (CategoryTheory.CategoryStruct.comp (HomologicalComplex.cylinder.π K) h) = h"
+      },
+      {
+        "id": "T06",
+        "statement": "∀ {C : Type u_1} [inst : CategoryTheory.Category.{v_1, u_1} C] [inst_1 : CategoryTheory.Preadditive C] {ι : Type u_2} {c : ComplexShape ι} {F G K : HomologicalComplex C c} (φ : F ⟶ G) [inst_2 : HomologicalComplex.HasHomotopyCofiber φ] [inst_3 : DecidableRel c.Rel] (α : G ⟶ K) (hα : Homotopy (CategoryTheory.CategoryStruct.comp φ α) 0) (hc : ∀ (j : ι), ∃ i, c.Rel i j) (i j : ι), CategoryTheory.CategoryStruct.comp ((HomologicalComplex.homotopyCofiber.inrCompHomotopy φ hc).hom i j) ((HomologicalComplex.homotopyCofiber.desc φ α hα).f j) = hα.hom i j"
+      },
+      {
+        "id": "T07",
+        "statement": "∀ {C : Type u_1} [inst : CategoryTheory.Category.{v_1, u_1} C] [inst_1 : CategoryTheory.Preadditive C] {ι : Type u_2} {c : ComplexShape ι} (K : HomologicalComplex C c) [inst_2 : DecidableRel c.Rel] [inst_3 : ∀ (i : ι), CategoryTheory.Limits.HasBinaryBiproduct (K.X i) (K.X i)] [inst_4 : K.HasCylinder], (∀ (j : ι), ∃ i, c.Rel i j) → ∀ {D : Type u_3} [inst_5 : CategoryTheory.Category.{v_2, u_3} D] (H : CategoryTheory.Functor (HomologicalComplex C c) D), (HomologicalComplex.homotopyEquivalences C c).IsInvertedBy H → H.map (HomologicalComplex.cylinder.ι₀ K) = H.map (HomologicalComplex.cylinder.ι₁ K)"
+      },
+      {
+        "id": "T08",
+        "statement": "∀ {C : Type u_1} [inst : CategoryTheory.Category.{v_1, u_1} C] [inst_1 : CategoryTheory.Preadditive C] {ι : Type u_2} {c : ComplexShape ι} (K : HomologicalComplex C c) [inst_2 : DecidableRel c.Rel] [inst_3 : ∀ (i : ι), CategoryTheory.Limits.HasBinaryBiproduct (K.X i) (K.X i)] [inst_4 : K.HasCylinder] (i j : ι) (hij : c.Rel j i), CategoryTheory.CategoryStruct.comp (HomologicalComplex.cylinder.inlX K i j hij) ((HomologicalComplex.cylinder.π K).f j) = 0"
+      }
+    ],
+    "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+  },
+  {
+    "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+    "candidates": [
+      {
+        "id": "C01",
+        "statement": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K], (NumberField.mixedEmbedding.fundamentalCone.completeBasis K) NumberField.Units.dirichletUnitTheorem.w₀ = fun w => ↑w.mult"
+      },
+      {
+        "id": "C02",
+        "statement": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K], NumberField.mixedEmbedding.fundamentalCone.normLeOne K = NumberField.mixedEmbedding.normAtAllPlaces ⁻¹' ↑NumberField.mixedEmbedding.fundamentalCone.expMapBasis '' NumberField.mixedEmbedding.fundamentalCone.paramSet K"
+      },
+      {
+        "id": "C03",
+        "statement": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K] (x : NumberField.mixedEmbedding.realSpace K), NumberField.mixedEmbedding.norm (NumberField.mixedEmbedding.mixedSpaceOfRealSpace (↑NumberField.mixedEmbedding.fundamentalCone.expMapBasis x)) = Real.exp (x NumberField.Units.dirichletUnitTheorem.w₀) ^ Module.finrank ℚ K"
+      },
+      {
+        "id": "C04",
+        "statement": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K], Continuous ↑NumberField.mixedEmbedding.fundamentalCone.expMapBasis"
+      },
+      {
+        "id": "C05",
+        "statement": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K] (i : { w // w ≠ NumberField.Units.dirichletUnitTheorem.w₀ }), (NumberField.mixedEmbedding.fundamentalCone.completeBasis K) ↑i = ↑NumberField.mixedEmbedding.fundamentalCone.expMap.symm (NumberField.mixedEmbedding.normAtAllPlaces ((NumberField.mixedEmbedding K) ((algebraMap (NumberField.RingOfIntegers K) K) ↑(NumberField.Units.fundSystem K (NumberField.mixedEmbedding.fundamentalCone.equivFinRank.symm i)))))"
+      },
+      {
+        "id": "C06",
+        "statement": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K] (x : NumberField.mixedEmbedding.mixedSpace K), NumberField.mixedEmbedding.norm (NumberField.mixedEmbedding.mixedSpaceOfRealSpace (NumberField.mixedEmbedding.normAtAllPlaces x)) = NumberField.mixedEmbedding.norm x"
+      },
+      {
+        "id": "C07",
+        "statement": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K] {x : K}, x ≠ 0 → ∑ w, ↑NumberField.mixedEmbedding.fundamentalCone.expMap.symm (NumberField.mixedEmbedding.normAtAllPlaces ((NumberField.mixedEmbedding K) x)) w = Real.log ↑|(Algebra.norm ℚ) x|"
+      },
+      {
+        "id": "C08",
+        "statement": "{K : Type u_1} → [inst : Field K] → [inst_1 : NumberField K] → Fin (NumberField.Units.rank K) ≃ { w // w ≠ NumberField.Units.dirichletUnitTheorem.w₀ }"
+      },
+      {
+        "id": "C09",
+        "statement": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K] (s : Set (NumberField.mixedEmbedding.realSpace K)), NumberField.mixedEmbedding.normAtAllPlaces '' NumberField.mixedEmbedding.normAtAllPlaces ⁻¹' ↑NumberField.mixedEmbedding.fundamentalCone.expMapBasis '' s = ↑NumberField.mixedEmbedding.fundamentalCone.expMapBasis '' s"
+      },
+      {
+        "id": "C10",
+        "statement": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K] (x : NumberField.mixedEmbedding.realSpace K), ↑NumberField.mixedEmbedding.fundamentalCone.expMapBasis x = Real.exp (x NumberField.Units.dirichletUnitTheorem.w₀) • ↑NumberField.mixedEmbedding.fundamentalCone.expMapBasis fun i => if i = NumberField.Units.dirichletUnitTheorem.w₀ then 0 else x i"
+      },
+      {
+        "id": "C11",
+        "statement": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K] (x : NumberField.mixedEmbedding.mixedSpace K), NumberField.mixedEmbedding.logMap (NumberField.mixedEmbedding.mixedSpaceOfRealSpace (NumberField.mixedEmbedding.normAtAllPlaces x)) = NumberField.mixedEmbedding.logMap x"
+      },
+      {
+        "id": "C12",
+        "statement": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K], ↑NumberField.mixedEmbedding.fundamentalCone.expMapBasis '' closure (NumberField.mixedEmbedding.fundamentalCone.paramSet K) ⊆ NumberField.mixedEmbedding.fundamentalCone.compactSet K"
+      },
+      {
+        "id": "C13",
+        "statement": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K] (x : NumberField.mixedEmbedding.realSpace K) (w : NumberField.InfinitePlace K), 0 < ↑NumberField.mixedEmbedding.fundamentalCone.expMapBasis x w"
+      },
+      {
+        "id": "C14",
+        "statement": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K], NumberField.mixedEmbedding.fundamentalCone.expMap.source = Set.univ"
+      },
+      {
+        "id": "C15",
+        "statement": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K] (x : NumberField.mixedEmbedding.realSpace K), ↑NumberField.mixedEmbedding.fundamentalCone.expMapBasis x = Real.exp (x NumberField.Units.dirichletUnitTheorem.w₀) • fun w => ∏ i, w ((algebraMap (NumberField.RingOfIntegers K) K) ↑(NumberField.Units.fundSystem K (NumberField.mixedEmbedding.fundamentalCone.equivFinRank.symm i))) ^ x ↑i"
+      },
+      {
+        "id": "C16",
+        "statement": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K], NumberField.mixedEmbedding.fundamentalCone.normLeOne K = NumberField.mixedEmbedding.normAtAllPlaces ⁻¹' NumberField.mixedEmbedding.normAtAllPlaces '' NumberField.mixedEmbedding.fundamentalCone.normLeOne K"
+      }
+    ],
+    "episode_id": "MLP4B_0012",
+    "schema_version": "lemma-portfolio.dependency-compression.v4",
+    "selection_budget": 3,
+    "source_project": "mathlib",
+    "targets": [
+      {
+        "id": "T01",
+        "statement": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K] (x : NumberField.mixedEmbedding.realSpace K), NumberField.mixedEmbedding.logMap (NumberField.mixedEmbedding.mixedSpaceOfRealSpace (↑NumberField.mixedEmbedding.fundamentalCone.expMapBasis x)) ∈ ZSpan.fundamentalDomain (Module.Basis.ofZLatticeBasis ℝ (NumberField.Units.unitLattice K) (NumberField.Units.basisUnitLattice K)) ↔ ∀ (w : NumberField.InfinitePlace K), w ≠ NumberField.Units.dirichletUnitTheorem.w₀ → x w ∈ Set.Ico 0 1"
+      },
+      {
+        "id": "T02",
+        "statement": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K], Bornology.IsBounded (NumberField.mixedEmbedding.fundamentalCone.normLeOne K)"
+      },
+      {
+        "id": "T03",
+        "statement": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K], Continuous ↑NumberField.mixedEmbedding.fundamentalCone.expMap"
+      },
+      {
+        "id": "T04",
+        "statement": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K] {x : NumberField.mixedEmbedding.realSpace K}, x ∈ Submodule.span ℝ (Set.range fun w => NumberField.mixedEmbedding.fundamentalCone.completeFamily K ↑w) → ∑ w, x w = 0"
+      },
+      {
+        "id": "T05",
+        "statement": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K], closure (NumberField.mixedEmbedding.fundamentalCone.normLeOne K) ⊆ NumberField.mixedEmbedding.normAtAllPlaces ⁻¹' NumberField.mixedEmbedding.fundamentalCone.compactSet K"
+      },
+      {
+        "id": "T06",
+        "statement": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K], NumberField.mixedEmbedding.normAtAllPlaces '' NumberField.mixedEmbedding.fundamentalCone.normLeOne K = ↑NumberField.mixedEmbedding.fundamentalCone.expMapBasis '' NumberField.mixedEmbedding.fundamentalCone.paramSet K"
+      },
+      {
+        "id": "T07",
+        "statement": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K] {x : NumberField.mixedEmbedding.realSpace K}, x ≠ 0 → x ∈ ↑NumberField.mixedEmbedding.fundamentalCone.expMapBasis '' closure (NumberField.mixedEmbedding.fundamentalCone.paramSet K) → x ∈ NumberField.mixedEmbedding.fundamentalCone.compactSet K"
+      },
+      {
+        "id": "T08",
+        "statement": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K] {x : NumberField.mixedEmbedding.realSpace K}, x ∈ NumberField.mixedEmbedding.fundamentalCone.compactSet K → ∀ (w : NumberField.InfinitePlace K), 0 ≤ x w"
+      }
+    ],
+    "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+  },
+  {
+    "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+    "candidates": [
+      {
+        "id": "C01",
+        "statement": "∀ {b : ℕ}, 1 < b → ∀ (x : ℕ), x ≤ b ^ Nat.clog b x"
+      },
+      {
+        "id": "C02",
+        "statement": "∀ {b n : ℕ}, 1 < b → 1 < n → 0 < Nat.clog b n"
+      },
+      {
+        "id": "C03",
+        "statement": "∀ (b n : ℕ), Nat.log b (n / b) = Nat.log b n - 1"
+      },
+      {
+        "id": "C04",
+        "statement": "∀ {b x y : ℕ}, y ≠ 0 → y < b ^ x → Nat.log b y < x"
+      },
+      {
+        "id": "C05",
+        "statement": "∀ {b : ℕ}, 1 < b → ∀ {x y : ℕ}, y < Nat.clog b x ↔ b ^ y < x"
+      },
+      {
+        "id": "C06",
+        "statement": "∀ {b m n : ℕ}, m ≠ 0 ∨ 1 < b ∧ n ≠ 0 → (Nat.log b n = m ↔ b ^ m ≤ n ∧ n < b ^ (m + 1))"
+      },
+      {
+        "id": "C07",
+        "statement": "∀ {b : ℕ}, 1 < b → ∀ {x y : ℕ}, y ≠ 0 → (x ≤ Nat.log b y ↔ b ^ x ≤ y)"
+      },
+      {
+        "id": "C08",
+        "statement": "∀ {b : ℕ}, 1 < b → ∀ {x y : ℕ}, y ≠ 0 → (Nat.log b y < x ↔ y < b ^ x)"
+      },
+      {
+        "id": "C09",
+        "statement": "∀ {b m n : ℕ}, b ^ m ≤ n → n < b ^ (m + 1) → Nat.log b n = m"
+      },
+      {
+        "id": "C10",
+        "statement": "∀ {b x y : ℕ}, y ≠ 0 → x ≤ Nat.log b y → b ^ x ≤ y"
+      },
+      {
+        "id": "C11",
+        "statement": "∀ {b : ℕ}, 1 < b → ∀ {x y : ℕ}, Nat.clog b x ≤ y ↔ x ≤ b ^ y"
+      },
+      {
+        "id": "C12",
+        "statement": "∀ {b x y : ℕ}, 1 < b → b ^ x ≤ y → x ≤ Nat.log b y"
+      },
+      {
+        "id": "C13",
+        "statement": "∀ {b n : ℕ}, n < b → Nat.log b n = 0"
+      },
+      {
+        "id": "C14",
+        "statement": "∀ {b : ℕ}, b ≤ 1 → ∀ (n : ℕ), Nat.log b n = 0"
+      },
+      {
+        "id": "C15",
+        "statement": "∀ {b n : ℕ}, 1 < b → n ≠ 0 → Nat.log b (n * b) = Nat.log b n + 1"
+      },
+      {
+        "id": "C16",
+        "statement": "∀ {b x y : ℕ}, 1 < b → Nat.log b y < x → y < b ^ x"
+      }
+    ],
+    "episode_id": "MLP4B_0013",
+    "schema_version": "lemma-portfolio.dependency-compression.v4",
+    "selection_budget": 3,
+    "source_project": "mathlib",
+    "targets": [
+      {
+        "id": "T01",
+        "statement": "∀ (b k n : ℕ), Nat.clog (b ^ k) n = (Nat.clog b n + (k - 1)) / k"
+      },
+      {
+        "id": "T02",
+        "statement": "∀ (b k n : ℕ), Nat.log (b ^ k) n = Nat.log b n / k"
+      },
+      {
+        "id": "T03",
+        "statement": "∀ {b n : ℕ}, 1 < b → (Nat.clog b n < Nat.clog b (n + 1) ↔ b ^ Nat.clog b n = n)"
+      },
+      {
+        "id": "T04",
+        "statement": "∀ {b x y : ℕ}, x ≤ b ^ y → Nat.clog b x ≤ y"
+      },
+      {
+        "id": "T05",
+        "statement": "∀ (b : ℕ) {x : ℕ}, x ≠ 0 → Nat.log b x < x"
+      },
+      {
+        "id": "T06",
+        "statement": "∀ {b : ℕ}, 1 < b → ∀ (x : ℕ), Nat.log b (b ^ x) = x"
+      },
+      {
+        "id": "T07",
+        "statement": "∀ {b n : ℕ}, 1 < b → n ≠ 0 → (Nat.log b n < Nat.log b (n + 1) ↔ b ^ Nat.log b (n + 1) = n + 1)"
+      },
+      {
+        "id": "T08",
+        "statement": "∀ (b : ℕ) {n m : ℕ}, n ≤ m → Nat.clog b n ≤ Nat.clog b m"
+      }
+    ],
+    "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+  },
+  {
+    "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+    "candidates": [
+      {
+        "id": "C01",
+        "statement": "∀ {R : Type r} [inst : CommRing R] {W' : WeierstrassCurve.Jacobian R} (P Q : Fin 3 → R), W'.addMap ⟦P⟧ ⟦Q⟧ = ⟦W'.add P Q⟧"
+      },
+      {
+        "id": "C02",
+        "statement": "∀ {F : Type u} [inst : Field F] {W : WeierstrassCurve.Jacobian F} {P Q : Fin 3 → F}, P 2 ≠ 0 → Q 2 ≠ 0 → P 0 * Q 2 ^ 2 = Q 0 * P 2 ^ 2 → P 1 * Q 2 ^ 3 = Q 1 * P 2 ^ 3 → P 1 * Q 2 ^ 3 = W.negY Q * P 2 ^ 3 → W.add P Q = W.dblU P • ![1, 1, 0]"
+      },
+      {
+        "id": "C03",
+        "statement": "∀ {F : Type u} [inst : Field F] {W : WeierstrassCurve.Jacobian F} {P : Fin 3 → F}, P 2 ≠ 0 → W.neg P = P 2 • ![P 0 / P 2 ^ 2, W.toAffine.negY (P 0 / P 2 ^ 2) (P 1 / P 2 ^ 3), 1]"
+      },
+      {
+        "id": "C04",
+        "statement": "∀ {F : Type u} [inst : Field F] {W : WeierstrassCurve.Jacobian F} (P : Fin 3 → F) {u : F}, IsUnit u → WeierstrassCurve.Jacobian.Point.toAffine W (u • P) = WeierstrassCurve.Jacobian.Point.toAffine W P"
+      },
+      {
+        "id": "C05",
+        "statement": "∀ {R : Type r} [inst : CommRing R] {W' : WeierstrassCurve.Jacobian R} (P : Fin 3 → R), W'.neg P 0 = P 0"
+      },
+      {
+        "id": "C06",
+        "statement": "∀ {R : Type r} [inst : CommRing R] {W' : WeierstrassCurve.Jacobian R} (P : Fin 3 → R), W'.neg P 2 = P 2"
+      },
+      {
+        "id": "C07",
+        "statement": "∀ {R : Type r} [inst : CommRing R] {W' : WeierstrassCurve.Jacobian R} (P : Fin 3 → R), W'.negMap ⟦P⟧ = ⟦W'.neg P⟧"
+      },
+      {
+        "id": "C08",
+        "statement": "∀ {R : Type r} [inst : CommRing R] {W' : WeierstrassCurve.Jacobian R} (P : Fin 3 → R), W'.neg P 1 = W'.negY P"
+      },
+      {
+        "id": "C09",
+        "statement": "∀ {F : Type u} [inst : Field F] {W : WeierstrassCurve.Jacobian F} {P : Fin 3 → F}, W.Nonsingular P → P 2 = 0 → W.neg P = -(P 1 / P 0) • ![1, 1, 0]"
+      },
+      {
+        "id": "C10",
+        "statement": "∀ {R : Type r} [inst : CommRing R] {W' : WeierstrassCurve.Jacobian R} {P Q : Fin 3 → R}, W'.Equation P → P 2 = 0 → Q 2 ≠ 0 → W'.add P Q = (P 0 * Q 2) • Q"
+      },
+      {
+        "id": "C11",
+        "statement": "∀ {F : Type u} [inst : Field F] {W : WeierstrassCurve.Jacobian F} [inst_1 : DecidableEq F] {P Q : Fin 3 → F}, W.Equation P → W.Equation Q → P 2 ≠ 0 → Q 2 ≠ 0 → P 0 * Q 2 ^ 2 = Q 0 * P 2 ^ 2 → P 1 * Q 2 ^ 3 ≠ W.negY Q * P 2 ^ 3 → W.add P Q = W.dblZ P • ![W.toAffine.addX (P 0 / P 2 ^ 2) (Q 0 / Q 2 ^ 2) (W.toAffine.slope (P 0 / P 2 ^ 2) (Q 0 / Q 2 ^ 2) (P 1 / P 2 ^ 3) (Q 1 / Q 2 ^ 3)), W.toAffine.addY (P 0 / P 2 ^ 2) (Q 0 / Q 2 ^ 2) (P 1 / P 2 ^ 3) (W.toAffine.slope (P 0 / P 2 ^ 2) (Q 0 / Q 2 ^ 2) (P 1 / P 2 ^ 3) (Q 1 / Q 2 ^ 3)), 1]"
+      },
+      {
+        "id": "C12",
+        "statement": "∀ {R : Type r} [inst : CommRing R] {W' : WeierstrassCurve.Jacobian R} (P : Fin 3 → R), WeierstrassCurve.Jacobian.addZ P (W'.neg P) = 0"
+      },
+      {
+        "id": "C13",
+        "statement": "∀ {F : Type u} [inst : Field F] {W : WeierstrassCurve.Jacobian F} {P Q : Fin 3 → F}, W.Equation P → W.Equation Q → P 2 ≠ 0 → Q 2 ≠ 0 → P 0 * Q 2 ^ 2 = Q 0 * P 2 ^ 2 → P 1 * Q 2 ^ 3 ≠ Q 1 * P 2 ^ 3 → W.add P Q = WeierstrassCurve.Jacobian.addU P Q • ![1, 1, 0]"
+      },
+      {
+        "id": "C14",
+        "statement": "∀ {R : Type r} [inst : CommRing R] {W' : WeierstrassCurve.Jacobian R} {P : Fin 3 → R}, W'.Equation P → W'.addX P (W'.neg P) = W'.dblZ P ^ 2"
+      },
+      {
+        "id": "C15",
+        "statement": "∀ {F : Type u} [inst : Field F] {W : WeierstrassCurve.Jacobian F}, WeierstrassCurve.Jacobian.Point.toAffine W ![1, 1, 0] = 0"
+      },
+      {
+        "id": "C16",
+        "statement": "∀ {F : Type u} [inst : Field F] {W : WeierstrassCurve.Jacobian F} {P Q : Fin 3 → F}, W.Nonsingular P → W.Nonsingular Q → P 2 = 0 → Q 2 = 0 → W.add P Q = P 0 ^ 2 • ![1, 1, 0]"
+      }
+    ],
+    "episode_id": "MLP4B_0014",
+    "schema_version": "lemma-portfolio.dependency-compression.v4",
+    "selection_budget": 3,
+    "source_project": "mathlib",
+    "targets": [
+      {
+        "id": "T01",
+        "statement": "∀ {F : Type u} [inst : Field F] {W : WeierstrassCurve.Jacobian F} {P : Fin 3 → F}, W.Nonsingular P → WeierstrassCurve.Jacobian.Point.toAffine W (W.neg P) = -WeierstrassCurve.Jacobian.Point.toAffine W P"
+      },
+      {
+        "id": "T02",
+        "statement": "∀ {F : Type u} [inst : Field F] {W : WeierstrassCurve.Jacobian F} [inst_1 : DecidableEq F] {P Q : Fin 3 → F}, W.Equation P → W.Equation Q → P 2 ≠ 0 → Q 2 ≠ 0 → ¬(P 0 * Q 2 ^ 2 = Q 0 * P 2 ^ 2 ∧ P 1 * Q 2 ^ 3 = W.negY Q * P 2 ^ 3) → W.addMap ⟦P⟧ ⟦Q⟧ = ⟦![W.toAffine.addX (P 0 / P 2 ^ 2) (Q 0 / Q 2 ^ 2) (W.toAffine.slope (P 0 / P 2 ^ 2) (Q 0 / Q 2 ^ 2) (P 1 / P 2 ^ 3) (Q 1 / Q 2 ^ 3)), W.toAffine.addY (P 0 / P 2 ^ 2) (Q 0 / Q 2 ^ 2) (P 1 / P 2 ^ 3) (W.toAffine.slope (P 0 / P 2 ^ 2) (Q 0 / Q 2 ^ 2) (P 1 / P 2 ^ 3) (Q 1 / Q 2 ^ 3)), 1]⟧"
+      },
+      {
+        "id": "T03",
+        "statement": "∀ {F : Type u} [inst : Field F] {W : WeierstrassCurve.Jacobian F} {P : Fin 3 → F} {Q : WeierstrassCurve.Jacobian.PointClass F}, W.Nonsingular P → W.NonsingularLift Q → P 2 = 0 → W.addMap ⟦P⟧ Q = Q"
+      },
+      {
+        "id": "T04",
+        "statement": "∀ {F : Type u} [inst : Field F] {W : WeierstrassCurve.Jacobian F} {P : Fin 3 → F}, P 2 ≠ 0 → W.negMap ⟦P⟧ = ⟦![P 0 / P 2 ^ 2, W.toAffine.negY (P 0 / P 2 ^ 2) (P 1 / P 2 ^ 3), 1]⟧"
+      },
+      {
+        "id": "T05",
+        "statement": "∀ {F : Type u} [inst : Field F] {W : WeierstrassCurve.Jacobian F}, WeierstrassCurve.Jacobian.Point.toAffineLift 0 = 0"
+      },
+      {
+        "id": "T06",
+        "statement": "∀ {R : Type r} [inst : CommRing R] {W' : WeierstrassCurve.Jacobian R} {P : Fin 3 → R}, W'.Equation P → W'.addXYZ P (W'.neg P) = -W'.dblZ P • ![1, 1, 0]"
+      },
+      {
+        "id": "T07",
+        "statement": "∀ {F : Type u} [inst : Field F] {W : WeierstrassCurve.Jacobian F} {P : Fin 3 → F}, W.Nonsingular P → P 2 = 0 → W.negMap ⟦P⟧ = ⟦![1, 1, 0]⟧"
+      },
+      {
+        "id": "T08",
+        "statement": "∀ {F : Type u} [inst : Field F] {W : WeierstrassCurve.Jacobian F} {P Q : Fin 3 → F}, P ≈ Q → WeierstrassCurve.Jacobian.Point.toAffine W P = WeierstrassCurve.Jacobian.Point.toAffine W Q"
+      }
+    ],
+    "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+  }
+]
+</episodes>

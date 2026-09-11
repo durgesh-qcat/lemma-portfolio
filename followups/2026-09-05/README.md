@@ -1,16 +1,21 @@
 # Final completed follow-up snapshot — 5 September 2026
 
-**For manuscript preparation, start with [PAPER_HANDOFF.md](PAPER_HANDOFF.md).**
-The final results and interpretation are in [REPORT.md](REPORT.md); machine-readable
-summaries, comparisons, usage, and diagnostics are in [FOLLOWUP_RESULTS.json](FOLLOWUP_RESULTS.json).
+The [final submitted paper](../../paper/LemmaPortfolio.pdf) now incorporates
+these completed runs. See [submission/](../../submission/) for the exact submitted
+archive and [RESULTS.md](../../RESULTS.md) for its result presentation. This
+directory preserves the richer experimental export. [REPORT.md](REPORT.md) and
+[PAPER_HANDOFF.md](PAPER_HANDOFF.md) are historical preparation records;
+machine-readable comparisons, usage, and diagnostics are in
+[FOLLOWUP_RESULTS.json](FOLLOWUP_RESULTS.json).
 
 All retained runs are complete. This snapshot supersedes the earlier September 4
 snapshot for current reporting, without overwriting it. It adds Astra max and the
 second Sol/Astra xhigh pair. The third Codex runs were cancelled. Two completed
 direct Anthropic API captures (Claude Fable 5 and Claude Fable 5.1, both at xhigh
 effort) are included outside the Codex evaluation; see [CLAUDE_RUNS.md](CLAUDE_RUNS.md).
-No OpenRouter result is included. The original consumer results and manuscript
-have not been modified.
+No OpenRouter result is included. Original consumer responses and results remain
+unchanged. The preceding manuscript is preserved under
+[paper/historical/2026-09-05/](../../paper/historical/2026-09-05/).
 
 ## Contents
 
@@ -58,14 +63,17 @@ python3 verify_release.py
 python3 followups/2026-09-05/verify.py
 ```
 
-The first command checks all repository file hashes and reproduces the original
-V4 scores. The second reproduces every final follow-up score and per-item row,
+The first command checks repository integrity and the release results.
+The second reproduces every completed follow-up score and per-item row,
 all four support widths and tie diagnostics, the recorded paired comparisons,
 repeated-run means/sample standard deviations, and usage aggregates. It also
 checks raw answer/prompt hashes, final queue disposition, the two Claude phases'
 answer/prompt hashes, receipts, usage, scores, and cross-run comparisons, and
-preservation of all previously published files except the intentionally updated
-root README.
+preservation of every file in the original baseline inventory, including its
+README. The explicit [historical relocation map](../../provenance/PRE_SUBMISSION_FILES.json)
+identifies exact copies of documentation, manuscript files, and tooling that were
+updated for the final submission. The original inventory is unchanged; no hash
+requirement is skipped. Original benchmark evidence is still checked in place.
 Neither command calls a model or writes generated results into the repository.
 Run the release verifier from a clean clone: local ignored `.env` or
 `scratch_runs/` files are intentionally not part of the published manifest and

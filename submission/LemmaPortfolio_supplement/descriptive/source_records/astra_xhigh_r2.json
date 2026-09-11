@@ -1,0 +1,1143 @@
+{
+  "schema_version": "lemma-portfolio.external-prediction-score.v1",
+  "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+  "prediction_files": [
+    "01.json",
+    "02.json",
+    "03.json",
+    "04.json",
+    "05.json",
+    "06.json",
+    "07.json",
+    "08.json",
+    "09.json",
+    "10.json",
+    "11.json",
+    "12.json"
+  ],
+  "invalid_source_file_count": 0,
+  "invalid_source_files": [],
+  "submitted_episode_count": 60,
+  "missing_episode_count": 0,
+  "missing_episode_ids": [],
+  "malformed_episode_count": 0,
+  "malformed_episode_ids": [],
+  "summary": {
+    "system_id": "astra_xhigh_r2",
+    "display_label": "astra xhigh r2",
+    "exact_optimal": 30,
+    "total": 60,
+    "exact_optimal_percentage": 50.0,
+    "valid": 60,
+    "valid_percentage": 100.0,
+    "achieved_target_coverage": 332,
+    "target_count": 480,
+    "target_coverage_percentage": 69.16666666666667,
+    "mean_oracle_normalized_coverage_percentage": 88.41269841269842,
+    "selected_edge_recall_percentage": 42.874692874692876,
+    "wilson_95_interval_fraction": [
+      0.3773502424155577,
+      0.6226497575844423
+    ],
+    "block_bootstrap_95_interval_fraction": [
+      0.4166666666666667,
+      0.5833333333333334
+    ],
+    "exact_by_block": {
+      "D01": 2,
+      "D02": 2,
+      "D03": 2,
+      "D04": 3,
+      "D05": 1,
+      "D06": 3,
+      "D07": 3,
+      "D08": 2,
+      "D09": 4,
+      "D10": 3,
+      "D11": 2,
+      "D12": 3
+    }
+  },
+  "per_item": [
+    {
+      "system_id": "astra_xhigh_r2",
+      "episode_id": "MLP4B_0000",
+      "block_id": "D01",
+      "selected": [
+        "C01",
+        "C10",
+        "C15"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 5,
+      "optimal_coverage": 7,
+      "normalized_coverage": 0.7142857142857143,
+      "selected_edges": 5,
+      "hidden_edges": 19,
+      "input_status": "valid"
+    },
+    {
+      "system_id": "astra_xhigh_r2",
+      "episode_id": "MLP4B_0001",
+      "block_id": "D01",
+      "selected": [
+        "C08",
+        "C09",
+        "C14"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 6,
+      "optimal_coverage": 7,
+      "normalized_coverage": 0.8571428571428571,
+      "selected_edges": 6,
+      "hidden_edges": 14,
+      "input_status": "valid"
+    },
+    {
+      "system_id": "astra_xhigh_r2",
+      "episode_id": "MLP4B_0002",
+      "block_id": "D01",
+      "selected": [
+        "C12",
+        "C15",
+        "C16"
+      ],
+      "valid": true,
+      "optimal": true,
+      "coverage": 7,
+      "optimal_coverage": 7,
+      "normalized_coverage": 1.0,
+      "selected_edges": 7,
+      "hidden_edges": 14,
+      "input_status": "valid"
+    },
+    {
+      "system_id": "astra_xhigh_r2",
+      "episode_id": "MLP4B_0003",
+      "block_id": "D01",
+      "selected": [
+        "C05",
+        "C13",
+        "C16"
+      ],
+      "valid": true,
+      "optimal": true,
+      "coverage": 6,
+      "optimal_coverage": 6,
+      "normalized_coverage": 1.0,
+      "selected_edges": 6,
+      "hidden_edges": 16,
+      "input_status": "valid"
+    },
+    {
+      "system_id": "astra_xhigh_r2",
+      "episode_id": "MLP4B_0004",
+      "block_id": "D01",
+      "selected": [
+        "C01",
+        "C09",
+        "C16"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 5,
+      "optimal_coverage": 6,
+      "normalized_coverage": 0.8333333333333334,
+      "selected_edges": 5,
+      "hidden_edges": 13,
+      "input_status": "valid"
+    },
+    {
+      "system_id": "astra_xhigh_r2",
+      "episode_id": "MLP4B_0005",
+      "block_id": "D02",
+      "selected": [
+        "C05",
+        "C12",
+        "C14"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 5,
+      "optimal_coverage": 6,
+      "normalized_coverage": 0.8333333333333334,
+      "selected_edges": 5,
+      "hidden_edges": 15,
+      "input_status": "valid"
+    },
+    {
+      "system_id": "astra_xhigh_r2",
+      "episode_id": "MLP4B_0006",
+      "block_id": "D02",
+      "selected": [
+        "C06",
+        "C07",
+        "C13"
+      ],
+      "valid": true,
+      "optimal": true,
+      "coverage": 6,
+      "optimal_coverage": 6,
+      "normalized_coverage": 1.0,
+      "selected_edges": 6,
+      "hidden_edges": 11,
+      "input_status": "valid"
+    },
+    {
+      "system_id": "astra_xhigh_r2",
+      "episode_id": "MLP4B_0007",
+      "block_id": "D02",
+      "selected": [
+        "C03",
+        "C09",
+        "C10"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 5,
+      "optimal_coverage": 6,
+      "normalized_coverage": 0.8333333333333334,
+      "selected_edges": 6,
+      "hidden_edges": 16,
+      "input_status": "valid"
+    },
+    {
+      "system_id": "astra_xhigh_r2",
+      "episode_id": "MLP4B_0008",
+      "block_id": "D02",
+      "selected": [
+        "C05",
+        "C13",
+        "C16"
+      ],
+      "valid": true,
+      "optimal": true,
+      "coverage": 6,
+      "optimal_coverage": 6,
+      "normalized_coverage": 1.0,
+      "selected_edges": 6,
+      "hidden_edges": 11,
+      "input_status": "valid"
+    },
+    {
+      "system_id": "astra_xhigh_r2",
+      "episode_id": "MLP4B_0009",
+      "block_id": "D02",
+      "selected": [
+        "C03",
+        "C12",
+        "C16"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 5,
+      "optimal_coverage": 6,
+      "normalized_coverage": 0.8333333333333334,
+      "selected_edges": 5,
+      "hidden_edges": 12,
+      "input_status": "valid"
+    },
+    {
+      "system_id": "astra_xhigh_r2",
+      "episode_id": "MLP4B_0010",
+      "block_id": "D03",
+      "selected": [
+        "C02",
+        "C12",
+        "C13"
+      ],
+      "valid": true,
+      "optimal": true,
+      "coverage": 6,
+      "optimal_coverage": 6,
+      "normalized_coverage": 1.0,
+      "selected_edges": 6,
+      "hidden_edges": 12,
+      "input_status": "valid"
+    },
+    {
+      "system_id": "astra_xhigh_r2",
+      "episode_id": "MLP4B_0011",
+      "block_id": "D03",
+      "selected": [
+        "C03",
+        "C11",
+        "C15"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 5,
+      "optimal_coverage": 6,
+      "normalized_coverage": 0.8333333333333334,
+      "selected_edges": 5,
+      "hidden_edges": 18,
+      "input_status": "valid"
+    },
+    {
+      "system_id": "astra_xhigh_r2",
+      "episode_id": "MLP4B_0012",
+      "block_id": "D03",
+      "selected": [
+        "C02",
+        "C08",
+        "C12"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 4,
+      "optimal_coverage": 6,
+      "normalized_coverage": 0.6666666666666666,
+      "selected_edges": 6,
+      "hidden_edges": 15,
+      "input_status": "valid"
+    },
+    {
+      "system_id": "astra_xhigh_r2",
+      "episode_id": "MLP4B_0013",
+      "block_id": "D03",
+      "selected": [
+        "C01",
+        "C08",
+        "C11"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 3,
+      "optimal_coverage": 6,
+      "normalized_coverage": 0.5,
+      "selected_edges": 4,
+      "hidden_edges": 13,
+      "input_status": "valid"
+    },
+    {
+      "system_id": "astra_xhigh_r2",
+      "episode_id": "MLP4B_0014",
+      "block_id": "D03",
+      "selected": [
+        "C01",
+        "C04",
+        "C07"
+      ],
+      "valid": true,
+      "optimal": true,
+      "coverage": 6,
+      "optimal_coverage": 6,
+      "normalized_coverage": 1.0,
+      "selected_edges": 6,
+      "hidden_edges": 17,
+      "input_status": "valid"
+    },
+    {
+      "system_id": "astra_xhigh_r2",
+      "episode_id": "MLP4B_0015",
+      "block_id": "D04",
+      "selected": [
+        "C08",
+        "C12",
+        "C14"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 5,
+      "optimal_coverage": 6,
+      "normalized_coverage": 0.8333333333333334,
+      "selected_edges": 6,
+      "hidden_edges": 15,
+      "input_status": "valid"
+    },
+    {
+      "system_id": "astra_xhigh_r2",
+      "episode_id": "MLP4B_0016",
+      "block_id": "D04",
+      "selected": [
+        "C01",
+        "C02",
+        "C10"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 5,
+      "optimal_coverage": 6,
+      "normalized_coverage": 0.8333333333333334,
+      "selected_edges": 5,
+      "hidden_edges": 13,
+      "input_status": "valid"
+    },
+    {
+      "system_id": "astra_xhigh_r2",
+      "episode_id": "MLP4B_0017",
+      "block_id": "D04",
+      "selected": [
+        "C03",
+        "C15",
+        "C16"
+      ],
+      "valid": true,
+      "optimal": true,
+      "coverage": 6,
+      "optimal_coverage": 6,
+      "normalized_coverage": 1.0,
+      "selected_edges": 6,
+      "hidden_edges": 14,
+      "input_status": "valid"
+    },
+    {
+      "system_id": "astra_xhigh_r2",
+      "episode_id": "MLP4B_0018",
+      "block_id": "D04",
+      "selected": [
+        "C11",
+        "C15",
+        "C16"
+      ],
+      "valid": true,
+      "optimal": true,
+      "coverage": 6,
+      "optimal_coverage": 6,
+      "normalized_coverage": 1.0,
+      "selected_edges": 6,
+      "hidden_edges": 14,
+      "input_status": "valid"
+    },
+    {
+      "system_id": "astra_xhigh_r2",
+      "episode_id": "MLP4B_0019",
+      "block_id": "D04",
+      "selected": [
+        "C04",
+        "C13",
+        "C16"
+      ],
+      "valid": true,
+      "optimal": true,
+      "coverage": 6,
+      "optimal_coverage": 6,
+      "normalized_coverage": 1.0,
+      "selected_edges": 6,
+      "hidden_edges": 18,
+      "input_status": "valid"
+    },
+    {
+      "system_id": "astra_xhigh_r2",
+      "episode_id": "MLP4B_0020",
+      "block_id": "D05",
+      "selected": [
+        "C09",
+        "C14",
+        "C16"
+      ],
+      "valid": true,
+      "optimal": true,
+      "coverage": 6,
+      "optimal_coverage": 6,
+      "normalized_coverage": 1.0,
+      "selected_edges": 6,
+      "hidden_edges": 11,
+      "input_status": "valid"
+    },
+    {
+      "system_id": "astra_xhigh_r2",
+      "episode_id": "MLP4B_0021",
+      "block_id": "D05",
+      "selected": [
+        "C08",
+        "C10",
+        "C14"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 4,
+      "optimal_coverage": 6,
+      "normalized_coverage": 0.6666666666666666,
+      "selected_edges": 4,
+      "hidden_edges": 15,
+      "input_status": "valid"
+    },
+    {
+      "system_id": "astra_xhigh_r2",
+      "episode_id": "MLP4B_0022",
+      "block_id": "D05",
+      "selected": [
+        "C05",
+        "C13",
+        "C15"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 4,
+      "optimal_coverage": 7,
+      "normalized_coverage": 0.5714285714285714,
+      "selected_edges": 4,
+      "hidden_edges": 14,
+      "input_status": "valid"
+    },
+    {
+      "system_id": "astra_xhigh_r2",
+      "episode_id": "MLP4B_0023",
+      "block_id": "D05",
+      "selected": [
+        "C06",
+        "C09",
+        "C11"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 5,
+      "optimal_coverage": 6,
+      "normalized_coverage": 0.8333333333333334,
+      "selected_edges": 5,
+      "hidden_edges": 15,
+      "input_status": "valid"
+    },
+    {
+      "system_id": "astra_xhigh_r2",
+      "episode_id": "MLP4B_0024",
+      "block_id": "D05",
+      "selected": [
+        "C12",
+        "C15",
+        "C16"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 4,
+      "optimal_coverage": 6,
+      "normalized_coverage": 0.6666666666666666,
+      "selected_edges": 4,
+      "hidden_edges": 12,
+      "input_status": "valid"
+    },
+    {
+      "system_id": "astra_xhigh_r2",
+      "episode_id": "MLP4B_0025",
+      "block_id": "D06",
+      "selected": [
+        "C09",
+        "C14",
+        "C15"
+      ],
+      "valid": true,
+      "optimal": true,
+      "coverage": 6,
+      "optimal_coverage": 6,
+      "normalized_coverage": 1.0,
+      "selected_edges": 6,
+      "hidden_edges": 15,
+      "input_status": "valid"
+    },
+    {
+      "system_id": "astra_xhigh_r2",
+      "episode_id": "MLP4B_0026",
+      "block_id": "D06",
+      "selected": [
+        "C04",
+        "C13",
+        "C15"
+      ],
+      "valid": true,
+      "optimal": true,
+      "coverage": 6,
+      "optimal_coverage": 6,
+      "normalized_coverage": 1.0,
+      "selected_edges": 6,
+      "hidden_edges": 12,
+      "input_status": "valid"
+    },
+    {
+      "system_id": "astra_xhigh_r2",
+      "episode_id": "MLP4B_0027",
+      "block_id": "D06",
+      "selected": [
+        "C02",
+        "C06",
+        "C11"
+      ],
+      "valid": true,
+      "optimal": true,
+      "coverage": 7,
+      "optimal_coverage": 7,
+      "normalized_coverage": 1.0,
+      "selected_edges": 8,
+      "hidden_edges": 15,
+      "input_status": "valid"
+    },
+    {
+      "system_id": "astra_xhigh_r2",
+      "episode_id": "MLP4B_0028",
+      "block_id": "D06",
+      "selected": [
+        "C09",
+        "C10",
+        "C14"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 5,
+      "optimal_coverage": 6,
+      "normalized_coverage": 0.8333333333333334,
+      "selected_edges": 5,
+      "hidden_edges": 13,
+      "input_status": "valid"
+    },
+    {
+      "system_id": "astra_xhigh_r2",
+      "episode_id": "MLP4B_0029",
+      "block_id": "D06",
+      "selected": [
+        "C04",
+        "C06",
+        "C16"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 4,
+      "optimal_coverage": 6,
+      "normalized_coverage": 0.6666666666666666,
+      "selected_edges": 5,
+      "hidden_edges": 12,
+      "input_status": "valid"
+    },
+    {
+      "system_id": "astra_xhigh_r2",
+      "episode_id": "MLP4B_0030",
+      "block_id": "D07",
+      "selected": [
+        "C01",
+        "C10",
+        "C12"
+      ],
+      "valid": true,
+      "optimal": true,
+      "coverage": 6,
+      "optimal_coverage": 6,
+      "normalized_coverage": 1.0,
+      "selected_edges": 6,
+      "hidden_edges": 14,
+      "input_status": "valid"
+    },
+    {
+      "system_id": "astra_xhigh_r2",
+      "episode_id": "MLP4B_0031",
+      "block_id": "D07",
+      "selected": [
+        "C01",
+        "C14",
+        "C15"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 4,
+      "optimal_coverage": 6,
+      "normalized_coverage": 0.6666666666666666,
+      "selected_edges": 4,
+      "hidden_edges": 11,
+      "input_status": "valid"
+    },
+    {
+      "system_id": "astra_xhigh_r2",
+      "episode_id": "MLP4B_0032",
+      "block_id": "D07",
+      "selected": [
+        "C07",
+        "C13",
+        "C16"
+      ],
+      "valid": true,
+      "optimal": true,
+      "coverage": 7,
+      "optimal_coverage": 7,
+      "normalized_coverage": 1.0,
+      "selected_edges": 7,
+      "hidden_edges": 12,
+      "input_status": "valid"
+    },
+    {
+      "system_id": "astra_xhigh_r2",
+      "episode_id": "MLP4B_0033",
+      "block_id": "D07",
+      "selected": [
+        "C04",
+        "C06",
+        "C15"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 5,
+      "optimal_coverage": 6,
+      "normalized_coverage": 0.8333333333333334,
+      "selected_edges": 6,
+      "hidden_edges": 11,
+      "input_status": "valid"
+    },
+    {
+      "system_id": "astra_xhigh_r2",
+      "episode_id": "MLP4B_0034",
+      "block_id": "D07",
+      "selected": [
+        "C12",
+        "C14",
+        "C16"
+      ],
+      "valid": true,
+      "optimal": true,
+      "coverage": 6,
+      "optimal_coverage": 6,
+      "normalized_coverage": 1.0,
+      "selected_edges": 6,
+      "hidden_edges": 13,
+      "input_status": "valid"
+    },
+    {
+      "system_id": "astra_xhigh_r2",
+      "episode_id": "MLP4B_0035",
+      "block_id": "D08",
+      "selected": [
+        "C03",
+        "C04",
+        "C14"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 6,
+      "optimal_coverage": 7,
+      "normalized_coverage": 0.8571428571428571,
+      "selected_edges": 8,
+      "hidden_edges": 14,
+      "input_status": "valid"
+    },
+    {
+      "system_id": "astra_xhigh_r2",
+      "episode_id": "MLP4B_0036",
+      "block_id": "D08",
+      "selected": [
+        "C03",
+        "C10",
+        "C16"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 5,
+      "optimal_coverage": 6,
+      "normalized_coverage": 0.8333333333333334,
+      "selected_edges": 5,
+      "hidden_edges": 11,
+      "input_status": "valid"
+    },
+    {
+      "system_id": "astra_xhigh_r2",
+      "episode_id": "MLP4B_0037",
+      "block_id": "D08",
+      "selected": [
+        "C12",
+        "C14",
+        "C16"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 5,
+      "optimal_coverage": 6,
+      "normalized_coverage": 0.8333333333333334,
+      "selected_edges": 5,
+      "hidden_edges": 12,
+      "input_status": "valid"
+    },
+    {
+      "system_id": "astra_xhigh_r2",
+      "episode_id": "MLP4B_0038",
+      "block_id": "D08",
+      "selected": [
+        "C03",
+        "C04",
+        "C05"
+      ],
+      "valid": true,
+      "optimal": true,
+      "coverage": 6,
+      "optimal_coverage": 6,
+      "normalized_coverage": 1.0,
+      "selected_edges": 6,
+      "hidden_edges": 16,
+      "input_status": "valid"
+    },
+    {
+      "system_id": "astra_xhigh_r2",
+      "episode_id": "MLP4B_0039",
+      "block_id": "D08",
+      "selected": [
+        "C09",
+        "C10",
+        "C14"
+      ],
+      "valid": true,
+      "optimal": true,
+      "coverage": 7,
+      "optimal_coverage": 7,
+      "normalized_coverage": 1.0,
+      "selected_edges": 7,
+      "hidden_edges": 14,
+      "input_status": "valid"
+    },
+    {
+      "system_id": "astra_xhigh_r2",
+      "episode_id": "MLP4B_0040",
+      "block_id": "D09",
+      "selected": [
+        "C03",
+        "C10",
+        "C14"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 5,
+      "optimal_coverage": 6,
+      "normalized_coverage": 0.8333333333333334,
+      "selected_edges": 5,
+      "hidden_edges": 11,
+      "input_status": "valid"
+    },
+    {
+      "system_id": "astra_xhigh_r2",
+      "episode_id": "MLP4B_0041",
+      "block_id": "D09",
+      "selected": [
+        "C04",
+        "C08",
+        "C11"
+      ],
+      "valid": true,
+      "optimal": true,
+      "coverage": 6,
+      "optimal_coverage": 6,
+      "normalized_coverage": 1.0,
+      "selected_edges": 6,
+      "hidden_edges": 12,
+      "input_status": "valid"
+    },
+    {
+      "system_id": "astra_xhigh_r2",
+      "episode_id": "MLP4B_0042",
+      "block_id": "D09",
+      "selected": [
+        "C05",
+        "C10",
+        "C14"
+      ],
+      "valid": true,
+      "optimal": true,
+      "coverage": 6,
+      "optimal_coverage": 6,
+      "normalized_coverage": 1.0,
+      "selected_edges": 6,
+      "hidden_edges": 13,
+      "input_status": "valid"
+    },
+    {
+      "system_id": "astra_xhigh_r2",
+      "episode_id": "MLP4B_0043",
+      "block_id": "D09",
+      "selected": [
+        "C07",
+        "C09",
+        "C13"
+      ],
+      "valid": true,
+      "optimal": true,
+      "coverage": 7,
+      "optimal_coverage": 7,
+      "normalized_coverage": 1.0,
+      "selected_edges": 8,
+      "hidden_edges": 15,
+      "input_status": "valid"
+    },
+    {
+      "system_id": "astra_xhigh_r2",
+      "episode_id": "MLP4B_0044",
+      "block_id": "D09",
+      "selected": [
+        "C06",
+        "C08",
+        "C16"
+      ],
+      "valid": true,
+      "optimal": true,
+      "coverage": 7,
+      "optimal_coverage": 7,
+      "normalized_coverage": 1.0,
+      "selected_edges": 7,
+      "hidden_edges": 15,
+      "input_status": "valid"
+    },
+    {
+      "system_id": "astra_xhigh_r2",
+      "episode_id": "MLP4B_0045",
+      "block_id": "D10",
+      "selected": [
+        "C10",
+        "C12",
+        "C13"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 5,
+      "optimal_coverage": 6,
+      "normalized_coverage": 0.8333333333333334,
+      "selected_edges": 5,
+      "hidden_edges": 12,
+      "input_status": "valid"
+    },
+    {
+      "system_id": "astra_xhigh_r2",
+      "episode_id": "MLP4B_0046",
+      "block_id": "D10",
+      "selected": [
+        "C01",
+        "C05",
+        "C10"
+      ],
+      "valid": true,
+      "optimal": true,
+      "coverage": 6,
+      "optimal_coverage": 6,
+      "normalized_coverage": 1.0,
+      "selected_edges": 6,
+      "hidden_edges": 16,
+      "input_status": "valid"
+    },
+    {
+      "system_id": "astra_xhigh_r2",
+      "episode_id": "MLP4B_0047",
+      "block_id": "D10",
+      "selected": [
+        "C05",
+        "C12",
+        "C15"
+      ],
+      "valid": true,
+      "optimal": true,
+      "coverage": 6,
+      "optimal_coverage": 6,
+      "normalized_coverage": 1.0,
+      "selected_edges": 6,
+      "hidden_edges": 12,
+      "input_status": "valid"
+    },
+    {
+      "system_id": "astra_xhigh_r2",
+      "episode_id": "MLP4B_0048",
+      "block_id": "D10",
+      "selected": [
+        "C01",
+        "C06",
+        "C14"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 4,
+      "optimal_coverage": 6,
+      "normalized_coverage": 0.6666666666666666,
+      "selected_edges": 5,
+      "hidden_edges": 11,
+      "input_status": "valid"
+    },
+    {
+      "system_id": "astra_xhigh_r2",
+      "episode_id": "MLP4B_0049",
+      "block_id": "D10",
+      "selected": [
+        "C02",
+        "C03",
+        "C13"
+      ],
+      "valid": true,
+      "optimal": true,
+      "coverage": 7,
+      "optimal_coverage": 7,
+      "normalized_coverage": 1.0,
+      "selected_edges": 7,
+      "hidden_edges": 16,
+      "input_status": "valid"
+    },
+    {
+      "system_id": "astra_xhigh_r2",
+      "episode_id": "MLP4B_0050",
+      "block_id": "D11",
+      "selected": [
+        "C01",
+        "C07",
+        "C10"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 6,
+      "optimal_coverage": 7,
+      "normalized_coverage": 0.8571428571428571,
+      "selected_edges": 8,
+      "hidden_edges": 13,
+      "input_status": "valid"
+    },
+    {
+      "system_id": "astra_xhigh_r2",
+      "episode_id": "MLP4B_0051",
+      "block_id": "D11",
+      "selected": [
+        "C02",
+        "C07",
+        "C08"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 6,
+      "optimal_coverage": 7,
+      "normalized_coverage": 0.8571428571428571,
+      "selected_edges": 8,
+      "hidden_edges": 13,
+      "input_status": "valid"
+    },
+    {
+      "system_id": "astra_xhigh_r2",
+      "episode_id": "MLP4B_0052",
+      "block_id": "D11",
+      "selected": [
+        "C08",
+        "C11",
+        "C15"
+      ],
+      "valid": true,
+      "optimal": true,
+      "coverage": 6,
+      "optimal_coverage": 6,
+      "normalized_coverage": 1.0,
+      "selected_edges": 6,
+      "hidden_edges": 11,
+      "input_status": "valid"
+    },
+    {
+      "system_id": "astra_xhigh_r2",
+      "episode_id": "MLP4B_0053",
+      "block_id": "D11",
+      "selected": [
+        "C02",
+        "C08",
+        "C15"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 3,
+      "optimal_coverage": 6,
+      "normalized_coverage": 0.5,
+      "selected_edges": 4,
+      "hidden_edges": 11,
+      "input_status": "valid"
+    },
+    {
+      "system_id": "astra_xhigh_r2",
+      "episode_id": "MLP4B_0054",
+      "block_id": "D11",
+      "selected": [
+        "C03",
+        "C13",
+        "C16"
+      ],
+      "valid": true,
+      "optimal": true,
+      "coverage": 7,
+      "optimal_coverage": 7,
+      "normalized_coverage": 1.0,
+      "selected_edges": 7,
+      "hidden_edges": 14,
+      "input_status": "valid"
+    },
+    {
+      "system_id": "astra_xhigh_r2",
+      "episode_id": "MLP4B_0055",
+      "block_id": "D12",
+      "selected": [
+        "C05",
+        "C06",
+        "C07"
+      ],
+      "valid": true,
+      "optimal": true,
+      "coverage": 6,
+      "optimal_coverage": 6,
+      "normalized_coverage": 1.0,
+      "selected_edges": 6,
+      "hidden_edges": 12,
+      "input_status": "valid"
+    },
+    {
+      "system_id": "astra_xhigh_r2",
+      "episode_id": "MLP4B_0056",
+      "block_id": "D12",
+      "selected": [
+        "C03",
+        "C13",
+        "C16"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 5,
+      "optimal_coverage": 6,
+      "normalized_coverage": 0.8333333333333334,
+      "selected_edges": 5,
+      "hidden_edges": 11,
+      "input_status": "valid"
+    },
+    {
+      "system_id": "astra_xhigh_r2",
+      "episode_id": "MLP4B_0057",
+      "block_id": "D12",
+      "selected": [
+        "C04",
+        "C13",
+        "C15"
+      ],
+      "valid": true,
+      "optimal": false,
+      "coverage": 5,
+      "optimal_coverage": 6,
+      "normalized_coverage": 0.8333333333333334,
+      "selected_edges": 5,
+      "hidden_edges": 12,
+      "input_status": "valid"
+    },
+    {
+      "system_id": "astra_xhigh_r2",
+      "episode_id": "MLP4B_0058",
+      "block_id": "D12",
+      "selected": [
+        "C08",
+        "C09",
+        "C16"
+      ],
+      "valid": true,
+      "optimal": true,
+      "coverage": 6,
+      "optimal_coverage": 6,
+      "normalized_coverage": 1.0,
+      "selected_edges": 6,
+      "hidden_edges": 13,
+      "input_status": "valid"
+    },
+    {
+      "system_id": "astra_xhigh_r2",
+      "episode_id": "MLP4B_0059",
+      "block_id": "D12",
+      "selected": [
+        "C06",
+        "C12",
+        "C15"
+      ],
+      "valid": true,
+      "optimal": true,
+      "coverage": 7,
+      "optimal_coverage": 7,
+      "normalized_coverage": 1.0,
+      "selected_edges": 7,
+      "hidden_edges": 19,
+      "input_status": "valid"
+    }
+  ]
+}

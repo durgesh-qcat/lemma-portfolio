@@ -1,0 +1,553 @@
+You are solving five unreleased LemmaPortfolio benchmark episodes independently.
+
+For each episode, each target t has a hidden set D(t): the displayed candidate declarations used as direct theorem dependencies in that target's historical elaborated source. For a portfolio S, F(S) is the number of targets t for which D(t) intersects S. Select exactly 3 distinct candidate IDs per episode to maximize F(S). This is static dependency-portfolio compression, not a claim about causal usefulness in a new proof.
+
+Use only the supplied text. Do not use web search, tools, files, a repository, theorem proving, compiler feedback, memory, prior chats, follow-up messages, or answers from another episode. Treat every episode independently.
+
+Return one JSON object and no prose. It must have exactly one key, "predictions". Its value must be an object with exactly these episode keys: MLP4B_0045, MLP4B_0046, MLP4B_0047, MLP4B_0048, MLP4B_0049. Each value must be an array of exactly 3 distinct candidate IDs copied from that episode. Candidate order does not matter.
+
+Episode JSON array follows.
+<episodes>
+[
+  {
+    "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+    "candidates": [
+      {
+        "id": "C01",
+        "statement": "∀ {α : Type u_1} {M : Matroid α} {I X : Set α}, M.IsBasis I X → I.encard = M.eRk X"
+      },
+      {
+        "id": "C02",
+        "statement": "∀ {α : Type u_1} {M : Matroid α} {B : Set α}, M.IsBase B → B.encard = M.eRank"
+      },
+      {
+        "id": "C03",
+        "statement": "∀ {α : Type u_1} {M : Matroid α} {I : Set α}, I.Finite → (M.Indep I ↔ M.eRk I = I.encard)"
+      },
+      {
+        "id": "C04",
+        "statement": "∀ {α : Type u_1} {M : Matroid α} {I X : Set α}, M.IsBasis I X → M.eRk I = M.eRk X"
+      },
+      {
+        "id": "C05",
+        "statement": "∀ {α : Type u_1} {M : Matroid α} {I X : Set α}, I.Finite → (M.IsBasis' I X ↔ I ⊆ X ∧ M.Indep I ∧ I.encard = M.eRk X)"
+      },
+      {
+        "id": "C06",
+        "statement": "∀ {α : Type u_1} {M : Matroid α} {e : α}, M.IsNonloop e → M.eRk {e} = 1"
+      },
+      {
+        "id": "C07",
+        "statement": "∀ {α : Type u_1} (M : Matroid α), Monotone M.eRk"
+      },
+      {
+        "id": "C08",
+        "statement": "∀ {α : Type u_1} (M : Matroid α) (X Y : Set α), M.eRk (M.closure X ∪ Y) = M.eRk (X ∪ Y)"
+      },
+      {
+        "id": "C09",
+        "statement": "∀ {α : Type u_1} {M : Matroid α} {X : Set α}, M.Spanning X → M.eRk X = M.eRank"
+      },
+      {
+        "id": "C10",
+        "statement": "∀ {α : Type u_1} {M : Matroid α} {I X : Set α}, M.IsBasis' I X → M.eRk X = I.encard"
+      },
+      {
+        "id": "C11",
+        "statement": "∀ {α : Type u_1} (M : Matroid α), M.eRank = M.eRk M.E"
+      },
+      {
+        "id": "C12",
+        "statement": "∀ {α : Type u_1} (M : Matroid α) (X : Set α), M.eRk X ≤ X.encard"
+      },
+      {
+        "id": "C13",
+        "statement": "∀ {α : Type u_1} {M : Matroid α} {I X : Set α}, M.IsBasis' I X → I.encard = M.eRk X"
+      },
+      {
+        "id": "C14",
+        "statement": "∀ {α : Type u_1} {M : Matroid α} {I X : Set α}, M.IsBasis' I X → M.eRk I = M.eRk X"
+      },
+      {
+        "id": "C15",
+        "statement": "∀ {α : Type u_1} {M : Matroid α} {X : Set α}, M.IsRkFinite X → M.eRk X < ⊤"
+      },
+      {
+        "id": "C16",
+        "statement": "∀ {α : Type u_1} {M : Matroid α} {I : Set α}, M.Indep I → M.eRk I = I.encard"
+      }
+    ],
+    "episode_id": "MLP4B_0045",
+    "schema_version": "lemma-portfolio.dependency-compression.v4",
+    "selection_budget": 3,
+    "source_project": "mathlib",
+    "targets": [
+      {
+        "id": "T01",
+        "statement": "∀ {α : Type u_1} {M : Matroid α} {X Y : Set α}, M.IsRkFinite X → X ⊆ Y → M.eRk Y ≤ M.eRk X → M.closure X = M.closure Y"
+      },
+      {
+        "id": "T02",
+        "statement": "∀ {α : Type u_1} {M : Matroid α} {I : Set α}, M.Indep I → I.encard ≤ M.eRank"
+      },
+      {
+        "id": "T03",
+        "statement": "∀ {α : Type u_1} {β : Type u_2} {f : α → β} (M : Matroid β) (X : Set α), (M.comap f).eRk X = M.eRk (f '' X)"
+      },
+      {
+        "id": "T04",
+        "statement": "∀ {α : Type u_1} {M : Matroid α} {I X : Set α}, M.IsRkFinite X → X ⊆ M.closure I → I ⊆ X → I.encard ≤ M.eRk X → M.IsBasis I X"
+      },
+      {
+        "id": "T05",
+        "statement": "∀ {α : Type u_1} (M : Matroid α) (e : α) (X : Set α), M.eRk (insert e X) ≤ M.eRk X + 1"
+      },
+      {
+        "id": "T06",
+        "statement": "∀ {α : Type u_1} (X Y : Set α), (Matroid.loopyOn Y).eRk X = 0"
+      },
+      {
+        "id": "T07",
+        "statement": "∀ {α : Type u_1} {M : Matroid α} {X : Set α} {n : ℕ∞}, n ≤ M.eRk X ↔ ∃ I ⊆ X, M.Indep I ∧ I.encard = n"
+      },
+      {
+        "id": "T08",
+        "statement": "∀ {α : Type u_1} (M : Matroid α) (X : Set α), M.eRk (X ∪ M.E) = M.eRank"
+      }
+    ],
+    "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+  },
+  {
+    "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+    "candidates": [
+      {
+        "id": "C01",
+        "statement": "∀ {a b : EReal}, a < b → 0 ≤ b → ∀ᶠ (n : ℕ) in Filter.atTop, ∃ m, a * ↑n ≤ ↑m ∧ ↑m ≤ b * ↑n"
+      },
+      {
+        "id": "C02",
+        "statement": "∀ {u : ℕ → EReal} {a : EReal}, (∃ᶠ (n : ℕ) in Filter.atTop, a * ↑n ≤ u n) → a ≤ LinearGrowth.linearGrowthSup u"
+      },
+      {
+        "id": "C03",
+        "statement": "∀ {b : EReal}, b ≠ ⊥ → b ≠ ⊤ → (LinearGrowth.linearGrowthSup fun x => b) = 0"
+      },
+      {
+        "id": "C04",
+        "statement": "∀ {u : ℕ → EReal} {a : EReal}, (∀ᶠ (n : ℕ) in Filter.atTop, a * ↑n ≤ u n) → a ≤ LinearGrowth.linearGrowthInf u"
+      },
+      {
+        "id": "C05",
+        "statement": "∀ {u v : ℕ → EReal}, u ≤ᶠ[Filter.atTop] v → LinearGrowth.linearGrowthInf u ≤ LinearGrowth.linearGrowthInf v"
+      },
+      {
+        "id": "C06",
+        "statement": "∀ {u : ℕ → EReal} {a : EReal}, a ≤ LinearGrowth.linearGrowthInf u ↔ ∀ b < a, ∀ᶠ (n : ℕ) in Filter.atTop, b * ↑n ≤ u n"
+      },
+      {
+        "id": "C07",
+        "statement": "∀ {u : ℕ → EReal} {a : EReal}, (∀ᶠ (n : ℕ) in Filter.atTop, u n ≤ a * ↑n) → LinearGrowth.linearGrowthSup u ≤ a"
+      },
+      {
+        "id": "C08",
+        "statement": "∀ {u : ℕ → EReal} {v : ℕ → ℕ}, Monotone u → u ≠ ⊥ → Filter.Tendsto v Filter.atTop Filter.atTop → 0 ≤ LinearGrowth.linearGrowthInf (u ∘ v)"
+      },
+      {
+        "id": "C09",
+        "statement": "∀ {u : ℕ → EReal} {a : EReal}, (∃ᶠ (n : ℕ) in Filter.atTop, u n ≤ a * ↑n) → LinearGrowth.linearGrowthInf u ≤ a"
+      },
+      {
+        "id": "C10",
+        "statement": "∀ {u v : ℕ → EReal}, u ≤ᶠ[Filter.atTop] v → LinearGrowth.linearGrowthSup u ≤ LinearGrowth.linearGrowthSup v"
+      },
+      {
+        "id": "C11",
+        "statement": "∀ {u : ℕ → EReal} {a : EReal}, a ≤ LinearGrowth.linearGrowthSup u ↔ ∀ b < a, ∃ᶠ (n : ℕ) in Filter.atTop, b * ↑n ≤ u n"
+      },
+      {
+        "id": "C12",
+        "statement": "∀ {R : Type u_1} [inst : ConditionallyCompleteLattice R] [inst_1 : Div R] [inst_2 : NatCast R] {u : ℕ → R}, autoParam (Filter.IsBoundedUnder (fun x1 x2 => x1 ≤ x2) Filter.atTop fun n => u n / ↑n) LinearGrowth.linearGrowthInf_le_linearGrowthSup._auto_1 → autoParam (Filter.IsBoundedUnder (fun x1 x2 => x1 ≥ x2) Filter.atTop fun n => u n / ↑n) LinearGrowth.linearGrowthInf_le_linearGrowthSup._auto_3 → LinearGrowth.linearGrowthInf u ≤ LinearGrowth.linearGrowthSup u"
+      },
+      {
+        "id": "C13",
+        "statement": "∀ {u : ℕ → EReal}, Monotone u → u ≠ ⊥ → 0 ≤ LinearGrowth.linearGrowthInf u"
+      },
+      {
+        "id": "C14",
+        "statement": "∀ {b : EReal}, b ≠ ⊥ → b ≠ ⊤ → (LinearGrowth.linearGrowthInf fun x => b) = 0"
+      },
+      {
+        "id": "C15",
+        "statement": "∀ (v : ℕ → ℕ), 0 ≤ LinearGrowth.linearGrowthInf fun n => ↑(v n)"
+      },
+      {
+        "id": "C16",
+        "statement": "∀ {u : ℕ → EReal} {a : EReal}, LinearGrowth.linearGrowthSup u ≤ a ↔ ∀ b > a, ∀ᶠ (n : ℕ) in Filter.atTop, u n ≤ b * ↑n"
+      }
+    ],
+    "episode_id": "MLP4B_0046",
+    "schema_version": "lemma-portfolio.dependency-compression.v4",
+    "selection_budget": 3,
+    "source_project": "mathlib",
+    "targets": [
+      {
+        "id": "T01",
+        "statement": "∀ {u v : ℕ → EReal}, u ≤ v → LinearGrowth.linearGrowthSup u ≤ LinearGrowth.linearGrowthSup v"
+      },
+      {
+        "id": "T02",
+        "statement": "∀ {u : ℕ → EReal} {a : EReal}, LinearGrowth.linearGrowthSup u < a → ∀ᶠ (n : ℕ) in Filter.atTop, u n ≤ a * ↑n"
+      },
+      {
+        "id": "T03",
+        "statement": "∀ {a : EReal}, (LinearGrowth.linearGrowthInf fun n => a * ↑n) = a"
+      },
+      {
+        "id": "T04",
+        "statement": "∀ {u : ℕ → EReal} {v : ℕ → ℕ}, Monotone u → (LinearGrowth.linearGrowthSup fun n => ↑(v n)) ≠ 0 → (LinearGrowth.linearGrowthSup fun n => ↑(v n)) ≠ ⊤ → LinearGrowth.linearGrowthInf (u ∘ v) ≤ (LinearGrowth.linearGrowthSup fun n => ↑(v n)) * LinearGrowth.linearGrowthInf u"
+      },
+      {
+        "id": "T05",
+        "statement": "∀ {u v : ℕ → EReal} {b : EReal}, b ≠ ⊤ → (∀ᶠ (n : ℕ) in Filter.atTop, u n ≤ v n + b) → LinearGrowth.linearGrowthInf u ≤ LinearGrowth.linearGrowthInf v"
+      },
+      {
+        "id": "T06",
+        "statement": "∀ {u v : ℕ → EReal}, u ≤ v → LinearGrowth.linearGrowthInf u ≤ LinearGrowth.linearGrowthInf v"
+      },
+      {
+        "id": "T07",
+        "statement": "∀ {u : ℕ → EReal} {v : ℕ → ℕ}, Monotone u → (LinearGrowth.linearGrowthInf fun n => ↑(v n)) ≠ 0 → (LinearGrowth.linearGrowthInf fun n => ↑(v n)) * LinearGrowth.linearGrowthSup u ≤ LinearGrowth.linearGrowthSup (u ∘ v)"
+      },
+      {
+        "id": "T08",
+        "statement": "∀ {u v : ℕ → EReal} {b : EReal}, b ≠ ⊤ → (∀ᶠ (n : ℕ) in Filter.atTop, u n ≤ v n + b) → LinearGrowth.linearGrowthSup u ≤ LinearGrowth.linearGrowthSup v"
+      }
+    ],
+    "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+  },
+  {
+    "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+    "candidates": [
+      {
+        "id": "C01",
+        "statement": "∀ {α : Type u_1} [inst : SemilatticeInf α] [inst_1 : OrderBot α] {a b : α}, Disjoint a b → a ⊓ b ≤ ⊥"
+      },
+      {
+        "id": "C02",
+        "statement": "∀ {α : Type u_1} [inst : SemilatticeInf α] [inst_1 : OrderBot α] {a b : α}, Disjoint a b → a ⊓ b = ⊥"
+      },
+      {
+        "id": "C03",
+        "statement": "∀ {α : Type u_1} [inst : PartialOrder α] [inst_1 : OrderBot α] {a b c : α}, b ≤ c → Disjoint a c → Disjoint a b"
+      },
+      {
+        "id": "C04",
+        "statement": "∀ {α : Type u_1} [inst : Lattice α] [inst_1 : BoundedOrder α] {a b : Complementeds α}, ↑a = ↑b ↔ a = b"
+      },
+      {
+        "id": "C05",
+        "statement": "∀ {α : Type u_1} [inst : PartialOrder α] [inst_1 : BoundedOrder α] {x y : α}, IsCompl x y → Disjoint x y"
+      },
+      {
+        "id": "C06",
+        "statement": "∀ {α : Type u_1} [inst : SemilatticeSup α] [inst_1 : OrderTop α] {a b : α}, Codisjoint a b ↔ a ⊔ b = ⊤"
+      },
+      {
+        "id": "C07",
+        "statement": "∀ {α : Type u_1} [inst : SemilatticeInf α] [inst_1 : OrderBot α] {a b : α}, Disjoint a b ↔ a ⊓ b = ⊥"
+      },
+      {
+        "id": "C08",
+        "statement": "∀ {α : Type u_1} [inst : SemilatticeSup α] [inst_1 : OrderTop α] {a b : α}, Codisjoint a b ↔ ⊤ ≤ a ⊔ b"
+      },
+      {
+        "id": "C09",
+        "statement": "∀ {α : Type u_1} [inst : SemilatticeSup α] [inst_1 : OrderTop α] {a b : α}, Codisjoint a b → a ⊔ b = ⊤"
+      },
+      {
+        "id": "C10",
+        "statement": "∀ {α : Type u_1} [inst : PartialOrder α] [inst_1 : OrderBot α] {a b c : α}, a ≤ b → Disjoint b c → Disjoint a c"
+      },
+      {
+        "id": "C11",
+        "statement": "∀ {α : Type u_1} [inst : PartialOrder α] [inst_1 : OrderBot α] {a b c d : α}, a ≤ b → c ≤ d → Disjoint b d → Disjoint a c"
+      },
+      {
+        "id": "C12",
+        "statement": "∀ {α : Type u_1} [inst : PartialOrder α] [inst_1 : OrderBot α] {a b : α}, Disjoint a b → a ≤ b → a = ⊥"
+      },
+      {
+        "id": "C13",
+        "statement": "∀ {α : Type u_1} [inst : SemilatticeInf α] [inst_1 : OrderBot α] {a b : α}, Disjoint a b ↔ a ⊓ b ≤ ⊥"
+      },
+      {
+        "id": "C14",
+        "statement": "∀ {α : Type u_1} [inst : Lattice α] [inst_1 : BoundedOrder α] {x : α}, IsCompl x ⊥ → x = ⊤"
+      },
+      {
+        "id": "C15",
+        "statement": "∀ {α : Type u_1} [inst : DistribLattice α] [inst_1 : BoundedOrder α] {x y z : α}, IsCompl y z → (x ⊓ y = ⊥ ↔ x ≤ z)"
+      },
+      {
+        "id": "C16",
+        "statement": "∀ {α : Type u_1} [inst : DistribLattice α] [inst_1 : BoundedOrder α] {x y z : α}, IsCompl x y → (z ≤ x ↔ Disjoint z y)"
+      }
+    ],
+    "episode_id": "MLP4B_0047",
+    "schema_version": "lemma-portfolio.dependency-compression.v4",
+    "selection_budget": 3,
+    "source_project": "mathlib",
+    "targets": [
+      {
+        "id": "T01",
+        "statement": "∀ {α : Type u_1} [inst : SemilatticeInf α] [inst_1 : OrderBot α] {a b : α} (c : α), Disjoint a b → Disjoint (a ⊓ c) b"
+      },
+      {
+        "id": "T02",
+        "statement": "∀ {α : Type u_1} [inst : DistribLattice α] [inst_1 : BoundedOrder α] {x y z : α}, IsCompl y z → (Disjoint x y ↔ x ≤ z)"
+      },
+      {
+        "id": "T03",
+        "statement": "∀ {α : Type u_1} [inst : PartialOrder α] [inst_1 : OrderBot α] {a b : α}, Disjoint a b → b ≤ a → b = ⊥"
+      },
+      {
+        "id": "T04",
+        "statement": "∀ {α : Type u_1} [inst : Lattice α] [inst_1 : BoundedOrder α] {x y : α}, IsCompl x y → x ⊓ y = ⊥"
+      },
+      {
+        "id": "T05",
+        "statement": "∀ {α : Type u_1} [inst : PartialOrder α] [inst_1 : BoundedOrder α] {a b : α}, IsCompl a b ↔ Codisjoint a b ∧ Disjoint a b"
+      },
+      {
+        "id": "T06",
+        "statement": "∀ {α : Type u_1} [inst : DistribLattice α] [inst_1 : BoundedOrder α] {a b : Complementeds α}, Codisjoint ↑a ↑b ↔ Codisjoint a b"
+      },
+      {
+        "id": "T07",
+        "statement": "∀ {α : Type u_1} [inst : SemilatticeInf α] [inst_1 : OrderBot α] {a b c : α}, Disjoint (a ⊓ b) c → a ≤ c → Disjoint a b"
+      },
+      {
+        "id": "T08",
+        "statement": "∀ {α : Type u_1} [inst : DistribLattice α] [inst_1 : BoundedOrder α] {x y z : α}, IsCompl y z → (x ⊓ z = ⊥ ↔ x ≤ y)"
+      }
+    ],
+    "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+  },
+  {
+    "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+    "candidates": [
+      {
+        "id": "C01",
+        "statement": "∀ {B : Type u_1} {F : Type u_2} {Z : Type u_4} [inst : TopologicalSpace B] [inst_1 : TopologicalSpace F] [inst_2 : TopologicalSpace Z] {proj : Z → B} (self : Bundle.Trivialization F proj), IsOpen self.baseSet"
+      },
+      {
+        "id": "C02",
+        "statement": "∀ {B : Type u_1} {F : Type u_2} {Z : Type u_4} [inst : TopologicalSpace B] [inst_1 : TopologicalSpace F] {proj : Z → B} (e : Bundle.Pretrivialization F proj) {x : Z}, x ∈ e.source ↔ proj x ∈ e.baseSet"
+      },
+      {
+        "id": "C03",
+        "statement": "∀ {B : Type u_1} {F : Type u_2} {Z : Type u_4} [inst : TopologicalSpace B] [inst_1 : TopologicalSpace F] {proj : Z → B} (e : Bundle.Pretrivialization F proj) {x : B × F}, x ∈ e.target → proj (↑e.symm x) = x.1"
+      },
+      {
+        "id": "C04",
+        "statement": "∀ {B : Type u_1} {F : Type u_2} {E : B → Type u_3} [inst : TopologicalSpace B] [inst_1 : TopologicalSpace F] [inst_2 : ∀ (x : B), Nonempty (E x)] (e : Bundle.Pretrivialization F Bundle.TotalSpace.proj) {b : B}, b ∉ e.baseSet → ∀ (y : F), e.symm b y = Classical.arbitrary (E b)"
+      },
+      {
+        "id": "C05",
+        "statement": "∀ {B : Type u_1} {F : Type u_2} {Z : Type u_4} [inst : TopologicalSpace B] [inst_1 : TopologicalSpace F] {proj : Z → B} (e e' : Bundle.Pretrivialization F proj), (e.symm.trans e'.toPartialEquiv).source = (e.baseSet ∩ e'.baseSet) ×ˢ Set.univ"
+      },
+      {
+        "id": "C06",
+        "statement": "∀ {B : Type u_1} {F : Type u_2} {Z : Type u_4} [inst : TopologicalSpace B] [inst_1 : TopologicalSpace F] {proj : Z → B} [inst_2 : TopologicalSpace Z] (e : Bundle.Trivialization F proj) {x : Z}, x ∈ e.source → (↑e x).1 = proj x"
+      },
+      {
+        "id": "C07",
+        "statement": "∀ {B : Type u_1} {F : Type u_2} {Z : Type u_4} [inst : TopologicalSpace B] [inst_1 : TopologicalSpace F] {proj : Z → B} (e : Bundle.Pretrivialization F proj) {b : B} {x : F}, b ∈ e.baseSet → proj (↑e.symm (b, x)) = b"
+      },
+      {
+        "id": "C08",
+        "statement": "∀ {B : Type u_1} {F : Type u_2} {Z : Type u_4} [inst : TopologicalSpace B] [inst_1 : TopologicalSpace F] {proj : Z → B} (e : Bundle.Pretrivialization F proj) (s : Set B), ↑e.symm ⁻¹' proj ⁻¹' s ∩ e.baseSet ×ˢ Set.univ = (s ∩ e.baseSet) ×ˢ Set.univ"
+      },
+      {
+        "id": "C09",
+        "statement": "∀ {B : Type u_1} {F : Type u_2} {E : B → Type u_3} [inst : TopologicalSpace B] [inst_1 : TopologicalSpace F] [inst_2 : ∀ (x : B), Nonempty (E x)] (e : Bundle.Pretrivialization F Bundle.TotalSpace.proj) {b : B}, b ∈ e.baseSet → ∀ (y : F), ⟨b, e.symm b y⟩ = ↑e.symm (b, y)"
+      },
+      {
+        "id": "C10",
+        "statement": "∀ {B : Type u_1} {F : Type u_2} {Z : Type u_4} [inst : TopologicalSpace B] [inst_1 : TopologicalSpace F] {proj : Z → B} [inst_2 : TopologicalSpace Z] (e : Bundle.Trivialization F proj) {b : B} {x : F}, b ∈ e.baseSet → proj (↑e.symm (b, x)) = b"
+      },
+      {
+        "id": "C11",
+        "statement": "∀ {B : Type u_1} {F : Type u_2} {Z : Type u_4} [inst : TopologicalSpace B] [inst_1 : TopologicalSpace F] {proj : Z → B} [inst_2 : TopologicalSpace Z] (e : Bundle.Trivialization F proj) {b : B} {x : F}, b ∈ e.baseSet → ↑e (↑e.symm (b, x)) = (b, x)"
+      },
+      {
+        "id": "C12",
+        "statement": "∀ {B : Type u_1} {F : Type u_2} {Z : Type u_4} [inst : TopologicalSpace B] [inst_1 : TopologicalSpace F] [inst_2 : TopologicalSpace Z] {proj : Z → B} (self : Bundle.Trivialization F proj), ∀ p ∈ self.source, (↑self.toOpenPartialHomeomorph p).1 = proj p"
+      },
+      {
+        "id": "C13",
+        "statement": "∀ {B : Type u_1} {F : Type u_2} {Z : Type u_4} [inst : TopologicalSpace B] [inst_1 : TopologicalSpace F] {proj : Z → B} (self : Bundle.Pretrivialization F proj), self.target = self.baseSet ×ˢ Set.univ"
+      },
+      {
+        "id": "C14",
+        "statement": "∀ {B : Type u_1} {F : Type u_2} {Z : Type u_4} [inst : TopologicalSpace B] [inst_1 : TopologicalSpace F] {proj : Z → B} [inst_2 : TopologicalSpace Z] (e : Bundle.Trivialization F proj) {x : B × F}, x ∈ e.target ↔ x.1 ∈ e.baseSet"
+      },
+      {
+        "id": "C15",
+        "statement": "∀ {B : Type u_1} {F : Type u_2} {Z : Type u_4} [inst : TopologicalSpace B] [inst_1 : TopologicalSpace F] {proj : Z → B} (e : Bundle.Pretrivialization F proj), ↑e.toPartialEquiv = ↑e"
+      },
+      {
+        "id": "C16",
+        "statement": "∀ {B : Type u_1} {F : Type u_2} {Z : Type u_4} [inst : TopologicalSpace B] [inst_1 : TopologicalSpace F] {proj : Z → B} [inst_2 : TopologicalSpace Z] (e : Bundle.Trivialization F proj) {x : B × F}, x ∈ e.target → proj (↑e.symm x) = x.1"
+      }
+    ],
+    "episode_id": "MLP4B_0048",
+    "schema_version": "lemma-portfolio.dependency-compression.v4",
+    "selection_budget": 3,
+    "source_project": "mathlib",
+    "targets": [
+      {
+        "id": "T01",
+        "statement": "∀ {B : Type u_1} {F : Type u_2} {Z : Type u_4} [inst : TopologicalSpace B] [inst_1 : TopologicalSpace F] {proj : Z → B} [inst_2 : TopologicalSpace Z] {X : Type u_5} [inst_3 : TopologicalSpace X] {f : X → Z} {x : X} (e : Bundle.Trivialization F proj), ContinuousAt (proj ∘ f) x → proj (f x) ∈ e.baseSet → ContinuousAt (↑e ∘ f) x → ContinuousAt f x"
+      },
+      {
+        "id": "T02",
+        "statement": "∀ {B : Type u_1} {F : Type u_2} {Z : Type u_4} [inst : TopologicalSpace B] [inst_1 : TopologicalSpace F] {proj : Z → B} [inst_2 : TopologicalSpace Z] (e : Bundle.Trivialization F proj) {b : B} {v : F}, b ∈ e.baseSet → ContinuousAt (fun x => ↑e.symm (x, v)) b"
+      },
+      {
+        "id": "T03",
+        "statement": "∀ {B : Type u_1} {F : Type u_2} {Z : Type u_4} [inst : TopologicalSpace B] [inst_1 : TopologicalSpace F] {proj : Z → B} [inst_2 : TopologicalSpace Z] (e : Bundle.Trivialization F proj) {α : Type u_5} {l : Filter α} {f : α → Z} {z : Z}, z ∈ e.source → (Filter.Tendsto f l (nhds z) ↔ Filter.Tendsto (proj ∘ f) l (nhds (proj z)) ∧ Filter.Tendsto (fun x => (↑e (f x)).2) l (nhds (↑e z).2))"
+      },
+      {
+        "id": "T04",
+        "statement": "∀ {B : Type u_1} {F : Type u_2} {E : B → Type u_3} [inst : TopologicalSpace B] [inst_1 : TopologicalSpace F] [inst_2 : TopologicalSpace (Bundle.TotalSpace F E)] [inst_3 : ∀ (x : B), Nonempty (E x)] (e : Bundle.Trivialization F Bundle.TotalSpace.proj) {b : B}, b ∈ e.baseSet → ∀ (y : F), ⟨b, e.symm b y⟩ = ↑e.symm (b, y)"
+      },
+      {
+        "id": "T05",
+        "statement": "∀ {B : Type u_1} {F : Type u_2} {Z : Type u_4} [inst : TopologicalSpace B] [inst_1 : TopologicalSpace F] {proj : Z → B} [inst_2 : TopologicalSpace Z] (e₁ e₂ : Bundle.Trivialization F proj) {b : B}, b ∈ e₁.baseSet → b ∈ e₂.baseSet → ∀ (x : F), (b, e₁.coordChange e₂ b x) = ↑e₂ (↑e₁.symm (b, x))"
+      },
+      {
+        "id": "T06",
+        "statement": "∀ {B : Type u_1} {F : Type u_2} {Z : Type u_4} [inst : TopologicalSpace B] [inst_1 : TopologicalSpace F] {proj : Z → B} [inst_2 : TopologicalSpace Z] (e₁ e₂ : Bundle.Trivialization F proj) {b : B}, b ∈ e₁.baseSet → b ∈ e₂.baseSet → Continuous (e₁.coordChange e₂ b)"
+      },
+      {
+        "id": "T07",
+        "statement": "∀ {B : Type u_1} {F : Type u_2} {Z : Type u_4} [inst : TopologicalSpace B] [inst_1 : TopologicalSpace F] {proj : Z → B} [inst_2 : TopologicalSpace Z] (e : Bundle.Trivialization F proj) {b : B}, b ∈ e.baseSet → ∀ (x : F), e.coordChange e b x = x"
+      },
+      {
+        "id": "T08",
+        "statement": "∀ {B : Type u_1} {F : Type u_2} {E : B → Type u_3} [inst : TopologicalSpace B] [inst_1 : TopologicalSpace F] {x : B} {y : F} (e' : Bundle.Pretrivialization F Bundle.TotalSpace.proj), x ∈ e'.baseSet → (↑e'.symm (x, y)).proj = x"
+      }
+    ],
+    "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+  },
+  {
+    "benchmark_id": "lemma-portfolio.mathlib-compression-blind-60.v4",
+    "candidates": [
+      {
+        "id": "C01",
+        "statement": "∀ {M : Type u} [inst : MulOneClass M] (a : M), 1 * a = a"
+      },
+      {
+        "id": "C02",
+        "statement": "∀ {G : Type u_1} [inst : DivInvMonoid G] (a b : G), a / b = a * b⁻¹"
+      },
+      {
+        "id": "C03",
+        "statement": "∀ {M : Type u_2} [inst : AddMonoid M] (a : M), 1 • a = a"
+      },
+      {
+        "id": "C04",
+        "statement": "∀ {G : Type u_1} [inst : AddGroup G] (a b : G), a + -b + b = a"
+      },
+      {
+        "id": "C05",
+        "statement": "∀ {M : Type u} [inst : AddZeroClass M] (a : M), 0 + a = a"
+      },
+      {
+        "id": "C06",
+        "statement": "∀ {G : Type u_1} [inst : CommMagma G] (a b : G), a * b = b * a"
+      },
+      {
+        "id": "C07",
+        "statement": "∀ {M : Type u_2} [inst : Monoid M] (a : M) (m n : ℕ), a ^ (m * n) = (a ^ m) ^ n"
+      },
+      {
+        "id": "C08",
+        "statement": "∀ {G : Type u_1} [inst : Group G] (a : G), a⁻¹ * a = 1"
+      },
+      {
+        "id": "C09",
+        "statement": "∀ {M : Type u} [inst : AddZeroClass M] (a : M), a + 0 = a"
+      },
+      {
+        "id": "C10",
+        "statement": "∀ {M : Type u} [inst : MulOneClass M] (a : M), a * 1 = a"
+      },
+      {
+        "id": "C11",
+        "statement": "∀ {G : Type u_1} [inst : Group G] (a : G), a * a⁻¹ = 1"
+      },
+      {
+        "id": "C12",
+        "statement": "∀ {G : Type u_1} [inst : AddGroup G] (a b : G), a + b + -b = a"
+      },
+      {
+        "id": "C13",
+        "statement": "∀ {G : Type u_1} [inst : Semigroup G] (a b c : G), a * b * c = a * (b * c)"
+      },
+      {
+        "id": "C14",
+        "statement": "∀ {M : Type u_2} [inst : Monoid M] (a : M), a ^ 0 = 1"
+      },
+      {
+        "id": "C15",
+        "statement": "∀ {M : Type u_2} [inst : Mul M] [inst_1 : One M] {k : ℕ}, k ≠ 0 → ∀ (m : M), npowRec' (k + 1) m = npowRec' k m * m"
+      },
+      {
+        "id": "C16",
+        "statement": "∀ {M : Type u_2} [inst : Add M] [inst_1 : Zero M] {k : ℕ}, k ≠ 0 → ∀ (m : M), nsmulRec' (k + 1) m = nsmulRec' k m + m"
+      }
+    ],
+    "episode_id": "MLP4B_0049",
+    "schema_version": "lemma-portfolio.dependency-compression.v4",
+    "selection_budget": 3,
+    "source_project": "mathlib",
+    "targets": [
+      {
+        "id": "T01",
+        "statement": "∀ {G : Type u_1} [inst : Group G] (a b : G), a * b⁻¹ * b = a"
+      },
+      {
+        "id": "T02",
+        "statement": "∀ {G : Type u_1} [inst : SubNegMonoid G] (x : G), -1 • x = -x"
+      },
+      {
+        "id": "T03",
+        "statement": "∀ {M : Type u_2} [inst : AddMonoid M] (a : M), 2 • a = a + a"
+      },
+      {
+        "id": "T04",
+        "statement": "∀ {M : Type u_2} [inst : AddMonoid M] (a b : M) (n : ℕ), n • (a + b) + a = a + n • (b + a)"
+      },
+      {
+        "id": "T05",
+        "statement": "∀ {G : Type u_1} [inst : Group G] (a : G), a / a = 1"
+      },
+      {
+        "id": "T06",
+        "statement": "∀ {G : Type u_1} [inst : DivInvMonoid G] (x : G), x⁻¹ = 1 / x"
+      },
+      {
+        "id": "T07",
+        "statement": "∀ {G : Type u_1} [inst : SubNegMonoid G] (a : G), 1 • a = a"
+      },
+      {
+        "id": "T08",
+        "statement": "∀ {M : Type u_2} [inst : Monoid M] (a b : M) (n : ℕ), (a * b) ^ n * a = a * (b * a) ^ n"
+      }
+    ],
+    "task": "Among the displayed candidates, select exactly three distinct candidate IDs to cover as many targets as possible. The displayed candidates are exactly the in-pool candidate declarations; a target may have other nondisplayed dependencies. A target is covered when at least one selected candidate was used directly in that target's original elaborated proof body. Return only the three selected IDs."
+  }
+]
+</episodes>

@@ -1,8 +1,13 @@
-# Paper-writing handoff: final follow-up results
+# Historical paper-writing handoff: completed follow-up results
 
-This is the final completed experimental package for Aishwarya Das and Durgesh
-Kumar. **The shortened Codex queue is complete.** The manuscript/PDFs still describe the
-original results and need integration; this handoff does not claim they are updated.
+This handoff records preparation of the completed experimental package for
+Aishwarya Das and Durgesh Kumar before the final submission. The
+[submitted paper](../../paper/LemmaPortfolio.pdf) now incorporates all seven
+CLI/API runs, the diagnostic, and the later frequency and masking audits. Use
+[RESULTS.md](../../RESULTS.md) and [submission/](../../submission/) for the current
+presentation. The numbers and suggested wording below are historical preparation
+notes, including exploratory comparisons that the submitted paper does not use
+as its main uncertainty estimates.
 
 ## 1. Numbers to use
 
@@ -120,7 +125,12 @@ Retain these qualifications:
 - GitHub has raw final answers and local-audit receipts, not full event streams;
   independent readers can reproduce scores but not authenticate omitted logs.
 
-## 5. Integration checklist and source locations
+## 5. Historical integration checklist and source locations
+
+The following checklist predates submission. Its `paper/source/` references now
+correspond to `paper/historical/2026-09-05/source/`, which is an earlier draft,
+not the source of the final submitted PDF. The completed submission is linked
+above; this is not a list of remaining integration tasks.
 
 1. In `paper/source/body.tex`, add a distinctly labeled post-release follow-up
    subsection and update the blanket claim that controlled repetitions are
@@ -144,11 +154,12 @@ python3 verify_release.py
 python3 followups/2026-09-05/verify.py
 ```
 
-The first command verifies all current file hashes and original V4 scores; the
-second independently reproduces this final follow-up package. Future intentional
-paper edits will require updating the follow-up verifier's strict baseline-file
-preservation policy with an explicit, reviewed allowlist; do not weaken checks
-on data, prompts, responses, or numerical results.
+The first command verifies the current repository and release results; the second
+independently reproduces this completed follow-up package. Submission
+synchronization added an explicit historical relocation map in
+`provenance/PRE_SUBMISSION_FILES.json`: every original baseline hash remains
+checked against the current file or its exact archived copy. Data, prompts,
+responses, and numerical results retain their original locations and hashes.
 
 ## 6. Claude direct-API rows
 

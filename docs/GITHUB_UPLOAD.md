@@ -1,63 +1,56 @@
-# GitHub repository: safe, plain-language procedure
+# Maintaining the submitted GitHub version
 
-Do **not** send anyone your GitHub password, email password, personal access
-token, or browser cookie.  This repository can be uploaded through GitHub's
-normal sign-in flow without sharing any secret.
+The working repository is
+[durgesh-qcat/lemma-portfolio](https://github.com/durgesh-qcat/lemma-portfolio).
+It remains private during double-blind review. Collaborators use their own
+GitHub accounts and work on branches; see [COLLABORATING.md](COLLABORATING.md).
 
-The intended private repository is
-<https://github.com/durgesh-qcat/lemma-portfolio>.  Keep it **private during
-double-blind review**.  A named public repository can reveal the authors even
-when the PDF says “Anonymous Authors.”
-
-## Clone or open the repository
-
-An invited collaborator can accept the GitHub invitation and then use GitHub
-Desktop, or run:
+## Verify a checkout
 
 ```sh
 git clone https://github.com/durgesh-qcat/lemma-portfolio.git
 cd lemma-portfolio
-python3 verify_release.py
+python3 -B verify_release.py
 ```
 
-The last line must be `ALL CHECKS PASSED`.
+The verifier must end with `ALL CHECKS PASSED`. It checks the submitted PDF and
+archive, consolidated results, original records, follow-ups, oracle and tests.
+Run it from a clean checkout, keeping local credentials and new experimental
+outputs outside the release inventory.
 
-## If the remote repository ever has to be recreated
+## Submitted-version artifacts
 
-1. Install GitHub Desktop from <https://desktop.github.com/> and sign in there.
-2. In GitHub Desktop choose **File → Add Local Repository** and select the
-   existing local `lemma-portfolio` folder that contains its `.git` history.
-   A ZIP downloaded from GitHub does not contain that history; choose
-   **Create a Repository from Existing Files** if only a ZIP is available.
-3. Choose **Publish repository**.
-4. Use the name `lemma-portfolio` and leave **Keep this code private** checked.
-5. On GitHub.com, open **Settings → Collaborators** to invite a coauthor.
+The submitted-version artifact identifier is `v4.0.0-submitted-20260907`.
+The files defining this version are:
 
-Invite collaborators by username and give a paper co-author write access.  They
-can work on a branch and open a pull request without receiving the owner's
-password.  See `COLLABORATING.md`.
+- `paper/LemmaPortfolio.pdf`: exact final submitted PDF, including its technical
+  supplement;
+- `submission/LemmaPortfolio_supplement.zip`: exact anonymous reproducibility
+  ZIP submitted with that PDF;
+- `submission/LemmaPortfolio_supplement/`: unchanged unpacked archive, including
+  its own `MANIFEST.json`, `SHA256SUMS`, and `verify_all.py`;
+- `RESULTS.md` and `results/paper_results.json`: final result mirrors; and
+- `SHA256SUMS`: the repository inventory, covering the additional GitHub oracle
+  benchmark and preserved historical receipts as well.
 
-When the venue permits public release, change visibility to public and create a
-versioned release from the submitted commit. The prepared release assets are:
+The unpacked supplement's `MANIFEST.json` identifies its accompanying PDF by
+SHA-256. The root verifier checks that the ZIP and unpacked files agree. The
+[paper README](../paper/README.md) records source availability: the archived
+editable source and older PDFs are historical, and no verified final Overleaf
+source package is currently available.
 
-- `LemmaPortfolio_full_repository.zip`;
-- `LemmaPortfolio_MATHAI2026_anonymous_reproducibility.zip`;
-- `LemmaPortfolio_MATHAI2026_anonymous_Overleaf.zip`;
-- the three checked paper PDFs;
-- `LemmaPortfolio_Mathlib4Benchmark_v4.33.0_source_parquet.zip`, which keeps the
-  211 MB construction-source snapshot out of ordinary Git history; and
-- `ARTIFACT_SHA256SUMS`, which authenticates every release asset.
+Commit reviewed changes and verification results to a branch, then open a pull
+request. Preserve the final submitted files and use a new version for later
+scientific changes. A release of this submitted version should attach the exact
+PDF and supplement ZIP, with their checksums, to the verified commit.
 
-The 208 MiB Parquet archive exceeds GitHub's ordinary 100 MiB file limit.  It
-must be attached to a GitHub Release and must never be committed to normal Git
-history.
+## Construction data and eventual public release
 
-Only after the anonymity policy permits it should the permanent GitHub URL be
-added to the camera-ready paper. GitHub never requires you to send a password
-to a collaborator: use GitHub Desktop's normal sign-in window, or invite the
-collaborator by username under **Settings → Collaborators**.
+The pinned Parquet construction inputs are separately inventoried in
+`provenance/generation_receipt.json`. They are not needed for any offline score
+check; [construction/README.md](../construction/README.md) explains the additional
+mining requirements. Keep large source archives out of ordinary Git history.
 
-Official GitHub instructions:
-
-- <https://docs.github.com/en/desktop/adding-and-cloning-repositories/adding-an-existing-project-to-github-using-github-desktop>
-- <https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility>
+When the venue permits public release, the owner can publish the verified
+version and its artifacts and add the permanent URL to the camera-ready paper.
+The current private update does not require changing repository visibility.
