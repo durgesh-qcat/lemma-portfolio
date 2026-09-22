@@ -7,6 +7,14 @@ whose recorded proof-use set intersects the selected triple. Every maximizing
 triple is accepted. This is an annotation-based coverage score; it does not run
 a prover or establish that a selected lemma set can prove a target.
 
+On the test split, the oracle attains **60/60 optimal portfolios** and mean
+coverage **6.25/8**: six targets on 45 episodes and seven on 15, totaling
+375/480 covered target instances. There are 78 distinct optimal triples across
+the 60 episodes. See the [results overview](../RESULTS.md#main-cliapi-results)
+for the oracle alongside model scores and
+[paper_results.json](../results/paper_results.json) for the submitted coverage
+histogram and optimum count.
+
 From the repository root, independently reconstruct all 50,400 portfolios:
 
 ```sh

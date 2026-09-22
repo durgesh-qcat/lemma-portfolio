@@ -1,5 +1,17 @@
 # Changes
 
+## Results documentation — September 22, 2026
+
+Expand [RESULTS.md](RESULTS.md) with the exact oracle row, exhaustive-search
+counts, greedy and frequency controls, predicted-support tie bounds, masking
+sensitivity, selection patterns, and uncertainty notes. Separate the main
+CLI/API runs from preliminary web captures, link each analysis to its submitted
+records, and use the compatible verification entry point. Update the result-file
+and oracle guides to explain where the oracle values are recorded.
+
+This documentation update preserves the submitted PDF, ZIP, all 309 extracted
+files, saved responses, labels, and machine-readable scientific results.
+
 ## 4.0.1: Python 3.10 verification compatibility
 
 GitHub CI exposed an integer-versus-float comparison in the submitted verifier:

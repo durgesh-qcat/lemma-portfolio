@@ -1,9 +1,18 @@
 # Result files
 
-The final submitted paper is documented in [RESULTS.md](../RESULTS.md) and
-[paper_results.json](paper_results.json). The JSON is an exact copy of
-the submitted record and its byte equality is verified. The Markdown tables
-preserve the same values with paths adapted for the repository root.
+Start with [RESULTS.md](../RESULTS.md) for the main CLI/API results, preliminary
+web results, exact oracle, construction controls, and supplementary analyses.
+Its model and baseline values come from [paper_results.json](paper_results.json),
+an exact copy of the submitted record whose byte equality is verified.
+The overview also summarizes the separate submitted analyses linked below.
+
+The exact test oracle achieves **60/60 optimal portfolios** with mean coverage
+**6.25/8**. `paper_results.json` records its coverage distribution in
+`test_maximum_histogram` (45 episodes at six targets and 15 at seven), its 78
+optimal triples in `test_optimal_portfolios`, and 560 portfolios per episode.
+It does not encode the oracle as a model entry in `direct_rows`. Independently
+verify all 90 episodes and the control totals with
+`python3 -B tools/verify_oracle.py --json` from the repository root.
 
 - [Selection patterns and frequency-tie geometry](../submission/LemmaPortfolio_supplement/results/selection_patterns.md)
 - [Masking-exclusion sensitivity for all thirteen response sets](../submission/LemmaPortfolio_supplement/results/masking_sensitivity.md)
