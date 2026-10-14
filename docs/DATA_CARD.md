@@ -1,9 +1,9 @@
-# LemmaPortfolio data card — final submitted version
+# LemmaPortfolio data card
 
-The 7 September 2026 paper is *LemmaPortfolio: Shared-Budget Lemma Selection
-for Multiple Lean Goals*. Its benchmark is the unchanged V4 dataset; the final
-submission adds evaluation records and analyses, not a new test split. See
-[the final PDF](../paper/LemmaPortfolio.pdf) and [submitted reproducibility specification](../submission/LemmaPortfolio_supplement/REPRODUCIBILITY.md).
+The 7 September 2026 write-up is *LemmaPortfolio: Shared-Budget Lemma Selection
+for Multiple Lean Goals*. Its benchmark is the unchanged V4 dataset; the accompanying
+technical notes add evaluation records and analyses, not a new test split. See
+[the final PDF](../paper/LemmaPortfolio.pdf) and [archived reproducibility specification](../submission/LemmaPortfolio_supplement/REPRODUCIBILITY.md).
 
 ## Purpose
 
@@ -33,7 +33,7 @@ reject instances solved by fixed construction diagnostics.  The distribution is
 therefore not representative of the frequency of hard modules across Mathlib.
 The fixed construction selectors use a specific tie order; their failure is
 an admission condition. Alternative tie orders can succeed. See the
-[submitted construction specification](../submission/LemmaPortfolio_supplement/REPRODUCIBILITY.md)
+[archived construction specification](../submission/LemmaPortfolio_supplement/REPRODUCIBILITY.md)
 and `provenance/generation_receipt.json` for the complete criteria and inventory.
 
 The 60 test episodes contain 480 target instances and 814 recorded
@@ -58,7 +58,7 @@ are available, so new evaluated processes must be kept separate from the labels.
 - evaluating exact shared-budget portfolio selection;
 - comparing exact optimality with partial target coverage;
 - developing set-level or incidence-aware retrievers; and
-- reproducing the reported paper scores.
+- reproducing the reported write-up scores.
 
 ## Out-of-scope interpretations
 

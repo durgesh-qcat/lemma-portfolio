@@ -1,13 +1,13 @@
-# Earlier paper and source: September 5, 2026
+# Earlier write-up and source: September 5, 2026
 
 These PDFs, LaTeX sources, and table generator were previously published in this
 repository. They are retained as historical artifacts and have been superseded
-by the [exact final submitted paper](../../LemmaPortfolio.pdf).
+by the [exact final archived write-up](../../LemmaPortfolio.pdf).
 
-They do not build the final submitted PDF. In particular, they predate the final
+They do not build the final archived PDF. In particular, they predate the final
 main-table organization, title, selection-pattern analysis, and expanded masking
 sensitivity. Use the [final supplementary archive](../../../submission/README.md)
-for the submitted evidence and verification commands.
+for the archived evidence and verification commands.
 
 For inspecting this earlier draft only, its LaTeX entry points are
 `source/review.tex`, `source/preprint.tex`, and

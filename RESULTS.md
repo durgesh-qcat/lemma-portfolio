@@ -1,10 +1,10 @@
-# Results accompanying the paper
+# Benchmark results
 
-This overview brings together the final paper's model results, exact oracle,
+This overview brings together the benchmark's model results, exact oracle,
 construction controls, and supplementary analyses. Model and baseline values
-come from the [submitted results](submission/LemmaPortfolio_supplement/RESULTS.md)
-and [paper_results.json](results/paper_results.json); each additional analysis
-links to its submitted records. The submitted PDF, ZIP, and extracted records
+come from the [archived results](submission/LemmaPortfolio_supplement/RESULTS.md)
+and [machine-readable results](results/paper_results.json); each additional analysis
+links to its archived records. The archived PDF, ZIP, and extracted records
 are preserved unchanged.
 
 ## Scores and verification
@@ -27,16 +27,16 @@ python3 -B verify_release.py
 ```
 
 This recomputes the underlying scientific records, verifies their repository
-mirrors and submitted hashes, rebuilds the original response transcriptions,
+mirrors and archived hashes, rebuilds the original response transcriptions,
 independently scores the raw follow-up answers, and runs the oracle and
-supplementary checks. For just the submitted checks and paper pairing, use
+supplementary checks. For the supporting-material checks and PDF pairing, use
 `python3 -B tools/verify_submission.py --paper paper/LemmaPortfolio.pdf`.
 This wrapper handles the archived verifier's documented
 [Python 3.10 rounding issue](docs/VERIFICATION.md).
 
 ## Main CLI/API results
 
-The seven runs below are the main paper evaluations. The oracle is the scoring
+The seven runs below are the main benchmark evaluations. The oracle is the scoring
 ceiling computed from true proof-use annotations. It is not a model run.
 
 | Model / baseline | Optimal /60 | Mean coverage /8 | Valid /60 | Share of maximum (%) | Occurrence recall (%) |
@@ -60,7 +60,7 @@ selected.
 
 The uniform-random row is an exact expectation over all 560 portfolios, not
 a sampled response set. The saved deterministic hash draw in the original
-results is a different baseline and is not the random row in the paper.
+results is a different baseline and is not the random row in the write-up.
 
 Astra and Sol used Codex CLI; Fable used the Anthropic Messages API. Fable 5.1
 received a disclosed benchmark-context system prompt after bare-prompt
@@ -118,7 +118,7 @@ or evidence of downstream proof success.
 
 Run `python3 -B tools/verify_oracle.py --json` for the independently recomputed
 totals. See the [oracle guide](oracle/README.md) and
-[submitted per-episode mathematical audit](submission/LemmaPortfolio_supplement/original_release/results/posthoc_math_audit.json)
+[archived per-episode mathematical audit](submission/LemmaPortfolio_supplement/original_release/results/posthoc_math_audit.json)
 for definitions, tie distributions, and inputs.
 
 ## Paired target-wise comparison
@@ -138,7 +138,7 @@ Pro has only 15 complete pairs; its fixed 20-ID scores remain in the original
 results with the five missing direct answers scored zero. These are not the
 full 60-episode direct results.
 
-The submitted predicted-support tie audit asks a different question: whether
+The archived predicted-support tie audit asks a different question: whether
 any predicted maximizing triple is also truly optimal. It finds such a triple
 on 9/20 Pro, 9/20 Sol, and 13/20 Astra episodes, while the fixed candidate-ID
 selection rule achieves 1/20, 0/20, and 4/20. These are the fixed 20-ID subsets;
@@ -149,7 +149,7 @@ and [Astra diagnostic](submission/LemmaPortfolio_supplement/followups/2026-09-05
 
 ## Masking-exclusion sensitivity
 
-The submitted name-prefix scan identifies six test episodes with residual
+The archived name-prefix scan identifies six test episodes with residual
 source-name prefixes. Excluding those episodes leaves **54**; exclusions depend
 on prompt content, not model outcomes. All thirteen saved response sets remain
 at or below **27/54 optimal portfolios (50%)**. The retained oracle is **54/54**
@@ -163,7 +163,7 @@ estimate a causal masking effect or establish absence of training exposure.
 
 ## Selection patterns, frequency ties, and uncertainty
 
-The submitted audit checks all **780 answer slots** (13 response sets × 60
+The archived audit checks all **780 answer slots** (13 response sets × 60
 episodes): 243 optimal answers, 527 valid non-optimal answers, and 10 invalid
 or missing answers. Frequency maximizes summed individual occurrence counts;
 the coverage oracle maximizes the union of covered targets.
@@ -189,7 +189,7 @@ independent-episode binomial approximation. Five-episode prompt blocks may
 induce dependence; these intervals do not measure run-level or deployment
 uncertainty. Repeated responses on the same episodes are not independent
 problems. [selection_patterns.json](results/selection_patterns.json) preserves
-the complete submitted record.
+the complete archived record.
 
 ## Coverage shortfall and candidate replacements
 
@@ -199,4 +199,4 @@ for 3. Of each portfolio's 39 single-replacement neighbors, the number that
 is optimal is zero for 29 answers, one for 122, two for 10, and three for 2.
 These are repeated responses on the same episodes and retrospective checks
 using the true labels, not results of a model repair experiment. Per-answer
-records are in [the submitted per-answer records](submission/LemmaPortfolio_supplement/descriptive/one_short_replacement_audit.json).
+records are in [the archived per-answer records](submission/LemmaPortfolio_supplement/descriptive/one_short_replacement_audit.json).

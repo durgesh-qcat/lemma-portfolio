@@ -1,48 +1,29 @@
-# Exact submitted artifacts
+# Supporting materials
 
-This directory preserves the supplementary material paired with
-[the final submitted PDF](../paper/LemmaPortfolio.pdf),
-**LemmaPortfolio: Shared-Budget Lemma Selection for Multiple Lean Goals**,
-submission 88.
+This directory contains the reproducibility materials for
+[the technical write-up](../paper/LemmaPortfolio.pdf),
+**LemmaPortfolio: Shared-Budget Lemma Selection for Multiple Lean Goals**.
 
-[Download the submitted ZIP](LemmaPortfolio_supplement.zip) or
-[browse its exact contents](LemmaPortfolio_supplement/README.md).
-The ZIP is byte-identical to the author's supplied download
-`88_LemmaPortfolio_Shared_Budge_Supplementary Material (1).zip`.
-The paper is byte-identical to the supplied `final paper.pdf`.
-Their hashes match the copies downloaded on September 7.
-[SUBMITTED_ARTIFACTS.json](SUBMITTED_ARTIFACTS.json) records their identities.
+[Download the ZIP](LemmaPortfolio_supplement.zip) or
+[browse its contents](LemmaPortfolio_supplement/README.md).
+The original PDF, ZIP, and all 309 unpacked files are preserved byte for byte.
 
-From the repository root:
+From the repository root, run:
 
 ```sh
 python3 -B verify_release.py
 ```
 
-For the submitted supplement alone:
+The verifier checks the file hashes, PDF/archive pairing, seven CLI/API
+evaluations, six preliminary web response sets, target-wise diagnostics,
+construction and greedy-tie checks, replacement analysis, masking sensitivity,
+and the 780-answer selection-pattern audit. It includes the documented
+[Python 3.10 compatibility adjustment](../docs/VERIFICATION.md).
 
-```sh
-python3 -B tools/verify_submission.py \
-  --paper paper/LemmaPortfolio.pdf
-```
+The full repository also preserves detailed evaluation receipts and an
+independent oracle check. The ZIP contains two original model-response PDFs;
+the current write-up's technical notes are appended to its PDF.
 
-The wrapper runs all seven submitted checks and handles the documented
-[Python 3.10 rounding-comparison defect](../docs/VERIFICATION.md). The archived
-`verify_all.py` is preserved exactly, including that original limitation.
-
-The extracted 309 files are unchanged from the submitted ZIP. They include the
-seven later CLI/API evaluations, six preliminary web response sets, target-wise
-diagnostics, evaluation harnesses, construction and greedy-tie checks,
-one-target-short replacement analysis, all-thirteen-row masking sensitivity,
-and the 780-answer selection-pattern audit. The full repository additionally
-preserves richer historical inference receipts and an independent oracle check.
-
-The ZIP contains two original model-response PDFs but no manuscript source.
-The main paper's technical supplement is already appended to the final paper;
-the older standalone supplement under `paper/historical/` is not the final one.
-
-Keep the submitted snapshots immutable. Put future changes outside this folder
-and preserve their separate provenance. To reconstruct this repository's current
-manifest after authorized edits, use `python3 tools/build_sha256s.py`, then rerun
-the complete verifier. That command does not rewrite the submitted ZIP or its
-internal manifests.
+Keep the original evidence intact and save later experiments separately.
+After intentional repository edits, regenerate the root inventory with
+`python3 -B tools/build_sha256s.py`, then rerun the complete verifier.

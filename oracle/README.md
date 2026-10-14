@@ -1,6 +1,6 @@
 # Exact oracle and construction controls
 
-The submitted benchmark has 30 development episodes and 60 test episodes. Each
+The archived benchmark has 30 development episodes and 60 test episodes. Each
 episode offers 16 candidate lemmas, eight targets, and a budget of three lemmas.
 The exact oracle enumerates all 560 triples and maximizes the number of targets
 whose recorded proof-use set intersects the selected triple. Every maximizing
@@ -12,7 +12,7 @@ coverage **6.25/8**: six targets on 45 episodes and seven on 15, totaling
 375/480 covered target instances. There are 78 distinct optimal triples across
 the 60 episodes. See the [results overview](../RESULTS.md#main-cliapi-results)
 for the oracle alongside model scores and
-[paper_results.json](../results/paper_results.json) for the submitted coverage
+[consolidated results](../results/paper_results.json) for the archived coverage
 histogram and optimum count.
 
 From the repository root, independently reconstruct all 50,400 portfolios:
@@ -24,7 +24,7 @@ python3 -B tools/verify_oracle.py --json
 
 The check uses Python 3.10+ and the standard library. It verifies the complete
 optimum sets and coverage histograms, public/label alignment, proof-use counts,
-development/test module separation, greedy tie probabilities, and all submitted
+development/test module separation, greedy tie probabilities, and all archived
 test frequency-maximizing sets. It imports no release scorer and changes no
 files. The repository's full verification also runs this check.
 
@@ -47,11 +47,11 @@ ties are sampled at each step, not uniformly over distinct final triples.
 The test episodes have 78 optimal triples in total. The frequency-maximizing
 sets contain 408 triples (mean 6.8, median 4, range 1–35); they contain an optimum
 on 53 of the 60 episodes. Frequency maximizes summed individual occurrences;
-the exact oracle maximizes their union coverage. The final paper's answer-level
+the exact oracle maximizes their union coverage. The final write-up's answer-level
 pattern analysis and error partition are reproduced by
 [`verify_selection_patterns.py`](../submission/LemmaPortfolio_supplement/verify_selection_patterns.py).
 
-All inputs come from the exact submitted supplement:
+All inputs come from the exact archived supplement:
 
 - [Released public episodes and labels](../submission/LemmaPortfolio_supplement/original_release/data/).
 - [Independent mathematical audit and per-episode greedy distributions](../submission/LemmaPortfolio_supplement/original_release/results/posthoc_math_audit.json).
@@ -64,5 +64,5 @@ controls. Among its predicted maximizers, an actual optimum exists on 9/20 Pro,
 9/20 Sol, and 13/20 Astra episodes; the fixed selection rule achieves 1/20,
 0/20, and 4/20 respectively. The first two use the original fixed 20-ID subsets;
 Pro's complete matched direct/target-wise comparison has only 15 pairs. See the
-[submitted results](../submission/LemmaPortfolio_supplement/RESULTS.md) and
+[archived results](../submission/LemmaPortfolio_supplement/RESULTS.md) and
 [Astra diagnostic](../submission/LemmaPortfolio_supplement/followups/2026-09-05/astra_diagnostic/score.json).

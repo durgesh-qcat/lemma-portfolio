@@ -1,15 +1,15 @@
 # Rerunning LemmaPortfolio on another model
 
-This guide accompanies the final 7 September 2026 submission,
+This guide accompanies the 7 September 2026 technical write-up,
 *LemmaPortfolio: Shared-Budget Lemma Selection for Multiple Lean Goals*.
 [RESULTS.md](../RESULTS.md) consolidates all thirteen saved direct-response
-sets; the main paper reports seven CLI/API runs and the technical supplement
+sets; the main write-up reports seven CLI/API runs and the technical supplement
 retains the six preliminary web-interface sets.
 
 This guide separates two activities:
 
 - **score reproduction**: deterministically recheck the numbers already in the
-  paper; and
+  write-up; and
 - **fresh inference**: present the released prompts to another model and score
   its new answers.
 
@@ -19,7 +19,7 @@ need not recreate an old consumer-chat output byte-for-byte because providers
 may change routing,
 checkpoints, system prompts, and decoding without exposing those changes.
 
-## A. Validate the paper results
+## A. Validate the benchmark results
 
 From the repository root:
 
@@ -30,11 +30,11 @@ python3 -B verify_release.py
 The last line must be `ALL CHECKS PASSED`.  This verifies the release hashes,
 reconstructs every optimal portfolio, reparses the preserved response sources,
 regenerates the baselines, and checks every reported score. It also verifies
-the exact submitted PDF/ZIP, all thirteen rows and final analyses, the oracle
+the exact archived PDF/ZIP, all thirteen rows and final analyses, the oracle
 benchmark, and parser/scorer/construction tests. It uses Python 3.10 or newer and no third-party package, model call, API key, Lean
 installation, or paid service.
 
-The submitted [evaluation records](../submission/LemmaPortfolio_supplement/evaluation/README.md)
+The archived [evaluation records](../submission/LemmaPortfolio_supplement/evaluation/README.md)
 list the actual CLI/API settings, available calling code, Fable 5.1 context
 prompt and missing historical records. The original web-chat procedure below
 is a reusable capture protocol, not a reconstruction of every historical
@@ -70,7 +70,7 @@ For a CLI/API run, save the exact invocation and available execution logs, use
 a fresh process or stateless request for each prompt, and disclose all additional
 context. Preserve provider errors/refusals and predeclare retry handling. If
 context or settings change after a refusal, report the changed condition as a
-separate run and retain the original attempts. The Fable 5.1 submitted row is
+separate run and retain the original attempts. The Fable 5.1 archived row is
 explicitly context-conditioned; it does not claim success under a bare prompt.
 
 The released labels are necessarily public for auditability, so this separation
@@ -143,7 +143,7 @@ This reproduces the prompt-defined support subset, truncation to two candidates
 per target, lexicographically tie-broken exhaustive optimizer, 20-item exact
 and coverage scores, and full/truncated support-edge metrics. For comparisons
 with direct selection, report the common paired IDs and denominator separately;
-the final paper uses 15 complete original Pro pairs and 20 pairs for original
+the final write-up uses 15 complete original Pro pairs and 20 pairs for original
 Sol and the separate Astra diagnostic. The same strict alignment and explicit
 invalid-file rules as the direct scorer apply. Smoke-test
 it with `examples/support.example.json` if desired.
@@ -198,12 +198,12 @@ Keep the following together:
 - a SHA-256 manifest of the run directory.
 
 Do not overwrite published `responses/`, `results/`, or `submission/` files. New
-results should be reviewed independently before they are added to the paper or
+results should be reviewed independently before they are added to the write-up or
 released as another version.  Report consumer labels as observed deployments,
 not as stable or reproducible model checkpoints unless provider-side evidence
 supports that stronger claim.
 
-The submitted ZIP and its unpacked contents are an immutable snapshot. Keep new
+The archived ZIP and its unpacked contents are an immutable snapshot. Keep new
 model calls and analysis outputs outside that snapshot, and record a new version
-before incorporating them into a later paper. Follow the
+before incorporating them into a later write-up. Follow the
 [collaboration guide](COLLABORATING.md) for reviewing repository additions.

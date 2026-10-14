@@ -4,7 +4,7 @@
 
 [![Verification on main](https://github.com/durgesh-qcat/lemma-portfolio/actions/workflows/verify.yml/badge.svg?branch=main)](https://github.com/durgesh-qcat/lemma-portfolio/actions/workflows/verify.yml?query=branch%3Amain)
 
-[Paper](paper/LemmaPortfolio.pdf) · [Submitted supplement](submission/LemmaPortfolio_supplement.zip) · [Latest release](https://github.com/durgesh-qcat/lemma-portfolio/releases/latest) · [Full results](RESULTS.md) · [Evaluate a model](docs/RERUN_MODELS.md) · [Citation](CITATION.cff)
+[Write-up](paper/LemmaPortfolio.pdf) · [Supporting materials](submission/LemmaPortfolio_supplement.zip) · [Benchmark design](construction/README.md) · [Full results](RESULTS.md) · [Evaluate a model](docs/RERUN_MODELS.md) · [Citation](CITATION.cff)
 
 > Which three lemmas should you choose when the same small set must serve eight Lean goals?
 
@@ -14,8 +14,8 @@ three candidates. The portfolio is scored against direct references in the
 targets' existing elaborated Lean proofs. Selecting useful candidates individually
 is only part of the task: their coverage can overlap.
 
-This public repository accompanies the final submitted paper and contains the
-episodes, released labels, prompts, saved model responses, scoring tools,
+This repository documents the benchmark design and contains the construction
+code, episodes, released labels, prompts, saved model responses, scoring tools,
 oracle, supplementary analyses, and reproducibility checks.
 
 | Benchmark | Specification |
@@ -42,13 +42,13 @@ Alternatively, download `LemmaPortfolio_full_repository.zip` from the
 unzip it, and run the same command from its `lemma-portfolio` folder.
 On macOS, you can also double-click `RUN_ME.command`.
 
-A successful run ends with **`ALL CHECKS PASSED`**. It verifies the exact submitted
-paper and ZIP, file hashes, all 13 model rows, baseline and oracle calculations,
+A successful run ends with **`ALL CHECKS PASSED`**. It verifies the write-up PDF,
+supporting ZIP, file hashes, all 13 model rows, baseline and oracle calculations,
 supplementary analyses, historical run receipts, and regression tests.
 
 The badge above tracks **`main`**. Older red runs in the Actions history belong
-to earlier commits. The submitted verifier's Python 3.10 rounding-comparison
-bug is handled by the current repository wrapper; the original submission
+to earlier commits. The archived verifier's Python 3.10 rounding-comparison
+bug is handled by the current repository wrapper; the archived
 files remain unchanged. See [verification and check history](docs/VERIFICATION.md).
 
 ## What the score means
@@ -71,7 +71,7 @@ coverage does not establish logical necessity or success on a new proof.
 
 ## Main results
 
-The submitted paper reports seven CLI/API runs on the same 60 test episodes.
+The benchmark includes seven CLI/API runs on the same 60 test episodes.
 Every model run below returned 60 valid portfolios.
 
 | Model / effort / run | Optimal portfolios /60 | Accuracy | Mean coverage /8 |
@@ -103,7 +103,7 @@ cancelled third repetitions, and limitations of the available capture records.
 <details>
 <summary><strong>Preliminary web-interface results — six additional response sets</strong></summary>
 
-These original captures appear separately in the paper's technical supplement.
+These original captures appear separately in the write-up's technical supplement.
 Their interface and execution records differ from the main CLI/API runs.
 
 | Visible consumer label | Optimal portfolios /60 | Mean coverage /8 | Valid /60 |
@@ -123,7 +123,7 @@ logs sufficient to authenticate the historical execution settings.
 
 See [all result tables](RESULTS.md) and
 [machine-readable results](results/paper_results.json) for exact counts,
-additional metrics, and paired comparisons. The paper and
+additional metrics, and paired comparisons. The write-up and
 [selection-pattern audit](submission/LemmaPortfolio_supplement/results/selection_patterns.md)
 report nominal Wilson intervals and their limitations.
 
@@ -168,8 +168,8 @@ source shards and DuckDB.
 
 | Location | What you will find |
 |---|---|
-| [paper/](paper/README.md) | Final submitted PDF, with its technical supplement appended |
-| [submission/](submission/README.md) | Exact submitted ZIP and all 309 unpacked files |
+| [Technical write-up](paper/README.md) | Technical write-up PDF, with its supplement appended |
+| [Supporting materials](submission/README.md) | Reproducibility ZIP and all 309 unpacked files |
 | [data/](data/), [prompts/](prompts/START_HERE.txt), [responses/](responses/) | Episodes, released labels, prompt packet, saved answers and transcriptions |
 | [results/](results/README.md), [oracle/](oracle/README.md) | Consolidated scores, additional analyses, and oracle verification |
 | [followups/](followups/README.md) | Detailed run receipts, API captures, and historical evaluation snapshots |
@@ -184,7 +184,7 @@ downstream prover success. Residual masking, possible public-library exposure,
 and the limited repeated runs constrain interpretation. See the
 [data card](docs/DATA_CARD.md) and [provenance](docs/PROVENANCE.md).
 
-The **exact final PDF is the authoritative paper**. Its editable LaTeX source
+The **PDF is the current technical write-up**. Its editable LaTeX source
 is unavailable. Earlier sources and PDFs are preserved as clearly labeled
 [historical drafts](paper/historical/2026-09-05/).
 
@@ -195,7 +195,7 @@ If you use this benchmark, please cite Aishwarya Praveen Das and Durgesh Kumar:
   title  = {LemmaPortfolio: Shared-Budget Lemma Selection for Multiple Lean Goals},
   author = {Das, Aishwarya Praveen and Kumar, Durgesh},
   year   = {2026},
-  note   = {Submitted manuscript},
+  note   = {Benchmark design and technical write-up},
   url    = {https://github.com/durgesh-qcat/lemma-portfolio}
 }
 ```
@@ -203,4 +203,4 @@ If you use this benchmark, please cite Aishwarya Praveen Das and Durgesh Kumar:
 [CITATION.cff](CITATION.cff) provides machine-readable artifact metadata.
 Code and original documentation are licensed under Apache-2.0. See
 [LICENSE](LICENSE), [NOTICE](NOTICE), and [LICENSES.md](LICENSES.md) for the terms
-covering Mathlib text, paper/style files, and captured responses.
+covering Mathlib text, write-up/style files, and captured responses.

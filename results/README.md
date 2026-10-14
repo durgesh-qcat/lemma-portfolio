@@ -2,9 +2,9 @@
 
 Start with [RESULTS.md](../RESULTS.md) for the main CLI/API results, preliminary
 web results, exact oracle, construction controls, and supplementary analyses.
-Its model and baseline values come from [paper_results.json](paper_results.json),
-an exact copy of the submitted record whose byte equality is verified.
-The overview also summarizes the separate submitted analyses linked below.
+Its model and baseline values come from [consolidated results](paper_results.json),
+an exact copy of the archived record whose byte equality is verified.
+The overview also summarizes the separate archived analyses linked below.
 
 The exact test oracle achieves **60/60 optimal portfolios** with mean coverage
 **6.25/8**. `paper_results.json` records its coverage distribution in
@@ -20,7 +20,7 @@ verify all 90 episodes and the control totals with
 - [Exact oracle and greedy controls](../oracle/README.md)
 
 `selection_patterns.json` and `masking_sensitivity.json` also mirror the final
-submitted records. Other existing files here (`scores.json`, `per_item.jsonl`,
+archived records. Other existing files here (`scores.json`, `per_item.jsonl`,
 `structured_comparison.json`, and related outputs) preserve the original six
 preliminary web rows and their original diagnostics. They do not contain the
 seven later runs; those appear in the consolidated final results and under

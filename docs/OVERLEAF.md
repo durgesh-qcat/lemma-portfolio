@@ -1,22 +1,16 @@
-# Final paper source and Overleaf status
+# Technical write-up source
 
-The authoritative paper is [LemmaPortfolio.pdf](../paper/LemmaPortfolio.pdf),
-submitted on **7 September 2026** with the title *LemmaPortfolio: Shared-Budget
-Lemma Selection for Multiple Lean Goals*.
+The current write-up is [LemmaPortfolio.pdf](../paper/LemmaPortfolio.pdf),
+*LemmaPortfolio: Shared-Budget Lemma Selection for Multiple Lean Goals*.
+Its editable LaTeX source is unavailable.
 
-The editable source for this exact PDF is unavailable; the author has confirmed
-that they do not have the final LaTeX file. No final Overleaf project or LaTeX
-export is included in this repository. The
-[submitted supplement ZIP](../submission/LemmaPortfolio_supplement.zip)
-contains benchmark evidence and verification code; it is not a LaTeX project.
-
-Earlier LaTeX sources and paper files are archived in
+Earlier LaTeX sources and PDFs are preserved under
 [`paper/historical/2026-09-05/`](../paper/historical/2026-09-05/).
-Their `review.tex`, `preprint.tex`, and supplement entry points belong to the
-older manuscript. They do not reproduce the final submitted PDF, so an earlier
-MATH-AI Overleaf ZIP must not be presented as the final source.
+They describe an earlier version and do not reproduce the current PDF.
+The [supporting-materials ZIP](../submission/LemmaPortfolio_supplement.zip)
+contains benchmark evidence and verification code, rather than a LaTeX project.
 
-Record proposed edits by page and section against the final PDF. Any future
-reconstruction of editable source should be labeled as a reconstruction, with
-its provenance recorded in [paper/README.md](../paper/README.md), and checked
-against the submitted PDF before use. See [COLLABORATING.md](COLLABORATING.md).
+Record proposed edits by page and section against the current PDF. Any future
+source reconstruction should be labeled, documented in the
+[write-up guide](../paper/README.md), and checked against that PDF.
+See [the collaboration guide](COLLABORATING.md).

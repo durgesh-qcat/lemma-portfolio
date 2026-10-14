@@ -1,23 +1,23 @@
-# Provenance of the final submitted paper and evaluations
+# Benchmark and evaluation provenance
 
-The definitive paper is [LemmaPortfolio.pdf](../paper/LemmaPortfolio.pdf),
-submitted on 7 September 2026 as *LemmaPortfolio: Shared-Budget Lemma Selection
-for Multiple Lean Goals*. The [exact submitted ZIP](../submission/LemmaPortfolio_supplement.zip)
+The definitive write-up is [LemmaPortfolio.pdf](../paper/LemmaPortfolio.pdf),
+dated 7 September 2026 and titled *LemmaPortfolio: Shared-Budget Lemma Selection
+for Multiple Lean Goals*. The [exact archived ZIP](../submission/LemmaPortfolio_supplement.zip)
 and [unchanged unpacked supplement](../submission/LemmaPortfolio_supplement/README.md)
 preserve the final supporting evidence. Its `MANIFEST.json` records the paired
 PDF hash and every follow-up answer/prompt association. Root result mirrors
 are `RESULTS.md` and `results/paper_results.json`.
 
-The final editable source is unavailable. Earlier paper PDFs and
+The final editable source is unavailable. Earlier write-up PDFs and
 LaTeX source are under `paper/historical/2026-09-05/`; they do not reproduce the
-final PDF. See [paper provenance](../paper/README.md). No new model calls were
-made to assemble or verify the submitted packet.
+final PDF. See [write-up provenance](../paper/README.md). No new model calls were
+made to assemble or verify the archived packet.
 
-## Seven CLI/API runs in the main paper
+## Seven CLI/API benchmark runs
 
-The paper incorporates all seven retained follow-up runs: two Astra xhigh, two
+The write-up incorporates all seven retained follow-up runs: two Astra xhigh, two
 Sol xhigh, one Astra max, and the Fable 5 and context-conditioned Fable 5.1 runs.
-Each has 60 valid answers. The submitted supplement preserves 92 final-answer
+Each has 60 valid answers. The archived supplement preserves 92 final-answer
 files: 84 five-episode answers across the seven runs and eight files for the
 separate Astra direct/target-wise diagnostic. The richer original GitHub
 receipts remain under [followups/2026-09-05/](../followups/2026-09-05/README.md).
@@ -37,7 +37,7 @@ overload retry, which was not a mathematical-answer repair. Available refusal
 diagnostics and missing bare-prompt records are identified in the
 [evaluation records](../submission/LemmaPortfolio_supplement/evaluation/README.md).
 
-The submitted evaluation inventory supplies available settings, receipts and
+The archived evaluation inventory supplies available settings, receipts and
 Fable calling code. Exact historical CLI runner/invocation files were absent
 from the supplied export; their recorded hashes do not supply the missing code.
 The richer GitHub capture audits likewise summarize omitted full event streams.
@@ -125,10 +125,10 @@ come from the preserved source-name-prefix audit, not model outcomes. Frequency
 and greedy matches describe selected portfolios; they do not recover internal
 reasoning strategies. Replacement neighbors are mathematical possibilities, not
 observed repairs. Repeated response counts do not add independent test episodes.
-See the submitted [provenance record](../submission/LemmaPortfolio_supplement/PROVENANCE.md)
+See the archived [provenance record](../submission/LemmaPortfolio_supplement/PROVENANCE.md)
 and [reproducibility specification](../submission/LemmaPortfolio_supplement/REPRODUCIBILITY.md)
 for definitions, input hashes and interpretation limits.
 
 The additional GitHub [oracle benchmark](../oracle/README.md) recomputes the
 exhaustive ceiling and label-informed diagnostics from the unchanged benchmark.
-It is outside the exact submitted ZIP and introduces no model inference.
+It is outside the exact archived ZIP and introduces no model inference.

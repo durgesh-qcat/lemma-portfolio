@@ -1,16 +1,17 @@
-# Historical submission checklist
+# Benchmark review checklist
 
-The [September 2 checklist](../provenance/pre_submission/docs/SUBMISSION_CHECKLIST.md)
-is preserved as a record of preparation for submission. It refers to earlier
-paper files, an Overleaf bundle, and the repository's former private status.
-The repository is now public.
+To inspect the benchmark design and reproduce its results:
 
-For the final submitted materials, use:
+- Read the [data card](DATA_CARD.md) for the task, splits, and limitations.
+- Follow the [construction guide](../construction/README.md) for the builder
+  and pinned Lean annotation audit.
+- Read the [technical write-up](../paper/LemmaPortfolio.pdf).
+- Inspect the [supporting materials](../submission/README.md) and
+  [consolidated results](../RESULTS.md).
+- Run `python3 -B verify_release.py` from the repository root and check that
+  it ends with `ALL CHECKS PASSED`.
 
-- [Exact final paper](../paper/LemmaPortfolio.pdf), including its technical supplement;
-- [Exact submitted reproducibility ZIP](../submission/LemmaPortfolio_supplement.zip);
-- [Artifact identities and hashes](../submission/SUBMITTED_ARTIFACTS.json); and
-- [Current verification instructions](VERIFICATION.md).
-
-The final paper's editable LaTeX source is unavailable. The earlier sources are
-marked historical; see [paper provenance](../paper/README.md).
+For new model evaluations, follow the [rerun guide](RERUN_MODELS.md) and retain
+raw responses and execution settings. Keep new experiments separate from the
+existing evidence. The [write-up guide](../paper/README.md) explains source
+availability and earlier versions.
